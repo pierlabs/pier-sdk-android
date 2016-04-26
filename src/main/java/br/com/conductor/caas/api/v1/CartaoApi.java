@@ -13,7 +13,6 @@ import br.com.conductor.caas.api.v1.model.CancelarCartaoResponse;
 import br.com.conductor.caas.api.v1.model.DesbloquearCartaoResponse;
 import br.com.conductor.caas.api.v1.model.ConsultarExtratoContaResponse;
 import br.com.conductor.caas.api.v1.model.ConsultarSaldoLimitesResponse;
-import br.com.conductor.caas.api.v1.model.ContaResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -441,73 +440,6 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ConsultarSaldoLimitesResponse) ApiInvoker.deserialize(response, "", ConsultarSaldoLimitesResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * /contas/{idConta}
-   * Consulte informaÃ§Ãµes de uma determinada conta
-   * @param idEmissor ID do Emissor
-   * @param idConta ID da Conta
-   * @return ContaResponse
-   */
-  public ContaResponse  consultarContaUsingGET (Integer idEmissor, Integer idConta) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
-    }
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/v1/contas/{idConta}/cartoes/{idConta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ContaResponse) ApiInvoker.deserialize(response, "", ContaResponse.class);
       }
       else {
         return null;

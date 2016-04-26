@@ -35,12 +35,12 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CartaoResponse>>(){}.getType();
-    }
-    
     if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<DesbloquearCartaoResponse>>(){}.getType();
+    }
+    
+    if ("CartaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CartaoResponse>>(){}.getType();
     }
     
     if ("ConsultarExtratoContaResponse".equalsIgnoreCase(className)) {
@@ -59,12 +59,12 @@ public class JsonUtil {
       return new TypeToken<List<ConsultarCartaoResponse>>(){}.getType();
     }
     
-    if ("ContaResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ContaResponse>>(){}.getType();
-    }
-    
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
+    }
+    
+    if ("ContaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ContaResponse>>(){}.getType();
     }
     
     if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
@@ -81,12 +81,12 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CartaoResponse>(){}.getType();
-    }
-    
     if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<DesbloquearCartaoResponse>(){}.getType();
+    }
+    
+    if ("CartaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CartaoResponse>(){}.getType();
     }
     
     if ("ConsultarExtratoContaResponse".equalsIgnoreCase(className)) {
@@ -105,12 +105,12 @@ public class JsonUtil {
       return new TypeToken<ConsultarCartaoResponse>(){}.getType();
     }
     
-    if ("ContaResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<ContaResponse>(){}.getType();
-    }
-    
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ExtratoResponse>(){}.getType();
+    }
+    
+    if ("ContaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ContaResponse>(){}.getType();
     }
     
     if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
