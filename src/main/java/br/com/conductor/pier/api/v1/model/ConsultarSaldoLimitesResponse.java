@@ -1,4 +1,4 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 
 
@@ -10,10 +10,10 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class ConsultarSaldoLimitesResponse  {
   
+  @SerializedName("codRetorno")
+  private Integer codRetorno = null;
   @SerializedName("codigoRetorno")
   private Integer codigoRetorno = null;
-  @SerializedName("dataVencimento")
-  private String dataVencimento = null;
   @SerializedName("descricaoRetorno")
   private String descricaoRetorno = null;
   @SerializedName("disponibCompraNac")
@@ -36,12 +36,23 @@ public class ConsultarSaldoLimitesResponse  {
   private Double limiteParcelasNac = null;
   @SerializedName("limiteSaqueNacGlobal")
   private Double limiteSaqueNacGlobal = null;
-  @SerializedName("saldoAtualFinal")
-  private Double saldoAtualFinal = null;
-  @SerializedName("saldoDevedor")
-  private Double saldoDevedor = null;
-  @SerializedName("saldoFuturo")
-  private Double saldoFuturo = null;
+  @SerializedName("limiteSaqueNacPeriodo")
+  private Double limiteSaqueNacPeriodo = null;
+  @SerializedName("rendaComprovada")
+  private Double rendaComprovada = null;
+  @SerializedName("solicitacaoPendente")
+  private Boolean solicitacaoPendente = null;
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getCodRetorno() {
+    return codRetorno;
+  }
+  public void setCodRetorno(Integer codRetorno) {
+    this.codRetorno = codRetorno;
+  }
 
   
   /**
@@ -52,17 +63,6 @@ public class ConsultarSaldoLimitesResponse  {
   }
   public void setCodigoRetorno(Integer codigoRetorno) {
     this.codigoRetorno = codigoRetorno;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getDataVencimento() {
-    return dataVencimento;
-  }
-  public void setDataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
   }
 
   
@@ -190,33 +190,33 @@ public class ConsultarSaldoLimitesResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Double getSaldoAtualFinal() {
-    return saldoAtualFinal;
+  public Double getLimiteSaqueNacPeriodo() {
+    return limiteSaqueNacPeriodo;
   }
-  public void setSaldoAtualFinal(Double saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Double getSaldoDevedor() {
-    return saldoDevedor;
-  }
-  public void setSaldoDevedor(Double saldoDevedor) {
-    this.saldoDevedor = saldoDevedor;
+  public void setLimiteSaqueNacPeriodo(Double limiteSaqueNacPeriodo) {
+    this.limiteSaqueNacPeriodo = limiteSaqueNacPeriodo;
   }
 
   
   /**
    **/
   @ApiModelProperty(value = "")
-  public Double getSaldoFuturo() {
-    return saldoFuturo;
+  public Double getRendaComprovada() {
+    return rendaComprovada;
   }
-  public void setSaldoFuturo(Double saldoFuturo) {
-    this.saldoFuturo = saldoFuturo;
+  public void setRendaComprovada(Double rendaComprovada) {
+    this.rendaComprovada = rendaComprovada;
+  }
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean getSolicitacaoPendente() {
+    return solicitacaoPendente;
+  }
+  public void setSolicitacaoPendente(Boolean solicitacaoPendente) {
+    this.solicitacaoPendente = solicitacaoPendente;
   }
 
   
@@ -226,8 +226,8 @@ public class ConsultarSaldoLimitesResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsultarSaldoLimitesResponse {\n");
     
+    sb.append("  codRetorno: ").append(codRetorno).append("\n");
     sb.append("  codigoRetorno: ").append(codigoRetorno).append("\n");
-    sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
     sb.append("  descricaoRetorno: ").append(descricaoRetorno).append("\n");
     sb.append("  disponibCompraNac: ").append(disponibCompraNac).append("\n");
     sb.append("  disponibGlobalCredito: ").append(disponibGlobalCredito).append("\n");
@@ -239,9 +239,9 @@ public class ConsultarSaldoLimitesResponse  {
     sb.append("  limiteParceladoNac: ").append(limiteParceladoNac).append("\n");
     sb.append("  limiteParcelasNac: ").append(limiteParcelasNac).append("\n");
     sb.append("  limiteSaqueNacGlobal: ").append(limiteSaqueNacGlobal).append("\n");
-    sb.append("  saldoAtualFinal: ").append(saldoAtualFinal).append("\n");
-    sb.append("  saldoDevedor: ").append(saldoDevedor).append("\n");
-    sb.append("  saldoFuturo: ").append(saldoFuturo).append("\n");
+    sb.append("  limiteSaqueNacPeriodo: ").append(limiteSaqueNacPeriodo).append("\n");
+    sb.append("  rendaComprovada: ").append(rendaComprovada).append("\n");
+    sb.append("  solicitacaoPendente: ").append(solicitacaoPendente).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

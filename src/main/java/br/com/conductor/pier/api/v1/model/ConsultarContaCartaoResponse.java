@@ -1,4 +1,4 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 @ApiModel(description = "")
-public class CartaoResponse  {
+public class ConsultarContaCartaoResponse  {
   
   @SerializedName("dataValidade")
   private String dataValidade = null;
@@ -160,7 +160,7 @@ public class CartaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CartaoResponse {\n");
+    sb.append("class ConsultarContaCartaoResponse {\n");
     
     sb.append("  dataValidade: ").append(dataValidade).append("\n");
     sb.append("  descricaoEstagio: ").append(descricaoEstagio).append("\n");

@@ -1,4 +1,4 @@
-package br.com.conductor.caas.api.v1.invoker;
+package br.com.conductor.pier.api.v1.invoker;
 
 public class Pair {
     private String name = "";

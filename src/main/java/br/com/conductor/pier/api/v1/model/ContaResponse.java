@@ -1,8 +1,8 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
-import br.com.conductor.caas.api.v1.model.CartaoResponse;
-import br.com.conductor.caas.api.v1.model.PessoaFisicaResponse;
-import br.com.conductor.caas.api.v1.model.SaldoLimiteResponse;
+import br.com.conductor.pier.api.v1.model.ConsultarContaCartaoResponse;
+import br.com.conductor.pier.api.v1.model.PessoaFisicaResponse;
+import br.com.conductor.pier.api.v1.model.SaldoLimiteResponse;
 import java.util.Date;
 
 
@@ -17,7 +17,7 @@ public class ContaResponse  {
   @SerializedName("bin")
   private Integer bin = null;
   @SerializedName("cartao")
-  private CartaoResponse cartao = null;
+  private ConsultarContaCartaoResponse cartao = null;
   @SerializedName("dataCadastramento")
   private String dataCadastramento = null;
   @SerializedName("dataUltimoPagamento")
@@ -98,10 +98,10 @@ public class ContaResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public CartaoResponse getCartao() {
+  public ConsultarContaCartaoResponse getCartao() {
     return cartao;
   }
-  public void setCartao(CartaoResponse cartao) {
+  public void setCartao(ConsultarContaCartaoResponse cartao) {
     this.cartao = cartao;
   }
 

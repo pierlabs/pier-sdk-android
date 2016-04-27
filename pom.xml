@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.conductor.caas</groupId>
-  <artifactId>caas-sdk-android</artifactId>
+  <groupId>br.com.conductor.pier</groupId>
+  <artifactId>pier-sdk-android</artifactId>
   <packaging>jar</packaging>
-  <name>caas-sdk-android</name>
+  <name>pier-sdk-android</name>
   <version>0.0.1</version>
   <scm>
     <connection>scm:git:git@github.com:swagger-api/swagger-mustache.git</connection>

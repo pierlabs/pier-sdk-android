@@ -1,6 +1,6 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
-import br.com.conductor.caas.api.v1.model.ExtratoResponse;
+import br.com.conductor.pier.api.v1.model.ExtratoResponse;
 import java.util.*;
 
 
