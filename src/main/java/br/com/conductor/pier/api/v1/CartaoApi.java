@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class CartaoResponseApi {
+public class CartaoApi {
   String basePath = "https://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -47,20 +47,14 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes/{idCartao}/cancelar
    * Cancelar um determinado cart\u00C3\u00A3o
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
    * @param motivo Motivo do cancelamento
    * @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
    * @return CancelarCartaoResponse
    */
-  public CancelarCartaoResponse  cancelarCartaoUsingPOST (Integer idEmissor, Integer idConta, Integer idCartao, Integer motivo, String observacao) throws ApiException {
+  public CancelarCartaoResponse  cancelarCartaoUsingPOST (Integer idConta, Integer idCartao, Integer motivo, String observacao) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling cancelarCartaoUsingPOST");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -100,8 +94,6 @@ public class CartaoResponseApi {
     
 
     
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -136,19 +128,13 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes/{idCartao}
    * Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta que pertence o cart\u00C3\u00A3o
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar
    * @param numeroCartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
    * @return ConsultarCartaoResponse
    */
-  public ConsultarCartaoResponse  consultarCartaoUsingGET (Integer idEmissor, Integer idConta, Integer idCartao, String numeroCartao) throws ApiException {
+  public ConsultarCartaoResponse  consultarCartaoUsingGET (Integer idConta, Integer idCartao, String numeroCartao) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarCartaoUsingGET");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -173,8 +159,6 @@ public class CartaoResponseApi {
 
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
     headerParams.put("numeroCartao", ApiInvoker.parameterToString(numeroCartao));
     
@@ -212,17 +196,11 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes
    * Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @return ConsultarCartaoResponse
    */
-  public ConsultarCartaoResponse  consultarCartoesUsingGET (Integer idEmissor, Integer idConta) throws ApiException {
+  public ConsultarCartaoResponse  consultarCartoesUsingGET (Integer idConta) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarCartoesUsingGET");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -242,8 +220,6 @@ public class CartaoResponseApi {
 
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
 
     String[] contentTypes = {
@@ -279,19 +255,13 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes/{idCartao}/faturas
    * Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
    * @param dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
    * @return ConsultarExtratoContaResponse
    */
-  public ConsultarExtratoContaResponse  consultarExtratoFaturasUsingGET (Integer idEmissor, Integer idConta, Integer idCartao, String dataVencimento) throws ApiException {
+  public ConsultarExtratoContaResponse  consultarExtratoFaturasUsingGET (Integer idConta, Integer idCartao, String dataVencimento) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarExtratoFaturasUsingGET");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -323,8 +293,6 @@ public class CartaoResponseApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
 
     String[] contentTypes = {
@@ -360,18 +328,12 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes/{idCartao}/limites
    * Consulte os limites de um determinado cart\u00C3\u00A3o
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
    * @return ConsultarSaldoLimitesResponse
    */
-  public ConsultarSaldoLimitesResponse  consultarSaldosLimitesUsingGET (Integer idEmissor, Integer idConta, Integer idCartao) throws ApiException {
+  public ConsultarSaldoLimitesResponse  consultarSaldosLimitesUsingGET (Integer idConta, Integer idCartao) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarSaldosLimitesUsingGET");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -396,8 +358,6 @@ public class CartaoResponseApi {
 
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
 
     String[] contentTypes = {
@@ -433,19 +393,13 @@ public class CartaoResponseApi {
   /**
    * /contas/{idConta}/cartoes/{idCartao}/desbloquear
    * Desbloquear cart\u00C3\u00A3o de uma determinada conta
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
    * @param codigoSegurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
    * @return DesbloquearCartaoResponse
    */
-  public DesbloquearCartaoResponse  desbloquearCartaoUsingPOST (Integer idEmissor, Integer idConta, Integer idCartao, String codigoSegurancao) throws ApiException {
+  public DesbloquearCartaoResponse  desbloquearCartaoUsingPOST (Integer idConta, Integer idCartao, String codigoSegurancao) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling desbloquearCartaoUsingPOST");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -475,8 +429,6 @@ public class CartaoResponseApi {
 
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
     headerParams.put("codigoSegurancao", ApiInvoker.parameterToString(codigoSegurancao));
     

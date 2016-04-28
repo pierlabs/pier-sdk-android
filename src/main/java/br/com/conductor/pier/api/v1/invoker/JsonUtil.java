@@ -35,6 +35,18 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("AuthToken".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AuthToken>>(){}.getType();
+    }
+    
+    if ("Body".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Body>>(){}.getType();
+    }
+    
+    if ("BodyAccessToken".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BodyAccessToken>>(){}.getType();
+    }
+    
     if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CancelarCartaoResponse>>(){}.getType();
     }
@@ -75,6 +87,10 @@ public class JsonUtil {
       return new TypeToken<List<DesbloquearCartaoResponse>>(){}.getType();
     }
     
+    if ("ExtraInfo".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ExtraInfo>>(){}.getType();
+    }
+    
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
@@ -92,6 +108,18 @@ public class JsonUtil {
 
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
+    
+    if ("AuthToken".equalsIgnoreCase(className)) {
+      return new TypeToken<AuthToken>(){}.getType();
+    }
+    
+    if ("Body".equalsIgnoreCase(className)) {
+      return new TypeToken<Body>(){}.getType();
+    }
+    
+    if ("BodyAccessToken".equalsIgnoreCase(className)) {
+      return new TypeToken<BodyAccessToken>(){}.getType();
+    }
     
     if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CancelarCartaoResponse>(){}.getType();
@@ -131,6 +159,10 @@ public class JsonUtil {
     
     if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<DesbloquearCartaoResponse>(){}.getType();
+    }
+    
+    if ("ExtraInfo".equalsIgnoreCase(className)) {
+      return new TypeToken<ExtraInfo>(){}.getType();
     }
     
     if ("ExtratoResponse".equalsIgnoreCase(className)) {

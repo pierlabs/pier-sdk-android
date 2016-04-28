@@ -44,20 +44,14 @@ public class ContaApi {
   /**
    * /contas/buscar
    * Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
-   * @param idEmissor ID do Emissor
    * @param nome Nome
    * @param cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o (opcional caso n\u00C3\u00A3o informa o cpf ou id da conta)
    * @param idConta ID da Conta (opcional caso n\u00C3\u00A3o informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou cpf)
    * @return ConsultarContaResponse
    */
-  public ConsultarContaResponse  buscarContaUsingGET (Integer idEmissor, String nome, String cpf, String numeroCartao, Long idConta) throws ApiException {
+  public ConsultarContaResponse  buscarContaUsingGET (String nome, String cpf, String numeroCartao, Long idConta) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling buscarContaUsingGET");
-    }
     
 
     // create path and map variables
@@ -80,8 +74,6 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
 
     String[] contentTypes = {
@@ -117,17 +109,11 @@ public class ContaApi {
   /**
    * /contas/{idConta}
    * Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
-   * @param idEmissor ID do Emissor
    * @param idConta ID da Conta
    * @return ContaResponse
    */
-  public ContaResponse  consultarContaUsingGET (Integer idEmissor, Integer idConta) throws ApiException {
+  public ContaResponse  consultarContaUsingGET (Integer idConta) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idEmissor' is set
-    if (idEmissor == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
-    }
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
@@ -147,8 +133,6 @@ public class ContaApi {
 
     
 
-    
-    headerParams.put("idEmissor", ApiInvoker.parameterToString(idEmissor));
     
 
     String[] contentTypes = {
