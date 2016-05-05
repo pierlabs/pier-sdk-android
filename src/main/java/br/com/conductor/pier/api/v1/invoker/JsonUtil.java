@@ -39,10 +39,6 @@ public class JsonUtil {
       return new TypeToken<List<AuthToken>>(){}.getType();
     }
     
-    if ("Body".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Body>>(){}.getType();
-    }
-    
     if ("BodyAccessToken".equalsIgnoreCase(className)) {
       return new TypeToken<List<BodyAccessToken>>(){}.getType();
     }
@@ -111,10 +107,6 @@ public class JsonUtil {
     
     if ("AuthToken".equalsIgnoreCase(className)) {
       return new TypeToken<AuthToken>(){}.getType();
-    }
-    
-    if ("Body".equalsIgnoreCase(className)) {
-      return new TypeToken<Body>(){}.getType();
     }
     
     if ("BodyAccessToken".equalsIgnoreCase(className)) {

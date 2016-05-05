@@ -20,7 +20,7 @@ public class AuthToken  {
   @SerializedName("owner")
   private String owner = null;
   public enum StatusEnum {
-     ACTIVE,  REVOKE,  DELETED, 
+     ACTIVE,  REVOKED,  DELETED, 
   };
   @SerializedName("status")
   private StatusEnum status = null;
