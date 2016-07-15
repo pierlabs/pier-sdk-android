@@ -83,6 +83,10 @@ public class JsonUtil {
       return new TypeToken<List<DesbloquearCartaoResponse>>(){}.getType();
     }
     
+    if ("EmbossadoCartaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EmbossadoCartaoResponse>>(){}.getType();
+    }
+    
     if ("ExtraInfo".equalsIgnoreCase(className)) {
       return new TypeToken<List<ExtraInfo>>(){}.getType();
     }
@@ -151,6 +155,10 @@ public class JsonUtil {
     
     if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<DesbloquearCartaoResponse>(){}.getType();
+    }
+    
+    if ("EmbossadoCartaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<EmbossadoCartaoResponse>(){}.getType();
     }
     
     if ("ExtraInfo".equalsIgnoreCase(className)) {

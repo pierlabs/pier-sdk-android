@@ -11,6 +11,7 @@ import java.util.*;
 import br.com.conductor.pier.api.v1.model.CancelarCartaoResponse;
 import br.com.conductor.pier.api.v1.model.ConsultarCartaoResponse;
 import br.com.conductor.pier.api.v1.model.DesbloquearCartaoResponse;
+import br.com.conductor.pier.api.v1.model.EmbossadoCartaoResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -43,7 +44,7 @@ public class CartaoApi {
 
   
   /**
-   * /contas/{idConta}/cartoes/{idCartao}/bloquear
+   * Bloqueia um cart\u00C3\u00A3o
    * Bloquear um determinado cart\u00C3\u00A3o
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
@@ -71,7 +72,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -119,7 +120,7 @@ public class CartaoApi {
   }
   
   /**
-   * /contas/{idConta}/cartoes/{idCartao}
+   * Retorna um cart\u00C3\u00A3o
    * Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
    * @param idConta ID da Conta que pertence o cart\u00C3\u00A3o
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar
@@ -141,7 +142,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -187,7 +188,7 @@ public class CartaoApi {
   }
   
   /**
-   * /contas/{idConta}/cartoes
+   * Retorna todos os cart\u00C3\u00B5es
    * Consultar todos os cart\u00C3\u00B5es de uma determinada conta
    * @param idConta ID da Conta
    * @return ConsultarCartaoResponse
@@ -202,7 +203,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/v1.1/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -246,7 +247,7 @@ public class CartaoApi {
   }
   
   /**
-   * /contas/{idConta}/cartoes/{idCartao}/desbloquear
+   * Desbloqueia um cart\u00C3\u00A3o
    * Desbloquear cart\u00C3\u00A3o de uma determinada conta
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
@@ -268,7 +269,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -304,6 +305,71 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (DesbloquearCartaoResponse) ApiInvoker.deserialize(response, "", DesbloquearCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Embossado
+   * N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
+   * @param idConta ID da Conta
+   * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
+   * @return EmbossadoCartaoResponse
+   */
+  public EmbossadoCartaoResponse  embossadoCartaoUsingPUT (Integer idConta, Integer idCartao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idConta' is set
+    if (idConta == null) {
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling embossadoCartaoUsingPUT");
+    }
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling embossadoCartaoUsingPUT");
+    }
+    
+
+    // create path and map variables
+    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (EmbossadoCartaoResponse) ApiInvoker.deserialize(response, "", EmbossadoCartaoResponse.class);
       }
       else {
         return null;
