@@ -72,7 +72,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -142,7 +142,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -203,7 +203,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -269,7 +269,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -336,7 +336,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

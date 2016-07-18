@@ -57,7 +57,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/buscar".replaceAll("\\{format\\}","json");
+    String path = "/api/contas/buscar".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -124,7 +124,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{idConta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -189,7 +189,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/faturas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{idConta}/faturas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -250,7 +250,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{idConta}/limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
