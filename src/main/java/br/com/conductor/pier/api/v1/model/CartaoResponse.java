@@ -47,6 +47,8 @@ public class CartaoResponse  {
   private Integer idPessoaFisica = null;
   @SerializedName("idProduto")
   private Integer idProduto = null;
+  @SerializedName("nomePlastico")
+  private String nomePlastico = null;
   @SerializedName("numeroCartao")
   private String numeroCartao = null;
   @SerializedName("numeroCartaoReal")
@@ -258,6 +260,17 @@ public class CartaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
+  public String getNomePlastico() {
+    return nomePlastico;
+  }
+  public void setNomePlastico(String nomePlastico) {
+    this.nomePlastico = nomePlastico;
+  }
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -323,6 +336,7 @@ public class CartaoResponse  {
     sb.append("  idLog: ").append(idLog).append("\n");
     sb.append("  idPessoaFisica: ").append(idPessoaFisica).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
+    sb.append("  nomePlastico: ").append(nomePlastico).append("\n");
     sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
     sb.append("  numeroCartaoReal: ").append(numeroCartaoReal).append("\n");
     sb.append("  statusCartao: ").append(statusCartao).append("\n");
