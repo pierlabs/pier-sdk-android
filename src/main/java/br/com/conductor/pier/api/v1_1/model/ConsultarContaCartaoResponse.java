@@ -1,4 +1,4 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Date;
 

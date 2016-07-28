@@ -1,11 +1,11 @@
-package br.com.conductor.pier.api.v1.invoker;
+package br.com.conductor.pier.api.v1_1.invoker;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
-import br.com.conductor.pier.api.v1.model.*;
+import br.com.conductor.pier.api.v1_1.model.*;
 
 public class JsonUtil {
   public static GsonBuilder gsonBuilder;

@@ -1,4 +1,4 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.pier.api.v1_1.model;
 
 
 
@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 @ApiModel(description = "")
-public class CancelarCartaoResponse  {
+public class EmbossadoCartaoResponse  {
   
   @SerializedName("codigoRetorno")
   private Integer codigoRetorno = null;
@@ -68,7 +68,7 @@ public class CancelarCartaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CancelarCartaoResponse {\n");
+    sb.append("class EmbossadoCartaoResponse {\n");
     
     sb.append("  codigoRetorno: ").append(codigoRetorno).append("\n");
     sb.append("  descricaoRetorno: ").append(descricaoRetorno).append("\n");

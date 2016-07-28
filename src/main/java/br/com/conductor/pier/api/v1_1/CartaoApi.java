@@ -1,17 +1,17 @@
-package br.com.conductor.pier.api.v1;
+package br.com.conductor.pier.api.v1_1;
 
-import br.com.conductor.pier.api.v1.invoker.ApiException;
-import br.com.conductor.pier.api.v1.invoker.ApiInvoker;
-import br.com.conductor.pier.api.v1.invoker.Pair;
+import br.com.conductor.pier.api.v1_1.invoker.ApiException;
+import br.com.conductor.pier.api.v1_1.invoker.ApiInvoker;
+import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1.model.*;
+import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1.model.CancelarCartaoResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarCartaoResponse;
-import br.com.conductor.pier.api.v1.model.DesbloquearCartaoResponse;
-import br.com.conductor.pier.api.v1.model.EmbossadoCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.CancelarCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.ConsultarCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.DesbloquearCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.EmbossadoCartaoResponse;
 
 
 import org.apache.http.HttpEntity;

@@ -1,17 +1,17 @@
-package br.com.conductor.pier.api.v1;
+package br.com.conductor.pier.api.v1_1;
 
-import br.com.conductor.pier.api.v1.invoker.ApiException;
-import br.com.conductor.pier.api.v1.invoker.ApiInvoker;
-import br.com.conductor.pier.api.v1.invoker.Pair;
+import br.com.conductor.pier.api.v1_1.invoker.ApiException;
+import br.com.conductor.pier.api.v1_1.invoker.ApiInvoker;
+import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1.model.*;
+import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1.model.ConsultarContaResponse;
-import br.com.conductor.pier.api.v1.model.ContaResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarExtratoContaResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarSaldoLimitesResponse;
+import br.com.conductor.pier.api.v1_1.model.ConsultarContaResponse;
+import br.com.conductor.pier.api.v1_1.model.ContaResponse;
+import br.com.conductor.pier.api.v1_1.model.ConsultarExtratoContaResponse;
+import br.com.conductor.pier.api.v1_1.model.ConsultarSaldoLimitesResponse;
 
 
 import org.apache.http.HttpEntity;

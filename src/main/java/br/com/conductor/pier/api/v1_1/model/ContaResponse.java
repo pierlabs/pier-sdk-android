@@ -1,8 +1,8 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.pier.api.v1_1.model;
 
-import br.com.conductor.pier.api.v1.model.ConsultarContaCartaoResponse;
-import br.com.conductor.pier.api.v1.model.PessoaFisicaResponse;
-import br.com.conductor.pier.api.v1.model.SaldoLimiteResponse;
+import br.com.conductor.pier.api.v1_1.model.ConsultarContaCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.PessoaFisicaResponse;
+import br.com.conductor.pier.api.v1_1.model.SaldoLimiteResponse;
 import java.util.Date;
 
 
