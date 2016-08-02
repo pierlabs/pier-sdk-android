@@ -37,10 +37,3 @@ captures/
 
 #Keystore files
 *.jks
-
-*.classpath
-pom.xml.bak
-*.pid
-bin/*
-*target*
-.project
