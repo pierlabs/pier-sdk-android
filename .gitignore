@@ -40,5 +40,5 @@ captures/
 
 *.jar
 *.war
-**/bin*
+*bin*
 *target*
