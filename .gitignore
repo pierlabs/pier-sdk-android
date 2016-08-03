@@ -38,8 +38,7 @@ captures/
 #Keystore files
 *.jks
 
-*target*
-
 *.jar
 *.war
 **/bin*
+*target*
