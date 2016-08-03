@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
+import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -15,11 +16,11 @@ public class ContaCartaoResponse  {
   @SerializedName("cpf")
   private String cpf = null;
   @SerializedName("dataCadastroConta")
-  private String dataCadastroConta = null;
+  private Date dataCadastroConta = null;
   @SerializedName("dataEmissaoIdentidade")
-  private String dataEmissaoIdentidade = null;
+  private Date dataEmissaoIdentidade = null;
   @SerializedName("dataNascimento")
-  private String dataNascimento = null;
+  private Date dataNascimento = null;
   @SerializedName("dddCelular")
   private String dddCelular = null;
   @SerializedName("idConta")
@@ -65,10 +66,10 @@ public class ContaCartaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getDataCadastroConta() {
+  public Date getDataCadastroConta() {
     return dataCadastroConta;
   }
-  public void setDataCadastroConta(String dataCadastroConta) {
+  public void setDataCadastroConta(Date dataCadastroConta) {
     this.dataCadastroConta = dataCadastroConta;
   }
 
@@ -76,10 +77,10 @@ public class ContaCartaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getDataEmissaoIdentidade() {
+  public Date getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -87,10 +88,10 @@ public class ContaCartaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getDataNascimento() {
+  public Date getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(String dataNascimento) {
+  public void setDataNascimento(Date dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
