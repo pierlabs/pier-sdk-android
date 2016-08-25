@@ -87,12 +87,32 @@ public class JsonUtil {
       return new TypeToken<List<EmbossadoCartaoResponse>>(){}.getType();
     }
     
+    if ("EstgioCarto".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EstgioCarto>>(){}.getType();
+    }
+    
     if ("ExtraInfo".equalsIgnoreCase(className)) {
       return new TypeToken<List<ExtraInfo>>(){}.getType();
     }
     
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
+    }
+    
+    if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaDeEstgiosCartes>>(){}.getType();
+    }
+    
+    if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaDeOrigensComerciais>>(){}.getType();
+    }
+    
+    if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaDeStatusCartes>>(){}.getType();
+    }
+    
+    if ("OrigemComercial".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
@@ -161,12 +181,32 @@ public class JsonUtil {
       return new TypeToken<EmbossadoCartaoResponse>(){}.getType();
     }
     
+    if ("EstgioCarto".equalsIgnoreCase(className)) {
+      return new TypeToken<EstgioCarto>(){}.getType();
+    }
+    
     if ("ExtraInfo".equalsIgnoreCase(className)) {
       return new TypeToken<ExtraInfo>(){}.getType();
     }
     
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ExtratoResponse>(){}.getType();
+    }
+    
+    if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaDeEstgiosCartes>(){}.getType();
+    }
+    
+    if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaDeOrigensComerciais>(){}.getType();
+    }
+    
+    if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaDeStatusCartes>(){}.getType();
+    }
+    
+    if ("OrigemComercial".equalsIgnoreCase(className)) {
+      return new TypeToken<OrigemComercial>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
