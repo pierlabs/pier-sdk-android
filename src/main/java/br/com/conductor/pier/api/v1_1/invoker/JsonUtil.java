@@ -51,6 +51,14 @@ public class JsonUtil {
       return new TypeToken<List<CartaoResponse>>(){}.getType();
     }
     
+    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CartaoResponseOld>>(){}.getType();
+    }
+    
+    if ("Chronology".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Chronology>>(){}.getType();
+    }
+    
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ConsultarCartaoResponse>>(){}.getType();
     }
@@ -99,12 +107,20 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
+    if ("ListaDeCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaDeCartes>>(){}.getType();
+    }
+    
     if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListaDeEstgiosCartes>>(){}.getType();
     }
     
     if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListaDeOrigensComerciais>>(){}.getType();
+    }
+    
+    if ("ListaDePessoas".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaDePessoas>>(){}.getType();
     }
     
     if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
@@ -115,12 +131,20 @@ public class JsonUtil {
       return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
+    if ("Pessoa".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Pessoa>>(){}.getType();
+    }
+    
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PessoaFisicaResponse>>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<SaldoLimiteResponse>>(){}.getType();
+    }
+    
+    if ("StatusCarto".equalsIgnoreCase(className)) {
+      return new TypeToken<List<StatusCarto>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -143,6 +167,14 @@ public class JsonUtil {
     
     if ("CartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CartaoResponse>(){}.getType();
+    }
+    
+    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
+      return new TypeToken<CartaoResponseOld>(){}.getType();
+    }
+    
+    if ("Chronology".equalsIgnoreCase(className)) {
+      return new TypeToken<Chronology>(){}.getType();
     }
     
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
@@ -193,12 +225,20 @@ public class JsonUtil {
       return new TypeToken<ExtratoResponse>(){}.getType();
     }
     
+    if ("ListaDeCartes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaDeCartes>(){}.getType();
+    }
+    
     if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
       return new TypeToken<ListaDeEstgiosCartes>(){}.getType();
     }
     
     if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
       return new TypeToken<ListaDeOrigensComerciais>(){}.getType();
+    }
+    
+    if ("ListaDePessoas".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaDePessoas>(){}.getType();
     }
     
     if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
@@ -209,12 +249,20 @@ public class JsonUtil {
       return new TypeToken<OrigemComercial>(){}.getType();
     }
     
+    if ("Pessoa".equalsIgnoreCase(className)) {
+      return new TypeToken<Pessoa>(){}.getType();
+    }
+    
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PessoaFisicaResponse>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<SaldoLimiteResponse>(){}.getType();
+    }
+    
+    if ("StatusCarto".equalsIgnoreCase(className)) {
+      return new TypeToken<StatusCarto>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

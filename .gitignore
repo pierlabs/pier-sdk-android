@@ -37,7 +37,3 @@ captures/
 
 #Keystore files
 *.jks
-
-tagert/
-.classpath
-.project
