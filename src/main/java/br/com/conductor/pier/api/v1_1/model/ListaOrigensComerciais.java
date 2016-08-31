@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
  * Lista de Origens Comerciais
  **/
 @ApiModel(description = "Lista de Origens Comerciais")
-public class ListaDeOrigensComerciais  {
+public class ListaOrigensComerciais  {
   
   @SerializedName("origensComerciais")
   private List<OrigemComercial> origensComerciais = null;
@@ -35,7 +35,7 @@ public class ListaDeOrigensComerciais  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeOrigensComerciais {\n");
+    sb.append("class ListaOrigensComerciais {\n");
     
     sb.append("  origensComerciais: ").append(origensComerciais).append("\n");
     sb.append("}\n");

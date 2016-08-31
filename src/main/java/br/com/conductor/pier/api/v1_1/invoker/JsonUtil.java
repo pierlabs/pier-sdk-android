@@ -47,12 +47,12 @@ public class JsonUtil {
       return new TypeToken<List<CancelarCartaoResponse>>(){}.getType();
     }
     
-    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CartaoResponseOld>>(){}.getType();
+    if ("Cartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Cartao>>(){}.getType();
     }
     
-    if ("Carto".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Carto>>(){}.getType();
+    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CartaoResponseOld>>(){}.getType();
     }
     
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
@@ -91,8 +91,8 @@ public class JsonUtil {
       return new TypeToken<List<EmbossadoCartaoResponse>>(){}.getType();
     }
     
-    if ("EstgioCarto".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EstgioCarto>>(){}.getType();
+    if ("EstagioCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EstagioCartao>>(){}.getType();
     }
     
     if ("ExtraInfo".equalsIgnoreCase(className)) {
@@ -103,44 +103,44 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
-    if ("ListaDeCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaDeCartes>>(){}.getType();
+    if ("ListaCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaCartoes>>(){}.getType();
     }
     
-    if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaDeEstgiosCartes>>(){}.getType();
+    if ("ListaEstagiosCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaEstagiosCartoes>>(){}.getType();
     }
     
-    if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaDeOrigensComerciais>>(){}.getType();
+    if ("ListaOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaOrigensComerciais>>(){}.getType();
     }
     
-    if ("ListaDePessoas".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaDePessoas>>(){}.getType();
+    if ("ListaProdutos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaProdutos>>(){}.getType();
     }
     
-    if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaDeStatusCartes>>(){}.getType();
+    if ("ListaStatusCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ListaStatusCartoes>>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
       return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
-    if ("Pessoa".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Pessoa>>(){}.getType();
-    }
-    
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PessoaFisicaResponse>>(){}.getType();
+    }
+    
+    if ("Produto".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Produto>>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<SaldoLimiteResponse>>(){}.getType();
     }
     
-    if ("StatusCarto".equalsIgnoreCase(className)) {
-      return new TypeToken<List<StatusCarto>>(){}.getType();
+    if ("StatusCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<StatusCartao>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -161,12 +161,12 @@ public class JsonUtil {
       return new TypeToken<CancelarCartaoResponse>(){}.getType();
     }
     
-    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
-      return new TypeToken<CartaoResponseOld>(){}.getType();
+    if ("Cartao".equalsIgnoreCase(className)) {
+      return new TypeToken<Cartao>(){}.getType();
     }
     
-    if ("Carto".equalsIgnoreCase(className)) {
-      return new TypeToken<Carto>(){}.getType();
+    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
+      return new TypeToken<CartaoResponseOld>(){}.getType();
     }
     
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
@@ -205,8 +205,8 @@ public class JsonUtil {
       return new TypeToken<EmbossadoCartaoResponse>(){}.getType();
     }
     
-    if ("EstgioCarto".equalsIgnoreCase(className)) {
-      return new TypeToken<EstgioCarto>(){}.getType();
+    if ("EstagioCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<EstagioCartao>(){}.getType();
     }
     
     if ("ExtraInfo".equalsIgnoreCase(className)) {
@@ -217,44 +217,44 @@ public class JsonUtil {
       return new TypeToken<ExtratoResponse>(){}.getType();
     }
     
-    if ("ListaDeCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaDeCartes>(){}.getType();
+    if ("ListaCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaCartoes>(){}.getType();
     }
     
-    if ("ListaDeEstgiosCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaDeEstgiosCartes>(){}.getType();
+    if ("ListaEstagiosCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaEstagiosCartoes>(){}.getType();
     }
     
-    if ("ListaDeOrigensComerciais".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaDeOrigensComerciais>(){}.getType();
+    if ("ListaOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaOrigensComerciais>(){}.getType();
     }
     
-    if ("ListaDePessoas".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaDePessoas>(){}.getType();
+    if ("ListaProdutos".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaProdutos>(){}.getType();
     }
     
-    if ("ListaDeStatusCartes".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaDeStatusCartes>(){}.getType();
+    if ("ListaStatusCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<ListaStatusCartoes>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
       return new TypeToken<OrigemComercial>(){}.getType();
     }
     
-    if ("Pessoa".equalsIgnoreCase(className)) {
-      return new TypeToken<Pessoa>(){}.getType();
-    }
-    
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PessoaFisicaResponse>(){}.getType();
+    }
+    
+    if ("Produto".equalsIgnoreCase(className)) {
+      return new TypeToken<Produto>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<SaldoLimiteResponse>(){}.getType();
     }
     
-    if ("StatusCarto".equalsIgnoreCase(className)) {
-      return new TypeToken<StatusCarto>(){}.getType();
+    if ("StatusCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<StatusCartao>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

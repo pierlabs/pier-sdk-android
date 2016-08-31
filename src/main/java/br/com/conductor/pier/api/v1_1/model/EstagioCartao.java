@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
  **/
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o")
-public class EstgioCarto  {
+public class EstagioCartao  {
   
   @SerializedName("id")
   private Long id = null;
@@ -47,7 +47,7 @@ public class EstgioCarto  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EstgioCarto {\n");
+    sb.append("class EstagioCartao {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");

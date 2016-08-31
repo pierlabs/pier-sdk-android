@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1_1.model.EstgioCarto;
-import br.com.conductor.pier.api.v1_1.model.ListaDeEstgiosCartes;
+import br.com.conductor.pier.api.v1_1.model.EstagioCartao;
+import br.com.conductor.pier.api.v1_1.model.ListaEstagiosCartoes;
 
 
 import org.apache.http.HttpEntity;
@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class EstgioCartoApi {
+public class EstagioCartaoApi {
   String basePath = "https://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -45,9 +45,9 @@ public class EstgioCartoApi {
    * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o 
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
    * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-   * @return EstgioCarto
+   * @return EstagioCartao
    */
-  public EstgioCarto  consultarEstagioCartaoUsingGET (Long idEstagioCartao) throws ApiException {
+  public EstagioCartao  consultarEstagioCartaoUsingGET (Long idEstagioCartao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idEstagioCartao' is set
@@ -90,7 +90,7 @@ public class EstgioCartoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (EstgioCarto) ApiInvoker.deserialize(response, "", EstgioCarto.class);
+        return (EstagioCartao) ApiInvoker.deserialize(response, "", EstagioCartao.class);
       }
       else {
         return null;
@@ -107,20 +107,10 @@ public class EstgioCartoApi {
    * @param nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaDeEstgiosCartes
+   * @return ListaEstagiosCartoes
    */
-  public ListaDeEstgiosCartes  listarEstagiosCartoesUsingGET (Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public ListaEstagiosCartoes  listarEstagiosCartoesUsingGET (Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarEstagiosCartoesUsingGET");
-    }
-    
-    // verify the required parameter 'nome' is set
-    if (nome == null) {
-       throw new ApiException(400, "Missing the required parameter 'nome' when calling listarEstagiosCartoesUsingGET");
-    }
     
 
     // create path and map variables
@@ -165,7 +155,7 @@ public class EstgioCartoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ListaDeEstgiosCartes) ApiInvoker.deserialize(response, "", ListaDeEstgiosCartes.class);
+        return (ListaEstagiosCartoes) ApiInvoker.deserialize(response, "", ListaEstagiosCartoes.class);
       }
       else {
         return null;

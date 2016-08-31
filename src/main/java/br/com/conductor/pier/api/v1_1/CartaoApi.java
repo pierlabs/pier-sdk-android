@@ -8,10 +8,9 @@ import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1_1.model.CancelarCartaoResponse;
-import br.com.conductor.pier.api.v1_1.model.ConsultarCartaoResponse;
-import br.com.conductor.pier.api.v1_1.model.DesbloquearCartaoResponse;
-import br.com.conductor.pier.api.v1_1.model.EmbossadoCartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
+import br.com.conductor.pier.api.v1_1.model.ListaCartoes;
+import java.util.Date;
 
 
 import org.apache.http.HttpEntity;
@@ -44,166 +43,22 @@ public class CartaoApi {
 
   
   /**
-   * Bloqueia um cart\u00C3\u00A3o
-   * Bloquear um determinado cart\u00C3\u00A3o
-   * @param idConta ID da Conta
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
-   * @param motivo Motivo do bloqueio
-   * @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
-   * @return CancelarCartaoResponse
+   * Apresenta os dados de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return OrigemComercial
    */
-  public CancelarCartaoResponse  bloquearCartaoUsingPOST (Integer idConta, Integer idCartao, Integer motivo, String observacao) throws ApiException {
+  public OrigemComercial  consultarUsingGET (Long idCartao) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling bloquearCartaoUsingPOST");
-    }
     
     // verify the required parameter 'idCartao' is set
     if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling bloquearCartaoUsingPOST");
-    }
-    
-    // verify the required parameter 'motivo' is set
-    if (motivo == null) {
-       throw new ApiException(400, "Missing the required parameter 'motivo' when calling bloquearCartaoUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "motivo", motivo));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (CancelarCartaoResponse) ApiInvoker.deserialize(response, "", CancelarCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Retorna um cart\u00C3\u00A3o
-   * Consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado cart\u00C3\u00A3o de uma conta
-   * @param idConta ID da Conta que pertence o cart\u00C3\u00A3o
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar
-   * @param numeroCartao N\u00C3\u00BAmero do Cart\u00C3\u00A3o que deseja consultar (opcional)
-   * @return ConsultarCartaoResponse
-   */
-  public ConsultarCartaoResponse  consultarCartaoUsingGET (Integer idConta, Integer idCartao, String numeroCartao) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarCartaoUsingGET");
-    }
-    
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarCartaoUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-    headerParams.put("numeroCartao", ApiInvoker.parameterToString(numeroCartao));
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ConsultarCartaoResponse) ApiInvoker.deserialize(response, "", ConsultarCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Retorna todos os cart\u00C3\u00B5es
-   * Consultar todos os cart\u00C3\u00B5es de uma determinada conta
-   * @param idConta ID da Conta
-   * @return ConsultarCartaoResponse
-   */
-  public ConsultarCartaoResponse  consultarCartoesUsingGET (Integer idConta) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarCartoesUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/cartoes/{id_cartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -236,7 +91,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ConsultarCartaoResponse) ApiInvoker.deserialize(response, "", ConsultarCartaoResponse.class);
+        return (OrigemComercial) ApiInvoker.deserialize(response, "", OrigemComercial.class);
       }
       else {
         return null;
@@ -247,29 +102,36 @@ public class CartaoApi {
   }
   
   /**
-   * Desbloqueia um cart\u00C3\u00A3o
-   * Desbloquear cart\u00C3\u00A3o de uma determinada conta
-   * @param idConta ID da Conta
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-   * @param codigoSegurancao C\u00C3\u00B3digo seguran\u00C3\u00A7a do cart\u00C3\u00A3o
-   * @return DesbloquearCartaoResponse
+   * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
+   * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
+   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * @param portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+   * @param numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * @param nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
+   * @param dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   * @param dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * @param dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * @param dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * @param dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
+   * @param arquivoImpressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
+   * @param flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
+   * @param flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+   * @param codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @return ListaCartoes
    */
-  public DesbloquearCartaoResponse  desbloquearCartaoUsingPOST (Integer idConta, Integer idCartao, String codigoSegurancao) throws ApiException {
+  public ListaCartoes  listarUsingGET (Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, Integer portador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling desbloquearCartaoUsingPOST");
-    }
-    
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling desbloquearCartaoUsingPOST");
-    }
     
 
     // create path and map variables
-    String path = "/api/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -279,72 +141,45 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
-    headerParams.put("codigoSegurancao", ApiInvoker.parameterToString(codigoSegurancao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idStatusCartao", idStatusCartao));
     
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (DesbloquearCartaoResponse) ApiInvoker.deserialize(response, "", DesbloquearCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Embossado
-   * N\u00C3\u00B3s informe caso tenha embossado algum cart\u00C3\u00A3o.
-   * @param idConta ID da Conta
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
-   * @return EmbossadoCartaoResponse
-   */
-  public EmbossadoCartaoResponse  embossadoCartaoUsingPUT (Integer idConta, Integer idCartao) throws ApiException {
-    Object postBody = null;
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstagioCartao", idEstagioCartao));
     
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling embossadoCartaoUsingPUT");
-    }
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling embossadoCartaoUsingPUT");
-    }
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoa", idPessoa));
     
-
-    // create path and map variables
-    String path = "/api/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idProduto", idProduto));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "portador", portador));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeImpresso", nomeImpresso));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataGeracao", dataGeracao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataStatusCartao", dataStatusCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataEstagioCartao", dataEstagioCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataValidade", dataValidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataImpressao", dataImpressao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "arquivoImpressao", arquivoImpressao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagImpressaoOrigemComercial", flagImpressaoOrigemComercial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagProvisorio", flagProvisorio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoDesbloqueio", codigoDesbloqueio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
     
@@ -367,9 +202,9 @@ public class CartaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (EmbossadoCartaoResponse) ApiInvoker.deserialize(response, "", EmbossadoCartaoResponse.class);
+        return (ListaCartoes) ApiInvoker.deserialize(response, "", ListaCartoes.class);
       }
       else {
         return null;

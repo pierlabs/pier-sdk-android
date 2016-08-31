@@ -9,7 +9,7 @@ import br.com.conductor.pier.api.v1_1.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
-import br.com.conductor.pier.api.v1_1.model.ListaDeOrigensComerciais;
+import br.com.conductor.pier.api.v1_1.model.ListaOrigensComerciais;
 
 
 import org.apache.http.HttpEntity;
@@ -108,9 +108,9 @@ public class OrigemComercialApi {
    * @param status Status da Origem Comercial
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaDeOrigensComerciais
+   * @return ListaOrigensComerciais
    */
-  public ListaDeOrigensComerciais  listarOrigensComerciaisUsingGET (Long idOrigemComercial, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public ListaOrigensComerciais  listarOrigensComerciaisUsingGET (Long idOrigemComercial, String nome, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -158,7 +158,7 @@ public class OrigemComercialApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ListaDeOrigensComerciais) ApiInvoker.deserialize(response, "", ListaDeOrigensComerciais.class);
+        return (ListaOrigensComerciais) ApiInvoker.deserialize(response, "", ListaOrigensComerciais.class);
       }
       else {
         return null;

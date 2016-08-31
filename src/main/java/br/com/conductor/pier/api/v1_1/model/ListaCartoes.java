@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
-import br.com.conductor.pier.api.v1_1.model.Carto;
+import br.com.conductor.pier.api.v1_1.model.Cartao;
 import java.util.*;
 
 
@@ -13,20 +13,20 @@ import com.google.gson.annotations.SerializedName;
  * Lista de Cart\u00C3\u00B5es
  **/
 @ApiModel(description = "Lista de Cart\u00C3\u00B5es")
-public class ListaDeCartes  {
+public class ListaCartoes  {
   
   @SerializedName("cartoes")
-  private List<Carto> cartoes = null;
+  private List<Cartao> cartoes = null;
 
   
   /**
    * Lista de cart\u00C3\u00B5es
    **/
   @ApiModelProperty(value = "Lista de cart\u00C3\u00B5es")
-  public List<Carto> getCartoes() {
+  public List<Cartao> getCartoes() {
     return cartoes;
   }
-  public void setCartoes(List<Carto> cartoes) {
+  public void setCartoes(List<Cartao> cartoes) {
     this.cartoes = cartoes;
   }
 
@@ -35,7 +35,7 @@ public class ListaDeCartes  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeCartes {\n");
+    sb.append("class ListaCartoes {\n");
     
     sb.append("  cartoes: ").append(cartoes).append("\n");
     sb.append("}\n");

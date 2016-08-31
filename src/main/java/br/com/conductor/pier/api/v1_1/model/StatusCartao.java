@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
  **/
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o")
-public class StatusCarto  {
+public class StatusCartao  {
   
   @SerializedName("flagAlteraStatus")
   private Integer flagAlteraStatus = null;
@@ -215,7 +215,7 @@ public class StatusCarto  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StatusCarto {\n");
+    sb.append("class StatusCartao {\n");
     
     sb.append("  flagAlteraStatus: ").append(flagAlteraStatus).append("\n");
     sb.append("  flagCadastroNovaSenha: ").append(flagCadastroNovaSenha).append("\n");

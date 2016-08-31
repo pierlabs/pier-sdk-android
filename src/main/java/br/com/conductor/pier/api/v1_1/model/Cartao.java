@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * Objeto Cart\u00C3\u00A3o
  **/
 @ApiModel(description = "Objeto Cart\u00C3\u00A3o")
-public class Carto  {
+public class Cartao  {
   
   @SerializedName("arquivoImpressao")
   private String arquivoImpressao = null;
@@ -272,7 +272,7 @@ public class Carto  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Carto {\n");
+    sb.append("class Cartao {\n");
     
     sb.append("  arquivoImpressao: ").append(arquivoImpressao).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
