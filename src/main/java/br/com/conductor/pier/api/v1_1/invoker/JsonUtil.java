@@ -47,16 +47,12 @@ public class JsonUtil {
       return new TypeToken<List<CancelarCartaoResponse>>(){}.getType();
     }
     
-    if ("CartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CartaoResponse>>(){}.getType();
-    }
-    
     if ("CartaoResponseOld".equalsIgnoreCase(className)) {
       return new TypeToken<List<CartaoResponseOld>>(){}.getType();
     }
     
-    if ("Chronology".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Chronology>>(){}.getType();
+    if ("Carto".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Carto>>(){}.getType();
     }
     
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
@@ -165,16 +161,12 @@ public class JsonUtil {
       return new TypeToken<CancelarCartaoResponse>(){}.getType();
     }
     
-    if ("CartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CartaoResponse>(){}.getType();
-    }
-    
     if ("CartaoResponseOld".equalsIgnoreCase(className)) {
       return new TypeToken<CartaoResponseOld>(){}.getType();
     }
     
-    if ("Chronology".equalsIgnoreCase(className)) {
-      return new TypeToken<Chronology>(){}.getType();
+    if ("Carto".equalsIgnoreCase(className)) {
+      return new TypeToken<Carto>(){}.getType();
     }
     
     if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {

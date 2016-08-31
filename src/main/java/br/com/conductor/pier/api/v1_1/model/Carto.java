@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
-import org.joda.time.*;
+import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -8,23 +8,26 @@ import com.google.gson.annotations.SerializedName;
 
 
 
-@ApiModel(description = "")
-public class CartaoResponse  {
+/**
+ * Objeto Cart\u00C3\u00A3o
+ **/
+@ApiModel(description = "Objeto Cart\u00C3\u00A3o")
+public class Carto  {
   
   @SerializedName("arquivoImpressao")
   private String arquivoImpressao = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
   @SerializedName("dataEstagioCartao")
-  private LocalDateTime dataEstagioCartao = null;
+  private Date dataEstagioCartao = null;
   @SerializedName("dataGeracao")
-  private LocalDateTime dataGeracao = null;
+  private Date dataGeracao = null;
   @SerializedName("dataImpressao")
-  private LocalDateTime dataImpressao = null;
+  private Date dataImpressao = null;
   @SerializedName("dataStatusCartao")
-  private LocalDateTime dataStatusCartao = null;
+  private Date dataStatusCartao = null;
   @SerializedName("dataValidade")
-  private LocalDateTime dataValidade = null;
+  private Date dataValidade = null;
   @SerializedName("flagImpressaoOrigemComercial")
   private Integer flagImpressaoOrigemComercial = null;
   @SerializedName("flagProvisorio")
@@ -37,8 +40,12 @@ public class CartaoResponse  {
   private Long idEstagioCartao = null;
   @SerializedName("idPessoa")
   private Long idPessoa = null;
+  @SerializedName("idProduto")
+  private Long idProduto = null;
   @SerializedName("idStatusCartao")
   private Long idStatusCartao = null;
+  @SerializedName("nomeImpresso")
+  private String nomeImpresso = null;
   @SerializedName("numeroCartao")
   private String numeroCartao = null;
   @SerializedName("portador")
@@ -48,7 +55,7 @@ public class CartaoResponse  {
   /**
    * Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.")
+  @ApiModelProperty(value = "Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.")
   public String getArquivoImpressao() {
     return arquivoImpressao;
   }
@@ -60,7 +67,7 @@ public class CartaoResponse  {
   /**
    * Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.")
+  @ApiModelProperty(value = "Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.")
   public String getCodigoDesbloqueio() {
     return codigoDesbloqueio;
   }
@@ -72,11 +79,11 @@ public class CartaoResponse  {
   /**
    * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
-  public LocalDateTime getDataEstagioCartao() {
+  @ApiModelProperty(value = "Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  public Date getDataEstagioCartao() {
     return dataEstagioCartao;
   }
-  public void setDataEstagioCartao(LocalDateTime dataEstagioCartao) {
+  public void setDataEstagioCartao(Date dataEstagioCartao) {
     this.dataEstagioCartao = dataEstagioCartao;
   }
 
@@ -84,11 +91,11 @@ public class CartaoResponse  {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
-  public LocalDateTime getDataGeracao() {
+  @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
+  public Date getDataGeracao() {
     return dataGeracao;
   }
-  public void setDataGeracao(LocalDateTime dataGeracao) {
+  public void setDataGeracao(Date dataGeracao) {
     this.dataGeracao = dataGeracao;
   }
 
@@ -96,11 +103,11 @@ public class CartaoResponse  {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.")
-  public LocalDateTime getDataImpressao() {
+  @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.")
+  public Date getDataImpressao() {
     return dataImpressao;
   }
-  public void setDataImpressao(LocalDateTime dataImpressao) {
+  public void setDataImpressao(Date dataImpressao) {
     this.dataImpressao = dataImpressao;
   }
 
@@ -108,11 +115,11 @@ public class CartaoResponse  {
   /**
    * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
-  public LocalDateTime getDataStatusCartao() {
+  @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  public Date getDataStatusCartao() {
     return dataStatusCartao;
   }
-  public void setDataStatusCartao(LocalDateTime dataStatusCartao) {
+  public void setDataStatusCartao(Date dataStatusCartao) {
     this.dataStatusCartao = dataStatusCartao;
   }
 
@@ -120,11 +127,11 @@ public class CartaoResponse  {
   /**
    * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.")
-  public LocalDateTime getDataValidade() {
+  @ApiModelProperty(value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.")
+  public Date getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(LocalDateTime dataValidade) {
+  public void setDataValidade(Date dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -132,7 +139,7 @@ public class CartaoResponse  {
   /**
    * Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
    **/
-  @ApiModelProperty(required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.")
+  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.")
   public Integer getFlagImpressaoOrigemComercial() {
     return flagImpressaoOrigemComercial;
   }
@@ -144,7 +151,7 @@ public class CartaoResponse  {
   /**
    * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
    **/
-  @ApiModelProperty(required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.")
+  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.")
   public Integer getFlagProvisorio() {
     return flagProvisorio;
   }
@@ -156,7 +163,7 @@ public class CartaoResponse  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
   public Long getId() {
     return id;
   }
@@ -168,7 +175,7 @@ public class CartaoResponse  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).")
   public Long getIdConta() {
     return idConta;
   }
@@ -180,7 +187,7 @@ public class CartaoResponse  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
   public Long getIdEstagioCartao() {
     return idEstagioCartao;
   }
@@ -192,7 +199,7 @@ public class CartaoResponse  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -202,9 +209,21 @@ public class CartaoResponse  {
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -214,9 +233,21 @@ public class CartaoResponse  {
 
   
   /**
+   * Apresenta o nome impresso no cart\u00C3\u00A3o.
+   **/
+  @ApiModelProperty(value = "Apresenta o nome impresso no cart\u00C3\u00A3o.")
+  public String getNomeImpresso() {
+    return nomeImpresso;
+  }
+  public void setNomeImpresso(String nomeImpresso) {
+    this.nomeImpresso = nomeImpresso;
+  }
+
+  
+  /**
    * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -228,7 +259,7 @@ public class CartaoResponse  {
   /**
    * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    **/
-  @ApiModelProperty(required = true, value = "Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.")
+  @ApiModelProperty(value = "Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.")
   public Integer getPortador() {
     return portador;
   }
@@ -241,7 +272,7 @@ public class CartaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CartaoResponse {\n");
+    sb.append("class Carto {\n");
     
     sb.append("  arquivoImpressao: ").append(arquivoImpressao).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
@@ -256,7 +287,9 @@ public class CartaoResponse  {
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idEstagioCartao: ").append(idEstagioCartao).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
+    sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  idStatusCartao: ").append(idStatusCartao).append("\n");
+    sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
     sb.append("  portador: ").append(portador).append("\n");
     sb.append("}\n");

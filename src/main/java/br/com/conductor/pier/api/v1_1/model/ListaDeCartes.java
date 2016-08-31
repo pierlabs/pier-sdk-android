@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
-import br.com.conductor.pier.api.v1_1.model.CartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.Carto;
 import java.util.*;
 
 
@@ -16,17 +16,17 @@ import com.google.gson.annotations.SerializedName;
 public class ListaDeCartes  {
   
   @SerializedName("cartoes")
-  private List<CartaoResponse> cartoes = null;
+  private List<Carto> cartoes = null;
 
   
   /**
    * Lista de cart\u00C3\u00B5es
    **/
   @ApiModelProperty(value = "Lista de cart\u00C3\u00B5es")
-  public List<CartaoResponse> getCartoes() {
+  public List<Carto> getCartoes() {
     return cartoes;
   }
-  public void setCartoes(List<CartaoResponse> cartoes) {
+  public void setCartoes(List<Carto> cartoes) {
     this.cartoes = cartoes;
   }
 

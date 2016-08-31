@@ -139,7 +139,7 @@
     <dependency>
         <groupId>joda-time</groupId>
         <artifactId>joda-time</artifactId>
-        <version>${joda-time-version}</version>
+        <version>${jodatime-version}</version>
     </dependency>
 
 
@@ -164,6 +164,6 @@
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <junit-version>4.8.1</junit-version>
     <httpclient-version>4.3.6</httpclient-version>
-    <joda-time-version>2.9.4</joda-time-version>
+    <jodatime-version>2.9.4</jodatime-version>
   </properties>
 </project>
