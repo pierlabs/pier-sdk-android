@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
-import br.com.conductor.pier.api.v1_1.model.PageImplOfEstagioCartao;
+import br.com.conductor.pier.api.v1_1.model.PageApiOfEstagioCartao;
 
 
 import io.swagger.annotations.*;
@@ -15,16 +15,16 @@ import com.google.gson.annotations.SerializedName;
 public class PageEstagiosCartoes  {
   
   @SerializedName("estagioCartoes")
-  private PageImplOfEstagioCartao estagioCartoes = null;
+  private PageApiOfEstagioCartao estagioCartoes = null;
 
   
   /**
    **/
   @ApiModelProperty(value = "")
-  public PageImplOfEstagioCartao getEstagioCartoes() {
+  public PageApiOfEstagioCartao getEstagioCartoes() {
     return estagioCartoes;
   }
-  public void setEstagioCartoes(PageImplOfEstagioCartao estagioCartoes) {
+  public void setEstagioCartoes(PageApiOfEstagioCartao estagioCartoes) {
     this.estagioCartoes = estagioCartoes;
   }
 

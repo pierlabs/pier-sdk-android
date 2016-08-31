@@ -123,12 +123,12 @@ public class JsonUtil {
       return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
-    if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PageEstagiosCartoes>>(){}.getType();
+    if ("PageApiOfEstagioCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageApiOfEstagioCartao>>(){}.getType();
     }
     
-    if ("PageImplOfEstagioCartao".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PageImplOfEstagioCartao>>(){}.getType();
+    if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageEstagiosCartoes>>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
@@ -241,12 +241,12 @@ public class JsonUtil {
       return new TypeToken<OrigemComercial>(){}.getType();
     }
     
-    if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<PageEstagiosCartoes>(){}.getType();
+    if ("PageApiOfEstagioCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<PageApiOfEstagioCartao>(){}.getType();
     }
     
-    if ("PageImplOfEstagioCartao".equalsIgnoreCase(className)) {
-      return new TypeToken<PageImplOfEstagioCartao>(){}.getType();
+    if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<PageEstagiosCartoes>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
