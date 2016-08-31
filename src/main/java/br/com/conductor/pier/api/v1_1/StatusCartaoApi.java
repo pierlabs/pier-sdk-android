@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class StatusCartoApi {
+public class StatusCartaoApi {
   String basePath = "https://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
