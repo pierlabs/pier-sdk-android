@@ -9,7 +9,7 @@ import br.com.conductor.pier.api.v1_1.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v1_1.model.EstagioCartao;
-import br.com.conductor.pier.api.v1_1.model.ListaEstagiosCartoes;
+import br.com.conductor.pier.api.v1_1.model.PageEstagiosCartoes;
 
 
 import org.apache.http.HttpEntity;
@@ -107,9 +107,9 @@ public class EstagioCartaoApi {
    * @param nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaEstagiosCartoes
+   * @return PageEstagiosCartoes
    */
-  public ListaEstagiosCartoes  listarEstagiosCartoesUsingGET (Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageEstagiosCartoes  listarEstagiosCartoesUsingGET (Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -155,7 +155,7 @@ public class EstagioCartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ListaEstagiosCartoes) ApiInvoker.deserialize(response, "", ListaEstagiosCartoes.class);
+        return (PageEstagiosCartoes) ApiInvoker.deserialize(response, "", PageEstagiosCartoes.class);
       }
       else {
         return null;
