@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v1_1.model;
 
-import br.com.conductor.pier.api.v1_1.model.Produto;
+import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
 import java.util.*;
 
 
@@ -10,13 +10,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de Produtos
+ * Lista de Origens Comerciais
  **/
-@ApiModel(description = "Lista de Produtos")
-public class ListaProdutos  {
+@ApiModel(description = "Lista de Origens Comerciais")
+public class PageOrigensComerciais  {
   
   @SerializedName("content")
-  private List<Produto> content = null;
+  private List<OrigemComercial> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class ListaProdutos  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<Produto> getContent() {
+  public List<OrigemComercial> getContent() {
     return content;
   }
-  public void setContent(List<Produto> content) {
+  public void setContent(List<OrigemComercial> content) {
     this.content = content;
   }
 
@@ -203,7 +203,7 @@ public class ListaProdutos  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaProdutos {\n");
+    sb.append("class PageOrigensComerciais {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

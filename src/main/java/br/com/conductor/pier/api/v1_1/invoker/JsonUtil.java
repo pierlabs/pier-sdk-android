@@ -103,28 +103,36 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
-    if ("ListaCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaCartoes>>(){}.getType();
-    }
-    
-    if ("ListaOrigensComerciais".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaOrigensComerciais>>(){}.getType();
-    }
-    
     if ("ListaProdutos".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListaProdutos>>(){}.getType();
-    }
-    
-    if ("ListaStatusCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ListaStatusCartoes>>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
       return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
+    if ("PageCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageCartoes>>(){}.getType();
+    }
+    
     if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageEstagiosCartoes>>(){}.getType();
+    }
+    
+    if ("PageOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageOrigensComerciais>>(){}.getType();
+    }
+    
+    if ("PagePessoas".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PagePessoas>>(){}.getType();
+    }
+    
+    if ("PageStatusCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageStatusCartoes>>(){}.getType();
+    }
+    
+    if ("Pessoa".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Pessoa>>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
@@ -217,28 +225,36 @@ public class JsonUtil {
       return new TypeToken<ExtratoResponse>(){}.getType();
     }
     
-    if ("ListaCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaCartoes>(){}.getType();
-    }
-    
-    if ("ListaOrigensComerciais".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaOrigensComerciais>(){}.getType();
-    }
-    
     if ("ListaProdutos".equalsIgnoreCase(className)) {
       return new TypeToken<ListaProdutos>(){}.getType();
-    }
-    
-    if ("ListaStatusCartoes".equalsIgnoreCase(className)) {
-      return new TypeToken<ListaStatusCartoes>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
       return new TypeToken<OrigemComercial>(){}.getType();
     }
     
+    if ("PageCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<PageCartoes>(){}.getType();
+    }
+    
     if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<PageEstagiosCartoes>(){}.getType();
+    }
+    
+    if ("PageOrigensComerciais".equalsIgnoreCase(className)) {
+      return new TypeToken<PageOrigensComerciais>(){}.getType();
+    }
+    
+    if ("PagePessoas".equalsIgnoreCase(className)) {
+      return new TypeToken<PagePessoas>(){}.getType();
+    }
+    
+    if ("PageStatusCartoes".equalsIgnoreCase(className)) {
+      return new TypeToken<PageStatusCartoes>(){}.getType();
+    }
+    
+    if ("Pessoa".equalsIgnoreCase(className)) {
+      return new TypeToken<Pessoa>(){}.getType();
     }
     
     if ("PessoaFisicaResponse".equalsIgnoreCase(className)) {
