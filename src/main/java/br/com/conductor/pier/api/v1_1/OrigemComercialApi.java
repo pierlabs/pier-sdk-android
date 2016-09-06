@@ -103,14 +103,14 @@ public class OrigemComercialApi {
   /**
    * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
    * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
-   * @param idOrigemComercial ID da Origem Comercial
-   * @param nome Nome da Origem Comercial
-   * @param status Status da Origem Comercial
+   * @param id Id da origem comercial
+   * @param nome Nome da origem comercial
+   * @param status Status da origem comercial
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageOrigensComerciais
    */
-  public PageOrigensComerciais  listarOrigensComerciaisUsingGET (Long idOrigemComercial, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public PageOrigensComerciais  listarOrigensComerciaisUsingGET (Long id, String nome, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -125,7 +125,7 @@ public class OrigemComercialApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_origem_comercial", idOrigemComercial));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
     

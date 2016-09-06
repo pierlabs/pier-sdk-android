@@ -104,18 +104,18 @@ public class PessoaApi {
   /**
    * Lista as Pessoas cadastradas no Emissor
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
    * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
    * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
    * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
    * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
    * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-   * @param cnpj2 N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PagePessoas
    */
-  public PagePessoas  listarUsingGET1 (Long idPessoa, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String cnpj2, Integer page, Integer limit) throws ApiException {
+  public PagePessoas  listarUsingGET1 (Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -130,7 +130,7 @@ public class PessoaApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_pessoa", idPessoa));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
     
@@ -140,9 +140,9 @@ public class PessoaApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_nascimento", dataNascimento));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataNascimento", dataNascimento));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj2));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sexo", sexo));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
