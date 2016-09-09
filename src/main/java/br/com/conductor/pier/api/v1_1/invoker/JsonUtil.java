@@ -103,8 +103,8 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
-    if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
-      return new TypeToken<List<LimiteDisponibilidade>>(){}.getType();
+    if ("Limites".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Limites>>(){}.getType();
     }
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
@@ -143,12 +143,20 @@ public class JsonUtil {
       return new TypeToken<List<PessoaFisicaResponse>>(){}.getType();
     }
     
+    if ("Portador".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Portador>>(){}.getType();
+    }
+    
     if ("Produto".equalsIgnoreCase(className)) {
       return new TypeToken<List<Produto>>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<SaldoLimiteResponse>>(){}.getType();
+    }
+    
+    if ("Saldos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Saldos>>(){}.getType();
     }
     
     if ("StatusCartao".equalsIgnoreCase(className)) {
@@ -229,8 +237,8 @@ public class JsonUtil {
       return new TypeToken<ExtratoResponse>(){}.getType();
     }
     
-    if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
-      return new TypeToken<LimiteDisponibilidade>(){}.getType();
+    if ("Limites".equalsIgnoreCase(className)) {
+      return new TypeToken<Limites>(){}.getType();
     }
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
@@ -269,12 +277,20 @@ public class JsonUtil {
       return new TypeToken<PessoaFisicaResponse>(){}.getType();
     }
     
+    if ("Portador".equalsIgnoreCase(className)) {
+      return new TypeToken<Portador>(){}.getType();
+    }
+    
     if ("Produto".equalsIgnoreCase(className)) {
       return new TypeToken<Produto>(){}.getType();
     }
     
     if ("SaldoLimiteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<SaldoLimiteResponse>(){}.getType();
+    }
+    
+    if ("Saldos".equalsIgnoreCase(className)) {
+      return new TypeToken<Saldos>(){}.getType();
     }
     
     if ("StatusCartao".equalsIgnoreCase(className)) {

@@ -8,7 +8,9 @@ import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1_1.model.LimiteDisponibilidade;
+import br.com.conductor.pier.api.v1_1.model.Limites;
+import br.com.conductor.pier.api.v1_1.model.Portador;
+import br.com.conductor.pier.api.v1_1.model.Saldos;
 import br.com.conductor.pier.api.v1_1.model.Cartao;
 import br.com.conductor.pier.api.v1_1.model.PageCartoes;
 import java.util.Date;
@@ -47,9 +49,9 @@ public class CartaoApi {
    * Apresenta os limites do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return LimiteDisponibilidade
+   * @return Limites
    */
-  public LimiteDisponibilidade  consultarLimiteUsingGET (Long idCartao) throws ApiException {
+  public Limites  consultarLimiteUsingGET (Long idCartao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idCartao' is set
@@ -92,7 +94,125 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (LimiteDisponibilidade) ApiInvoker.deserialize(response, "", LimiteDisponibilidade.class);
+        return (Limites) ApiInvoker.deserialize(response, "", Limites.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta os dados do Portador do Cart\u00C3\u00A3o 
+   * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return Portador
+   */
+  public Portador  consultarPortadorUsingGET (Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarPortadorUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/portadores".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Portador) ApiInvoker.deserialize(response, "", Portador.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite consultar os saldos dispon\u00C3\u00ADveis para uso pelo Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return Saldos
+   */
+  public Saldos  consultarSaldoUsingGET (Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarSaldoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/saldos-disponiveis".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Saldos) ApiInvoker.deserialize(response, "", Saldos.class);
       }
       else {
         return null;
@@ -229,7 +349,7 @@ public class CartaoApi {
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
    * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-   * @param portador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+   * @param tipoPortador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    * @param numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    * @param nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
    * @param dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
@@ -245,7 +365,7 @@ public class CartaoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageCartoes
    */
-  public PageCartoes  listarUsingGET (Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, Integer portador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
+  public PageCartoes  listarUsingGET (Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -272,7 +392,7 @@ public class CartaoApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idProduto", idProduto));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "portador", portador));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipoPortador", tipoPortador));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
     

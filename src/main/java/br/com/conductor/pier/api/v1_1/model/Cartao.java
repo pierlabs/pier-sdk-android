@@ -48,8 +48,8 @@ public class Cartao  {
   private String nomeImpresso = null;
   @SerializedName("numeroCartao")
   private String numeroCartao = null;
-  @SerializedName("portador")
-  private Integer portador = null;
+  @SerializedName("tipoPortador")
+  private String tipoPortador = null;
 
   
   /**
@@ -260,11 +260,11 @@ public class Cartao  {
    * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    **/
   @ApiModelProperty(value = "Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.")
-  public Integer getPortador() {
-    return portador;
+  public String getTipoPortador() {
+    return tipoPortador;
   }
-  public void setPortador(Integer portador) {
-    this.portador = portador;
+  public void setTipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
   }
 
   
@@ -291,7 +291,7 @@ public class Cartao  {
     sb.append("  idStatusCartao: ").append(idStatusCartao).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
-    sb.append("  portador: ").append(portador).append("\n");
+    sb.append("  tipoPortador: ").append(tipoPortador).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

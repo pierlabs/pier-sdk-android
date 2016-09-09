@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
+import br.com.conductor.pier.api.v1_1.model.Produto;
 import br.com.conductor.pier.api.v1_1.model.ListaProdutos;
 
 
@@ -42,12 +42,12 @@ public class ProdutoApi {
 
   
   /**
-   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-   * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+   * Apresenta os dados de um determinado Produto.
+   * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-   * @return OrigemComercial
+   * @return Produto
    */
-  public OrigemComercial  consultarProdutoUsingGET (Long idProduto) throws ApiException {
+  public Produto  consultarProdutoUsingGET (Long idProduto) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idProduto' is set
@@ -57,7 +57,7 @@ public class ProdutoApi {
     
 
     // create path and map variables
-    String path = "/api/produtos/{id_origem_comercial}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_produto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
+    String path = "/api/produtos/{id_produto}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_produto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -90,7 +90,7 @@ public class ProdutoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (OrigemComercial) ApiInvoker.deserialize(response, "", OrigemComercial.class);
+        return (Produto) ApiInvoker.deserialize(response, "", Produto.class);
       }
       else {
         return null;
@@ -110,7 +110,7 @@ public class ProdutoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return ListaProdutos
    */
-  public ListaProdutos  listarProdutosUsingGET (Long id, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public ListaProdutos  listarProdutosUsingGET (Long id, String nome, Integer status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 

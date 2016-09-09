@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * LimiteDisponibilidade
+ * Limites
  **/
-@ApiModel(description = "LimiteDisponibilidade")
-public class LimiteDisponibilidade  {
+@ApiModel(description = "Limites")
+public class Limites  {
   
   @SerializedName("id")
   private Long id = null;
@@ -104,9 +104,8 @@ public class LimiteDisponibilidade  {
 
   
   /**
-   * Campo que 
    **/
-  @ApiModelProperty(required = true, value = "Campo que ")
+  @ApiModelProperty(required = true, value = "")
   public Double getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -229,7 +228,7 @@ public class LimiteDisponibilidade  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LimiteDisponibilidade {\n");
+    sb.append("class Limites {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  limiteCompra: ").append(limiteCompra).append("\n");

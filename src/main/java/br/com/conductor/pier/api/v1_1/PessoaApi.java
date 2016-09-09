@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v1_1.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
+import br.com.conductor.pier.api.v1_1.model.Pessoa;
 import br.com.conductor.pier.api.v1_1.model.PagePessoas;
 import java.util.Date;
 
@@ -43,22 +43,22 @@ public class PessoaApi {
 
   
   /**
-   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-   * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
-   * @param idOrigemComercial ID da Origem Comercial
-   * @return OrigemComercial
+   * Apresenta os dados de uma determinada Pessoa.
+   * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+   * @param idPessoa ID da Origem Comercial
+   * @return Pessoa
    */
-  public OrigemComercial  consultarUsingGET1 (Long idOrigemComercial) throws ApiException {
+  public Pessoa  consultarUsingGET1 (Long idPessoa) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idOrigemComercial' is set
-    if (idOrigemComercial == null) {
-       throw new ApiException(400, "Missing the required parameter 'idOrigemComercial' when calling consultarUsingGET1");
+    // verify the required parameter 'idPessoa' is set
+    if (idPessoa == null) {
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET1");
     }
     
 
     // create path and map variables
-    String path = "/api/pessoas/{id_origem_comercial}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_origem_comercial" + "\\}", apiInvoker.escapeString(idOrigemComercial.toString()));
+    String path = "/api/pessoas/{id_pessoa}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_pessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -91,7 +91,7 @@ public class PessoaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (OrigemComercial) ApiInvoker.deserialize(response, "", OrigemComercial.class);
+        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
       }
       else {
         return null;

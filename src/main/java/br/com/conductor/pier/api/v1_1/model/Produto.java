@@ -18,7 +18,7 @@ public class Produto  {
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("status")
-  private String status = null;
+  private Integer status = null;
 
   
   /**
@@ -49,10 +49,10 @@ public class Produto  {
    * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
    **/
   @ApiModelProperty(required = true, value = "Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).")
-  public String getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(String status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 
