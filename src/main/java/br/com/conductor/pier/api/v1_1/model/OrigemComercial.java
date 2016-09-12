@@ -18,7 +18,7 @@ public class OrigemComercial  {
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("status")
-  private String status = null;
+  private Integer status = null;
 
   
   /**
@@ -49,10 +49,10 @@ public class OrigemComercial  {
    * Status da origem comercial
    **/
   @ApiModelProperty(required = true, value = "Status da origem comercial")
-  public String getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(String status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 

@@ -125,9 +125,9 @@ public class Cartao  {
 
   
   /**
-   * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
    **/
-  @ApiModelProperty(value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.")
+  @ApiModelProperty(value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.")
   public Date getDataValidade() {
     return dataValidade;
   }
