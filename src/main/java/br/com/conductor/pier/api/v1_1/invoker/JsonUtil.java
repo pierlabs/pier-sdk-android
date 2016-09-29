@@ -103,8 +103,8 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
-    if ("Limites".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Limites>>(){}.getType();
+    if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LimiteDisponibilidade>>(){}.getType();
     }
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
@@ -135,6 +135,10 @@ public class JsonUtil {
       return new TypeToken<List<PageStatusCartoes>>(){}.getType();
     }
     
+    if ("PageStatusContas".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageStatusContas>>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<List<Pessoa>>(){}.getType();
     }
@@ -155,12 +159,12 @@ public class JsonUtil {
       return new TypeToken<List<SaldoLimiteResponse>>(){}.getType();
     }
     
-    if ("Saldos".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Saldos>>(){}.getType();
-    }
-    
     if ("StatusCartao".equalsIgnoreCase(className)) {
       return new TypeToken<List<StatusCartao>>(){}.getType();
+    }
+    
+    if ("StatusConta".equalsIgnoreCase(className)) {
+      return new TypeToken<List<StatusConta>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -237,8 +241,8 @@ public class JsonUtil {
       return new TypeToken<ExtratoResponse>(){}.getType();
     }
     
-    if ("Limites".equalsIgnoreCase(className)) {
-      return new TypeToken<Limites>(){}.getType();
+    if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
+      return new TypeToken<LimiteDisponibilidade>(){}.getType();
     }
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
@@ -269,6 +273,10 @@ public class JsonUtil {
       return new TypeToken<PageStatusCartoes>(){}.getType();
     }
     
+    if ("PageStatusContas".equalsIgnoreCase(className)) {
+      return new TypeToken<PageStatusContas>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<Pessoa>(){}.getType();
     }
@@ -289,12 +297,12 @@ public class JsonUtil {
       return new TypeToken<SaldoLimiteResponse>(){}.getType();
     }
     
-    if ("Saldos".equalsIgnoreCase(className)) {
-      return new TypeToken<Saldos>(){}.getType();
-    }
-    
     if ("StatusCartao".equalsIgnoreCase(className)) {
       return new TypeToken<StatusCartao>(){}.getType();
+    }
+    
+    if ("StatusConta".equalsIgnoreCase(className)) {
+      return new TypeToken<StatusConta>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

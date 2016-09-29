@@ -131,8 +131,9 @@ public class Portador  {
 
   
   /**
+   * Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).")
   public String getTipoPortador() {
     return tipoPortador;
   }
