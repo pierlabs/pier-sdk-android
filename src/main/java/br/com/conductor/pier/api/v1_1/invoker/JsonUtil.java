@@ -139,6 +139,10 @@ public class JsonUtil {
       return new TypeToken<List<PageStatusContas>>(){}.getType();
     }
     
+    if ("PageStatusImpressao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageStatusImpressao>>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<List<Pessoa>>(){}.getType();
     }
@@ -165,6 +169,10 @@ public class JsonUtil {
     
     if ("StatusConta".equalsIgnoreCase(className)) {
       return new TypeToken<List<StatusConta>>(){}.getType();
+    }
+    
+    if ("StatusImpressao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<StatusImpressao>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -277,6 +285,10 @@ public class JsonUtil {
       return new TypeToken<PageStatusContas>(){}.getType();
     }
     
+    if ("PageStatusImpressao".equalsIgnoreCase(className)) {
+      return new TypeToken<PageStatusImpressao>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<Pessoa>(){}.getType();
     }
@@ -303,6 +315,10 @@ public class JsonUtil {
     
     if ("StatusConta".equalsIgnoreCase(className)) {
       return new TypeToken<StatusConta>(){}.getType();
+    }
+    
+    if ("StatusImpressao".equalsIgnoreCase(className)) {
+      return new TypeToken<StatusImpressao>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();
