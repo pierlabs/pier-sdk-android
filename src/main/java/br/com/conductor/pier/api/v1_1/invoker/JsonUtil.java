@@ -103,6 +103,10 @@ public class JsonUtil {
       return new TypeToken<List<ExtratoResponse>>(){}.getType();
     }
     
+    if ("HistoricoImpressaoCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<HistoricoImpressaoCartao>>(){}.getType();
+    }
+    
     if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
       return new TypeToken<List<LimiteDisponibilidade>>(){}.getType();
     }
@@ -247,6 +251,10 @@ public class JsonUtil {
     
     if ("ExtratoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ExtratoResponse>(){}.getType();
+    }
+    
+    if ("HistoricoImpressaoCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<HistoricoImpressaoCartao>(){}.getType();
     }
     
     if ("LimiteDisponibilidade".equalsIgnoreCase(className)) {
