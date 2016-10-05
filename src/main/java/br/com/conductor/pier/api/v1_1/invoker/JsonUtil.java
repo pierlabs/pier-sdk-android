@@ -43,20 +43,8 @@ public class JsonUtil {
       return new TypeToken<List<BodyAccessToken>>(){}.getType();
     }
     
-    if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CancelarCartaoResponse>>(){}.getType();
-    }
-    
     if ("Cartao".equalsIgnoreCase(className)) {
       return new TypeToken<List<Cartao>>(){}.getType();
-    }
-    
-    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CartaoResponseOld>>(){}.getType();
-    }
-    
-    if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ConsultarCartaoResponse>>(){}.getType();
     }
     
     if ("ConsultarContaCartaoResponse".equalsIgnoreCase(className)) {
@@ -81,14 +69,6 @@ public class JsonUtil {
     
     if ("ContaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ContaResponse>>(){}.getType();
-    }
-    
-    if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DesbloquearCartaoResponse>>(){}.getType();
-    }
-    
-    if ("EmbossadoCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EmbossadoCartaoResponse>>(){}.getType();
     }
     
     if ("EstagioCartao".equalsIgnoreCase(className)) {
@@ -193,20 +173,8 @@ public class JsonUtil {
       return new TypeToken<BodyAccessToken>(){}.getType();
     }
     
-    if ("CancelarCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CancelarCartaoResponse>(){}.getType();
-    }
-    
     if ("Cartao".equalsIgnoreCase(className)) {
       return new TypeToken<Cartao>(){}.getType();
-    }
-    
-    if ("CartaoResponseOld".equalsIgnoreCase(className)) {
-      return new TypeToken<CartaoResponseOld>(){}.getType();
-    }
-    
-    if ("ConsultarCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<ConsultarCartaoResponse>(){}.getType();
     }
     
     if ("ConsultarContaCartaoResponse".equalsIgnoreCase(className)) {
@@ -231,14 +199,6 @@ public class JsonUtil {
     
     if ("ContaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ContaResponse>(){}.getType();
-    }
-    
-    if ("DesbloquearCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<DesbloquearCartaoResponse>(){}.getType();
-    }
-    
-    if ("EmbossadoCartaoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<EmbossadoCartaoResponse>(){}.getType();
     }
     
     if ("EstagioCartao".equalsIgnoreCase(className)) {
