@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.StatusImpressao;
+import br.com.conductor.pier.api.v2.model.Endereco;
 import java.util.*;
 
 
@@ -10,13 +10,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de Status Impress\u00C3\u00A3o
+ * Lista de Endere\u00C3\u00A7os
  **/
-@ApiModel(description = "Lista de Status Impress\u00C3\u00A3o")
-public class PageStatusImpressao  {
+@ApiModel(description = "Lista de Endere\u00C3\u00A7os")
+public class PageEnderecos  {
   
   @SerializedName("content")
-  private List<StatusImpressao> content = null;
+  private List<Endereco> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class PageStatusImpressao  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<StatusImpressao> getContent() {
+  public List<Endereco> getContent() {
     return content;
   }
-  public void setContent(List<StatusImpressao> content) {
+  public void setContent(List<Endereco> content) {
     this.content = content;
   }
 
@@ -203,7 +203,7 @@ public class PageStatusImpressao  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageStatusImpressao {\n");
+    sb.append("class PageEnderecos {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

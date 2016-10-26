@@ -47,6 +47,10 @@ public class JsonUtil {
       return new TypeToken<List<Cartao>>(){}.getType();
     }
     
+    if ("Endereco".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Endereco>>(){}.getType();
+    }
+    
     if ("EstagioCartao".equalsIgnoreCase(className)) {
       return new TypeToken<List<EstagioCartao>>(){}.getType();
     }
@@ -73,6 +77,10 @@ public class JsonUtil {
     
     if ("PageCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageCartoes>>(){}.getType();
+    }
+    
+    if ("PageEnderecos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageEnderecos>>(){}.getType();
     }
     
     if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
@@ -141,6 +149,10 @@ public class JsonUtil {
       return new TypeToken<Cartao>(){}.getType();
     }
     
+    if ("Endereco".equalsIgnoreCase(className)) {
+      return new TypeToken<Endereco>(){}.getType();
+    }
+    
     if ("EstagioCartao".equalsIgnoreCase(className)) {
       return new TypeToken<EstagioCartao>(){}.getType();
     }
@@ -167,6 +179,10 @@ public class JsonUtil {
     
     if ("PageCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<PageCartoes>(){}.getType();
+    }
+    
+    if ("PageEnderecos".equalsIgnoreCase(className)) {
+      return new TypeToken<PageEnderecos>(){}.getType();
     }
     
     if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
