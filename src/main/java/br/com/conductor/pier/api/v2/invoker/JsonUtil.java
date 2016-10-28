@@ -47,6 +47,10 @@ public class JsonUtil {
       return new TypeToken<List<Cartao>>(){}.getType();
     }
     
+    if ("Conta".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Conta>>(){}.getType();
+    }
+    
     if ("Endereco".equalsIgnoreCase(className)) {
       return new TypeToken<List<Endereco>>(){}.getType();
     }
@@ -147,6 +151,10 @@ public class JsonUtil {
     
     if ("Cartao".equalsIgnoreCase(className)) {
       return new TypeToken<Cartao>(){}.getType();
+    }
+    
+    if ("Conta".equalsIgnoreCase(className)) {
+      return new TypeToken<Conta>(){}.getType();
     }
     
     if ("Endereco".equalsIgnoreCase(className)) {

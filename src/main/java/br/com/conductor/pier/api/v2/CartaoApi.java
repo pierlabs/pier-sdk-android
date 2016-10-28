@@ -9,9 +9,9 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
+import br.com.conductor.pier.api.v2.model.Cartao;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.Portador;
-import br.com.conductor.pier.api.v2.model.Cartao;
 import br.com.conductor.pier.api.v2.model.PageCartoes;
 import java.util.Date;
 
@@ -101,6 +101,81 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (HistoricoImpressaoCartao) ApiInvoker.deserialize(response, "", HistoricoImpressaoCartao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+   * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
+   * @return Cartao
+   */
+  public Cartao  bloquearUsingPUT (Long idCartao, Long idStatus, String observacao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling bloquearUsingPUT");
+    }
+    
+    // verify the required parameter 'idStatus' is set
+    if (idStatus == null) {
+       throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPUT");
+    }
+    
+    // verify the required parameter 'observacao' is set
+    if (observacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearUsingPUT");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/bloqueio".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status", idStatus));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
       }
       else {
         return null;

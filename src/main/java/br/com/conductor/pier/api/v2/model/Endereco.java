@@ -35,7 +35,7 @@ public class Endereco  {
   @SerializedName("logradouro")
   private String logradouro = null;
   @SerializedName("numero")
-  private String numero = null;
+  private Integer numero = null;
   @SerializedName("pais")
   private String pais = null;
   @SerializedName("pontoReferencia")
@@ -57,9 +57,9 @@ public class Endereco  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)")
+  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
   public String getCep() {
     return cep;
   }
@@ -168,10 +168,10 @@ public class Endereco  {
    * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
    **/
   @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o")
-  public String getNumero() {
+  public Integer getNumero() {
     return numero;
   }
-  public void setNumero(String numero) {
+  public void setNumero(Integer numero) {
     this.numero = numero;
   }
 
