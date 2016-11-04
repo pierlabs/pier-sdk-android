@@ -18,6 +18,8 @@ public class Conta  {
   private Date dataCadastro = null;
   @SerializedName("dataStatusConta")
   private Date dataStatusConta = null;
+  @SerializedName("dataUltimaAlteracaoVencimento")
+  private Date dataUltimaAlteracaoVencimento = null;
   @SerializedName("diaVencimento")
   private Integer diaVencimento = null;
   @SerializedName("id")
@@ -55,6 +57,18 @@ public class Conta  {
   }
   public void setDataStatusConta(Date dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
+  }
+
+  
+  /**
+   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   **/
+  @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
+  public Date getDataUltimaAlteracaoVencimento() {
+    return dataUltimaAlteracaoVencimento;
+  }
+  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
   
@@ -150,6 +164,7 @@ public class Conta  {
     
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataStatusConta: ").append(dataStatusConta).append("\n");
+    sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");

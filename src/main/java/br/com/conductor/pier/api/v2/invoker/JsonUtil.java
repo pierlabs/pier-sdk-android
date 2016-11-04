@@ -99,6 +99,10 @@ public class JsonUtil {
       return new TypeToken<List<PagePessoas>>(){}.getType();
     }
     
+    if ("PagePortador".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PagePortador>>(){}.getType();
+    }
+    
     if ("PageStatusCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageStatusCartoes>>(){}.getType();
     }
@@ -109,6 +113,18 @@ public class JsonUtil {
     
     if ("PageStatusImpressao".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageStatusImpressao>>(){}.getType();
+    }
+    
+    if ("PageTelefones".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTelefones>>(){}.getType();
+    }
+    
+    if ("PageTipoTelefones".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTipoTelefones>>(){}.getType();
+    }
+    
+    if ("PageTiposEndereco".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTiposEndereco>>(){}.getType();
     }
     
     if ("Pessoa".equalsIgnoreCase(className)) {
@@ -133,6 +149,18 @@ public class JsonUtil {
     
     if ("StatusImpressao".equalsIgnoreCase(className)) {
       return new TypeToken<List<StatusImpressao>>(){}.getType();
+    }
+    
+    if ("Telefone".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Telefone>>(){}.getType();
+    }
+    
+    if ("TipoEndereco".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TipoEndereco>>(){}.getType();
+    }
+    
+    if ("TipoTelefone".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TipoTelefone>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -205,6 +233,10 @@ public class JsonUtil {
       return new TypeToken<PagePessoas>(){}.getType();
     }
     
+    if ("PagePortador".equalsIgnoreCase(className)) {
+      return new TypeToken<PagePortador>(){}.getType();
+    }
+    
     if ("PageStatusCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<PageStatusCartoes>(){}.getType();
     }
@@ -215,6 +247,18 @@ public class JsonUtil {
     
     if ("PageStatusImpressao".equalsIgnoreCase(className)) {
       return new TypeToken<PageStatusImpressao>(){}.getType();
+    }
+    
+    if ("PageTelefones".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTelefones>(){}.getType();
+    }
+    
+    if ("PageTipoTelefones".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTipoTelefones>(){}.getType();
+    }
+    
+    if ("PageTiposEndereco".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTiposEndereco>(){}.getType();
     }
     
     if ("Pessoa".equalsIgnoreCase(className)) {
@@ -239,6 +283,18 @@ public class JsonUtil {
     
     if ("StatusImpressao".equalsIgnoreCase(className)) {
       return new TypeToken<StatusImpressao>(){}.getType();
+    }
+    
+    if ("Telefone".equalsIgnoreCase(className)) {
+      return new TypeToken<Telefone>(){}.getType();
+    }
+    
+    if ("TipoEndereco".equalsIgnoreCase(className)) {
+      return new TypeToken<TipoEndereco>(){}.getType();
+    }
+    
+    if ("TipoTelefone".equalsIgnoreCase(className)) {
+      return new TypeToken<TipoTelefone>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

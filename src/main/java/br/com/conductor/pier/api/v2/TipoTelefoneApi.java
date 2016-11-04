@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.StatusConta;
-import br.com.conductor.pier.api.v2.model.PageStatusContas;
+import br.com.conductor.pier.api.v2.model.TipoTelefone;
+import br.com.conductor.pier.api.v2.model.PageTipoTelefones;
 
 
 import org.apache.http.HttpEntity;
@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class StatusContaApi {
+public class TipoTelefoneApi {
   String basePath = "https://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -42,22 +42,22 @@ public class StatusContaApi {
 
   
   /**
-   * Apresenta os dados de um determinado Status Conta
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-   * @return StatusConta
+   * Apresenta os dados de um determinado Tipo de Telefone
+   * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+   * @return TipoTelefone
    */
-  public StatusConta  consultarUsingGET4 (Long idStatusConta) throws ApiException {
+  public TipoTelefone  consultarUsingGET8 (Long idTipoTelefone) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idStatusConta' is set
-    if (idStatusConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idStatusConta' when calling consultarUsingGET4");
+    // verify the required parameter 'idTipoTelefone' is set
+    if (idTipoTelefone == null) {
+       throw new ApiException(400, "Missing the required parameter 'idTipoTelefone' when calling consultarUsingGET8");
     }
     
 
     // create path and map variables
-    String path = "/api/status-contas/{id_status_conta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_status_conta" + "\\}", apiInvoker.escapeString(idStatusConta.toString()));
+    String path = "/api/tipos-telefones/{id_tipo_telefone}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_tipo_telefone" + "\\}", apiInvoker.escapeString(idTipoTelefone.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -90,7 +90,7 @@ public class StatusContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (StatusConta) ApiInvoker.deserialize(response, "", StatusConta.class);
+        return (TipoTelefone) ApiInvoker.deserialize(response, "", TipoTelefone.class);
       }
       else {
         return null;
@@ -101,22 +101,20 @@ public class StatusContaApi {
   }
   
   /**
-   * Lista os Status Contas cadastrados para o Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-   * @param nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
-   * @param flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-   * @param mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+   * Lista os Tipos de Telefones
+   * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * @param nome Nome do Tipo do Telefone
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return PageStatusContas
+   * @return PageTipoTelefones
    */
-  public PageStatusContas  listarUsingGET5 (Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
+  public PageTipoTelefones  listarUsingGET9 (Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/status-contas".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-telefones".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -129,10 +127,6 @@ public class StatusContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAlteraLimite", flagAlteraLimite));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "mensagemConsultaNegada", mensagemConsultaNegada));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -161,7 +155,7 @@ public class StatusContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageStatusContas) ApiInvoker.deserialize(response, "", PageStatusContas.class);
+        return (PageTipoTelefones) ApiInvoker.deserialize(response, "", PageTipoTelefones.class);
       }
       else {
         return null;

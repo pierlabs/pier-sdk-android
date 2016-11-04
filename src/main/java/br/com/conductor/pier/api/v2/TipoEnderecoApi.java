@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.StatusConta;
-import br.com.conductor.pier.api.v2.model.PageStatusContas;
+import br.com.conductor.pier.api.v2.model.TipoEndereco;
+import br.com.conductor.pier.api.v2.model.PageTiposEndereco;
 
 
 import org.apache.http.HttpEntity;
@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class StatusContaApi {
+public class TipoEnderecoApi {
   String basePath = "https://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -42,22 +42,22 @@ public class StatusContaApi {
 
   
   /**
-   * Apresenta os dados de um determinado Status Conta
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-   * @return StatusConta
+   * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+   * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @return TipoEndereco
    */
-  public StatusConta  consultarUsingGET4 (Long idStatusConta) throws ApiException {
+  public TipoEndereco  consultarUsingGET7 (Long idTipoEndereco) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idStatusConta' is set
-    if (idStatusConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idStatusConta' when calling consultarUsingGET4");
+    // verify the required parameter 'idTipoEndereco' is set
+    if (idTipoEndereco == null) {
+       throw new ApiException(400, "Missing the required parameter 'idTipoEndereco' when calling consultarUsingGET7");
     }
     
 
     // create path and map variables
-    String path = "/api/status-contas/{id_status_conta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_status_conta" + "\\}", apiInvoker.escapeString(idStatusConta.toString()));
+    String path = "/api/tipos-endereco/{id_tipo_endereco}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_tipo_endereco" + "\\}", apiInvoker.escapeString(idTipoEndereco.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -90,7 +90,7 @@ public class StatusContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (StatusConta) ApiInvoker.deserialize(response, "", StatusConta.class);
+        return (TipoEndereco) ApiInvoker.deserialize(response, "", TipoEndereco.class);
       }
       else {
         return null;
@@ -101,22 +101,20 @@ public class StatusContaApi {
   }
   
   /**
-   * Lista os Status Contas cadastrados para o Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-   * @param nome Nome atribu\u00C3\u00ADdo ao Status da Conta.
-   * @param flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
-   * @param mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+   * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+   * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return PageStatusContas
+   * @return PageTiposEndereco
    */
-  public PageStatusContas  listarUsingGET5 (Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
+  public PageTiposEndereco  listarUsingGET8 (Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/status-contas".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-endereco".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -129,10 +127,6 @@ public class StatusContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAlteraLimite", flagAlteraLimite));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "mensagemConsultaNegada", mensagemConsultaNegada));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -161,7 +155,7 @@ public class StatusContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageStatusContas) ApiInvoker.deserialize(response, "", PageStatusContas.class);
+        return (PageTiposEndereco) ApiInvoker.deserialize(response, "", PageTiposEndereco.class);
       }
       else {
         return null;
