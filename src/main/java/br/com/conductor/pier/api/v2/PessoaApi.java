@@ -8,9 +8,9 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
+import java.util.Date;
 import br.com.conductor.pier.api.v2.model.Pessoa;
 import br.com.conductor.pier.api.v2.model.PagePessoas;
-import java.util.Date;
 
 
 import org.apache.http.HttpEntity;
@@ -43,9 +43,98 @@ public class PessoaApi {
 
   
   /**
+   * Atualiza os dados de uma determinada Pessoa
+   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+   * @param id ID da Pessoa
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
+   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+   * @return Pessoa
+   */
+  public Pessoa  alterarUsingPUT1 (Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT1");
+    }
+    
+    // verify the required parameter 'nome' is set
+    if (nome == null) {
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT1");
+    }
+    
+    // verify the required parameter 'tipo' is set
+    if (tipo == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT1");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipo", tipo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataNascimento", dataNascimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sexo", sexo));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de uma determinada Pessoa
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-   * @param idPessoa ID da Origem Comercial
+   * @param idPessoa ID da Pessoa
    * @return Pessoa
    */
   public Pessoa  consultarUsingGET3 (Long idPessoa) throws ApiException {
@@ -172,6 +261,87 @@ public class PessoaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PagePessoas) ApiInvoker.deserialize(response, "", PagePessoas.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza o cadastro de um nova Pessoa
+   * Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
+   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+   * @return Pessoa
+   */
+  public Pessoa  salvarUsingPOST1 (String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'nome' is set
+    if (nome == null) {
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST1");
+    }
+    
+    // verify the required parameter 'tipo' is set
+    if (tipo == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST1");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipo", tipo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataNascimento", dataNascimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sexo", sexo));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
       }
       else {
         return null;
