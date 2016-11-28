@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.Conta;
+import br.com.conductor.pier.api.v2.model.CartaoImpressao;
 import java.util.Date;
 
 
@@ -158,6 +159,71 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Conta) ApiInvoker.deserialize(response, "", Conta.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+   * 
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @return CartaoImpressao
+   */
+  public CartaoImpressao  gerarCartaoUsingPUT (Long idConta, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idConta' is set
+    if (idConta == null) {
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling gerarCartaoUsingPUT");
+    }
+    
+    // verify the required parameter 'idPessoa' is set
+    if (idPessoa == null) {
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartaoUsingPUT");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_conta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "id_pessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CartaoImpressao) ApiInvoker.deserialize(response, "", CartaoImpressao.class);
       }
       else {
         return null;
