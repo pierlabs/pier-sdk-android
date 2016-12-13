@@ -22,6 +22,8 @@ public class Portador  {
   private Integer flagAtivo = null;
   @SerializedName("idConta")
   private Long idConta = null;
+  @SerializedName("idImagem")
+  private Long idImagem = null;
   @SerializedName("idParentesco")
   private Long idParentesco = null;
   @SerializedName("idPessoa")
@@ -81,6 +83,18 @@ public class Portador  {
   }
   public void setIdConta(Long idConta) {
     this.idConta = idConta;
+  }
+
+  
+  /**
+   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+   **/
+  @ApiModelProperty(value = "Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
   }
 
   
@@ -166,6 +180,7 @@ public class Portador  {
     sb.append("  dataCancelamentoPortador: ").append(dataCancelamentoPortador).append("\n");
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idImagem: ").append(idImagem).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
