@@ -131,6 +131,10 @@ public class JsonUtil {
       return new TypeToken<List<PageTiposEndereco>>(){}.getType();
     }
     
+    if ("PageWebHooks".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageWebHooks>>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<List<Pessoa>>(){}.getType();
     }
@@ -165,6 +169,10 @@ public class JsonUtil {
     
     if ("TipoTelefone".equalsIgnoreCase(className)) {
       return new TypeToken<List<TipoTelefone>>(){}.getType();
+    }
+    
+    if ("WebHook".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebHook>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -269,6 +277,10 @@ public class JsonUtil {
       return new TypeToken<PageTiposEndereco>(){}.getType();
     }
     
+    if ("PageWebHooks".equalsIgnoreCase(className)) {
+      return new TypeToken<PageWebHooks>(){}.getType();
+    }
+    
     if ("Pessoa".equalsIgnoreCase(className)) {
       return new TypeToken<Pessoa>(){}.getType();
     }
@@ -303,6 +315,10 @@ public class JsonUtil {
     
     if ("TipoTelefone".equalsIgnoreCase(className)) {
       return new TypeToken<TipoTelefone>(){}.getType();
+    }
+    
+    if ("WebHook".equalsIgnoreCase(className)) {
+      return new TypeToken<WebHook>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();
