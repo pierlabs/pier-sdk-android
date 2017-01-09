@@ -171,6 +171,10 @@ public class JsonUtil {
       return new TypeToken<List<TipoTelefone>>(){}.getType();
     }
     
+    if ("ValidaCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ValidaCartao>>(){}.getType();
+    }
+    
     if ("WebHook".equalsIgnoreCase(className)) {
       return new TypeToken<List<WebHook>>(){}.getType();
     }
@@ -315,6 +319,10 @@ public class JsonUtil {
     
     if ("TipoTelefone".equalsIgnoreCase(className)) {
       return new TypeToken<TipoTelefone>(){}.getType();
+    }
+    
+    if ("ValidaCartao".equalsIgnoreCase(className)) {
+      return new TypeToken<ValidaCartao>(){}.getType();
     }
     
     if ("WebHook".equalsIgnoreCase(className)) {
