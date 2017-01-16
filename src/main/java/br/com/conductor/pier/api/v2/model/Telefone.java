@@ -13,32 +13,20 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "ObjetoTelefone")
 public class Telefone  {
   
-  @SerializedName("ddd")
-  private String ddd = null;
   @SerializedName("id")
   private Long id = null;
-  @SerializedName("idPessoa")
-  private Long idPessoa = null;
   @SerializedName("idTipoTelefone")
   private Long idTipoTelefone = null;
+  @SerializedName("idPessoa")
+  private Long idPessoa = null;
+  @SerializedName("ddd")
+  private String ddd = null;
+  @SerializedName("telefone")
+  private String telefone = null;
   @SerializedName("ramal")
   private String ramal = null;
   @SerializedName("status")
   private Integer status = null;
-  @SerializedName("telefone")
-  private String telefone = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone (id).")
-  public String getDdd() {
-    return ddd;
-  }
-  public void setDdd(String ddd) {
-    this.ddd = ddd;
-  }
 
   
   /**
@@ -50,6 +38,18 @@ public class Telefone  {
   }
   public void setId(Long id) {
     this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
+  public Long getIdTipoTelefone() {
+    return idTipoTelefone;
+  }
+  public void setIdTipoTelefone(Long idTipoTelefone) {
+    this.idTipoTelefone = idTipoTelefone;
   }
 
   
@@ -66,14 +66,26 @@ public class Telefone  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00C3\u00B3digo DDD do telefone (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
-  public Long getIdTipoTelefone() {
-    return idTipoTelefone;
+  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone (id).")
+  public String getDdd() {
+    return ddd;
   }
-  public void setIdTipoTelefone(Long idTipoTelefone) {
-    this.idTipoTelefone = idTipoTelefone;
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero do telefone.
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do telefone.")
+  public String getTelefone() {
+    return telefone;
+  }
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
   }
 
   
@@ -101,31 +113,19 @@ public class Telefone  {
   }
 
   
-  /**
-   * N\u00C3\u00BAmero do telefone.
-   **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do telefone.")
-  public String getTelefone() {
-    return telefone;
-  }
-  public void setTelefone(String telefone) {
-    this.telefone = telefone;
-  }
-
-  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Telefone {\n");
     
-    sb.append("  ddd: ").append(ddd).append("\n");
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idTipoTelefone: ").append(idTipoTelefone).append("\n");
+    sb.append("  idPessoa: ").append(idPessoa).append("\n");
+    sb.append("  ddd: ").append(ddd).append("\n");
+    sb.append("  telefone: ").append(telefone).append("\n");
     sb.append("  ramal: ").append(ramal).append("\n");
     sb.append("  status: ").append(status).append("\n");
-    sb.append("  telefone: ").append(telefone).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

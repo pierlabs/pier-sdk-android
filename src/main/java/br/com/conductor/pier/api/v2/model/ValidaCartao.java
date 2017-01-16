@@ -13,24 +13,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o")
 public class ValidaCartao  {
   
-  @SerializedName("criptogramaResposta")
-  private String criptogramaResposta = null;
   @SerializedName("statusCartao")
   private String statusCartao = null;
   @SerializedName("statusConta")
   private String statusConta = null;
-
-  
-  /**
-   * Criptograma de resposta
-   **/
-  @ApiModelProperty(value = "Criptograma de resposta")
-  public String getCriptogramaResposta() {
-    return criptogramaResposta;
-  }
-  public void setCriptogramaResposta(String criptogramaResposta) {
-    this.criptogramaResposta = criptogramaResposta;
-  }
+  @SerializedName("criptogramaResposta")
+  private String criptogramaResposta = null;
 
   
   /**
@@ -57,15 +45,27 @@ public class ValidaCartao  {
   }
 
   
+  /**
+   * Criptograma de resposta
+   **/
+  @ApiModelProperty(value = "Criptograma de resposta")
+  public String getCriptogramaResposta() {
+    return criptogramaResposta;
+  }
+  public void setCriptogramaResposta(String criptogramaResposta) {
+    this.criptogramaResposta = criptogramaResposta;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ValidaCartao {\n");
     
-    sb.append("  criptogramaResposta: ").append(criptogramaResposta).append("\n");
     sb.append("  statusCartao: ").append(statusCartao).append("\n");
     sb.append("  statusConta: ").append(statusConta).append("\n");
+    sb.append("  criptogramaResposta: ").append(criptogramaResposta).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

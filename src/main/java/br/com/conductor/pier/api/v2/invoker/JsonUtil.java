@@ -147,6 +147,10 @@ public class JsonUtil {
       return new TypeToken<List<Produto>>(){}.getType();
     }
     
+    if ("SMS".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SMS>>(){}.getType();
+    }
+    
     if ("StatusCartao".equalsIgnoreCase(className)) {
       return new TypeToken<List<StatusCartao>>(){}.getType();
     }
@@ -295,6 +299,10 @@ public class JsonUtil {
     
     if ("Produto".equalsIgnoreCase(className)) {
       return new TypeToken<Produto>(){}.getType();
+    }
+    
+    if ("SMS".equalsIgnoreCase(className)) {
+      return new TypeToken<SMS>(){}.getType();
     }
     
     if ("StatusCartao".equalsIgnoreCase(className)) {

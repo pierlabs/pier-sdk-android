@@ -9,6 +9,8 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.Conta;
+import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.CartaoImpressao;
 import java.util.Date;
 
@@ -45,7 +47,7 @@ public class ContaApi {
   /**
    * Alterar limite
    * Esse recurso permite realizar a altera\u00C3\u00A7\u00C3\u00A3o dos Limites de uma determinada Conta.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param limiteGlobal Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
    * @param limiteCompra Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
    * @param limiteParcelado Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
@@ -60,12 +62,12 @@ public class ContaApi {
    * @param limiteInternacionalSaquePeriodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
    * @return Conta
    */
-  public Conta  alterarLimiteUsingPUT (Long idConta, Double limiteGlobal, Double limiteCompra, Double limiteParcelado, Double limiteParcelas, Double limiteSaqueGlobal, Double limiteSaquePeriodo, Double limiteConsignado, Double limiteInternacionalCompra, Double limiteInternacionalParcelado, Double limiteInternacionalParcelas, Double limiteInternacionalSaqueGlobal, Double limiteInternacionalSaquePeriodo) throws ApiException {
+  public Conta  alterarLimiteUsingPUT (Long id, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarLimiteUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarLimiteUsingPUT");
     }
     
     // verify the required parameter 'limiteGlobal' is set
@@ -130,7 +132,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/api/contas/{id_conta}/alterar-limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_conta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{id}/alterar-limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -200,16 +202,16 @@ public class ContaApi {
   /**
    * Alterar vencimento
    * Esse recurso permite alterar o vencimento de uma conta especifica.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param novoDiaVencimento Novo dia de vencimento.
    * @return Conta
    */
-  public Conta  alterarVencimentoUsingPUT (Long idConta, Integer novoDiaVencimento) throws ApiException {
+  public Conta  alterarVencimentoUsingPUT (Long id, Integer novoDiaVencimento) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarVencimentoUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarVencimentoUsingPUT");
     }
     
     // verify the required parameter 'novoDiaVencimento' is set
@@ -219,7 +221,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/api/contas/{id_conta}/alterar-vencimento".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_conta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{id}/alterar-vencimento".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -265,22 +267,81 @@ public class ContaApi {
   }
   
   /**
-   * Apresenta dados de uma determinada conta
-   * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @return Conta
+   * Apresenta os limites da conta
+   * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return LimiteDisponibilidade
    */
-  public Conta  consultarUsingGET1 (Long idConta) throws ApiException {
+  public LimiteDisponibilidade  consultarLimiteDisponibilidadeUsingGET1 (Long id) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET1");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLimiteDisponibilidadeUsingGET1");
     }
     
 
     // create path and map variables
-    String path = "/api/contas/{id_conta}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_conta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+    String path = "/api/contas/{id}/limites-disponibilidades".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (LimiteDisponibilidade) ApiInvoker.deserialize(response, "", LimiteDisponibilidade.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta dados de uma determinada conta
+   * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return Conta
+   */
+  public Conta  consultarUsingGET1 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -326,16 +387,16 @@ public class ContaApi {
   /**
    * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
    * 
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
    * @return CartaoImpressao
    */
-  public CartaoImpressao  gerarCartaoUsingPOST (Long idConta, Long idPessoa) throws ApiException {
+  public CartaoImpressao  gerarCartaoUsingPOST (Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling gerarCartaoUsingPOST");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoUsingPOST");
     }
     
     // verify the required parameter 'idPessoa' is set
@@ -345,7 +406,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_conta" + "\\}", apiInvoker.escapeString(idConta.toString())).replaceAll("\\{" + "id_pessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
+    String path = "/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "id_pessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -391,6 +452,8 @@ public class ContaApi {
   /**
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
    * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
@@ -401,11 +464,9 @@ public class ContaApi {
    * @param dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    * @param dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return Conta
    */
-  public Conta  listarUsingGET1 (Long id, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento, Integer page, Integer limit) throws ApiException {
+  public Conta  listarUsingGET1 (Integer page, Integer limit, Long id, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
 
@@ -419,6 +480,10 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
@@ -439,10 +504,6 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataCadastro", dataCadastro));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataUltimaAlteracaoVencimento", dataUltimaAlteracaoVencimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
     

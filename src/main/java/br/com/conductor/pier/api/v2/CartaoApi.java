@@ -49,26 +49,21 @@ public class CartaoApi {
   /**
    * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
    * @return HistoricoImpressaoCartao
    */
-  public HistoricoImpressaoCartao  alterarStatusImpressaoUsingPUT (Long idCartao, Long idStatusImpressao) throws ApiException {
+  public HistoricoImpressaoCartao  alterarStatusImpressaoUsingPUT (Long id, Long idStatusImpressao) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling alterarStatusImpressaoUsingPUT");
-    }
-    
-    // verify the required parameter 'idStatusImpressao' is set
-    if (idStatusImpressao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarStatusImpressaoUsingPUT");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString())).replaceAll("\\{" + "id_status_impressao" + "\\}", apiInvoker.escapeString(idStatusImpressao.toString()));
+    String path = "/api/cartoes/{id}/alterar-status-impressao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -77,6 +72,8 @@ public class CartaoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status_impressao", idStatusImpressao));
     
 
     
@@ -112,18 +109,18 @@ public class CartaoApi {
   }
   
   /**
-   * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa.
-   * Esta m\u00C3\u00A9todo tem como permite que um cart\u00C3\u00A3o de cr\u00C3\u00A9dito impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular deste cart\u00C3\u00A3o.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+   * Realiza a atribui\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o pr\u00C3\u00A9-pago a uma pessoa
+   * Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
    * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
    * @return Cartao
    */
-  public Cartao  atribuirPessoaUsingPUT (Long idCartao, Long idPessoa) throws ApiException {
+  public Cartao  atribuirPessoaUsingPUT (Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling atribuirPessoaUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atribuirPessoaUsingPUT");
     }
     
     // verify the required parameter 'idPessoa' is set
@@ -133,7 +130,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/atribuir-pessoa".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/atribuir-pessoa".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -181,17 +178,17 @@ public class CartaoApi {
   /**
    * Realiza o bloqueio de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio (tempor\u00C3\u00A1rio) ou do cancelamento (definitivo) de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
    * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
    * @return Cartao
    */
-  public Cartao  bloquearUsingPUT (Long idCartao, Long idStatus, String observacao) throws ApiException {
+  public Cartao  bloquearUsingPUT (Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling bloquearUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPUT");
     }
     
     // verify the required parameter 'idStatus' is set
@@ -206,7 +203,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/bloqueio".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/bloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -256,16 +253,16 @@ public class CartaoApi {
   /**
    * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param senha Senha para ser cadastrada ou alterada.
    * @return String
    */
-  public String  cadastrarAlterarSenhaUsingPUT (Long idCartao, String senha) throws ApiException {
+  public String  cadastrarAlterarSenhaUsingPUT (Long id, String senha) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling cadastrarAlterarSenhaUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarAlterarSenhaUsingPUT");
     }
     
     // verify the required parameter 'senha' is set
@@ -275,7 +272,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/alterar-senha".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -285,7 +282,7 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_cartao", idCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
 
     
@@ -325,20 +322,20 @@ public class CartaoApi {
   /**
    * Apresenta os limites do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return LimiteDisponibilidade
    */
-  public LimiteDisponibilidade  consultarLimiteDisponibilidadeUsingGET (Long idCartao) throws ApiException {
+  public LimiteDisponibilidade  consultarLimiteDisponibilidadeUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarLimiteDisponibilidadeUsingGET");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLimiteDisponibilidadeUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/limites-disponibilidades".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/limites-disponibilidades".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -384,20 +381,20 @@ public class CartaoApi {
   /**
    * Apresenta os dados do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return Portador
    */
-  public Portador  consultarPortadorUsingGET (Long idCartao) throws ApiException {
+  public Portador  consultarPortadorUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarPortadorUsingGET");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarPortadorUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/portadores".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/portadores".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -443,20 +440,20 @@ public class CartaoApi {
   /**
    * Apresenta os dados de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return Cartao
    */
-  public Cartao  consultarUsingGET (Long idCartao) throws ApiException {
+  public Cartao  consultarUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -502,20 +499,20 @@ public class CartaoApi {
   /**
    * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return Cartao
    */
-  public Cartao  desbloquearUsingPUT (Long idCartao) throws ApiException {
+  public Cartao  desbloquearUsingPUT (Long id) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling desbloquearUsingPUT");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearUsingPUT");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/desbloqueio".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id_cartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/desbloquear".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -559,8 +556,99 @@ public class CartaoApi {
   }
   
   /**
+   * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+   * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais (id).
+   * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * @param idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+   * @param idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+   * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+   * @param quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+   * @param dataCadastroLote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+   * @param usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
+   * @param flagProcessado Indica o Status de Processamento do Lote.
+   * @return PageCartoes
+   */
+  public PageCartoes  listarLotesCartoesPrePagosUsingGET (Integer page, Integer limit, Long id, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, Date dataCadastroLote, String usuarioCadastro, Integer flagProcessado) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/pre-pagos/lotes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idProduto", idProduto));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoCartao", idTipoCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idImagem", idImagem));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEndereco", idEndereco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "quantidadeCartoes", quantidadeCartoes));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataCadastroLote", dataCadastroLote));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "usuarioCadastro", usuarioCadastro));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagProcessado", flagProcessado));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageCartoes) ApiInvoker.deserialize(response, "", PageCartoes.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -579,11 +667,9 @@ public class CartaoApi {
    * @param flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
    * @param flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
    * @param codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageCartoes
    */
-  public PageCartoes  listarUsingGET (Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
+  public PageCartoes  listarUsingGET (Integer page, Integer limit, Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio) throws ApiException {
     Object postBody = null;
     
 
@@ -597,6 +683,10 @@ public class CartaoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
@@ -634,10 +724,6 @@ public class CartaoApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoDesbloqueio", codigoDesbloqueio));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
 
     
 
@@ -672,8 +758,8 @@ public class CartaoApi {
   }
   
   /**
-   * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
+   * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
    * @return ValidaCartao
@@ -693,7 +779,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar/chip".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/bandeirados/validar-chip".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -703,7 +789,7 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "criptograma", criptograma));
     
@@ -742,7 +828,7 @@ public class CartaoApi {
   
   /**
    * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param nomePortador Nome do portador do cart\u00C3\u00A3o
    * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -774,7 +860,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar/digitado".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/bandeirados/validar-digitado".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -784,13 +870,13 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomePortador", nomePortador));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataValidade", dataValidade));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoSeguranca", codigoSeguranca));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
     
 
     
@@ -827,7 +913,7 @@ public class CartaoApi {
   
   /**
    * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param nomePortador Nome do portador do cart\u00C3\u00A3o
    * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
@@ -859,7 +945,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/nao-bandeirados/validar/digitado".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/nao-bandeirados/validar-digitado".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -869,13 +955,13 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomePortador", nomePortador));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataValidade", dataValidade));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoSeguranca", codigoSeguranca));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
     
 
     
@@ -912,7 +998,7 @@ public class CartaoApi {
   
   /**
    * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
    * @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
@@ -938,7 +1024,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar/tarja".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/bandeirados/validar-tarja".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -948,7 +1034,7 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroCartao", numeroCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "trilha1", trilha1));
     
@@ -990,26 +1076,26 @@ public class CartaoApi {
   /**
    * Permite validar a senha de um Cart\u00C3\u00A3o
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param senha Senha para ser validada.
    * @return String
    */
-  public String  validarSenhaUsingPOST (Long idCartao, String senha) throws ApiException {
+  public String  validarSenhaUsingGET (Long id, String senha) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling validarSenhaUsingPOST");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling validarSenhaUsingGET");
     }
     
     // verify the required parameter 'senha' is set
     if (senha == null) {
-       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/validar-senha".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/{id}/validar-senha".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1019,7 +1105,7 @@ public class CartaoApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_cartao", idCartao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
 
     
@@ -1044,7 +1130,7 @@ public class CartaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (String) ApiInvoker.deserialize(response, "", String.class);
       }

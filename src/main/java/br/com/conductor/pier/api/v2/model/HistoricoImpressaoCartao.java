@@ -14,8 +14,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o")
 public class HistoricoImpressaoCartao  {
   
-  @SerializedName("dataHistorico")
-  private Date dataHistorico = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("idCartao")
@@ -24,18 +22,8 @@ public class HistoricoImpressaoCartao  {
   private Long idStatusImpressaoCartao = null;
   @SerializedName("mensagemHistorico")
   private String mensagemHistorico = null;
-
-  
-  /**
-   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-   **/
-  @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
-  public Date getDataHistorico() {
-    return dataHistorico;
-  }
-  public void setDataHistorico(Date dataHistorico) {
-    this.dataHistorico = dataHistorico;
-  }
+  @SerializedName("dataHistorico")
+  private Date dataHistorico = null;
 
   
   /**
@@ -86,17 +74,29 @@ public class HistoricoImpressaoCartao  {
   }
 
   
+  /**
+   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+   **/
+  @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
+  public Date getDataHistorico() {
+    return dataHistorico;
+  }
+  public void setDataHistorico(Date dataHistorico) {
+    this.dataHistorico = dataHistorico;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class HistoricoImpressaoCartao {\n");
     
-    sb.append("  dataHistorico: ").append(dataHistorico).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idCartao: ").append(idCartao).append("\n");
     sb.append("  idStatusImpressaoCartao: ").append(idStatusImpressaoCartao).append("\n");
     sb.append("  mensagemHistorico: ").append(mensagemHistorico).append("\n");
+    sb.append("  dataHistorico: ").append(dataHistorico).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
