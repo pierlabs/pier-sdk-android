@@ -27,6 +27,8 @@ public class StatusCartao  {
   private Long idStatusDestinoConta = null;
   @SerializedName("flagCobraTarifa")
   private Integer flagCobraTarifa = null;
+  @SerializedName("flagPermiteNovaViaCartao")
+  private Integer flagPermiteNovaViaCartao = null;
 
   
   /**
@@ -113,6 +115,18 @@ public class StatusCartao  {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getFlagPermiteNovaViaCartao() {
+    return flagPermiteNovaViaCartao;
+  }
+  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -126,6 +140,7 @@ public class StatusCartao  {
     sb.append("  idStatusDestinoDesbloqueio: ").append(idStatusDestinoDesbloqueio).append("\n");
     sb.append("  idStatusDestinoConta: ").append(idStatusDestinoConta).append("\n");
     sb.append("  flagCobraTarifa: ").append(flagCobraTarifa).append("\n");
+    sb.append("  flagPermiteNovaViaCartao: ").append(flagPermiteNovaViaCartao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

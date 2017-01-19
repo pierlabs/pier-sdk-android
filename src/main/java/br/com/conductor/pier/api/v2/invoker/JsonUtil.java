@@ -67,6 +67,10 @@ public class JsonUtil {
       return new TypeToken<List<ExtraInfo>>(){}.getType();
     }
     
+    if ("Fatura".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Fatura>>(){}.getType();
+    }
+    
     if ("HistoricoImpressaoCartao".equalsIgnoreCase(className)) {
       return new TypeToken<List<HistoricoImpressaoCartao>>(){}.getType();
     }
@@ -77,6 +81,10 @@ public class JsonUtil {
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
       return new TypeToken<List<ListaProdutos>>(){}.getType();
+    }
+    
+    if ("LoteCartoesPrePagos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<LoteCartoesPrePagos>>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
@@ -131,6 +139,10 @@ public class JsonUtil {
       return new TypeToken<List<PageTiposEndereco>>(){}.getType();
     }
     
+    if ("PageTransacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTransacaoResponse>>(){}.getType();
+    }
+    
     if ("PageWebHooks".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageWebHooks>>(){}.getType();
     }
@@ -173,6 +185,10 @@ public class JsonUtil {
     
     if ("TipoTelefone".equalsIgnoreCase(className)) {
       return new TypeToken<List<TipoTelefone>>(){}.getType();
+    }
+    
+    if ("TransacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TransacaoResponse>>(){}.getType();
     }
     
     if ("ValidaCartao".equalsIgnoreCase(className)) {
@@ -221,6 +237,10 @@ public class JsonUtil {
       return new TypeToken<ExtraInfo>(){}.getType();
     }
     
+    if ("Fatura".equalsIgnoreCase(className)) {
+      return new TypeToken<Fatura>(){}.getType();
+    }
+    
     if ("HistoricoImpressaoCartao".equalsIgnoreCase(className)) {
       return new TypeToken<HistoricoImpressaoCartao>(){}.getType();
     }
@@ -231,6 +251,10 @@ public class JsonUtil {
     
     if ("ListaProdutos".equalsIgnoreCase(className)) {
       return new TypeToken<ListaProdutos>(){}.getType();
+    }
+    
+    if ("LoteCartoesPrePagos".equalsIgnoreCase(className)) {
+      return new TypeToken<LoteCartoesPrePagos>(){}.getType();
     }
     
     if ("OrigemComercial".equalsIgnoreCase(className)) {
@@ -285,6 +309,10 @@ public class JsonUtil {
       return new TypeToken<PageTiposEndereco>(){}.getType();
     }
     
+    if ("PageTransacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTransacaoResponse>(){}.getType();
+    }
+    
     if ("PageWebHooks".equalsIgnoreCase(className)) {
       return new TypeToken<PageWebHooks>(){}.getType();
     }
@@ -327,6 +355,10 @@ public class JsonUtil {
     
     if ("TipoTelefone".equalsIgnoreCase(className)) {
       return new TypeToken<TipoTelefone>(){}.getType();
+    }
+    
+    if ("TransacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TransacaoResponse>(){}.getType();
     }
     
     if ("ValidaCartao".equalsIgnoreCase(className)) {

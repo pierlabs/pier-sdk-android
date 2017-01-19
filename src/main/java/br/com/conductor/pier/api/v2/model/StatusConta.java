@@ -21,6 +21,8 @@ public class StatusConta  {
   private Integer flagAlteraLimite = null;
   @SerializedName("mensagemConsultaNegada")
   private String mensagemConsultaNegada = null;
+  @SerializedName("flagPermiteNovaViaCartao")
+  private Integer flagPermiteNovaViaCartao = null;
 
   
   /**
@@ -71,6 +73,18 @@ public class StatusConta  {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getFlagPermiteNovaViaCartao() {
+    return flagPermiteNovaViaCartao;
+  }
+  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -81,6 +95,7 @@ public class StatusConta  {
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  flagAlteraLimite: ").append(flagAlteraLimite).append("\n");
     sb.append("  mensagemConsultaNegada: ").append(mensagemConsultaNegada).append("\n");
+    sb.append("  flagPermiteNovaViaCartao: ").append(flagPermiteNovaViaCartao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
