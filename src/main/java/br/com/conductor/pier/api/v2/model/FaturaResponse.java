@@ -10,11 +10,17 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Fatura
+ * Fatura
  **/
-@ApiModel(description = "Objeto Fatura")
-public class Fatura  {
+@ApiModel(description = "Fatura")
+public class FaturaResponse  {
   
+  @SerializedName("id")
+  private Long id = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
+  @SerializedName("idProduto")
+  private Long idProduto = null;
   @SerializedName("dataVencimento")
   private Date dataVencimento = null;
   @SerializedName("saldoFaturaAnterior")
@@ -40,9 +46,45 @@ public class Fatura  {
 
   
   /**
-   * Data de Vencimento da Fatura.
+   * C\u00C3\u00B3digo identificador da fatura.
    **/
-  @ApiModelProperty(value = "Data de Vencimento da Fatura.")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da fatura.")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador da conta.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta.")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do produto.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do produto.")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
+
+  
+  /**
+   * Data de vencimento da fatura.
+   **/
+  @ApiModelProperty(value = "Data de vencimento da fatura.")
   public Date getDataVencimento() {
     return dataVencimento;
   }
@@ -52,9 +94,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo da Fatura Anterior.
+   * Saldo da fatura anterior.
    **/
-  @ApiModelProperty(value = "Saldo da Fatura Anterior.")
+  @ApiModelProperty(value = "Saldo da fatura anterior.")
   public BigDecimal getSaldoFaturaAnterior() {
     return saldoFaturaAnterior;
   }
@@ -76,9 +118,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+   * Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
    **/
-  @ApiModelProperty(value = "Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.")
+  @ApiModelProperty(value = "Saldo total das compras lan\u00C3\u00A7adas na fatura atual.")
   public BigDecimal getSaldoCompras() {
     return saldoCompras;
   }
@@ -88,9 +130,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
    **/
-  @ApiModelProperty(value = "Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(value = "Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.")
   public BigDecimal getSaldoPagamentos() {
     return saldoPagamentos;
   }
@@ -100,9 +142,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+   * Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
    **/
-  @ApiModelProperty(value = "Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.")
+  @ApiModelProperty(value = "Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.")
   public BigDecimal getSaldoTarifas() {
     return saldoTarifas;
   }
@@ -112,9 +154,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
    **/
-  @ApiModelProperty(value = "Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(value = "Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.")
   public BigDecimal getSaldoDebitos() {
     return saldoDebitos;
   }
@@ -124,9 +166,9 @@ public class Fatura  {
 
   
   /**
-   * Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
    **/
-  @ApiModelProperty(value = "Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(value = "Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.")
   public BigDecimal getSaldoCreditos() {
     return saldoCreditos;
   }
@@ -136,9 +178,9 @@ public class Fatura  {
 
   
   /**
-   * Salto total devedor da Fatura atual.
+   * Salto total devedor da fatura atual.
    **/
-  @ApiModelProperty(value = "Salto total devedor da Fatura atual.")
+  @ApiModelProperty(value = "Salto total devedor da fatura atual.")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
   }
@@ -148,9 +190,9 @@ public class Fatura  {
 
   
   /**
-   * Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
    **/
-  @ApiModelProperty(value = "Valor m\u00C3\u00ADnimo para Pagamento da Fatura.")
+  @ApiModelProperty(value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
   public BigDecimal getValorMinimoFatura() {
     return valorMinimoFatura;
   }
@@ -160,9 +202,9 @@ public class Fatura  {
 
   
   /**
-   * Quando ativa, indica que fora emitida uma Fatura.
+   * Quando ativa, indica que fora emitida uma fatura.
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que fora emitida uma Fatura.")
+  @ApiModelProperty(value = "Quando ativa, indica que fora emitida uma fatura.")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
   }
@@ -175,8 +217,11 @@ public class Fatura  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Fatura {\n");
+    sb.append("class FaturaResponse {\n");
     
+    sb.append("  id: ").append(id).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
     sb.append("  saldoFaturaAnterior: ").append(saldoFaturaAnterior).append("\n");
     sb.append("  saldoMulta: ").append(saldoMulta).append("\n");

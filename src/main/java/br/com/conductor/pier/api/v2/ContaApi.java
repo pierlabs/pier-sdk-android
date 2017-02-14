@@ -12,8 +12,8 @@ import br.com.conductor.pier.api.v2.model.Conta;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.CartaoImpressao;
-import br.com.conductor.pier.api.v2.model.Fatura;
 import java.util.Date;
+import br.com.conductor.pier.api.v2.model.FaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 
 
@@ -333,12 +333,12 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return Conta
    */
-  public Conta  consultarUsingGET1 (Long id) throws ApiException {
+  public Conta  consultarUsingGET2 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
     }
     
 
@@ -388,12 +388,13 @@ public class ContaApi {
   
   /**
    * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-   * 
+   * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @param idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
    * @return CartaoImpressao
    */
-  public CartaoImpressao  gerarCartaoUsingPOST (Long id, Long idPessoa) throws ApiException {
+  public CartaoImpressao  gerarCartaoUsingPOST (Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -417,6 +418,8 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_tipo_plastico", idTipoPlastico));
     
 
     
@@ -458,9 +461,9 @@ public class ContaApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param dataVencimento Data de Vencimento da Fatura.
-   * @return Fatura
+   * @return FaturaResponse
    */
-  public Fatura  listarFaturasUsingGET (Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
+  public FaturaResponse  listarFaturasUsingGET (Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -509,7 +512,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Fatura) ApiInvoker.deserialize(response, "", Fatura.class);
+        return (FaturaResponse) ApiInvoker.deserialize(response, "", FaturaResponse.class);
       }
       else {
         return null;
@@ -536,7 +539,7 @@ public class ContaApi {
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    * @return Conta
    */
-  public Conta  listarUsingGET1 (Integer page, Integer limit, Long id, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
+  public Conta  listarUsingGET2 (Integer page, Integer limit, Long id, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
 

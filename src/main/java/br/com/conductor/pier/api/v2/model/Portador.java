@@ -26,8 +26,6 @@ public class Portador  {
   private String tipoPortador = null;
   @SerializedName("nomeImpresso")
   private String nomeImpresso = null;
-  @SerializedName("idImagem")
-  private Long idImagem = null;
   @SerializedName("idTipoCartao")
   private Long idTipoCartao = null;
   @SerializedName("flagAtivo")
@@ -111,18 +109,6 @@ public class Portador  {
 
   
   /**
-   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(value = "Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.")
-  public Long getIdImagem() {
-    return idImagem;
-  }
-  public void setIdImagem(Long idImagem) {
-    this.idImagem = idImagem;
-  }
-
-  
-  /**
    * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
    **/
   @ApiModelProperty(value = "Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.")
@@ -182,7 +168,6 @@ public class Portador  {
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
     sb.append("  tipoPortador: ").append(tipoPortador).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
-    sb.append("  idImagem: ").append(idImagem).append("\n");
     sb.append("  idTipoCartao: ").append(idTipoCartao).append("\n");
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("  dataCadastroPortador: ").append(dataCadastroPortador).append("\n");
