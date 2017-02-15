@@ -123,6 +123,10 @@ public class JsonUtil {
       return new TypeToken<List<PageEstagiosCartoes>>(){}.getType();
     }
     
+    if ("PageFaturas".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageFaturas>>(){}.getType();
+    }
+    
     if ("PageOrigensComerciais".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageOrigensComerciais>>(){}.getType();
     }
@@ -327,6 +331,10 @@ public class JsonUtil {
     
     if ("PageEstagiosCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<PageEstagiosCartoes>(){}.getType();
+    }
+    
+    if ("PageFaturas".equalsIgnoreCase(className)) {
+      return new TypeToken<PageFaturas>(){}.getType();
     }
     
     if ("PageOrigensComerciais".equalsIgnoreCase(className)) {
