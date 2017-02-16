@@ -111,6 +111,10 @@ public class JsonUtil {
       return new TypeToken<List<OrigemComercial>>(){}.getType();
     }
     
+    if ("PageAtendimentoClientes".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageAtendimentoClientes>>(){}.getType();
+    }
+    
     if ("PageCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageCartoes>>(){}.getType();
     }
@@ -175,6 +179,10 @@ public class JsonUtil {
       return new TypeToken<List<PageTransacaoResponse>>(){}.getType();
     }
     
+    if ("PageTransferencias".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTransferencias>>(){}.getType();
+    }
+    
     if ("PageWebHooks".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageWebHooks>>(){}.getType();
     }
@@ -229,6 +237,10 @@ public class JsonUtil {
     
     if ("TransacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TransacaoResponse>>(){}.getType();
+    }
+    
+    if ("Transferencia".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Transferencia>>(){}.getType();
     }
     
     if ("ValidaCartao".equalsIgnoreCase(className)) {
@@ -321,6 +333,10 @@ public class JsonUtil {
       return new TypeToken<OrigemComercial>(){}.getType();
     }
     
+    if ("PageAtendimentoClientes".equalsIgnoreCase(className)) {
+      return new TypeToken<PageAtendimentoClientes>(){}.getType();
+    }
+    
     if ("PageCartoes".equalsIgnoreCase(className)) {
       return new TypeToken<PageCartoes>(){}.getType();
     }
@@ -385,6 +401,10 @@ public class JsonUtil {
       return new TypeToken<PageTransacaoResponse>(){}.getType();
     }
     
+    if ("PageTransferencias".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTransferencias>(){}.getType();
+    }
+    
     if ("PageWebHooks".equalsIgnoreCase(className)) {
       return new TypeToken<PageWebHooks>(){}.getType();
     }
@@ -439,6 +459,10 @@ public class JsonUtil {
     
     if ("TransacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TransacaoResponse>(){}.getType();
+    }
+    
+    if ("Transferencia".equalsIgnoreCase(className)) {
+      return new TypeToken<Transferencia>(){}.getType();
     }
     
     if ("ValidaCartao".equalsIgnoreCase(className)) {

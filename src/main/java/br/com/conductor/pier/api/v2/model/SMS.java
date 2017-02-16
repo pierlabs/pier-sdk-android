@@ -14,6 +14,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto SMS")
 public class SMS  {
   
+  @SerializedName("id")
+  private Long id = null;
   @SerializedName("nsu")
   private Long nsu = null;
   @SerializedName("idEmissor")
@@ -28,14 +30,20 @@ public class SMS  {
   };
   @SerializedName("status")
   private StatusEnum status = null;
+  @SerializedName("descricaoStatus")
+  private String descricaoStatus = null;
   @SerializedName("idPessoa")
   private Long idPessoa = null;
   @SerializedName("idConta")
   private Long idConta = null;
   @SerializedName("celular")
   private String celular = null;
+  @SerializedName("operadora")
+  private String operadora = null;
   @SerializedName("conteudo")
   private String conteudo = null;
+  @SerializedName("resposta")
+  private String resposta = null;
   @SerializedName("dataAgendamento")
   private Date dataAgendamento = null;
   @SerializedName("quantidadeTentativasEnvio")
@@ -46,6 +54,18 @@ public class SMS  {
   private Date dataAlteracaoStatus = null;
   @SerializedName("protocolo")
   private String protocolo = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo Identificador.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo Identificador.")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   
   /**
@@ -97,6 +117,18 @@ public class SMS  {
 
   
   /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   **/
+  @ApiModelProperty(required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  public String getDescricaoStatus() {
+    return descricaoStatus;
+  }
+  public void setDescricaoStatus(String descricaoStatus) {
+    this.descricaoStatus = descricaoStatus;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo identificado da pessoa
    **/
   @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
@@ -133,6 +165,18 @@ public class SMS  {
 
   
   /**
+   * Apresenta a operadora do celular a ser eviado o SMS
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta a operadora do celular a ser eviado o SMS")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
    * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
    **/
   @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado")
@@ -141,6 +185,18 @@ public class SMS  {
   }
   public void setConteudo(String conteudo) {
     this.conteudo = conteudo;
+  }
+
+  
+  /**
+   * Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada")
+  public String getResposta() {
+    return resposta;
+  }
+  public void setResposta(String resposta) {
+    this.resposta = resposta;
   }
 
   
@@ -210,14 +266,18 @@ public class SMS  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SMS {\n");
     
+    sb.append("  id: ").append(id).append("\n");
     sb.append("  nsu: ").append(nsu).append("\n");
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  evento: ").append(evento).append("\n");
     sb.append("  status: ").append(status).append("\n");
+    sb.append("  descricaoStatus: ").append(descricaoStatus).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  celular: ").append(celular).append("\n");
+    sb.append("  operadora: ").append(operadora).append("\n");
     sb.append("  conteudo: ").append(conteudo).append("\n");
+    sb.append("  resposta: ").append(resposta).append("\n");
     sb.append("  dataAgendamento: ").append(dataAgendamento).append("\n");
     sb.append("  quantidadeTentativasEnvio: ").append(quantidadeTentativasEnvio).append("\n");
     sb.append("  dataInclusao: ").append(dataInclusao).append("\n");

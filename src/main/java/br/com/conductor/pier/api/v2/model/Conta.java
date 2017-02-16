@@ -34,6 +34,10 @@ public class Conta  {
   private Date dataCadastro = null;
   @SerializedName("dataUltimaAlteracaoVencimento")
   private Date dataUltimaAlteracaoVencimento = null;
+  @SerializedName("numeroAgencia")
+  private Integer numeroAgencia = null;
+  @SerializedName("numeroContaCorrente")
+  private String numeroContaCorrente = null;
 
   
   /**
@@ -156,6 +160,30 @@ public class Conta  {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  public Integer getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da conta corrente.
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
+  public String getNumeroContaCorrente() {
+    return numeroContaCorrente;
+  }
+  public void setNumeroContaCorrente(String numeroContaCorrente) {
+    this.numeroContaCorrente = numeroContaCorrente;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -172,6 +200,8 @@ public class Conta  {
     sb.append("  dataStatusConta: ").append(dataStatusConta).append("\n");
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
+    sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
+    sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.AtendimentoCliente;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClientes;
 import java.util.Date;
 
 
@@ -110,9 +111,9 @@ public class FraudesApi {
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
    * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @return AtendimentoCliente
+   * @return PageAtendimentoClientes
    */
-  public AtendimentoCliente  listarUsingGET (Integer page, Integer limit, Long idAtendimento, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
+  public PageAtendimentoClientes  listarUsingGET (Integer page, Integer limit, Long idAtendimento, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
     Object postBody = null;
     
 
@@ -164,7 +165,7 @@ public class FraudesApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (AtendimentoCliente) ApiInvoker.deserialize(response, "", AtendimentoCliente.class);
+        return (PageAtendimentoClientes) ApiInvoker.deserialize(response, "", PageAtendimentoClientes.class);
       }
       else {
         return null;

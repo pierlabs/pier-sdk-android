@@ -61,31 +61,6 @@ public class NotificacoesApi {
   public SMS  atualizarSMSUsingPOST (String nsu, String status, String data, String textoStatus, String operadora) throws ApiException {
     Object postBody = null;
     
-    // verify the required parameter 'nsu' is set
-    if (nsu == null) {
-       throw new ApiException(400, "Missing the required parameter 'nsu' when calling atualizarSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'status' is set
-    if (status == null) {
-       throw new ApiException(400, "Missing the required parameter 'status' when calling atualizarSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'data' is set
-    if (data == null) {
-       throw new ApiException(400, "Missing the required parameter 'data' when calling atualizarSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'textoStatus' is set
-    if (textoStatus == null) {
-       throw new ApiException(400, "Missing the required parameter 'textoStatus' when calling atualizarSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'operadora' is set
-    if (operadora == null) {
-       throw new ApiException(400, "Missing the required parameter 'operadora' when calling atualizarSMSUsingPOST");
-    }
-    
 
     // create path and map variables
     String path = "/api/notificacoes/sms/atualizar-status".replaceAll("\\{format\\}","json");
@@ -132,59 +107,6 @@ public class NotificacoesApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (SMS) ApiInvoker.deserialize(response, "", SMS.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Limpar Acessos
-   * Esse recurso permite limpar a lista de emissores que possuem acesso a envio de SMS pela TWW.
-   * @return String
-   */
-  public String  limparAcessoTWWUsingGET () throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/notificacoes/sms/limpar".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
       }
       else {
         return null;
@@ -352,21 +274,6 @@ public class NotificacoesApi {
    */
   public SMS  responderSMSUsingPOST (String nsu, String data, String resposta) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'nsu' is set
-    if (nsu == null) {
-       throw new ApiException(400, "Missing the required parameter 'nsu' when calling responderSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'data' is set
-    if (data == null) {
-       throw new ApiException(400, "Missing the required parameter 'data' when calling responderSMSUsingPOST");
-    }
-    
-    // verify the required parameter 'resposta' is set
-    if (resposta == null) {
-       throw new ApiException(400, "Missing the required parameter 'resposta' when calling responderSMSUsingPOST");
-    }
     
 
     // create path and map variables
