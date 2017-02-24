@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 
@@ -36,6 +37,8 @@ public class Conta  {
   private Date dataUltimaAlteracaoVencimento = null;
   @SerializedName("numeroAgencia")
   private Integer numeroAgencia = null;
+  @SerializedName("valorRenda")
+  private BigDecimal valorRenda = null;
   @SerializedName("numeroContaCorrente")
   private String numeroContaCorrente = null;
 
@@ -173,6 +176,18 @@ public class Conta  {
 
   
   /**
+   * Apresenta o valor da renda comprovada
+   **/
+  @ApiModelProperty(value = "Apresenta o valor da renda comprovada")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
    * N\u00C3\u00BAmero da conta corrente.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
@@ -201,6 +216,7 @@ public class Conta  {
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
+    sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
     sb.append("}\n");
     return sb.toString();

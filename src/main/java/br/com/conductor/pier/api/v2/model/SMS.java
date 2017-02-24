@@ -20,11 +20,11 @@ public class SMS  {
   private Long nsu = null;
   @SerializedName("idEmissor")
   private Long idEmissor = null;
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
      RISCO_FRAUDE,  OUTROS, 
   };
-  @SerializedName("evento")
-  private EventoEnum evento = null;
+  @SerializedName("tipoEvento")
+  private TipoEventoEnum tipoEvento = null;
   public enum StatusEnum {
      PENDENTE,  ENCAMINHADO,  ENVIADO,  RESPONDIDO,  ERRO,  ERRO_RESPOSTA, 
   };
@@ -93,14 +93,14 @@ public class SMS  {
 
   
   /**
-   * Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+   * TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  @ApiModelProperty(value = "Evento de notifica\u00C3\u00A7\u00C3\u00A3o")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(value = "TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -269,7 +269,7 @@ public class SMS  {
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nsu: ").append(nsu).append("\n");
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
-    sb.append("  evento: ").append(evento).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  descricaoStatus: ").append(descricaoStatus).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");

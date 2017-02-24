@@ -49,10 +49,6 @@ public class TransacaoResponse  {
   private Integer flagCredito = null;
   @SerializedName("tipoEstabelecimento")
   private String tipoEstabelecimento = null;
-  @SerializedName("latitude")
-  private String latitude = null;
-  @SerializedName("longetude")
-  private String longetude = null;
   @SerializedName("idGrupoMCC")
   private Integer idGrupoMCC = null;
   @SerializedName("flagSolicitouContestacao")
@@ -254,28 +250,6 @@ public class TransacaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getLatitude() {
-    return latitude;
-  }
-  public void setLatitude(String latitude) {
-    this.latitude = latitude;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getLongetude() {
-    return longetude;
-  }
-  public void setLongetude(String longetude) {
-    this.longetude = longetude;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public Integer getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -318,8 +292,6 @@ public class TransacaoResponse  {
     sb.append("  estabelecimento: ").append(estabelecimento).append("\n");
     sb.append("  flagCredito: ").append(flagCredito).append("\n");
     sb.append("  tipoEstabelecimento: ").append(tipoEstabelecimento).append("\n");
-    sb.append("  latitude: ").append(latitude).append("\n");
-    sb.append("  longetude: ").append(longetude).append("\n");
     sb.append("  idGrupoMCC: ").append(idGrupoMCC).append("\n");
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
     sb.append("}\n");

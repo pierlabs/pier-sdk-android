@@ -15,11 +15,11 @@ public class WebHook  {
   
   @SerializedName("id")
   private Long id = null;
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
      RISCO_FRAUDE,  OUTROS, 
   };
-  @SerializedName("evento")
-  private EventoEnum evento = null;
+  @SerializedName("tipoEvento")
+  private TipoEventoEnum tipoEvento = null;
   public enum MetodoEnum {
      GET,  POST,  PUT,  DELETE, 
   };
@@ -42,14 +42,14 @@ public class WebHook  {
 
   
   /**
-   * Evento a ser chamado pelo WebHook
+   * TipoEvento a ser chamado pelo WebHook
    **/
-  @ApiModelProperty(required = true, value = "Evento a ser chamado pelo WebHook")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(required = true, value = "TipoEvento a ser chamado pelo WebHook")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -84,7 +84,7 @@ public class WebHook  {
     sb.append("class WebHook {\n");
     
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  evento: ").append(evento).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("  metodo: ").append(metodo).append("\n");
     sb.append("  url: ").append(url).append("\n");
     sb.append("}\n");

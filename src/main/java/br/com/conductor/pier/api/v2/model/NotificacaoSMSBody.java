@@ -26,11 +26,11 @@ public class NotificacaoSMSBody  {
   private String conteudo = null;
   @SerializedName("dataAgendamento")
   private Date dataAgendamento = null;
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
      RISCO_FRAUDE,  OUTROS, 
   };
-  @SerializedName("evento")
-  private EventoEnum evento = null;
+  @SerializedName("tipoEvento")
+  private TipoEventoEnum tipoEvento = null;
 
   
   /**
@@ -106,14 +106,14 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -129,7 +129,7 @@ public class NotificacaoSMSBody  {
     sb.append("  celular: ").append(celular).append("\n");
     sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("  dataAgendamento: ").append(dataAgendamento).append("\n");
-    sb.append("  evento: ").append(evento).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

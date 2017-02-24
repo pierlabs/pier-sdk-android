@@ -27,11 +27,11 @@ public class PushAPNS  {
   private String titulo = null;
   @SerializedName("conteudo")
   private String conteudo = null;
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
      RISCO_FRAUDE,  OUTROS, 
   };
-  @SerializedName("evento")
-  private EventoEnum evento = null;
+  @SerializedName("tipoEvento")
+  private TipoEventoEnum tipoEvento = null;
   @SerializedName("icone")
   private String icone = null;
   @SerializedName("som")
@@ -123,14 +123,14 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -171,7 +171,7 @@ public class PushAPNS  {
     sb.append("  senha: ").append(senha).append("\n");
     sb.append("  titulo: ").append(titulo).append("\n");
     sb.append("  conteudo: ").append(conteudo).append("\n");
-    sb.append("  evento: ").append(evento).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("  icone: ").append(icone).append("\n");
     sb.append("  som: ").append(som).append("\n");
     sb.append("}\n");

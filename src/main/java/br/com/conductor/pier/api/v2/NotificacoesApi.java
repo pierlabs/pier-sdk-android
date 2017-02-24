@@ -122,13 +122,13 @@ public class NotificacoesApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
-   * @param evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param plataforma Plataforma de Push notifications.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
    * @return PagePush
    */
-  public PagePush  listarPushUsingGET (Integer page, Integer limit, Date dataEnvio, String evento, String status, String plataforma, String protocolo) throws ApiException {
+  public PagePush  listarPushUsingGET (Integer page, Integer limit, Date dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
     Object postBody = null;
     
 
@@ -149,7 +149,7 @@ public class NotificacoesApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataEnvio", dataEnvio));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "evento", evento));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipoEvento", tipoEvento));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "status", status));
     
@@ -196,13 +196,13 @@ public class NotificacoesApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-   * @param evento Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
    * @return PageSMS
    */
-  public PageSMS  listarSMSUsingGET (Integer page, Integer limit, Date dataInclusao, String evento, String status, String operadora, String protocolo) throws ApiException {
+  public PageSMS  listarSMSUsingGET (Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo) throws ApiException {
     Object postBody = null;
     
 
@@ -223,7 +223,7 @@ public class NotificacoesApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInclusao", dataInclusao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "evento", evento));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipoEvento", tipoEvento));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "status", status));
     
