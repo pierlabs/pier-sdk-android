@@ -41,6 +41,8 @@ public class Conta  {
   private BigDecimal valorRenda = null;
   @SerializedName("numeroContaCorrente")
   private String numeroContaCorrente = null;
+  @SerializedName("formaEnvioFatura")
+  private String formaEnvioFatura = null;
 
   
   /**
@@ -199,6 +201,18 @@ public class Conta  {
   }
 
   
+  /**
+   * Forma de envio da fatura.
+   **/
+  @ApiModelProperty(value = "Forma de envio da fatura.")
+  public String getFormaEnvioFatura() {
+    return formaEnvioFatura;
+  }
+  public void setFormaEnvioFatura(String formaEnvioFatura) {
+    this.formaEnvioFatura = formaEnvioFatura;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -218,6 +232,7 @@ public class Conta  {
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
+    sb.append("  formaEnvioFatura: ").append(formaEnvioFatura).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

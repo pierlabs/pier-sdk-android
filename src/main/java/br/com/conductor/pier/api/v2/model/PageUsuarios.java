@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.Usuario;
+import br.com.conductor.pier.api.v2.model.UsuarioResponse;
 import java.util.*;
 
 
@@ -16,7 +16,7 @@ import com.google.gson.annotations.SerializedName;
 public class PageUsuarios  {
   
   @SerializedName("content")
-  private List<Usuario> content = null;
+  private List<UsuarioResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class PageUsuarios  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<Usuario> getContent() {
+  public List<UsuarioResponse> getContent() {
     return content;
   }
-  public void setContent(List<Usuario> content) {
+  public void setContent(List<UsuarioResponse> content) {
     this.content = content;
   }
 

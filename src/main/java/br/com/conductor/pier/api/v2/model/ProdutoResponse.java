@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Produto
  **/
 @ApiModel(description = "Produto")
-public class Produto  {
+public class ProdutoResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -19,6 +19,8 @@ public class Produto  {
   private String nome = null;
   @SerializedName("status")
   private Integer status = null;
+  @SerializedName("idFantasiaBasica")
+  private Long idFantasiaBasica = null;
 
   
   /**
@@ -57,15 +59,28 @@ public class Produto  {
   }
 
   
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.")
+  public Long getIdFantasiaBasica() {
+    return idFantasiaBasica;
+  }
+  public void setIdFantasiaBasica(Long idFantasiaBasica) {
+    this.idFantasiaBasica = idFantasiaBasica;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Produto {\n");
+    sb.append("class ProdutoResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  status: ").append(status).append("\n");
+    sb.append("  idFantasiaBasica: ").append(idFantasiaBasica).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

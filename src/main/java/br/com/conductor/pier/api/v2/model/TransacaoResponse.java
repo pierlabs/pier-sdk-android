@@ -24,13 +24,13 @@ public class TransacaoResponse  {
   @SerializedName("idTipoRegistro")
   private Long idTipoRegistro = null;
   @SerializedName("ordem")
-  private Long ordem = null;
+  private Integer ordem = null;
   @SerializedName("idTransacao")
   private Long idTransacao = null;
   @SerializedName("descricao")
   private String descricao = null;
   @SerializedName("status")
-  private Long status = null;
+  private Integer status = null;
   @SerializedName("descricaoStatus")
   private String descricaoStatus = null;
   @SerializedName("valor")
@@ -106,10 +106,10 @@ public class TransacaoResponse  {
    * Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
    **/
   @ApiModelProperty(value = "Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).")
-  public Long getOrdem() {
+  public Integer getOrdem() {
     return ordem;
   }
-  public void setOrdem(Long ordem) {
+  public void setOrdem(Integer ordem) {
     this.ordem = ordem;
   }
 
@@ -140,10 +140,10 @@ public class TransacaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Long getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(Long status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 

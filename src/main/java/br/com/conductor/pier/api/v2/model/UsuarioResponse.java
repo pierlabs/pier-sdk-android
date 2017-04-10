@@ -12,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
  **/
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario")
-public class Usuario  {
+public class UsuarioResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -26,8 +26,6 @@ public class Usuario  {
   private String cpf = null;
   @SerializedName("email")
   private String email = null;
-  @SerializedName("senha")
-  private String senha = null;
   public enum StatusEnum {
      ATIVO,  INATIVO, 
   };
@@ -44,7 +42,7 @@ public class Usuario  {
   /**
    * Id do Usu\u00C3\u00A1rio
    **/
-  @ApiModelProperty(required = true, value = "Id do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Id do Usu\u00C3\u00A1rio")
   public Long getId() {
     return id;
   }
@@ -114,18 +112,6 @@ public class Usuario  {
 
   
   /**
-   * Apresenta a senha do usu\u00C3\u00A1rio.
-   **/
-  @ApiModelProperty(value = "Apresenta a senha do usu\u00C3\u00A1rio.")
-  public String getSenha() {
-    return senha;
-  }
-  public void setSenha(String senha) {
-    this.senha = senha;
-  }
-
-  
-  /**
    * Status do Usu\u00C3\u00A1rio
    **/
   @ApiModelProperty(value = "Status do Usu\u00C3\u00A1rio")
@@ -177,7 +163,7 @@ public class Usuario  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Usuario {\n");
+    sb.append("class UsuarioResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
@@ -185,7 +171,6 @@ public class Usuario  {
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  cpf: ").append(cpf).append("\n");
     sb.append("  email: ").append(email).append("\n");
-    sb.append("  senha: ").append(senha).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  dataCriacao: ").append(dataCriacao).append("\n");
     sb.append("  dataModificacao: ").append(dataModificacao).append("\n");

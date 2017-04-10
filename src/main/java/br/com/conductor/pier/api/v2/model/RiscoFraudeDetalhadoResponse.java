@@ -1,6 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
+import br.com.conductor.pier.api.v2.model.Telefone;
 import java.math.BigDecimal;
+import java.util.*;
 import java.util.Date;
 
 
@@ -61,6 +63,14 @@ public class RiscoFraudeDetalhadoResponse  {
   private String codigoModoEntradaTerminal = null;
   @SerializedName("descricaoModoEntradaTerminal")
   private String descricaoModoEntradaTerminal = null;
+  @SerializedName("cpf")
+  private String cpf = null;
+  @SerializedName("cnpj")
+  private String cnpj = null;
+  @SerializedName("email")
+  private String email = null;
+  @SerializedName("tefefones")
+  private List<Telefone> tefefones = null;
 
   
   /**
@@ -339,6 +349,54 @@ public class RiscoFraudeDetalhadoResponse  {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica")
+  public String getCpf() {
+    return cpf;
+  }
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
+  /**
+   * Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+   **/
+  @ApiModelProperty(value = "Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o")
+  public String getEmail() {
+    return email;
+  }
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  
+  /**
+   * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+   **/
+  @ApiModelProperty(value = "Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o")
+  public List<Telefone> getTefefones() {
+    return tefefones;
+  }
+  public void setTefefones(List<Telefone> tefefones) {
+    this.tefefones = tefefones;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -368,6 +426,10 @@ public class RiscoFraudeDetalhadoResponse  {
     sb.append("  origemTransacao: ").append(origemTransacao).append("\n");
     sb.append("  codigoModoEntradaTerminal: ").append(codigoModoEntradaTerminal).append("\n");
     sb.append("  descricaoModoEntradaTerminal: ").append(descricaoModoEntradaTerminal).append("\n");
+    sb.append("  cpf: ").append(cpf).append("\n");
+    sb.append("  cnpj: ").append(cnpj).append("\n");
+    sb.append("  email: ").append(email).append("\n");
+    sb.append("  tefefones: ").append(tefefones).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

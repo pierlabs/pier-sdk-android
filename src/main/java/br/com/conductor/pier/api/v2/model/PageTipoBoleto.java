@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
 import java.util.*;
 
 
@@ -16,7 +15,7 @@ import com.google.gson.annotations.SerializedName;
 public class PageTipoBoleto  {
   
   @SerializedName("content")
-  private List<FaturaResponse> content = null;
+  private List<Object> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +47,10 @@ public class PageTipoBoleto  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<FaturaResponse> getContent() {
+  public List<Object> getContent() {
     return content;
   }
-  public void setContent(List<FaturaResponse> content) {
+  public void setContent(List<Object> content) {
     this.content = content;
   }
 

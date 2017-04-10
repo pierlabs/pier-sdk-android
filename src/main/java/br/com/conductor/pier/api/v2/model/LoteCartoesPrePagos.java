@@ -26,8 +26,8 @@ public class LoteCartoesPrePagos  {
   private Long idImagem = null;
   @SerializedName("idEndereco")
   private Long idEndereco = null;
-  @SerializedName("quantidadeCartoes")
-  private Integer quantidadeCartoes = null;
+  @SerializedName("quantidade")
+  private Integer quantidade = null;
   @SerializedName("dataCadastro")
   private Date dataCadastro = null;
   @SerializedName("usuarioCadastro")
@@ -112,11 +112,11 @@ public class LoteCartoesPrePagos  {
    * N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
    **/
   @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.")
-  public Integer getQuantidadeCartoes() {
-    return quantidadeCartoes;
+  public Integer getQuantidade() {
+    return quantidade;
   }
-  public void setQuantidadeCartoes(Integer quantidadeCartoes) {
-    this.quantidadeCartoes = quantidadeCartoes;
+  public void setQuantidade(Integer quantidade) {
+    this.quantidade = quantidade;
   }
 
   
@@ -168,7 +168,7 @@ public class LoteCartoesPrePagos  {
     sb.append("  idTipoCartao: ").append(idTipoCartao).append("\n");
     sb.append("  idImagem: ").append(idImagem).append("\n");
     sb.append("  idEndereco: ").append(idEndereco).append("\n");
-    sb.append("  quantidadeCartoes: ").append(quantidadeCartoes).append("\n");
+    sb.append("  quantidade: ").append(quantidade).append("\n");
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  usuarioCadastro: ").append(usuarioCadastro).append("\n");
     sb.append("  statusProcessamento: ").append(statusProcessamento).append("\n");

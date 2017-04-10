@@ -26,8 +26,16 @@ public class Pessoa  {
   private String cnpj = null;
   @SerializedName("dataNascimento")
   private Date dataNascimento = null;
+  @SerializedName("numeroIdentidade")
+  private String numeroIdentidade = null;
+  @SerializedName("orgaoExpedidorIdentidade")
+  private String orgaoExpedidorIdentidade = null;
   @SerializedName("sexo")
   private String sexo = null;
+  @SerializedName("unidadeFederativaIdentidade")
+  private String unidadeFederativaIdentidade = null;
+  @SerializedName("dataEmissaoIdentidade")
+  private Date dataEmissaoIdentidade = null;
 
   
   /**
@@ -103,6 +111,30 @@ public class Pessoa  {
 
   
   /**
+   * N\u00C3\u00BAmero da Identidade
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da Identidade")
+  public String getNumeroIdentidade() {
+    return numeroIdentidade;
+  }
+  public void setNumeroIdentidade(String numeroIdentidade) {
+    this.numeroIdentidade = numeroIdentidade;
+  }
+
+  
+  /**
+   * Org\u00C3\u00A3o expedidor do RG.
+   **/
+  @ApiModelProperty(value = "Org\u00C3\u00A3o expedidor do RG.")
+  public String getOrgaoExpedidorIdentidade() {
+    return orgaoExpedidorIdentidade;
+  }
+  public void setOrgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
+    this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
    **/
   @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).")
@@ -111,6 +143,30 @@ public class Pessoa  {
   }
   public void setSexo(String sexo) {
     this.sexo = sexo;
+  }
+
+  
+  /**
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   **/
+  @ApiModelProperty(value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  public String getUnidadeFederativaIdentidade() {
+    return unidadeFederativaIdentidade;
+  }
+  public void setUnidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
+    this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
+  }
+
+  
+  /**
+   * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   **/
+  @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
+  public Date getDataEmissaoIdentidade() {
+    return dataEmissaoIdentidade;
+  }
+  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+    this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
   
@@ -126,7 +182,11 @@ public class Pessoa  {
     sb.append("  cpf: ").append(cpf).append("\n");
     sb.append("  cnpj: ").append(cnpj).append("\n");
     sb.append("  dataNascimento: ").append(dataNascimento).append("\n");
+    sb.append("  numeroIdentidade: ").append(numeroIdentidade).append("\n");
+    sb.append("  orgaoExpedidorIdentidade: ").append(orgaoExpedidorIdentidade).append("\n");
     sb.append("  sexo: ").append(sexo).append("\n");
+    sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
+    sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

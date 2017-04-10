@@ -13,8 +13,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto FAQ")
 public class FAQ  {
   
-  @SerializedName("idFaq")
-  private Long idFaq = null;
+  @SerializedName("id")
+  private Long id = null;
   @SerializedName("idEmissor")
   private Long idEmissor = null;
   @SerializedName("pergunta")
@@ -38,11 +38,11 @@ public class FAQ  {
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
    **/
   @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).")
-  public Long getIdFaq() {
-    return idFaq;
+  public Long getId() {
+    return id;
   }
-  public void setIdFaq(Long idFaq) {
-    this.idFaq = idFaq;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
@@ -136,7 +136,7 @@ public class FAQ  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FAQ {\n");
     
-    sb.append("  idFaq: ").append(idFaq).append("\n");
+    sb.append("  id: ").append(id).append("\n");
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  pergunta: ").append(pergunta).append("\n");
     sb.append("  resposta: ").append(resposta).append("\n");

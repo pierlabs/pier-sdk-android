@@ -165,9 +165,9 @@ public class AtendimentoCliente  {
 
   
   /**
-   * Apresenta a data em que o Atendimento foi realizado.
+   * Apresenta a data e hora em que o Atendimento foi realizado.
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o Atendimento foi realizado.")
+  @ApiModelProperty(value = "Apresenta a data e hora em que o Atendimento foi realizado.")
   public Date getDataAtendimento() {
     return dataAtendimento;
   }
@@ -177,9 +177,9 @@ public class AtendimentoCliente  {
 
   
   /**
-   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
    **/
-  @ApiModelProperty(value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.")
+  @ApiModelProperty(value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.")
   public Date getDataAgendamento() {
     return dataAgendamento;
   }
@@ -189,9 +189,9 @@ public class AtendimentoCliente  {
 
   
   /**
-   * Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+   * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
    **/
-  @ApiModelProperty(value = "Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
+  @ApiModelProperty(value = "Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
   public Date getDataProcessamento() {
     return dataProcessamento;
   }

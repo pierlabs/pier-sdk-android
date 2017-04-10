@@ -8,8 +8,10 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.Usuario;
+import br.com.conductor.pier.api.v2.model.UsuarioUpdate;
+import br.com.conductor.pier.api.v2.model.UsuarioResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarios;
+import br.com.conductor.pier.api.v2.model.UsuarioPersist;
 
 
 import org.apache.http.HttpEntity;
@@ -117,23 +119,23 @@ public class UsuariosApi {
   }
   
   /**
-   * Alterar os usu\u00C3\u00A1rios cadastrados
+   * Altera os usu\u00C3\u00A1rios cadastrados
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @param update update
-   * @return Usuario
+   * @return UsuarioResponse
    */
-  public Usuario  alterarUsingPUT6 (Long id, Usuario update) throws ApiException {
+  public UsuarioResponse  alterarUsingPUT9 (Long id, UsuarioUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT6");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
     }
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT6");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT9");
     }
     
 
@@ -171,7 +173,7 @@ public class UsuariosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Usuario) ApiInvoker.deserialize(response, "", Usuario.class);
+        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
       }
       else {
         return null;
@@ -185,14 +187,14 @@ public class UsuariosApi {
    * Apresenta os dados de um determinado Usu\u00C3\u00A1rio
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return Usuario
+   * @return UsuarioResponse
    */
-  public Usuario  consultarUsingGET16 (Long id) throws ApiException {
+  public UsuarioResponse  consultarUsingGET22 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
     }
     
 
@@ -230,7 +232,7 @@ public class UsuariosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Usuario) ApiInvoker.deserialize(response, "", Usuario.class);
+        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
       }
       else {
         return null;
@@ -245,14 +247,13 @@ public class UsuariosApi {
    * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param id Id do Usuario
    * @param nome Nome do Usuario
    * @param cpf CPF do Usuario
    * @param email Email do Usuario
    * @param status Status do Usuario
    * @return PageUsuarios
    */
-  public PageUsuarios  listarUsingGET16 (Integer page, Integer limit, Long id, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarios  listarUsingGET21 (Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
 
@@ -270,8 +271,6 @@ public class UsuariosApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
     
@@ -374,17 +373,17 @@ public class UsuariosApi {
   }
   
   /**
-   * Cadastrar Usu\u00C3\u00A1rio
+   * Cadastra Usu\u00C3\u00A1rio
    * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
    * @param persist persist
-   * @return Usuario
+   * @return UsuarioResponse
    */
-  public Usuario  salvarUsingPOST6 (Usuario persist) throws ApiException {
+  public UsuarioResponse  salvarUsingPOST8 (UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
     }
     
 
@@ -422,7 +421,7 @@ public class UsuariosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Usuario) ApiInvoker.deserialize(response, "", Usuario.class);
+        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
       }
       else {
         return null;
