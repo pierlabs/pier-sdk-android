@@ -50,6 +50,8 @@ public class Cartao  {
   private Integer flagProvisorio = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
+  @SerializedName("sequencialCartao")
+  private Integer sequencialCartao = null;
 
   
   /**
@@ -268,6 +270,18 @@ public class Cartao  {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o")
+  public Integer getSequencialCartao() {
+    return sequencialCartao;
+  }
+  public void setSequencialCartao(Integer sequencialCartao) {
+    this.sequencialCartao = sequencialCartao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -292,6 +306,7 @@ public class Cartao  {
     sb.append("  flagImpressaoOrigemComercial: ").append(flagImpressaoOrigemComercial).append("\n");
     sb.append("  flagProvisorio: ").append(flagProvisorio).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
+    sb.append("  sequencialCartao: ").append(sequencialCartao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
