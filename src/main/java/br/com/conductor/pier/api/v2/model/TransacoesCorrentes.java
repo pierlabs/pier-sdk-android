@@ -32,11 +32,11 @@ public class TransacoesCorrentes  {
   @SerializedName("nomePortador")
   private String nomePortador = null;
   @SerializedName("dataTransacaoUTC")
-  private String dataTransacaoUTC = null;
+  private Date dataTransacaoUTC = null;
   @SerializedName("dataFaturamento")
   private Date dataFaturamento = null;
   @SerializedName("dataVencimento")
-  private String dataVencimento = null;
+  private Date dataVencimento = null;
   @SerializedName("modoEntradaTransacao")
   private String modoEntradaTransacao = null;
   @SerializedName("valorTaxaEmbarque")
@@ -45,10 +45,10 @@ public class TransacoesCorrentes  {
   private BigDecimal valorEntrada = null;
   @SerializedName("valorBRL")
   private BigDecimal valorBRL = null;
-  @SerializedName("cotacaoUSD")
-  private BigDecimal cotacaoUSD = null;
   @SerializedName("valorUSD")
   private BigDecimal valorUSD = null;
+  @SerializedName("cotacaoUSD")
+  private BigDecimal cotacaoUSD = null;
   @SerializedName("dataCotacaoUSD")
   private Date dataCotacaoUSD = null;
   @SerializedName("codigoMoedaOrigem")
@@ -185,10 +185,10 @@ public class TransacoesCorrentes  {
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
    **/
   @ApiModelProperty(value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
-  public String getDataTransacaoUTC() {
+  public Date getDataTransacaoUTC() {
     return dataTransacaoUTC;
   }
-  public void setDataTransacaoUTC(String dataTransacaoUTC) {
+  public void setDataTransacaoUTC(Date dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
   }
 
@@ -209,10 +209,10 @@ public class TransacoesCorrentes  {
    * Data de Vencimento da Fatura.
    **/
   @ApiModelProperty(value = "Data de Vencimento da Fatura.")
-  public String getDataVencimento() {
+  public Date getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(String dataVencimento) {
+  public void setDataVencimento(Date dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
@@ -266,18 +266,6 @@ public class TransacoesCorrentes  {
 
   
   /**
-   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-   **/
-  @ApiModelProperty(value = "Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).")
-  public BigDecimal getCotacaoUSD() {
-    return cotacaoUSD;
-  }
-  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-  }
-
-  
-  /**
    * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
    **/
   @ApiModelProperty(value = "Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).")
@@ -286,6 +274,18 @@ public class TransacoesCorrentes  {
   }
   public void setValorUSD(BigDecimal valorUSD) {
     this.valorUSD = valorUSD;
+  }
+
+  
+  /**
+   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+   **/
+  @ApiModelProperty(value = "Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).")
+  public BigDecimal getCotacaoUSD() {
+    return cotacaoUSD;
+  }
+  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
   }
 
   
@@ -514,8 +514,8 @@ public class TransacoesCorrentes  {
     sb.append("  valorTaxaEmbarque: ").append(valorTaxaEmbarque).append("\n");
     sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
     sb.append("  valorBRL: ").append(valorBRL).append("\n");
-    sb.append("  cotacaoUSD: ").append(cotacaoUSD).append("\n");
     sb.append("  valorUSD: ").append(valorUSD).append("\n");
+    sb.append("  cotacaoUSD: ").append(cotacaoUSD).append("\n");
     sb.append("  dataCotacaoUSD: ").append(dataCotacaoUSD).append("\n");
     sb.append("  codigoMoedaOrigem: ").append(codigoMoedaOrigem).append("\n");
     sb.append("  codigoMoedaDestino: ").append(codigoMoedaDestino).append("\n");

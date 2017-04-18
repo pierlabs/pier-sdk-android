@@ -91,6 +91,10 @@ public class JsonUtil {
       return new TypeToken<List<DetalheOportunidadeUpdate>>(){}.getType();
     }
     
+    if ("DetalhesFaturaConsignadaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DetalhesFaturaConsignadaResponse>>(){}.getType();
+    }
+    
     if ("DetalhesFaturaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<DetalhesFaturaResponse>>(){}.getType();
     }
@@ -591,6 +595,10 @@ public class JsonUtil {
     
     if ("DetalheOportunidadeUpdate".equalsIgnoreCase(className)) {
       return new TypeToken<DetalheOportunidadeUpdate>(){}.getType();
+    }
+    
+    if ("DetalhesFaturaConsignadaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DetalhesFaturaConsignadaResponse>(){}.getType();
     }
     
     if ("DetalhesFaturaResponse".equalsIgnoreCase(className)) {

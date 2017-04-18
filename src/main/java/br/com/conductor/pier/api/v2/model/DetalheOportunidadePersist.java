@@ -13,22 +13,10 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto DetalheOportunidade")
 public class DetalheOportunidadePersist  {
   
-  @SerializedName("conteudo")
-  private String conteudo = null;
   @SerializedName("nomeCampo")
   private String nomeCampo = null;
-
-  
-  /**
-   * Conte\u00C3\u00BAdo do detalhe
-   **/
-  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo do detalhe")
-  public String getConteudo() {
-    return conteudo;
-  }
-  public void setConteudo(String conteudo) {
-    this.conteudo = conteudo;
-  }
+  @SerializedName("conteudo")
+  private String conteudo = null;
 
   
   /**
@@ -43,14 +31,26 @@ public class DetalheOportunidadePersist  {
   }
 
   
+  /**
+   * Conte\u00C3\u00BAdo do detalhe
+   **/
+  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo do detalhe")
+  public String getConteudo() {
+    return conteudo;
+  }
+  public void setConteudo(String conteudo) {
+    this.conteudo = conteudo;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DetalheOportunidadePersist {\n");
     
-    sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("  nomeCampo: ").append(nomeCampo).append("\n");
+    sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

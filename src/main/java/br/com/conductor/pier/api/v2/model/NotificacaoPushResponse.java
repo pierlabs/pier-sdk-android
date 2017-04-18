@@ -21,7 +21,7 @@ public class NotificacaoPushResponse  {
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
   public enum StatusEnum {
-     PENDENTE,  ENCAMINHADO,  ENVIADO,  RESPONDIDO,  ERRO,  ERRO_RESPOSTA, 
+     PENDENTE,  ENCAMINHADO,  ENVIADO,  RESPONDIDO,  ERRO,  ERRO_RESPOSTA,  SUCESSO_RESPOSTA, 
   };
   @SerializedName("status")
   private StatusEnum status = null;
