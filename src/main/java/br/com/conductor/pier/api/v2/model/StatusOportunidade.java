@@ -13,10 +13,24 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto StatusOportunidade")
 public class StatusOportunidade  {
   
+  @SerializedName("nome")
+  private String nome = null;
   @SerializedName("descricao")
   private String descricao = null;
   @SerializedName("flagAtivo")
   private Boolean flagAtivo = null;
+
+  
+  /**
+   * Nome do status oportunidade
+   **/
+  @ApiModelProperty(value = "Nome do status oportunidade")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
   
   /**
@@ -49,6 +63,7 @@ public class StatusOportunidade  {
     StringBuilder sb = new StringBuilder();
     sb.append("class StatusOportunidade {\n");
     
+    sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("}\n");

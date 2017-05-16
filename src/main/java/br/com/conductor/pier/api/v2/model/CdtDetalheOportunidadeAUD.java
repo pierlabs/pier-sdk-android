@@ -27,6 +27,8 @@ public class CdtDetalheOportunidadeAUD  {
   private Long revOportunidade = null;
   @SerializedName("revType")
   private Long revType = null;
+  @SerializedName("revUser")
+  private String revUser = null;
 
   
   /**
@@ -117,6 +119,17 @@ public class CdtDetalheOportunidadeAUD  {
   }
 
   
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public String getRevUser() {
+    return revUser;
+  }
+  public void setRevUser(String revUser) {
+    this.revUser = revUser;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -131,6 +144,7 @@ public class CdtDetalheOportunidadeAUD  {
     sb.append("  revDate: ").append(revDate).append("\n");
     sb.append("  revOportunidade: ").append(revOportunidade).append("\n");
     sb.append("  revType: ").append(revType).append("\n");
+    sb.append("  revUser: ").append(revUser).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

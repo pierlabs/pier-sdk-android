@@ -27,7 +27,7 @@ import java.io.File;
 
 
 public class StatusParametrosApi {
-  String basePath = "https://localhost/";
+  String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -443,7 +443,7 @@ public class StatusParametrosApi {
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusContas
    */
-  public PageStatusContas  listarUsingGET12 (Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
+  public PageStatusContas  listarUsingGET15 (Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
     Object postBody = null;
     
 
@@ -514,7 +514,7 @@ public class StatusParametrosApi {
    * @param nome Nome do status impress\u00C3\u00A3o
    * @return PageStatusImpressao
    */
-  public PageStatusImpressao  listarUsingGET13 (Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressao  listarUsingGET16 (Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 

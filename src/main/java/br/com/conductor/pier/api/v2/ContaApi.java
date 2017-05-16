@@ -12,7 +12,7 @@ import java.util.Date;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
-import br.com.conductor.pier.api.v2.model.Conta;
+import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BoletoDeFatura;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
@@ -20,6 +20,7 @@ import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
 import br.com.conductor.pier.api.v2.model.LinkTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferencias;
+import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.CartaoImpressao;
 import br.com.conductor.pier.api.v2.model.PageFaturasConsignadas;
 import br.com.conductor.pier.api.v2.model.PageFaturas;
@@ -30,6 +31,7 @@ import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentes;
 import br.com.conductor.pier.api.v2.model.LinkPageTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageContas;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
+import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
 
 import org.apache.http.HttpEntity;
@@ -41,7 +43,7 @@ import java.io.File;
 
 
 public class ContaApi {
-  String basePath = "https://localhost/";
+  String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -68,11 +70,9 @@ public class ContaApi {
    * @param idTipoAjuste C\u00C3\u00B3digo identificador do tipo de ajuste.
    * @param dataAjuste Data do ajuste.
    * @param valorAjuste Valor do ajuste
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return AjusteResponse
    */
-  public AjusteResponse  ajustarContaUsingPOST (Long id, Long idTipoAjuste, Date dataAjuste, BigDecimal valorAjuste, Integer page, Integer limit) throws ApiException {
+  public AjusteResponse  ajustarContaUsingPOST (Long id, Long idTipoAjuste, Date dataAjuste, BigDecimal valorAjuste) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -106,10 +106,6 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAjuste", idTipoAjuste));
     
@@ -306,13 +302,80 @@ public class ContaApi {
   }
   
   /**
+   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
+   * Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
+   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+   * @return ContaResponse
+   */
+  public ContaResponse  alterarTitularUsingPOST (Long id, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarTitularUsingPOST");
+    }
+    
+    // verify the required parameter 'idPessoa' is set
+    if (idPessoa == null) {
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling alterarTitularUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/alterar-titular".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_pessoa", idPessoa));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ContaResponse) ApiInvoker.deserialize(response, "", ContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
    * Esse recurso permite alterar o vencimento de uma conta especifica.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param novoDiaVencimento Novo dia de vencimento.
-   * @return Conta
+   * @return ContaResponse
    */
-  public Conta  alterarVencimentoUsingPUT (Long id, Integer novoDiaVencimento) throws ApiException {
+  public ContaResponse  alterarVencimentoUsingPUT (Long id, Integer novoDiaVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -362,7 +425,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Conta) ApiInvoker.deserialize(response, "", Conta.class);
+        return (ContaResponse) ApiInvoker.deserialize(response, "", ContaResponse.class);
       }
       else {
         return null;
@@ -565,7 +628,7 @@ public class ContaApi {
    * Consultar a fatura consignadas abertas da conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param dataVencimento Data Vencimento.
+   * @param dataVencimento Data Vencimento
    * @return DetalhesFaturaConsignadaResponse
    */
   public DetalhesFaturaConsignadaResponse  consultarFaturaConsignadaAbertaUsingGET (Long id, Date dataVencimento) throws ApiException {
@@ -574,11 +637,6 @@ public class ContaApi {
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFaturaConsignadaAbertaUsingGET");
-    }
-    
-    // verify the required parameter 'dataVencimento' is set
-    if (dataVencimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarFaturaConsignadaAbertaUsingGET");
     }
     
 
@@ -764,7 +822,7 @@ public class ContaApi {
    * Consultar Lan\u00C3\u00A7amentos Futuros da Fatura de uma Conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes dos lan\u00C3\u00A7amentos futuros de uma fatura vinculados a uma determinada conta.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param dataVencimento Data Vencimento.
+   * @param dataVencimento Data Vencimento
    * @return DetalhesFaturaResponse
    */
   public DetalhesFaturaResponse  consultarLancamentosFuturosFaturaUsingGET (Long id, Date dataVencimento) throws ApiException {
@@ -773,11 +831,6 @@ public class ContaApi {
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLancamentosFuturosFaturaUsingGET");
-    }
-    
-    // verify the required parameter 'dataVencimento' is set
-    if (dataVencimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarLancamentosFuturosFaturaUsingGET");
     }
     
 
@@ -887,8 +940,8 @@ public class ContaApi {
   }
   
   /**
-   * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-   * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+   * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
+   * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
    * @param id Id Conta
    * @param idTransferencia Id Transfer\u00C3\u00AAncia
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
@@ -1023,9 +1076,9 @@ public class ContaApi {
    * Apresenta dados de uma determinada conta
    * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @return Conta
+   * @return ContaDetalheResponse
    */
-  public Conta  consultarUsingGET3 (Long id) throws ApiException {
+  public ContaDetalheResponse  consultarUsingGET3 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1068,7 +1121,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Conta) ApiInvoker.deserialize(response, "", Conta.class);
+        return (ContaDetalheResponse) ApiInvoker.deserialize(response, "", ContaDetalheResponse.class);
       }
       else {
         return null;
@@ -1373,7 +1426,7 @@ public class ContaApi {
     
 
     // create path and map variables
-    String path = "/api/contas/{id}/listar-faturas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/contas/{id}/faturas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1753,12 +1806,12 @@ public class ContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return LinkPageTransferenciaBancariaResponse
    */
-  public LinkPageTransferenciaBancariaResponse  listarUsingGET19 (Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
+  public LinkPageTransferenciaBancariaResponse  listarUsingGET22 (Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET19");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET22");
     }
     
 
@@ -1825,12 +1878,12 @@ public class ContaApi {
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    * @return PageTransferencias
    */
-  public PageTransferencias  listarUsingGET20 (Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, Date dataTransferencia) throws ApiException {
+  public PageTransferencias  listarUsingGET23 (Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, Date dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET23");
     }
     
 
@@ -1908,7 +1961,7 @@ public class ContaApi {
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    * @return PageContas
    */
-  public PageContas  listarUsingGET3 (Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContas  listarUsingGET4 (Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2103,81 +2156,23 @@ public class ContaApi {
   }
   
   /**
-   * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-   * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
+   * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
+   * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
    * @param id Id Conta
-   * @param dataCompra Data da transfer\u00C3\u00AAncia
-   * @param proximoVencimentoPadrao Dia do vencimento padr\u00C3\u00A3o da fatura
-   * @param proximoVencimentoReal Data do vencimento real da fatura
-   * @param valorCompra Valor da transfer\u00C3\u00AAncia
-   * @param nomeFavorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param documentoFavorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-   * @param banco C\u00C3\u00B3digo do banco
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-   * @param numeroConta N\u00C3\u00BAmero da conta
-   * @param flagContaPoupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param digitoAgencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-   * @param digitoConta D\u00C3\u00ADgito da conta
+   * @param transferenciaBancariaPersist transferenciaBancariaPersist
    * @return LinkTransferenciaBancariaResponse
    */
-  public LinkTransferenciaBancariaResponse  transferirUsingPOST (Long id, Date dataCompra, Date proximoVencimentoPadrao, Date proximoVencimentoReal, BigDecimal valorCompra, String nomeFavorecido, String documentoFavorecido, Long banco, String numeroAgencia, String numeroConta, Integer flagContaPoupanca, Integer page, Integer limit, String digitoAgencia, String digitoConta) throws ApiException {
-    Object postBody = null;
+  public LinkTransferenciaBancariaResponse  transferirUsingPOST (Long id, TransferenciaBancariaPersist transferenciaBancariaPersist) throws ApiException {
+    Object postBody = transferenciaBancariaPersist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling transferirUsingPOST");
     }
     
-    // verify the required parameter 'dataCompra' is set
-    if (dataCompra == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataCompra' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'proximoVencimentoPadrao' is set
-    if (proximoVencimentoPadrao == null) {
-       throw new ApiException(400, "Missing the required parameter 'proximoVencimentoPadrao' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'proximoVencimentoReal' is set
-    if (proximoVencimentoReal == null) {
-       throw new ApiException(400, "Missing the required parameter 'proximoVencimentoReal' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'valorCompra' is set
-    if (valorCompra == null) {
-       throw new ApiException(400, "Missing the required parameter 'valorCompra' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'nomeFavorecido' is set
-    if (nomeFavorecido == null) {
-       throw new ApiException(400, "Missing the required parameter 'nomeFavorecido' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'documentoFavorecido' is set
-    if (documentoFavorecido == null) {
-       throw new ApiException(400, "Missing the required parameter 'documentoFavorecido' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'banco' is set
-    if (banco == null) {
-       throw new ApiException(400, "Missing the required parameter 'banco' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'numeroAgencia' is set
-    if (numeroAgencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroAgencia' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'numeroConta' is set
-    if (numeroConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroConta' when calling transferirUsingPOST");
-    }
-    
-    // verify the required parameter 'flagContaPoupanca' is set
-    if (flagContaPoupanca == null) {
-       throw new ApiException(400, "Missing the required parameter 'flagContaPoupanca' when calling transferirUsingPOST");
+    // verify the required parameter 'transferenciaBancariaPersist' is set
+    if (transferenciaBancariaPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'transferenciaBancariaPersist' when calling transferirUsingPOST");
     }
     
 
@@ -2191,34 +2186,6 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataCompra", dataCompra));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "proximoVencimentoPadrao", proximoVencimentoPadrao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "proximoVencimentoReal", proximoVencimentoReal));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "valorCompra", valorCompra));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeFavorecido", nomeFavorecido));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "documentoFavorecido", documentoFavorecido));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "banco", banco));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroAgencia", numeroAgencia));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoAgencia", digitoAgencia));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroConta", numeroConta));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoConta", digitoConta));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagContaPoupanca", flagContaPoupanca));
     
 
     
@@ -2256,7 +2223,7 @@ public class ContaApi {
   /**
    * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
    * Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
    * @param idContaDestino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
    * @param valorTransferencia Valor da Transfer\u00C3\u00AAncia.
    * @return PageTransferencias

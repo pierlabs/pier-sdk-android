@@ -28,7 +28,7 @@ import java.io.File;
 
 
 public class NotificacoesApi {
-  String basePath = "https://localhost/";
+  String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -200,9 +200,10 @@ public class NotificacoesApi {
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
    * @return PageSMS
    */
-  public PageSMS  listarSMSUsingGET (Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo) throws ApiException {
+  public PageSMS  listarSMSUsingGET (Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
     Object postBody = null;
     
 
@@ -230,6 +231,8 @@ public class NotificacoesApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "operadora", operadora));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "protocolo", protocolo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nsu", nsu));
     
 
     

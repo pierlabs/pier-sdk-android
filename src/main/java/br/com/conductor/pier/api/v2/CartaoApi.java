@@ -10,6 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
 import br.com.conductor.pier.api.v2.model.Cartao;
+import br.com.conductor.pier.api.v2.model.TransacaoOnUsResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.Portador;
@@ -17,6 +18,7 @@ import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import java.util.Date;
 import br.com.conductor.pier.api.v2.model.PageCartoes;
 import br.com.conductor.pier.api.v2.model.ValidaCartao;
+import br.com.conductor.pier.api.v2.model.ValidaSenhaCartao;
 
 
 import org.apache.http.HttpEntity;
@@ -28,7 +30,7 @@ import java.io.File;
 
 
 public class CartaoApi {
-  String basePath = "https://localhost/";
+  String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -204,7 +206,7 @@ public class CartaoApi {
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id}/atribuir-pessoa".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/cartoes/{id}/atribuir-titular".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -382,6 +384,65 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consultar Detalhes do Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
+   * @param id id
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse  consultarDadosCartaoUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDadosCartaoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/consultar-dados-reais".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransacaoOnUsResponse) ApiInvoker.deserialize(response, "", TransacaoOnUsResponse.class);
       }
       else {
         return null;
@@ -616,6 +677,65 @@ public class CartaoApi {
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
+   * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return Cartao
+   */
+  public Cartao  desbloquearSenhaIncorretaUsingPOST (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearSenhaIncorretaUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/desbloquear-senha-incorreta".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
       }
@@ -927,7 +1047,7 @@ public class CartaoApi {
    * @param sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
    * @return PageCartoes
    */
-  public PageCartoes  listarUsingGET2 (Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
+  public PageCartoes  listarUsingGET3 (Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
     Object postBody = null;
     
 
@@ -1016,28 +1136,198 @@ public class CartaoApi {
   }
   
   /**
-   * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do chip
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+   * Permite validar os dados impressos em um cart\u00C3\u00A3o bandeirado
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-   * @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+   * @param nomePortador Nome do portador do cart\u00C3\u00A3o
+   * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+   * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
    * @return ValidaCartao
    */
-  public ValidaCartao  validarCartaoChipBandeiradoUsingGET (String numeroCartao, String criptograma) throws ApiException {
+  public ValidaCartao  validarDadosImpressosBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
     if (numeroCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarCartaoChipBandeiradoUsingGET");
+       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosBandeiradoUsingGET");
     }
     
-    // verify the required parameter 'criptograma' is set
-    if (criptograma == null) {
-       throw new ApiException(400, "Missing the required parameter 'criptograma' when calling validarCartaoChipBandeiradoUsingGET");
+    // verify the required parameter 'nomePortador' is set
+    if (nomePortador == null) {
+       throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosImpressosBandeiradoUsingGET");
+    }
+    
+    // verify the required parameter 'dataValidade' is set
+    if (dataValidade == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosImpressosBandeiradoUsingGET");
+    }
+    
+    // verify the required parameter 'codigoSeguranca' is set
+    if (codigoSeguranca == null) {
+       throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosBandeiradoUsingGET");
     }
     
 
     // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar-chip".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/validar-dados-impressos-bandeirados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Permite validar os dados impressos de um cartao n\u00C3\u00A3o bandeirado
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
+   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+   * @param nomePortador Nome do portador do cart\u00C3\u00A3o
+   * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
+   * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
+   * @return ValidaCartao
+   */
+  public ValidaCartao  validarDadosImpressosNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'numeroCartao' is set
+    if (numeroCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosNaoBandeiradoUsingGET");
+    }
+    
+    // verify the required parameter 'nomePortador' is set
+    if (nomePortador == null) {
+       throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosImpressosNaoBandeiradoUsingGET");
+    }
+    
+    // verify the required parameter 'dataValidade' is set
+    if (dataValidade == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosImpressosNaoBandeiradoUsingGET");
+    }
+    
+    // verify the required parameter 'codigoSeguranca' is set
+    if (codigoSeguranca == null) {
+       throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosNaoBandeiradoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/validar-dados-impressos-nao-bandeirados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Permite validar um Cart\u00C3\u00A3o com bandeira Mastercard a partir do de55
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+   * @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
+   * @return ValidaCartao
+   */
+  public ValidaCartao  validarDe55CartaoMastercardUsingGET (String numeroCartao, String criptograma) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'numeroCartao' is set
+    if (numeroCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDe55CartaoMastercardUsingGET");
+    }
+    
+    // verify the required parameter 'criptograma' is set
+    if (criptograma == null) {
+       throw new ApiException(400, "Missing the required parameter 'criptograma' when calling validarDe55CartaoMastercardUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/validar-de55-mastercard".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1085,260 +1375,13 @@ public class CartaoApi {
   }
   
   /**
-   * Permite validar um Cart\u00C3\u00A3o bandeirado a partir dos dados Impressos
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-   * @param nomePortador Nome do portador do cart\u00C3\u00A3o
-   * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-   * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-   * @return ValidaCartao
-   */
-  public ValidaCartao  validarCartaoDigitadoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'numeroCartao' is set
-    if (numeroCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarCartaoDigitadoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'nomePortador' is set
-    if (nomePortador == null) {
-       throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarCartaoDigitadoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'dataValidade' is set
-    if (dataValidade == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarCartaoDigitadoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'codigoSeguranca' is set
-    if (codigoSeguranca == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarCartaoDigitadoBandeiradoUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar-digitado".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Permite validar um Cart\u00C3\u00A3o a partir dos dados Impressos
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o para a realiza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00B5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00C3\u00B4nico (URA), dentre outras.
-   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-   * @param nomePortador Nome do portador do cart\u00C3\u00A3o
-   * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
-   * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-   * @return ValidaCartao
-   */
-  public ValidaCartao  validarCartaoDigitadoNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'numeroCartao' is set
-    if (numeroCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarCartaoDigitadoNaoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'nomePortador' is set
-    if (nomePortador == null) {
-       throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarCartaoDigitadoNaoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'dataValidade' is set
-    if (dataValidade == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarCartaoDigitadoNaoBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'codigoSeguranca' is set
-    if (codigoSeguranca == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarCartaoDigitadoNaoBandeiradoUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/nao-bandeirados/validar-digitado".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome_portador", nomePortador));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "data_validade", dataValidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
-   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
-   * @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
-   * @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-   * @return ValidaCartao
-   */
-  public ValidaCartao  validarCartaoTarjaBandeiradoUsingGET (String numeroCartao, String trilha1, String trilha2) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'numeroCartao' is set
-    if (numeroCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarCartaoTarjaBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'trilha1' is set
-    if (trilha1 == null) {
-       throw new ApiException(400, "Missing the required parameter 'trilha1' when calling validarCartaoTarjaBandeiradoUsingGET");
-    }
-    
-    // verify the required parameter 'trilha2' is set
-    if (trilha2 == null) {
-       throw new ApiException(400, "Missing the required parameter 'trilha2' when calling validarCartaoTarjaBandeiradoUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/bandeirados/validar-tarja".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "trilha1", trilha1));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "trilha2", trilha2));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Permite validar a senha de um Cart\u00C3\u00A3o
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param senha Senha para ser validada.
-   * @return String
+   * @return ValidaSenhaCartao
    */
-  public String  validarSenhaUsingGET (Long id, String senha) throws ApiException {
+  public ValidaSenhaCartao  validarSenhaUsingGET (Long id, String senha) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1388,7 +1431,84 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
+        return (ValidaSenhaCartao) ApiInvoker.deserialize(response, "", ValidaSenhaCartao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
+   * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
+   * @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
+   * @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
+   * @return ValidaCartao
+   */
+  public ValidaCartao  validarTarjaUsingGET (String numeroCartao, String trilha1, String trilha2) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'numeroCartao' is set
+    if (numeroCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarTarjaUsingGET");
+    }
+    
+    // verify the required parameter 'trilha1' is set
+    if (trilha1 == null) {
+       throw new ApiException(400, "Missing the required parameter 'trilha1' when calling validarTarjaUsingGET");
+    }
+    
+    // verify the required parameter 'trilha2' is set
+    if (trilha2 == null) {
+       throw new ApiException(400, "Missing the required parameter 'trilha2' when calling validarTarjaUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/validar-tarja".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero_cartao", numeroCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "trilha1", trilha1));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "trilha2", trilha2));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
       }
       else {
         return null;

@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
  * Objeto conta
  **/
 @ApiModel(description = "Objeto conta")
-public class Conta  {
+public class ContaResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -35,14 +35,8 @@ public class Conta  {
   private Date dataCadastro = null;
   @SerializedName("dataUltimaAlteracaoVencimento")
   private Date dataUltimaAlteracaoVencimento = null;
-  @SerializedName("numeroAgencia")
-  private Integer numeroAgencia = null;
   @SerializedName("valorRenda")
   private BigDecimal valorRenda = null;
-  @SerializedName("numeroContaCorrente")
-  private String numeroContaCorrente = null;
-  @SerializedName("formaEnvioFatura")
-  private String formaEnvioFatura = null;
 
   
   /**
@@ -166,18 +160,6 @@ public class Conta  {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
-  public Integer getNumeroAgencia() {
-    return numeroAgencia;
-  }
-  public void setNumeroAgencia(Integer numeroAgencia) {
-    this.numeroAgencia = numeroAgencia;
-  }
-
-  
-  /**
    * Apresenta o valor da renda comprovada
    **/
   @ApiModelProperty(value = "Apresenta o valor da renda comprovada")
@@ -189,35 +171,11 @@ public class Conta  {
   }
 
   
-  /**
-   * N\u00C3\u00BAmero da conta corrente.
-   **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
-  public String getNumeroContaCorrente() {
-    return numeroContaCorrente;
-  }
-  public void setNumeroContaCorrente(String numeroContaCorrente) {
-    this.numeroContaCorrente = numeroContaCorrente;
-  }
-
-  
-  /**
-   * Forma de envio da fatura.
-   **/
-  @ApiModelProperty(value = "Forma de envio da fatura.")
-  public String getFormaEnvioFatura() {
-    return formaEnvioFatura;
-  }
-  public void setFormaEnvioFatura(String formaEnvioFatura) {
-    this.formaEnvioFatura = formaEnvioFatura;
-  }
-
-  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Conta {\n");
+    sb.append("class ContaResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
@@ -229,10 +187,7 @@ public class Conta  {
     sb.append("  dataStatusConta: ").append(dataStatusConta).append("\n");
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
-    sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
-    sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
-    sb.append("  formaEnvioFatura: ").append(formaEnvioFatura).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

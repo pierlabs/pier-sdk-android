@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.Dispositivo;
 import java.util.*;
 
 
@@ -10,13 +10,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de contas
+ * Lista de Dispositivos
  **/
-@ApiModel(description = "Lista de contas")
-public class PageContas  {
+@ApiModel(description = "Lista de Dispositivos")
+public class PageDispositivos  {
   
   @SerializedName("content")
-  private List<ContaResponse> content = null;
+  private List<Dispositivo> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class PageContas  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<ContaResponse> getContent() {
+  public List<Dispositivo> getContent() {
     return content;
   }
-  public void setContent(List<ContaResponse> content) {
+  public void setContent(List<Dispositivo> content) {
     this.content = content;
   }
 
@@ -203,7 +203,7 @@ public class PageContas  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageContas {\n");
+    sb.append("class PageDispositivos {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

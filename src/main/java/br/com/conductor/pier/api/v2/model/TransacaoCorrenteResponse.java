@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName;
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
  **/
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao")
-public class TransacaoResponse  {
+public class TransacaoCorrenteResponse  {
   
   @SerializedName("ultimaParcelaLancada")
   private Integer ultimaParcelaLancada = null;
@@ -273,7 +273,7 @@ public class TransacaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TransacaoResponse {\n");
+    sb.append("class TransacaoCorrenteResponse {\n");
     
     sb.append("  ultimaParcelaLancada: ").append(ultimaParcelaLancada).append("\n");
     sb.append("  id: ").append(id).append("\n");

@@ -66,6 +66,10 @@ public class FaturaResponse  {
   private BigDecimal taxaMaximaProximoPeriodo = null;
   @SerializedName("totalServicos")
   private BigDecimal totalServicos = null;
+  @SerializedName("totalParceladoNacionais")
+  private BigDecimal totalParceladoNacionais = null;
+  @SerializedName("totalParceladoInternacionais")
+  private BigDecimal totalParceladoInternacionais = null;
 
   
   /**
@@ -380,6 +384,30 @@ public class FaturaResponse  {
   }
 
   
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras nacionais.
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta a soma de todos os valores parcelados + compras nacionais.")
+  public BigDecimal getTotalParceladoNacionais() {
+    return totalParceladoNacionais;
+  }
+  public void setTotalParceladoNacionais(BigDecimal totalParceladoNacionais) {
+    this.totalParceladoNacionais = totalParceladoNacionais;
+  }
+
+  
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras internacionais.
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta a soma de todos os valores parcelados + compras internacionais.")
+  public BigDecimal getTotalParceladoInternacionais() {
+    return totalParceladoInternacionais;
+  }
+  public void setTotalParceladoInternacionais(BigDecimal totalParceladoInternacionais) {
+    this.totalParceladoInternacionais = totalParceladoInternacionais;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -412,6 +440,8 @@ public class FaturaResponse  {
     sb.append("  taxaSaque: ").append(taxaSaque).append("\n");
     sb.append("  taxaMaximaProximoPeriodo: ").append(taxaMaximaProximoPeriodo).append("\n");
     sb.append("  totalServicos: ").append(totalServicos).append("\n");
+    sb.append("  totalParceladoNacionais: ").append(totalParceladoNacionais).append("\n");
+    sb.append("  totalParceladoInternacionais: ").append(totalParceladoInternacionais).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

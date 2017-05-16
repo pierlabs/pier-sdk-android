@@ -17,6 +17,8 @@ public class StatusOportunidadeResponse  {
   private Long id = null;
   @SerializedName("idTipoOportunidade")
   private Long idTipoOportunidade = null;
+  @SerializedName("nome")
+  private String nome = null;
   @SerializedName("descricao")
   private String descricao = null;
   @SerializedName("flagAtivo")
@@ -44,6 +46,18 @@ public class StatusOportunidadeResponse  {
   }
   public void setIdTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
+  }
+
+  
+  /**
+   * Nome do status oportunidade
+   **/
+  @ApiModelProperty(value = "Nome do status oportunidade")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   
@@ -79,6 +93,7 @@ public class StatusOportunidadeResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idTipoOportunidade: ").append(idTipoOportunidade).append("\n");
+    sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("}\n");

@@ -124,9 +124,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
-  @ApiModelProperty(value = "Status do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   public Date getDataCriacao() {
     return dataCriacao;
   }
@@ -136,9 +136,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
-  @ApiModelProperty(value = "Status do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   public Date getDataModificacao() {
     return dataModificacao;
   }
