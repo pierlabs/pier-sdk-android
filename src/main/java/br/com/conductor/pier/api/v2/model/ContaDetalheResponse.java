@@ -65,8 +65,8 @@ public class ContaDetalheResponse  {
   private BigDecimal saldoDisponivelGlobal = null;
   @SerializedName("saldoDisponivelSaque")
   private BigDecimal saldoDisponivelSaque = null;
-  @SerializedName("dataInicioAtraso")
-  private Date dataInicioAtraso = null;
+  @SerializedName("diasAtraso")
+  private Long diasAtraso = null;
 
   
   /**
@@ -370,14 +370,14 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * Apresenta a data da ultima cobran\u00C3\u00A7a.
+   * Apresenta a quantidade de dias que a conta esta em atraso
    **/
-  @ApiModelProperty(value = "Apresenta a data da ultima cobran\u00C3\u00A7a.")
-  public Date getDataInicioAtraso() {
-    return dataInicioAtraso;
+  @ApiModelProperty(value = "Apresenta a quantidade de dias que a conta esta em atraso")
+  public Long getDiasAtraso() {
+    return diasAtraso;
   }
-  public void setDataInicioAtraso(Date dataInicioAtraso) {
-    this.dataInicioAtraso = dataInicioAtraso;
+  public void setDiasAtraso(Long diasAtraso) {
+    this.diasAtraso = diasAtraso;
   }
 
   
@@ -412,7 +412,7 @@ public class ContaDetalheResponse  {
     sb.append("  limiteSaqueGlobal: ").append(limiteSaqueGlobal).append("\n");
     sb.append("  saldoDisponivelGlobal: ").append(saldoDisponivelGlobal).append("\n");
     sb.append("  saldoDisponivelSaque: ").append(saldoDisponivelSaque).append("\n");
-    sb.append("  dataInicioAtraso: ").append(dataInicioAtraso).append("\n");
+    sb.append("  diasAtraso: ").append(diasAtraso).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

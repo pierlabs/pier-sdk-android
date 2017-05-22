@@ -10,7 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
 import br.com.conductor.pier.api.v2.model.Cartao;
-import br.com.conductor.pier.api.v2.model.TransacaoOnUsResponse;
+import br.com.conductor.pier.api.v2.model.DadosCarto;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.Portador;
@@ -397,9 +397,9 @@ public class CartaoApi {
    * Consultar Detalhes do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
    * @param id id
-   * @return TransacaoOnUsResponse
+   * @return DadosCarto
    */
-  public TransacaoOnUsResponse  consultarDadosCartaoUsingGET (Long id) throws ApiException {
+  public DadosCarto  consultarDadosCartaoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -442,7 +442,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (TransacaoOnUsResponse) ApiInvoker.deserialize(response, "", TransacaoOnUsResponse.class);
+        return (DadosCarto) ApiInvoker.deserialize(response, "", DadosCarto.class);
       }
       else {
         return null;
