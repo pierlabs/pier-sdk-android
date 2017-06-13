@@ -15,12 +15,11 @@ import br.com.conductor.pier.api.v2.model.OportunidadeUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOportunidade;
 import br.com.conductor.pier.api.v2.model.TipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusOprtunidadesAUD;
-import java.util.Date;
 import br.com.conductor.pier.api.v2.model.PageOprtunidadeAUD;
 import br.com.conductor.pier.api.v2.model.PageTipoOprtunidadesAUD;
 import br.com.conductor.pier.api.v2.model.PageStatusOprtunidades;
-import br.com.conductor.pier.api.v2.model.PageTipoOprtunidades;
 import br.com.conductor.pier.api.v2.model.PageOprtunidadesResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoOprtunidades;
 import br.com.conductor.pier.api.v2.model.OportunidadePersist;
 
 
@@ -325,12 +324,12 @@ public class OportunidadesApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  consultarUsingGET17 (Long id) throws ApiException {
+  public TipoOportunidadeResponse  consultarUsingGET20 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
     }
     
 
@@ -384,12 +383,12 @@ public class OportunidadesApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET7 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET8 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
     }
     
 
@@ -441,7 +440,7 @@ public class OportunidadesApi {
    * Lista as auditorias dos status oportunidades
    * Este recurso permite listar os status oportunidades.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    * @param revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    * @param id C\u00C3\u00B3digo identificador do status oportunidade
@@ -452,7 +451,7 @@ public class OportunidadesApi {
    * @param revUser Usu\u00C3\u00A1rio da auditoria
    * @return PageStatusOprtunidadesAUD
    */
-  public PageStatusOprtunidadesAUD  listarAuditoriasStatusUsingGET (Integer page, Integer limit, Long revType, Date revDate, Long id, Long idTipoOportunidade, String nome, String descricao, Boolean flagAtivo, Date revUser) throws ApiException {
+  public PageStatusOprtunidadesAUD  listarAuditoriasStatusUsingGET (Integer page, Integer limit, Long revType, String revDate, Long id, Long idTipoOportunidade, String nome, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
     Object postBody = null;
     
 
@@ -524,7 +523,7 @@ public class OportunidadesApi {
    * Lista as auditorias das oportunidades
    * Este recurso permite listar as auditorias das oportunidades.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
    * @param dataCadastro Data do cadastro da oportunidade
    * @param dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
@@ -537,7 +536,7 @@ public class OportunidadesApi {
    * @param revUser Usu\u00C3\u00A1rio da auditoria
    * @return PageOprtunidadeAUD
    */
-  public PageOprtunidadeAUD  listarAuditoriasUsingGET (Integer page, Integer limit, Long idStatusOportunidade, Date dataCadastro, Date dataAtualizacao, String numeroReceitaFederal, Date dataInicioVigencia, Date datatFimVigencia, Boolean flagAtivo, Date revDate, Date revType, Date revUser) throws ApiException {
+  public PageOprtunidadeAUD  listarAuditoriasUsingGET (Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String datatFimVigencia, Boolean flagAtivo, String revDate, String revType, String revUser) throws ApiException {
     Object postBody = null;
     
 
@@ -613,7 +612,7 @@ public class OportunidadesApi {
    * Lista as auditorias dos tipos oportunidades
    * Este recurso permite listar os tipos oportunidades.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    * @param revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    * @param id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
@@ -622,7 +621,7 @@ public class OportunidadesApi {
    * @param revUser Usu\u00C3\u00A1rio da auditoria
    * @return PageTipoOprtunidadesAUD
    */
-  public PageTipoOprtunidadesAUD  listarAuditoriasUsingGET1 (Integer page, Integer limit, Long revType, Date revDate, Long id, String descricao, Boolean flagAtivo, Date revUser) throws ApiException {
+  public PageTipoOprtunidadesAUD  listarAuditoriasUsingGET1 (Integer page, Integer limit, Long revType, String revDate, Long id, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
     Object postBody = null;
     
 
@@ -691,7 +690,7 @@ public class OportunidadesApi {
    * Este recurso permite listar os status do tipo oportunidades.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Nome do status oportunidade
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
@@ -761,75 +760,10 @@ public class OportunidadesApi {
   }
   
   /**
-   * Lista os tipos oportunidades
-   * Este recurso permite listar os tipos oportunidades.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-   * @return PageTipoOprtunidades
-   */
-  public PageTipoOprtunidades  listarUsingGET19 (Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/tipos-oportunidades".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAtivo", flagAtivo));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageTipoOprtunidades) ApiInvoker.deserialize(response, "", PageTipoOprtunidades.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista as oportunidades
    * Este recurso permite listar as oportunidades.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
    * @param dataCadastro Data do cadastro da oportunidade
    * @param dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
@@ -839,7 +773,7 @@ public class OportunidadesApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOprtunidadesResponse
    */
-  public PageOprtunidadesResponse  listarUsingGET9 (Integer page, Integer limit, Long idStatusOportunidade, Date dataCadastro, Date dataAtualizacao, String numeroReceitaFederal, Date dataInicioVigencia, Date dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOprtunidadesResponse  listarUsingGET12 (Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -896,6 +830,71 @@ public class OportunidadesApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageOprtunidadesResponse) ApiInvoker.deserialize(response, "", PageOprtunidadesResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os tipos oportunidades
+   * Este recurso permite listar os tipos oportunidades.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+   * @return PageTipoOprtunidades
+   */
+  public PageTipoOprtunidades  listarUsingGET24 (Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/tipos-oportunidades".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAtivo", flagAtivo));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoOprtunidades) ApiInvoker.deserialize(response, "", PageTipoOprtunidades.class);
       }
       else {
         return null;
@@ -976,12 +975,12 @@ public class OportunidadesApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  salvarUsingPOST10 (TipoOportunidade persist) throws ApiException {
+  public TipoOportunidadeResponse  salvarUsingPOST11 (TipoOportunidade persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
     }
     
 
@@ -1035,12 +1034,12 @@ public class OportunidadesApi {
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  salvarUsingPOST5 (OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse  salvarUsingPOST6 (OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST5");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
     }
     
 

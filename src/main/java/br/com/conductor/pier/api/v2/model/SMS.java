@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -45,13 +44,13 @@ public class SMS  {
   @SerializedName("resposta")
   private String resposta = null;
   @SerializedName("dataAgendamento")
-  private Date dataAgendamento = null;
+  private String dataAgendamento = null;
   @SerializedName("quantidadeTentativasEnvio")
   private Integer quantidadeTentativasEnvio = null;
   @SerializedName("dataInclusao")
-  private Date dataInclusao = null;
+  private String dataInclusao = null;
   @SerializedName("dataAlteracaoStatus")
-  private Date dataAlteracaoStatus = null;
+  private String dataAlteracaoStatus = null;
   @SerializedName("protocolo")
   private String protocolo = null;
 
@@ -204,10 +203,10 @@ public class SMS  {
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
   @ApiModelProperty(required = true, value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 
@@ -228,10 +227,10 @@ public class SMS  {
    * Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
    **/
   @ApiModelProperty(required = true, value = "Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado")
-  public Date getDataInclusao() {
+  public String getDataInclusao() {
     return dataInclusao;
   }
-  public void setDataInclusao(Date dataInclusao) {
+  public void setDataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
   }
 
@@ -240,10 +239,10 @@ public class SMS  {
    * Apresenta a data e em que o Stattjus do registro foi modificado
    **/
   @ApiModelProperty(required = true, value = "Apresenta a data e em que o Stattjus do registro foi modificado")
-  public Date getDataAlteracaoStatus() {
+  public String getDataAlteracaoStatus() {
     return dataAlteracaoStatus;
   }
-  public void setDataAlteracaoStatus(Date dataAlteracaoStatus) {
+  public void setDataAlteracaoStatus(String dataAlteracaoStatus) {
     this.dataAlteracaoStatus = dataAlteracaoStatus;
   }
 

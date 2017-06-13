@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ public class CdtDetalheOportunidadeAUD  {
   @SerializedName("rev")
   private Long rev = null;
   @SerializedName("revDate")
-  private Date revDate = null;
+  private String revDate = null;
   @SerializedName("revOportunidade")
   private Long revOportunidade = null;
   @SerializedName("revType")
@@ -89,10 +88,10 @@ public class CdtDetalheOportunidadeAUD  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 

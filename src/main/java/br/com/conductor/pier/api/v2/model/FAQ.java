@@ -15,8 +15,6 @@ public class FAQ  {
   
   @SerializedName("id")
   private Long id = null;
-  @SerializedName("idEmissor")
-  private Long idEmissor = null;
   @SerializedName("pergunta")
   private String pergunta = null;
   @SerializedName("resposta")
@@ -43,18 +41,6 @@ public class FAQ  {
   }
   public void setId(Long id) {
     this.id = id;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).")
-  public Long getIdEmissor() {
-    return idEmissor;
-  }
-  public void setIdEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
   }
 
   
@@ -137,7 +123,6 @@ public class FAQ  {
     sb.append("class FAQ {\n");
     
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  pergunta: ").append(pergunta).append("\n");
     sb.append("  resposta: ").append(resposta).append("\n");
     sb.append("  relevancia: ").append(relevancia).append("\n");

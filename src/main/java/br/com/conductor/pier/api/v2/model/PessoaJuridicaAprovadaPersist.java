@@ -4,7 +4,6 @@ import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.PessoaPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.util.*;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -27,7 +26,7 @@ public class PessoaJuridicaAprovadaPersist  {
   @SerializedName("inscricaoEstadual")
   private String inscricaoEstadual = null;
   @SerializedName("dataAberturaEmpresa")
-  private Date dataAberturaEmpresa = null;
+  private String dataAberturaEmpresa = null;
   @SerializedName("idOrigemComercial")
   private Long idOrigemComercial = null;
   @SerializedName("idProduto")
@@ -102,10 +101,10 @@ public class PessoaJuridicaAprovadaPersist  {
    * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
    **/
   @ApiModelProperty(required = true, value = "Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.")
-  public Date getDataAberturaEmpresa() {
+  public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
-  public void setDataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public void setDataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
   }
 

@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -17,7 +16,7 @@ public class HistoricoEventos  {
   @SerializedName("idHistorico")
   private Long idHistorico = null;
   @SerializedName("dataHistorico")
-  private Date dataHistorico = null;
+  private String dataHistorico = null;
   @SerializedName("tipoHistorico")
   private String tipoHistorico = null;
   @SerializedName("valorAnterior")
@@ -42,10 +41,10 @@ public class HistoricoEventos  {
    * Data do evento
    **/
   @ApiModelProperty(required = true, value = "Data do evento")
-  public Date getDataHistorico() {
+  public String getDataHistorico() {
     return dataHistorico;
   }
-  public void setDataHistorico(Date dataHistorico) {
+  public void setDataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
   }
 

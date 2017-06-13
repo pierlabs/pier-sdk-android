@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -31,15 +30,15 @@ public class AtendimentoCliente  {
   @SerializedName("nomeSistema")
   private String nomeSistema = null;
   @SerializedName("dataHoraInicioAtendimento")
-  private Date dataHoraInicioAtendimento = null;
+  private String dataHoraInicioAtendimento = null;
   @SerializedName("dataHoraFimAtendimento")
-  private Date dataHoraFimAtendimento = null;
+  private String dataHoraFimAtendimento = null;
   @SerializedName("dataAtendimento")
-  private Date dataAtendimento = null;
+  private String dataAtendimento = null;
   @SerializedName("dataAgendamento")
-  private Date dataAgendamento = null;
+  private String dataAgendamento = null;
   @SerializedName("dataProcessamento")
-  private Date dataProcessamento = null;
+  private String dataProcessamento = null;
   @SerializedName("flagProcessamento")
   private Integer flagProcessamento = null;
 
@@ -144,10 +143,10 @@ public class AtendimentoCliente  {
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
    **/
   @ApiModelProperty(value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
-  public Date getDataHoraInicioAtendimento() {
+  public String getDataHoraInicioAtendimento() {
     return dataHoraInicioAtendimento;
   }
-  public void setDataHoraInicioAtendimento(Date dataHoraInicioAtendimento) {
+  public void setDataHoraInicioAtendimento(String dataHoraInicioAtendimento) {
     this.dataHoraInicioAtendimento = dataHoraInicioAtendimento;
   }
 
@@ -156,10 +155,10 @@ public class AtendimentoCliente  {
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
    **/
   @ApiModelProperty(value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
-  public Date getDataHoraFimAtendimento() {
+  public String getDataHoraFimAtendimento() {
     return dataHoraFimAtendimento;
   }
-  public void setDataHoraFimAtendimento(Date dataHoraFimAtendimento) {
+  public void setDataHoraFimAtendimento(String dataHoraFimAtendimento) {
     this.dataHoraFimAtendimento = dataHoraFimAtendimento;
   }
 
@@ -168,10 +167,10 @@ public class AtendimentoCliente  {
    * Apresenta a data e hora em que o Atendimento foi realizado.
    **/
   @ApiModelProperty(value = "Apresenta a data e hora em que o Atendimento foi realizado.")
-  public Date getDataAtendimento() {
+  public String getDataAtendimento() {
     return dataAtendimento;
   }
-  public void setDataAtendimento(Date dataAtendimento) {
+  public void setDataAtendimento(String dataAtendimento) {
     this.dataAtendimento = dataAtendimento;
   }
 
@@ -180,10 +179,10 @@ public class AtendimentoCliente  {
    * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
    **/
   @ApiModelProperty(value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 
@@ -192,10 +191,10 @@ public class AtendimentoCliente  {
    * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
    **/
   @ApiModelProperty(value = "Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
-  public Date getDataProcessamento() {
+  public String getDataProcessamento() {
     return dataProcessamento;
   }
-  public void setDataProcessamento(Date dataProcessamento) {
+  public void setDataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
   }
 

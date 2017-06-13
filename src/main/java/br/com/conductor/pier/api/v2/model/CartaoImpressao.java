@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -14,6 +13,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto Cart\u00C3\u00A3o para Impresso")
 public class CartaoImpressao  {
   
+  @SerializedName("flagVirtual")
+  private Integer flagVirtual = null;
   @SerializedName("idConta")
   private Long idConta = null;
   @SerializedName("idPessoa")
@@ -31,9 +32,9 @@ public class CartaoImpressao  {
   @SerializedName("cvv2")
   private String cvv2 = null;
   @SerializedName("dataGeracao")
-  private Date dataGeracao = null;
+  private String dataGeracao = null;
   @SerializedName("dataValidade")
-  private Date dataValidade = null;
+  private String dataValidade = null;
   @SerializedName("nomeOrigemComercial")
   private String nomeOrigemComercial = null;
   @SerializedName("nomeEmpresa")
@@ -58,6 +59,17 @@ public class CartaoImpressao  {
   private String trilhaCVV1 = null;
   @SerializedName("trilhaCVV2")
   private String trilhaCVV2 = null;
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
 
   
   /**
@@ -160,10 +172,10 @@ public class CartaoImpressao  {
    * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
    **/
   @ApiModelProperty(value = "Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.")
-  public Date getDataGeracao() {
+  public String getDataGeracao() {
     return dataGeracao;
   }
-  public void setDataGeracao(Date dataGeracao) {
+  public void setDataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
   }
 
@@ -172,10 +184,10 @@ public class CartaoImpressao  {
    * Apresenta a data de Validade do Cart\u00C3\u00A3o.
    **/
   @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00C3\u00A3o.")
-  public Date getDataValidade() {
+  public String getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -330,6 +342,7 @@ public class CartaoImpressao  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoImpressao {\n");
     
+    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idCartao: ").append(idCartao).append("\n");

@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -19,7 +18,7 @@ public class StatusOportunidadeAUDResponse  {
   @SerializedName("revType")
   private Long revType = null;
   @SerializedName("revDate")
-  private Date revDate = null;
+  private String revDate = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("idTipoOportunidade")
@@ -60,10 +59,10 @@ public class StatusOportunidadeAUDResponse  {
    * Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    **/
   @ApiModelProperty(value = "Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 

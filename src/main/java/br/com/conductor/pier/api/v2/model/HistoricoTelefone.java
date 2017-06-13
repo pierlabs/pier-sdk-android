@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -23,7 +22,7 @@ public class HistoricoTelefone  {
   @SerializedName("tipoTelefone")
   private String tipoTelefone = null;
   @SerializedName("dataModificacao")
-  private Date dataModificacao = null;
+  private String dataModificacao = null;
 
   
   /**
@@ -78,10 +77,10 @@ public class HistoricoTelefone  {
    * Apresenta a data que o telefone fora alterado.
    **/
   @ApiModelProperty(value = "Apresenta a data que o telefone fora alterado.")
-  public Date getDataModificacao() {
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 

@@ -8,7 +8,6 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import java.util.Date;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
@@ -18,6 +17,7 @@ import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamento;
 import br.com.conductor.pier.api.v2.model.LinkTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferencias;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
@@ -72,7 +72,7 @@ public class ContaApi {
    * @param valorAjuste Valor do ajuste
    * @return AjusteResponse
    */
-  public AjusteResponse  ajustarContaUsingPOST (Long id, Long idTipoAjuste, Date dataAjuste, BigDecimal valorAjuste) throws ApiException {
+  public AjusteResponse  ajustarContaUsingPOST (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -558,12 +558,12 @@ public class ContaApi {
    * Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
    * @param id Id Conta
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data do vencimento
    * @param idEscritorioCobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
    * @return DividaClienteResponse
    */
-  public DividaClienteResponse  consultarDividaAtualizadaClienteUsingGET (Long id, Integer page, Integer limit, Date dataVencimento, Long idEscritorioCobranca) throws ApiException {
+  public DividaClienteResponse  consultarDividaAtualizadaClienteUsingGET (Long id, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -631,7 +631,7 @@ public class ContaApi {
    * @param dataVencimento Data Vencimento
    * @return DetalhesFaturaConsignadaResponse
    */
-  public DetalhesFaturaConsignadaResponse  consultarFaturaConsignadaAbertaUsingGET (Long id, Date dataVencimento) throws ApiException {
+  public DetalhesFaturaConsignadaResponse  consultarFaturaConsignadaAbertaUsingGET (Long id, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -758,7 +758,7 @@ public class ContaApi {
    * @param dataVencimento Data Vencimento.
    * @return DetalhesFaturaResponse
    */
-  public DetalhesFaturaResponse  consultarFaturaUsingGET (Long id, Date dataVencimento) throws ApiException {
+  public DetalhesFaturaResponse  consultarFaturaUsingGET (Long id, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -825,7 +825,7 @@ public class ContaApi {
    * @param dataVencimento Data Vencimento
    * @return DetalhesFaturaResponse
    */
-  public DetalhesFaturaResponse  consultarLancamentosFuturosFaturaUsingGET (Long id, Date dataVencimento) throws ApiException {
+  public DetalhesFaturaResponse  consultarLancamentosFuturosFaturaUsingGET (Long id, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -940,6 +940,71 @@ public class ContaApi {
   }
   
   /**
+   * Permite consultar a partir do ID da conta as taxas e tarifas
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+   * @param id ID da conta a ser consultada.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageTaxasRefinanciamento
+   */
+  public PageTaxasRefinanciamento  consultarTaxasTarifasUsingGET (Long id, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxasTarifasUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/consultar-taxas-tarifas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTaxasRefinanciamento) ApiInvoker.deserialize(response, "", PageTaxasRefinanciamento.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
    * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
    * @param id Id Conta
@@ -947,17 +1012,17 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return LinkTransferenciaBancariaResponse
    */
-  public LinkTransferenciaBancariaResponse  consultarUsingGET20 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public LinkTransferenciaBancariaResponse  consultarUsingGET23 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET23");
     }
     
 
@@ -1014,17 +1079,17 @@ public class ContaApi {
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
    * @return PageTransferencias
    */
-  public PageTransferencias  consultarUsingGET21 (Long id, Long idTransferencia) throws ApiException {
+  public PageTransferencias  consultarUsingGET24 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET21");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24");
     }
     
 
@@ -1078,12 +1143,12 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse  consultarUsingGET3 (Long id) throws ApiException {
+  public ContaDetalheResponse  consultarUsingGET4 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
     }
     
 
@@ -1194,13 +1259,11 @@ public class ContaApi {
    * Gera um boleto de recarga
    * Este recurso gera um boleto de recarga
    * @param id Id Conta
-   * @param valor 
-   * @param dataVencimento 
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param valor Atributo que representa o valor do Boleto Emitido
+   * @param dataVencimento Atributo que representa a data de vencimento do boleto
    * @return BoletoDeFatura
    */
-  public BoletoDeFatura  gerarBoletoRecargaUsingPOST (Long id, BigDecimal valor, Date dataVencimento, Integer page, Integer limit) throws ApiException {
+  public BoletoDeFatura  gerarBoletoRecargaUsingPOST (Long id, BigDecimal valor, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1229,10 +1292,6 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "valor", valor));
     
@@ -1340,15 +1399,82 @@ public class ContaApi {
   }
   
   /**
+   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
+   * Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param dataValidade Data de Validade
+   * @return CartaoImpressao
+   */
+  public CartaoImpressao  gerarCartaoVirtualUsingPOST (Long id, String dataValidade) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoVirtualUsingPOST");
+    }
+    
+    // verify the required parameter 'dataValidade' is set
+    if (dataValidade == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling gerarCartaoVirtualUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/gerar-cartao-virtual".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataValidade", dataValidade));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CartaoImpressao) ApiInvoker.deserialize(response, "", CartaoImpressao.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista as faturas consignadas da conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Apresenta a data de vencimento da fatura.
    * @return PageFaturasConsignadas
    */
-  public PageFaturasConsignadas  listarFaturasConsignadasUsingGET (Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
+  public PageFaturasConsignadas  listarFaturasConsignadasUsingGET (Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1412,11 +1538,11 @@ public class ContaApi {
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de Vencimento da Fatura.
    * @return PageFaturas
    */
-  public PageFaturas  listarFaturasUsingGET (Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
+  public PageFaturas  listarFaturasUsingGET (Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1480,7 +1606,7 @@ public class ContaApi {
    * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageHistoricoEventos
    */
   public PageHistoricoEventos  listarHistoricoAlteracoesLimitesUsingGET (Long id, Integer page, Integer limit) throws ApiException {
@@ -1545,7 +1671,7 @@ public class ContaApi {
    * Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
    * @param id Id Conta
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return LinkPageHistoricoAssessoriaResponse
    */
   public LinkPageHistoricoAssessoriaResponse  listarHistoricoAssessoriaUsingGET (Long id, Integer page, Integer limit) throws ApiException {
@@ -1669,10 +1795,12 @@ public class ContaApi {
    * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
    * @return PageTransacoesCorrentes
    */
-  public PageTransacoesCorrentes  listarNaoProcessadasUsingGET (Long id, Integer page, Integer limit) throws ApiException {
+  public PageTransacoesCorrentes  listarNaoProcessadasUsingGET (Long id, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1695,6 +1823,10 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
     
 
     
@@ -1734,11 +1866,13 @@ public class ContaApi {
    * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd.
+   * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
    * @return PageTransacoesCorrentes
    */
-  public PageTransacoesCorrentes  listarProcessadasUsingGET (Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
+  public PageTransacoesCorrentes  listarProcessadasUsingGET (Long id, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1763,6 +1897,10 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
     
 
     
@@ -1803,15 +1941,15 @@ public class ContaApi {
    * @param id Id Conta
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return LinkPageTransferenciaBancariaResponse
    */
-  public LinkPageTransferenciaBancariaResponse  listarUsingGET22 (Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
+  public LinkPageTransferenciaBancariaResponse  listarUsingGET27 (Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET22");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET27");
     }
     
 
@@ -1870,7 +2008,7 @@ public class ContaApi {
    * Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idTransferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
    * @param idContaOrigem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
    * @param idContaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
@@ -1878,12 +2016,12 @@ public class ContaApi {
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    * @return PageTransferencias
    */
-  public PageTransferencias  listarUsingGET23 (Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, Date dataTransferencia) throws ApiException {
+  public PageTransferencias  listarUsingGET28 (Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET23");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET28");
     }
     
 
@@ -1949,7 +2087,7 @@ public class ContaApi {
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
    * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
@@ -1961,7 +2099,7 @@ public class ContaApi {
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    * @return PageContas
    */
-  public PageContas  listarUsingGET4 (Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, Date dataStatusConta, Date dataCadastro, Date dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContas  listarUsingGET6 (Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2095,7 +2233,7 @@ public class ContaApi {
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
    * @param id Id Conta
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTransacaoResponse
    */
   public PageTransacaoResponse  transacoesUsingGET (Long id, Integer page, Integer limit) throws ApiException {

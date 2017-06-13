@@ -2,7 +2,6 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.DetalheOportunidadeResponse;
 import java.util.*;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -23,15 +22,15 @@ public class OportunidadeResponse  {
   @SerializedName("idStatusOportunidade")
   private Long idStatusOportunidade = null;
   @SerializedName("dataCadastro")
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   @SerializedName("dataAtualizacao")
-  private Date dataAtualizacao = null;
+  private String dataAtualizacao = null;
   @SerializedName("numeroReceitaFederal")
   private String numeroReceitaFederal = null;
   @SerializedName("dataInicioVigencia")
-  private Date dataInicioVigencia = null;
+  private String dataInicioVigencia = null;
   @SerializedName("dataFimVigencia")
-  private Date dataFimVigencia = null;
+  private String dataFimVigencia = null;
   @SerializedName("flagAtivo")
   private Boolean flagAtivo = null;
   @SerializedName("detalhes")
@@ -78,10 +77,10 @@ public class OportunidadeResponse  {
    * Data cadastro da oportunidade.
    **/
   @ApiModelProperty(value = "Data cadastro da oportunidade.")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -90,10 +89,10 @@ public class OportunidadeResponse  {
    * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
    **/
   @ApiModelProperty(value = "Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.")
-  public Date getDataAtualizacao() {
+  public String getDataAtualizacao() {
     return dataAtualizacao;
   }
-  public void setDataAtualizacao(Date dataAtualizacao) {
+  public void setDataAtualizacao(String dataAtualizacao) {
     this.dataAtualizacao = dataAtualizacao;
   }
 
@@ -114,10 +113,10 @@ public class OportunidadeResponse  {
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -126,10 +125,10 @@ public class OportunidadeResponse  {
    * Fim da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(value = "Fim da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 

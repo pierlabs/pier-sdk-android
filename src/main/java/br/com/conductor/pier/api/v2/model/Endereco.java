@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -39,9 +38,9 @@ public class Endereco  {
   @SerializedName("pais")
   private String pais = null;
   @SerializedName("dataInclusao")
-  private Date dataInclusao = null;
+  private String dataInclusao = null;
   @SerializedName("dataUltimaAtualizacao")
-  private Date dataUltimaAtualizacao = null;
+  private String dataUltimaAtualizacao = null;
 
   
   /**
@@ -192,10 +191,10 @@ public class Endereco  {
    * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
    **/
   @ApiModelProperty(value = "Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o")
-  public Date getDataInclusao() {
+  public String getDataInclusao() {
     return dataInclusao;
   }
-  public void setDataInclusao(Date dataInclusao) {
+  public void setDataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
   }
 
@@ -204,10 +203,10 @@ public class Endereco  {
    * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
    **/
   @ApiModelProperty(value = "Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao")
-  public Date getDataUltimaAtualizacao() {
+  public String getDataUltimaAtualizacao() {
     return dataUltimaAtualizacao;
   }
-  public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+  public void setDataUltimaAtualizacao(String dataUltimaAtualizacao) {
     this.dataUltimaAtualizacao = dataUltimaAtualizacao;
   }
 

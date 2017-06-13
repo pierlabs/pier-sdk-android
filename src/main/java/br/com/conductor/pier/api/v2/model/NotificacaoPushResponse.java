@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -12,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
 public class NotificacaoPushResponse  {
   
   @SerializedName("dataEnvio")
-  private Date dataEnvio = null;
+  private String dataEnvio = null;
   @SerializedName("idEmissor")
   private Long idEmissor = null;
   public enum TipoEventoEnum {
@@ -48,10 +47,10 @@ public class NotificacaoPushResponse  {
    * Apresenta a data e em que o registro foi enviado para o dispositivo.
    **/
   @ApiModelProperty(value = "Apresenta a data e em que o registro foi enviado para o dispositivo.")
-  public Date getDataEnvio() {
+  public String getDataEnvio() {
     return dataEnvio;
   }
-  public void setDataEnvio(Date dataEnvio) {
+  public void setDataEnvio(String dataEnvio) {
     this.dataEnvio = dataEnvio;
   }
 

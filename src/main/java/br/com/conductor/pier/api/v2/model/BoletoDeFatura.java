@@ -2,7 +2,6 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -17,11 +16,11 @@ import com.google.gson.annotations.SerializedName;
 public class BoletoDeFatura  {
   
   @SerializedName("dataProcessamento")
-  private Date dataProcessamento = null;
+  private String dataProcessamento = null;
   @SerializedName("dataDocumento")
-  private Date dataDocumento = null;
+  private String dataDocumento = null;
   @SerializedName("dataVencimento")
-  private Date dataVencimento = null;
+  private String dataVencimento = null;
   @SerializedName("valorBoleto")
   private BigDecimal valorBoleto = null;
   @SerializedName("numeroDoDocumento")
@@ -80,10 +79,10 @@ public class BoletoDeFatura  {
    * Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
    **/
   @ApiModelProperty(value = "Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto")
-  public Date getDataProcessamento() {
+  public String getDataProcessamento() {
     return dataProcessamento;
   }
-  public void setDataProcessamento(Date dataProcessamento) {
+  public void setDataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
   }
 
@@ -92,10 +91,10 @@ public class BoletoDeFatura  {
    * Data do documento (impress\u00C3\u00A3o)
    **/
   @ApiModelProperty(value = "Data do documento (impress\u00C3\u00A3o)")
-  public Date getDataDocumento() {
+  public String getDataDocumento() {
     return dataDocumento;
   }
-  public void setDataDocumento(Date dataDocumento) {
+  public void setDataDocumento(String dataDocumento) {
     this.dataDocumento = dataDocumento;
   }
 
@@ -104,17 +103,18 @@ public class BoletoDeFatura  {
    * Data do vencimento
    **/
   @ApiModelProperty(value = "Data do vencimento")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
   
   /**
+   * Valor do Boleto.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Valor do Boleto.")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
   }
@@ -148,9 +148,9 @@ public class BoletoDeFatura  {
 
   
   /**
-   * Ag\u00C3\u00AAncia
+   * Ag\u00C3\u00AAncia.
    **/
-  @ApiModelProperty(value = "Ag\u00C3\u00AAncia")
+  @ApiModelProperty(value = "Ag\u00C3\u00AAncia.")
   public String getAgencia() {
     return agencia;
   }
@@ -316,8 +316,9 @@ public class BoletoDeFatura  {
 
   
   /**
+   * Documento do Beneficiario.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Documento do Beneficiario.")
   public String getDocumentoBeneficiario() {
     return documentoBeneficiario;
   }

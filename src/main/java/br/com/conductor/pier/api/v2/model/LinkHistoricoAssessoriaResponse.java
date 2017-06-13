@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -15,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
 public class LinkHistoricoAssessoriaResponse  {
   
   @SerializedName("dataHoraHistorico")
-  private Date dataHoraHistorico = null;
+  private String dataHoraHistorico = null;
   @SerializedName("tipoHistorico")
   private String tipoHistorico = null;
   @SerializedName("nomeAssessoria")
@@ -26,10 +25,10 @@ public class LinkHistoricoAssessoriaResponse  {
    * Apresenta a data e hora do hist\u00C3\u00B3rico
    **/
   @ApiModelProperty(value = "Apresenta a data e hora do hist\u00C3\u00B3rico")
-  public Date getDataHoraHistorico() {
+  public String getDataHoraHistorico() {
     return dataHoraHistorico;
   }
-  public void setDataHoraHistorico(Date dataHoraHistorico) {
+  public void setDataHoraHistorico(String dataHoraHistorico) {
     this.dataHoraHistorico = dataHoraHistorico;
   }
 

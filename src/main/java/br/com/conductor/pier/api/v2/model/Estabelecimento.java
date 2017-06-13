@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -43,7 +42,7 @@ public class Estabelecimento  {
   @SerializedName("pais")
   private String pais = null;
   @SerializedName("dataCadastramento")
-  private Date dataCadastramento = null;
+  private String dataCadastramento = null;
   @SerializedName("obs")
   private String obs = null;
   @SerializedName("contato")
@@ -71,9 +70,9 @@ public class Estabelecimento  {
 
   
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.")
+  @ApiModelProperty(value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -230,10 +229,10 @@ public class Estabelecimento  {
    * Data de Cadastro do Estabelecimento.
    **/
   @ApiModelProperty(value = "Data de Cadastro do Estabelecimento.")
-  public Date getDataCadastramento() {
+  public String getDataCadastramento() {
     return dataCadastramento;
   }
-  public void setDataCadastramento(Date dataCadastramento) {
+  public void setDataCadastramento(String dataCadastramento) {
     this.dataCadastramento = dataCadastramento;
   }
 

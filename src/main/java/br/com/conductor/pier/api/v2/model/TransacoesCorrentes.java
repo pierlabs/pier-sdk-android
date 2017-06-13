@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -32,11 +31,11 @@ public class TransacoesCorrentes  {
   @SerializedName("nomePortador")
   private String nomePortador = null;
   @SerializedName("dataTransacaoUTC")
-  private Date dataTransacaoUTC = null;
+  private String dataTransacaoUTC = null;
   @SerializedName("dataFaturamento")
-  private Date dataFaturamento = null;
+  private String dataFaturamento = null;
   @SerializedName("dataVencimento")
-  private Date dataVencimento = null;
+  private String dataVencimento = null;
   @SerializedName("modoEntradaTransacao")
   private String modoEntradaTransacao = null;
   @SerializedName("valorTaxaEmbarque")
@@ -50,7 +49,7 @@ public class TransacoesCorrentes  {
   @SerializedName("cotacaoUSD")
   private BigDecimal cotacaoUSD = null;
   @SerializedName("dataCotacaoUSD")
-  private Date dataCotacaoUSD = null;
+  private String dataCotacaoUSD = null;
   @SerializedName("codigoMoedaOrigem")
   private String codigoMoedaOrigem = null;
   @SerializedName("codigoMoedaDestino")
@@ -63,6 +62,10 @@ public class TransacoesCorrentes  {
   private String codigoTerminal = null;
   @SerializedName("codigoMCC")
   private Long codigoMCC = null;
+  @SerializedName("grupoMCC")
+  private Long grupoMCC = null;
+  @SerializedName("grupoDescricaoMCC")
+  private String grupoDescricaoMCC = null;
   @SerializedName("idEstabelecimento")
   private Long idEstabelecimento = null;
   @SerializedName("nomeEstabelecimento")
@@ -185,10 +188,10 @@ public class TransacoesCorrentes  {
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
    **/
   @ApiModelProperty(value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
-  public Date getDataTransacaoUTC() {
+  public String getDataTransacaoUTC() {
     return dataTransacaoUTC;
   }
-  public void setDataTransacaoUTC(Date dataTransacaoUTC) {
+  public void setDataTransacaoUTC(String dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
   }
 
@@ -197,10 +200,10 @@ public class TransacoesCorrentes  {
    * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
    **/
   @ApiModelProperty(value = "Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.")
-  public Date getDataFaturamento() {
+  public String getDataFaturamento() {
     return dataFaturamento;
   }
-  public void setDataFaturamento(Date dataFaturamento) {
+  public void setDataFaturamento(String dataFaturamento) {
     this.dataFaturamento = dataFaturamento;
   }
 
@@ -209,10 +212,10 @@ public class TransacoesCorrentes  {
    * Data de Vencimento da Fatura.
    **/
   @ApiModelProperty(value = "Data de Vencimento da Fatura.")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
@@ -293,10 +296,10 @@ public class TransacoesCorrentes  {
    * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
    **/
   @ApiModelProperty(value = "Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).")
-  public Date getDataCotacaoUSD() {
+  public String getDataCotacaoUSD() {
     return dataCotacaoUSD;
   }
-  public void setDataCotacaoUSD(Date dataCotacaoUSD) {
+  public void setDataCotacaoUSD(String dataCotacaoUSD) {
     this.dataCotacaoUSD = dataCotacaoUSD;
   }
 
@@ -370,6 +373,30 @@ public class TransacoesCorrentes  {
   }
   public void setCodigoMCC(Long codigoMCC) {
     this.codigoMCC = codigoMCC;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  public Long getGrupoMCC() {
+    return grupoMCC;
+  }
+  public void setGrupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   **/
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  public String getGrupoDescricaoMCC() {
+    return grupoDescricaoMCC;
+  }
+  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
   }
 
   
@@ -523,6 +550,8 @@ public class TransacoesCorrentes  {
     sb.append("  codigoReferencia: ").append(codigoReferencia).append("\n");
     sb.append("  codigoTerminal: ").append(codigoTerminal).append("\n");
     sb.append("  codigoMCC: ").append(codigoMCC).append("\n");
+    sb.append("  grupoMCC: ").append(grupoMCC).append("\n");
+    sb.append("  grupoDescricaoMCC: ").append(grupoDescricaoMCC).append("\n");
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
     sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
     sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");

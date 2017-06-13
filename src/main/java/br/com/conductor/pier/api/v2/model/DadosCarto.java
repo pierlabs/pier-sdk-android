@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -14,10 +13,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto Dados Cart\u00C3\u00A3o")
 public class DadosCarto  {
   
+  @SerializedName("flagVirtual")
+  private Integer flagVirtual = null;
   @SerializedName("numeroCartao")
   private String numeroCartao = null;
   @SerializedName("dataValidade")
-  private Date dataValidade = null;
+  private String dataValidade = null;
   @SerializedName("cvv2")
   private String cvv2 = null;
   @SerializedName("nomePlastico")
@@ -26,12 +27,29 @@ public class DadosCarto  {
   private Long idConta = null;
   @SerializedName("idCartao")
   private Long idCartao = null;
-  @SerializedName("status")
-  private Long status = null;
-  @SerializedName("statusDescricao")
-  private String statusDescricao = null;
-  @SerializedName("flagProvisorio")
-  private Integer flagProvisorio = null;
+  @SerializedName("numeroAgencia")
+  private Integer numeroAgencia = null;
+  @SerializedName("numeroContaCorente")
+  private String numeroContaCorente = null;
+  @SerializedName("idStatusConta")
+  private Long idStatusConta = null;
+  @SerializedName("statusConta")
+  private String statusConta = null;
+  @SerializedName("idStatusCartao")
+  private Long idStatusCartao = null;
+  @SerializedName("statusCartao")
+  private String statusCartao = null;
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
 
   
   /**
@@ -50,10 +68,10 @@ public class DadosCarto  {
    * Data de validade.
    **/
   @ApiModelProperty(value = "Data de validade.")
-  public Date getDataValidade() {
+  public String getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -107,14 +125,38 @@ public class DadosCarto  {
 
   
   /**
+   * Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   **/
+  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  public Integer getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   **/
+  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  public String getNumeroContaCorente() {
+    return numeroContaCorente;
+  }
+  public void setNumeroContaCorente(String numeroContaCorente) {
+    this.numeroContaCorente = numeroContaCorente;
+  }
+
+  
+  /**
    * Status da conta do portador.
    **/
   @ApiModelProperty(value = "Status da conta do portador.")
-  public Long getStatus() {
-    return status;
+  public Long getIdStatusConta() {
+    return idStatusConta;
   }
-  public void setStatus(Long status) {
-    this.status = status;
+  public void setIdStatusConta(Long idStatusConta) {
+    this.idStatusConta = idStatusConta;
   }
 
   
@@ -122,23 +164,35 @@ public class DadosCarto  {
    * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
    **/
   @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.")
-  public String getStatusDescricao() {
-    return statusDescricao;
+  public String getStatusConta() {
+    return statusConta;
   }
-  public void setStatusDescricao(String statusDescricao) {
-    this.statusDescricao = statusDescricao;
+  public void setStatusConta(String statusConta) {
+    this.statusConta = statusConta;
   }
 
   
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
+   * Status do cart\u00C3\u00A3o.
    **/
-  @ApiModelProperty(value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.")
-  public Integer getFlagProvisorio() {
-    return flagProvisorio;
+  @ApiModelProperty(value = "Status do cart\u00C3\u00A3o.")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
   }
-  public void setFlagProvisorio(Integer flagProvisorio) {
-    this.flagProvisorio = flagProvisorio;
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+   **/
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.")
+  public String getStatusCartao() {
+    return statusCartao;
+  }
+  public void setStatusCartao(String statusCartao) {
+    this.statusCartao = statusCartao;
   }
 
   
@@ -148,15 +202,19 @@ public class DadosCarto  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DadosCarto {\n");
     
+    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
     sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
     sb.append("  dataValidade: ").append(dataValidade).append("\n");
     sb.append("  cvv2: ").append(cvv2).append("\n");
     sb.append("  nomePlastico: ").append(nomePlastico).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idCartao: ").append(idCartao).append("\n");
-    sb.append("  status: ").append(status).append("\n");
-    sb.append("  statusDescricao: ").append(statusDescricao).append("\n");
-    sb.append("  flagProvisorio: ").append(flagProvisorio).append("\n");
+    sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
+    sb.append("  numeroContaCorente: ").append(numeroContaCorente).append("\n");
+    sb.append("  idStatusConta: ").append(idStatusConta).append("\n");
+    sb.append("  statusConta: ").append(statusConta).append("\n");
+    sb.append("  idStatusCartao: ").append(idStatusCartao).append("\n");
+    sb.append("  statusCartao: ").append(statusCartao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

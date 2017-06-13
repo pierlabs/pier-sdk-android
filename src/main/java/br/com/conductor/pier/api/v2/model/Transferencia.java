@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -18,7 +17,7 @@ public class Transferencia  {
   @SerializedName("id")
   private Long id = null;
   @SerializedName("dataTransferencia")
-  private Date dataTransferencia = null;
+  private String dataTransferencia = null;
   @SerializedName("idContaOrigem")
   private Long idContaOrigem = null;
   @SerializedName("nomePessoaOrigem")
@@ -49,10 +48,10 @@ public class Transferencia  {
    * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    **/
   @ApiModelProperty(value = "Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.")
-  public Date getDataTransferencia() {
+  public String getDataTransferencia() {
     return dataTransferencia;
   }
-  public void setDataTransferencia(Date dataTransferencia) {
+  public void setDataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
   }
 

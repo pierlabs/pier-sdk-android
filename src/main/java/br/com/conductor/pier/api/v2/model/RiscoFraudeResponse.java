@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -30,7 +29,7 @@ public class RiscoFraudeResponse  {
   @SerializedName("idTransacao")
   private Long idTransacao = null;
   @SerializedName("dataTransacao")
-  private Date dataTransacao = null;
+  private String dataTransacao = null;
   @SerializedName("valorTransacao")
   private BigDecimal valorTransacao = null;
   @SerializedName("nomeEstabelecimento")
@@ -125,10 +124,10 @@ public class RiscoFraudeResponse  {
    * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
    **/
   @ApiModelProperty(value = "Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada")
-  public Date getDataTransacao() {
+  public String getDataTransacao() {
     return dataTransacao;
   }
-  public void setDataTransacao(Date dataTransacao) {
+  public void setDataTransacao(String dataTransacao) {
     this.dataTransacao = dataTransacao;
   }
 

@@ -23,6 +23,8 @@ public class ProdutoDetalhesResponse  {
   private Long idFantasiaBasica = null;
   @SerializedName("fantasiaBasica")
   private String fantasiaBasica = null;
+  @SerializedName("usoExterior")
+  private Boolean usoExterior = null;
 
   
   /**
@@ -85,6 +87,18 @@ public class ProdutoDetalhesResponse  {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.")
+  public Boolean getUsoExterior() {
+    return usoExterior;
+  }
+  public void setUsoExterior(Boolean usoExterior) {
+    this.usoExterior = usoExterior;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -96,6 +110,7 @@ public class ProdutoDetalhesResponse  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  idFantasiaBasica: ").append(idFantasiaBasica).append("\n");
     sb.append("  fantasiaBasica: ").append(fantasiaBasica).append("\n");
+    sb.append("  usoExterior: ").append(usoExterior).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

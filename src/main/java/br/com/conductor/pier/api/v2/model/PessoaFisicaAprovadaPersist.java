@@ -3,7 +3,6 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.util.*;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -22,7 +21,7 @@ public class PessoaFisicaAprovadaPersist  {
   @SerializedName("nomeMae")
   private String nomeMae = null;
   @SerializedName("dataNascimento")
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   @SerializedName("sexo")
   private String sexo = null;
   @SerializedName("cpf")
@@ -34,7 +33,7 @@ public class PessoaFisicaAprovadaPersist  {
   @SerializedName("unidadeFederativaIdentidade")
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
   @SerializedName("profissao")
@@ -93,10 +92,10 @@ public class PessoaFisicaAprovadaPersist  {
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
   @ApiModelProperty(value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -165,10 +164,10 @@ public class PessoaFisicaAprovadaPersist  {
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
    **/
   @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 

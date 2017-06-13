@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -24,7 +23,7 @@ public class LinkTransferenciaBancariaResponse  {
   @SerializedName("codigoAutorizacao")
   private String codigoAutorizacao = null;
   @SerializedName("dataAutorizacao")
-  private Date dataAutorizacao = null;
+  private String dataAutorizacao = null;
   @SerializedName("origem")
   private String origem = null;
   @SerializedName("valor")
@@ -36,7 +35,7 @@ public class LinkTransferenciaBancariaResponse  {
   @SerializedName("idCartao")
   private Long idCartao = null;
   @SerializedName("dataCompra")
-  private Date dataCompra = null;
+  private String dataCompra = null;
   @SerializedName("valorCompra")
   private BigDecimal valorCompra = null;
   @SerializedName("numeroParcelas")
@@ -46,7 +45,7 @@ public class LinkTransferenciaBancariaResponse  {
   @SerializedName("idEstabelecimento")
   private Long idEstabelecimento = null;
   @SerializedName("dataMovimento")
-  private Date dataMovimento = null;
+  private String dataMovimento = null;
   @SerializedName("valorContrato")
   private BigDecimal valorContrato = null;
   @SerializedName("taxaJuros")
@@ -60,7 +59,7 @@ public class LinkTransferenciaBancariaResponse  {
   @SerializedName("valorEntrada")
   private BigDecimal valorEntrada = null;
   @SerializedName("dataVencimentoReal")
-  private Date dataVencimentoReal = null;
+  private String dataVencimentoReal = null;
   @SerializedName("dataVencimentoPadrao")
   private String dataVencimentoPadrao = null;
   @SerializedName("idContaPortador")
@@ -120,10 +119,10 @@ public class LinkTransferenciaBancariaResponse  {
    * Data da autoriza\u00C3\u00A7\u00C3\u00A3o
    **/
   @ApiModelProperty(value = "Data da autoriza\u00C3\u00A7\u00C3\u00A3o")
-  public Date getDataAutorizacao() {
+  public String getDataAutorizacao() {
     return dataAutorizacao;
   }
-  public void setDataAutorizacao(Date dataAutorizacao) {
+  public void setDataAutorizacao(String dataAutorizacao) {
     this.dataAutorizacao = dataAutorizacao;
   }
 
@@ -192,10 +191,10 @@ public class LinkTransferenciaBancariaResponse  {
    * Data da transfer\u00C3\u00AAncia
    **/
   @ApiModelProperty(value = "Data da transfer\u00C3\u00AAncia")
-  public Date getDataCompra() {
+  public String getDataCompra() {
     return dataCompra;
   }
-  public void setDataCompra(Date dataCompra) {
+  public void setDataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
   }
 
@@ -252,10 +251,10 @@ public class LinkTransferenciaBancariaResponse  {
    * Data do movimento
    **/
   @ApiModelProperty(value = "Data do movimento")
-  public Date getDataMovimento() {
+  public String getDataMovimento() {
     return dataMovimento;
   }
-  public void setDataMovimento(Date dataMovimento) {
+  public void setDataMovimento(String dataMovimento) {
     this.dataMovimento = dataMovimento;
   }
 
@@ -336,10 +335,10 @@ public class LinkTransferenciaBancariaResponse  {
    * Data do vencimento real da fatura
    **/
   @ApiModelProperty(value = "Data do vencimento real da fatura")
-  public Date getDataVencimentoReal() {
+  public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
-  public void setDataVencimentoReal(Date dataVencimentoReal) {
+  public void setDataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
   }
 
@@ -369,8 +368,9 @@ public class LinkTransferenciaBancariaResponse  {
 
   
   /**
+   * Atributo que representa o numero do estabelecimento.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Atributo que representa o numero do estabelecimento.")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }

@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -40,15 +39,15 @@ public class ContaDetalheResponse  {
   @SerializedName("melhorDiaCompra")
   private Integer melhorDiaCompra = null;
   @SerializedName("dataStatusConta")
-  private Date dataStatusConta = null;
+  private String dataStatusConta = null;
   @SerializedName("valorRenda")
   private BigDecimal valorRenda = null;
   @SerializedName("dataCadastro")
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   @SerializedName("dataUltimaAlteracaoVencimento")
-  private Date dataUltimaAlteracaoVencimento = null;
+  private String dataUltimaAlteracaoVencimento = null;
   @SerializedName("dataHoraUltimaCompra")
-  private Date dataHoraUltimaCompra = null;
+  private String dataHoraUltimaCompra = null;
   @SerializedName("numeroAgencia")
   private Integer numeroAgencia = null;
   @SerializedName("numeroContaCorrente")
@@ -217,10 +216,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
-  public Date getDataStatusConta() {
+  public String getDataStatusConta() {
     return dataStatusConta;
   }
-  public void setDataStatusConta(Date dataStatusConta) {
+  public void setDataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
   }
 
@@ -241,10 +240,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -253,10 +252,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
   @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
-  public Date getDataUltimaAlteracaoVencimento() {
+  public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
-  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public void setDataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
@@ -265,10 +264,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
   @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
-  public Date getDataHoraUltimaCompra() {
+  public String getDataHoraUltimaCompra() {
     return dataHoraUltimaCompra;
   }
-  public void setDataHoraUltimaCompra(Date dataHoraUltimaCompra) {
+  public void setDataHoraUltimaCompra(String dataHoraUltimaCompra) {
     this.dataHoraUltimaCompra = dataHoraUltimaCompra;
   }
 

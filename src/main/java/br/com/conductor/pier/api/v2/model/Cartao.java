@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -33,21 +32,21 @@ public class Cartao  {
   @SerializedName("nomeImpresso")
   private String nomeImpresso = null;
   @SerializedName("dataGeracao")
-  private Date dataGeracao = null;
+  private String dataGeracao = null;
   @SerializedName("dataStatusCartao")
-  private Date dataStatusCartao = null;
+  private String dataStatusCartao = null;
   @SerializedName("dataEstagioCartao")
-  private Date dataEstagioCartao = null;
+  private String dataEstagioCartao = null;
   @SerializedName("dataValidade")
-  private Date dataValidade = null;
+  private String dataValidade = null;
   @SerializedName("dataImpressao")
-  private Date dataImpressao = null;
+  private String dataImpressao = null;
   @SerializedName("arquivoImpressao")
   private String arquivoImpressao = null;
   @SerializedName("flagImpressaoOrigemComercial")
   private Integer flagImpressaoOrigemComercial = null;
-  @SerializedName("flagProvisorio")
-  private Integer flagProvisorio = null;
+  @SerializedName("flagVirtual")
+  private Integer flagVirtual = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
   @SerializedName("sequencialCartao")
@@ -166,10 +165,10 @@ public class Cartao  {
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
-  public Date getDataGeracao() {
+  public String getDataGeracao() {
     return dataGeracao;
   }
-  public void setDataGeracao(Date dataGeracao) {
+  public void setDataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
   }
 
@@ -178,10 +177,10 @@ public class Cartao  {
    * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
-  public Date getDataStatusCartao() {
+  public String getDataStatusCartao() {
     return dataStatusCartao;
   }
-  public void setDataStatusCartao(Date dataStatusCartao) {
+  public void setDataStatusCartao(String dataStatusCartao) {
     this.dataStatusCartao = dataStatusCartao;
   }
 
@@ -190,10 +189,10 @@ public class Cartao  {
    * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
-  public Date getDataEstagioCartao() {
+  public String getDataEstagioCartao() {
     return dataEstagioCartao;
   }
-  public void setDataEstagioCartao(Date dataEstagioCartao) {
+  public void setDataEstagioCartao(String dataEstagioCartao) {
     this.dataEstagioCartao = dataEstagioCartao;
   }
 
@@ -202,10 +201,10 @@ public class Cartao  {
    * Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
    **/
   @ApiModelProperty(value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.")
-  public Date getDataValidade() {
+  public String getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -214,10 +213,10 @@ public class Cartao  {
    * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.")
-  public Date getDataImpressao() {
+  public String getDataImpressao() {
     return dataImpressao;
   }
-  public void setDataImpressao(Date dataImpressao) {
+  public void setDataImpressao(String dataImpressao) {
     this.dataImpressao = dataImpressao;
   }
 
@@ -247,14 +246,14 @@ public class Cartao  {
 
   
   /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
+   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.")
-  public Integer getFlagProvisorio() {
-    return flagProvisorio;
+  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual.")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
   }
-  public void setFlagProvisorio(Integer flagProvisorio) {
-    this.flagProvisorio = flagProvisorio;
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
   }
 
   
@@ -304,7 +303,7 @@ public class Cartao  {
     sb.append("  dataImpressao: ").append(dataImpressao).append("\n");
     sb.append("  arquivoImpressao: ").append(arquivoImpressao).append("\n");
     sb.append("  flagImpressaoOrigemComercial: ").append(flagImpressaoOrigemComercial).append("\n");
-    sb.append("  flagProvisorio: ").append(flagProvisorio).append("\n");
+    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
     sb.append("  sequencialCartao: ").append(sequencialCartao).append("\n");
     sb.append("}\n");

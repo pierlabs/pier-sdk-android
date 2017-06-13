@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -16,11 +15,11 @@ import com.google.gson.annotations.SerializedName;
 public class TransferenciaBancariaPersist  {
   
   @SerializedName("dataCompra")
-  private Date dataCompra = null;
+  private String dataCompra = null;
   @SerializedName("proximoVencimentoPadrao")
-  private Date proximoVencimentoPadrao = null;
+  private String proximoVencimentoPadrao = null;
   @SerializedName("proximoVencimentoReal")
-  private Date proximoVencimentoReal = null;
+  private String proximoVencimentoReal = null;
   @SerializedName("valorCompra")
   private BigDecimal valorCompra = null;
   @SerializedName("nomeFavorecido")
@@ -45,10 +44,10 @@ public class TransferenciaBancariaPersist  {
    * Data da transfer\u00C3\u00AAncia
    **/
   @ApiModelProperty(required = true, value = "Data da transfer\u00C3\u00AAncia")
-  public Date getDataCompra() {
+  public String getDataCompra() {
     return dataCompra;
   }
-  public void setDataCompra(Date dataCompra) {
+  public void setDataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
   }
 
@@ -57,10 +56,10 @@ public class TransferenciaBancariaPersist  {
    * Dia do vencimento padr\u00C3\u00A3o da fatura
    **/
   @ApiModelProperty(required = true, value = "Dia do vencimento padr\u00C3\u00A3o da fatura")
-  public Date getProximoVencimentoPadrao() {
+  public String getProximoVencimentoPadrao() {
     return proximoVencimentoPadrao;
   }
-  public void setProximoVencimentoPadrao(Date proximoVencimentoPadrao) {
+  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
     this.proximoVencimentoPadrao = proximoVencimentoPadrao;
   }
 
@@ -69,10 +68,10 @@ public class TransferenciaBancariaPersist  {
    * Data do vencimento real da fatura
    **/
   @ApiModelProperty(required = true, value = "Data do vencimento real da fatura")
-  public Date getProximoVencimentoReal() {
+  public String getProximoVencimentoReal() {
     return proximoVencimentoReal;
   }
-  public void setProximoVencimentoReal(Date proximoVencimentoReal) {
+  public void setProximoVencimentoReal(String proximoVencimentoReal) {
     this.proximoVencimentoReal = proximoVencimentoReal;
   }
 

@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -29,7 +28,7 @@ public class LoteCartoesPrePagos  {
   @SerializedName("quantidade")
   private Integer quantidade = null;
   @SerializedName("dataCadastro")
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   @SerializedName("usuarioCadastro")
   private String usuarioCadastro = null;
   @SerializedName("statusProcessamento")
@@ -124,10 +123,10 @@ public class LoteCartoesPrePagos  {
    * Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
    **/
   @ApiModelProperty(required = true, value = "Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 

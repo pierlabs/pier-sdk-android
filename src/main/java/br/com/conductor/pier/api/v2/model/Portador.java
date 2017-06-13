@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -31,9 +30,9 @@ public class Portador  {
   @SerializedName("flagAtivo")
   private Integer flagAtivo = null;
   @SerializedName("dataCadastroPortador")
-  private Date dataCadastroPortador = null;
+  private String dataCadastroPortador = null;
   @SerializedName("dataCancelamentoPortador")
-  private Date dataCancelamentoPortador = null;
+  private String dataCancelamentoPortador = null;
 
   
   /**
@@ -136,10 +135,10 @@ public class Portador  {
    * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.")
-  public Date getDataCadastroPortador() {
+  public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }
-  public void setDataCadastroPortador(Date dataCadastroPortador) {
+  public void setDataCadastroPortador(String dataCadastroPortador) {
     this.dataCadastroPortador = dataCadastroPortador;
   }
 
@@ -148,10 +147,10 @@ public class Portador  {
    * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.")
-  public Date getDataCancelamentoPortador() {
+  public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;
   }
-  public void setDataCancelamentoPortador(Date dataCancelamentoPortador) {
+  public void setDataCancelamentoPortador(String dataCancelamentoPortador) {
     this.dataCancelamentoPortador = dataCancelamentoPortador;
   }
 

@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -23,7 +22,7 @@ public class HistoricoImpressaoCartao  {
   @SerializedName("mensagemHistorico")
   private String mensagemHistorico = null;
   @SerializedName("dataHistorico")
-  private Date dataHistorico = null;
+  private String dataHistorico = null;
 
   
   /**
@@ -78,10 +77,10 @@ public class HistoricoImpressaoCartao  {
    * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
    **/
   @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
-  public Date getDataHistorico() {
+  public String getDataHistorico() {
     return dataHistorico;
   }
-  public void setDataHistorico(Date dataHistorico) {
+  public void setDataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
   }
 

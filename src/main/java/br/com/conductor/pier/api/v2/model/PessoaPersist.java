@@ -2,7 +2,6 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.util.*;
-import java.util.Date;
 
 
 import io.swagger.annotations.*;
@@ -19,9 +18,9 @@ public class PessoaPersist  {
   @SerializedName("cpf")
   private String cpf = null;
   @SerializedName("dataEmissaoIdentidade")
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   @SerializedName("dataNascimento")
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   @SerializedName("email")
   private String email = null;
   @SerializedName("estadoCivil")
@@ -60,10 +59,10 @@ public class PessoaPersist  {
    * Data emiss\u00C3\u00A3o da Identidade
    **/
   @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da Identidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -72,10 +71,10 @@ public class PessoaPersist  {
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
   @ApiModelProperty(value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
