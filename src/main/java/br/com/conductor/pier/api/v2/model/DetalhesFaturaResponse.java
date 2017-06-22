@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.FaturaResponse;
-import br.com.conductor.pier.api.v2.model.TransacoesCorrentes;
+import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import java.util.*;
 
 
@@ -19,7 +19,7 @@ public class DetalhesFaturaResponse  {
   @SerializedName("fatura")
   private FaturaResponse fatura = null;
   @SerializedName("transacoes")
-  private List<TransacoesCorrentes> transacoes = null;
+  private List<TransacoesCorrentesResponse> transacoes = null;
 
   
   /**
@@ -38,10 +38,10 @@ public class DetalhesFaturaResponse  {
    * Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
    **/
   @ApiModelProperty(value = "Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.")
-  public List<TransacoesCorrentes> getTransacoes() {
+  public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }
-  public void setTransacoes(List<TransacoesCorrentes> transacoes) {
+  public void setTransacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
   }
 

@@ -9,8 +9,8 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.AplicacaoMobileUpdate;
-import br.com.conductor.pier.api.v2.model.AplicacaoMobile;
-import br.com.conductor.pier.api.v2.model.PageAplicacoesMobile;
+import br.com.conductor.pier.api.v2.model.AplicacaoMobileResponse;
+import br.com.conductor.pier.api.v2.model.PageAplicacaoMobileResponse;
 import br.com.conductor.pier.api.v2.model.AplicacaoMobilePersist;
 
 
@@ -48,9 +48,9 @@ public class AplicacoesMobileApi {
    * Esse recurso permite atualizar aplicacao mobile.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Aplicacao (id).
    * @param update update
-   * @return AplicacaoMobile
+   * @return AplicacaoMobileResponse
    */
-  public AplicacaoMobile  atualizarUsingPUT (Long id, AplicacaoMobileUpdate update) throws ApiException {
+  public AplicacaoMobileResponse  atualizarUsingPUT (Long id, AplicacaoMobileUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
@@ -98,7 +98,7 @@ public class AplicacoesMobileApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (AplicacaoMobile) ApiInvoker.deserialize(response, "", AplicacaoMobile.class);
+        return (AplicacaoMobileResponse) ApiInvoker.deserialize(response, "", AplicacaoMobileResponse.class);
       }
       else {
         return null;
@@ -115,9 +115,9 @@ public class AplicacoesMobileApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Identificador da Aplicacao Mobile
    * @param idPlataformaMobile Identificador da Plataforma Mobile
-   * @return PageAplicacoesMobile
+   * @return PageAplicacaoMobileResponse
    */
-  public PageAplicacoesMobile  listarUsingGET (Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
+  public PageAplicacaoMobileResponse  listarUsingGET (Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
     Object postBody = null;
     
 
@@ -163,7 +163,7 @@ public class AplicacoesMobileApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageAplicacoesMobile) ApiInvoker.deserialize(response, "", PageAplicacoesMobile.class);
+        return (PageAplicacaoMobileResponse) ApiInvoker.deserialize(response, "", PageAplicacaoMobileResponse.class);
       }
       else {
         return null;
@@ -177,9 +177,9 @@ public class AplicacoesMobileApi {
    * Cadastra Aplicacao Mobile
    * Esse recurso permite cadastrar aplicacoes mobile.
    * @param persist persist
-   * @return AplicacaoMobile
+   * @return AplicacaoMobileResponse
    */
-  public AplicacaoMobile  salvarUsingPOST (AplicacaoMobilePersist persist) throws ApiException {
+  public AplicacaoMobileResponse  salvarUsingPOST (AplicacaoMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
@@ -222,7 +222,7 @@ public class AplicacoesMobileApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (AplicacaoMobile) ApiInvoker.deserialize(response, "", AplicacaoMobile.class);
+        return (AplicacaoMobileResponse) ApiInvoker.deserialize(response, "", AplicacaoMobileResponse.class);
       }
       else {
         return null;

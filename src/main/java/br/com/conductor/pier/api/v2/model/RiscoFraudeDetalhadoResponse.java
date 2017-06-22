@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.Telefone;
+import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -69,7 +69,7 @@ public class RiscoFraudeDetalhadoResponse  {
   @SerializedName("email")
   private String email = null;
   @SerializedName("tefefones")
-  private List<Telefone> tefefones = null;
+  private List<TelefoneResponse> tefefones = null;
 
   
   /**
@@ -388,10 +388,10 @@ public class RiscoFraudeDetalhadoResponse  {
    * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
    **/
   @ApiModelProperty(value = "Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o")
-  public List<Telefone> getTefefones() {
+  public List<TelefoneResponse> getTefefones() {
     return tefefones;
   }
-  public void setTefefones(List<Telefone> tefefones) {
+  public void setTefefones(List<TelefoneResponse> tefefones) {
     this.tefefones = tefefones;
   }
 

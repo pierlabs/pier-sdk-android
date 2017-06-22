@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.WebHook;
-import br.com.conductor.pier.api.v2.model.PageWebHooks;
+import br.com.conductor.pier.api.v2.model.WebHookResponse;
+import br.com.conductor.pier.api.v2.model.PageWebHookResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -47,9 +47,9 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo identificador do Webhook
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
-   * @return WebHook
+   * @return WebHookResponse
    */
-  public WebHook  alterarUsingPUT10 (Long id, String tipoEvento, String url) throws ApiException {
+  public WebHookResponse  alterarUsingPUT10 (Long id, String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -106,7 +106,7 @@ public class WebhooksApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (WebHook) ApiInvoker.deserialize(response, "", WebHook.class);
+        return (WebHookResponse) ApiInvoker.deserialize(response, "", WebHookResponse.class);
       }
       else {
         return null;
@@ -120,9 +120,9 @@ public class WebhooksApi {
    * Consultar Webhook
    * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-   * @return WebHook
+   * @return WebHookResponse
    */
-  public WebHook  consultarUsingGET26 (Long id) throws ApiException {
+  public WebHookResponse  consultarUsingGET26 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -165,7 +165,7 @@ public class WebhooksApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (WebHook) ApiInvoker.deserialize(response, "", WebHook.class);
+        return (WebHookResponse) ApiInvoker.deserialize(response, "", WebHookResponse.class);
       }
       else {
         return null;
@@ -184,9 +184,9 @@ public class WebhooksApi {
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
-   * @return PageWebHooks
+   * @return PageWebHookResponse
    */
-  public PageWebHooks  listarUsingGET30 (Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse  listarUsingGET31 (Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
 
@@ -236,7 +236,7 @@ public class WebhooksApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageWebHooks) ApiInvoker.deserialize(response, "", PageWebHooks.class);
+        return (PageWebHookResponse) ApiInvoker.deserialize(response, "", PageWebHookResponse.class);
       }
       else {
         return null;
@@ -251,9 +251,9 @@ public class WebhooksApi {
    * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
-   * @return WebHook
+   * @return WebHookResponse
    */
-  public WebHook  salvarUsingPOST14 (String tipoEvento, String url) throws ApiException {
+  public WebHookResponse  salvarUsingPOST14 (String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'tipoEvento' is set
@@ -305,7 +305,7 @@ public class WebhooksApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (WebHook) ApiInvoker.deserialize(response, "", WebHook.class);
+        return (WebHookResponse) ApiInvoker.deserialize(response, "", WebHookResponse.class);
       }
       else {
         return null;

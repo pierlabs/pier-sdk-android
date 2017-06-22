@@ -9,13 +9,11 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada")
 public class AntecipacaoSimuladaDetalhesResponse  {
   
-  @SerializedName("idSimulacaoDetalhe")
-  private Long idSimulacaoDetalhe = null;
   @SerializedName("quantidadeParcelas")
   private Integer quantidadeParcelas = null;
   @SerializedName("valorParcelas")
@@ -24,18 +22,6 @@ public class AntecipacaoSimuladaDetalhesResponse  {
   private BigDecimal valorDesconto = null;
   @SerializedName("valorParcelasDesconto")
   private BigDecimal valorParcelasDesconto = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.")
-  public Long getIdSimulacaoDetalhe() {
-    return idSimulacaoDetalhe;
-  }
-  public void setIdSimulacaoDetalhe(Long idSimulacaoDetalhe) {
-    this.idSimulacaoDetalhe = idSimulacaoDetalhe;
-  }
 
   
   /**
@@ -92,7 +78,6 @@ public class AntecipacaoSimuladaDetalhesResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AntecipacaoSimuladaDetalhesResponse {\n");
     
-    sb.append("  idSimulacaoDetalhe: ").append(idSimulacaoDetalhe).append("\n");
     sb.append("  quantidadeParcelas: ").append(quantidadeParcelas).append("\n");
     sb.append("  valorParcelas: ").append(valorParcelas).append("\n");
     sb.append("  valorDesconto: ").append(valorDesconto).append("\n");

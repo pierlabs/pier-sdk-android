@@ -16,11 +16,11 @@ public class ParametroProdutoResponse  {
   
   @SerializedName("idProduto")
   private Long idProduto = null;
-  public enum TipoTransacaoEnum {
+  public enum TipoOrigemTransacaoEnum {
      ON_US,  OFF_US, 
   };
-  @SerializedName("tipoTransacao")
-  private TipoTransacaoEnum tipoTransacao = null;
+  @SerializedName("tipoOrigemTransacao")
+  private TipoOrigemTransacaoEnum tipoOrigemTransacao = null;
   @SerializedName("descricao")
   private String descricao = null;
   @SerializedName("valorParametro")
@@ -45,11 +45,11 @@ public class ParametroProdutoResponse  {
    * Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
    **/
   @ApiModelProperty(required = true, value = "Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).")
-  public TipoTransacaoEnum getTipoTransacao() {
-    return tipoTransacao;
+  public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
+    return tipoOrigemTransacao;
   }
-  public void setTipoTransacao(TipoTransacaoEnum tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public void setTipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
   }
 
   
@@ -96,7 +96,7 @@ public class ParametroProdutoResponse  {
     sb.append("class ParametroProdutoResponse {\n");
     
     sb.append("  idProduto: ").append(idProduto).append("\n");
-    sb.append("  tipoTransacao: ").append(tipoTransacao).append("\n");
+    sb.append("  tipoOrigemTransacao: ").append(tipoOrigemTransacao).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
     sb.append("  valorParametro: ").append(valorParametro).append("\n");
     sb.append("  dataValidade: ").append(dataValidade).append("\n");

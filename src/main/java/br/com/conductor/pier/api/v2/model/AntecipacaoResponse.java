@@ -21,8 +21,14 @@ public class AntecipacaoResponse  {
   private Long quantidadeParcelasTotal = null;
   @SerializedName("quantidadeParcelasAntecipadas")
   private Long quantidadeParcelasAntecipadas = null;
-  @SerializedName("valorParcelas")
-  private BigDecimal valorParcelas = null;
+  @SerializedName("valorParcela")
+  private BigDecimal valorParcela = null;
+  @SerializedName("valorDescontoTotal")
+  private BigDecimal valorDescontoTotal = null;
+  @SerializedName("valorTotalComDesconto")
+  private BigDecimal valorTotalComDesconto = null;
+  @SerializedName("taxaDesconto")
+  private BigDecimal taxaDesconto = null;
 
   
   /**
@@ -62,9 +68,9 @@ public class AntecipacaoResponse  {
 
   
   /**
-   * Apresenta o numero total de parcelas da comprae
+   * Apresenta o numero total de parcelas da compra
    **/
-  @ApiModelProperty(value = "Apresenta o numero total de parcelas da comprae")
+  @ApiModelProperty(value = "Apresenta o numero total de parcelas da compra")
   public Long getQuantidadeParcelasTotal() {
     return quantidadeParcelasTotal;
   }
@@ -86,14 +92,50 @@ public class AntecipacaoResponse  {
 
   
   /**
-   * Apresenta o valor das parcelas efetivadas
+   * Apresenta o valor de cada parcela antecipadas
    **/
-  @ApiModelProperty(value = "Apresenta o valor das parcelas efetivadas")
-  public BigDecimal getValorParcelas() {
-    return valorParcelas;
+  @ApiModelProperty(value = "Apresenta o valor de cada parcela antecipadas")
+  public BigDecimal getValorParcela() {
+    return valorParcela;
   }
-  public void setValorParcelas(BigDecimal valorParcelas) {
-    this.valorParcelas = valorParcelas;
+  public void setValorParcela(BigDecimal valorParcela) {
+    this.valorParcela = valorParcela;
+  }
+
+  
+  /**
+   * Apresenta o valor total do desconto
+   **/
+  @ApiModelProperty(value = "Apresenta o valor total do desconto")
+  public BigDecimal getValorDescontoTotal() {
+    return valorDescontoTotal;
+  }
+  public void setValorDescontoTotal(BigDecimal valorDescontoTotal) {
+    this.valorDescontoTotal = valorDescontoTotal;
+  }
+
+  
+  /**
+   * Apresenta o valor total com desconto
+   **/
+  @ApiModelProperty(value = "Apresenta o valor total com desconto")
+  public BigDecimal getValorTotalComDesconto() {
+    return valorTotalComDesconto;
+  }
+  public void setValorTotalComDesconto(BigDecimal valorTotalComDesconto) {
+    this.valorTotalComDesconto = valorTotalComDesconto;
+  }
+
+  
+  /**
+   * Apresenta a taxa de desconto
+   **/
+  @ApiModelProperty(value = "Apresenta a taxa de desconto")
+  public BigDecimal getTaxaDesconto() {
+    return taxaDesconto;
+  }
+  public void setTaxaDesconto(BigDecimal taxaDesconto) {
+    this.taxaDesconto = taxaDesconto;
   }
 
   
@@ -108,7 +150,10 @@ public class AntecipacaoResponse  {
     sb.append("  idCompra: ").append(idCompra).append("\n");
     sb.append("  quantidadeParcelasTotal: ").append(quantidadeParcelasTotal).append("\n");
     sb.append("  quantidadeParcelasAntecipadas: ").append(quantidadeParcelasAntecipadas).append("\n");
-    sb.append("  valorParcelas: ").append(valorParcelas).append("\n");
+    sb.append("  valorParcela: ").append(valorParcela).append("\n");
+    sb.append("  valorDescontoTotal: ").append(valorDescontoTotal).append("\n");
+    sb.append("  valorTotalComDesconto: ").append(valorTotalComDesconto).append("\n");
+    sb.append("  taxaDesconto: ").append(taxaDesconto).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
+import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import java.util.*;
 
 
@@ -16,7 +16,7 @@ import com.google.gson.annotations.SerializedName;
 public class PageLoteCartoesPrePagosResponse  {
   
   @SerializedName("content")
-  private List<LoteCartoesPrePagos> content = null;
+  private List<LoteCartoesPrePagosResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class PageLoteCartoesPrePagosResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<LoteCartoesPrePagos> getContent() {
+  public List<LoteCartoesPrePagosResponse> getContent() {
     return content;
   }
-  public void setContent(List<LoteCartoesPrePagos> content) {
+  public void setContent(List<LoteCartoesPrePagosResponse> content) {
     this.content = content;
   }
 

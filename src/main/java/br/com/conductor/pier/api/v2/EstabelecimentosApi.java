@@ -8,10 +8,10 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.Terminal;
-import br.com.conductor.pier.api.v2.model.Estabelecimento;
-import br.com.conductor.pier.api.v2.model.PageTerminal;
-import br.com.conductor.pier.api.v2.model.PageEstabelecimentos;
+import br.com.conductor.pier.api.v2.model.TerminalResponse;
+import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PageTerminalResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -47,9 +47,9 @@ public class EstabelecimentosApi {
    * Apresenta os dados de um determinado Terminal
    * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-   * @return Terminal
+   * @return TerminalResponse
    */
-  public Terminal  consultarUsingGET16 (Long id) throws ApiException {
+  public TerminalResponse  consultarUsingGET16 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -92,7 +92,7 @@ public class EstabelecimentosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Terminal) ApiInvoker.deserialize(response, "", Terminal.class);
+        return (TerminalResponse) ApiInvoker.deserialize(response, "", TerminalResponse.class);
       }
       else {
         return null;
@@ -106,9 +106,9 @@ public class EstabelecimentosApi {
    * Consultar estabelecimento por id
    * Consulta os detalhes de um determinado estabelecimento
    * @param id Id
-   * @return Estabelecimento
+   * @return EstabelecimentoResponse
    */
-  public Estabelecimento  consultarUsingGET6 (Long id) throws ApiException {
+  public EstabelecimentoResponse  consultarUsingGET6 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -151,78 +151,7 @@ public class EstabelecimentosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Estabelecimento) ApiInvoker.deserialize(response, "", Estabelecimento.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Lista os Terminais cadastrados no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-   * @param terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-   * @param numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-   * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-   * @return PageTerminal
-   */
-  public PageTerminal  listarUsingGET22 (Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/terminais".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "terminal", terminal));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroEstabelecimento", numeroEstabelecimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageTerminal) ApiInvoker.deserialize(response, "", PageTerminal.class);
+        return (EstabelecimentoResponse) ApiInvoker.deserialize(response, "", EstabelecimentoResponse.class);
       }
       else {
         return null;
@@ -256,9 +185,9 @@ public class EstabelecimentosApi {
    * @param flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    * @param flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-   * @return PageEstabelecimentos
+   * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentos  listarUsingGET9 (Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentoResponse  listarUsingGET10 (Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
 
@@ -338,7 +267,78 @@ public class EstabelecimentosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageEstabelecimentos) ApiInvoker.deserialize(response, "", PageEstabelecimentos.class);
+        return (PageEstabelecimentoResponse) ApiInvoker.deserialize(response, "", PageEstabelecimentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os Terminais cadastrados no Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+   * @param terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+   * @param numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+   * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+   * @return PageTerminalResponse
+   */
+  public PageTerminalResponse  listarUsingGET23 (Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/terminais".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "terminal", terminal));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroEstabelecimento", numeroEstabelecimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTerminalResponse) ApiInvoker.deserialize(response, "", PageTerminalResponse.class);
       }
       else {
         return null;

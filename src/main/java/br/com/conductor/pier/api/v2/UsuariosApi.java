@@ -10,7 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.UsuarioUpdate;
 import br.com.conductor.pier.api.v2.model.UsuarioResponse;
-import br.com.conductor.pier.api.v2.model.PageUsuarios;
+import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioPersist;
 
 
@@ -369,9 +369,9 @@ public class UsuariosApi {
    * @param cpf CPF do Usuario
    * @param email Email do Usuario
    * @param status Status do Usuario
-   * @return PageUsuarios
+   * @return PageUsuarioResponse
    */
-  public PageUsuarios  listarUsingGET29 (Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse  listarUsingGET30 (Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
 
@@ -421,7 +421,7 @@ public class UsuariosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageUsuarios) ApiInvoker.deserialize(response, "", PageUsuarios.class);
+        return (PageUsuarioResponse) ApiInvoker.deserialize(response, "", PageUsuarioResponse.class);
       }
       else {
         return null;

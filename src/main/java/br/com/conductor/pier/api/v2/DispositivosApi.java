@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.Dispositivo;
-import br.com.conductor.pier.api.v2.model.PageDispositivos;
+import br.com.conductor.pier.api.v2.model.DispositivoResponse;
+import br.com.conductor.pier.api.v2.model.PageDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.DispositivoPersist;
 
 
@@ -46,9 +46,9 @@ public class DispositivosApi {
    * Ativa Dispositivo
    * Esse recurso permite ativar dispositivo.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
-   * @return Dispositivo
+   * @return DispositivoResponse
    */
-  public Dispositivo  ativarUsingPOST (Long id) throws ApiException {
+  public DispositivoResponse  ativarUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -91,7 +91,7 @@ public class DispositivosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Dispositivo) ApiInvoker.deserialize(response, "", Dispositivo.class);
+        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
       }
       else {
         return null;
@@ -105,9 +105,9 @@ public class DispositivosApi {
    * Desativa Dispositivo
    * Esse recurso permite desativar dispositivo.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
-   * @return Dispositivo
+   * @return DispositivoResponse
    */
-  public Dispositivo  desativarUsingPOST (Long id) throws ApiException {
+  public DispositivoResponse  desativarUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -150,7 +150,7 @@ public class DispositivosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Dispositivo) ApiInvoker.deserialize(response, "", Dispositivo.class);
+        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
       }
       else {
         return null;
@@ -170,9 +170,9 @@ public class DispositivosApi {
    * @param idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
    * @param dataCriacao Apresenta a data e em que o registro foi criado.
    * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
-   * @return PageDispositivos
+   * @return PageDispositivoResponse
    */
-  public PageDispositivos  listarUsingGET7 (Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse  listarUsingGET8 (Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
 
@@ -224,7 +224,7 @@ public class DispositivosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageDispositivos) ApiInvoker.deserialize(response, "", PageDispositivos.class);
+        return (PageDispositivoResponse) ApiInvoker.deserialize(response, "", PageDispositivoResponse.class);
       }
       else {
         return null;
@@ -238,9 +238,9 @@ public class DispositivosApi {
    * Cadastra Dispositivo
    * Esse recurso permite cadastrar dispositivos.
    * @param persist persist
-   * @return Dispositivo
+   * @return DispositivoResponse
    */
-  public Dispositivo  salvarUsingPOST3 (DispositivoPersist persist) throws ApiException {
+  public DispositivoResponse  salvarUsingPOST3 (DispositivoPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
@@ -283,7 +283,7 @@ public class DispositivosApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Dispositivo) ApiInvoker.deserialize(response, "", Dispositivo.class);
+        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
       }
       else {
         return null;

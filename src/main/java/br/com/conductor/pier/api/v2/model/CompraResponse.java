@@ -36,8 +36,8 @@ public class CompraResponse  {
   private Integer numeroParcelasAntecipaveis = null;
   @SerializedName("nomeEstabelecimento")
   private String nomeEstabelecimento = null;
-  @SerializedName("tipoTransacao")
-  private String tipoTransacao = null;
+  @SerializedName("tipoOrigemTransacao")
+  private String tipoOrigemTransacao = null;
   @SerializedName("cidade")
   private String cidade = null;
   @SerializedName("pais")
@@ -196,11 +196,11 @@ public class CompraResponse  {
    * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
    **/
   @ApiModelProperty(value = "Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.")
-  public String getTipoTransacao() {
-    return tipoTransacao;
+  public String getTipoOrigemTransacao() {
+    return tipoOrigemTransacao;
   }
-  public void setTipoTransacao(String tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public void setTipoOrigemTransacao(String tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
   }
 
   
@@ -353,7 +353,7 @@ public class CompraResponse  {
     sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");
     sb.append("  numeroParcelasAntecipaveis: ").append(numeroParcelasAntecipaveis).append("\n");
     sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
-    sb.append("  tipoTransacao: ").append(tipoTransacao).append("\n");
+    sb.append("  tipoOrigemTransacao: ").append(tipoOrigemTransacao).append("\n");
     sb.append("  cidade: ").append(cidade).append("\n");
     sb.append("  pais: ").append(pais).append("\n");
     sb.append("  latitude: ").append(latitude).append("\n");

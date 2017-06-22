@@ -8,31 +8,34 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.Endereco;
+import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
-import br.com.conductor.pier.api.v2.model.Pessoa;
-import br.com.conductor.pier.api.v2.model.Telefone;
+import br.com.conductor.pier.api.v2.model.PessoaResponse;
+import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
-import br.com.conductor.pier.api.v2.model.OrigemComercial;
-import br.com.conductor.pier.api.v2.model.Banco;
-import br.com.conductor.pier.api.v2.model.PageTipoAjuste;
-import br.com.conductor.pier.api.v2.model.PageTipoBoleto;
-import br.com.conductor.pier.api.v2.model.TipoEndereco;
-import br.com.conductor.pier.api.v2.model.TipoTelefone;
-import br.com.conductor.pier.api.v2.model.PageContasDetalhe;
-import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricao;
-import br.com.conductor.pier.api.v2.model.HistoricoTelefone;
-import br.com.conductor.pier.api.v2.model.PageOrigensComerciais;
-import br.com.conductor.pier.api.v2.model.PagePessoas;
-import br.com.conductor.pier.api.v2.model.PagePortador;
-import br.com.conductor.pier.api.v2.model.ListaProdutos;
-import br.com.conductor.pier.api.v2.model.PageBancos;
-import br.com.conductor.pier.api.v2.model.PageTelefones;
-import br.com.conductor.pier.api.v2.model.PageTiposEndereco;
-import br.com.conductor.pier.api.v2.model.PageTipoTelefones;
-import br.com.conductor.pier.api.v2.model.PageEnderecos;
+import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
+import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.BancoResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
+import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
+import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
+import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
+import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageOrigemComercialResponse;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
+import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
+import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
+import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
+import br.com.conductor.pier.api.v2.model.PageBancoResponse;
+import br.com.conductor.pier.api.v2.model.PageTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaPersist;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse;
@@ -83,9 +86,9 @@ public class CadastrosGeraisApi {
    * @param cidade Apresenta nome da cidade
    * @param uf Apresenta sigla da Unidade Federativa
    * @param pais Apresenta nome do Pais
-   * @return Endereco
+   * @return EnderecoResponse
    */
-  public Endereco  alterarUsingPUT1 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse  alterarUsingPUT1 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -152,7 +155,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Endereco) ApiInvoker.deserialize(response, "", Endereco.class);
+        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
       }
       else {
         return null;
@@ -262,9 +265,9 @@ public class CadastrosGeraisApi {
    * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-   * @return Pessoa
+   * @return PessoaResponse
    */
-  public Pessoa  alterarUsingPUT5 (Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse  alterarUsingPUT5 (Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -337,7 +340,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
+        return (PessoaResponse) ApiInvoker.deserialize(response, "", PessoaResponse.class);
       }
       else {
         return null;
@@ -355,9 +358,9 @@ public class CadastrosGeraisApi {
    * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
    * @param telefone N\u00C3\u00BAmero do telefone.
    * @param ramal N\u00C3\u00BAmero do ramal.
-   * @return Telefone
+   * @return TelefoneResponse
    */
-  public Telefone  alterarUsingPUT6 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse  alterarUsingPUT6 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -410,7 +413,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Telefone) ApiInvoker.deserialize(response, "", Telefone.class);
+        return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
       }
       else {
         return null;
@@ -548,9 +551,9 @@ public class CadastrosGeraisApi {
    * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
    * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id ID da Origem Comercial
-   * @return OrigemComercial
+   * @return OrigemComercialResponse
    */
-  public OrigemComercial  consultarOrigemComercialUsingGET (Long id) throws ApiException {
+  public OrigemComercialResponse  consultarOrigemComercialUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -593,7 +596,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (OrigemComercial) ApiInvoker.deserialize(response, "", OrigemComercial.class);
+        return (OrigemComercialResponse) ApiInvoker.deserialize(response, "", OrigemComercialResponse.class);
       }
       else {
         return null;
@@ -671,12 +674,71 @@ public class CadastrosGeraisApi {
   }
   
   /**
+   * Apresenta os dados de um determinado Atendimento
+   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+   * @return AtendimentoClienteResponse
+   */
+  public AtendimentoClienteResponse  consultarUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/atendimento-clientes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (AtendimentoClienteResponse) ApiInvoker.deserialize(response, "", AtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de um determinado Banco
    * Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
-   * @return Banco
+   * @return BancoResponse
    */
-  public Banco  consultarUsingGET1 (Long id) throws ApiException {
+  public BancoResponse  consultarUsingGET1 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -719,7 +781,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Banco) ApiInvoker.deserialize(response, "", Banco.class);
+        return (BancoResponse) ApiInvoker.deserialize(response, "", BancoResponse.class);
       }
       else {
         return null;
@@ -733,9 +795,9 @@ public class CadastrosGeraisApi {
    * Apresenta os dados de uma determinada Pessoa
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
    * @param id ID da Pessoa
-   * @return Pessoa
+   * @return PessoaResponse
    */
-  public Pessoa  consultarUsingGET10 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET10 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -778,7 +840,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
+        return (PessoaResponse) ApiInvoker.deserialize(response, "", PessoaResponse.class);
       }
       else {
         return null;
@@ -851,9 +913,9 @@ public class CadastrosGeraisApi {
    * Apresenta os dados de um determinado Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-   * @return Telefone
+   * @return TelefoneResponse
    */
-  public Telefone  consultarUsingGET15 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET15 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -896,7 +958,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Telefone) ApiInvoker.deserialize(response, "", Telefone.class);
+        return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
       }
       else {
         return null;
@@ -913,9 +975,9 @@ public class CadastrosGeraisApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo identificador do tipo de ajuste.
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
-   * @return PageTipoAjuste
+   * @return PageTipoAjusteResponse
    */
-  public PageTipoAjuste  consultarUsingGET17 (Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse  consultarUsingGET17 (Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -961,7 +1023,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTipoAjuste) ApiInvoker.deserialize(response, "", PageTipoAjuste.class);
+        return (PageTipoAjusteResponse) ApiInvoker.deserialize(response, "", PageTipoAjusteResponse.class);
       }
       else {
         return null;
@@ -979,9 +1041,9 @@ public class CadastrosGeraisApi {
    * @param id C\u00C3\u00B3digo identificador do tipo de boleto.
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
    * @param banco C\u00C3\u00B3digo identificador do banco.
-   * @return PageTipoBoleto
+   * @return PageTipoBoletoResponse
    */
-  public PageTipoBoleto  consultarUsingGET18 (Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse  consultarUsingGET18 (Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
 
@@ -1029,7 +1091,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTipoBoleto) ApiInvoker.deserialize(response, "", PageTipoBoleto.class);
+        return (PageTipoBoletoResponse) ApiInvoker.deserialize(response, "", PageTipoBoletoResponse.class);
       }
       else {
         return null;
@@ -1043,9 +1105,9 @@ public class CadastrosGeraisApi {
    * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-   * @return TipoEndereco
+   * @return TipoEnderecoResponse
    */
-  public TipoEndereco  consultarUsingGET19 (Long id) throws ApiException {
+  public TipoEnderecoResponse  consultarUsingGET19 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1088,7 +1150,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (TipoEndereco) ApiInvoker.deserialize(response, "", TipoEndereco.class);
+        return (TipoEnderecoResponse) ApiInvoker.deserialize(response, "", TipoEnderecoResponse.class);
       }
       else {
         return null;
@@ -1102,9 +1164,9 @@ public class CadastrosGeraisApi {
    * Apresenta os dados de um determinado Tipo de Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
-   * @return TipoTelefone
+   * @return TipoTelefoneResponse
    */
-  public TipoTelefone  consultarUsingGET21 (Long id) throws ApiException {
+  public TipoTelefoneResponse  consultarUsingGET21 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1147,7 +1209,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (TipoTelefone) ApiInvoker.deserialize(response, "", TipoTelefone.class);
+        return (TipoTelefoneResponse) ApiInvoker.deserialize(response, "", TipoTelefoneResponse.class);
       }
       else {
         return null;
@@ -1161,9 +1223,9 @@ public class CadastrosGeraisApi {
    * Apresenta os dados de um determinado Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-   * @return Endereco
+   * @return EnderecoResponse
    */
-  public Endereco  consultarUsingGET5 (Long id) throws ApiException {
+  public EnderecoResponse  consultarUsingGET5 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1206,7 +1268,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Endereco) ApiInvoker.deserialize(response, "", Endereco.class);
+        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
       }
       else {
         return null;
@@ -1340,9 +1402,9 @@ public class CadastrosGeraisApi {
    * @param numeroReceitaFederal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageContasDetalhe
+   * @return PageContaDetalheResponse
    */
-  public PageContasDetalhe  listarContasPorPessoaUsingGET (String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
+  public PageContaDetalheResponse  listarContasPorPessoaUsingGET (String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroReceitaFederal' is set
@@ -1391,7 +1453,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageContasDetalhe) ApiInvoker.deserialize(response, "", PageContasDetalhe.class);
+        return (PageContaDetalheResponse) ApiInvoker.deserialize(response, "", PageContaDetalheResponse.class);
       }
       else {
         return null;
@@ -1406,9 +1468,9 @@ public class CadastrosGeraisApi {
    * Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageCampoCodificadoDescricao
+   * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricao  listarEstadosCivisUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarEstadosCivisUsingGET (Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1450,7 +1512,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageCampoCodificadoDescricao) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricao.class);
+        return (PageCampoCodificadoDescricaoResponse) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricaoResponse.class);
       }
       else {
         return null;
@@ -1464,9 +1526,9 @@ public class CadastrosGeraisApi {
    * Listar altera\u00C3\u00A7\u00C3\u00B5es de telefones realizadas nos \u00C3\u00BAltimos 60 dias
    * Este m\u00C3\u00A9todo permite verificar quais os telefones de um determinado que cliente que sofreram altera\u00C3\u00A7\u00C3\u00A3o nos \u00C3\u00BAltimos 60 dias.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
-   * @return HistoricoTelefone
+   * @return HistoricoTelefoneResponse
    */
-  public HistoricoTelefone  listarHistoricoTelefonesUsingGET (Long id) throws ApiException {
+  public HistoricoTelefoneResponse  listarHistoricoTelefonesUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1509,7 +1571,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (HistoricoTelefone) ApiInvoker.deserialize(response, "", HistoricoTelefone.class);
+        return (HistoricoTelefoneResponse) ApiInvoker.deserialize(response, "", HistoricoTelefoneResponse.class);
       }
       else {
         return null;
@@ -1524,9 +1586,9 @@ public class CadastrosGeraisApi {
    * Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageCampoCodificadoDescricao
+   * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricao  listarNacionalidadesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarNacionalidadesUsingGET (Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1568,7 +1630,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageCampoCodificadoDescricao) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricao.class);
+        return (PageCampoCodificadoDescricaoResponse) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricaoResponse.class);
       }
       else {
         return null;
@@ -1583,9 +1645,9 @@ public class CadastrosGeraisApi {
    * Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageCampoCodificadoDescricao
+   * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricao  listarNaturezasOcupacoesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarNaturezasOcupacoesUsingGET (Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1627,7 +1689,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageCampoCodificadoDescricao) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricao.class);
+        return (PageCampoCodificadoDescricaoResponse) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricaoResponse.class);
       }
       else {
         return null;
@@ -1645,9 +1707,9 @@ public class CadastrosGeraisApi {
    * @param id Id da origem comercial
    * @param nome Nome da origem comercial
    * @param status Status da origem comercial
-   * @return PageOrigensComerciais
+   * @return PageOrigemComercialResponse
    */
-  public PageOrigensComerciais  listarOrigensComerciaisUsingGET (Integer page, Integer limit, Long id, String nome, Integer status) throws ApiException {
+  public PageOrigemComercialResponse  listarOrigensComerciaisUsingGET (Integer page, Integer limit, Long id, String nome, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -1695,7 +1757,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageOrigensComerciais) ApiInvoker.deserialize(response, "", PageOrigensComerciais.class);
+        return (PageOrigemComercialResponse) ApiInvoker.deserialize(response, "", PageOrigemComercialResponse.class);
       }
       else {
         return null;
@@ -1710,9 +1772,9 @@ public class CadastrosGeraisApi {
    * Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageCampoCodificadoDescricao
+   * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricao  listarProfissoesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarProfissoesUsingGET (Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1754,7 +1816,78 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageCampoCodificadoDescricao) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricao.class);
+        return (PageCampoCodificadoDescricaoResponse) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista todos os atendimentos
+   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
+   * @return PageAtendimentoClienteResponse
+   */
+  public PageAtendimentoClienteResponse  listarUsingGET1 (Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
       }
       else {
         return null;
@@ -1779,9 +1912,9 @@ public class CadastrosGeraisApi {
    * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
    * @param email Email da pessoa fisica
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-   * @return PessoaDetalheResponse
+   * @return PagePessoaDetalheResponse
    */
-  public PessoaDetalheResponse  listarUsingGET13 (Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String profissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse  listarUsingGET14 (Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String profissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
 
@@ -1843,7 +1976,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PessoaDetalheResponse) ApiInvoker.deserialize(response, "", PessoaDetalheResponse.class);
+        return (PagePessoaDetalheResponse) ApiInvoker.deserialize(response, "", PagePessoaDetalheResponse.class);
       }
       else {
         return null;
@@ -1869,9 +2002,9 @@ public class CadastrosGeraisApi {
    * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-   * @return PagePessoas
+   * @return PagePessoaResponse
    */
-  public PagePessoas  listarUsingGET14 (Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PagePessoaResponse  listarUsingGET15 (Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
 
@@ -1935,7 +2068,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PagePessoas) ApiInvoker.deserialize(response, "", PagePessoas.class);
+        return (PagePessoaResponse) ApiInvoker.deserialize(response, "", PagePessoaResponse.class);
       }
       else {
         return null;
@@ -1960,9 +2093,9 @@ public class CadastrosGeraisApi {
    * @param flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
    * @param dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-   * @return PagePortador
+   * @return PagePortadorResponse
    */
-  public PagePortador  listarUsingGET16 (Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
+  public PagePortadorResponse  listarUsingGET17 (Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
 
@@ -2024,7 +2157,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PagePortador) ApiInvoker.deserialize(response, "", PagePortador.class);
+        return (PagePortadorResponse) ApiInvoker.deserialize(response, "", PagePortadorResponse.class);
       }
       else {
         return null;
@@ -2042,9 +2175,9 @@ public class CadastrosGeraisApi {
    * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
    * @param status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
    * @param idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-   * @return ListaProdutos
+   * @return PageProdutoResponse
    */
-  public ListaProdutos  listarUsingGET17 (Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
+  public PageProdutoResponse  listarUsingGET18 (Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
     Object postBody = null;
     
 
@@ -2092,7 +2225,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ListaProdutos) ApiInvoker.deserialize(response, "", ListaProdutos.class);
+        return (PageProdutoResponse) ApiInvoker.deserialize(response, "", PageProdutoResponse.class);
       }
       else {
         return null;
@@ -2107,9 +2240,9 @@ public class CadastrosGeraisApi {
    * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageBancos
+   * @return PageBancoResponse
    */
-  public PageBancos  listarUsingGET2 (Integer page, Integer limit) throws ApiException {
+  public PageBancoResponse  listarUsingGET2 (Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -2151,7 +2284,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageBancos) ApiInvoker.deserialize(response, "", PageBancos.class);
+        return (PageBancoResponse) ApiInvoker.deserialize(response, "", PageBancoResponse.class);
       }
       else {
         return null;
@@ -2173,9 +2306,9 @@ public class CadastrosGeraisApi {
    * @param telefone N\u00C3\u00BAmero do telefone.
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @param status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-   * @return PageTelefones
+   * @return PageTelefoneResponse
    */
-  public PageTelefones  listarUsingGET21 (Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefoneResponse  listarUsingGET22 (Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -2231,7 +2364,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTelefones) ApiInvoker.deserialize(response, "", PageTelefones.class);
+        return (PageTelefoneResponse) ApiInvoker.deserialize(response, "", PageTelefoneResponse.class);
       }
       else {
         return null;
@@ -2248,9 +2381,9 @@ public class CadastrosGeraisApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @param nome Nome do Tipo do Endere\u00C3\u00A7o
-   * @return PageTiposEndereco
+   * @return PageTipoEnderecoResponse
    */
-  public PageTiposEndereco  listarUsingGET23 (Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoEnderecoResponse  listarUsingGET24 (Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2296,7 +2429,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTiposEndereco) ApiInvoker.deserialize(response, "", PageTiposEndereco.class);
+        return (PageTipoEnderecoResponse) ApiInvoker.deserialize(response, "", PageTipoEnderecoResponse.class);
       }
       else {
         return null;
@@ -2313,9 +2446,9 @@ public class CadastrosGeraisApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
    * @param nome Nome do Tipo do Telefone
-   * @return PageTipoTelefones
+   * @return PageTipoTelefoneResponse
    */
-  public PageTipoTelefones  listarUsingGET25 (Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefoneResponse  listarUsingGET26 (Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2361,7 +2494,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTipoTelefones) ApiInvoker.deserialize(response, "", PageTipoTelefones.class);
+        return (PageTipoTelefoneResponse) ApiInvoker.deserialize(response, "", PageTipoTelefoneResponse.class);
       }
       else {
         return null;
@@ -2390,9 +2523,9 @@ public class CadastrosGeraisApi {
    * @param pais Apresenta nome do Pais
    * @param dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
    * @param dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-   * @return PageEnderecos
+   * @return PageEnderecoResponse
    */
-  public PageEnderecos  listarUsingGET8 (Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
+  public PageEnderecoResponse  listarUsingGET9 (Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
     Object postBody = null;
     
 
@@ -2462,7 +2595,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageEnderecos) ApiInvoker.deserialize(response, "", PageEnderecos.class);
+        return (PageEnderecoResponse) ApiInvoker.deserialize(response, "", PageEnderecoResponse.class);
       }
       else {
         return null;
@@ -2591,6 +2724,86 @@ public class CadastrosGeraisApi {
   }
   
   /**
+   * Cadastro um novo Atendimento do tipo Gen\u00C3\u00A9rico para uma Conta
+   * 
+   * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o Atendimento est\u00C3\u00A1 associado
+   * @param conteudoAtendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
+   * @param detalhesAtendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+   * @param dataAtendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataAgendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param flagFilaFraude Flag fila fraude
+   * @return AtendimentoClienteResponse
+   */
+  public AtendimentoClienteResponse  salvarUsingPOST1 (Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, String dataAtendimento, String dataAgendamento, String dataHoraInicioAtendimento, String dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "conteudoAtendimento", conteudoAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "detalhesAtendimento", detalhesAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAgendamento", dataAgendamento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataHoraInicioAtendimento", dataHoraInicioAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataHoraFimAtendimento", dataHoraFimAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagFilaFraude", flagFilaFraude));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (AtendimentoClienteResponse) ApiInvoker.deserialize(response, "", AtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Realiza o cadastro de um novo Telefone
    * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
    * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
@@ -2598,9 +2811,9 @@ public class CadastrosGeraisApi {
    * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
    * @param telefone N\u00C3\u00BAmero do telefone.
    * @param ramal N\u00C3\u00BAmero do ramal.
-   * @return Telefone
+   * @return TelefoneResponse
    */
-  public Telefone  salvarUsingPOST10 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse  salvarUsingPOST10 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
 
@@ -2648,7 +2861,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Telefone) ApiInvoker.deserialize(response, "", Telefone.class);
+        return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
       }
       else {
         return null;
@@ -2672,9 +2885,9 @@ public class CadastrosGeraisApi {
    * @param cidade Apresenta nome da cidade
    * @param uf Apresenta sigla da Unidade Federativa
    * @param pais Apresenta nome do Pais
-   * @return Endereco
+   * @return EnderecoResponse
    */
-  public Endereco  salvarUsingPOST4 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse  salvarUsingPOST4 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
 
@@ -2734,7 +2947,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Endereco) ApiInvoker.deserialize(response, "", Endereco.class);
+        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
       }
       else {
         return null;
@@ -2840,9 +3053,9 @@ public class CadastrosGeraisApi {
    * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-   * @return Pessoa
+   * @return PessoaResponse
    */
-  public Pessoa  salvarUsingPOST8 (String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse  salvarUsingPOST8 (String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'nome' is set
@@ -2910,7 +3123,7 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Pessoa) ApiInvoker.deserialize(response, "", Pessoa.class);
+        return (PessoaResponse) ApiInvoker.deserialize(response, "", PessoaResponse.class);
       }
       else {
         return null;

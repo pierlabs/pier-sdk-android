@@ -8,17 +8,17 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
-import br.com.conductor.pier.api.v2.model.Cartao;
-import br.com.conductor.pier.api.v2.model.DadosCarto;
-import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
-import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
-import br.com.conductor.pier.api.v2.model.Portador;
-import br.com.conductor.pier.api.v2.model.CartaoDetalhado;
+import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartaoResponse;
+import br.com.conductor.pier.api.v2.model.CartaoResponse;
+import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
+import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
+import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
+import br.com.conductor.pier.api.v2.model.PortadorResponse;
+import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
-import br.com.conductor.pier.api.v2.model.PageCartoes;
-import br.com.conductor.pier.api.v2.model.ValidaCartao;
-import br.com.conductor.pier.api.v2.model.ValidaSenhaCartao;
+import br.com.conductor.pier.api.v2.model.PageCartaoResponse;
+import br.com.conductor.pier.api.v2.model.ValidaCartaoResponse;
+import br.com.conductor.pier.api.v2.model.ValidaSenhaCartaoResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -122,9 +122,9 @@ public class CartaoApi {
    * Este m\u00C3\u00A9todo permite que uma Aplica\u00C3\u00A7\u00C3\u00A3o que realize a impress\u00C3\u00A3o de cart\u00C3\u00B5es possa indicar que um determinado idCartao fora impresso ou est\u00C3\u00A1 em processo de impress\u00C3\u00A3o. Para isso, basta informar o respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id) que deseja ter seu um determinado id_status_impressao atribu\u00C3\u00ADdo a ele. Por padr\u00C3\u00A3o, cart\u00C3\u00B5es provis\u00C3\u00B3rios ou que j\u00C3\u00A1 tenham sido inclu\u00C3\u00ADdos em um arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica ter\u00C3\u00A3o esta requisi\u00C3\u00A7\u00C3\u00A3o negada, se utilizada.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status Impress\u00C3\u00A3o (Id).
-   * @return HistoricoImpressaoCartao
+   * @return HistoricoImpressaoCartaoResponse
    */
-  public HistoricoImpressaoCartao  alterarStatusImpressaoUsingPUT (Long id, Long idStatusImpressao) throws ApiException {
+  public HistoricoImpressaoCartaoResponse  alterarStatusImpressaoUsingPUT (Long id, Long idStatusImpressao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -174,7 +174,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (HistoricoImpressaoCartao) ApiInvoker.deserialize(response, "", HistoricoImpressaoCartao.class);
+        return (HistoricoImpressaoCartaoResponse) ApiInvoker.deserialize(response, "", HistoricoImpressaoCartaoResponse.class);
       }
       else {
         return null;
@@ -189,9 +189,9 @@ public class CartaoApi {
    * Esta m\u00C3\u00A9todo permite que um cart\u00C3\u00A3o pr\u00C3\u00A9-pago impresso de forma avulsa e an\u00C3\u00B4nimo seja atribu\u00C3\u00ADdo a uma pessoa para que esta passe a ser a portadora titular dele.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
    * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
-   * @return Cartao
+   * @return CartaoResponse
    */
-  public Cartao  atribuirPessoaUsingPUT (Long id, Long idPessoa) throws ApiException {
+  public CartaoResponse  atribuirPessoaUsingPUT (Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -241,7 +241,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -257,9 +257,9 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
    * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
-   * @return Cartao
+   * @return CartaoResponse
    */
-  public Cartao  bloquearUsingPUT (Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse  bloquearUsingPUT (Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -316,7 +316,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -397,9 +397,9 @@ public class CartaoApi {
    * Consultar Detalhes do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
    * @param id id
-   * @return DadosCarto
+   * @return DadosCartaoResponse
    */
-  public DadosCarto  consultarDadosReaisCartaoUsingGET (Long id) throws ApiException {
+  public DadosCartaoResponse  consultarDadosReaisCartaoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -442,7 +442,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (DadosCarto) ApiInvoker.deserialize(response, "", DadosCarto.class);
+        return (DadosCartaoResponse) ApiInvoker.deserialize(response, "", DadosCartaoResponse.class);
       }
       else {
         return null;
@@ -456,9 +456,9 @@ public class CartaoApi {
    * Apresenta os limites do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return LimiteDisponibilidade
+   * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidade  consultarLimiteDisponibilidadeUsingGET (Long id) throws ApiException {
+  public LimiteDisponibilidadeResponse  consultarLimiteDisponibilidadeUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -501,7 +501,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (LimiteDisponibilidade) ApiInvoker.deserialize(response, "", LimiteDisponibilidade.class);
+        return (LimiteDisponibilidadeResponse) ApiInvoker.deserialize(response, "", LimiteDisponibilidadeResponse.class);
       }
       else {
         return null;
@@ -515,9 +515,9 @@ public class CartaoApi {
    * Permite consultar um determinado Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
    * Este m\u00C3\u00A9todo permite consultar os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor atrav\u00C3\u00A9s do id do lote.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es (id)
-   * @return LoteCartoesPrePagos
+   * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagos  consultarLotesCartoesPrePagosUsingGET (Long id) throws ApiException {
+  public LoteCartoesPrePagosResponse  consultarLotesCartoesPrePagosUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -560,7 +560,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (LoteCartoesPrePagos) ApiInvoker.deserialize(response, "", LoteCartoesPrePagos.class);
+        return (LoteCartoesPrePagosResponse) ApiInvoker.deserialize(response, "", LoteCartoesPrePagosResponse.class);
       }
       else {
         return null;
@@ -574,9 +574,9 @@ public class CartaoApi {
    * Apresenta os dados do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es do Portador de um determinado Cart\u00C3\u00A3o a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Portador
+   * @return PortadorResponse
    */
-  public Portador  consultarPortadorUsingGET (Long id) throws ApiException {
+  public PortadorResponse  consultarPortadorUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -619,7 +619,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Portador) ApiInvoker.deserialize(response, "", Portador.class);
+        return (PortadorResponse) ApiInvoker.deserialize(response, "", PortadorResponse.class);
       }
       else {
         return null;
@@ -633,9 +633,9 @@ public class CartaoApi {
    * Apresenta os dados de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return CartaoDetalhado
+   * @return CartaoDetalheResponse
    */
-  public CartaoDetalhado  consultarUsingGET3 (Long id) throws ApiException {
+  public CartaoDetalheResponse  consultarUsingGET3 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -678,7 +678,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (CartaoDetalhado) ApiInvoker.deserialize(response, "", CartaoDetalhado.class);
+        return (CartaoDetalheResponse) ApiInvoker.deserialize(response, "", CartaoDetalheResponse.class);
       }
       else {
         return null;
@@ -692,9 +692,9 @@ public class CartaoApi {
    * Realiza o desbloqueio de um cart\u00C3\u00A3o bloqueado por tentativas de senha incorretas
    * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Cartao
+   * @return CartaoResponse
    */
-  public Cartao  desbloquearSenhaIncorretaUsingPOST (Long id) throws ApiException {
+  public CartaoResponse  desbloquearSenhaIncorretaUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -737,7 +737,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -751,9 +751,9 @@ public class CartaoApi {
    * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Cartao
+   * @return CartaoResponse
    */
-  public Cartao  desbloquearUsingPUT (Long id) throws ApiException {
+  public CartaoResponse  desbloquearUsingPUT (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -796,7 +796,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -815,9 +815,9 @@ public class CartaoApi {
    * @param idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
    * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @param quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-   * @return LoteCartoesPrePagos
+   * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagos  gerarLotesCartoesPrePagosUsingPOST (Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes) throws ApiException {
+  public LoteCartoesPrePagosResponse  gerarLotesCartoesPrePagosUsingPOST (Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes) throws ApiException {
     Object postBody = null;
     
 
@@ -867,7 +867,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (LoteCartoesPrePagos) ApiInvoker.deserialize(response, "", LoteCartoesPrePagos.class);
+        return (LoteCartoesPrePagosResponse) ApiInvoker.deserialize(response, "", LoteCartoesPrePagosResponse.class);
       }
       else {
         return null;
@@ -881,9 +881,9 @@ public class CartaoApi {
    * Gerar uma nova via de Cart\u00C3\u00A3o
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
-   * @return Cartao
+   * @return CartaoResponse
    */
-  public Cartao  gerarNovaViaUsingPOST (Long id) throws ApiException {
+  public CartaoResponse  gerarNovaViaUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -926,7 +926,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Cartao) ApiInvoker.deserialize(response, "", Cartao.class);
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -1045,9 +1045,9 @@ public class CartaoApi {
    * @param flagProvisorio Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
    * @param codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    * @param sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
-   * @return PageCartoes
+   * @return PageCartaoResponse
    */
-  public PageCartoes  listarUsingGET4 (Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
+  public PageCartaoResponse  listarUsingGET5 (Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
     Object postBody = null;
     
 
@@ -1125,7 +1125,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageCartoes) ApiInvoker.deserialize(response, "", PageCartoes.class);
+        return (PageCartaoResponse) ApiInvoker.deserialize(response, "", PageCartaoResponse.class);
       }
       else {
         return null;
@@ -1142,9 +1142,9 @@ public class CartaoApi {
    * @param nomePortador Nome do portador do cart\u00C3\u00A3o
    * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
    * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-   * @return ValidaCartao
+   * @return ValidaCartaoResponse
    */
-  public ValidaCartao  validarDadosImpressosBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
+  public ValidaCartaoResponse  validarDadosImpressosBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1210,7 +1210,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+        return (ValidaCartaoResponse) ApiInvoker.deserialize(response, "", ValidaCartaoResponse.class);
       }
       else {
         return null;
@@ -1227,9 +1227,9 @@ public class CartaoApi {
    * @param nomePortador Nome do portador do cart\u00C3\u00A3o
    * @param dataValidade Data de validade do cart\u00C3\u00A3o no formato yyyy-MM
    * @param codigoSeguranca C\u00C3\u00B3digo de seguran\u00C3\u00A7a do cart\u00C3\u00A3o com tr\u00C3\u00AAs n\u00C3\u00BAmeros
-   * @return ValidaCartao
+   * @return ValidaCartaoResponse
    */
-  public ValidaCartao  validarDadosImpressosNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
+  public ValidaCartaoResponse  validarDadosImpressosNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1295,7 +1295,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+        return (ValidaCartaoResponse) ApiInvoker.deserialize(response, "", ValidaCartaoResponse.class);
       }
       else {
         return null;
@@ -1310,9 +1310,9 @@ public class CartaoApi {
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00C3\u00A7\u00C3\u00A3o desde m\u00C3\u00A9todo tem diversas aplica\u00C3\u00A7\u00C3\u00B5es, sendo a principal delas a de Identifica\u00C3\u00A7\u00C3\u00A3o Positiva do Cart\u00C3\u00A3o antes de permitir que o portador realize transa\u00C3\u00A7\u00C3\u00B5es diversas, como as de compra e saque na modalidade d\u00C3\u00A9bito em conta corrente, dentre outras.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
-   * @return ValidaCartao
+   * @return ValidaCartaoResponse
    */
-  public ValidaCartao  validarDe55CartaoMastercardUsingGET (String numeroCartao, String criptograma) throws ApiException {
+  public ValidaCartaoResponse  validarDe55CartaoMastercardUsingGET (String numeroCartao, String criptograma) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1364,7 +1364,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+        return (ValidaCartaoResponse) ApiInvoker.deserialize(response, "", ValidaCartaoResponse.class);
       }
       else {
         return null;
@@ -1379,9 +1379,9 @@ public class CartaoApi {
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00C3\u00A3o est\u00C3\u00A1 correta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param senha Senha para ser validada.
-   * @return ValidaSenhaCartao
+   * @return ValidaSenhaCartaoResponse
    */
-  public ValidaSenhaCartao  validarSenhaUsingGET (Long id, String senha) throws ApiException {
+  public ValidaSenhaCartaoResponse  validarSenhaUsingGET (Long id, String senha) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1431,7 +1431,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ValidaSenhaCartao) ApiInvoker.deserialize(response, "", ValidaSenhaCartao.class);
+        return (ValidaSenhaCartaoResponse) ApiInvoker.deserialize(response, "", ValidaSenhaCartaoResponse.class);
       }
       else {
         return null;
@@ -1447,9 +1447,9 @@ public class CartaoApi {
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
    * @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
-   * @return ValidaCartao
+   * @return ValidaCartaoResponse
    */
-  public ValidaCartao  validarTarjaUsingGET (String numeroCartao, String trilha1, String trilha2) throws ApiException {
+  public ValidaCartaoResponse  validarTarjaUsingGET (String numeroCartao, String trilha1, String trilha2) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1508,7 +1508,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ValidaCartao) ApiInvoker.deserialize(response, "", ValidaCartao.class);
+        return (ValidaCartaoResponse) ApiInvoker.deserialize(response, "", ValidaCartaoResponse.class);
       }
       else {
         return null;
