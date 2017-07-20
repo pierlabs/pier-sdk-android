@@ -259,22 +259,22 @@ public class CartaoApi {
    * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
    * @return CartaoResponse
    */
-  public CartaoResponse  bloquearUsingPUT (Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse  bloquearUsingPOST (Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPOST");
     }
     
     // verify the required parameter 'idStatus' is set
     if (idStatus == null) {
-       throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPOST");
     }
     
     // verify the required parameter 'observacao' is set
     if (observacao == null) {
-       throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearUsingPOST");
     }
     
 
@@ -314,7 +314,7 @@ public class CartaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
@@ -384,6 +384,81 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+   * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+   * @return CartaoResponse
+   */
+  public CartaoResponse  cancelarUsingPOST (Long id, Long idStatus, String observacao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarUsingPOST");
+    }
+    
+    // verify the required parameter 'idStatus' is set
+    if (idStatus == null) {
+       throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelarUsingPOST");
+    }
+    
+    // verify the required parameter 'observacao' is set
+    if (observacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'observacao' when calling cancelarUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cancelar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status", idStatus));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;
@@ -635,12 +710,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse  consultarUsingGET3 (Long id) throws ApiException {
+  public CartaoDetalheResponse  consultarUsingGET4 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
     }
     
 
@@ -753,12 +828,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return CartaoResponse
    */
-  public CartaoResponse  desbloquearUsingPUT (Long id) throws ApiException {
+  public CartaoResponse  desbloquearUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearUsingPOST");
     }
     
 
@@ -794,7 +869,7 @@ public class CartaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
@@ -1126,6 +1201,65 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageCartaoResponse) ApiInvoker.deserialize(response, "", PageCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return CartaoResponse
+   */
+  public CartaoResponse  reativarUsingPOST (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling reativarUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/reativar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
       }
       else {
         return null;

@@ -26,7 +26,7 @@ public class UsuarioResponse  {
   @SerializedName("email")
   private String email = null;
   public enum StatusEnum {
-     ATIVO,  INATIVO, 
+     INATIVO,  ATIVO, 
   };
   @SerializedName("status")
   private StatusEnum status = null;

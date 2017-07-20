@@ -39,6 +39,8 @@ public class OportunidadeAUDResponse  {
   private String revDate = null;
   @SerializedName("revType")
   private Long revType = null;
+  @SerializedName("rev")
+  private Long rev = null;
 
   
   /**
@@ -185,6 +187,18 @@ public class OportunidadeAUDResponse  {
   }
 
   
+  /**
+   * Identificador da auditoria
+   **/
+  @ApiModelProperty(value = "Identificador da auditoria")
+  public Long getRev() {
+    return rev;
+  }
+  public void setRev(Long rev) {
+    this.rev = rev;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -203,6 +217,7 @@ public class OportunidadeAUDResponse  {
     sb.append("  detalhes: ").append(detalhes).append("\n");
     sb.append("  revDate: ").append(revDate).append("\n");
     sb.append("  revType: ").append(revType).append("\n");
+    sb.append("  rev: ").append(rev).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

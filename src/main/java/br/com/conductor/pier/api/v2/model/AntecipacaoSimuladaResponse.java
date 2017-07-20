@@ -20,12 +20,12 @@ public class AntecipacaoSimuladaResponse  {
   private Long idAntecipacaoSimulada = null;
   @SerializedName("idConta")
   private Long idConta = null;
-  @SerializedName("idEventoExterno")
-  private Long idEventoExterno = null;
+  @SerializedName("idCompra")
+  private Long idCompra = null;
   @SerializedName("idTipoTransacao")
   private Long idTipoTransacao = null;
-  @SerializedName("qtdeParcelasAntecipaveis")
-  private Integer qtdeParcelasAntecipaveis = null;
+  @SerializedName("quantidadeParcelasAntecipaveis")
+  private Integer quantidadeParcelasAntecipaveis = null;
   @SerializedName("valorParcela")
   private BigDecimal valorParcela = null;
   @SerializedName("dataHoraSimulacao")
@@ -61,21 +61,21 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento.
+   * C\u00C3\u00B3digo identificador do evento compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do evento.")
-  public Long getIdEventoExterno() {
-    return idEventoExterno;
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do evento compra.")
+  public Long getIdCompra() {
+    return idCompra;
   }
-  public void setIdEventoExterno(Long idEventoExterno) {
-    this.idEventoExterno = idEventoExterno;
+  public void setIdCompra(Long idCompra) {
+    this.idCompra = idCompra;
   }
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento.
+   * C\u00C3\u00B3digo identificador do tipo do evento compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do tipo do evento.")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do tipo do evento compra.")
   public Long getIdTipoTransacao() {
     return idTipoTransacao;
   }
@@ -88,11 +88,11 @@ public class AntecipacaoSimuladaResponse  {
    * Quantidade de parcelas antecip\u00C3\u00A1veis.
    **/
   @ApiModelProperty(value = "Quantidade de parcelas antecip\u00C3\u00A1veis.")
-  public Integer getQtdeParcelasAntecipaveis() {
-    return qtdeParcelasAntecipaveis;
+  public Integer getQuantidadeParcelasAntecipaveis() {
+    return quantidadeParcelasAntecipaveis;
   }
-  public void setQtdeParcelasAntecipaveis(Integer qtdeParcelasAntecipaveis) {
-    this.qtdeParcelasAntecipaveis = qtdeParcelasAntecipaveis;
+  public void setQuantidadeParcelasAntecipaveis(Integer quantidadeParcelasAntecipaveis) {
+    this.quantidadeParcelasAntecipaveis = quantidadeParcelasAntecipaveis;
   }
 
   
@@ -152,9 +152,9 @@ public class AntecipacaoSimuladaResponse  {
     
     sb.append("  idAntecipacaoSimulada: ").append(idAntecipacaoSimulada).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
-    sb.append("  idEventoExterno: ").append(idEventoExterno).append("\n");
+    sb.append("  idCompra: ").append(idCompra).append("\n");
     sb.append("  idTipoTransacao: ").append(idTipoTransacao).append("\n");
-    sb.append("  qtdeParcelasAntecipaveis: ").append(qtdeParcelasAntecipaveis).append("\n");
+    sb.append("  quantidadeParcelasAntecipaveis: ").append(quantidadeParcelasAntecipaveis).append("\n");
     sb.append("  valorParcela: ").append(valorParcela).append("\n");
     sb.append("  dataHoraSimulacao: ").append(dataHoraSimulacao).append("\n");
     sb.append("  taxaAntecipacaoAno: ").append(taxaAntecipacaoAno).append("\n");

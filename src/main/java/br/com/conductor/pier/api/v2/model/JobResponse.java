@@ -22,7 +22,7 @@ public class JobResponse  {
   @SerializedName("cron")
   private String cron = null;
   public enum StatusEnum {
-     ATIVO,  INATIVO, 
+     INATIVO,  ATIVO, 
   };
   @SerializedName("status")
   private StatusEnum status = null;

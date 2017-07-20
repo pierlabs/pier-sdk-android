@@ -43,6 +43,12 @@ public class PessoaJuridicaAprovadaResponse  {
   private Integer diaVencimento = null;
   @SerializedName("nomeImpresso")
   private String nomeImpresso = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
+  @SerializedName("idProposta")
+  private Long idProposta = null;
+  @SerializedName("canalEntrada")
+  private String canalEntrada = null;
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
@@ -52,9 +58,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)")
   public Long getId() {
     return id;
   }
@@ -208,6 +214,42 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  @ApiModelProperty(value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   @ApiModelProperty(value = "Apresenta os telefones da empresa")
@@ -262,6 +304,9 @@ public class PessoaJuridicaAprovadaResponse  {
     sb.append("  email: ").append(email).append("\n");
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idProposta: ").append(idProposta).append("\n");
+    sb.append("  canalEntrada: ").append(canalEntrada).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("  socios: ").append(socios).append("\n");

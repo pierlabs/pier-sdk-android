@@ -16,7 +16,7 @@ public class WebHookResponse  {
   @SerializedName("id")
   private Long id = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  OUTROS, 
+     RISCO_FRAUDE,  TOKEN_SMS,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -27,6 +27,11 @@ public class WebHookResponse  {
   private MetodoEnum metodo = null;
   @SerializedName("url")
   private String url = null;
+  public enum StatusEnum {
+     INATIVO,  ATIVO, 
+  };
+  @SerializedName("status")
+  private StatusEnum status = null;
 
   
   /**
@@ -77,6 +82,18 @@ public class WebHookResponse  {
   }
 
   
+  /**
+   * Status do WebHook
+   **/
+  @ApiModelProperty(required = true, value = "Status do WebHook")
+  public StatusEnum getStatus() {
+    return status;
+  }
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -87,6 +104,7 @@ public class WebHookResponse  {
     sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("  metodo: ").append(metodo).append("\n");
     sb.append("  url: ").append(url).append("\n");
+    sb.append("  status: ").append(status).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -2,6 +2,7 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
+import java.math.BigDecimal;
 import java.util.*;
 
 
@@ -36,8 +37,8 @@ public class PessoaFisicaAprovadaPersist  {
   private String dataEmissaoIdentidade = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
-  @SerializedName("profissao")
-  private String profissao = null;
+  @SerializedName("idProfissao")
+  private Integer idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
@@ -58,6 +59,10 @@ public class PessoaFisicaAprovadaPersist  {
   private String nomeImpresso = null;
   @SerializedName("nomeEmpresa")
   private String nomeEmpresa = null;
+  @SerializedName("valorRenda")
+  private BigDecimal valorRenda = null;
+  @SerializedName("canalEntrada")
+  private String canalEntrada = null;
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaPersist> telefones = null;
   @SerializedName("enderecos")
@@ -188,11 +193,11 @@ public class PessoaFisicaAprovadaPersist  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public String getProfissao() {
-    return profissao;
+  public Integer getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -317,6 +322,30 @@ public class PessoaFisicaAprovadaPersist  {
 
   
   /**
+   * Apresenta o valor da renda compravada
+   **/
+  @ApiModelProperty(value = "Apresenta o valor da renda compravada")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  @ApiModelProperty(value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   @ApiModelProperty(value = "Apresenta os telefones da empresa")
@@ -356,7 +385,7 @@ public class PessoaFisicaAprovadaPersist  {
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
@@ -367,6 +396,8 @@ public class PessoaFisicaAprovadaPersist  {
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  nomeEmpresa: ").append(nomeEmpresa).append("\n");
+    sb.append("  valorRenda: ").append(valorRenda).append("\n");
+    sb.append("  canalEntrada: ").append(canalEntrada).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("}\n");

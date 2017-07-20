@@ -324,12 +324,12 @@ public class OportunidadesApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  consultarUsingGET20 (Long id) throws ApiException {
+  public TipoOportunidadeResponse  consultarUsingGET21 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
     }
     
 
@@ -383,12 +383,12 @@ public class OportunidadesApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET8 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET9 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
     }
     
 
@@ -762,19 +762,24 @@ public class OportunidadesApi {
   /**
    * Lista as oportunidades
    * Este recurso permite listar as oportunidades.
+   * @param dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
    * @param dataCadastro Data do cadastro da oportunidade
    * @param dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
    * @param numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-   * @param dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    * @param dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse  listarUsingGET13 (Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse  listarUsingGET13 (String dataInicioVigencia, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
+    
+    // verify the required parameter 'dataInicioVigencia' is set
+    if (dataInicioVigencia == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataInicioVigencia' when calling listarUsingGET13");
+    }
     
 
     // create path and map variables
@@ -975,12 +980,12 @@ public class OportunidadesApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  salvarUsingPOST11 (TipoOportunidade persist) throws ApiException {
+  public TipoOportunidadeResponse  salvarUsingPOST13 (TipoOportunidade persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST13");
     }
     
 
@@ -1029,17 +1034,17 @@ public class OportunidadesApi {
   }
   
   /**
-   * Cadastra as oportunidade
+   * Cadastra as oportunidades
    * Esse recurso permite cadastrar oportunidades.
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  salvarUsingPOST6 (OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse  salvarUsingPOST8 (OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
     }
     
 

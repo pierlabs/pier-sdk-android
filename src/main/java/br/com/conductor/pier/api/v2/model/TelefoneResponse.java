@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjetoTelefone
+ * Objeto de Resposta de Telefone
  **/
-@ApiModel(description = "ObjetoTelefone")
+@ApiModel(description = "Objeto de Resposta de Telefone")
 public class TelefoneResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -54,9 +54,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -66,9 +66,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
+   * C\u00C3\u00B3digo DDD do telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone.")
   public String getDdd() {
     return ddd;
   }

@@ -35,6 +35,14 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("AdicionalPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdicionalPersist>>(){}.getType();
+    }
+    
+    if ("AdicionalResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdicionalResponse>>(){}.getType();
+    }
+    
     if ("AjusteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<AjusteResponse>>(){}.getType();
     }
@@ -51,6 +59,10 @@ public class JsonUtil {
       return new TypeToken<List<AntecipacaoSimuladaResponse>>(){}.getType();
     }
     
+    if ("AnuidadeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AnuidadeResponse>>(){}.getType();
+    }
+    
     if ("AplicacaoMobilePersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<AplicacaoMobilePersist>>(){}.getType();
     }
@@ -63,8 +75,28 @@ public class JsonUtil {
       return new TypeToken<List<AplicacaoMobileUpdate>>(){}.getType();
     }
     
+    if ("ArquivoDetalhesPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ArquivoDetalhesPersist>>(){}.getType();
+    }
+    
+    if ("ArquivoParametroResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ArquivoParametroResponse>>(){}.getType();
+    }
+    
+    if ("ArquivoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ArquivoPersist>>(){}.getType();
+    }
+    
+    if ("ArquivoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ArquivoResponse>>(){}.getType();
+    }
+    
     if ("AtendimentoClienteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<AtendimentoClienteResponse>>(){}.getType();
+    }
+    
+    if ("AtribuirAssinaturaClienteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AtribuirAssinaturaClienteRequest>>(){}.getType();
     }
     
     if ("AuthToken".equalsIgnoreCase(className)) {
@@ -115,8 +147,24 @@ public class JsonUtil {
       return new TypeToken<List<CdtDetalheOportunidadeAUD>>(){}.getType();
     }
     
+    if ("CodigoSegurancaSMSPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CodigoSegurancaSMSPersist>>(){}.getType();
+    }
+    
+    if ("CodigoSegurancaSMSRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CodigoSegurancaSMSRequest>>(){}.getType();
+    }
+    
     if ("CompraResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CompraResponse>>(){}.getType();
+    }
+    
+    if ("ConfiguracaoEmailPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ConfiguracaoEmailPersist>>(){}.getType();
+    }
+    
+    if ("ConfiguracaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ConfiguracaoEmailResponse>>(){}.getType();
     }
     
     if ("ContaDetalheResponse".equalsIgnoreCase(className)) {
@@ -227,6 +275,10 @@ public class JsonUtil {
       return new TypeToken<List<HistoricoTelefoneResponse>>(){}.getType();
     }
     
+    if ("IntegracaoEmissorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<IntegracaoEmissorResponse>>(){}.getType();
+    }
+    
     if ("JobResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<JobResponse>>(){}.getType();
     }
@@ -259,6 +311,10 @@ public class JsonUtil {
       return new TypeToken<List<NotificacaoSMSResponse>>(){}.getType();
     }
     
+    if ("OperadoraResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<OperadoraResponse>>(){}.getType();
+    }
+    
     if ("OportunidadeAUDResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<OportunidadeAUDResponse>>(){}.getType();
     }
@@ -277,6 +333,10 @@ public class JsonUtil {
     
     if ("OrigemComercialResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<OrigemComercialResponse>>(){}.getType();
+    }
+    
+    if ("PageAnuidadeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageAnuidadeResponse>>(){}.getType();
     }
     
     if ("PageAplicacaoMobileResponse".equalsIgnoreCase(className)) {
@@ -305,6 +365,10 @@ public class JsonUtil {
     
     if ("PageCompraResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageCompraResponse>>(){}.getType();
+    }
+    
+    if ("PageConfiguracaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageConfiguracaoEmailResponse>>(){}.getType();
     }
     
     if ("PageContaDetalheResponse".equalsIgnoreCase(className)) {
@@ -363,6 +427,10 @@ public class JsonUtil {
       return new TypeToken<List<PageLoteCartoesPrePagosResponse>>(){}.getType();
     }
     
+    if ("PageOperadoraResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageOperadoraResponse>>(){}.getType();
+    }
+    
     if ("PageOportunidadeAUDResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageOportunidadeAUDResponse>>(){}.getType();
     }
@@ -403,6 +471,10 @@ public class JsonUtil {
       return new TypeToken<List<PagePushResponse>>(){}.getType();
     }
     
+    if ("PageRiscoFraudeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageRiscoFraudeResponse>>(){}.getType();
+    }
+    
     if ("PageSMSResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageSMSResponse>>(){}.getType();
     }
@@ -433,6 +505,10 @@ public class JsonUtil {
     
     if ("PageTelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageTelefoneResponse>>(){}.getType();
+    }
+    
+    if ("PageTemplateNotificacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTemplateNotificacaoResponse>>(){}.getType();
     }
     
     if ("PageTerminalResponse".equalsIgnoreCase(className)) {
@@ -543,6 +619,10 @@ public class JsonUtil {
       return new TypeToken<List<ProdutoDetalhesResponse>>(){}.getType();
     }
     
+    if ("ProdutoOrigemResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ProdutoOrigemResponse>>(){}.getType();
+    }
+    
     if ("ProdutoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ProdutoResponse>>(){}.getType();
     }
@@ -561,10 +641,6 @@ public class JsonUtil {
     
     if ("RiscoFraudeResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<RiscoFraudeResponse>>(){}.getType();
-    }
-    
-    if ("RiscoFraudeResponsePage".equalsIgnoreCase(className)) {
-      return new TypeToken<List<RiscoFraudeResponsePage>>(){}.getType();
     }
     
     if ("SocioAprovadoResponse".equalsIgnoreCase(className)) {
@@ -603,6 +679,10 @@ public class JsonUtil {
       return new TypeToken<List<TaxasRefinanciamentoResponse>>(){}.getType();
     }
     
+    if ("TelefoneAdicionalPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TelefoneAdicionalPersist>>(){}.getType();
+    }
+    
     if ("TelefonePessoaAprovadaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<TelefonePessoaAprovadaPersist>>(){}.getType();
     }
@@ -613,6 +693,10 @@ public class JsonUtil {
     
     if ("TelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TelefoneResponse>>(){}.getType();
+    }
+    
+    if ("TemplateNotificacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TemplateNotificacaoResponse>>(){}.getType();
     }
     
     if ("TerminalResponse".equalsIgnoreCase(className)) {
@@ -641,6 +725,10 @@ public class JsonUtil {
     
     if ("TipoOportunidadeResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TipoOportunidadeResponse>>(){}.getType();
+    }
+    
+    if ("TipoResolucaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TipoResolucaoResponse>>(){}.getType();
     }
     
     if ("TipoTelefoneResponse".equalsIgnoreCase(className)) {
@@ -709,6 +797,14 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("AdicionalPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<AdicionalPersist>(){}.getType();
+    }
+    
+    if ("AdicionalResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<AdicionalResponse>(){}.getType();
+    }
+    
     if ("AjusteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<AjusteResponse>(){}.getType();
     }
@@ -725,6 +821,10 @@ public class JsonUtil {
       return new TypeToken<AntecipacaoSimuladaResponse>(){}.getType();
     }
     
+    if ("AnuidadeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<AnuidadeResponse>(){}.getType();
+    }
+    
     if ("AplicacaoMobilePersist".equalsIgnoreCase(className)) {
       return new TypeToken<AplicacaoMobilePersist>(){}.getType();
     }
@@ -737,8 +837,28 @@ public class JsonUtil {
       return new TypeToken<AplicacaoMobileUpdate>(){}.getType();
     }
     
+    if ("ArquivoDetalhesPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<ArquivoDetalhesPersist>(){}.getType();
+    }
+    
+    if ("ArquivoParametroResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ArquivoParametroResponse>(){}.getType();
+    }
+    
+    if ("ArquivoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<ArquivoPersist>(){}.getType();
+    }
+    
+    if ("ArquivoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ArquivoResponse>(){}.getType();
+    }
+    
     if ("AtendimentoClienteResponse".equalsIgnoreCase(className)) {
       return new TypeToken<AtendimentoClienteResponse>(){}.getType();
+    }
+    
+    if ("AtribuirAssinaturaClienteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<AtribuirAssinaturaClienteRequest>(){}.getType();
     }
     
     if ("AuthToken".equalsIgnoreCase(className)) {
@@ -789,8 +909,24 @@ public class JsonUtil {
       return new TypeToken<CdtDetalheOportunidadeAUD>(){}.getType();
     }
     
+    if ("CodigoSegurancaSMSPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<CodigoSegurancaSMSPersist>(){}.getType();
+    }
+    
+    if ("CodigoSegurancaSMSRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CodigoSegurancaSMSRequest>(){}.getType();
+    }
+    
     if ("CompraResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CompraResponse>(){}.getType();
+    }
+    
+    if ("ConfiguracaoEmailPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<ConfiguracaoEmailPersist>(){}.getType();
+    }
+    
+    if ("ConfiguracaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ConfiguracaoEmailResponse>(){}.getType();
     }
     
     if ("ContaDetalheResponse".equalsIgnoreCase(className)) {
@@ -901,6 +1037,10 @@ public class JsonUtil {
       return new TypeToken<HistoricoTelefoneResponse>(){}.getType();
     }
     
+    if ("IntegracaoEmissorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<IntegracaoEmissorResponse>(){}.getType();
+    }
+    
     if ("JobResponse".equalsIgnoreCase(className)) {
       return new TypeToken<JobResponse>(){}.getType();
     }
@@ -933,6 +1073,10 @@ public class JsonUtil {
       return new TypeToken<NotificacaoSMSResponse>(){}.getType();
     }
     
+    if ("OperadoraResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<OperadoraResponse>(){}.getType();
+    }
+    
     if ("OportunidadeAUDResponse".equalsIgnoreCase(className)) {
       return new TypeToken<OportunidadeAUDResponse>(){}.getType();
     }
@@ -951,6 +1095,10 @@ public class JsonUtil {
     
     if ("OrigemComercialResponse".equalsIgnoreCase(className)) {
       return new TypeToken<OrigemComercialResponse>(){}.getType();
+    }
+    
+    if ("PageAnuidadeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageAnuidadeResponse>(){}.getType();
     }
     
     if ("PageAplicacaoMobileResponse".equalsIgnoreCase(className)) {
@@ -979,6 +1127,10 @@ public class JsonUtil {
     
     if ("PageCompraResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageCompraResponse>(){}.getType();
+    }
+    
+    if ("PageConfiguracaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageConfiguracaoEmailResponse>(){}.getType();
     }
     
     if ("PageContaDetalheResponse".equalsIgnoreCase(className)) {
@@ -1037,6 +1189,10 @@ public class JsonUtil {
       return new TypeToken<PageLoteCartoesPrePagosResponse>(){}.getType();
     }
     
+    if ("PageOperadoraResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageOperadoraResponse>(){}.getType();
+    }
+    
     if ("PageOportunidadeAUDResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageOportunidadeAUDResponse>(){}.getType();
     }
@@ -1077,6 +1233,10 @@ public class JsonUtil {
       return new TypeToken<PagePushResponse>(){}.getType();
     }
     
+    if ("PageRiscoFraudeResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageRiscoFraudeResponse>(){}.getType();
+    }
+    
     if ("PageSMSResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageSMSResponse>(){}.getType();
     }
@@ -1107,6 +1267,10 @@ public class JsonUtil {
     
     if ("PageTelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageTelefoneResponse>(){}.getType();
+    }
+    
+    if ("PageTemplateNotificacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTemplateNotificacaoResponse>(){}.getType();
     }
     
     if ("PageTerminalResponse".equalsIgnoreCase(className)) {
@@ -1217,6 +1381,10 @@ public class JsonUtil {
       return new TypeToken<ProdutoDetalhesResponse>(){}.getType();
     }
     
+    if ("ProdutoOrigemResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ProdutoOrigemResponse>(){}.getType();
+    }
+    
     if ("ProdutoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ProdutoResponse>(){}.getType();
     }
@@ -1235,10 +1403,6 @@ public class JsonUtil {
     
     if ("RiscoFraudeResponse".equalsIgnoreCase(className)) {
       return new TypeToken<RiscoFraudeResponse>(){}.getType();
-    }
-    
-    if ("RiscoFraudeResponsePage".equalsIgnoreCase(className)) {
-      return new TypeToken<RiscoFraudeResponsePage>(){}.getType();
     }
     
     if ("SocioAprovadoResponse".equalsIgnoreCase(className)) {
@@ -1277,6 +1441,10 @@ public class JsonUtil {
       return new TypeToken<TaxasRefinanciamentoResponse>(){}.getType();
     }
     
+    if ("TelefoneAdicionalPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<TelefoneAdicionalPersist>(){}.getType();
+    }
+    
     if ("TelefonePessoaAprovadaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<TelefonePessoaAprovadaPersist>(){}.getType();
     }
@@ -1287,6 +1455,10 @@ public class JsonUtil {
     
     if ("TelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TelefoneResponse>(){}.getType();
+    }
+    
+    if ("TemplateNotificacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TemplateNotificacaoResponse>(){}.getType();
     }
     
     if ("TerminalResponse".equalsIgnoreCase(className)) {
@@ -1315,6 +1487,10 @@ public class JsonUtil {
     
     if ("TipoOportunidadeResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TipoOportunidadeResponse>(){}.getType();
+    }
+    
+    if ("TipoResolucaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TipoResolucaoResponse>(){}.getType();
     }
     
     if ("TipoTelefoneResponse".equalsIgnoreCase(className)) {

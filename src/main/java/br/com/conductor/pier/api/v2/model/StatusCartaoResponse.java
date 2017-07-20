@@ -31,6 +31,12 @@ public class StatusCartaoResponse  {
   private Integer flagPermiteNovaViaCartao = null;
   @SerializedName("flagPermiteDesbloqueio")
   private Integer flagPermiteDesbloqueio = null;
+  @SerializedName("flagCancelamento")
+  private Integer flagCancelamento = null;
+  @SerializedName("flagPermiteBloqueio")
+  private Integer flagPermiteBloqueio = null;
+  @SerializedName("flagReativar")
+  private Integer flagReativar = null;
 
   
   /**
@@ -141,6 +147,42 @@ public class StatusCartaoResponse  {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getFlagCancelamento() {
+    return flagCancelamento;
+  }
+  public void setFlagCancelamento(Integer flagCancelamento) {
+    this.flagCancelamento = flagCancelamento;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getFlagPermiteBloqueio() {
+    return flagPermiteBloqueio;
+  }
+  public void setFlagPermiteBloqueio(Integer flagPermiteBloqueio) {
+    this.flagPermiteBloqueio = flagPermiteBloqueio;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getFlagReativar() {
+    return flagReativar;
+  }
+  public void setFlagReativar(Integer flagReativar) {
+    this.flagReativar = flagReativar;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -156,6 +198,9 @@ public class StatusCartaoResponse  {
     sb.append("  flagCobraTarifa: ").append(flagCobraTarifa).append("\n");
     sb.append("  flagPermiteNovaViaCartao: ").append(flagPermiteNovaViaCartao).append("\n");
     sb.append("  flagPermiteDesbloqueio: ").append(flagPermiteDesbloqueio).append("\n");
+    sb.append("  flagCancelamento: ").append(flagCancelamento).append("\n");
+    sb.append("  flagPermiteBloqueio: ").append(flagPermiteBloqueio).append("\n");
+    sb.append("  flagReativar: ").append(flagReativar).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

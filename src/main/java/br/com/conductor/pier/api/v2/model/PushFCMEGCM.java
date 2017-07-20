@@ -26,7 +26,7 @@ public class PushFCMEGCM  {
   @SerializedName("conteudo")
   private String conteudo = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  OUTROS, 
+     RISCO_FRAUDE,  TOKEN_SMS,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;

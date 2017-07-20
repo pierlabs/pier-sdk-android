@@ -19,8 +19,8 @@ public class PessoaDetalheResponse  {
   private String nomeMae = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
-  @SerializedName("profissao")
-  private String profissao = null;
+  @SerializedName("idProfissao")
+  private Integer idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
@@ -75,11 +75,11 @@ public class PessoaDetalheResponse  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public String getProfissao() {
-    return profissao;
+  public Integer getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -164,7 +164,7 @@ public class PessoaDetalheResponse  {
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  nomeMae: ").append(nomeMae).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");

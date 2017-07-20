@@ -38,8 +38,8 @@ public class PessoaFisicaAprovadaResponse  {
   private String dataEmissaoIdentidade = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
-  @SerializedName("profissao")
-  private String profissao = null;
+  @SerializedName("idProfissao")
+  private Integer idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
@@ -60,6 +60,12 @@ public class PessoaFisicaAprovadaResponse  {
   private String nomeImpresso = null;
   @SerializedName("nomeEmpresa")
   private String nomeEmpresa = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
+  @SerializedName("idProposta")
+  private Long idProposta = null;
+  @SerializedName("canalEntrada")
+  private String canalEntrada = null;
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
@@ -67,9 +73,9 @@ public class PessoaFisicaAprovadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)")
   public Long getId() {
     return id;
   }
@@ -202,11 +208,11 @@ public class PessoaFisicaAprovadaResponse  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public String getProfissao() {
-    return profissao;
+  public Integer getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -319,14 +325,50 @@ public class PessoaFisicaAprovadaResponse  {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome da empresa
    **/
-  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome da empresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
   }
   public void setNomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  @ApiModelProperty(value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
   }
 
   
@@ -371,7 +413,7 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
@@ -382,6 +424,9 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  nomeEmpresa: ").append(nomeEmpresa).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idProposta: ").append(idProposta).append("\n");
+    sb.append("  canalEntrada: ").append(canalEntrada).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("}\n");

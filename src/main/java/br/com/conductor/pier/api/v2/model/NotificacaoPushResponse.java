@@ -15,7 +15,7 @@ public class NotificacaoPushResponse  {
   @SerializedName("idEmissor")
   private Long idEmissor = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  OUTROS, 
+     RISCO_FRAUDE,  TOKEN_SMS,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
