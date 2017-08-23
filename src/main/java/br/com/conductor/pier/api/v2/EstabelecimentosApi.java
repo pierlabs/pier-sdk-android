@@ -164,6 +164,7 @@ public class EstabelecimentosApi {
   /**
    * Lista Estabelecimentos
    * Lista todas os Estabelecimentos
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
@@ -187,7 +188,7 @@ public class EstabelecimentosApi {
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse  listarUsingGET10 (Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentoResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
 
@@ -201,6 +202,8 @@ public class EstabelecimentosApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -280,6 +283,7 @@ public class EstabelecimentosApi {
   /**
    * Lista os Terminais cadastrados no Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
@@ -288,7 +292,7 @@ public class EstabelecimentosApi {
    * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse  listarUsingGET23 (Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse  listarUsingGET25 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -302,6 +306,8 @@ public class EstabelecimentosApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     

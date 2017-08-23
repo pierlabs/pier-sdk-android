@@ -20,14 +20,17 @@ import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
+import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageOrigemComercialResponse;
-import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
-import br.com.conductor.pier.api.v2.model.PageBancoResponse;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageBancoResponse;
+import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -430,13 +433,14 @@ public class CadastrosGeraisApi {
   /**
    * Lista os tipos de ajustes do emissor 
    * Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo identificador do tipo de ajuste.
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
    * @return PageTipoAjusteResponse
    */
-  public PageTipoAjusteResponse  consultarUsingGET18 (Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse  consultarUsingGET18 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -450,6 +454,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -495,6 +501,7 @@ public class CadastrosGeraisApi {
   /**
    * Lista os tipos de boletos do emissor 
    * Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo identificador do tipo de boleto.
@@ -502,7 +509,7 @@ public class CadastrosGeraisApi {
    * @param banco C\u00C3\u00B3digo identificador do banco.
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse  consultarUsingGET19 (Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse  consultarUsingGET19 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
 
@@ -516,6 +523,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -800,11 +809,12 @@ public class CadastrosGeraisApi {
    * Lista as contas da pessoa
    * Permite listar as contas de um pessoa a partir do seu numero na receita federal.
    * @param numeroReceitaFederal N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do cliente na Receita Federal (CPF ou CNPJ)
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageContaDetalheResponse
    */
-  public PageContaDetalheResponse  listarContasPorPessoaUsingGET (String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
+  public PageContaDetalheResponse  listarContasPorPessoaUsingGET (String numeroReceitaFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroReceitaFederal' is set
@@ -825,6 +835,8 @@ public class CadastrosGeraisApi {
 
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -866,11 +878,12 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Estados C\u00C3\u00ADvis
    * Este m\u00C3\u00A9todo permite que sejam listados os Estados C\u00C3\u00ADvis na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricaoResponse  listarEstadosCivisUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarEstadosCivisUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -884,6 +897,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -913,6 +928,68 @@ public class CadastrosGeraisApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageCampoCodificadoDescricaoResponse) ApiInvoker.deserialize(response, "", PageCampoCodificadoDescricaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Listar Fantasias B\u00C3\u00A1sicas
+   * Lista as fantasia b\u00C3\u00A1sicas.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageFantasiaBasicaResponse
+   */
+  public PageFantasiaBasicaResponse  listarFantasiasBasicasUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageFantasiaBasicaResponse) ApiInvoker.deserialize(response, "", PageFantasiaBasicaResponse.class);
       }
       else {
         return null;
@@ -984,11 +1061,12 @@ public class CadastrosGeraisApi {
   /**
    * Lista nacionalidades
    * Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricaoResponse  listarNacionalidadesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarNacionalidadesUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1002,6 +1080,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1043,11 +1123,12 @@ public class CadastrosGeraisApi {
   /**
    * Lista as Ocupa\u00C3\u00A7\u00C3\u00B5es
    * Este m\u00C3\u00A9todo permite que sejam listados as naturezas de opera\u00C3\u00A7\u00C3\u00B5es na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricaoResponse  listarNaturezasOcupacoesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarNaturezasOcupacoesUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1061,6 +1142,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1102,6 +1185,7 @@ public class CadastrosGeraisApi {
   /**
    * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
    * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Id da origem comercial
@@ -1111,7 +1195,7 @@ public class CadastrosGeraisApi {
    * @param idProduto C\u00C3\u00B3digo identificador do produto
    * @return PageOrigemComercialResponse
    */
-  public PageOrigemComercialResponse  listarOrigensComerciaisUsingGET (Integer page, Integer limit, Long id, String nome, Integer status, Long idEstabelecimento, Long idProduto) throws ApiException {
+  public PageOrigemComercialResponse  listarOrigensComerciaisUsingGET (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer status, Long idEstabelecimento, Long idProduto) throws ApiException {
     Object postBody = null;
     
 
@@ -1125,6 +1209,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1176,11 +1262,12 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Parentescos
    * Este m\u00C3\u00A9todo permite que sejam listados parentescos na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricaoResponse  listarParentescosUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarParentescosUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1194,6 +1281,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1235,11 +1324,12 @@ public class CadastrosGeraisApi {
   /**
    * Lista profiss\u00C3\u00B5es
    * Este m\u00C3\u00A9todo permite que sejam listados as profiss\u00C3\u00B5es na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
-  public PageCampoCodificadoDescricaoResponse  listarProfissoesUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageCampoCodificadoDescricaoResponse  listarProfissoesUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1253,6 +1343,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1292,79 +1384,9 @@ public class CadastrosGeraisApi {
   }
   
   /**
-   * Lista todos os atendimentos
-   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @return PageAtendimentoClienteResponse
-   */
-  public PageAtendimentoClienteResponse  listarUsingGET1 (Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista os Portadores existentes
    * Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
@@ -1379,7 +1401,7 @@ public class CadastrosGeraisApi {
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @return PagePortadorResponse
    */
-  public PagePortadorResponse  listarUsingGET17 (Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
+  public PagePortadorResponse  listarUsingGET18 (List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
 
@@ -1393,6 +1415,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1454,6 +1478,7 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Produtos do Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
@@ -1461,7 +1486,7 @@ public class CadastrosGeraisApi {
    * @param idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
    * @return PageProdutoResponse
    */
-  public PageProdutoResponse  listarUsingGET18 (Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
+  public PageProdutoResponse  listarUsingGET19 (List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
     Object postBody = null;
     
 
@@ -1475,6 +1500,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1520,18 +1547,23 @@ public class CadastrosGeraisApi {
   }
   
   /**
-   * Lista os Bancos cadastrados para o Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+   * Lista todos os atendimentos
+   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageBancoResponse
+   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
+   * @return PageAtendimentoClienteResponse
    */
-  public PageBancoResponse  listarUsingGET2 (Integer page, Integer limit) throws ApiException {
+  public PageAtendimentoClienteResponse  listarUsingGET2 (List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
     Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/bancos".replaceAll("\\{format\\}","json");
+    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1541,9 +1573,19 @@ public class CadastrosGeraisApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
     
 
     
@@ -1568,7 +1610,84 @@ public class CadastrosGeraisApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageBancoResponse) ApiInvoker.deserialize(response, "", PageBancoResponse.class);
+        return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista promotores cadastrados na base do emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+   * @param nome Nome do Promotor
+   * @param dataCadastro Data da Inclus\u00C3\u00A3o.
+   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+   * @param idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+   * @return PagePromotorResponse
+   */
+  public PagePromotorResponse  listarUsingGET20 (List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/promotores".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataCadastro", dataCadastro));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idUsuario", idUsuario));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PagePromotorResponse) ApiInvoker.deserialize(response, "", PagePromotorResponse.class);
       }
       else {
         return null;
@@ -1581,13 +1700,14 @@ public class CadastrosGeraisApi {
   /**
    * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
    * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @return PageTipoEnderecoResponse
    */
-  public PageTipoEnderecoResponse  listarUsingGET24 (Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoEnderecoResponse  listarUsingGET26 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -1601,6 +1721,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1646,13 +1768,14 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Tipos de Telefones
    * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
    * @param nome Nome do Tipo do Telefone
    * @return PageTipoTelefoneResponse
    */
-  public PageTipoTelefoneResponse  listarUsingGET26 (Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefoneResponse  listarUsingGET28 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -1666,6 +1789,8 @@ public class CadastrosGeraisApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1699,6 +1824,133 @@ public class CadastrosGeraisApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTipoTelefoneResponse) ApiInvoker.deserialize(response, "", PageTipoTelefoneResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os Bancos cadastrados para o Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageBancoResponse
+   */
+  public PageBancoResponse  listarUsingGET3 (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/bancos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageBancoResponse) ApiInvoker.deserialize(response, "", PageBancoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Listar Vencimentos
+   * Este recurso permite que sejam listados os Vencimentos do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param dataVencimento Indica a data de vencimento das faturas
+   * @return PageControleVencimentoResponse
+   */
+  public PageControleVencimentoResponse  listarUsingGET33 (List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/vencimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageControleVencimentoResponse) ApiInvoker.deserialize(response, "", PageControleVencimentoResponse.class);
       }
       else {
         return null;

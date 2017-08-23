@@ -59,6 +59,8 @@ public class CartaoImpressaoResponse  {
   private String trilhaCVV1 = null;
   @SerializedName("trilhaCVV2")
   private String trilhaCVV2 = null;
+  @SerializedName("numeroCartaoHash")
+  private Long numeroCartaoHash = null;
 
   
   /**
@@ -336,6 +338,18 @@ public class CartaoImpressaoResponse  {
   }
 
   
+  /**
+   * Apresenta o numero da hash do cart\u00C3\u00A3o 
+   **/
+  @ApiModelProperty(value = "Apresenta o numero da hash do cart\u00C3\u00A3o ")
+  public Long getNumeroCartaoHash() {
+    return numeroCartaoHash;
+  }
+  public void setNumeroCartaoHash(Long numeroCartaoHash) {
+    this.numeroCartaoHash = numeroCartaoHash;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -365,6 +379,7 @@ public class CartaoImpressaoResponse  {
     sb.append("  trilha2: ").append(trilha2).append("\n");
     sb.append("  trilhaCVV1: ").append(trilhaCVV1).append("\n");
     sb.append("  trilhaCVV2: ").append(trilhaCVV2).append("\n");
+    sb.append("  numeroCartaoHash: ").append(numeroCartaoHash).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

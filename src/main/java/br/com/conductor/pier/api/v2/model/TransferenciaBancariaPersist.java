@@ -14,16 +14,10 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria")
 public class TransferenciaBancariaPersist  {
   
-  @SerializedName("dataCompra")
-  private String dataCompra = null;
-  @SerializedName("proximoVencimentoPadrao")
-  private String proximoVencimentoPadrao = null;
-  @SerializedName("proximoVencimentoReal")
-  private String proximoVencimentoReal = null;
   @SerializedName("valorCompra")
   private BigDecimal valorCompra = null;
-  @SerializedName("nomeFavorecido")
-  private String nomeFavorecido = null;
+  @SerializedName("valor")
+  private BigDecimal valor = null;
   @SerializedName("documentoFavorecido")
   private String documentoFavorecido = null;
   @SerializedName("banco")
@@ -38,42 +32,8 @@ public class TransferenciaBancariaPersist  {
   private String digitoConta = null;
   @SerializedName("flagContaPoupanca")
   private Integer flagContaPoupanca = null;
-
-  
-  /**
-   * Data da transfer\u00C3\u00AAncia
-   **/
-  @ApiModelProperty(required = true, value = "Data da transfer\u00C3\u00AAncia")
-  public String getDataCompra() {
-    return dataCompra;
-  }
-  public void setDataCompra(String dataCompra) {
-    this.dataCompra = dataCompra;
-  }
-
-  
-  /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura
-   **/
-  @ApiModelProperty(required = true, value = "Dia do vencimento padr\u00C3\u00A3o da fatura")
-  public String getProximoVencimentoPadrao() {
-    return proximoVencimentoPadrao;
-  }
-  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
-    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
-  }
-
-  
-  /**
-   * Data do vencimento real da fatura
-   **/
-  @ApiModelProperty(required = true, value = "Data do vencimento real da fatura")
-  public String getProximoVencimentoReal() {
-    return proximoVencimentoReal;
-  }
-  public void setProximoVencimentoReal(String proximoVencimentoReal) {
-    this.proximoVencimentoReal = proximoVencimentoReal;
-  }
+  @SerializedName("nomeFavorecido")
+  private String nomeFavorecido = null;
 
   
   /**
@@ -89,14 +49,14 @@ public class TransferenciaBancariaPersist  {
 
   
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Valor da transfer\u00C3\u00AAncia
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
-  public String getNomeFavorecido() {
-    return nomeFavorecido;
+  @ApiModelProperty(required = true, value = "Valor da transfer\u00C3\u00AAncia")
+  public BigDecimal getValor() {
+    return valor;
   }
-  public void setNomeFavorecido(String nomeFavorecido) {
-    this.nomeFavorecido = nomeFavorecido;
+  public void setValor(BigDecimal valor) {
+    this.valor = valor;
   }
 
   
@@ -184,17 +144,26 @@ public class TransferenciaBancariaPersist  {
   }
 
   
+  /**
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  public String getNomeFavorecido() {
+    return nomeFavorecido;
+  }
+  public void setNomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransferenciaBancariaPersist {\n");
     
-    sb.append("  dataCompra: ").append(dataCompra).append("\n");
-    sb.append("  proximoVencimentoPadrao: ").append(proximoVencimentoPadrao).append("\n");
-    sb.append("  proximoVencimentoReal: ").append(proximoVencimentoReal).append("\n");
     sb.append("  valorCompra: ").append(valorCompra).append("\n");
-    sb.append("  nomeFavorecido: ").append(nomeFavorecido).append("\n");
+    sb.append("  valor: ").append(valor).append("\n");
     sb.append("  documentoFavorecido: ").append(documentoFavorecido).append("\n");
     sb.append("  banco: ").append(banco).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
@@ -202,6 +171,7 @@ public class TransferenciaBancariaPersist  {
     sb.append("  numeroConta: ").append(numeroConta).append("\n");
     sb.append("  digitoConta: ").append(digitoConta).append("\n");
     sb.append("  flagContaPoupanca: ").append(flagContaPoupanca).append("\n");
+    sb.append("  nomeFavorecido: ").append(nomeFavorecido).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

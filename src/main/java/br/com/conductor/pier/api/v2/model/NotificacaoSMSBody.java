@@ -26,7 +26,7 @@ public class NotificacaoSMSBody  {
   @SerializedName("dataAgendamento")
   private String dataAgendamento = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  TOKEN_SMS,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;

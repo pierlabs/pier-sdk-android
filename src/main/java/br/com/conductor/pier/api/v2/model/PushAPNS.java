@@ -28,7 +28,7 @@ public class PushAPNS  {
   @SerializedName("conteudo")
   private String conteudo = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  TOKEN_SMS,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;

@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.TelefoneResponse;
+import br.com.conductor.pier.api.v2.model.TelefoneAdicionalPersist;
 import java.util.*;
 
 
@@ -10,15 +10,11 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Resposta do recurso de cadastrar adicional
+ * Objeto Adicional
  **/
-@ApiModel(description = "Resposta do recurso de cadastrar adicional")
-public class AdicionalResponse  {
+@ApiModel(description = "Objeto Adicional")
+public class AdicionalUpdate  {
   
-  @SerializedName("idConta")
-  private Long idConta = null;
-  @SerializedName("idPessoa")
-  private Long idPessoa = null;
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("nomeImpresso")
@@ -47,40 +43,14 @@ public class AdicionalResponse  {
   private Long idParentesco = null;
   @SerializedName("email")
   private String email = null;
-  @SerializedName("flagAtivo")
-  private Integer flagAtivo = null;
   @SerializedName("telefones")
-  private List<TelefoneResponse> telefones = null;
+  private List<TelefoneAdicionalPersist> telefones = null;
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional
+   * Nome completo do Adicional.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta para cadastro do Adicional")
-  public Long getIdConta() {
-    return idConta;
-  }
-  public void setIdConta(Long idConta) {
-    this.idConta = idConta;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Adicional")
-  public Long getIdPessoa() {
-    return idPessoa;
-  }
-  public void setIdPessoa(Long idPessoa) {
-    this.idPessoa = idPessoa;
-  }
-
-  
-  /**
-   * Nome completo do Adicional
-   **/
-  @ApiModelProperty(value = "Nome completo do Adicional")
+  @ApiModelProperty(required = true, value = "Nome completo do Adicional.")
   public String getNome() {
     return nome;
   }
@@ -90,9 +60,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o
+   * Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.
    **/
-  @ApiModelProperty(value = "Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -102,9 +72,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF ou CNPJ do Adicional
+   * N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF ou CNPJ do Adicional")
+  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -114,9 +84,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Data de Nascimento do Adicional
+   * Data de Nascimento do Adicional em formato yyyy-MM-dd.
    **/
-  @ApiModelProperty(value = "Data de Nascimento do Adicional")
+  @ApiModelProperty(value = "Data de Nascimento do Adicional em formato yyyy-MM-dd.")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -138,9 +108,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do Documento de Identidade do Adicional
+   * N\u00C3\u00BAmero do Documento de Identidade do Adicional.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do Documento de Identidade do Adicional.")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -150,9 +120,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional
+   * Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.
    **/
-  @ApiModelProperty(value = "Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -162,9 +132,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+   * Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.
    **/
-  @ApiModelProperty(value = "Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido")
+  @ApiModelProperty(value = "Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido.")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -174,9 +144,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional
+   * Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
    **/
-  @ApiModelProperty(value = "Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -186,9 +156,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
   }
@@ -198,9 +168,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.")
   public Long getIdProfissao() {
     return idProfissao;
   }
@@ -210,9 +180,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.")
   public Long getIdNacionalidade() {
     return idNacionalidade;
   }
@@ -222,9 +192,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -234,9 +204,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
   public String getEmail() {
     return email;
   }
@@ -246,25 +216,13 @@ public class AdicionalResponse  {
 
   
   /**
-   * Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+   * Lista de telefones do adicional.
    **/
-  @ApiModelProperty(value = "Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0")
-  public Integer getFlagAtivo() {
-    return flagAtivo;
-  }
-  public void setFlagAtivo(Integer flagAtivo) {
-    this.flagAtivo = flagAtivo;
-  }
-
-  
-  /**
-   * Lista dos telefones do adicional
-   **/
-  @ApiModelProperty(value = "Lista dos telefones do adicional")
-  public List<TelefoneResponse> getTelefones() {
+  @ApiModelProperty(value = "Lista de telefones do adicional.")
+  public List<TelefoneAdicionalPersist> getTelefones() {
     return telefones;
   }
-  public void setTelefones(List<TelefoneResponse> telefones) {
+  public void setTelefones(List<TelefoneAdicionalPersist> telefones) {
     this.telefones = telefones;
   }
 
@@ -273,10 +231,8 @@ public class AdicionalResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AdicionalResponse {\n");
+    sb.append("class AdicionalUpdate {\n");
     
-    sb.append("  idConta: ").append(idConta).append("\n");
-    sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  numeroReceitaFederal: ").append(numeroReceitaFederal).append("\n");
@@ -291,7 +247,6 @@ public class AdicionalResponse  {
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
     sb.append("  email: ").append(email).append("\n");
-    sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();

@@ -3,6 +3,7 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
+import java.math.BigDecimal;
 import java.util.*;
 
 
@@ -49,12 +50,20 @@ public class PessoaJuridicaAprovadaResponse  {
   private Long idProposta = null;
   @SerializedName("canalEntrada")
   private String canalEntrada = null;
+  @SerializedName("valorPontuacao")
+  private Integer valorPontuacao = null;
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
   private List<EnderecoAprovadoResponse> enderecos = null;
   @SerializedName("socios")
   private List<SocioAprovadoResponse> socios = null;
+  @SerializedName("limiteGlobal")
+  private BigDecimal limiteGlobal = null;
+  @SerializedName("limiteMaximo")
+  private BigDecimal limiteMaximo = null;
+  @SerializedName("limiteParcelas")
+  private BigDecimal limiteParcelas = null;
 
   
   /**
@@ -250,6 +259,18 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  @ApiModelProperty(value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   @ApiModelProperty(value = "Apresenta os telefones da empresa")
@@ -285,6 +306,42 @@ public class PessoaJuridicaAprovadaResponse  {
   }
 
   
+  /**
+   * Valor do Limite Global
+   **/
+  @ApiModelProperty(required = true, value = "Valor do Limite Global")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  @ApiModelProperty(required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -307,9 +364,13 @@ public class PessoaJuridicaAprovadaResponse  {
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idProposta: ").append(idProposta).append("\n");
     sb.append("  canalEntrada: ").append(canalEntrada).append("\n");
+    sb.append("  valorPontuacao: ").append(valorPontuacao).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("  socios: ").append(socios).append("\n");
+    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
+    sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
+    sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

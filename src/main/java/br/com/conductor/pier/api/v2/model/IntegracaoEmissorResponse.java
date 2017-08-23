@@ -17,10 +17,14 @@ public class IntegracaoEmissorResponse  {
   private Long id = null;
   @SerializedName("idConta")
   private Long idConta = null;
+  @SerializedName("idArquivo")
+  private Long idArquivo = null;
   @SerializedName("status")
-  private Integer status = null;
-  @SerializedName("dataEvento")
-  private String dataEvento = null;
+  private String status = null;
+  @SerializedName("dataInclusao")
+  private String dataInclusao = null;
+  @SerializedName("dataAlteracao")
+  private String dataAlteracao = null;
 
   
   /**
@@ -48,13 +52,25 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.")
+  public Long getIdArquivo() {
+    return idArquivo;
+  }
+  public void setIdArquivo(Long idArquivo) {
+    this.idArquivo = idArquivo;
+  }
+
+  
+  /**
    * Status do registro.
    **/
   @ApiModelProperty(value = "Status do registro.")
-  public Integer getStatus() {
+  public String getStatus() {
     return status;
   }
-  public void setStatus(Integer status) {
+  public void setStatus(String status) {
     this.status = status;
   }
 
@@ -63,11 +79,23 @@ public class IntegracaoEmissorResponse  {
    * Data de inclus\u00C3\u00A3o do registro.
    **/
   @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o do registro.")
-  public String getDataEvento() {
-    return dataEvento;
+  public String getDataInclusao() {
+    return dataInclusao;
   }
-  public void setDataEvento(String dataEvento) {
-    this.dataEvento = dataEvento;
+  public void setDataInclusao(String dataInclusao) {
+    this.dataInclusao = dataInclusao;
+  }
+
+  
+  /**
+   * Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+   **/
+  @ApiModelProperty(value = "Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.")
+  public String getDataAlteracao() {
+    return dataAlteracao;
+  }
+  public void setDataAlteracao(String dataAlteracao) {
+    this.dataAlteracao = dataAlteracao;
   }
 
   
@@ -79,8 +107,10 @@ public class IntegracaoEmissorResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idArquivo: ").append(idArquivo).append("\n");
     sb.append("  status: ").append(status).append("\n");
-    sb.append("  dataEvento: ").append(dataEvento).append("\n");
+    sb.append("  dataInclusao: ").append(dataInclusao).append("\n");
+    sb.append("  dataAlteracao: ").append(dataAlteracao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -32,8 +32,8 @@ public class TransacoesCorrentesResponse  {
   private String cartaoMascarado = null;
   @SerializedName("nomePortador")
   private String nomePortador = null;
-  @SerializedName("dataTransacaoUTC")
-  private String dataTransacaoUTC = null;
+  @SerializedName("dataTransacao")
+  private String dataTransacao = null;
   @SerializedName("dataFaturamento")
   private String dataFaturamento = null;
   @SerializedName("dataVencimento")
@@ -199,14 +199,14 @@ public class TransacoesCorrentesResponse  {
 
   
   /**
-   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
    **/
-  @ApiModelProperty(value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
-  public String getDataTransacaoUTC() {
-    return dataTransacaoUTC;
+  @ApiModelProperty(value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.")
+  public String getDataTransacao() {
+    return dataTransacao;
   }
-  public void setDataTransacaoUTC(String dataTransacaoUTC) {
-    this.dataTransacaoUTC = dataTransacaoUTC;
+  public void setDataTransacao(String dataTransacao) {
+    this.dataTransacao = dataTransacao;
   }
 
   
@@ -549,7 +549,7 @@ public class TransacoesCorrentesResponse  {
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  cartaoMascarado: ").append(cartaoMascarado).append("\n");
     sb.append("  nomePortador: ").append(nomePortador).append("\n");
-    sb.append("  dataTransacaoUTC: ").append(dataTransacaoUTC).append("\n");
+    sb.append("  dataTransacao: ").append(dataTransacao).append("\n");
     sb.append("  dataFaturamento: ").append(dataFaturamento).append("\n");
     sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
     sb.append("  modoEntradaTransacao: ").append(modoEntradaTransacao).append("\n");

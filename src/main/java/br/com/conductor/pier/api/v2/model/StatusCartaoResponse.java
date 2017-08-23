@@ -17,26 +17,14 @@ public class StatusCartaoResponse  {
   private Long id = null;
   @SerializedName("nome")
   private String nome = null;
-  @SerializedName("flagCancelaCartao")
-  private Integer flagCancelaCartao = null;
-  @SerializedName("flagCancelaNoDesbloqueio")
-  private Integer flagCancelaNoDesbloqueio = null;
-  @SerializedName("idStatusDestinoDesbloqueio")
-  private Long idStatusDestinoDesbloqueio = null;
-  @SerializedName("idStatusDestinoConta")
-  private Long idStatusDestinoConta = null;
-  @SerializedName("flagCobraTarifa")
-  private Integer flagCobraTarifa = null;
-  @SerializedName("flagPermiteNovaViaCartao")
-  private Integer flagPermiteNovaViaCartao = null;
-  @SerializedName("flagPermiteDesbloqueio")
-  private Integer flagPermiteDesbloqueio = null;
-  @SerializedName("flagCancelamento")
-  private Integer flagCancelamento = null;
-  @SerializedName("flagPermiteBloqueio")
-  private Integer flagPermiteBloqueio = null;
-  @SerializedName("flagReativar")
-  private Integer flagReativar = null;
+  @SerializedName("permiteDesbloquear")
+  private Integer permiteDesbloquear = null;
+  @SerializedName("permiteAtribuirComoBloqueio")
+  private Integer permiteAtribuirComoBloqueio = null;
+  @SerializedName("permiteAtribuirComoCancelamento")
+  private Integer permiteAtribuirComoCancelamento = null;
+  @SerializedName("cobrarTarifaAoEmitirNovaVia")
+  private Integer cobrarTarifaAoEmitirNovaVia = null;
 
   
   /**
@@ -64,110 +52,14 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(required = true, value = "Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.")
-  public Integer getFlagCancelaCartao() {
-    return flagCancelaCartao;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteDesbloquear() {
+    return permiteDesbloquear;
   }
-  public void setFlagCancelaCartao(Integer flagCancelaCartao) {
-    this.flagCancelaCartao = flagCancelaCartao;
-  }
-
-  
-  /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
-   **/
-  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.")
-  public Integer getFlagCancelaNoDesbloqueio() {
-    return flagCancelaNoDesbloqueio;
-  }
-  public void setFlagCancelaNoDesbloqueio(Integer flagCancelaNoDesbloqueio) {
-    this.flagCancelaNoDesbloqueio = flagCancelaNoDesbloqueio;
-  }
-
-  
-  /**
-   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
-  public Long getIdStatusDestinoDesbloqueio() {
-    return idStatusDestinoDesbloqueio;
-  }
-  public void setIdStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
-    this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
-  }
-
-  
-  /**
-   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
-   **/
-  @ApiModelProperty(required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.")
-  public Long getIdStatusDestinoConta() {
-    return idStatusDestinoConta;
-  }
-  public void setIdStatusDestinoConta(Long idStatusDestinoConta) {
-    this.idStatusDestinoConta = idStatusDestinoConta;
-  }
-
-  
-  /**
-   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
-   **/
-  @ApiModelProperty(required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.")
-  public Integer getFlagCobraTarifa() {
-    return flagCobraTarifa;
-  }
-  public void setFlagCobraTarifa(Integer flagCobraTarifa) {
-    this.flagCobraTarifa = flagCobraTarifa;
-  }
-
-  
-  /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-   **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagPermiteNovaViaCartao() {
-    return flagPermiteNovaViaCartao;
-  }
-  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
-    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
-  }
-
-  
-  /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
-   **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagPermiteDesbloqueio() {
-    return flagPermiteDesbloqueio;
-  }
-  public void setFlagPermiteDesbloqueio(Integer flagPermiteDesbloqueio) {
-    this.flagPermiteDesbloqueio = flagPermiteDesbloqueio;
-  }
-
-  
-  /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
-   **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagCancelamento() {
-    return flagCancelamento;
-  }
-  public void setFlagCancelamento(Integer flagCancelamento) {
-    this.flagCancelamento = flagCancelamento;
-  }
-
-  
-  /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
-   **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagPermiteBloqueio() {
-    return flagPermiteBloqueio;
-  }
-  public void setFlagPermiteBloqueio(Integer flagPermiteBloqueio) {
-    this.flagPermiteBloqueio = flagPermiteBloqueio;
+  public void setPermiteDesbloquear(Integer permiteDesbloquear) {
+    this.permiteDesbloquear = permiteDesbloquear;
   }
 
   
@@ -175,11 +67,35 @@ public class StatusCartaoResponse  {
    * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    **/
   @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagReativar() {
-    return flagReativar;
+  public Integer getPermiteAtribuirComoBloqueio() {
+    return permiteAtribuirComoBloqueio;
   }
-  public void setFlagReativar(Integer flagReativar) {
-    this.flagReativar = flagReativar;
+  public void setPermiteAtribuirComoBloqueio(Integer permiteAtribuirComoBloqueio) {
+    this.permiteAtribuirComoBloqueio = permiteAtribuirComoBloqueio;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteAtribuirComoCancelamento() {
+    return permiteAtribuirComoCancelamento;
+  }
+  public void setPermiteAtribuirComoCancelamento(Integer permiteAtribuirComoCancelamento) {
+    this.permiteAtribuirComoCancelamento = permiteAtribuirComoCancelamento;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getCobrarTarifaAoEmitirNovaVia() {
+    return cobrarTarifaAoEmitirNovaVia;
+  }
+  public void setCobrarTarifaAoEmitirNovaVia(Integer cobrarTarifaAoEmitirNovaVia) {
+    this.cobrarTarifaAoEmitirNovaVia = cobrarTarifaAoEmitirNovaVia;
   }
 
   
@@ -191,16 +107,10 @@ public class StatusCartaoResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
-    sb.append("  flagCancelaCartao: ").append(flagCancelaCartao).append("\n");
-    sb.append("  flagCancelaNoDesbloqueio: ").append(flagCancelaNoDesbloqueio).append("\n");
-    sb.append("  idStatusDestinoDesbloqueio: ").append(idStatusDestinoDesbloqueio).append("\n");
-    sb.append("  idStatusDestinoConta: ").append(idStatusDestinoConta).append("\n");
-    sb.append("  flagCobraTarifa: ").append(flagCobraTarifa).append("\n");
-    sb.append("  flagPermiteNovaViaCartao: ").append(flagPermiteNovaViaCartao).append("\n");
-    sb.append("  flagPermiteDesbloqueio: ").append(flagPermiteDesbloqueio).append("\n");
-    sb.append("  flagCancelamento: ").append(flagCancelamento).append("\n");
-    sb.append("  flagPermiteBloqueio: ").append(flagPermiteBloqueio).append("\n");
-    sb.append("  flagReativar: ").append(flagReativar).append("\n");
+    sb.append("  permiteDesbloquear: ").append(permiteDesbloquear).append("\n");
+    sb.append("  permiteAtribuirComoBloqueio: ").append(permiteAtribuirComoBloqueio).append("\n");
+    sb.append("  permiteAtribuirComoCancelamento: ").append(permiteAtribuirComoCancelamento).append("\n");
+    sb.append("  cobrarTarifaAoEmitirNovaVia: ").append(cobrarTarifaAoEmitirNovaVia).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

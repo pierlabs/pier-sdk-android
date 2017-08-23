@@ -444,11 +444,12 @@ public class NotificacoesApi {
   /**
    * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
    * Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageConfiguracaoEmailResponse
    */
-  public PageConfiguracaoEmailResponse  listarConfiguracaoUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageConfiguracaoEmailResponse  listarConfiguracaoUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -462,6 +463,8 @@ public class NotificacoesApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -503,6 +506,7 @@ public class NotificacoesApi {
   /**
    * Listar Push
    * Esse recurso permite listar os Pushes do emissor
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
@@ -512,7 +516,7 @@ public class NotificacoesApi {
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
    * @return PagePushResponse
    */
-  public PagePushResponse  listarPushUsingGET (Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
+  public PagePushResponse  listarPushUsingGET (List<String> sort, Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
     Object postBody = null;
     
 
@@ -526,6 +530,8 @@ public class NotificacoesApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -577,6 +583,7 @@ public class NotificacoesApi {
   /**
    * Listar SMS
    * Esse recurso permite listar os SMS do emissor
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
@@ -587,7 +594,7 @@ public class NotificacoesApi {
    * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
    * @return PageSMSResponse
    */
-  public PageSMSResponse  listarSMSUsingGET (Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
+  public PageSMSResponse  listarSMSUsingGET (List<String> sort, Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
     Object postBody = null;
     
 
@@ -601,6 +608,8 @@ public class NotificacoesApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -654,11 +663,12 @@ public class NotificacoesApi {
   /**
    * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
    * Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTemplateNotificacaoResponse
    */
-  public PageTemplateNotificacaoResponse  listarTemplateNotificacaoUsingGET (Integer page, Integer limit) throws ApiException {
+  public PageTemplateNotificacaoResponse  listarTemplateNotificacaoUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -672,6 +682,8 @@ public class NotificacoesApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     

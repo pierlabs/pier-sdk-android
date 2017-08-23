@@ -17,16 +17,24 @@ public class StatusContaResponse  {
   private Long id = null;
   @SerializedName("nome")
   private String nome = null;
-  @SerializedName("flagAlteraLimite")
-  private Integer flagAlteraLimite = null;
-  @SerializedName("mensagemConsultaNegada")
-  private String mensagemConsultaNegada = null;
-  @SerializedName("flagPermiteNovaViaCartao")
-  private Integer flagPermiteNovaViaCartao = null;
-  @SerializedName("flagFazTransferencia")
-  private Integer flagFazTransferencia = null;
-  @SerializedName("flagRecebeTransferencia")
-  private Integer flagRecebeTransferencia = null;
+  @SerializedName("permiteAlterarVencimento")
+  private Integer permiteAlterarVencimento = null;
+  @SerializedName("permiteAlterarLimite")
+  private Integer permiteAlterarLimite = null;
+  @SerializedName("permiteEmitirNovaViaCartao")
+  private Integer permiteEmitirNovaViaCartao = null;
+  @SerializedName("permiteFazerTransferencia")
+  private Integer permiteFazerTransferencia = null;
+  @SerializedName("permiteReceberTransferencia")
+  private Integer permiteReceberTransferencia = null;
+  @SerializedName("permiteCriarAcordoCobranca")
+  private Integer permiteCriarAcordoCobranca = null;
+  @SerializedName("permiteAtribuirComoBloqueio")
+  private Integer permiteAtribuirComoBloqueio = null;
+  @SerializedName("permiteDesbloquear")
+  private Integer permiteDesbloquear = null;
+  @SerializedName("permiteAtribuirComoCancelamento")
+  private Integer permiteAtribuirComoCancelamento = null;
 
   
   /**
@@ -54,62 +62,110 @@ public class StatusContaResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(required = true, value = "Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagAlteraLimite() {
-    return flagAlteraLimite;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o da altera\u00C3\u00A7\u00C3\u00A3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteAlterarVencimento() {
+    return permiteAlterarVencimento;
   }
-  public void setFlagAlteraLimite(Integer flagAlteraLimite) {
-    this.flagAlteraLimite = flagAlteraLimite;
+  public void setPermiteAlterarVencimento(Integer permiteAlterarVencimento) {
+    this.permiteAlterarVencimento = permiteAlterarVencimento;
   }
 
   
   /**
-   * Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
+   * Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.")
-  public String getMensagemConsultaNegada() {
-    return mensagemConsultaNegada;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite altera\u00C3\u00A7\u00C3\u00A3o de Limites, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteAlterarLimite() {
+    return permiteAlterarLimite;
   }
-  public void setMensagemConsultaNegada(String mensagemConsultaNegada) {
-    this.mensagemConsultaNegada = mensagemConsultaNegada;
+  public void setPermiteAlterarLimite(Integer permiteAlterarLimite) {
+    this.permiteAlterarLimite = permiteAlterarLimite;
   }
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagPermiteNovaViaCartao() {
-    return flagPermiteNovaViaCartao;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteEmitirNovaViaCartao() {
+    return permiteEmitirNovaViaCartao;
   }
-  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
-    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+  public void setPermiteEmitirNovaViaCartao(Integer permiteEmitirNovaViaCartao) {
+    this.permiteEmitirNovaViaCartao = permiteEmitirNovaViaCartao;
   }
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagFazTransferencia() {
-    return flagFazTransferencia;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite originar Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00C3\u00A1ria, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteFazerTransferencia() {
+    return permiteFazerTransferencia;
   }
-  public void setFlagFazTransferencia(Integer flagFazTransferencia) {
-    this.flagFazTransferencia = flagFazTransferencia;
+  public void setPermiteFazerTransferencia(Integer permiteFazerTransferencia) {
+    this.permiteFazerTransferencia = permiteFazerTransferencia;
   }
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.")
-  public Integer getFlagRecebeTransferencia() {
-    return flagRecebeTransferencia;
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite  receber Transfer\u00C3\u00AAncias de Cr\u00C3\u00A9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteReceberTransferencia() {
+    return permiteReceberTransferencia;
   }
-  public void setFlagRecebeTransferencia(Integer flagRecebeTransferencia) {
-    this.flagRecebeTransferencia = flagRecebeTransferencia;
+  public void setPermiteReceberTransferencia(Integer permiteReceberTransferencia) {
+    this.permiteReceberTransferencia = permiteReceberTransferencia;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite ter um Acordo de Cobran\u00C3\u00A7a de D\u00C3\u00ADvida criado para ela, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteCriarAcordoCobranca() {
+    return permiteCriarAcordoCobranca;
+  }
+  public void setPermiteCriarAcordoCobranca(Integer permiteCriarAcordoCobranca) {
+    this.permiteCriarAcordoCobranca = permiteCriarAcordoCobranca;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteAtribuirComoBloqueio() {
+    return permiteAtribuirComoBloqueio;
+  }
+  public void setPermiteAtribuirComoBloqueio(Integer permiteAtribuirComoBloqueio) {
+    this.permiteAtribuirComoBloqueio = permiteAtribuirComoBloqueio;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteDesbloquear() {
+    return permiteDesbloquear;
+  }
+  public void setPermiteDesbloquear(Integer permiteDesbloquear) {
+    this.permiteDesbloquear = permiteDesbloquear;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+   **/
+  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.")
+  public Integer getPermiteAtribuirComoCancelamento() {
+    return permiteAtribuirComoCancelamento;
+  }
+  public void setPermiteAtribuirComoCancelamento(Integer permiteAtribuirComoCancelamento) {
+    this.permiteAtribuirComoCancelamento = permiteAtribuirComoCancelamento;
   }
 
   
@@ -121,11 +177,15 @@ public class StatusContaResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
-    sb.append("  flagAlteraLimite: ").append(flagAlteraLimite).append("\n");
-    sb.append("  mensagemConsultaNegada: ").append(mensagemConsultaNegada).append("\n");
-    sb.append("  flagPermiteNovaViaCartao: ").append(flagPermiteNovaViaCartao).append("\n");
-    sb.append("  flagFazTransferencia: ").append(flagFazTransferencia).append("\n");
-    sb.append("  flagRecebeTransferencia: ").append(flagRecebeTransferencia).append("\n");
+    sb.append("  permiteAlterarVencimento: ").append(permiteAlterarVencimento).append("\n");
+    sb.append("  permiteAlterarLimite: ").append(permiteAlterarLimite).append("\n");
+    sb.append("  permiteEmitirNovaViaCartao: ").append(permiteEmitirNovaViaCartao).append("\n");
+    sb.append("  permiteFazerTransferencia: ").append(permiteFazerTransferencia).append("\n");
+    sb.append("  permiteReceberTransferencia: ").append(permiteReceberTransferencia).append("\n");
+    sb.append("  permiteCriarAcordoCobranca: ").append(permiteCriarAcordoCobranca).append("\n");
+    sb.append("  permiteAtribuirComoBloqueio: ").append(permiteAtribuirComoBloqueio).append("\n");
+    sb.append("  permiteDesbloquear: ").append(permiteDesbloquear).append("\n");
+    sb.append("  permiteAtribuirComoCancelamento: ").append(permiteAtribuirComoCancelamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
