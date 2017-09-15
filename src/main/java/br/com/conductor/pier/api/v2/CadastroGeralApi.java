@@ -12,12 +12,13 @@ import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
-import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
+import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
-import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
+import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
@@ -41,7 +42,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class CadastrosGeraisApi {
+public class CadastroGeralApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -313,76 +314,17 @@ public class CadastrosGeraisApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Atendimento
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-   * @return AtendimentoClienteResponse
-   */
-  public AtendimentoClienteResponse  consultarUsingGET1 (Long id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/atendimento-clientes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (AtendimentoClienteResponse) ApiInvoker.deserialize(response, "", AtendimentoClienteResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Apresenta os dados de um determinado Produto
    * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
    * @return ProdutoDetalhesResponse
    */
-  public ProdutoDetalhesResponse  consultarUsingGET12 (Long id) throws ApiException {
+  public ProdutoDetalhesResponse  consultarUsingGET13 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
     }
     
 
@@ -440,7 +382,7 @@ public class CadastrosGeraisApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
    * @return PageTipoAjusteResponse
    */
-  public PageTipoAjusteResponse  consultarUsingGET18 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse  consultarUsingGET19 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -499,6 +441,65 @@ public class CadastrosGeraisApi {
   }
   
   /**
+   * Apresenta os dados de um determinado Atendimento
+   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+   * @return AtendimentoClienteResponse
+   */
+  public AtendimentoClienteResponse  consultarUsingGET2 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/atendimento-clientes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (AtendimentoClienteResponse) ApiInvoker.deserialize(response, "", AtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os tipos de boletos do emissor 
    * Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -509,7 +510,7 @@ public class CadastrosGeraisApi {
    * @param banco C\u00C3\u00B3digo identificador do banco.
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse  consultarUsingGET19 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse  consultarUsingGET20 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
 
@@ -570,76 +571,17 @@ public class CadastrosGeraisApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Banco
-   * Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
-   * @return BancoResponse
-   */
-  public BancoResponse  consultarUsingGET2 (Long id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/bancos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (BancoResponse) ApiInvoker.deserialize(response, "", BancoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @return TipoEnderecoResponse
    */
-  public TipoEnderecoResponse  consultarUsingGET20 (Long id) throws ApiException {
+  public TipoEnderecoResponse  consultarUsingGET21 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
     }
     
 
@@ -688,17 +630,94 @@ public class CadastrosGeraisApi {
   }
   
   /**
+   * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+   * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+   * @param idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
+   * @param idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
+   * @param codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+   * @return TipoOperacaoResponse
+   */
+  public TipoOperacaoResponse  consultarUsingGET22 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET22");
+    }
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET22");
+    }
+    
+    // verify the required parameter 'codigoProcessamento' is set
+    if (codigoProcessamento == null) {
+       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET22");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipo-operacao".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoOperacaoResponse) ApiInvoker.deserialize(response, "", TipoOperacaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de um determinado Tipo de Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse  consultarUsingGET22 (Long id) throws ApiException {
+  public TipoTelefoneResponse  consultarUsingGET24 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
     }
     
 
@@ -737,6 +756,65 @@ public class CadastrosGeraisApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TipoTelefoneResponse) ApiInvoker.deserialize(response, "", TipoTelefoneResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta os dados de um determinado Banco
+   * Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+   * @return BancoResponse
+   */
+  public BancoResponse  consultarUsingGET3 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/bancos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (BancoResponse) ApiInvoker.deserialize(response, "", BancoResponse.class);
       }
       else {
         return null;

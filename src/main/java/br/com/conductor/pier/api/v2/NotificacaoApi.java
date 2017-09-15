@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class NotificacoesApi {
+public class NotificacaoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

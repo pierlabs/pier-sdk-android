@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.TelefoneAdicionalPersist;
+import br.com.conductor.pier.api.v2.model.TelefoneAdicionalUpdate;
 import java.util.*;
 
 
@@ -33,18 +33,10 @@ public class AdicionalUpdate  {
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
   private String dataEmissaoIdentidade = null;
-  @SerializedName("idEstadoCivil")
-  private Long idEstadoCivil = null;
-  @SerializedName("idProfissao")
-  private Long idProfissao = null;
-  @SerializedName("idNacionalidade")
-  private Long idNacionalidade = null;
   @SerializedName("idParentesco")
   private Long idParentesco = null;
-  @SerializedName("email")
-  private String email = null;
   @SerializedName("telefones")
-  private List<TelefoneAdicionalPersist> telefones = null;
+  private List<TelefoneAdicionalUpdate> telefones = null;
 
   
   /**
@@ -156,42 +148,6 @@ public class AdicionalUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.")
-  public Long getIdEstadoCivil() {
-    return idEstadoCivil;
-  }
-  public void setIdEstadoCivil(Long idEstadoCivil) {
-    this.idEstadoCivil = idEstadoCivil;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.")
-  public Long getIdProfissao() {
-    return idProfissao;
-  }
-  public void setIdProfissao(Long idProfissao) {
-    this.idProfissao = idProfissao;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.")
-  public Long getIdNacionalidade() {
-    return idNacionalidade;
-  }
-  public void setIdNacionalidade(Long idNacionalidade) {
-    this.idNacionalidade = idNacionalidade;
-  }
-
-  
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
    **/
   @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
@@ -204,25 +160,13 @@ public class AdicionalUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
-  public String getEmail() {
-    return email;
-  }
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  
-  /**
    * Lista de telefones do adicional.
    **/
   @ApiModelProperty(value = "Lista de telefones do adicional.")
-  public List<TelefoneAdicionalPersist> getTelefones() {
+  public List<TelefoneAdicionalUpdate> getTelefones() {
     return telefones;
   }
-  public void setTelefones(List<TelefoneAdicionalPersist> telefones) {
+  public void setTelefones(List<TelefoneAdicionalUpdate> telefones) {
     this.telefones = telefones;
   }
 
@@ -242,11 +186,7 @@ public class AdicionalUpdate  {
     sb.append("  orgaoExpedidorIdentidade: ").append(orgaoExpedidorIdentidade).append("\n");
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
-    sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  idProfissao: ").append(idProfissao).append("\n");
-    sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
-    sb.append("  email: ").append(email).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();

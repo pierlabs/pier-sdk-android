@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class ArquivosApi {
+public class ArquivoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -47,12 +47,12 @@ public class ArquivosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
    * @return ArquivoResponse
    */
-  public ArquivoResponse  consultarUsingGET (Long id) throws ApiException {
+  public ArquivoResponse  consultarUsingGET1 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
     }
     
 

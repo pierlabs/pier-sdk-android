@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class JobsApi {
+public class JobApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

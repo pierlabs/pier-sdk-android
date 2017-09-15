@@ -10,6 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.TransacaoOnUsResponse;
 import br.com.conductor.pier.api.v2.model.AutorizacaoOnUsRequest;
+import br.com.conductor.pier.api.v2.model.TransacaoOnUsPorIdCartaoRequest;
 import br.com.conductor.pier.api.v2.model.CancelamentoTransacaoOnUsRequest;
 import br.com.conductor.pier.api.v2.model.TransacaoOnUsRequest;
 
@@ -22,7 +23,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class AutorizacoesApi {
+public class AutorizacaoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -60,6 +61,71 @@ public class AutorizacoesApi {
 
     // create path and map variables
     String path = "/api/autorizar-transacao".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransacaoOnUsResponse) ApiInvoker.deserialize(response, "", TransacaoOnUsResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+   * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+   * @param id Id Cartao
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse  autorizarUsingPOST1 (Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling autorizarUsingPOST1");
+    }
+    
+    // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+    if (transacaoOnUsPorIdCartaoRequest == null) {
+       throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarUsingPOST1");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/autorizar-transacao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

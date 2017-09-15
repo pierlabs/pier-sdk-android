@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class ServicosContaApi {
+public class ServicoContaApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

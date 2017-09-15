@@ -11,24 +11,27 @@ import java.util.*;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
-import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
-import br.com.conductor.pier.api.v2.model.PagePlanoParcelamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
+import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
+import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
+import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageFaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.PageFaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
+import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
@@ -237,73 +240,6 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (LimiteDisponibilidadeResponse) ApiInvoker.deserialize(response, "", LimiteDisponibilidadeResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Altera o produto associado \u00C3\u00A0 conta.
-   * O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto).
-   * @return PageContaHistoricoPagamentoResponse
-   */
-  public PageContaHistoricoPagamentoResponse  alterarProdutoUsingPOST (Long id, Long idProduto) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarProdutoUsingPOST");
-    }
-    
-    // verify the required parameter 'idProduto' is set
-    if (idProduto == null) {
-       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling alterarProdutoUsingPOST");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/alterar-produto".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idProduto", idProduto));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageContaHistoricoPagamentoResponse) ApiInvoker.deserialize(response, "", PageContaHistoricoPagamentoResponse.class);
       }
       else {
         return null;
@@ -1118,85 +1054,6 @@ public class ContaApi {
   }
   
   /**
-   * Listar planos de parcelamento
-   * Lista os planos de parcelamento da fatura de uma conta.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param dataVencimentoPadrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param quantidadeParcelas 
-   * @return PagePlanoParcelamentoResponse
-   */
-  public PagePlanoParcelamentoResponse  consultarLancamentosFuturosFaturaUsingGET1 (Long id, String dataVencimentoPadrao, List<String> sort, Integer page, Integer limit, Integer quantidadeParcelas) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLancamentosFuturosFaturaUsingGET1");
-    }
-    
-    // verify the required parameter 'dataVencimentoPadrao' is set
-    if (dataVencimentoPadrao == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataVencimentoPadrao' when calling consultarLancamentosFuturosFaturaUsingGET1");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/faturas/planos-parcelamento".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimentoPadrao", dataVencimentoPadrao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "quantidadeParcelas", quantidadeParcelas));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PagePlanoParcelamentoResponse) ApiInvoker.deserialize(response, "", PagePlanoParcelamentoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Apresenta os limites da conta
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param id Id Conta
@@ -1331,17 +1188,17 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse  consultarUsingGET24 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse  consultarUsingGET26 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET26");
     }
     
 
@@ -1398,17 +1255,17 @@ public class ContaApi {
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse  consultarUsingGET25 (Long id, Long idTransferencia) throws ApiException {
+  public PageTransferenciaResponse  consultarUsingGET27 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET25");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET27");
     }
     
 
@@ -1462,12 +1319,12 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse  consultarUsingGET5 (Long id) throws ApiException {
+  public ContaDetalheResponse  consultarUsingGET6 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
     }
     
 
@@ -1575,74 +1432,6 @@ public class ContaApi {
   }
   
   /**
-   * Envia 2\u00C2\u00AA via de fatura por E-mail
-   * Envia a segunda via da fatura para o e-mail informado/cadastrado.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param dataVencimento Data de Vencimento da fatura.
-   * @param email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
-   * @return String
-   */
-  public String  enviarFaturaEmailUsingPOST (Long id, String dataVencimento, String email) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling enviarFaturaEmailUsingPOST");
-    }
-    
-    // verify the required parameter 'dataVencimento' is set
-    if (dataVencimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling enviarFaturaEmailUsingPOST");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/faturas/{dataVencimento}/enviar-email".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "dataVencimento" + "\\}", apiInvoker.escapeString(dataVencimento.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "email", email));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Gera um boleto de recarga
    * Este recurso gera um boleto de recarga
    * @param id Id Conta
@@ -1721,26 +1510,25 @@ public class ContaApi {
    * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
    * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
-   * @param idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
-   * @return CartaoImpressaoResponse
+   * @param cartaoEmbossingRequest cartaoEmbossingRequest
+   * @return CartaoEmbossingResponse
    */
-  public CartaoImpressaoResponse  gerarCartaoEmbossingUsingPOST (Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
-    Object postBody = null;
+  public CartaoEmbossingResponse  gerarCartaoEmbossingUsingPOST (Long id, CartaoEmbossingRequest cartaoEmbossingRequest) throws ApiException {
+    Object postBody = cartaoEmbossingRequest;
     
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoEmbossingUsingPOST");
     }
     
-    // verify the required parameter 'idPessoa' is set
-    if (idPessoa == null) {
-       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartaoEmbossingUsingPOST");
+    // verify the required parameter 'cartaoEmbossingRequest' is set
+    if (cartaoEmbossingRequest == null) {
+       throw new ApiException(400, "Missing the required parameter 'cartaoEmbossingRequest' when calling gerarCartaoEmbossingUsingPOST");
     }
     
 
     // create path and map variables
-    String path = "/api/contas/{id}/gerar-cartao-grafica".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "id_pessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
+    String path = "/api/contas/{id}/gerar-cartao-grafica".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1749,8 +1537,6 @@ public class ContaApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_tipo_plastico", idTipoPlastico));
     
 
     
@@ -1775,7 +1561,66 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (CartaoImpressaoResponse) ApiInvoker.deserialize(response, "", CartaoImpressaoResponse.class);
+        return (CartaoEmbossingResponse) ApiInvoker.deserialize(response, "", CartaoEmbossingResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
+   * Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return CartaoImpressaoProvisorioResponse
+   */
+  public CartaoImpressaoProvisorioResponse  gerarCartaoProvisorioUsingPOST (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoProvisorioUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/gerar-cartao-provisorio".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CartaoImpressaoProvisorioResponse) ApiInvoker.deserialize(response, "", CartaoImpressaoProvisorioResponse.class);
       }
       else {
         return null;
@@ -2275,9 +2120,9 @@ public class ContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
    * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
-   * @return PageTransacoesCorrentesResponse
+   * @return PageTransacaoNaoProcessadaResponse
    */
-  public PageTransacoesCorrentesResponse  listarNaoProcessadasUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+  public PageTransacaoNaoProcessadaResponse  listarNaoProcessadasUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -2330,7 +2175,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTransacoesCorrentesResponse) ApiInvoker.deserialize(response, "", PageTransacoesCorrentesResponse.class);
+        return (PageTransacaoNaoProcessadaResponse) ApiInvoker.deserialize(response, "", PageTransacaoNaoProcessadaResponse.class);
       }
       else {
         return null;

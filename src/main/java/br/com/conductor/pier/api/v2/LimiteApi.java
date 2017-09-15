@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class GestaoLimitesApi {
+public class LimiteApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

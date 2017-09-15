@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
+import br.com.conductor.pier.api.v2.model.AdicionalDetalheResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalUpdate;
-import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PessoaResponse;
@@ -17,6 +17,7 @@ import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
 import br.com.conductor.pier.api.v2.model.AdicionalPersist;
 import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
+import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageTelefoneResponse;
@@ -36,7 +37,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class CadastrosClientesApi {
+public class CadastroClienteApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -63,9 +64,9 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
    * @param adicionalUpdate adicionalUpdate
-   * @return AdicionalResponse
+   * @return AdicionalDetalheResponse
    */
-  public AdicionalResponse  alterarUsingPUT (Long id, Long idPessoa, AdicionalUpdate adicionalUpdate) throws ApiException {
+  public AdicionalDetalheResponse  alterarUsingPUT (Long id, Long idPessoa, AdicionalUpdate adicionalUpdate) throws ApiException {
     Object postBody = adicionalUpdate;
     
     // verify the required parameter 'id' is set
@@ -118,7 +119,7 @@ public class CadastrosClientesApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (AdicionalResponse) ApiInvoker.deserialize(response, "", AdicionalResponse.class);
+        return (AdicionalDetalheResponse) ApiInvoker.deserialize(response, "", AdicionalDetalheResponse.class);
       }
       else {
         return null;
@@ -237,7 +238,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  alterarUsingPUT5 (Long id, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  alterarUsingPUT5 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -550,9 +551,9 @@ public class CadastrosClientesApi {
    * Este m\u00C3\u00A9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param persist persist
-   * @return AdicionalResponse
+   * @return AdicionalDetalheResponse
    */
-  public AdicionalResponse  cadastrarUsingPOST (Long id, AdicionalPersist persist) throws ApiException {
+  public AdicionalDetalheResponse  cadastrarUsingPOST (Long id, AdicionalPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'id' is set
@@ -600,7 +601,72 @@ public class CadastrosClientesApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (AdicionalResponse) ApiInvoker.deserialize(response, "", AdicionalResponse.class);
+        return (AdicionalDetalheResponse) ApiInvoker.deserialize(response, "", AdicionalDetalheResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consulta Adicional de uma Conta
+   * Este m\u00C3\u00A9todo permite que seja consultado um portador Adicional de uma determinada Conta.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @return AdicionalDetalheResponse
+   */
+  public AdicionalDetalheResponse  consultarUsingGET (Long id, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+    }
+    
+    // verify the required parameter 'idPessoa' is set
+    if (idPessoa == null) {
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/adicionais/{idPessoa}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idPessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (AdicionalDetalheResponse) ApiInvoker.deserialize(response, "", AdicionalDetalheResponse.class);
       }
       else {
         return null;
@@ -616,12 +682,12 @@ public class CadastrosClientesApi {
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  consultarUsingGET10 (Long id) throws ApiException {
+  public PessoaDetalheResponse  consultarUsingGET11 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
     }
     
 
@@ -675,12 +741,12 @@ public class CadastrosClientesApi {
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse  consultarUsingGET11 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET12 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
     }
     
 
@@ -734,12 +800,12 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse  consultarUsingGET16 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET17 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
     }
     
 
@@ -793,12 +859,12 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse  consultarUsingGET6 (Long id) throws ApiException {
+  public EnderecoResponse  consultarUsingGET7 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
     }
     
 
@@ -983,11 +1049,12 @@ public class CadastrosClientesApi {
    * Lista os Adicionais de uma Conta
    * Este m\u00C3\u00A9todo permite que sejam listados portadores Adicionais de uma determinada Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return AdicionalResponse
    */
-  public AdicionalResponse  listarUsingGET (Long id, Integer page, Integer limit) throws ApiException {
+  public AdicionalResponse  listarUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1006,6 +1073,8 @@ public class CadastrosClientesApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -1166,7 +1235,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse  listarUsingGET15 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse  listarUsingGET15 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
 
@@ -1551,7 +1620,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  salvarUsingPOST10 (Long idPessoa, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  salvarUsingPOST10 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idPessoa' is set

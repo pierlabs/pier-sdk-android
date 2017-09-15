@@ -40,7 +40,7 @@ public class PessoaFisicaAprovadaResponse  {
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
   @SerializedName("idProfissao")
-  private Integer idProfissao = null;
+  private String idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
@@ -217,10 +217,10 @@ public class PessoaFisicaAprovadaResponse  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public Integer getIdProfissao() {
+  public String getIdProfissao() {
     return idProfissao;
   }
-  public void setIdProfissao(Integer idProfissao) {
+  public void setIdProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
   }
 

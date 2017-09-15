@@ -13,8 +13,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto Cart\u00C3\u00A3o para Impresso")
 public class CartaoImpressaoResponse  {
   
-  @SerializedName("flagVirtual")
-  private Integer flagVirtual = null;
   @SerializedName("idConta")
   private Long idConta = null;
   @SerializedName("idPessoa")
@@ -59,19 +57,10 @@ public class CartaoImpressaoResponse  {
   private String trilhaCVV1 = null;
   @SerializedName("trilhaCVV2")
   private String trilhaCVV2 = null;
+  @SerializedName("flagVirtual")
+  private Integer flagVirtual = null;
   @SerializedName("numeroCartaoHash")
   private Long numeroCartaoHash = null;
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getFlagVirtual() {
-    return flagVirtual;
-  }
-  public void setFlagVirtual(Integer flagVirtual) {
-    this.flagVirtual = flagVirtual;
-  }
 
   
   /**
@@ -339,6 +328,18 @@ public class CartaoImpressaoResponse  {
 
   
   /**
+   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   **/
+  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual ")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
+
+  
+  /**
    * Apresenta o numero da hash do cart\u00C3\u00A3o 
    **/
   @ApiModelProperty(value = "Apresenta o numero da hash do cart\u00C3\u00A3o ")
@@ -356,7 +357,6 @@ public class CartaoImpressaoResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoImpressaoResponse {\n");
     
-    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idCartao: ").append(idCartao).append("\n");
@@ -379,6 +379,7 @@ public class CartaoImpressaoResponse  {
     sb.append("  trilha2: ").append(trilha2).append("\n");
     sb.append("  trilhaCVV1: ").append(trilhaCVV1).append("\n");
     sb.append("  trilhaCVV2: ").append(trilhaCVV2).append("\n");
+    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
     sb.append("  numeroCartaoHash: ").append(numeroCartaoHash).append("\n");
     sb.append("}\n");
     return sb.toString();

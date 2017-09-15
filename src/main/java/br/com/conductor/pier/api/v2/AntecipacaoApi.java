@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class AntecipacoesApi {
+public class AntecipacaoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

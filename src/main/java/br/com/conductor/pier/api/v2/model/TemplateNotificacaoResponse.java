@@ -18,7 +18,7 @@ public class TemplateNotificacaoResponse  {
   @SerializedName("idConfiguracaoEmail")
   private Long idConfiguracaoEmail = null;
   public enum TipoLayoutEnum {
-     RECUPERAR_SENHA,  VALIDAR_DISPOSITIVO, 
+     RECUPERAR_SENHA,  FATURA_POR_EMAIL,  VALIDAR_DISPOSITIVO, 
   };
   @SerializedName("tipoLayout")
   private TipoLayoutEnum tipoLayout = null;

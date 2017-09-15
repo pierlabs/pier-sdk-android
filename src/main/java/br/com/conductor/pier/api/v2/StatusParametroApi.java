@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class StatusParametrosApi {
+public class StatusParametroApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -171,12 +171,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusContaResponse
    */
-  public StatusContaResponse  consultarUsingGET14 (Long id) throws ApiException {
+  public StatusContaResponse  consultarUsingGET15 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
     }
     
 
@@ -230,12 +230,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse  consultarUsingGET15 (Long id) throws ApiException {
+  public StatusImpressaoResponse  consultarUsingGET16 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
     }
     
 

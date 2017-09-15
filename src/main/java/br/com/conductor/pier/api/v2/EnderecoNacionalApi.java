@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class EnderecosNacionaisApi {
+public class EnderecoNacionalApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 

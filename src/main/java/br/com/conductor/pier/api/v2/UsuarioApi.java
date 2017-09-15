@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class UsuariosApi {
+public class UsuarioApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -248,12 +248,12 @@ public class UsuariosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse  consultarUsingGET26 (Long id) throws ApiException {
+  public UsuarioResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 

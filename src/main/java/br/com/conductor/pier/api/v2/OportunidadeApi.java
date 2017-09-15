@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class OportunidadesApi {
+public class OportunidadeApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -319,76 +319,17 @@ public class OportunidadesApi {
   }
   
   /**
-   * Apresenta dados de um determinado tipo oportunidade
-   * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-   * @return TipoOportunidadeResponse
-   */
-  public TipoOportunidadeResponse  consultarUsingGET21 (Long id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/tipos-oportunidades/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TipoOportunidadeResponse) ApiInvoker.deserialize(response, "", TipoOportunidadeResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Apresenta dados de uma determinada oportunidade
    * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET9 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET10 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
     }
     
 
@@ -427,6 +368,65 @@ public class OportunidadesApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (OportunidadeResponse) ApiInvoker.deserialize(response, "", OportunidadeResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta dados de um determinado tipo oportunidade
+   * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+   * @return TipoOportunidadeResponse
+   */
+  public TipoOportunidadeResponse  consultarUsingGET23 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-oportunidades/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoOportunidadeResponse) ApiInvoker.deserialize(response, "", TipoOportunidadeResponse.class);
       }
       else {
         return null;

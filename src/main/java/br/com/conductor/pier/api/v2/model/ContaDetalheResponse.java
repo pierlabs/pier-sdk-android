@@ -95,7 +95,7 @@ public class ContaDetalheResponse  {
   /**
    * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @ApiModelProperty(value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
   public String getNome() {
     return nome;
   }
@@ -131,7 +131,7 @@ public class ContaDetalheResponse  {
   /**
    * Nome da origem comercial
    **/
-  @ApiModelProperty(required = true, value = "Nome da origem comercial")
+  @ApiModelProperty(value = "Nome da origem comercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -155,7 +155,7 @@ public class ContaDetalheResponse  {
   /**
    * Nome da Fantasia Basica
    **/
-  @ApiModelProperty(required = true, value = "Nome da Fantasia Basica")
+  @ApiModelProperty(value = "Nome da Fantasia Basica")
   public String getNomeFantasiaBasica() {
     return nomeFantasiaBasica;
   }
@@ -323,7 +323,7 @@ public class ContaDetalheResponse  {
   /**
    * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.")
+  @ApiModelProperty(value = "Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -335,7 +335,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -347,7 +347,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -359,7 +359,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
