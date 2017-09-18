@@ -16,7 +16,6 @@ import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
-import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
@@ -630,94 +629,17 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-   * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
-   * @param idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
-   * @param idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
-   * @param codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
-   * @return TipoOperacaoResponse
-   */
-  public TipoOperacaoResponse  consultarUsingGET22 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idCartao' is set
-    if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET22");
-    }
-    
-    // verify the required parameter 'idEstabelecimento' is set
-    if (idEstabelecimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET22");
-    }
-    
-    // verify the required parameter 'codigoProcessamento' is set
-    if (codigoProcessamento == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET22");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/tipo-operacao".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TipoOperacaoResponse) ApiInvoker.deserialize(response, "", TipoOperacaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Apresenta os dados de um determinado Tipo de Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse  consultarUsingGET24 (Long id) throws ApiException {
+  public TipoTelefoneResponse  consultarUsingGET23 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
     }
     
 
