@@ -20,10 +20,10 @@ public class PlanoParcelamentoEmprestimoResponse  {
   private BigDecimal valorParcelas = null;
   @SerializedName("taxaJuros")
   private BigDecimal taxaJuros = null;
-  @SerializedName("valorPercentualCET")
-  private BigDecimal valorPercentualCET = null;
   @SerializedName("valorTributosIOF")
   private BigDecimal valorTributosIOF = null;
+  @SerializedName("valorPercentualCET")
+  private BigDecimal valorPercentualCET = null;
 
   
   /**
@@ -63,18 +63,6 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-   **/
-  @ApiModelProperty(value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento")
-  public BigDecimal getValorPercentualCET() {
-    return valorPercentualCET;
-  }
-  public void setValorPercentualCET(BigDecimal valorPercentualCET) {
-    this.valorPercentualCET = valorPercentualCET;
-  }
-
-  
-  /**
    * valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
    **/
   @ApiModelProperty(value = "valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras")
@@ -83,6 +71,18 @@ public class PlanoParcelamentoEmprestimoResponse  {
   }
   public void setValorTributosIOF(BigDecimal valorTributosIOF) {
     this.valorTributosIOF = valorTributosIOF;
+  }
+
+  
+  /**
+   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+   **/
+  @ApiModelProperty(value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento")
+  public BigDecimal getValorPercentualCET() {
+    return valorPercentualCET;
+  }
+  public void setValorPercentualCET(BigDecimal valorPercentualCET) {
+    this.valorPercentualCET = valorPercentualCET;
   }
 
   
@@ -95,8 +95,8 @@ public class PlanoParcelamentoEmprestimoResponse  {
     sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");
     sb.append("  valorParcelas: ").append(valorParcelas).append("\n");
     sb.append("  taxaJuros: ").append(taxaJuros).append("\n");
-    sb.append("  valorPercentualCET: ").append(valorPercentualCET).append("\n");
     sb.append("  valorTributosIOF: ").append(valorTributosIOF).append("\n");
+    sb.append("  valorPercentualCET: ").append(valorPercentualCET).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

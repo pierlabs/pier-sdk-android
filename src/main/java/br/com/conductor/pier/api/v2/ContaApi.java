@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
@@ -35,6 +36,8 @@ import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
+import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
+import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
@@ -655,6 +658,65 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ContaResponse) ApiInvoker.deserialize(response, "", ContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+   * Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return BeneficioPagamentoAtrasoResponse
+   */
+  public BeneficioPagamentoAtrasoResponse  consultarBeneficioPagamentoAtrasoUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBeneficioPagamentoAtrasoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/consultar-beneficio-pagamento-atraso".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (BeneficioPagamentoAtrasoResponse) ApiInvoker.deserialize(response, "", BeneficioPagamentoAtrasoResponse.class);
       }
       else {
         return null;
@@ -2641,6 +2703,71 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param request request
+   * @return EmprestimoPessoalResponse
+   */
+  public EmprestimoPessoalResponse  simularEmprestimoFinanciamentoUsingPOST (Long id, EmprestimoPessoalRequest request) throws ApiException {
+    Object postBody = request;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling simularEmprestimoFinanciamentoUsingPOST");
+    }
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling simularEmprestimoFinanciamentoUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/simular-emprestimos-financiamentos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (EmprestimoPessoalResponse) ApiInvoker.deserialize(response, "", EmprestimoPessoalResponse.class);
       }
       else {
         return null;

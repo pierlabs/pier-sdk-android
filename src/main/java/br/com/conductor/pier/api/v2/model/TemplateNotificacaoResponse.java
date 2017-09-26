@@ -18,7 +18,7 @@ public class TemplateNotificacaoResponse  {
   @SerializedName("idConfiguracaoEmail")
   private Long idConfiguracaoEmail = null;
   public enum TipoLayoutEnum {
-     RECUPERAR_SENHA,  FATURA_POR_EMAIL,  VALIDAR_DISPOSITIVO, 
+     RECUPERAR_SENHA,  FATURA_POR_EMAIL,  VALIDAR_DISPOSITIVO,  NOTIFICACAO_EMAIL, 
   };
   @SerializedName("tipoLayout")
   private TipoLayoutEnum tipoLayout = null;
@@ -27,6 +27,8 @@ public class TemplateNotificacaoResponse  {
   };
   @SerializedName("tipoNotificacao")
   private TipoNotificacaoEnum tipoNotificacao = null;
+  @SerializedName("remetente")
+  private String remetente = null;
   @SerializedName("assunto")
   private String assunto = null;
   @SerializedName("conteudo")
@@ -82,6 +84,18 @@ public class TemplateNotificacaoResponse  {
   }
   public void setTipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
     this.tipoNotificacao = tipoNotificacao;
+  }
+
+  
+  /**
+   * Remetente.
+   **/
+  @ApiModelProperty(value = "Remetente.")
+  public String getRemetente() {
+    return remetente;
+  }
+  public void setRemetente(String remetente) {
+    this.remetente = remetente;
   }
 
   
@@ -143,6 +157,7 @@ public class TemplateNotificacaoResponse  {
     sb.append("  idConfiguracaoEmail: ").append(idConfiguracaoEmail).append("\n");
     sb.append("  tipoLayout: ").append(tipoLayout).append("\n");
     sb.append("  tipoNotificacao: ").append(tipoNotificacao).append("\n");
+    sb.append("  remetente: ").append(remetente).append("\n");
     sb.append("  assunto: ").append(assunto).append("\n");
     sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("  dataInclusao: ").append(dataInclusao).append("\n");

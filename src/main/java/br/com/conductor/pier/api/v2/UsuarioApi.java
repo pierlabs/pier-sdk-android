@@ -44,6 +44,73 @@ public class UsuarioApi {
 
   
   /**
+   * Alterar senha do usu\u00C3\u00A1rio.
+   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+   * @param login Login do usu\u00C3\u00A1rio.
+   * @param senhaNova Senha Nova
+   * @return String
+   */
+  public String  alterarSenhaLoginUsingPOST (String login, String senhaNova) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'login' is set
+    if (login == null) {
+       throw new ApiException(400, "Missing the required parameter 'login' when calling alterarSenhaLoginUsingPOST");
+    }
+    
+    // verify the required parameter 'senhaNova' is set
+    if (senhaNova == null) {
+       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaLoginUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/usuarios/{login}/alterar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "login" + "\\}", apiInvoker.escapeString(login.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+    headerParams.put("senhaNova", ApiInvoker.parameterToString(senhaNova));
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
@@ -119,7 +186,7 @@ public class UsuarioApi {
   }
   
   /**
-   * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+   * Altera os usu\u00C3\u00A1rios cadastrados na base.
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @param update update
@@ -494,17 +561,17 @@ public class UsuarioApi {
   }
   
   /**
-   * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+   * Cadastra Usu\u00C3\u00A1rio na base.
    * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse  salvarUsingPOST16 (UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse  salvarUsingPOST19 (UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST16");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST19");
     }
     
 
@@ -543,6 +610,73 @@ public class UsuarioApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+   * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+   * @param login Login identificador do usu\u00C3\u00A1rio (login).
+   * @param senha Senha do usu\u00C3\u00A1rio
+   * @return Object
+   */
+  public Object  validarSenhaLoginUsingPOST (String login, String senha) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'login' is set
+    if (login == null) {
+       throw new ApiException(400, "Missing the required parameter 'login' when calling validarSenhaLoginUsingPOST");
+    }
+    
+    // verify the required parameter 'senha' is set
+    if (senha == null) {
+       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaLoginUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/usuarios/{login}/validar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "login" + "\\}", apiInvoker.escapeString(login.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+    headerParams.put("senha", ApiInvoker.parameterToString(senha));
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;

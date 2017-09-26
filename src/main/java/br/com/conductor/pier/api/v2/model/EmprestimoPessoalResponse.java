@@ -20,14 +20,20 @@ public class EmprestimoPessoalResponse  {
   private List<PlanoParcelamentoEmprestimoResponse> planosParcelamentos = null;
   @SerializedName("valorSolicitado")
   private BigDecimal valorSolicitado = null;
-  @SerializedName("valorTotal")
-  private BigDecimal valorTotal = null;
-  @SerializedName("sistemaAmortizacao")
-  private String sistemaAmortizacao = null;
-  @SerializedName("periodoTaxa")
-  private String periodoTaxa = null;
+  @SerializedName("valorMaximoSolicitacao")
+  private BigDecimal valorMaximoSolicitacao = null;
+  @SerializedName("numeroParcelas")
+  private Integer numeroParcelas = null;
+  @SerializedName("valorMaximoParcela")
+  private BigDecimal valorMaximoParcela = null;
   @SerializedName("dataPrimeiraParcela")
   private String dataPrimeiraParcela = null;
+  @SerializedName("periodoTaxa")
+  private String periodoTaxa = null;
+  @SerializedName("sistemaAmortizacao")
+  private String sistemaAmortizacao = null;
+  @SerializedName("taxaJuros")
+  private BigDecimal taxaJuros = null;
 
   
   /**
@@ -54,26 +60,50 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * Valor total do empr\u00C3\u00A9stimo/financiamento
+   * Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
    **/
-  @ApiModelProperty(value = "Valor total do empr\u00C3\u00A9stimo/financiamento")
-  public BigDecimal getValorTotal() {
-    return valorTotal;
+  @ApiModelProperty(value = "Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela")
+  public BigDecimal getValorMaximoSolicitacao() {
+    return valorMaximoSolicitacao;
   }
-  public void setValorTotal(BigDecimal valorTotal) {
-    this.valorTotal = valorTotal;
+  public void setValorMaximoSolicitacao(BigDecimal valorMaximoSolicitacao) {
+    this.valorMaximoSolicitacao = valorMaximoSolicitacao;
   }
 
   
   /**
-   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+   * N\u00C3\u00BAmero de parcelas solicitado
    **/
-  @ApiModelProperty(value = "Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas")
-  public String getSistemaAmortizacao() {
-    return sistemaAmortizacao;
+  @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas solicitado")
+  public Integer getNumeroParcelas() {
+    return numeroParcelas;
   }
-  public void setSistemaAmortizacao(String sistemaAmortizacao) {
-    this.sistemaAmortizacao = sistemaAmortizacao;
+  public void setNumeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
+  }
+
+  
+  /**
+   * Limite m\u00C3\u00A1ximo de parcela permitido
+   **/
+  @ApiModelProperty(value = "Limite m\u00C3\u00A1ximo de parcela permitido")
+  public BigDecimal getValorMaximoParcela() {
+    return valorMaximoParcela;
+  }
+  public void setValorMaximoParcela(BigDecimal valorMaximoParcela) {
+    this.valorMaximoParcela = valorMaximoParcela;
+  }
+
+  
+  /**
+   * Data do desconto da primeira parcela
+   **/
+  @ApiModelProperty(value = "Data do desconto da primeira parcela")
+  public String getDataPrimeiraParcela() {
+    return dataPrimeiraParcela;
+  }
+  public void setDataPrimeiraParcela(String dataPrimeiraParcela) {
+    this.dataPrimeiraParcela = dataPrimeiraParcela;
   }
 
   
@@ -90,14 +120,26 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
+   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
    **/
-  @ApiModelProperty(value = "Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento")
-  public String getDataPrimeiraParcela() {
-    return dataPrimeiraParcela;
+  @ApiModelProperty(value = "Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas")
+  public String getSistemaAmortizacao() {
+    return sistemaAmortizacao;
   }
-  public void setDataPrimeiraParcela(String dataPrimeiraParcela) {
-    this.dataPrimeiraParcela = dataPrimeiraParcela;
+  public void setSistemaAmortizacao(String sistemaAmortizacao) {
+    this.sistemaAmortizacao = sistemaAmortizacao;
+  }
+
+  
+  /**
+   * Valor percentual da taxa de juros a ser aplicada
+   **/
+  @ApiModelProperty(value = "Valor percentual da taxa de juros a ser aplicada")
+  public BigDecimal getTaxaJuros() {
+    return taxaJuros;
+  }
+  public void setTaxaJuros(BigDecimal taxaJuros) {
+    this.taxaJuros = taxaJuros;
   }
 
   
@@ -109,10 +151,13 @@ public class EmprestimoPessoalResponse  {
     
     sb.append("  planosParcelamentos: ").append(planosParcelamentos).append("\n");
     sb.append("  valorSolicitado: ").append(valorSolicitado).append("\n");
-    sb.append("  valorTotal: ").append(valorTotal).append("\n");
-    sb.append("  sistemaAmortizacao: ").append(sistemaAmortizacao).append("\n");
-    sb.append("  periodoTaxa: ").append(periodoTaxa).append("\n");
+    sb.append("  valorMaximoSolicitacao: ").append(valorMaximoSolicitacao).append("\n");
+    sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");
+    sb.append("  valorMaximoParcela: ").append(valorMaximoParcela).append("\n");
     sb.append("  dataPrimeiraParcela: ").append(dataPrimeiraParcela).append("\n");
+    sb.append("  periodoTaxa: ").append(periodoTaxa).append("\n");
+    sb.append("  sistemaAmortizacao: ").append(sistemaAmortizacao).append("\n");
+    sb.append("  taxaJuros: ").append(taxaJuros).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

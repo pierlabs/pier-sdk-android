@@ -127,6 +127,10 @@ public class JsonUtil {
       return new TypeToken<List<BaseResponse>>(){}.getType();
     }
     
+    if ("BeneficioPagamentoAtrasoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BeneficioPagamentoAtrasoResponse>>(){}.getType();
+    }
+    
     if ("BodyAccessToken".equalsIgnoreCase(className)) {
       return new TypeToken<List<BodyAccessToken>>(){}.getType();
     }
@@ -251,6 +255,34 @@ public class JsonUtil {
       return new TypeToken<List<DividaClienteResponse>>(){}.getType();
     }
     
+    if ("DocumentoDetalheResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoDetalheResponse>>(){}.getType();
+    }
+    
+    if ("DocumentoParametrosRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoParametrosRequest>>(){}.getType();
+    }
+    
+    if ("DocumentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoResponse>>(){}.getType();
+    }
+    
+    if ("DocumentoTemplateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoTemplateRequest>>(){}.getType();
+    }
+    
+    if ("DocumentoTemplateResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoTemplateResponse>>(){}.getType();
+    }
+    
+    if ("DocumentoTipoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoTipoRequest>>(){}.getType();
+    }
+    
+    if ("DocumentoTipoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoTipoResponse>>(){}.getType();
+    }
+    
     if ("EmprestimoPessoalRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<EmprestimoPessoalRequest>>(){}.getType();
     }
@@ -345,6 +377,14 @@ public class JsonUtil {
     
     if ("MapOfstringAndstring".equalsIgnoreCase(className)) {
       return new TypeToken<List<MapOfstringAndstring>>(){}.getType();
+    }
+    
+    if ("NotificacaoEmailRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotificacaoEmailRequest>>(){}.getType();
+    }
+    
+    if ("NotificacaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<NotificacaoEmailResponse>>(){}.getType();
     }
     
     if ("NotificacaoPushResponse".equalsIgnoreCase(className)) {
@@ -989,6 +1029,10 @@ public class JsonUtil {
       return new TypeToken<BaseResponse>(){}.getType();
     }
     
+    if ("BeneficioPagamentoAtrasoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<BeneficioPagamentoAtrasoResponse>(){}.getType();
+    }
+    
     if ("BodyAccessToken".equalsIgnoreCase(className)) {
       return new TypeToken<BodyAccessToken>(){}.getType();
     }
@@ -1113,6 +1157,34 @@ public class JsonUtil {
       return new TypeToken<DividaClienteResponse>(){}.getType();
     }
     
+    if ("DocumentoDetalheResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoDetalheResponse>(){}.getType();
+    }
+    
+    if ("DocumentoParametrosRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoParametrosRequest>(){}.getType();
+    }
+    
+    if ("DocumentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoResponse>(){}.getType();
+    }
+    
+    if ("DocumentoTemplateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoTemplateRequest>(){}.getType();
+    }
+    
+    if ("DocumentoTemplateResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoTemplateResponse>(){}.getType();
+    }
+    
+    if ("DocumentoTipoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoTipoRequest>(){}.getType();
+    }
+    
+    if ("DocumentoTipoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoTipoResponse>(){}.getType();
+    }
+    
     if ("EmprestimoPessoalRequest".equalsIgnoreCase(className)) {
       return new TypeToken<EmprestimoPessoalRequest>(){}.getType();
     }
@@ -1207,6 +1279,14 @@ public class JsonUtil {
     
     if ("MapOfstringAndstring".equalsIgnoreCase(className)) {
       return new TypeToken<MapOfstringAndstring>(){}.getType();
+    }
+    
+    if ("NotificacaoEmailRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<NotificacaoEmailRequest>(){}.getType();
+    }
+    
+    if ("NotificacaoEmailResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<NotificacaoEmailResponse>(){}.getType();
     }
     
     if ("NotificacaoPushResponse".equalsIgnoreCase(className)) {

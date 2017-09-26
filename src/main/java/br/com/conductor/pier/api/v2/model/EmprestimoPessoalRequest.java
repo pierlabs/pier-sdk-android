@@ -24,8 +24,6 @@ public class EmprestimoPessoalRequest  {
   private String periodoTaxa = null;
   @SerializedName("sistemaAmortizacao")
   private String sistemaAmortizacao = null;
-  @SerializedName("diaVencimento")
-  private Integer diaVencimento = null;
   @SerializedName("numeroMesesCarencia")
   private Integer numeroMesesCarencia = null;
 
@@ -91,18 +89,6 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * Dia para cobran\u00C3\u00A7a da primeira parcela
-   **/
-  @ApiModelProperty(required = true, value = "Dia para cobran\u00C3\u00A7a da primeira parcela")
-  public Integer getDiaVencimento() {
-    return diaVencimento;
-  }
-  public void setDiaVencimento(Integer diaVencimento) {
-    this.diaVencimento = diaVencimento;
-  }
-
-  
-  /**
    * N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela")
@@ -125,7 +111,6 @@ public class EmprestimoPessoalRequest  {
     sb.append("  taxaJuros: ").append(taxaJuros).append("\n");
     sb.append("  periodoTaxa: ").append(periodoTaxa).append("\n");
     sb.append("  sistemaAmortizacao: ").append(sistemaAmortizacao).append("\n");
-    sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  numeroMesesCarencia: ").append(numeroMesesCarencia).append("\n");
     sb.append("}\n");
     return sb.toString();

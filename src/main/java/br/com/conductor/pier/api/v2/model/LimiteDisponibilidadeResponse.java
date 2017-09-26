@@ -63,7 +63,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o de Limite e Disponibilidade (id).")
   public Long getId() {
     return id;
   }
@@ -75,7 +75,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito.")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -87,7 +87,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras nacionais.")
   public BigDecimal getLimiteCompra() {
     return limiteCompra;
   }
@@ -99,7 +99,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.")
   public BigDecimal getLimiteParcelado() {
     return limiteParcelado;
   }
@@ -111,7 +111,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -123,7 +123,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -135,7 +135,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
   public BigDecimal getLimiteSaquePeriodo() {
     return limiteSaquePeriodo;
   }
@@ -147,7 +147,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).
    **/
-  @ApiModelProperty(required = true, value = "Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).")
+  @ApiModelProperty(value = "Valor da margem de cr\u00C3\u00A9dito para consigna\u00C3\u00A7\u00C3\u00B5es (desconto em folha).")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
   }
@@ -159,7 +159,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para uso exclusivo em compras internacionais.")
   public BigDecimal getLimiteInternacionalCompra() {
     return limiteInternacionalCompra;
   }
@@ -171,7 +171,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es internacionais de compras parceladas.")
   public BigDecimal getLimiteInternacionalParcelado() {
     return limiteInternacionalParcelado;
   }
@@ -183,7 +183,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
   public BigDecimal getLimiteInternacionalParcelas() {
     return limiteInternacionalParcelas;
   }
@@ -195,7 +195,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.")
   public BigDecimal getLimiteInternacionalSaqueGlobal() {
     return limiteInternacionalSaqueGlobal;
   }
@@ -207,7 +207,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "Valor do limite de cr\u00C3\u00A9dito para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional dentro de cada ciclo de faturamento.")
   public BigDecimal getLimiteInternacionalSaquePeriodo() {
     return limiteInternacionalSaquePeriodo;
   }
@@ -219,7 +219,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
    **/
-  @ApiModelProperty(required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.")
+  @ApiModelProperty(value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -231,7 +231,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es.")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -243,7 +243,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional.")
   public BigDecimal getSaldoDisponivelCompra() {
     return saldoDisponivelCompra;
   }
@@ -255,7 +255,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra nacional parcelada.")
   public BigDecimal getSaldoDisponivelParcelado() {
     return saldoDisponivelParcelado;
   }
@@ -267,7 +267,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
   public BigDecimal getSaldoDisponivelParcelas() {
     return saldoDisponivelParcelas;
   }
@@ -279,7 +279,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -291,7 +291,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Saldo atual de pontos do programa de fidelidade.
    **/
-  @ApiModelProperty(required = true, value = "Saldo atual de pontos do programa de fidelidade.")
+  @ApiModelProperty(value = "Saldo atual de pontos do programa de fidelidade.")
   public BigDecimal getSaldoPontosFidelidade() {
     return saldoPontosFidelidade;
   }
@@ -303,7 +303,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de compra internacional.")
   public BigDecimal getSaldoDisponivelCompraInternacional() {
     return saldoDisponivelCompraInternacional;
   }
@@ -315,7 +315,7 @@ public class LimiteDisponibilidadeResponse  {
   /**
    * Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.
    **/
-  @ApiModelProperty(required = true, value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.")
+  @ApiModelProperty(value = "Valor de cr\u00C3\u00A9dito dispon\u00C3\u00ADvel para transa\u00C3\u00A7\u00C3\u00B5es de saque internacional.")
   public BigDecimal getSaldoDisponivelSaqueInternacional() {
     return saldoDisponivelSaqueInternacional;
   }
