@@ -66,6 +66,8 @@ public class TransferenciaBancariaResponse  {
   private Long idContaPortador = null;
   @SerializedName("numeroEstabelecimento")
   private Long numeroEstabelecimento = null;
+  @SerializedName("valorTaxaSaque")
+  private BigDecimal valorTaxaSaque = null;
 
   
   /**
@@ -379,6 +381,18 @@ public class TransferenciaBancariaResponse  {
   }
 
   
+  /**
+   * Valor da taxa saque.
+   **/
+  @ApiModelProperty(value = "Valor da taxa saque.")
+  public BigDecimal getValorTaxaSaque() {
+    return valorTaxaSaque;
+  }
+  public void setValorTaxaSaque(BigDecimal valorTaxaSaque) {
+    this.valorTaxaSaque = valorTaxaSaque;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -411,6 +425,7 @@ public class TransferenciaBancariaResponse  {
     sb.append("  dataVencimentoPadrao: ").append(dataVencimentoPadrao).append("\n");
     sb.append("  idContaPortador: ").append(idContaPortador).append("\n");
     sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
+    sb.append("  valorTaxaSaque: ").append(valorTaxaSaque).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

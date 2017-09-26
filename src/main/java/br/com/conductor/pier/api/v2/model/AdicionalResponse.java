@@ -1,7 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.TelefoneResponse;
-import java.util.*;
 
 
 import io.swagger.annotations.*;
@@ -37,18 +35,14 @@ public class AdicionalResponse  {
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
   private String dataEmissaoIdentidade = null;
-  @SerializedName("idEstadoCivil")
-  private Long idEstadoCivil = null;
-  @SerializedName("idProfissao")
-  private Long idProfissao = null;
-  @SerializedName("idNacionalidade")
-  private Long idNacionalidade = null;
   @SerializedName("idParentesco")
   private Long idParentesco = null;
-  @SerializedName("email")
-  private String email = null;
-  @SerializedName("telefones")
-  private List<TelefoneResponse> telefones = null;
+  @SerializedName("flagAtivo")
+  private Integer flagAtivo = null;
+  @SerializedName("dataCadastroPortador")
+  private String dataCadastroPortador = null;
+  @SerializedName("dataCancelamentoPortador")
+  private String dataCancelamentoPortador = null;
 
   
   /**
@@ -184,42 +178,6 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional")
-  public Long getIdEstadoCivil() {
-    return idEstadoCivil;
-  }
-  public void setIdEstadoCivil(Long idEstadoCivil) {
-    this.idEstadoCivil = idEstadoCivil;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional")
-  public Long getIdProfissao() {
-    return idProfissao;
-  }
-  public void setIdProfissao(Long idProfissao) {
-    this.idProfissao = idProfissao;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional")
-  public Long getIdNacionalidade() {
-    return idNacionalidade;
-  }
-  public void setIdNacionalidade(Long idNacionalidade) {
-    this.idNacionalidade = idNacionalidade;
-  }
-
-  
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
    **/
   @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular")
@@ -232,26 +190,38 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular
+   * Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular")
-  public String getEmail() {
-    return email;
+  @ApiModelProperty(value = "Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0")
+  public Integer getFlagAtivo() {
+    return flagAtivo;
   }
-  public void setEmail(String email) {
-    this.email = email;
+  public void setFlagAtivo(Integer flagAtivo) {
+    this.flagAtivo = flagAtivo;
   }
 
   
   /**
-   * Lista dos telefones do adicional
+   * Indica a data de cadastro do adicional
    **/
-  @ApiModelProperty(value = "Lista dos telefones do adicional")
-  public List<TelefoneResponse> getTelefones() {
-    return telefones;
+  @ApiModelProperty(value = "Indica a data de cadastro do adicional")
+  public String getDataCadastroPortador() {
+    return dataCadastroPortador;
   }
-  public void setTelefones(List<TelefoneResponse> telefones) {
-    this.telefones = telefones;
+  public void setDataCadastroPortador(String dataCadastroPortador) {
+    this.dataCadastroPortador = dataCadastroPortador;
+  }
+
+  
+  /**
+   * Indica a data de cancelamento do adicional
+   **/
+  @ApiModelProperty(value = "Indica a data de cancelamento do adicional")
+  public String getDataCancelamentoPortador() {
+    return dataCancelamentoPortador;
+  }
+  public void setDataCancelamentoPortador(String dataCancelamentoPortador) {
+    this.dataCancelamentoPortador = dataCancelamentoPortador;
   }
 
   
@@ -272,12 +242,10 @@ public class AdicionalResponse  {
     sb.append("  orgaoExpedidorIdentidade: ").append(orgaoExpedidorIdentidade).append("\n");
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
-    sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  idProfissao: ").append(idProfissao).append("\n");
-    sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
-    sb.append("  email: ").append(email).append("\n");
-    sb.append("  telefones: ").append(telefones).append("\n");
+    sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
+    sb.append("  dataCadastroPortador: ").append(dataCadastroPortador).append("\n");
+    sb.append("  dataCancelamentoPortador: ").append(dataCancelamentoPortador).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

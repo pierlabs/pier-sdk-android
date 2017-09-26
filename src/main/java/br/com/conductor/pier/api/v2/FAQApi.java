@@ -134,22 +134,22 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return FaqResponse
    */
-  public FaqResponse  alterarUsingPUT2 (Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse  alterarUsingPUT3 (Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT2");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT3");
     }
     
     // verify the required parameter 'pergunta' is set
     if (pergunta == null) {
-       throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT2");
+       throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT3");
     }
     
     // verify the required parameter 'resposta' is set
     if (resposta == null) {
-       throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT2");
+       throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT3");
     }
     
 
@@ -215,12 +215,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse  consultarUsingGET8 (Long id) throws ApiException {
+  public FaqResponse  consultarUsingGET9 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
     }
     
 
@@ -271,6 +271,7 @@ public class FAQApi {
   /**
    * Lista FAQs
    * Lista todas as FAQs
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
@@ -282,7 +283,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return PageFaqResponse
    */
-  public PageFaqResponse  listarUsingGET11 (Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse  listarUsingGET12 (List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
 
@@ -296,6 +297,8 @@ public class FAQApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
