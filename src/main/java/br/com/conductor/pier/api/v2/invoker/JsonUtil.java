@@ -267,8 +267,8 @@ public class JsonUtil {
       return new TypeToken<List<DocumentoResponse>>(){}.getType();
     }
     
-    if ("DocumentoTemplateRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DocumentoTemplateRequest>>(){}.getType();
+    if ("DocumentoTemplatePersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DocumentoTemplatePersist>>(){}.getType();
     }
     
     if ("DocumentoTemplateResponse".equalsIgnoreCase(className)) {
@@ -481,6 +481,10 @@ public class JsonUtil {
     
     if ("PageDispositivoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageDispositivoResponse>>(){}.getType();
+    }
+    
+    if ("PageDocumentoTemplateResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageDocumentoTemplateResponse>>(){}.getType();
     }
     
     if ("PageEnderecoResponse".equalsIgnoreCase(className)) {
@@ -755,6 +759,10 @@ public class JsonUtil {
       return new TypeToken<List<PromotorResponse>>(){}.getType();
     }
     
+    if ("PropriedadeDocumentoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PropriedadeDocumentoRequest>>(){}.getType();
+    }
+    
     if ("PushAPNS".equalsIgnoreCase(className)) {
       return new TypeToken<List<PushAPNS>>(){}.getType();
     }
@@ -845,6 +853,10 @@ public class JsonUtil {
     
     if ("TipoEnderecoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TipoEnderecoResponse>>(){}.getType();
+    }
+    
+    if ("TipoOperacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TipoOperacaoResponse>>(){}.getType();
     }
     
     if ("TipoOportunidade".equalsIgnoreCase(className)) {
@@ -1169,8 +1181,8 @@ public class JsonUtil {
       return new TypeToken<DocumentoResponse>(){}.getType();
     }
     
-    if ("DocumentoTemplateRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<DocumentoTemplateRequest>(){}.getType();
+    if ("DocumentoTemplatePersist".equalsIgnoreCase(className)) {
+      return new TypeToken<DocumentoTemplatePersist>(){}.getType();
     }
     
     if ("DocumentoTemplateResponse".equalsIgnoreCase(className)) {
@@ -1383,6 +1395,10 @@ public class JsonUtil {
     
     if ("PageDispositivoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageDispositivoResponse>(){}.getType();
+    }
+    
+    if ("PageDocumentoTemplateResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageDocumentoTemplateResponse>(){}.getType();
     }
     
     if ("PageEnderecoResponse".equalsIgnoreCase(className)) {
@@ -1657,6 +1673,10 @@ public class JsonUtil {
       return new TypeToken<PromotorResponse>(){}.getType();
     }
     
+    if ("PropriedadeDocumentoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<PropriedadeDocumentoRequest>(){}.getType();
+    }
+    
     if ("PushAPNS".equalsIgnoreCase(className)) {
       return new TypeToken<PushAPNS>(){}.getType();
     }
@@ -1747,6 +1767,10 @@ public class JsonUtil {
     
     if ("TipoEnderecoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TipoEnderecoResponse>(){}.getType();
+    }
+    
+    if ("TipoOperacaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TipoOperacaoResponse>(){}.getType();
     }
     
     if ("TipoOportunidade".equalsIgnoreCase(className)) {

@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
+import br.com.conductor.pier.api.v2.model.PropriedadeDocumentoRequest;
 import java.util.*;
-import java.util.Map;
 
 
 import io.swagger.annotations.*;
@@ -22,7 +22,7 @@ public class DocumentoParametrosRequest  {
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("parametrosConteudo")
-  private Map<String, Object> parametrosConteudo = null;
+  private List<PropriedadeDocumentoRequest> parametrosConteudo = null;
 
   
   /**
@@ -62,13 +62,13 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * Mapa de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00C3\u00A2metros para montagem do documento.
    **/
-  @ApiModelProperty(value = "Mapa de par\u00C3\u00A2metros para montagem do documento.")
-  public Map<String, Object> getParametrosConteudo() {
+  @ApiModelProperty(value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }
-  public void setParametrosConteudo(Map<String, Object> parametrosConteudo) {
+  public void setParametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
   }
 

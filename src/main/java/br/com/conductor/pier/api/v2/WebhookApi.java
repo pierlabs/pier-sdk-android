@@ -125,12 +125,12 @@ public class WebhookApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHookResponse
    */
-  public WebHookResponse  consultarUsingGET28 (Long id) throws ApiException {
+  public WebHookResponse  consultarUsingGET30 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
     }
     
 
@@ -190,7 +190,7 @@ public class WebhookApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse  listarUsingGET34 (List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse  listarUsingGET35 (List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
 

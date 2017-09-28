@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
  **/
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.")
-public class DocumentoTemplateRequest  {
+public class DocumentoTemplatePersist  {
   
   @SerializedName("idTipoDocumento")
   private Long idTipoDocumento = null;
@@ -47,7 +47,7 @@ public class DocumentoTemplateRequest  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTemplateRequest {\n");
+    sb.append("class DocumentoTemplatePersist {\n");
     
     sb.append("  idTipoDocumento: ").append(idTipoDocumento).append("\n");
     sb.append("  template: ").append(template).append("\n");

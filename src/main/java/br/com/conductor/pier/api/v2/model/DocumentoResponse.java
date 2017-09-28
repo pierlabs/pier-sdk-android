@@ -17,10 +17,10 @@ public class DocumentoResponse  {
   
   @SerializedName("id")
   private Long id = null;
-  @SerializedName("idDocumentoTipo")
-  private Long idDocumentoTipo = null;
-  @SerializedName("idDocumentoTemplate")
-  private Long idDocumentoTemplate = null;
+  @SerializedName("idTipoDocumento")
+  private Long idTipoDocumento = null;
+  @SerializedName("idTemplateDocumento")
+  private Long idTemplateDocumento = null;
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("documento")
@@ -47,11 +47,11 @@ public class DocumentoResponse  {
    * ID do Tipo de Documento associado.
    **/
   @ApiModelProperty(value = "ID do Tipo de Documento associado.")
-  public Long getIdDocumentoTipo() {
-    return idDocumentoTipo;
+  public Long getIdTipoDocumento() {
+    return idTipoDocumento;
   }
-  public void setIdDocumentoTipo(Long idDocumentoTipo) {
-    this.idDocumentoTipo = idDocumentoTipo;
+  public void setIdTipoDocumento(Long idTipoDocumento) {
+    this.idTipoDocumento = idTipoDocumento;
   }
 
   
@@ -59,11 +59,11 @@ public class DocumentoResponse  {
    * ID do Template de Documento associado.
    **/
   @ApiModelProperty(value = "ID do Template de Documento associado.")
-  public Long getIdDocumentoTemplate() {
-    return idDocumentoTemplate;
+  public Long getIdTemplateDocumento() {
+    return idTemplateDocumento;
   }
-  public void setIdDocumentoTemplate(Long idDocumentoTemplate) {
-    this.idDocumentoTemplate = idDocumentoTemplate;
+  public void setIdTemplateDocumento(Long idTemplateDocumento) {
+    this.idTemplateDocumento = idTemplateDocumento;
   }
 
   
@@ -122,8 +122,8 @@ public class DocumentoResponse  {
     sb.append("class DocumentoResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  idDocumentoTipo: ").append(idDocumentoTipo).append("\n");
-    sb.append("  idDocumentoTemplate: ").append(idDocumentoTemplate).append("\n");
+    sb.append("  idTipoDocumento: ").append(idTipoDocumento).append("\n");
+    sb.append("  idTemplateDocumento: ").append(idTemplateDocumento).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  documento: ").append(documento).append("\n");
     sb.append("  extensao: ").append(extensao).append("\n");
