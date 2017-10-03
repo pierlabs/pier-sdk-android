@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento")
-public class DocumentoTipoResponse  {
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template")
+public class TipoTemplateResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -24,9 +24,9 @@ public class DocumentoTipoResponse  {
 
   
   /**
-   * ID do Tipo de Documento.
+   * ID do Tipo de Template.
    **/
-  @ApiModelProperty(value = "ID do Tipo de Documento.")
+  @ApiModelProperty(value = "ID do Tipo de Template.")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class DocumentoTipoResponse  {
 
   
   /**
-   * Nome do Tipo de Documento.
+   * Nome do Tipo de Template.
    **/
-  @ApiModelProperty(value = "Nome do Tipo de Documento.")
+  @ApiModelProperty(value = "Nome do Tipo de Template.")
   public String getNome() {
     return nome;
   }
@@ -48,9 +48,9 @@ public class DocumentoTipoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.")
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.")
   public String getDescricao() {
     return descricao;
   }
@@ -60,9 +60,9 @@ public class DocumentoTipoResponse  {
 
   
   /**
-   * Sigla do Tipo de Documento.
+   * Sigla do Tipo de Template.
    **/
-  @ApiModelProperty(value = "Sigla do Tipo de Documento.")
+  @ApiModelProperty(value = "Sigla do Tipo de Template.")
   public String getSigla() {
     return sigla;
   }
@@ -75,7 +75,7 @@ public class DocumentoTipoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTipoResponse {\n");
+    sb.append("class TipoTemplateResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");

@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o
  **/
-@ApiModel(description = "Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL")
-public class TemplateNotificacaoResponse  {
+@ApiModel(description = "Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o")
+public class TemplateNotificacaoDetalheResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -37,6 +37,8 @@ public class TemplateNotificacaoResponse  {
   private String dataInclusao = null;
   @SerializedName("dataAlteracao")
   private String dataAlteracao = null;
+  @SerializedName("conteudo")
+  private String conteudo = null;
 
   
   /**
@@ -147,11 +149,23 @@ public class TemplateNotificacaoResponse  {
   }
 
   
+  /**
+   * Conteudo do e-mail.
+   **/
+  @ApiModelProperty(value = "Conteudo do e-mail.")
+  public String getConteudo() {
+    return conteudo;
+  }
+  public void setConteudo(String conteudo) {
+    this.conteudo = conteudo;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TemplateNotificacaoResponse {\n");
+    sb.append("class TemplateNotificacaoDetalheResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idConfiguracaoEmail: ").append(idConfiguracaoEmail).append("\n");
@@ -162,6 +176,7 @@ public class TemplateNotificacaoResponse  {
     sb.append("  assunto: ").append(assunto).append("\n");
     sb.append("  dataInclusao: ").append(dataInclusao).append("\n");
     sb.append("  dataAlteracao: ").append(dataAlteracao).append("\n");
+    sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

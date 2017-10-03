@@ -15,8 +15,8 @@ public class DocumentoTemplateResponse  {
   
   @SerializedName("id")
   private Long id = null;
-  @SerializedName("idTipoDocumento")
-  private Long idTipoDocumento = null;
+  @SerializedName("idTipoTemplate")
+  private Long idTipoTemplate = null;
 
   
   /**
@@ -32,14 +32,14 @@ public class DocumentoTemplateResponse  {
 
   
   /**
-   * ID do Tipo de Documento.
+   * ID do Tipo de Template.
    **/
-  @ApiModelProperty(value = "ID do Tipo de Documento.")
-  public Long getIdTipoDocumento() {
-    return idTipoDocumento;
+  @ApiModelProperty(value = "ID do Tipo de Template.")
+  public Long getIdTipoTemplate() {
+    return idTipoTemplate;
   }
-  public void setIdTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
+  public void setIdTipoTemplate(Long idTipoTemplate) {
+    this.idTipoTemplate = idTipoTemplate;
   }
 
   
@@ -50,7 +50,7 @@ public class DocumentoTemplateResponse  {
     sb.append("class DocumentoTemplateResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  idTipoDocumento: ").append(idTipoDocumento).append("\n");
+    sb.append("  idTipoTemplate: ").append(idTipoTemplate).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

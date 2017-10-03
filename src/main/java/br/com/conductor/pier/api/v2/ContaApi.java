@@ -11,6 +11,7 @@ import java.util.*;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
+import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
@@ -20,7 +21,7 @@ import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
-import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
+import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
@@ -35,6 +36,7 @@ import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
@@ -76,7 +78,7 @@ public class ContaApi {
    * Este recurso insere um ajuste para a conta do id informado
    * @param id Id Conta
    * @param idTipoAjuste C\u00C3\u00B3digo identificador do tipo de ajuste.
-   * @param dataAjuste Data do ajuste.
+   * @param dataAjuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
    * @param valorAjuste Valor do ajuste
    * @return AjusteResponse
    */
@@ -243,6 +245,71 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (LimiteDisponibilidadeResponse) ApiInvoker.deserialize(response, "", LimiteDisponibilidadeResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Altera o produto associado \u00C3\u00A0 conta.
+   * O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param request request
+   * @return String
+   */
+  public String  alterarProdutoUsingPOST (Long id, AlterarProdutoRequest request) throws ApiException {
+    Object postBody = request;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarProdutoUsingPOST");
+    }
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling alterarProdutoUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/alterar-produto".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
       }
       else {
         return null;
@@ -1250,17 +1317,17 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse  consultarUsingGET25 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse  consultarUsingGET29 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET25");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET29");
     }
     
 
@@ -1315,19 +1382,19 @@ public class ContaApi {
    * Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-   * @return PageTransferenciaResponse
+   * @return TransferenciaDetalheResponse
    */
-  public PageTransferenciaResponse  consultarUsingGET26 (Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse  consultarUsingGET30 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET30");
     }
     
 
@@ -1365,7 +1432,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTransferenciaResponse) ApiInvoker.deserialize(response, "", PageTransferenciaResponse.class);
+        return (TransferenciaDetalheResponse) ApiInvoker.deserialize(response, "", TransferenciaDetalheResponse.class);
       }
       else {
         return null;
@@ -2420,12 +2487,12 @@ public class ContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTransferenciaBancariaResponse
    */
-  public PageTransferenciaBancariaResponse  listarUsingGET30 (Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse  listarUsingGET33 (Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET30");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET33");
     }
     
 
@@ -2495,12 +2562,12 @@ public class ContaApi {
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse  listarUsingGET31 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse  listarUsingGET34 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET31");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET34");
     }
     
 
@@ -2916,9 +2983,9 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
    * @param idContaDestino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
    * @param valorTransferencia Valor da Transfer\u00C3\u00AAncia.
-   * @return PageTransferenciaResponse
+   * @return TransferenciaDetalheResponse
    */
-  public PageTransferenciaResponse  transferirUsingPOST1 (Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse  transferirUsingPOST1 (Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -2975,7 +3042,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageTransferenciaResponse) ApiInvoker.deserialize(response, "", PageTransferenciaResponse.class);
+        return (TransferenciaDetalheResponse) ApiInvoker.deserialize(response, "", TransferenciaDetalheResponse.class);
       }
       else {
         return null;

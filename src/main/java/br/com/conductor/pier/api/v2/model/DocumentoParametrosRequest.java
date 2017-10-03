@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
+import br.com.conductor.pier.api.v2.model.PropriedadeDocumentoRequest;
 import java.util.*;
-import java.util.Map;
 
 
 import io.swagger.annotations.*;
@@ -15,26 +15,12 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento")
 public class DocumentoParametrosRequest  {
   
-  @SerializedName("idTipoDocumento")
-  private Long idTipoDocumento = null;
   @SerializedName("idTemplateDocumento")
   private Long idTemplateDocumento = null;
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("parametrosConteudo")
-  private Map<String, Object> parametrosConteudo = null;
-
-  
-  /**
-   * ID para o tipo de documento.
-   **/
-  @ApiModelProperty(value = "ID para o tipo de documento.")
-  public Long getIdTipoDocumento() {
-    return idTipoDocumento;
-  }
-  public void setIdTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
-  }
+  private List<PropriedadeDocumentoRequest> parametrosConteudo = null;
 
   
   /**
@@ -62,13 +48,13 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * Mapa de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00C3\u00A2metros para montagem do documento.
    **/
-  @ApiModelProperty(value = "Mapa de par\u00C3\u00A2metros para montagem do documento.")
-  public Map<String, Object> getParametrosConteudo() {
+  @ApiModelProperty(value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }
-  public void setParametrosConteudo(Map<String, Object> parametrosConteudo) {
+  public void setParametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
   }
 
@@ -79,7 +65,6 @@ public class DocumentoParametrosRequest  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentoParametrosRequest {\n");
     
-    sb.append("  idTipoDocumento: ").append(idTipoDocumento).append("\n");
     sb.append("  idTemplateDocumento: ").append(idTemplateDocumento).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  parametrosConteudo: ").append(parametrosConteudo).append("\n");

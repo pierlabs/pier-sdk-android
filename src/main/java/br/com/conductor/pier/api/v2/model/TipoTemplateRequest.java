@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
+ * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de documento.")
-public class DocumentoTipoRequest  {
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
+public class TipoTemplateRequest  {
   
   @SerializedName("nome")
   private String nome = null;
@@ -22,9 +22,9 @@ public class DocumentoTipoRequest  {
 
   
   /**
-   * Nome do tipo de documento.
+   * Nome do tipo de template.
    **/
-  @ApiModelProperty(value = "Nome do tipo de documento.")
+  @ApiModelProperty(value = "Nome do tipo de template.")
   public String getNome() {
     return nome;
   }
@@ -34,9 +34,9 @@ public class DocumentoTipoRequest  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
+   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de documento.")
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
   public String getDescricao() {
     return descricao;
   }
@@ -46,9 +46,9 @@ public class DocumentoTipoRequest  {
 
   
   /**
-   * Sigla do tipo de documento.
+   * Sigla do tipo de template.
    **/
-  @ApiModelProperty(value = "Sigla do tipo de documento.")
+  @ApiModelProperty(value = "Sigla do tipo de template.")
   public String getSigla() {
     return sigla;
   }
@@ -61,7 +61,7 @@ public class DocumentoTipoRequest  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTipoRequest {\n");
+    sb.append("class TipoTemplateRequest {\n");
     
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");

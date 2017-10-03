@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
+import java.math.BigDecimal;
 
 
 import io.swagger.annotations.*;
@@ -13,10 +14,24 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo")
 public class AlterarProdutoRequest  {
   
-  @SerializedName("idOrigemComercial")
-  private Long idOrigemComercial = null;
   @SerializedName("idProduto")
   private Long idProduto = null;
+  @SerializedName("idOrigemComercial")
+  private Long idOrigemComercial = null;
+  @SerializedName("limiteGlobal")
+  private BigDecimal limiteGlobal = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do produto.
+   **/
+  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do produto.")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
 
   
   /**
@@ -32,14 +47,14 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do produto.
+   * Valor do novo limite Global.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do produto.")
-  public Long getIdProduto() {
-    return idProduto;
+  @ApiModelProperty(value = "Valor do novo limite Global.")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
   }
-  public void setIdProduto(Long idProduto) {
-    this.idProduto = idProduto;
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
   }
 
   
@@ -49,8 +64,9 @@ public class AlterarProdutoRequest  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlterarProdutoRequest {\n");
     
-    sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
+    sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
+    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

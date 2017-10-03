@@ -8,10 +8,16 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.UsuarioUpdate;
-import br.com.conductor.pier.api.v2.model.UsuarioResponse;
-import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
-import br.com.conductor.pier.api.v2.model.UsuarioPersist;
+import br.com.conductor.pier.api.v2.model.TipoTemplateResponse;
+import br.com.conductor.pier.api.v2.model.TipoTemplateRequest;
+import br.com.conductor.pier.api.v2.model.DocumentoTemplatePersist;
+import br.com.conductor.pier.api.v2.model.DocumentoTemplateResponse;
+import br.com.conductor.pier.api.v2.model.DocumentoDetalhadoResponse;
+import br.com.conductor.pier.api.v2.model.IntegrarDocumentoRequest;
+import br.com.conductor.pier.api.v2.model.PageDocumentoResponse;
+import br.com.conductor.pier.api.v2.model.PageDocumentoTemplateResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoTemplateResponse;
+import br.com.conductor.pier.api.v2.model.DocumentoParametrosRequest;
 
 
 import org.apache.http.HttpEntity;
@@ -22,7 +28,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class UsuarioApi {
+public class DocumentoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -44,170 +50,28 @@ public class UsuarioApi {
 
   
   /**
-   * Alterar senha do usu\u00C3\u00A1rio.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-   * @param login Login do usu\u00C3\u00A1rio.
-   * @param senhaNova Senha Nova
-   * @return String
+   * Altera o tipo de template
+   * Esse recurso permite alterar os dados do tipo de template.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+   * @param persist persist
+   * @return TipoTemplateResponse
    */
-  public String  alterarSenhaLoginUsingPOST (String login, String senhaNova) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'login' is set
-    if (login == null) {
-       throw new ApiException(400, "Missing the required parameter 'login' when calling alterarSenhaLoginUsingPOST");
-    }
-    
-    // verify the required parameter 'senhaNova' is set
-    if (senhaNova == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaLoginUsingPOST");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/usuarios/{login}/alterar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "login" + "\\}", apiInvoker.escapeString(login.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-    headerParams.put("senhaNova", ApiInvoker.parameterToString(senhaNova));
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @param senhaAtual Senha Atual
-   * @param senhaNova Senha Nova
-   * @return String
-   */
-  public String  alterarSenhaUsingPUT (Long id, String senhaAtual, String senhaNova) throws ApiException {
-    Object postBody = null;
+  public TipoTemplateResponse  alterarUsingPUT9 (Long id, TipoTemplateRequest persist) throws ApiException {
+    Object postBody = persist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenhaUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
     }
     
-    // verify the required parameter 'senhaAtual' is set
-    if (senhaAtual == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaAtual' when calling alterarSenhaUsingPUT");
-    }
-    
-    // verify the required parameter 'senhaNova' is set
-    if (senhaNova == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaUsingPUT");
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT9");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}/alterar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-    headerParams.put("senha_atual", ApiInvoker.parameterToString(senhaAtual));
-    
-    headerParams.put("senha_nova", ApiInvoker.parameterToString(senhaNova));
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Altera os usu\u00C3\u00A1rios cadastrados na base.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @param update update
-   * @return UsuarioResponse
-   */
-  public UsuarioResponse  alterarUsingPUT11 (Long id, UsuarioUpdate update) throws ApiException {
-    Object postBody = update;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT11");
-    }
-    
-    // verify the required parameter 'update' is set
-    if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT11");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/usuarios/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/tipos-templates/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -240,7 +104,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+        return (TipoTemplateResponse) ApiInvoker.deserialize(response, "", TipoTemplateResponse.class);
       }
       else {
         return null;
@@ -251,22 +115,28 @@ public class UsuarioApi {
   }
   
   /**
-   * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return UsuarioResponse
+   * Atualizar templates dos documentos
+   * Esse recurso permite atualizar templates dos documentos.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+   * @param persist persist
+   * @return DocumentoTemplateResponse
    */
-  public UsuarioResponse  ativarUsuarioUsingPOST (Long id) throws ApiException {
-    Object postBody = null;
+  public DocumentoTemplateResponse  atualizarUsingPUT (Long id, DocumentoTemplatePersist persist) throws ApiException {
+    Object postBody = persist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsuarioUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT");
+    }
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizarUsingPUT");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}/ativar-usuario".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/templates-documentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -297,9 +167,9 @@ public class UsuarioApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+        return (DocumentoTemplateResponse) ApiInvoker.deserialize(response, "", DocumentoTemplateResponse.class);
       }
       else {
         return null;
@@ -310,22 +180,22 @@ public class UsuarioApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return UsuarioResponse
+   * Consultar tipo de template
+   * Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+   * @return TipoTemplateResponse
    */
-  public UsuarioResponse  consultarUsingGET31 (Long id) throws ApiException {
+  public TipoTemplateResponse  consultarUsingGET27 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/tipos-templates/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -358,7 +228,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+        return (TipoTemplateResponse) ApiInvoker.deserialize(response, "", TipoTemplateResponse.class);
       }
       else {
         return null;
@@ -369,22 +239,140 @@ public class UsuarioApi {
   }
   
   /**
-   * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return UsuarioResponse
+   * Consulta documentos
+   * Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
+   * @return DocumentoDetalhadoResponse
    */
-  public UsuarioResponse  desativarUsuarioUsingPOST (Long id) throws ApiException {
+  public DocumentoDetalhadoResponse  consultarUsingGET7 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsuarioUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}/desativar-usuario".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/documentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (DocumentoDetalhadoResponse) ApiInvoker.deserialize(response, "", DocumentoDetalhadoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consultar templates dos documentos
+   * Esse recurso permite consultar templates dos documentos.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+   * @return DocumentoTemplateResponse
+   */
+  public DocumentoTemplateResponse  consultarUsingGET8 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/templates-documentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (DocumentoTemplateResponse) ApiInvoker.deserialize(response, "", DocumentoTemplateResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
+   * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+   * @param integrarDocumentoRequest integrarDocumentoRequest
+   * @return String
+   */
+  public String  integrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest) throws ApiException {
+    Object postBody = integrarDocumentoRequest;
+    
+    // verify the required parameter 'integrarDocumentoRequest' is set
+    if (integrarDocumentoRequest == null) {
+       throw new ApiException(400, "Missing the required parameter 'integrarDocumentoRequest' when calling integrarUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/documentos/integrar".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -417,7 +405,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+        return (String) ApiInvoker.deserialize(response, "", String.class);
       }
       else {
         return null;
@@ -428,23 +416,22 @@ public class UsuarioApi {
   }
   
   /**
-   * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+   * Lista documentos
+   * Esse recurso permite listar documentos.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param nome Nome do Usuario
-   * @param cpf CPF do Usuario
-   * @param email Email do Usuario
-   * @param status Status do Usuario
-   * @return PageUsuarioResponse
+   * @param idTemplateDocumento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+   * @param nome Nome do documento.
+   * @param extensao Extensao do documento.
+   * @return PageDocumentoResponse
    */
-  public PageUsuarioResponse  listarUsingGET35 (List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageDocumentoResponse  listarUsingGET10 (List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
+    String path = "/api/documentos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -460,13 +447,11 @@ public class UsuarioApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTemplateDocumento", idTemplateDocumento));
+    
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "email", email));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "status", status));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "extensao", extensao));
     
 
     
@@ -491,7 +476,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageUsuarioResponse) ApiInvoker.deserialize(response, "", PageUsuarioResponse.class);
+        return (PageDocumentoResponse) ApiInvoker.deserialize(response, "", PageDocumentoResponse.class);
       }
       else {
         return null;
@@ -502,22 +487,20 @@ public class UsuarioApi {
   }
   
   /**
-   * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return String
+   * Lista os templates dos documentos
+   * Esse recurso permite listar os templates dos documentos.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+   * @return PageDocumentoTemplateResponse
    */
-  public String  recuperarSenhaUsingPOST (Long id) throws ApiException {
+  public PageDocumentoTemplateResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling recuperarSenhaUsingPOST");
-    }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}/recuperar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/templates-documentos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -526,6 +509,14 @@ public class UsuarioApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoTemplate", idTipoTemplate));
     
 
     
@@ -548,9 +539,9 @@ public class UsuarioApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
+        return (PageDocumentoTemplateResponse) ApiInvoker.deserialize(response, "", PageDocumentoTemplateResponse.class);
       }
       else {
         return null;
@@ -561,22 +552,84 @@ public class UsuarioApi {
   }
   
   /**
-   * Cadastra Usu\u00C3\u00A1rio na base.
-   * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
-   * @param persist persist
-   * @return UsuarioResponse
+   * Lista os tipos de templates
+   * Esse recurso permite listar os tipos de templates associados ao emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageTipoTemplateResponse
    */
-  public UsuarioResponse  salvarUsingPOST19 (UsuarioPersist persist) throws ApiException {
+  public PageTipoTemplateResponse  listarUsingGET31 (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/tipos-templates".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoTemplateResponse) ApiInvoker.deserialize(response, "", PageTipoTemplateResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastra os tipos de templates
+   * Esse recurso permite cadastrar tipos de templates.
+   * @param persist persist
+   * @return TipoTemplateResponse
+   */
+  public TipoTemplateResponse  salvarUsingPOST17 (TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST19");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-templates".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -609,7 +662,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
+        return (TipoTemplateResponse) ApiInvoker.deserialize(response, "", TipoTemplateResponse.class);
       }
       else {
         return null;
@@ -620,28 +673,22 @@ public class UsuarioApi {
   }
   
   /**
-   * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
-   * @param login Login identificador do usu\u00C3\u00A1rio (login).
-   * @param senha Senha do usu\u00C3\u00A1rio
-   * @return Object
+   * Cadastra documentos
+   * Esse recurso permite cadastrar documentos.
+   * @param persist persist
+   * @return DocumentoDetalhadoResponse
    */
-  public Object  validarSenhaLoginUsingPOST (String login, String senha) throws ApiException {
-    Object postBody = null;
+  public DocumentoDetalhadoResponse  salvarUsingPOST5 (DocumentoParametrosRequest persist) throws ApiException {
+    Object postBody = persist;
     
-    // verify the required parameter 'login' is set
-    if (login == null) {
-       throw new ApiException(400, "Missing the required parameter 'login' when calling validarSenhaLoginUsingPOST");
-    }
-    
-    // verify the required parameter 'senha' is set
-    if (senha == null) {
-       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaLoginUsingPOST");
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST5");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{login}/validar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "login" + "\\}", apiInvoker.escapeString(login.toString()));
+    String path = "/api/documentos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -652,8 +699,6 @@ public class UsuarioApi {
 
     
 
-    
-    headerParams.put("senha", ApiInvoker.parameterToString(senha));
     
 
     String[] contentTypes = {
@@ -676,7 +721,7 @@ public class UsuarioApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+        return (DocumentoDetalhadoResponse) ApiInvoker.deserialize(response, "", DocumentoDetalhadoResponse.class);
       }
       else {
         return null;
@@ -687,28 +732,22 @@ public class UsuarioApi {
   }
   
   /**
-   * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
-   * @param senha Senha do usu\u00C3\u00A1rio
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
-   * @return String
+   * Cadastra os templates dos documentos
+   * Esse recurso permite cadastrar templates dos documentos.
+   * @param persist persist
+   * @return DocumentoTemplateResponse
    */
-  public String  validarSenhaUsingGET1 (String senha, Long id) throws ApiException {
-    Object postBody = null;
+  public DocumentoTemplateResponse  salvarUsingPOST6 (DocumentoTemplatePersist persist) throws ApiException {
+    Object postBody = persist;
     
-    // verify the required parameter 'senha' is set
-    if (senha == null) {
-       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaUsingGET1");
-    }
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling validarSenhaUsingGET1");
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
     }
     
 
     // create path and map variables
-    String path = "/api/usuarios/{id}/validar-senha".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/templates-documentos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -719,8 +758,6 @@ public class UsuarioApi {
 
     
 
-    
-    headerParams.put("senha", ApiInvoker.parameterToString(senha));
     
 
     String[] contentTypes = {
@@ -741,9 +778,9 @@ public class UsuarioApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
+        return (DocumentoTemplateResponse) ApiInvoker.deserialize(response, "", DocumentoTemplateResponse.class);
       }
       else {
         return null;

@@ -68,6 +68,22 @@ public class TransferenciaBancariaResponse  {
   private Long numeroEstabelecimento = null;
   @SerializedName("valorTaxaSaque")
   private BigDecimal valorTaxaSaque = null;
+  @SerializedName("banco")
+  private Long banco = null;
+  @SerializedName("numeroAgencia")
+  private String numeroAgencia = null;
+  @SerializedName("digitoAgencia")
+  private String digitoAgencia = null;
+  @SerializedName("numeroConta")
+  private String numeroConta = null;
+  @SerializedName("digitoConta")
+  private String digitoConta = null;
+  @SerializedName("flagContaPoupanca")
+  private Integer flagContaPoupanca = null;
+  @SerializedName("documentoFavorecido")
+  private String documentoFavorecido = null;
+  @SerializedName("nomeFavorecido")
+  private String nomeFavorecido = null;
 
   
   /**
@@ -393,6 +409,102 @@ public class TransferenciaBancariaResponse  {
   }
 
   
+  /**
+   * C\u00C3\u00B3digo do Banco
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo do Banco")
+  public Long getBanco() {
+    return banco;
+  }
+  public void setBanco(Long banco) {
+    this.banco = banco;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da Ag\u00C3\u00AAncia")
+  public String getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(String numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+   **/
+  @ApiModelProperty(value = "D\u00C3\u00ADgito da Ag\u00C3\u00AAncia")
+  public String getDigitoAgencia() {
+    return digitoAgencia;
+  }
+  public void setDigitoAgencia(String digitoAgencia) {
+    this.digitoAgencia = digitoAgencia;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da Conta
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da Conta")
+  public String getNumeroConta() {
+    return numeroConta;
+  }
+  public void setNumeroConta(String numeroConta) {
+    this.numeroConta = numeroConta;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito da Conta
+   **/
+  @ApiModelProperty(value = "D\u00C3\u00ADgito da Conta")
+  public String getDigitoConta() {
+    return digitoConta;
+  }
+  public void setDigitoConta(String digitoConta) {
+    this.digitoConta = digitoConta;
+  }
+
+  
+  /**
+   * Tipo da Conta
+   **/
+  @ApiModelProperty(value = "Tipo da Conta")
+  public Integer getFlagContaPoupanca() {
+    return flagContaPoupanca;
+  }
+  public void setFlagContaPoupanca(Integer flagContaPoupanca) {
+    this.flagContaPoupanca = flagContaPoupanca;
+  }
+
+  
+  /**
+   * Documento do Favorecido
+   **/
+  @ApiModelProperty(value = "Documento do Favorecido")
+  public String getDocumentoFavorecido() {
+    return documentoFavorecido;
+  }
+  public void setDocumentoFavorecido(String documentoFavorecido) {
+    this.documentoFavorecido = documentoFavorecido;
+  }
+
+  
+  /**
+   * Nome do Favorecido
+   **/
+  @ApiModelProperty(value = "Nome do Favorecido")
+  public String getNomeFavorecido() {
+    return nomeFavorecido;
+  }
+  public void setNomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -426,6 +538,14 @@ public class TransferenciaBancariaResponse  {
     sb.append("  idContaPortador: ").append(idContaPortador).append("\n");
     sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
     sb.append("  valorTaxaSaque: ").append(valorTaxaSaque).append("\n");
+    sb.append("  banco: ").append(banco).append("\n");
+    sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
+    sb.append("  digitoAgencia: ").append(digitoAgencia).append("\n");
+    sb.append("  numeroConta: ").append(numeroConta).append("\n");
+    sb.append("  digitoConta: ").append(digitoConta).append("\n");
+    sb.append("  flagContaPoupanca: ").append(flagContaPoupanca).append("\n");
+    sb.append("  documentoFavorecido: ").append(documentoFavorecido).append("\n");
+    sb.append("  nomeFavorecido: ").append(nomeFavorecido).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
