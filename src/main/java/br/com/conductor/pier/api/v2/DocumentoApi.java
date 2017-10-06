@@ -121,17 +121,17 @@ public class DocumentoApi {
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse  atualizarUsingPUT (Long id, DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoTemplateResponse  atualizarUsingPUT1 (Long id, DocumentoTemplatePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT1");
     }
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizarUsingPUT");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizarUsingPUT1");
     }
     
 
@@ -185,12 +185,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse  consultarUsingGET27 (Long id) throws ApiException {
+  public TipoTemplateResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
@@ -244,12 +244,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse  consultarUsingGET7 (Long id) throws ApiException {
+  public DocumentoDetalhadoResponse  consultarUsingGET8 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
     }
     
 
@@ -303,12 +303,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse  consultarUsingGET8 (Long id) throws ApiException {
+  public DocumentoTemplateResponse  consultarUsingGET9 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
     }
     
 
@@ -426,7 +426,7 @@ public class DocumentoApi {
    * @param extensao Extensao do documento.
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse  listarUsingGET10 (List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
 
@@ -495,7 +495,7 @@ public class DocumentoApi {
    * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse  listarUsingGET12 (List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
 
@@ -559,7 +559,7 @@ public class DocumentoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse  listarUsingGET31 (List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -619,12 +619,12 @@ public class DocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse  salvarUsingPOST17 (TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse  salvarUsingPOST18 (TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST18");
     }
     
 
@@ -678,12 +678,12 @@ public class DocumentoApi {
    * @param persist persist
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse  salvarUsingPOST5 (DocumentoParametrosRequest persist) throws ApiException {
+  public DocumentoDetalhadoResponse  salvarUsingPOST6 (DocumentoParametrosRequest persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST5");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
     }
     
 
@@ -737,12 +737,12 @@ public class DocumentoApi {
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse  salvarUsingPOST6 (DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoTemplateResponse  salvarUsingPOST7 (DocumentoTemplatePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST7");
     }
     
 

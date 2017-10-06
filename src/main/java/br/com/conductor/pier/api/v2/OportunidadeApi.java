@@ -324,12 +324,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET12 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET13 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
     }
     
 
@@ -383,12 +383,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  consultarUsingGET25 (Long id) throws ApiException {
+  public TipoOportunidadeResponse  consultarUsingGET26 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
     }
     
 
@@ -786,7 +786,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse  listarUsingGET16 (List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse  listarUsingGET17 (List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -864,7 +864,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse  listarUsingGET29 (List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse  listarUsingGET30 (List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -993,12 +993,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  salvarUsingPOST11 (OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse  salvarUsingPOST12 (OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
     }
     
 
@@ -1052,12 +1052,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  salvarUsingPOST16 (TipoOportunidade persist) throws ApiException {
+  public TipoOportunidadeResponse  salvarUsingPOST17 (TipoOportunidade persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST16");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
     }
     
 

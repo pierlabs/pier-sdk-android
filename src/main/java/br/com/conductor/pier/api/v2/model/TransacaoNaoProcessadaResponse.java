@@ -66,6 +66,8 @@ public class TransacaoNaoProcessadaResponse  {
   private Long idEstabelecimento = null;
   @SerializedName("nomeEstabelecimento")
   private String nomeEstabelecimento = null;
+  @SerializedName("nomeFantasiaEstabelecimento")
+  private String nomeFantasiaEstabelecimento = null;
   @SerializedName("localidadeEstabelecimento")
   private String localidadeEstabelecimento = null;
   @SerializedName("planoParcelamento")
@@ -399,6 +401,18 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
+   * Nome Fantasia do Estabelecimento.
+   **/
+  @ApiModelProperty(value = "Nome Fantasia do Estabelecimento.")
+  public String getNomeFantasiaEstabelecimento() {
+    return nomeFantasiaEstabelecimento;
+  }
+  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  }
+
+  
+  /**
    * Localidade do Estabelecimento.
    **/
   @ApiModelProperty(value = "Localidade do Estabelecimento.")
@@ -538,6 +552,7 @@ public class TransacaoNaoProcessadaResponse  {
     sb.append("  grupoDescricaoMCC: ").append(grupoDescricaoMCC).append("\n");
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
     sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
+    sb.append("  nomeFantasiaEstabelecimento: ").append(nomeFantasiaEstabelecimento).append("\n");
     sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");
     sb.append("  planoParcelamento: ").append(planoParcelamento).append("\n");
     sb.append("  numeroParcela: ").append(numeroParcela).append("\n");
