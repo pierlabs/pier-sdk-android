@@ -16,8 +16,6 @@ import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
-import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
-import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
@@ -27,8 +25,7 @@ import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
-import br.com.conductor.pier.api.v2.model.PageFaturaConsignadaResponse;
-import br.com.conductor.pier.api.v2.model.PageFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PageFaturaFechadaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
@@ -927,133 +924,6 @@ public class ContaApi {
   }
   
   /**
-   * Consultar a fatura consignadas abertas da conta
-   * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar a fatura consignada em aberto
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param dataVencimento Data Vencimento
-   * @return DetalhesFaturaConsignadaResponse
-   */
-  public DetalhesFaturaConsignadaResponse  consultarFaturaConsignadaAbertaUsingGET (Long id, String dataVencimento) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFaturaConsignadaAbertaUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/faturas-consignadas/consultar-aberta".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (DetalhesFaturaConsignadaResponse) ApiInvoker.deserialize(response, "", DetalhesFaturaConsignadaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Apresenta dados de uma determinada fatura consignada
-   * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar uma fatura, atrav\u00C3\u00A9s do id da conta e o id da fatura.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idFatura C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da fatura (id_fatura).
-   * @return FaturaConsignadaDetalheResponse
-   */
-  public FaturaConsignadaDetalheResponse  consultarFaturaConsignadaUsingGET (Long id, Long idFatura) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFaturaConsignadaUsingGET");
-    }
-    
-    // verify the required parameter 'idFatura' is set
-    if (idFatura == null) {
-       throw new ApiException(400, "Missing the required parameter 'idFatura' when calling consultarFaturaConsignadaUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/faturas-consignadas/{id_fatura}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "id_fatura" + "\\}", apiInvoker.escapeString(idFatura.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (FaturaConsignadaDetalheResponse) ApiInvoker.deserialize(response, "", FaturaConsignadaDetalheResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Consultar Fatura da Conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar os detalhes de uma fatura vinculados a uma determinada conta.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -1895,77 +1765,6 @@ public class ContaApi {
   }
   
   /**
-   * Lista as faturas consignadas da conta
-   * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param dataVencimento Apresenta a data de vencimento da fatura.
-   * @return PageFaturaConsignadaResponse
-   */
-  public PageFaturaConsignadaResponse  listarFaturasConsignadasUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarFaturasConsignadasUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/faturas-consignadas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageFaturaConsignadaResponse) ApiInvoker.deserialize(response, "", PageFaturaConsignadaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista as faturas da conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -1973,9 +1772,9 @@ public class ContaApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de Vencimento da Fatura.
-   * @return PageFaturaResponse
+   * @return PageFaturaFechadaResponse
    */
-  public PageFaturaResponse  listarFaturasUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageFaturaFechadaResponse  listarFaturasUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -2026,7 +1825,7 @@ public class ContaApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageFaturaResponse) ApiInvoker.deserialize(response, "", PageFaturaResponse.class);
+        return (PageFaturaFechadaResponse) ApiInvoker.deserialize(response, "", PageFaturaFechadaResponse.class);
       }
       else {
         return null;

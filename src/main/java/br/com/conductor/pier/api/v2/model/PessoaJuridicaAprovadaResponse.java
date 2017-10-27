@@ -1,6 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
+import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
 import java.math.BigDecimal;
@@ -58,6 +59,8 @@ public class PessoaJuridicaAprovadaResponse  {
   private List<EnderecoAprovadoResponse> enderecos = null;
   @SerializedName("socios")
   private List<SocioAprovadoResponse> socios = null;
+  @SerializedName("referencias")
+  private List<ReferenciaComercialAprovadoResponse> referencias = null;
   @SerializedName("limiteGlobal")
   private BigDecimal limiteGlobal = null;
   @SerializedName("limiteMaximo")
@@ -307,6 +310,18 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
+   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   **/
+  @ApiModelProperty(value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
+  public List<ReferenciaComercialAprovadoResponse> getReferencias() {
+    return referencias;
+  }
+  public void setReferencias(List<ReferenciaComercialAprovadoResponse> referencias) {
+    this.referencias = referencias;
+  }
+
+  
+  /**
    * Valor do Limite Global
    **/
   @ApiModelProperty(required = true, value = "Valor do Limite Global")
@@ -368,6 +383,7 @@ public class PessoaJuridicaAprovadaResponse  {
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("  socios: ").append(socios).append("\n");
+    sb.append("  referencias: ").append(referencias).append("\n");
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");

@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
+import br.com.conductor.pier.api.v2.model.FaturaFechadaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import java.util.*;
 
@@ -17,7 +17,7 @@ import com.google.gson.annotations.SerializedName;
 public class DetalhesFaturaResponse  {
   
   @SerializedName("fatura")
-  private FaturaResponse fatura = null;
+  private FaturaFechadaResponse fatura = null;
   @SerializedName("transacoes")
   private List<TransacoesCorrentesResponse> transacoes = null;
 
@@ -26,10 +26,10 @@ public class DetalhesFaturaResponse  {
    * Apresenta os detalhes da fatura
    **/
   @ApiModelProperty(value = "Apresenta os detalhes da fatura")
-  public FaturaResponse getFatura() {
+  public FaturaFechadaResponse getFatura() {
     return fatura;
   }
-  public void setFatura(FaturaResponse fatura) {
+  public void setFatura(FaturaFechadaResponse fatura) {
     this.fatura = fatura;
   }
 

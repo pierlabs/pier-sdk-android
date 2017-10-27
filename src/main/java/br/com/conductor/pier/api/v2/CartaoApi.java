@@ -469,6 +469,65 @@ public class CartaoApi {
   }
   
   /**
+   * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
+   * Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+   * @return Object
+   */
+  public Object  consultarCartaoImpressaoUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarCartaoImpressaoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/consultar-dados-impressao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Consultar Detalhes do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
    * @param id id

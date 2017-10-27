@@ -19,7 +19,6 @@ import br.com.conductor.pier.api.v2.model.PageCodigoSegurancaResponse;
 import br.com.conductor.pier.api.v2.model.PagePushResponse;
 import br.com.conductor.pier.api.v2.model.PageSMSResponse;
 import br.com.conductor.pier.api.v2.model.PageTemplateNotificacaoResponse;
-import br.com.conductor.pier.api.v2.model.NotificacaoEmailResponse;
 import br.com.conductor.pier.api.v2.model.NotificacaoEmailRequest;
 import br.com.conductor.pier.api.v2.model.NotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.PushFCMEGCM;
@@ -1091,9 +1090,9 @@ public class NotificacaoApi {
    * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
    * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
    * @param request request
-   * @return NotificacaoEmailResponse
+   * @return Object
    */
-  public NotificacaoEmailResponse  notificacaoEmailUsingPOST (NotificacaoEmailRequest request) throws ApiException {
+  public Object  notificacaoEmailUsingPOST (NotificacaoEmailRequest request) throws ApiException {
     Object postBody = request;
     
     // verify the required parameter 'request' is set
@@ -1136,7 +1135,7 @@ public class NotificacaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (NotificacaoEmailResponse) ApiInvoker.deserialize(response, "", NotificacaoEmailResponse.class);
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;
@@ -1154,7 +1153,7 @@ public class NotificacaoApi {
    * @param resposta TextoStatus
    * @return NotificacaoSMSResponse
    */
-  public NotificacaoSMSResponse  responderSMSUsingPOST (String nsu, String data, String resposta) throws ApiException {
+  public NotificacaoSMSResponse  responderSMSGetUsingGET (String nsu, String data, String resposta) throws ApiException {
     Object postBody = null;
     
 
@@ -1196,7 +1195,7 @@ public class NotificacaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (NotificacaoSMSResponse) ApiInvoker.deserialize(response, "", NotificacaoSMSResponse.class);
       }

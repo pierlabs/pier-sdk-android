@@ -2,6 +2,7 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.PessoaPersist;
+import br.com.conductor.pier.api.v2.model.RefenciaComercialAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.math.BigDecimal;
 import java.util.*;
@@ -52,10 +53,12 @@ public class PessoaJuridicaAprovadaPersist  {
   private List<TelefonePessoaAprovadaPersist> telefones = null;
   @SerializedName("enderecos")
   private List<EnderecoAprovadoPersist> enderecos = null;
-  @SerializedName("limiteGlobal")
-  private BigDecimal limiteGlobal = null;
   @SerializedName("socios")
   private List<PessoaPersist> socios = null;
+  @SerializedName("referenciasComerciais")
+  private List<RefenciaComercialAprovadoPersist> referenciasComerciais = null;
+  @SerializedName("limiteGlobal")
+  private BigDecimal limiteGlobal = null;
   @SerializedName("limiteMaximo")
   private BigDecimal limiteMaximo = null;
   @SerializedName("limiteParcelas")
@@ -267,18 +270,6 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Valor do Limite Global
-   **/
-  @ApiModelProperty(required = true, value = "Valor do Limite Global")
-  public BigDecimal getLimiteGlobal() {
-    return limiteGlobal;
-  }
-  public void setLimiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-  }
-
-  
-  /**
    * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
    **/
   @ApiModelProperty(value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
@@ -287,6 +278,30 @@ public class PessoaJuridicaAprovadaPersist  {
   }
   public void setSocios(List<PessoaPersist> socios) {
     this.socios = socios;
+  }
+
+  
+  /**
+   * Apresenta os dados das refer\u00C3\u00AAncias comerciais
+   **/
+  @ApiModelProperty(value = "Apresenta os dados das refer\u00C3\u00AAncias comerciais")
+  public List<RefenciaComercialAprovadoPersist> getReferenciasComerciais() {
+    return referenciasComerciais;
+  }
+  public void setReferenciasComerciais(List<RefenciaComercialAprovadoPersist> referenciasComerciais) {
+    this.referenciasComerciais = referenciasComerciais;
+  }
+
+  
+  /**
+   * Valor do Limite Global
+   **/
+  @ApiModelProperty(required = true, value = "Valor do Limite Global")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
   }
 
   
@@ -337,8 +352,9 @@ public class PessoaJuridicaAprovadaPersist  {
     sb.append("  valorPontuacao: ").append(valorPontuacao).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
-    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  socios: ").append(socios).append("\n");
+    sb.append("  referenciasComerciais: ").append(referenciasComerciais).append("\n");
+    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
     sb.append("}\n");

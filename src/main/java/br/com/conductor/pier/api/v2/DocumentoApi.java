@@ -14,6 +14,7 @@ import br.com.conductor.pier.api.v2.model.DocumentoTemplatePersist;
 import br.com.conductor.pier.api.v2.model.DocumentoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoDetalhadoResponse;
 import br.com.conductor.pier.api.v2.model.IntegrarDocumentoRequest;
+import br.com.conductor.pier.api.v2.model.DocumentoIntegracaoResponse;
 import br.com.conductor.pier.api.v2.model.PageDocumentoResponse;
 import br.com.conductor.pier.api.v2.model.PageDocumentoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTemplateResponse;
@@ -360,9 +361,9 @@ public class DocumentoApi {
    * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
    * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
    * @param integrarDocumentoRequest integrarDocumentoRequest
-   * @return String
+   * @return DocumentoIntegracaoResponse
    */
-  public String  integrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest) throws ApiException {
+  public DocumentoIntegracaoResponse  integrarUsingPOST (IntegrarDocumentoRequest integrarDocumentoRequest) throws ApiException {
     Object postBody = integrarDocumentoRequest;
     
     // verify the required parameter 'integrarDocumentoRequest' is set
@@ -405,7 +406,7 @@ public class DocumentoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
+        return (DocumentoIntegracaoResponse) ApiInvoker.deserialize(response, "", DocumentoIntegracaoResponse.class);
       }
       else {
         return null;

@@ -1,6 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
+import br.com.conductor.pier.api.v2.model.LancamentoFaturaResponse;
 import java.math.BigDecimal;
+import java.util.*;
 
 
 import io.swagger.annotations.*;
@@ -9,11 +11,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Fatura futura
+ * Detalhes da fatura
  **/
-@ApiModel(description = "Fatura futura")
-public class FaturaResponse  {
+@ApiModel(description = "Detalhes da fatura")
+public class FaturaDetalheResponse  {
   
+  @SerializedName("lancamentosFaturaResponse")
+  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = null;
   @SerializedName("idConta")
   private Long idConta = null;
   public enum SituacaoProcessamentoEnum {
@@ -33,6 +37,17 @@ public class FaturaResponse  {
   private BigDecimal valorTotal = null;
   @SerializedName("valorPagamentoMinimo")
   private BigDecimal valorPagamentoMinimo = null;
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
+    return lancamentosFaturaResponse;
+  }
+  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+  }
 
   
   /**
@@ -135,8 +150,9 @@ public class FaturaResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FaturaResponse {\n");
+    sb.append("class FaturaDetalheResponse {\n");
     
+    sb.append("  lancamentosFaturaResponse: ").append(lancamentosFaturaResponse).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  situacaoProcessamento: ").append(situacaoProcessamento).append("\n");
     sb.append("  pagamentoEfetuado: ").append(pagamentoEfetuado).append("\n");

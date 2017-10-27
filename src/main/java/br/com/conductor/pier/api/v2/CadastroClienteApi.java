@@ -15,6 +15,8 @@ import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PessoaResponse;
 import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
+import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
+import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalPersist;
 import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalResponse;
@@ -25,8 +27,6 @@ import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaPersist;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaPersist;
-import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
-import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -542,6 +542,66 @@ public class CadastroClienteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Atualiza conta integrada com o emissor
+   * Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+   * @return IntegracaoEmissorResponse
+   */
+  public IntegracaoEmissorResponse  atualizarUsingPOST (Long id, IntegracaoEmissorPersist body) throws ApiException {
+    Object postBody = body;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/atualizar-registro-integracao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (IntegracaoEmissorResponse) ApiInvoker.deserialize(response, "", IntegracaoEmissorResponse.class);
       }
       else {
         return null;

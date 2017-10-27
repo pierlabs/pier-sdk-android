@@ -432,6 +432,59 @@ public class StatusParametroApi {
   }
   
   /**
+   * Lista os tipos de transa\u00C3\u00A7\u00C3\u00B5es
+   * Esse recurso permite listar os tipos de transa\u00C3\u00A7\u00C3\u00B5es dispon\u00C3\u00ADveis.
+   * @return List<Object>
+   */
+  public List<Object>  listarTiposEventosTransacoesUsingGET () throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/tipos-eventos-transacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (List<Object>) ApiInvoker.deserialize(response, "array", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os Status Contas cadastrados para o Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.

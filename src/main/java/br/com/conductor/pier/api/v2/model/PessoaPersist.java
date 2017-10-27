@@ -15,32 +15,44 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "PessoaPersist")
 public class PessoaPersist  {
   
-  @SerializedName("cpf")
-  private String cpf = null;
-  @SerializedName("dataEmissaoIdentidade")
-  private String dataEmissaoIdentidade = null;
-  @SerializedName("dataNascimento")
-  private String dataNascimento = null;
-  @SerializedName("email")
-  private String email = null;
-  @SerializedName("estadoCivil")
-  private String estadoCivil = null;
-  @SerializedName("nacionalidade")
-  private String nacionalidade = null;
   @SerializedName("nome")
   private String nome = null;
+  @SerializedName("cpf")
+  private String cpf = null;
+  @SerializedName("dataNascimento")
+  private String dataNascimento = null;
+  @SerializedName("sexo")
+  private String sexo = null;
   @SerializedName("numeroIdentidade")
   private String numeroIdentidade = null;
   @SerializedName("orgaoExpedidorIdentidade")
   private String orgaoExpedidorIdentidade = null;
-  @SerializedName("profissao")
-  private String profissao = null;
-  @SerializedName("sexo")
-  private String sexo = null;
-  @SerializedName("telefones")
-  private List<TelefonePessoaAprovadaPersist> telefones = null;
   @SerializedName("unidadeFederativaIdentidade")
   private String unidadeFederativaIdentidade = null;
+  @SerializedName("dataEmissaoIdentidade")
+  private String dataEmissaoIdentidade = null;
+  @SerializedName("estadoCivil")
+  private String estadoCivil = null;
+  @SerializedName("profissao")
+  private String profissao = null;
+  @SerializedName("nacionalidade")
+  private String nacionalidade = null;
+  @SerializedName("email")
+  private String email = null;
+  @SerializedName("telefones")
+  private List<TelefonePessoaAprovadaPersist> telefones = null;
+
+  
+  /**
+   * Apresenta o Nome do Socio
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta o Nome do Socio")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
   
   /**
@@ -52,18 +64,6 @@ public class PessoaPersist  {
   }
   public void setCpf(String cpf) {
     this.cpf = cpf;
-  }
-
-  
-  /**
-   * Data emiss\u00C3\u00A3o da Identidade
-   **/
-  @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da Identidade")
-  public String getDataEmissaoIdentidade() {
-    return dataEmissaoIdentidade;
-  }
-  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
-    this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
   
@@ -80,50 +80,14 @@ public class PessoaPersist  {
 
   
   /**
-   * Email do s\u00C3\u00B3cio
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
    **/
-  @ApiModelProperty(value = "Email do s\u00C3\u00B3cio")
-  public String getEmail() {
-    return email;
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
+  public String getSexo() {
+    return sexo;
   }
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  
-  /**
-   * Estado civil do s\u00C3\u00B3cio
-   **/
-  @ApiModelProperty(value = "Estado civil do s\u00C3\u00B3cio")
-  public String getEstadoCivil() {
-    return estadoCivil;
-  }
-  public void setEstadoCivil(String estadoCivil) {
-    this.estadoCivil = estadoCivil;
-  }
-
-  
-  /**
-   * Nacionalidade do s\u00C3\u00B3cio
-   **/
-  @ApiModelProperty(value = "Nacionalidade do s\u00C3\u00B3cio")
-  public String getNacionalidade() {
-    return nacionalidade;
-  }
-  public void setNacionalidade(String nacionalidade) {
-    this.nacionalidade = nacionalidade;
-  }
-
-  
-  /**
-   * Apresenta o Nome do Socio
-   **/
-  @ApiModelProperty(required = true, value = "Apresenta o Nome do Socio")
-  public String getNome() {
-    return nome;
-  }
-  public void setNome(String nome) {
-    this.nome = nome;
+  public void setSexo(String sexo) {
+    this.sexo = sexo;
   }
 
   
@@ -152,6 +116,42 @@ public class PessoaPersist  {
 
   
   /**
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   **/
+  @ApiModelProperty(value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  public String getUnidadeFederativaIdentidade() {
+    return unidadeFederativaIdentidade;
+  }
+  public void setUnidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
+    this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
+  }
+
+  
+  /**
+   * Data emiss\u00C3\u00A3o da Identidade
+   **/
+  @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da Identidade")
+  public String getDataEmissaoIdentidade() {
+    return dataEmissaoIdentidade;
+  }
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
+    this.dataEmissaoIdentidade = dataEmissaoIdentidade;
+  }
+
+  
+  /**
+   * Estado civil do s\u00C3\u00B3cio
+   **/
+  @ApiModelProperty(value = "Estado civil do s\u00C3\u00B3cio")
+  public String getEstadoCivil() {
+    return estadoCivil;
+  }
+  public void setEstadoCivil(String estadoCivil) {
+    this.estadoCivil = estadoCivil;
+  }
+
+  
+  /**
    * Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o do s\u00C3\u00B3cio")
@@ -164,14 +164,26 @@ public class PessoaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * Nacionalidade do s\u00C3\u00B3cio
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
-  public String getSexo() {
-    return sexo;
+  @ApiModelProperty(value = "Nacionalidade do s\u00C3\u00B3cio")
+  public String getNacionalidade() {
+    return nacionalidade;
   }
-  public void setSexo(String sexo) {
-    this.sexo = sexo;
+  public void setNacionalidade(String nacionalidade) {
+    this.nacionalidade = nacionalidade;
+  }
+
+  
+  /**
+   * Email do s\u00C3\u00B3cio
+   **/
+  @ApiModelProperty(value = "Email do s\u00C3\u00B3cio")
+  public String getEmail() {
+    return email;
+  }
+  public void setEmail(String email) {
+    this.email = email;
   }
 
   
@@ -187,37 +199,25 @@ public class PessoaPersist  {
   }
 
   
-  /**
-   * Sigla da Unidade Federativa de onde foi expedido a Identidade
-   **/
-  @ApiModelProperty(value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
-  public String getUnidadeFederativaIdentidade() {
-    return unidadeFederativaIdentidade;
-  }
-  public void setUnidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
-    this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
-  }
-
-  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PessoaPersist {\n");
     
-    sb.append("  cpf: ").append(cpf).append("\n");
-    sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
-    sb.append("  dataNascimento: ").append(dataNascimento).append("\n");
-    sb.append("  email: ").append(email).append("\n");
-    sb.append("  estadoCivil: ").append(estadoCivil).append("\n");
-    sb.append("  nacionalidade: ").append(nacionalidade).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
+    sb.append("  cpf: ").append(cpf).append("\n");
+    sb.append("  dataNascimento: ").append(dataNascimento).append("\n");
+    sb.append("  sexo: ").append(sexo).append("\n");
     sb.append("  numeroIdentidade: ").append(numeroIdentidade).append("\n");
     sb.append("  orgaoExpedidorIdentidade: ").append(orgaoExpedidorIdentidade).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
-    sb.append("  sexo: ").append(sexo).append("\n");
-    sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
+    sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
+    sb.append("  estadoCivil: ").append(estadoCivil).append("\n");
+    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  nacionalidade: ").append(nacionalidade).append("\n");
+    sb.append("  email: ").append(email).append("\n");
+    sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

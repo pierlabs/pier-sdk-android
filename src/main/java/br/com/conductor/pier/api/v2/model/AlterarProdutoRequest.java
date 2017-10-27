@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.math.BigDecimal;
 
 
 import io.swagger.annotations.*;
@@ -18,8 +17,6 @@ public class AlterarProdutoRequest  {
   private Long idProduto = null;
   @SerializedName("idOrigemComercial")
   private Long idOrigemComercial = null;
-  @SerializedName("limiteGlobal")
-  private BigDecimal limiteGlobal = null;
 
   
   /**
@@ -46,18 +43,6 @@ public class AlterarProdutoRequest  {
   }
 
   
-  /**
-   * Valor do novo limite Global.
-   **/
-  @ApiModelProperty(value = "Valor do novo limite Global.")
-  public BigDecimal getLimiteGlobal() {
-    return limiteGlobal;
-  }
-  public void setLimiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-  }
-
-  
 
   @Override
   public String toString()  {
@@ -66,7 +51,6 @@ public class AlterarProdutoRequest  {
     
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
-    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

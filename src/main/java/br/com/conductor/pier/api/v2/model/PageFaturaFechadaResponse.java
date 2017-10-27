@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
+import br.com.conductor.pier.api.v2.model.FaturaFechadaResponse;
 import java.util.*;
 
 
@@ -10,13 +10,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * Lista de faturas
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento")
-public class PageFaturaResponse  {
+@ApiModel(description = "Lista de faturas")
+public class PageFaturaFechadaResponse  {
   
   @SerializedName("content")
-  private List<FaturaResponse> content = null;
+  private List<FaturaFechadaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +48,10 @@ public class PageFaturaResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<FaturaResponse> getContent() {
+  public List<FaturaFechadaResponse> getContent() {
     return content;
   }
-  public void setContent(List<FaturaResponse> content) {
+  public void setContent(List<FaturaFechadaResponse> content) {
     this.content = content;
   }
 
@@ -203,7 +203,7 @@ public class PageFaturaResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageFaturaResponse {\n");
+    sb.append("class PageFaturaFechadaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");
