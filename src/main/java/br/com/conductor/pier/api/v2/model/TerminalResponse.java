@@ -21,6 +21,10 @@ public class TerminalResponse  {
   private Long numeroEstabelecimento = null;
   @SerializedName("idEstabelecimento")
   private Long idEstabelecimento = null;
+  @SerializedName("flagConsultaExtrato")
+  private Boolean flagConsultaExtrato = null;
+  @SerializedName("flagTerminalVirtual")
+  private Boolean flagTerminalVirtual = null;
 
   
   /**
@@ -71,6 +75,30 @@ public class TerminalResponse  {
   }
 
   
+  /**
+   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   **/
+  @ApiModelProperty(value = "Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  public Boolean getFlagConsultaExtrato() {
+    return flagConsultaExtrato;
+  }
+  public void setFlagConsultaExtrato(Boolean flagConsultaExtrato) {
+    this.flagConsultaExtrato = flagConsultaExtrato;
+  }
+
+  
+  /**
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   **/
+  @ApiModelProperty(value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  public Boolean getFlagTerminalVirtual() {
+    return flagTerminalVirtual;
+  }
+  public void setFlagTerminalVirtual(Boolean flagTerminalVirtual) {
+    this.flagTerminalVirtual = flagTerminalVirtual;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -81,6 +109,8 @@ public class TerminalResponse  {
     sb.append("  terminal: ").append(terminal).append("\n");
     sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
+    sb.append("  flagConsultaExtrato: ").append(flagConsultaExtrato).append("\n");
+    sb.append("  flagTerminalVirtual: ").append(flagTerminalVirtual).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

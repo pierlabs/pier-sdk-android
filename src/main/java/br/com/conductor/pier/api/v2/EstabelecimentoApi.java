@@ -8,9 +8,12 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PessoaJuridicaResponse;
+import br.com.conductor.pier.api.v2.model.TerminalUpdate;
 import br.com.conductor.pier.api.v2.model.TerminalResponse;
+import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PagePessoaJuridicaResponse;
 import br.com.conductor.pier.api.v2.model.PageTerminalResponse;
 
 
@@ -44,17 +47,260 @@ public class EstabelecimentoApi {
 
   
   /**
+   * Alterar Pessoa Jur\u00C3\u00ADdica
+   * Altera uma pessoa jur\u00C3\u00ADdica.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
+   * @param razaoSocial Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param inscricaoEstadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * @param contato Nome da pessoa para entrar em contato
+   * @param banco C\u00C3\u00B3digo do banco
+   * @param agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param digitoVerificadorAgencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+   * @param contaCorrente C\u00C3\u00B3digo da Conta Corrente
+   * @param digitoVerificadorContaCorrente D\u00C3\u00ADgito Verificador da Conta Corrente
+   * @return PessoaJuridicaResponse
+   */
+  public PessoaJuridicaResponse  alterarUsingPUT10 (Long id, String razaoSocial, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoVerificadorAgencia, String contaCorrente, String digitoVerificadorContaCorrente) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
+    }
+    
+    // verify the required parameter 'razaoSocial' is set
+    if (razaoSocial == null) {
+       throw new ApiException(400, "Missing the required parameter 'razaoSocial' when calling alterarUsingPUT10");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas-juridicas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "razaoSocial", razaoSocial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "inscricaoEstadual", inscricaoEstadual));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contato", contato));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "banco", banco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "agencia", agencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorAgencia", digitoVerificadorAgencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contaCorrente", contaCorrente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorContaCorrente", digitoVerificadorContaCorrente));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PessoaJuridicaResponse) ApiInvoker.deserialize(response, "", PessoaJuridicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Altera um Terminal
+   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+   * @param terminalUpdate terminalUpdate
+   * @return TerminalResponse
+   */
+  public TerminalResponse  alterarUsingPUT13 (Long id, TerminalUpdate terminalUpdate) throws ApiException {
+    Object postBody = terminalUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT13");
+    }
+    
+    // verify the required parameter 'terminalUpdate' is set
+    if (terminalUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'terminalUpdate' when calling alterarUsingPUT13");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/terminais/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TerminalResponse) ApiInvoker.deserialize(response, "", TerminalResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastrar Pessoa Jur\u00C3\u00ADdica
+   * Cadastra uma pessoa jur\u00C3\u00ADdica.
+   * @param razaoSocial Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param cnpj C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas
+   * @param inscricaoEstadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * @param contato Nome da pessoa para entrar em contato
+   * @param banco C\u00C3\u00B3digo do banco
+   * @param agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param digitoVerificadorAgencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+   * @param contaCorrente C\u00C3\u00B3digo da Conta Corrente
+   * @param digitoVerificadorContaCorrente D\u00C3\u00ADgito Verificador da Conta Corrente
+   * @return PessoaJuridicaResponse
+   */
+  public PessoaJuridicaResponse  cadastrarUsingPOST2 (String razaoSocial, String cnpj, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoVerificadorAgencia, String contaCorrente, String digitoVerificadorContaCorrente) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'razaoSocial' is set
+    if (razaoSocial == null) {
+       throw new ApiException(400, "Missing the required parameter 'razaoSocial' when calling cadastrarUsingPOST2");
+    }
+    
+    // verify the required parameter 'cnpj' is set
+    if (cnpj == null) {
+       throw new ApiException(400, "Missing the required parameter 'cnpj' when calling cadastrarUsingPOST2");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas-juridicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "razaoSocial", razaoSocial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "inscricaoEstadual", inscricaoEstadual));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contato", contato));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "banco", banco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "agencia", agencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorAgencia", digitoVerificadorAgencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contaCorrente", contaCorrente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorContaCorrente", digitoVerificadorContaCorrente));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PessoaJuridicaResponse) ApiInvoker.deserialize(response, "", PessoaJuridicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Consultar estabelecimento por id
    * Consulta os detalhes de um determinado estabelecimento
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse  consultarUsingGET11 (Long id) throws ApiException {
+  public EstabelecimentoResponse  consultarUsingGET14 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
     }
     
 
@@ -103,17 +349,76 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Consultar pessoa jur\u00C3\u00ADdica
+   * Consulta uma pessoa jur\u00C3\u00ADdica atrav\u00C3\u00A9s do seu identificador.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
+   * @return PessoaJuridicaResponse
+   */
+  public PessoaJuridicaResponse  consultarUsingGET19 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas-juridicas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PessoaJuridicaResponse) ApiInvoker.deserialize(response, "", PessoaJuridicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de um determinado Terminal
    * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse  consultarUsingGET21 (Long id) throws ApiException {
+  public TerminalResponse  consultarUsingGET26 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
     }
     
 
@@ -188,7 +493,7 @@ public class EstabelecimentoApi {
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse  listarUsingGET14 (List<String> sort, Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentoResponse  listarUsingGET18 (List<String> sort, Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
 
@@ -281,6 +586,95 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Listar pessoas jur\u00C3\u00ADdicas
+   * Lista pessoas jur\u00C3\u00ADdicas cadastradas. 
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param razaoSocial Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param cnpj C\u00C3\u00B3digo do Cadastro Nacional de Pessoas Jur\u00C3\u00ADdicas
+   * @param inscricaoEstadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * @param contato Nome da pessoa para entrar em contato
+   * @param banco C\u00C3\u00B3digo do banco
+   * @param agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * @param digitoVerificadorAgencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
+   * @param contaCorrente C\u00C3\u00B3digo da Conta Corrente
+   * @param digitoVerificadorContaCorrente D\u00C3\u00ADgito Verificador da Conta Corrente
+   * @return PagePessoaJuridicaResponse
+   */
+  public PagePessoaJuridicaResponse  listarUsingGET23 (List<String> sort, Integer page, Integer limit, String razaoSocial, String cnpj, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoVerificadorAgencia, String contaCorrente, String digitoVerificadorContaCorrente) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/pessoas-juridicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "razaoSocial", razaoSocial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "inscricaoEstadual", inscricaoEstadual));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contato", contato));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "banco", banco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "agencia", agencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorAgencia", digitoVerificadorAgencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "contaCorrente", contaCorrente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "digitoVerificadorContaCorrente", digitoVerificadorContaCorrente));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PagePessoaJuridicaResponse) ApiInvoker.deserialize(response, "", PagePessoaJuridicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os Terminais cadastrados no Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -292,7 +686,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse  listarUsingGET28 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse  listarUsingGET33 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -345,6 +739,83 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTerminalResponse) ApiInvoker.deserialize(response, "", PageTerminalResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza o cadastro de um novo Terminal
+   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+   * @param idEstabelecimento Apresenta o id do estabelecimento.
+   * @param flagConsultaExtrato Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * @param flagTerminalVirtual Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * @return TerminalResponse
+   */
+  public TerminalResponse  salvarUsingPOST20 (Long idEstabelecimento, Boolean flagConsultaExtrato, Boolean flagTerminalVirtual) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST20");
+    }
+    
+    // verify the required parameter 'flagConsultaExtrato' is set
+    if (flagConsultaExtrato == null) {
+       throw new ApiException(400, "Missing the required parameter 'flagConsultaExtrato' when calling salvarUsingPOST20");
+    }
+    
+    // verify the required parameter 'flagTerminalVirtual' is set
+    if (flagTerminalVirtual == null) {
+       throw new ApiException(400, "Missing the required parameter 'flagTerminalVirtual' when calling salvarUsingPOST20");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/terminais".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagConsultaExtrato", flagConsultaExtrato));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagTerminalVirtual", flagTerminalVirtual));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TerminalResponse) ApiInvoker.deserialize(response, "", TerminalResponse.class);
       }
       else {
         return null;

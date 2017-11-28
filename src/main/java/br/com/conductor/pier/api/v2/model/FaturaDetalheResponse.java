@@ -37,6 +37,8 @@ public class FaturaDetalheResponse  {
   private BigDecimal valorTotal = null;
   @SerializedName("valorPagamentoMinimo")
   private BigDecimal valorPagamentoMinimo = null;
+  @SerializedName("saldoAnterior")
+  private BigDecimal saldoAnterior = null;
 
   
   /**
@@ -146,6 +148,18 @@ public class FaturaDetalheResponse  {
   }
 
   
+  /**
+   * Valor do saldo anterior.
+   **/
+  @ApiModelProperty(value = "Valor do saldo anterior.")
+  public BigDecimal getSaldoAnterior() {
+    return saldoAnterior;
+  }
+  public void setSaldoAnterior(BigDecimal saldoAnterior) {
+    this.saldoAnterior = saldoAnterior;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -161,6 +175,7 @@ public class FaturaDetalheResponse  {
     sb.append("  dataFechamento: ").append(dataFechamento).append("\n");
     sb.append("  valorTotal: ").append(valorTotal).append("\n");
     sb.append("  valorPagamentoMinimo: ").append(valorPagamentoMinimo).append("\n");
+    sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

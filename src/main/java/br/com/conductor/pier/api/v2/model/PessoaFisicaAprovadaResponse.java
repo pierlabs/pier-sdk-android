@@ -79,6 +79,8 @@ public class PessoaFisicaAprovadaResponse  {
   private BigDecimal limiteMaximo = null;
   @SerializedName("limiteParcelas")
   private BigDecimal limiteParcelas = null;
+  @SerializedName("limiteConsignado")
+  private BigDecimal limiteConsignado = null;
 
   
   /**
@@ -453,6 +455,18 @@ public class PessoaFisicaAprovadaResponse  {
   }
 
   
+  /**
+   * Valor do limite de margem consignado
+   **/
+  @ApiModelProperty(required = true, value = "Valor do limite de margem consignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -490,6 +504,7 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
+    sb.append("  limiteConsignado: ").append(limiteConsignado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

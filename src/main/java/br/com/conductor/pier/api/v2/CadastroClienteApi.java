@@ -10,10 +10,10 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.AdicionalDetalheResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalUpdate;
-import br.com.conductor.pier.api.v2.model.EnderecoResponse;
-import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PessoaResponse;
 import br.com.conductor.pier.api.v2.model.TelefoneResponse;
+import br.com.conductor.pier.api.v2.model.EnderecoResponse;
+import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
@@ -130,6 +130,183 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Atualiza os dados de uma determinada Pessoa
+   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+   * @param id ID da Pessoa
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
+   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
+   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade.
+   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
+   * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
+   * @return PessoaResponse
+   */
+  public PessoaResponse  alterarUsingPUT11 (Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT11");
+    }
+    
+    // verify the required parameter 'nome' is set
+    if (nome == null) {
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT11");
+    }
+    
+    // verify the required parameter 'tipo' is set
+    if (tipo == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT11");
+    }
+    
+    // verify the required parameter 'dataNascimento' is set
+    if (dataNascimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT11");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pessoas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipo", tipo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataNascimento", dataNascimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "sexo", sexo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroIdentidade", numeroIdentidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "orgaoExpedidorIdentidade", orgaoExpedidorIdentidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "unidadeFederativaIdentidade", unidadeFederativaIdentidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PessoaResponse) ApiInvoker.deserialize(response, "", PessoaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
+   * Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
+   * @param telefone N\u00C3\u00BAmero do telefone.
+   * @param ramal N\u00C3\u00BAmero do ramal.
+   * @return TelefoneResponse
+   */
+  public TelefoneResponse  alterarUsingPUT12 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT12");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/telefones".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoTelefone", idTipoTelefone));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "ddd", ddd));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "telefone", telefone));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "ramal", ramal));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Atualiza os dados de um determinado Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
    * @param id id
@@ -146,12 +323,12 @@ public class CadastroClienteApi {
    * @param pais Apresenta nome do Pais
    * @return EnderecoResponse
    */
-  public EnderecoResponse  alterarUsingPUT2 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse  alterarUsingPUT5 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT2");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT5");
     }
     
 
@@ -238,12 +415,12 @@ public class CadastroClienteApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  alterarUsingPUT5 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  alterarUsingPUT9 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT5");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
     }
     
 
@@ -300,183 +477,6 @@ public class CadastroClienteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PessoaDetalheResponse) ApiInvoker.deserialize(response, "", PessoaDetalheResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Atualiza os dados de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
-   * @param id ID da Pessoa
-   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
-   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade.
-   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
-   * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
-   * @return PessoaResponse
-   */
-  public PessoaResponse  alterarUsingPUT6 (Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT6");
-    }
-    
-    // verify the required parameter 'nome' is set
-    if (nome == null) {
-       throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT6");
-    }
-    
-    // verify the required parameter 'tipo' is set
-    if (tipo == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT6");
-    }
-    
-    // verify the required parameter 'dataNascimento' is set
-    if (dataNascimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT6");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/pessoas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "tipo", tipo));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataNascimento", dataNascimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "sexo", sexo));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroIdentidade", numeroIdentidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "orgaoExpedidorIdentidade", orgaoExpedidorIdentidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "unidadeFederativaIdentidade", unidadeFederativaIdentidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PessoaResponse) ApiInvoker.deserialize(response, "", PessoaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-   * Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
-   * @return TelefoneResponse
-   */
-  public TelefoneResponse  alterarUsingPUT7 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/telefones".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoTelefone", idTipoTelefone));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "ddd", ddd));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "telefone", telefone));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "ramal", ramal));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
       }
       else {
         return null;
@@ -747,12 +747,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse  consultarUsingGET10 (Long id) throws ApiException {
+  public EnderecoResponse  consultarUsingGET13 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
     }
     
 
@@ -806,12 +806,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  consultarUsingGET14 (Long id) throws ApiException {
+  public PessoaDetalheResponse  consultarUsingGET18 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
     }
     
 
@@ -865,12 +865,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse  consultarUsingGET15 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET20 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
     }
     
 
@@ -924,12 +924,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse  consultarUsingGET20 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET25 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
     }
     
 
@@ -1200,7 +1200,7 @@ public class CadastroClienteApi {
    * @param dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
    * @return PageEnderecoResponse
    */
-  public PageEnderecoResponse  listarUsingGET13 (List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
+  public PageEnderecoResponse  listarUsingGET17 (List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
     Object postBody = null;
     
 
@@ -1300,7 +1300,7 @@ public class CadastroClienteApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse  listarUsingGET18 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse  listarUsingGET22 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
 
@@ -1393,7 +1393,7 @@ public class CadastroClienteApi {
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
    * @return PagePessoaResponse
    */
-  public PagePessoaResponse  listarUsingGET19 (List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PagePessoaResponse  listarUsingGET24 (List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
 
@@ -1484,7 +1484,7 @@ public class CadastroClienteApi {
    * @param status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
    * @return PageTelefoneResponse
    */
-  public PageTelefoneResponse  listarUsingGET27 (List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefoneResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -1671,18 +1671,104 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Realiza o cadastro de um novo Endere\u00C3\u00A7o
+   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+   * @param logradouro Apresenta o nome do Logradouro
+   * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * @param pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * @param bairro Apresenta nome do bairro
+   * @param cidade Apresenta nome da cidade
+   * @param uf Apresenta sigla da Unidade Federativa
+   * @param pais Apresenta nome do Pais
+   * @return EnderecoResponse
+   */
+  public EnderecoResponse  salvarUsingPOST11 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/enderecos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoa", idPessoa));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoEndereco", idTipoEndereco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cep", cep));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "logradouro", logradouro));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero", numero));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "complemento", complemento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pontoReferencia", pontoReferencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "bairro", bairro));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cidade", cidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "uf", uf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "pais", pais));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
    * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
    * @return IntegracaoEmissorResponse
    */
-  public IntegracaoEmissorResponse  salvarUsingPOST10 (Long id, IntegracaoEmissorPersist body) throws ApiException {
+  public IntegracaoEmissorResponse  salvarUsingPOST13 (Long id, IntegracaoEmissorPersist body) throws ApiException {
     Object postBody = body;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST10");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST13");
     }
     
 
@@ -1745,12 +1831,12 @@ public class CadastroClienteApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  salvarUsingPOST13 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  salvarUsingPOST16 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idPessoa' is set
     if (idPessoa == null) {
-       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST13");
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST16");
     }
     
 
@@ -1833,22 +1919,22 @@ public class CadastroClienteApi {
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
    * @return PessoaResponse
    */
-  public PessoaResponse  salvarUsingPOST14 (String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse  salvarUsingPOST17 (String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'nome' is set
     if (nome == null) {
-       throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST14");
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST17");
     }
     
     // verify the required parameter 'tipo' is set
     if (tipo == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST14");
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST17");
     }
     
     // verify the required parameter 'dataNascimento' is set
     if (dataNascimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST14");
+       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST17");
     }
     
 
@@ -1926,7 +2012,7 @@ public class CadastroClienteApi {
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @return TelefoneResponse
    */
-  public TelefoneResponse  salvarUsingPOST16 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse  salvarUsingPOST19 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
 
@@ -1975,92 +2061,6 @@ public class CadastroClienteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TelefoneResponse) ApiInvoker.deserialize(response, "", TelefoneResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Realiza o cadastro de um novo Endere\u00C3\u00A7o
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
-   * @param logradouro Apresenta o nome do Logradouro
-   * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-   * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-   * @param pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
-   * @param bairro Apresenta nome do bairro
-   * @param cidade Apresenta nome da cidade
-   * @param uf Apresenta sigla da Unidade Federativa
-   * @param pais Apresenta nome do Pais
-   * @return EnderecoResponse
-   */
-  public EnderecoResponse  salvarUsingPOST8 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/enderecos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoa", idPessoa));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoEndereco", idTipoEndereco));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cep", cep));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "logradouro", logradouro));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numero", numero));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "complemento", complemento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pontoReferencia", pontoReferencia));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "bairro", bairro));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "cidade", cidade));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "uf", uf));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "pais", pais));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
       }
       else {
         return null;

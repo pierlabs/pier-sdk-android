@@ -62,6 +62,8 @@ public class LancamentoFaturaResponse  {
   private Boolean flagSolicitouContestacao = null;
   @SerializedName("valorTaxaEmbarque")
   private BigDecimal valorTaxaEmbarque = null;
+  @SerializedName("descricaoAbreviada")
+  private String descricaoAbreviada = null;
 
   
   /**
@@ -352,6 +354,18 @@ public class LancamentoFaturaResponse  {
   }
 
   
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   **/
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o")
+  public String getDescricaoAbreviada() {
+    return descricaoAbreviada;
+  }
+  public void setDescricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -382,6 +396,7 @@ public class LancamentoFaturaResponse  {
     sb.append("  numeroCartaoMascarado: ").append(numeroCartaoMascarado).append("\n");
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
     sb.append("  valorTaxaEmbarque: ").append(valorTaxaEmbarque).append("\n");
+    sb.append("  descricaoAbreviada: ").append(descricaoAbreviada).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

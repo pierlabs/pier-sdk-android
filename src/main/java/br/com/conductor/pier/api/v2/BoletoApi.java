@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
+import br.com.conductor.pier.api.v2.model.BoletoResponse;
 
 
 import org.apache.http.HttpEntity;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class LimiteApi {
+public class BoletoApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -41,25 +41,22 @@ public class LimiteApi {
 
   
   /**
-   * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-   * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageHistoricoEventosResponse
+   * Registra uma cobranca na entidade banco relacionada a cobranca informado.
+   * Este recurso registra uma cobranca emitido.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+   * @return BoletoResponse
    */
-  public PageHistoricoEventosResponse  listarHistoricoAlteracoesLimitesUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public BoletoResponse  registrarBoletoUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoAlteracoesLimitesUsingGET");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling registrarBoletoUsingPOST");
     }
     
 
     // create path and map variables
-    String path = "/api/contas/{id}/historicos-alteracoes-limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/boletos/{id}/registrar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -68,12 +65,6 @@ public class LimiteApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
     
@@ -96,9 +87,9 @@ public class LimiteApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageHistoricoEventosResponse) ApiInvoker.deserialize(response, "", PageHistoricoEventosResponse.class);
+        return (BoletoResponse) ApiInvoker.deserialize(response, "", BoletoResponse.class);
       }
       else {
         return null;

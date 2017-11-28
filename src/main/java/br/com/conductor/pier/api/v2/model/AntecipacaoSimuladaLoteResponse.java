@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaMockResponse;
+import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -23,7 +23,7 @@ public class AntecipacaoSimuladaLoteResponse  {
   @SerializedName("valorTotalComDesconto")
   private BigDecimal valorTotalComDesconto = null;
   @SerializedName("antecipacoesSimuladas")
-  private List<AntecipacaoSimuladaMockResponse> antecipacoesSimuladas = null;
+  private List<AntecipacaoSimuladaResponse> antecipacoesSimuladas = null;
 
   
   /**
@@ -66,10 +66,10 @@ public class AntecipacaoSimuladaLoteResponse  {
    * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
    **/
   @ApiModelProperty(value = "Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.")
-  public List<AntecipacaoSimuladaMockResponse> getAntecipacoesSimuladas() {
+  public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;
   }
-  public void setAntecipacoesSimuladas(List<AntecipacaoSimuladaMockResponse> antecipacoesSimuladas) {
+  public void setAntecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
     this.antecipacoesSimuladas = antecipacoesSimuladas;
   }
 

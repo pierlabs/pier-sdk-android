@@ -8,9 +8,10 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.DispositivoResponse;
-import br.com.conductor.pier.api.v2.model.PageDispositivoResponse;
-import br.com.conductor.pier.api.v2.model.DispositivoPersist;
+import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorUpdate;
+import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorResponse;
+import br.com.conductor.pier.api.v2.model.PageContaBancariaPortadorResponse;
+import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorPersist;
 
 
 import org.apache.http.HttpEntity;
@@ -21,7 +22,7 @@ import java.util.HashMap;
 import java.io.File;
 
 
-public class DispositivoApi {
+public class TransferenciaBancariaApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -43,22 +44,28 @@ public class DispositivoApi {
 
   
   /**
-   * Ativa Dispositivo
-   * Esse recurso permite ativar dispositivo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
-   * @return DispositivoResponse
+   * Atualiza conta banc\u00C3\u00A1ria portador
+   * Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+   * @param update update
+   * @return ContaBancariaPortadorResponse
    */
-  public DispositivoResponse  ativarUsingPOST (Long id) throws ApiException {
-    Object postBody = null;
+  public ContaBancariaPortadorResponse  atualizarUsingPUT1 (Long id, ContaBancariaPortadorUpdate update) throws ApiException {
+    Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT1");
+    }
+    
+    // verify the required parameter 'update' is set
+    if (update == null) {
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT1");
     }
     
 
     // create path and map variables
-    String path = "/api/dispositivos/{id}/ativar-dispositivo".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/contas-bancarias-portador/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -89,9 +96,9 @@ public class DispositivoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
+        return (ContaBancariaPortadorResponse) ApiInvoker.deserialize(response, "", ContaBancariaPortadorResponse.class);
       }
       else {
         return null;
@@ -102,22 +109,22 @@ public class DispositivoApi {
   }
   
   /**
-   * Desativa Dispositivo
-   * Esse recurso permite desativar dispositivo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
-   * @return DispositivoResponse
+   * Consulta conta banc\u00C3\u00A1ria portador
+   * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+   * @return ContaBancariaPortadorResponse
    */
-  public DispositivoResponse  desativarUsingPOST (Long id) throws ApiException {
+  public ContaBancariaPortadorResponse  consultarUsingGET9 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsingPOST");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
     }
     
 
     // create path and map variables
-    String path = "/api/dispositivos/{id}/desativar-dispositivo".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/contas-bancarias-portador/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -126,83 +133,6 @@ public class DispositivoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Lista os dispositivos cadastrados
-   * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param token Token do Dispositivo
-   * @param idUsuario Identificador do Usu\u00C3\u00A1rio
-   * @param idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
-   * @param dataCriacao Apresenta a data e em que o registro foi criado.
-   * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
-   * @return PageDispositivoResponse
-   */
-  public PageDispositivoResponse  listarUsingGET14 (List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/dispositivos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "token", token));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idUsuario", idUsuario));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idAplicacaoMobile", idAplicacaoMobile));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataCriacao", dataCriacao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataDesativacao", dataDesativacao));
     
 
     
@@ -227,7 +157,7 @@ public class DispositivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageDispositivoResponse) ApiInvoker.deserialize(response, "", PageDispositivoResponse.class);
+        return (ContaBancariaPortadorResponse) ApiInvoker.deserialize(response, "", ContaBancariaPortadorResponse.class);
       }
       else {
         return null;
@@ -238,22 +168,108 @@ public class DispositivoApi {
   }
   
   /**
-   * Cadastra Dispositivo
-   * Esse recurso permite cadastrar dispositivos.
-   * @param persist persist
-   * @return DispositivoResponse
+   * Lista contas banc\u00C3\u00A1rias portador
+   * Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
+   * @param idConta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
+   * @param nomeAgencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * @param numeroConta N\u00C3\u00BAmero da conta
+   * @param flagContaOrigemDoc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+   * @param idPessoaFisica C\u00C3\u00B3digo da pessoa
+   * @param favorecido Nome do favorecido
+   * @param numeroReceiraFederal Documento do favorecido
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageContaBancariaPortadorResponse
    */
-  public DispositivoResponse  salvarUsingPOST8 (DispositivoPersist persist) throws ApiException {
+  public PageContaBancariaPortadorResponse  listarUsingGET11 (Long idConta, String nomeAgencia, String numeroAgencia, String numeroConta, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/contas-bancarias-portador".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAgencia", nomeAgencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroAgencia", numeroAgencia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroConta", numeroConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagContaOrigemDoc", flagContaOrigemDoc));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "favorecido", favorecido));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroReceiraFederal", numeroReceiraFederal));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageContaBancariaPortadorResponse) ApiInvoker.deserialize(response, "", PageContaBancariaPortadorResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastra uma conta banc\u00C3\u00A1ria do portador
+   * Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+   * @param persist persist
+   * @return ContaBancariaPortadorResponse
+   */
+  public ContaBancariaPortadorResponse  salvarUsingPOST7 (ContaBancariaPortadorPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST7");
     }
     
 
     // create path and map variables
-    String path = "/api/dispositivos".replaceAll("\\{format\\}","json");
+    String path = "/api/contas-bancarias-portador".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -286,7 +302,7 @@ public class DispositivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (DispositivoResponse) ApiInvoker.deserialize(response, "", DispositivoResponse.class);
+        return (ContaBancariaPortadorResponse) ApiInvoker.deserialize(response, "", ContaBancariaPortadorResponse.class);
       }
       else {
         return null;
