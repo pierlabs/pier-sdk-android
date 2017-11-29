@@ -17,6 +17,10 @@ public class AlterarProdutoRequest  {
   private Long idProduto = null;
   @SerializedName("idOrigemComercial")
   private Long idOrigemComercial = null;
+  @SerializedName("idEstabelecimento")
+  private Long idEstabelecimento = null;
+  @SerializedName("idPromotor")
+  private Long idPromotor = null;
 
   
   /**
@@ -43,6 +47,30 @@ public class AlterarProdutoRequest  {
   }
 
   
+  /**
+   * Identificador do estabelecimento.
+   **/
+  @ApiModelProperty(value = "Identificador do estabelecimento.")
+  public Long getIdEstabelecimento() {
+    return idEstabelecimento;
+  }
+  public void setIdEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+  }
+
+  
+  /**
+   * Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+   **/
+  @ApiModelProperty(value = "Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.")
+  public Long getIdPromotor() {
+    return idPromotor;
+  }
+  public void setIdPromotor(Long idPromotor) {
+    this.idPromotor = idPromotor;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -51,6 +79,8 @@ public class AlterarProdutoRequest  {
     
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
+    sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
+    sb.append("  idPromotor: ").append(idPromotor).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -303,6 +303,10 @@ public class JsonUtil {
       return new TypeToken<List<ControleVencimentoResponse>>(){}.getType();
     }
     
+    if ("DadosCartaoImpressaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DadosCartaoImpressaoResponse>>(){}.getType();
+    }
+    
     if ("DadosCartaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<DadosCartaoResponse>>(){}.getType();
     }
@@ -1427,6 +1431,10 @@ public class JsonUtil {
     
     if ("ControleVencimentoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ControleVencimentoResponse>(){}.getType();
+    }
+    
+    if ("DadosCartaoImpressaoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<DadosCartaoImpressaoResponse>(){}.getType();
     }
     
     if ("DadosCartaoResponse".equalsIgnoreCase(className)) {
