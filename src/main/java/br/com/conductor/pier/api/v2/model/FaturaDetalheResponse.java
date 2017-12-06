@@ -16,8 +16,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Detalhes da fatura")
 public class FaturaDetalheResponse  {
   
-  @SerializedName("lancamentosFaturaResponse")
-  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = null;
   @SerializedName("idConta")
   private Long idConta = null;
   public enum SituacaoProcessamentoEnum {
@@ -37,19 +35,10 @@ public class FaturaDetalheResponse  {
   private BigDecimal valorTotal = null;
   @SerializedName("valorPagamentoMinimo")
   private BigDecimal valorPagamentoMinimo = null;
+  @SerializedName("lancamentosFaturaResponse")
+  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = null;
   @SerializedName("saldoAnterior")
   private BigDecimal saldoAnterior = null;
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
-    return lancamentosFaturaResponse;
-  }
-  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
-    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
-  }
 
   
   /**
@@ -149,6 +138,18 @@ public class FaturaDetalheResponse  {
 
   
   /**
+   * Lista de lan\u00C3\u00A7amentos da fatura.
+   **/
+  @ApiModelProperty(value = "Lista de lan\u00C3\u00A7amentos da fatura.")
+  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
+    return lancamentosFaturaResponse;
+  }
+  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+  }
+
+  
+  /**
    * Valor do saldo anterior.
    **/
   @ApiModelProperty(value = "Valor do saldo anterior.")
@@ -166,7 +167,6 @@ public class FaturaDetalheResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FaturaDetalheResponse {\n");
     
-    sb.append("  lancamentosFaturaResponse: ").append(lancamentosFaturaResponse).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  situacaoProcessamento: ").append(situacaoProcessamento).append("\n");
     sb.append("  pagamentoEfetuado: ").append(pagamentoEfetuado).append("\n");
@@ -175,6 +175,7 @@ public class FaturaDetalheResponse  {
     sb.append("  dataFechamento: ").append(dataFechamento).append("\n");
     sb.append("  valorTotal: ").append(valorTotal).append("\n");
     sb.append("  valorPagamentoMinimo: ").append(valorPagamentoMinimo).append("\n");
+    sb.append("  lancamentosFaturaResponse: ").append(lancamentosFaturaResponse).append("\n");
     sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
     sb.append("}\n");
     return sb.toString();

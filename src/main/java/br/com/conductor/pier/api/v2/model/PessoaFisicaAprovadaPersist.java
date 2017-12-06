@@ -370,7 +370,7 @@ public class PessoaFisicaAprovadaPersist  {
   /**
    * Apresenta os telefones da empresa
    **/
-  @ApiModelProperty(value = "Apresenta os telefones da empresa")
+  @ApiModelProperty(required = true, value = "Apresenta os telefones da empresa")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;
   }

@@ -303,6 +303,14 @@ public class JsonUtil {
       return new TypeToken<List<ControleVencimentoResponse>>(){}.getType();
     }
     
+    if ("CredorDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CredorDTO>>(){}.getType();
+    }
+    
+    if ("CredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CredorResponse>>(){}.getType();
+    }
+    
     if ("DadosCartaoImpressaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<DadosCartaoImpressaoResponse>>(){}.getType();
     }
@@ -603,6 +611,10 @@ public class JsonUtil {
       return new TypeToken<List<PageControleVencimentoResponse>>(){}.getType();
     }
     
+    if ("PageCredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageCredorResponse>>(){}.getType();
+    }
+    
     if ("PageDispositivoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageDispositivoResponse>>(){}.getType();
     }
@@ -755,6 +767,10 @@ public class JsonUtil {
       return new TypeToken<List<PageTaxasRefinanciamentoResponse>>(){}.getType();
     }
     
+    if ("PageTelefoneEstabelecimentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTelefoneEstabelecimentoResponse>>(){}.getType();
+    }
+    
     if ("PageTelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageTelefoneResponse>>(){}.getType();
     }
@@ -817,6 +833,10 @@ public class JsonUtil {
     
     if ("PageTransferenciaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageTransferenciaBancariaResponse>>(){}.getType();
+    }
+    
+    if ("PageTransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageTransferenciaCreditoContaBancariaResponse>>(){}.getType();
     }
     
     if ("PageTransferenciaResponse".equalsIgnoreCase(className)) {
@@ -999,6 +1019,10 @@ public class JsonUtil {
       return new TypeToken<List<TelefoneAdicionalUpdate>>(){}.getType();
     }
     
+    if ("TelefoneEstabelecimentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TelefoneEstabelecimentoResponse>>(){}.getType();
+    }
+    
     if ("TelefonePessoaAprovadaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<TelefonePessoaAprovadaPersist>>(){}.getType();
     }
@@ -1125,6 +1149,18 @@ public class JsonUtil {
     
     if ("TransferenciaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TransferenciaBancariaResponse>>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaListaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TransferenciaCreditoContaBancariaListaResponse>>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TransferenciaCreditoContaBancariaPersist>>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TransferenciaCreditoContaBancariaResponse>>(){}.getType();
     }
     
     if ("TransferenciaDetalheResponse".equalsIgnoreCase(className)) {
@@ -1433,6 +1469,14 @@ public class JsonUtil {
       return new TypeToken<ControleVencimentoResponse>(){}.getType();
     }
     
+    if ("CredorDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<CredorDTO>(){}.getType();
+    }
+    
+    if ("CredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CredorResponse>(){}.getType();
+    }
+    
     if ("DadosCartaoImpressaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<DadosCartaoImpressaoResponse>(){}.getType();
     }
@@ -1733,6 +1777,10 @@ public class JsonUtil {
       return new TypeToken<PageControleVencimentoResponse>(){}.getType();
     }
     
+    if ("PageCredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageCredorResponse>(){}.getType();
+    }
+    
     if ("PageDispositivoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageDispositivoResponse>(){}.getType();
     }
@@ -1885,6 +1933,10 @@ public class JsonUtil {
       return new TypeToken<PageTaxasRefinanciamentoResponse>(){}.getType();
     }
     
+    if ("PageTelefoneEstabelecimentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTelefoneEstabelecimentoResponse>(){}.getType();
+    }
+    
     if ("PageTelefoneResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageTelefoneResponse>(){}.getType();
     }
@@ -1947,6 +1999,10 @@ public class JsonUtil {
     
     if ("PageTransferenciaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageTransferenciaBancariaResponse>(){}.getType();
+    }
+    
+    if ("PageTransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageTransferenciaCreditoContaBancariaResponse>(){}.getType();
     }
     
     if ("PageTransferenciaResponse".equalsIgnoreCase(className)) {
@@ -2129,6 +2185,10 @@ public class JsonUtil {
       return new TypeToken<TelefoneAdicionalUpdate>(){}.getType();
     }
     
+    if ("TelefoneEstabelecimentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TelefoneEstabelecimentoResponse>(){}.getType();
+    }
+    
     if ("TelefonePessoaAprovadaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<TelefonePessoaAprovadaPersist>(){}.getType();
     }
@@ -2255,6 +2315,18 @@ public class JsonUtil {
     
     if ("TransferenciaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TransferenciaBancariaResponse>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaListaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TransferenciaCreditoContaBancariaListaResponse>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<TransferenciaCreditoContaBancariaPersist>(){}.getType();
+    }
+    
+    if ("TransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TransferenciaCreditoContaBancariaResponse>(){}.getType();
     }
     
     if ("TransferenciaDetalheResponse".equalsIgnoreCase(className)) {
