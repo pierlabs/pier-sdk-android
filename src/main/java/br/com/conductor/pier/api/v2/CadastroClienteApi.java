@@ -747,12 +747,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse  consultarUsingGET14 (Long id) throws ApiException {
+  public EnderecoResponse  consultarUsingGET15 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
     }
     
 
@@ -806,12 +806,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  consultarUsingGET19 (Long id) throws ApiException {
+  public PessoaDetalheResponse  consultarUsingGET20 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
     }
     
 
@@ -865,12 +865,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse  consultarUsingGET21 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET22 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
     }
     
 
@@ -924,12 +924,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse  consultarUsingGET27 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
