@@ -17,14 +17,8 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
   
   @SerializedName("nsuOrigem")
   private String nsuOrigem = null;
-  @SerializedName("nsuAutorizacao")
-  private String nsuAutorizacao = null;
-  @SerializedName("codigoAutorizacao")
-  private String codigoAutorizacao = null;
   @SerializedName("numeroMascaradoCartao")
   private String numeroMascaradoCartao = null;
-  @SerializedName("nomePortadorCartao")
-  private String nomePortadorCartao = null;
   @SerializedName("terminalRequisitante")
   private String terminalRequisitante = null;
   @SerializedName("planoParcelamentos")
@@ -44,30 +38,6 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.")
-  public String getNsuAutorizacao() {
-    return nsuAutorizacao;
-  }
-  public void setNsuAutorizacao(String nsuAutorizacao) {
-    this.nsuAutorizacao = nsuAutorizacao;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.")
-  public String getCodigoAutorizacao() {
-    return codigoAutorizacao;
-  }
-  public void setCodigoAutorizacao(String codigoAutorizacao) {
-    this.codigoAutorizacao = codigoAutorizacao;
-  }
-
-  
-  /**
    * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.")
@@ -76,18 +46,6 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
   }
   public void setNumeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
-  }
-
-  
-  /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(value = "Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.")
-  public String getNomePortadorCartao() {
-    return nomePortadorCartao;
-  }
-  public void setNomePortadorCartao(String nomePortadorCartao) {
-    this.nomePortadorCartao = nomePortadorCartao;
   }
 
   
@@ -122,10 +80,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
     sb.append("class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse {\n");
     
     sb.append("  nsuOrigem: ").append(nsuOrigem).append("\n");
-    sb.append("  nsuAutorizacao: ").append(nsuAutorizacao).append("\n");
-    sb.append("  codigoAutorizacao: ").append(codigoAutorizacao).append("\n");
     sb.append("  numeroMascaradoCartao: ").append(numeroMascaradoCartao).append("\n");
-    sb.append("  nomePortadorCartao: ").append(nomePortadorCartao).append("\n");
     sb.append("  terminalRequisitante: ").append(terminalRequisitante).append("\n");
     sb.append("  planoParcelamentos: ").append(planoParcelamentos).append("\n");
     sb.append("}\n");

@@ -18,10 +18,8 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
   private String nsuOrigem = null;
   @SerializedName("valorTransacao")
   private BigDecimal valorTransacao = null;
-  @SerializedName("numeroRealCartao")
-  private String numeroRealCartao = null;
-  @SerializedName("dataValidadeCartao")
-  private String dataValidadeCartao = null;
+  @SerializedName("idCartao")
+  private Long idCartao = null;
   @SerializedName("numeroMesesCarencia")
   private Long numeroMesesCarencia = null;
   @SerializedName("numeroEstabelecimento")
@@ -57,26 +55,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
-  public String getNumeroRealCartao() {
-    return numeroRealCartao;
+  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.")
+  public Long getIdCartao() {
+    return idCartao;
   }
-  public void setNumeroRealCartao(String numeroRealCartao) {
-    this.numeroRealCartao = numeroRealCartao;
-  }
-
-  
-  /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-   **/
-  @ApiModelProperty(required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
-  public String getDataValidadeCartao() {
-    return dataValidadeCartao;
-  }
-  public void setDataValidadeCartao(String dataValidadeCartao) {
-    this.dataValidadeCartao = dataValidadeCartao;
+  public void setIdCartao(Long idCartao) {
+    this.idCartao = idCartao;
   }
 
   
@@ -136,8 +122,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
     
     sb.append("  nsuOrigem: ").append(nsuOrigem).append("\n");
     sb.append("  valorTransacao: ").append(valorTransacao).append("\n");
-    sb.append("  numeroRealCartao: ").append(numeroRealCartao).append("\n");
-    sb.append("  dataValidadeCartao: ").append(dataValidadeCartao).append("\n");
+    sb.append("  idCartao: ").append(idCartao).append("\n");
     sb.append("  numeroMesesCarencia: ").append(numeroMesesCarencia).append("\n");
     sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
     sb.append("  dataHoraTerminal: ").append(dataHoraTerminal).append("\n");

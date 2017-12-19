@@ -447,6 +447,10 @@ public class JsonUtil {
       return new TypeToken<List<FaturaResponse>>(){}.getType();
     }
     
+    if ("GradePendenteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<GradePendenteRequest>>(){}.getType();
+    }
+    
     if ("HistoricoAssessoriaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<HistoricoAssessoriaResponse>>(){}.getType();
     }
@@ -1643,6 +1647,10 @@ public class JsonUtil {
     
     if ("FaturaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<FaturaResponse>(){}.getType();
+    }
+    
+    if ("GradePendenteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<GradePendenteRequest>(){}.getType();
     }
     
     if ("HistoricoAssessoriaResponse".equalsIgnoreCase(className)) {

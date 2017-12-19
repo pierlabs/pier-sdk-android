@@ -20,6 +20,12 @@ public class ParcelamentoTransferenciaResponse  {
   private BigDecimal valorPrimeiraParcela = null;
   @SerializedName("valorDemaisParcelas")
   private BigDecimal valorDemaisParcelas = null;
+  @SerializedName("valorTotal")
+  private BigDecimal valorTotal = null;
+  @SerializedName("valorTAC")
+  private BigDecimal valorTAC = null;
+  @SerializedName("valorIOF")
+  private BigDecimal valorIOF = null;
   @SerializedName("taxaJuros")
   private BigDecimal taxaJuros = null;
   @SerializedName("cetAnual")
@@ -63,6 +69,42 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
+   * Valor total do financiamento.
+   **/
+  @ApiModelProperty(value = "Valor total do financiamento.")
+  public BigDecimal getValorTotal() {
+    return valorTotal;
+  }
+  public void setValorTotal(BigDecimal valorTotal) {
+    this.valorTotal = valorTotal;
+  }
+
+  
+  /**
+   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   **/
+  @ApiModelProperty(value = "Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.")
+  public BigDecimal getValorTAC() {
+    return valorTAC;
+  }
+  public void setValorTAC(BigDecimal valorTAC) {
+    this.valorTAC = valorTAC;
+  }
+
+  
+  /**
+   * IOF
+   **/
+  @ApiModelProperty(value = "IOF")
+  public BigDecimal getValorIOF() {
+    return valorIOF;
+  }
+  public void setValorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+  }
+
+  
+  /**
    * Valor da taxa de juros.
    **/
   @ApiModelProperty(value = "Valor da taxa de juros.")
@@ -95,6 +137,9 @@ public class ParcelamentoTransferenciaResponse  {
     sb.append("  numeroParcela: ").append(numeroParcela).append("\n");
     sb.append("  valorPrimeiraParcela: ").append(valorPrimeiraParcela).append("\n");
     sb.append("  valorDemaisParcelas: ").append(valorDemaisParcelas).append("\n");
+    sb.append("  valorTotal: ").append(valorTotal).append("\n");
+    sb.append("  valorTAC: ").append(valorTAC).append("\n");
+    sb.append("  valorIOF: ").append(valorIOF).append("\n");
     sb.append("  taxaJuros: ").append(taxaJuros).append("\n");
     sb.append("  cetAnual: ").append(cetAnual).append("\n");
     sb.append("}\n");
