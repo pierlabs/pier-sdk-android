@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -15,8 +13,6 @@ public class AplicacaoMobilePersist  {
   
   @SerializedName("idPlataformaMobile")
   private Long idPlataformaMobile = null;
-  @SerializedName("idEmissor")
-  private Long idEmissor = null;
   @SerializedName("token")
   private String token = null;
   @SerializedName("cor")
@@ -40,18 +36,6 @@ public class AplicacaoMobilePersist  {
   }
   public void setIdPlataformaMobile(Long idPlataformaMobile) {
     this.idPlataformaMobile = idPlataformaMobile;
-  }
-
-  
-  /**
-   * Apresenta o identificador do emissor.
-   **/
-  @ApiModelProperty(value = "Apresenta o identificador do emissor.")
-  public Long getIdEmissor() {
-    return idEmissor;
-  }
-  public void setIdEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
   }
 
   
@@ -134,7 +118,6 @@ public class AplicacaoMobilePersist  {
     sb.append("class AplicacaoMobilePersist {\n");
     
     sb.append("  idPlataformaMobile: ").append(idPlataformaMobile).append("\n");
-    sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  token: ").append(token).append("\n");
     sb.append("  cor: ").append(cor).append("\n");
     sb.append("  som: ").append(som).append("\n");
@@ -145,5 +128,3 @@ public class AplicacaoMobilePersist  {
     return sb.toString();
   }
 }
-
-

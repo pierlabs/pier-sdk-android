@@ -1,11 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -25,9 +22,9 @@ public class NotificacaoSMSBody  {
   @SerializedName("conteudo")
   private String conteudo = null;
   @SerializedName("dataAgendamento")
-  private Date dataAgendamento = null;
+  private String dataAgendamento = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -97,10 +94,10 @@ public class NotificacaoSMSBody  {
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
   @ApiModelProperty(value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 
@@ -134,5 +131,3 @@ public class NotificacaoSMSBody  {
     return sb.toString();
   }
 }
-
-

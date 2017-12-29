@@ -3,10 +3,8 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.MapOfstringAndstring;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -27,6 +25,8 @@ public class TransacaoOnUsResponse  {
   private String numeroMascaradoCartao = null;
   @SerializedName("nomePortadorCartao")
   private String nomePortadorCartao = null;
+  @SerializedName("terminalRequisitante")
+  private String terminalRequisitante = null;
 
   
   /**
@@ -101,6 +101,18 @@ public class TransacaoOnUsResponse  {
   }
 
   
+  /**
+   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   **/
+  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  public String getTerminalRequisitante() {
+    return terminalRequisitante;
+  }
+  public void setTerminalRequisitante(String terminalRequisitante) {
+    this.terminalRequisitante = terminalRequisitante;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -113,9 +125,8 @@ public class TransacaoOnUsResponse  {
     sb.append("  codigoAutorizacao: ").append(codigoAutorizacao).append("\n");
     sb.append("  numeroMascaradoCartao: ").append(numeroMascaradoCartao).append("\n");
     sb.append("  nomePortadorCartao: ").append(nomePortadorCartao).append("\n");
+    sb.append("  terminalRequisitante: ").append(terminalRequisitante).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-

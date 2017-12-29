@@ -2,12 +2,9 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.DetalheOportunidadePersist;
 import java.util.*;
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -23,9 +20,9 @@ public class OportunidadePersist  {
   @SerializedName("numeroReceitaFederal")
   private String numeroReceitaFederal = null;
   @SerializedName("dataInicioVigencia")
-  private Date dataInicioVigencia = null;
+  private String dataInicioVigencia = null;
   @SerializedName("dataFimVigencia")
-  private Date dataFimVigencia = null;
+  private String dataFimVigencia = null;
   @SerializedName("flagAtivo")
   private Boolean flagAtivo = null;
   @SerializedName("detalhes")
@@ -72,10 +69,10 @@ public class OportunidadePersist  {
    * Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(required = true, value = "Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -84,10 +81,10 @@ public class OportunidadePersist  {
    * Data do fim da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(required = true, value = "Data do fim da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 
@@ -133,5 +130,3 @@ public class OportunidadePersist  {
     return sb.toString();
   }
 }
-
-

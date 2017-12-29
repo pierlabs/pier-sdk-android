@@ -1,12 +1,9 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -18,11 +15,11 @@ public class DividaClienteResponse  {
   @SerializedName("id")
   private Long id = null;
   @SerializedName("dataVencimentoFaturaAtraso")
-  private Date dataVencimentoFaturaAtraso = null;
+  private String dataVencimentoFaturaAtraso = null;
   @SerializedName("quantidadeDiasAtraso")
   private Long quantidadeDiasAtraso = null;
   @SerializedName("dataVencimentoAcordo")
-  private Date dataVencimentoAcordo = null;
+  private String dataVencimentoAcordo = null;
   @SerializedName("quantidadeDiasAtrasoCorrigido")
   private Long quantidadeDiasAtrasoCorrigido = null;
   @SerializedName("valorSaldoDevedor")
@@ -67,10 +64,10 @@ public class DividaClienteResponse  {
    * Data de vencimento da cobran\u00C3\u00A7a
    **/
   @ApiModelProperty(value = "Data de vencimento da cobran\u00C3\u00A7a")
-  public Date getDataVencimentoFaturaAtraso() {
+  public String getDataVencimentoFaturaAtraso() {
     return dataVencimentoFaturaAtraso;
   }
-  public void setDataVencimentoFaturaAtraso(Date dataVencimentoFaturaAtraso) {
+  public void setDataVencimentoFaturaAtraso(String dataVencimentoFaturaAtraso) {
     this.dataVencimentoFaturaAtraso = dataVencimentoFaturaAtraso;
   }
 
@@ -91,10 +88,10 @@ public class DividaClienteResponse  {
    * Data de vencimento do acordo
    **/
   @ApiModelProperty(value = "Data de vencimento do acordo")
-  public Date getDataVencimentoAcordo() {
+  public String getDataVencimentoAcordo() {
     return dataVencimentoAcordo;
   }
-  public void setDataVencimentoAcordo(Date dataVencimentoAcordo) {
+  public void setDataVencimentoAcordo(String dataVencimentoAcordo) {
     this.dataVencimentoAcordo = dataVencimentoAcordo;
   }
 
@@ -282,5 +279,3 @@ public class DividaClienteResponse  {
     return sb.toString();
   }
 }
-
-

@@ -2,12 +2,9 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.CdtDetalheOportunidadeAUD;
 import java.util.*;
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -23,23 +20,25 @@ public class OportunidadeAUDResponse  {
   @SerializedName("idStatusOportunidade")
   private Long idStatusOportunidade = null;
   @SerializedName("dataCadastro")
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   @SerializedName("dataAtualizacao")
-  private Date dataAtualizacao = null;
+  private String dataAtualizacao = null;
   @SerializedName("numeroReceitaFederal")
   private String numeroReceitaFederal = null;
   @SerializedName("dataInicioVigencia")
-  private Date dataInicioVigencia = null;
+  private String dataInicioVigencia = null;
   @SerializedName("dataFimVigencia")
-  private Date dataFimVigencia = null;
+  private String dataFimVigencia = null;
   @SerializedName("flagAtivo")
   private Boolean flagAtivo = null;
   @SerializedName("detalhes")
   private List<CdtDetalheOportunidadeAUD> detalhes = null;
   @SerializedName("revDate")
-  private Date revDate = null;
+  private String revDate = null;
   @SerializedName("revType")
   private Long revType = null;
+  @SerializedName("rev")
+  private Long rev = null;
 
   
   /**
@@ -82,10 +81,10 @@ public class OportunidadeAUDResponse  {
    * Data cadastro da oportunidade.
    **/
   @ApiModelProperty(value = "Data cadastro da oportunidade.")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -94,10 +93,10 @@ public class OportunidadeAUDResponse  {
    * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
    **/
   @ApiModelProperty(value = "Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.")
-  public Date getDataAtualizacao() {
+  public String getDataAtualizacao() {
     return dataAtualizacao;
   }
-  public void setDataAtualizacao(Date dataAtualizacao) {
+  public void setDataAtualizacao(String dataAtualizacao) {
     this.dataAtualizacao = dataAtualizacao;
   }
 
@@ -118,10 +117,10 @@ public class OportunidadeAUDResponse  {
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -130,10 +129,10 @@ public class OportunidadeAUDResponse  {
    * fim da vig\u00C3\u00AAncia da oportunidade
    **/
   @ApiModelProperty(value = "fim da vig\u00C3\u00AAncia da oportunidade")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 
@@ -166,10 +165,10 @@ public class OportunidadeAUDResponse  {
    * Data da auditoria
    **/
   @ApiModelProperty(value = "Data da auditoria")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 
@@ -183,6 +182,18 @@ public class OportunidadeAUDResponse  {
   }
   public void setRevType(Long revType) {
     this.revType = revType;
+  }
+
+  
+  /**
+   * Identificador da auditoria
+   **/
+  @ApiModelProperty(value = "Identificador da auditoria")
+  public Long getRev() {
+    return rev;
+  }
+  public void setRev(Long rev) {
+    this.rev = rev;
   }
 
   
@@ -204,9 +215,8 @@ public class OportunidadeAUDResponse  {
     sb.append("  detalhes: ").append(detalhes).append("\n");
     sb.append("  revDate: ").append(revDate).append("\n");
     sb.append("  revType: ").append(revType).append("\n");
+    sb.append("  rev: ").append(rev).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-
