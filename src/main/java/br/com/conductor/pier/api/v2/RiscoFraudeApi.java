@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
 import br.com.conductor.pier.api.v2.model.TipoResolucaoResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class RiscoFraudeApi {
   String basePath = "http://localhost/";
@@ -47,12 +45,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse  consultarUsingGET23 (Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse  consultarUsingGET24 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
     }
     
 
@@ -278,4 +276,3 @@ public class RiscoFraudeApi {
   }
   
 }
-

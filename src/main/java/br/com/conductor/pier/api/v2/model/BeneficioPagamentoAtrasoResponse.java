@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 @ApiModel(description = "")
@@ -37,5 +35,3 @@ public class BeneficioPagamentoAtrasoResponse  {
     return sb.toString();
   }
 }
-
-

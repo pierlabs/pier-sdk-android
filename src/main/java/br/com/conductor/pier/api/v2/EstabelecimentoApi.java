@@ -14,7 +14,9 @@ import br.com.conductor.pier.api.v2.model.TerminalUpdate;
 import br.com.conductor.pier.api.v2.model.TerminalResponse;
 import br.com.conductor.pier.api.v2.model.CredorResponse;
 import br.com.conductor.pier.api.v2.model.CredorDTO;
+import br.com.conductor.pier.api.v2.model.DetalheOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PageOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.PageCredorResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
@@ -22,14 +24,12 @@ import br.com.conductor.pier.api.v2.model.PagePessoaJuridicaResponse;
 import br.com.conductor.pier.api.v2.model.PageTelefoneEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTerminalResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class EstabelecimentoApi {
   String basePath = "http://localhost/";
@@ -498,17 +498,76 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+   * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
+   * @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+   * @return DetalheOperacaoResponse
+   */
+  public DetalheOperacaoResponse  consultaOperacaoUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultaOperacaoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-operacoes-estabelecimentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (DetalheOperacaoResponse) ApiInvoker.deserialize(response, "", DetalheOperacaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Consultar credor
    * Consulta um credor atrav\u00C3\u00A9s do seu identificador.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da credor
    * @return CredorResponse
    */
-  public CredorResponse  consultarUsingGET11 (Long id) throws ApiException {
+  public CredorResponse  consultarUsingGET12 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
     }
     
 
@@ -562,12 +621,12 @@ public class EstabelecimentoApi {
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse  consultarUsingGET15 (Long id) throws ApiException {
+  public EstabelecimentoResponse  consultarUsingGET16 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
     }
     
 
@@ -621,12 +680,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica
    * @return PessoaJuridicaResponse
    */
-  public PessoaJuridicaResponse  consultarUsingGET20 (Long id) throws ApiException {
+  public PessoaJuridicaResponse  consultarUsingGET21 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
     }
     
 
@@ -680,12 +739,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse  consultarUsingGET26 (Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse  consultarUsingGET27 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
     }
     
 
@@ -739,12 +798,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse  consultarUsingGET28 (Long id) throws ApiException {
+  public TerminalResponse  consultarUsingGET29 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
     }
     
 
@@ -783,6 +842,74 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TerminalResponse) ApiInvoker.deserialize(response, "", TerminalResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
+   * Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idOperacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+   * @param codigoProcessamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * @return PageOperacaoResponse
+   */
+  public PageOperacaoResponse  listaOperacaoUsingGET (List<String> sort, Integer page, Integer limit, Long idOperacao, String codigoProcessamento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/tipos-operacoes-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idOperacao", idOperacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageOperacaoResponse) ApiInvoker.deserialize(response, "", PageOperacaoResponse.class);
       }
       else {
         return null;
@@ -1428,4 +1555,3 @@ public class EstabelecimentoApi {
   }
   
 }
-

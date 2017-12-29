@@ -4,10 +4,8 @@ import br.com.conductor.pier.api.v2.model.AnexoNotificacaoEmailRequest;
 import java.util.*;
 import java.util.Map;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -88,5 +86,3 @@ public class NotificacaoEmailRequest  {
     return sb.toString();
   }
 }
-
-

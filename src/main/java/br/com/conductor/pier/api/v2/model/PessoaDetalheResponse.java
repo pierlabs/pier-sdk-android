@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -25,6 +23,8 @@ public class PessoaDetalheResponse  {
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
   private Long idNacionalidade = null;
+  @SerializedName("numeroBanco")
+  private Integer numeroBanco = null;
   @SerializedName("numeroAgencia")
   private Integer numeroAgencia = null;
   @SerializedName("numeroContaCorrente")
@@ -108,6 +108,18 @@ public class PessoaDetalheResponse  {
 
   
   /**
+   * N\u00C3\u00BAmero do banco.
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do banco.")
+  public Integer getNumeroBanco() {
+    return numeroBanco;
+  }
+  public void setNumeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+  }
+
+  
+  /**
    * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
@@ -167,6 +179,7 @@ public class PessoaDetalheResponse  {
     sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
+    sb.append("  numeroBanco: ").append(numeroBanco).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
     sb.append("  email: ").append(email).append("\n");
@@ -175,5 +188,3 @@ public class PessoaDetalheResponse  {
     return sb.toString();
   }
 }
-
-

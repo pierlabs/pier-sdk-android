@@ -13,14 +13,12 @@ import br.com.conductor.pier.api.v2.model.AplicacaoMobileResponse;
 import br.com.conductor.pier.api.v2.model.PageAplicacaoMobileResponse;
 import br.com.conductor.pier.api.v2.model.AplicacaoMobilePersist;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class AplicacaoMobileApi {
   String basePath = "http://localhost/";
@@ -118,7 +116,7 @@ public class AplicacaoMobileApi {
    * @param idPlataformaMobile Identificador da Plataforma Mobile
    * @return PageAplicacaoMobileResponse
    */
-  public PageAplicacaoMobileResponse  listarUsingGET1 (List<String> sort, Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
+  public PageAplicacaoMobileResponse  listarUsingGET2 (List<String> sort, Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
     Object postBody = null;
     
 
@@ -236,4 +234,3 @@ public class AplicacaoMobileApi {
   }
   
 }
-

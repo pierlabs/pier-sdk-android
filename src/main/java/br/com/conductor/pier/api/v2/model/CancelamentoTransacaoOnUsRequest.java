@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -191,5 +189,3 @@ public class CancelamentoTransacaoOnUsRequest  {
     return sb.toString();
   }
 }
-
-

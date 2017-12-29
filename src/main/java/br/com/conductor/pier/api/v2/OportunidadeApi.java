@@ -22,14 +22,12 @@ import br.com.conductor.pier.api.v2.model.PageOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadePersist;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class OportunidadeApi {
   String basePath = "http://localhost/";
@@ -324,12 +322,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET18 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET19 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
     }
     
 
@@ -383,12 +381,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  consultarUsingGET33 (Long id) throws ApiException {
+  public TipoOportunidadeResponse  consultarUsingGET34 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
     }
     
 
@@ -1106,4 +1104,3 @@ public class OportunidadeApi {
   }
   
 }
-

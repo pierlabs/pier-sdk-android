@@ -28,14 +28,12 @@ import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaPersist;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class CadastroClienteApi {
   String basePath = "http://localhost/";
@@ -138,13 +136,14 @@ public class CadastroClienteApi {
    * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
    * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
+   * @param numeroBanco N\u00C3\u00BAmero do banco.
    * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
    * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
    * @param email Email da pessoa fisica
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  alterarUsingPUT10 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  alterarUsingPUT10 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -173,6 +172,8 @@ public class CadastroClienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNacionalidade", idNacionalidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroBanco", numeroBanco));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroAgencia", numeroAgencia));
     
@@ -747,12 +748,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse  consultarUsingGET14 (Long id) throws ApiException {
+  public EnderecoResponse  consultarUsingGET15 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
     }
     
 
@@ -806,12 +807,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  consultarUsingGET19 (Long id) throws ApiException {
+  public PessoaDetalheResponse  consultarUsingGET20 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
     }
     
 
@@ -865,12 +866,12 @@ public class CadastroClienteApi {
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse  consultarUsingGET21 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET22 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
     }
     
 
@@ -924,12 +925,12 @@ public class CadastroClienteApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse  consultarUsingGET27 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
@@ -1294,13 +1295,14 @@ public class CadastroClienteApi {
    * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
    * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
+   * @param numeroBanco N\u00C3\u00BAmero do Banco.
    * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
    * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
    * @param email Email da pessoa fisica
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse  listarUsingGET23 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse  listarUsingGET23 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
 
@@ -1332,6 +1334,8 @@ public class CadastroClienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNacionalidade", idNacionalidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroBanco", numeroBanco));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroAgencia", numeroAgencia));
     
@@ -1825,13 +1829,14 @@ public class CadastroClienteApi {
    * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
    * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
+   * @param numeroBanco N\u00C3\u00BAmero do banco.
    * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
    * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
    * @param email Email da pessoa fisica
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  salvarUsingPOST16 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse  salvarUsingPOST16 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idPessoa' is set
@@ -1862,6 +1867,8 @@ public class CadastroClienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idNacionalidade", idNacionalidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroBanco", numeroBanco));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroAgencia", numeroAgencia));
     
@@ -2071,4 +2078,3 @@ public class CadastroClienteApi {
   }
   
 }
-
