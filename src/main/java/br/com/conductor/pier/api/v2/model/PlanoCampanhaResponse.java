@@ -20,6 +20,8 @@ public class PlanoCampanhaResponse  {
   private Integer parcelas = null;
   @SerializedName("taxa")
   private BigDecimal taxa = null;
+  @SerializedName("usuario")
+  private String usuario = null;
 
   
   /**
@@ -58,6 +60,18 @@ public class PlanoCampanhaResponse  {
   }
 
   
+  /**
+   * Nome do usu\u00C3\u00A1rio
+   **/
+  @ApiModelProperty(value = "Nome do usu\u00C3\u00A1rio")
+  public String getUsuario() {
+    return usuario;
+  }
+  public void setUsuario(String usuario) {
+    this.usuario = usuario;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -67,6 +81,7 @@ public class PlanoCampanhaResponse  {
     sb.append("  id: ").append(id).append("\n");
     sb.append("  parcelas: ").append(parcelas).append("\n");
     sb.append("  taxa: ").append(taxa).append("\n");
+    sb.append("  usuario: ").append(usuario).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

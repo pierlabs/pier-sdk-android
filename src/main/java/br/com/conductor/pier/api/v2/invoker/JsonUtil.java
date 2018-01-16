@@ -715,10 +715,6 @@ public class JsonUtil {
       return new TypeToken<List<PageOrigemComercialResponse>>(){}.getType();
     }
     
-    if ("PagePaisResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PagePaisResponse>>(){}.getType();
-    }
-    
     if ("PagePessoaDetalheResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PagePessoaDetalheResponse>>(){}.getType();
     }
@@ -871,10 +867,6 @@ public class JsonUtil {
       return new TypeToken<List<PageWebHookResponse>>(){}.getType();
     }
     
-    if ("PaisResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PaisResponse>>(){}.getType();
-    }
-    
     if ("ParametroProdutoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<ParametroProdutoResponse>>(){}.getType();
     }
@@ -941,10 +933,6 @@ public class JsonUtil {
     
     if ("PlanoParcelamentoTransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse>>(){}.getType();
-    }
-    
-    if ("PlanoParcelamentoTransferenciaResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PlanoParcelamentoTransferenciaResponse>>(){}.getType();
     }
     
     if ("PlataformaMobilePersist".equalsIgnoreCase(className)) {
@@ -1917,10 +1905,6 @@ public class JsonUtil {
       return new TypeToken<PageOrigemComercialResponse>(){}.getType();
     }
     
-    if ("PagePaisResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<PagePaisResponse>(){}.getType();
-    }
-    
     if ("PagePessoaDetalheResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PagePessoaDetalheResponse>(){}.getType();
     }
@@ -2073,10 +2057,6 @@ public class JsonUtil {
       return new TypeToken<PageWebHookResponse>(){}.getType();
     }
     
-    if ("PaisResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<PaisResponse>(){}.getType();
-    }
-    
     if ("ParametroProdutoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<ParametroProdutoResponse>(){}.getType();
     }
@@ -2143,10 +2123,6 @@ public class JsonUtil {
     
     if ("PlanoParcelamentoTransferenciaCreditoContaBancariaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse>(){}.getType();
-    }
-    
-    if ("PlanoParcelamentoTransferenciaResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<PlanoParcelamentoTransferenciaResponse>(){}.getType();
     }
     
     if ("PlataformaMobilePersist".equalsIgnoreCase(className)) {

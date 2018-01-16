@@ -25,7 +25,7 @@ public class TransferenciaCreditoContaBancariaPersist  {
   @SerializedName("numeroParcelas")
   private Long numeroParcelas = null;
   @SerializedName("numeroMesesCarencia")
-  private Long numeroMesesCarencia = null;
+  private Integer numeroMesesCarencia = null;
   @SerializedName("dataHoraTerminal")
   private String dataHoraTerminal = null;
   @SerializedName("terminalRequisitante")
@@ -98,10 +98,10 @@ public class TransferenciaCreditoContaBancariaPersist  {
    * Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
    **/
   @ApiModelProperty(required = true, value = "Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.")
-  public Long getNumeroMesesCarencia() {
+  public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }
-  public void setNumeroMesesCarencia(Long numeroMesesCarencia) {
+  public void setNumeroMesesCarencia(Integer numeroMesesCarencia) {
     this.numeroMesesCarencia = numeroMesesCarencia;
   }
 

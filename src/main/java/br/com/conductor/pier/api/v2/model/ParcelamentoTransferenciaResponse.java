@@ -15,11 +15,9 @@ import com.google.gson.annotations.SerializedName;
 public class ParcelamentoTransferenciaResponse  {
   
   @SerializedName("numeroParcela")
-  private String numeroParcela = null;
-  @SerializedName("valorPrimeiraParcela")
-  private BigDecimal valorPrimeiraParcela = null;
-  @SerializedName("valorDemaisParcelas")
-  private BigDecimal valorDemaisParcelas = null;
+  private Integer numeroParcela = null;
+  @SerializedName("valorParcelas")
+  private BigDecimal valorParcelas = null;
   @SerializedName("valorTotal")
   private BigDecimal valorTotal = null;
   @SerializedName("valorTAC")
@@ -36,23 +34,11 @@ public class ParcelamentoTransferenciaResponse  {
    * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.")
-  public String getNumeroParcela() {
+  public Integer getNumeroParcela() {
     return numeroParcela;
   }
-  public void setNumeroParcela(String numeroParcela) {
+  public void setNumeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
-  }
-
-  
-  /**
-   * Valor da primeira parcela.
-   **/
-  @ApiModelProperty(value = "Valor da primeira parcela.")
-  public BigDecimal getValorPrimeiraParcela() {
-    return valorPrimeiraParcela;
-  }
-  public void setValorPrimeiraParcela(BigDecimal valorPrimeiraParcela) {
-    this.valorPrimeiraParcela = valorPrimeiraParcela;
   }
 
   
@@ -60,11 +46,11 @@ public class ParcelamentoTransferenciaResponse  {
    * Valor das demais parcelas.
    **/
   @ApiModelProperty(value = "Valor das demais parcelas.")
-  public BigDecimal getValorDemaisParcelas() {
-    return valorDemaisParcelas;
+  public BigDecimal getValorParcelas() {
+    return valorParcelas;
   }
-  public void setValorDemaisParcelas(BigDecimal valorDemaisParcelas) {
-    this.valorDemaisParcelas = valorDemaisParcelas;
+  public void setValorParcelas(BigDecimal valorParcelas) {
+    this.valorParcelas = valorParcelas;
   }
 
   
@@ -135,8 +121,7 @@ public class ParcelamentoTransferenciaResponse  {
     sb.append("class ParcelamentoTransferenciaResponse {\n");
     
     sb.append("  numeroParcela: ").append(numeroParcela).append("\n");
-    sb.append("  valorPrimeiraParcela: ").append(valorPrimeiraParcela).append("\n");
-    sb.append("  valorDemaisParcelas: ").append(valorDemaisParcelas).append("\n");
+    sb.append("  valorParcelas: ").append(valorParcelas).append("\n");
     sb.append("  valorTotal: ").append(valorTotal).append("\n");
     sb.append("  valorTAC: ").append(valorTAC).append("\n");
     sb.append("  valorIOF: ").append(valorIOF).append("\n");
