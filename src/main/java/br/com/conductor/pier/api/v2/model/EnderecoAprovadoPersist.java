@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -40,7 +38,7 @@ public class EnderecoAprovadoPersist  {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -124,7 +122,7 @@ public class EnderecoAprovadoPersist  {
   /**
    * Apresenta nome da cidade
    **/
-  @ApiModelProperty(value = "Apresenta nome da cidade")
+  @ApiModelProperty(required = true, value = "Apresenta nome da cidade")
   public String getCidade() {
     return cidade;
   }
@@ -136,7 +134,7 @@ public class EnderecoAprovadoPersist  {
   /**
    * Apresenta sigla da Unidade Federativa
    **/
-  @ApiModelProperty(value = "Apresenta sigla da Unidade Federativa")
+  @ApiModelProperty(required = true, value = "Apresenta sigla da Unidade Federativa")
   public String getUf() {
     return uf;
   }
@@ -160,7 +158,7 @@ public class EnderecoAprovadoPersist  {
   /**
    * Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
    **/
-  @ApiModelProperty(value = "Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia")
+  @ApiModelProperty(required = true, value = "Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia")
   public Boolean getEnderecoCorrespondencia() {
     return enderecoCorrespondencia;
   }
@@ -190,5 +188,3 @@ public class EnderecoAprovadoPersist  {
     return sb.toString();
   }
 }
-
-

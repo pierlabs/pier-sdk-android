@@ -1,11 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -15,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
 public class HistoricoAtrasoFaturaResponse  {
   
   @SerializedName("dataVencimento")
-  private Date dataVencimento = null;
+  private String dataVencimento = null;
   @SerializedName("diasPagamentoAposVencimento")
   private Long diasPagamentoAposVencimento = null;
 
@@ -24,10 +21,10 @@ public class HistoricoAtrasoFaturaResponse  {
    * Data vencimento fatura.
    **/
   @ApiModelProperty(value = "Data vencimento fatura.")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
@@ -56,5 +53,3 @@ public class HistoricoAtrasoFaturaResponse  {
     return sb.toString();
   }
 }
-
-

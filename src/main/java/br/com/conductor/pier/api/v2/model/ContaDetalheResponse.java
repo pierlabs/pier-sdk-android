@@ -1,12 +1,9 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -40,15 +37,15 @@ public class ContaDetalheResponse  {
   @SerializedName("melhorDiaCompra")
   private Integer melhorDiaCompra = null;
   @SerializedName("dataStatusConta")
-  private Date dataStatusConta = null;
+  private String dataStatusConta = null;
   @SerializedName("valorRenda")
   private BigDecimal valorRenda = null;
   @SerializedName("dataCadastro")
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   @SerializedName("dataUltimaAlteracaoVencimento")
-  private Date dataUltimaAlteracaoVencimento = null;
+  private String dataUltimaAlteracaoVencimento = null;
   @SerializedName("dataHoraUltimaCompra")
-  private Date dataHoraUltimaCompra = null;
+  private String dataHoraUltimaCompra = null;
   @SerializedName("numeroAgencia")
   private Integer numeroAgencia = null;
   @SerializedName("numeroContaCorrente")
@@ -96,7 +93,7 @@ public class ContaDetalheResponse  {
   /**
    * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @ApiModelProperty(value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
   public String getNome() {
     return nome;
   }
@@ -132,7 +129,7 @@ public class ContaDetalheResponse  {
   /**
    * Nome da origem comercial
    **/
-  @ApiModelProperty(required = true, value = "Nome da origem comercial")
+  @ApiModelProperty(value = "Nome da origem comercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -156,7 +153,7 @@ public class ContaDetalheResponse  {
   /**
    * Nome da Fantasia Basica
    **/
-  @ApiModelProperty(required = true, value = "Nome da Fantasia Basica")
+  @ApiModelProperty(value = "Nome da Fantasia Basica")
   public String getNomeFantasiaBasica() {
     return nomeFantasiaBasica;
   }
@@ -166,9 +163,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -217,10 +214,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
-  public Date getDataStatusConta() {
+  public String getDataStatusConta() {
     return dataStatusConta;
   }
-  public void setDataStatusConta(Date dataStatusConta) {
+  public void setDataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
   }
 
@@ -241,10 +238,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
   @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -253,10 +250,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
   @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
-  public Date getDataUltimaAlteracaoVencimento() {
+  public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
-  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public void setDataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
@@ -265,10 +262,10 @@ public class ContaDetalheResponse  {
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
   @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
-  public Date getDataHoraUltimaCompra() {
+  public String getDataHoraUltimaCompra() {
     return dataHoraUltimaCompra;
   }
-  public void setDataHoraUltimaCompra(Date dataHoraUltimaCompra) {
+  public void setDataHoraUltimaCompra(String dataHoraUltimaCompra) {
     this.dataHoraUltimaCompra = dataHoraUltimaCompra;
   }
 
@@ -324,7 +321,7 @@ public class ContaDetalheResponse  {
   /**
    * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.")
+  @ApiModelProperty(value = "Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -336,7 +333,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -348,7 +345,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -360,7 +357,7 @@ public class ContaDetalheResponse  {
   /**
    * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -417,5 +414,3 @@ public class ContaDetalheResponse  {
     return sb.toString();
   }
 }
-
-

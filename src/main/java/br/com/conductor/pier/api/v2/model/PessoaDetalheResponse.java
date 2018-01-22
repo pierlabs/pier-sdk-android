@@ -1,12 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
-import java.util.*;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -15,46 +11,20 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "PessoaDetalheResponse")
 public class PessoaDetalheResponse  {
   
-  @SerializedName("content")
-  private List<PessoaDetalheResponse> content = null;
-  @SerializedName("first")
-  private Boolean first = null;
-  @SerializedName("firstPage")
-  private Boolean firstPage = null;
-  @SerializedName("hasContent")
-  private Boolean hasContent = null;
-  @SerializedName("hasNextPage")
-  private Boolean hasNextPage = null;
-  @SerializedName("hasPreviousPage")
-  private Boolean hasPreviousPage = null;
   @SerializedName("idPessoa")
   private Long idPessoa = null;
-  @SerializedName("last")
-  private Boolean last = null;
-  @SerializedName("nextPage")
-  private Integer nextPage = null;
-  @SerializedName("number")
-  private Integer number = null;
-  @SerializedName("numberOfElements")
-  private Integer numberOfElements = null;
-  @SerializedName("previousPage")
-  private Integer previousPage = null;
-  @SerializedName("size")
-  private Integer size = null;
-  @SerializedName("totalElements")
-  private Long totalElements = null;
-  @SerializedName("totalPages")
-  private Integer totalPages = null;
   @SerializedName("nomeMae")
   private String nomeMae = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
-  @SerializedName("profissao")
-  private String profissao = null;
+  @SerializedName("idProfissao")
+  private String idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
   private Long idNacionalidade = null;
+  @SerializedName("numeroBanco")
+  private Integer numeroBanco = null;
   @SerializedName("numeroAgencia")
   private Integer numeroAgencia = null;
   @SerializedName("numeroContaCorrente")
@@ -66,72 +36,6 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   **/
-  @ApiModelProperty(value = "")
-  public List<PessoaDetalheResponse> getContent() {
-    return content;
-  }
-  public void setContent(List<PessoaDetalheResponse> content) {
-    this.content = content;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getFirst() {
-    return first;
-  }
-  public void setFirst(Boolean first) {
-    this.first = first;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getFirstPage() {
-    return firstPage;
-  }
-  public void setFirstPage(Boolean firstPage) {
-    this.firstPage = firstPage;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getHasContent() {
-    return hasContent;
-  }
-  public void setHasContent(Boolean hasContent) {
-    this.hasContent = hasContent;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getHasNextPage() {
-    return hasNextPage;
-  }
-  public void setHasNextPage(Boolean hasNextPage) {
-    this.hasNextPage = hasNextPage;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getHasPreviousPage() {
-    return hasPreviousPage;
-  }
-  public void setHasPreviousPage(Boolean hasPreviousPage) {
-    this.hasPreviousPage = hasPreviousPage;
-  }
-
-  
-  /**
    * C\u00C3\u00B3digo identificador da pessoa
    **/
   @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da pessoa")
@@ -140,94 +44,6 @@ public class PessoaDetalheResponse  {
   }
   public void setIdPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getLast() {
-    return last;
-  }
-  public void setLast(Boolean last) {
-    this.last = last;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getNextPage() {
-    return nextPage;
-  }
-  public void setNextPage(Integer nextPage) {
-    this.nextPage = nextPage;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getNumber() {
-    return number;
-  }
-  public void setNumber(Integer number) {
-    this.number = number;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getNumberOfElements() {
-    return numberOfElements;
-  }
-  public void setNumberOfElements(Integer numberOfElements) {
-    this.numberOfElements = numberOfElements;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getPreviousPage() {
-    return previousPage;
-  }
-  public void setPreviousPage(Integer previousPage) {
-    this.previousPage = previousPage;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getSize() {
-    return size;
-  }
-  public void setSize(Integer size) {
-    this.size = size;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Long getTotalElements() {
-    return totalElements;
-  }
-  public void setTotalElements(Long totalElements) {
-    this.totalElements = totalElements;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getTotalPages() {
-    return totalPages;
-  }
-  public void setTotalPages(Integer totalPages) {
-    this.totalPages = totalPages;
   }
 
   
@@ -259,11 +75,11 @@ public class PessoaDetalheResponse  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public String getProfissao() {
-    return profissao;
+  public String getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -288,6 +104,18 @@ public class PessoaDetalheResponse  {
   }
   public void setIdNacionalidade(Long idNacionalidade) {
     this.idNacionalidade = idNacionalidade;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero do banco.
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero do banco.")
+  public Integer getNumeroBanco() {
+    return numeroBanco;
+  }
+  public void setNumeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
   }
 
   
@@ -345,26 +173,13 @@ public class PessoaDetalheResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PessoaDetalheResponse {\n");
     
-    sb.append("  content: ").append(content).append("\n");
-    sb.append("  first: ").append(first).append("\n");
-    sb.append("  firstPage: ").append(firstPage).append("\n");
-    sb.append("  hasContent: ").append(hasContent).append("\n");
-    sb.append("  hasNextPage: ").append(hasNextPage).append("\n");
-    sb.append("  hasPreviousPage: ").append(hasPreviousPage).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
-    sb.append("  last: ").append(last).append("\n");
-    sb.append("  nextPage: ").append(nextPage).append("\n");
-    sb.append("  number: ").append(number).append("\n");
-    sb.append("  numberOfElements: ").append(numberOfElements).append("\n");
-    sb.append("  previousPage: ").append(previousPage).append("\n");
-    sb.append("  size: ").append(size).append("\n");
-    sb.append("  totalElements: ").append(totalElements).append("\n");
-    sb.append("  totalPages: ").append(totalPages).append("\n");
     sb.append("  nomeMae: ").append(nomeMae).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
+    sb.append("  numeroBanco: ").append(numeroBanco).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
     sb.append("  email: ").append(email).append("\n");
@@ -373,5 +188,3 @@ public class PessoaDetalheResponse  {
     return sb.toString();
   }
 }
-
-

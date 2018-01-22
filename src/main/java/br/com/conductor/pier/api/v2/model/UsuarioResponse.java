@@ -1,11 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -27,14 +24,14 @@ public class UsuarioResponse  {
   @SerializedName("email")
   private String email = null;
   public enum StatusEnum {
-     ATIVO,  INATIVO, 
+     INATIVO,  ATIVO, 
   };
   @SerializedName("status")
   private StatusEnum status = null;
   @SerializedName("dataCriacao")
-  private Date dataCriacao = null;
+  private String dataCriacao = null;
   @SerializedName("dataModificacao")
-  private Date dataModificacao = null;
+  private String dataModificacao = null;
   @SerializedName("tentativasIncorretas")
   private Long tentativasIncorretas = null;
 
@@ -127,10 +124,10 @@ public class UsuarioResponse  {
    * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
   @ApiModelProperty(value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
-  public Date getDataCriacao() {
+  public String getDataCriacao() {
     return dataCriacao;
   }
-  public void setDataCriacao(Date dataCriacao) {
+  public void setDataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
   }
 
@@ -139,10 +136,10 @@ public class UsuarioResponse  {
    * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
   @ApiModelProperty(value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
-  public Date getDataModificacao() {
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 
@@ -179,5 +176,3 @@ public class UsuarioResponse  {
     return sb.toString();
   }
 }
-
-

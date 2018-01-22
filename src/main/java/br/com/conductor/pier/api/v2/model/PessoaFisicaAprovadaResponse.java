@@ -2,13 +2,11 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
+import java.math.BigDecimal;
 import java.util.*;
-import java.util.Date;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -24,7 +22,7 @@ public class PessoaFisicaAprovadaResponse  {
   @SerializedName("nomeMae")
   private String nomeMae = null;
   @SerializedName("dataNascimento")
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   @SerializedName("sexo")
   private String sexo = null;
   @SerializedName("cpf")
@@ -36,11 +34,11 @@ public class PessoaFisicaAprovadaResponse  {
   @SerializedName("unidadeFederativaIdentidade")
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
-  @SerializedName("profissao")
-  private String profissao = null;
+  @SerializedName("idProfissao")
+  private String idProfissao = null;
   @SerializedName("idNaturezaOcupacao")
   private Long idNaturezaOcupacao = null;
   @SerializedName("idNacionalidade")
@@ -61,16 +59,32 @@ public class PessoaFisicaAprovadaResponse  {
   private String nomeImpresso = null;
   @SerializedName("nomeEmpresa")
   private String nomeEmpresa = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
+  @SerializedName("idProposta")
+  private Long idProposta = null;
+  @SerializedName("canalEntrada")
+  private String canalEntrada = null;
+  @SerializedName("valorPontuacao")
+  private Integer valorPontuacao = null;
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
   private List<EnderecoAprovadoResponse> enderecos = null;
+  @SerializedName("limiteGlobal")
+  private BigDecimal limiteGlobal = null;
+  @SerializedName("limiteMaximo")
+  private BigDecimal limiteMaximo = null;
+  @SerializedName("limiteParcelas")
+  private BigDecimal limiteParcelas = null;
+  @SerializedName("limiteConsignado")
+  private BigDecimal limiteConsignado = null;
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)")
   public Long getId() {
     return id;
   }
@@ -107,10 +121,10 @@ public class PessoaFisicaAprovadaResponse  {
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
   @ApiModelProperty(value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -179,10 +193,10 @@ public class PessoaFisicaAprovadaResponse  {
    * Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
    **/
   @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -203,11 +217,11 @@ public class PessoaFisicaAprovadaResponse  {
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
   @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  public String getProfissao() {
-    return profissao;
+  public String getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -320,14 +334,62 @@ public class PessoaFisicaAprovadaResponse  {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome da empresa
    **/
-  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome da empresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
   }
   public void setNomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  @ApiModelProperty(value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  @ApiModelProperty(value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
   }
 
   
@@ -355,6 +417,54 @@ public class PessoaFisicaAprovadaResponse  {
   }
 
   
+  /**
+   * Valor do Limite Global
+   **/
+  @ApiModelProperty(required = true, value = "Valor do Limite Global")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  @ApiModelProperty(required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
+  /**
+   * Valor do limite de margem consignado
+   **/
+  @ApiModelProperty(required = true, value = "Valor do limite de margem consignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -372,7 +482,7 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
-    sb.append("  profissao: ").append(profissao).append("\n");
+    sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idOrigemComercial: ").append(idOrigemComercial).append("\n");
@@ -383,11 +493,17 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  nomeEmpresa: ").append(nomeEmpresa).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idProposta: ").append(idProposta).append("\n");
+    sb.append("  canalEntrada: ").append(canalEntrada).append("\n");
+    sb.append("  valorPontuacao: ").append(valorPontuacao).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("  enderecos: ").append(enderecos).append("\n");
+    sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
+    sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
+    sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
+    sb.append("  limiteConsignado: ").append(limiteConsignado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-
