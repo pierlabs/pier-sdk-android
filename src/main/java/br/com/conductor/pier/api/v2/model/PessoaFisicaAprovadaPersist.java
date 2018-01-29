@@ -5,10 +5,8 @@ import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.math.BigDecimal;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -479,5 +477,3 @@ public class PessoaFisicaAprovadaPersist  {
     return sb.toString();
   }
 }
-
-

@@ -3,10 +3,8 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PropriedadeDocumentoRequest;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -72,5 +70,3 @@ public class DocumentoParametrosRequest  {
     return sb.toString();
   }
 }
-
-

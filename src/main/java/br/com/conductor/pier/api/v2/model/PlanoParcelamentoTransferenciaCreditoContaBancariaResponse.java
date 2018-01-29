@@ -4,10 +4,8 @@ import br.com.conductor.pier.api.v2.model.ParcelamentoTransferenciaResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -103,5 +101,3 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
     return sb.toString();
   }
 }
-
-

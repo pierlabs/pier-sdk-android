@@ -18,14 +18,12 @@ import br.com.conductor.pier.api.v2.model.PageCartaoPayResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayCadastroResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayPersist;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class ConductorPayApi {
   String basePath = "http://localhost/";
@@ -732,4 +730,3 @@ public class ConductorPayApi {
   }
   
 }
-

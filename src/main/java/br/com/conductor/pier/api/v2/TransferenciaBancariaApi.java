@@ -21,14 +21,12 @@ import br.com.conductor.pier.api.v2.model.PlanoParcelamentoTransferenciaCreditoC
 import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaPersist;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class TransferenciaBancariaApi {
   String basePath = "http://localhost/";
@@ -773,4 +771,3 @@ public class TransferenciaBancariaApi {
   }
   
 }
-
