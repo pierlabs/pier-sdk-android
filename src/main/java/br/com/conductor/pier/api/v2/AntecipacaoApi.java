@@ -15,14 +15,12 @@ import br.com.conductor.pier.api.v2.model.PageCompraResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaLoteResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class AntecipacaoApi {
   String basePath = "http://localhost/";
@@ -536,4 +534,3 @@ public class AntecipacaoApi {
   }
   
 }
-

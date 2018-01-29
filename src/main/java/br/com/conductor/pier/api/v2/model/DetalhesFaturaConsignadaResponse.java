@@ -4,10 +4,8 @@ import br.com.conductor.pier.api.v2.model.FaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -58,5 +56,3 @@ public class DetalhesFaturaConsignadaResponse  {
     return sb.toString();
   }
 }
-
-

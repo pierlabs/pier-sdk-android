@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.JobResponse;
 import br.com.conductor.pier.api.v2.model.PageJobResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class JobApi {
   String basePath = "http://localhost/";
@@ -387,4 +385,3 @@ public class JobApi {
   }
   
 }
-

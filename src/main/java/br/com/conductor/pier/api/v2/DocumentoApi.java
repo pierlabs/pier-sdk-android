@@ -20,14 +20,12 @@ import br.com.conductor.pier.api.v2.model.PageDocumentoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoParametrosRequest;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class DocumentoApi {
   String basePath = "http://localhost/";
@@ -792,4 +790,3 @@ public class DocumentoApi {
   }
   
 }
-

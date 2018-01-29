@@ -28,14 +28,12 @@ import br.com.conductor.pier.api.v2.model.NotificacaoSMSBody;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaEMAILPersist;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaSMSRequest;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class NotificacaoApi {
   String basePath = "http://localhost/";
@@ -1757,4 +1755,3 @@ public class NotificacaoApi {
   }
   
 }
-

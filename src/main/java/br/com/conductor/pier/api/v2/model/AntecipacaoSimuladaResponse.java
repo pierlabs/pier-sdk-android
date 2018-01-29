@@ -4,10 +4,8 @@ import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaDetalhesResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -401,5 +399,3 @@ public class AntecipacaoSimuladaResponse  {
     return sb.toString();
   }
 }
-
-

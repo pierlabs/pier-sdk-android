@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.FaqResponse;
 import br.com.conductor.pier.api.v2.model.PageFaqResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class FAQApi {
   String basePath = "http://localhost/";
@@ -352,4 +350,3 @@ public class FAQApi {
   }
   
 }
-
