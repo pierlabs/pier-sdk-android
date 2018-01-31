@@ -31,6 +31,8 @@ public class LoteCartoesPrePagosResponse  {
   private String usuarioCadastro = null;
   @SerializedName("statusProcessamento")
   private Integer statusProcessamento = null;
+  @SerializedName("identificadorExterno")
+  private String identificadorExterno = null;
 
   
   /**
@@ -153,6 +155,18 @@ public class LoteCartoesPrePagosResponse  {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+   **/
+  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).")
+  public String getIdentificadorExterno() {
+    return identificadorExterno;
+  }
+  public void setIdentificadorExterno(String identificadorExterno) {
+    this.identificadorExterno = identificadorExterno;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -169,6 +183,7 @@ public class LoteCartoesPrePagosResponse  {
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  usuarioCadastro: ").append(usuarioCadastro).append("\n");
     sb.append("  statusProcessamento: ").append(statusProcessamento).append("\n");
+    sb.append("  identificadorExterno: ").append(identificadorExterno).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
