@@ -1,27 +1,20 @@
 package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.ConsultaCadastroEstabelecimentoDTO;
+import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Estabelecimento
+ * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
  **/
-@ApiModel(description = "Objeto Estabelecimento")
-public class EstabelecimentoResponse  {
+@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento")
+public class EstabelecimentoUpdate  {
   
-  @SerializedName("id")
-  private Long id = null;
-  @SerializedName("numeroEstabelecimento")
-  private String numeroEstabelecimento = null;
   @SerializedName("flagMatriz")
   private Integer flagMatriz = null;
-  @SerializedName("idCredor")
-  private Long idCredor = null;
-  @SerializedName("numeroReceitaFederal")
-  private Long numeroReceitaFederal = null;
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("descricao")
@@ -33,7 +26,7 @@ public class EstabelecimentoResponse  {
   @SerializedName("nomeLogradouro")
   private String nomeLogradouro = null;
   @SerializedName("numeroEndereco")
-  private String numeroEndereco = null;
+  private Integer numeroEndereco = null;
   @SerializedName("bairro")
   private String bairro = null;
   @SerializedName("cidade")
@@ -47,7 +40,7 @@ public class EstabelecimentoResponse  {
   @SerializedName("nomeLogradouro2")
   private String nomeLogradouro2 = null;
   @SerializedName("numeroEndereco2")
-  private String numeroEndereco2 = null;
+  private Integer numeroEndereco2 = null;
   @SerializedName("bairro2")
   private String bairro2 = null;
   @SerializedName("cidade2")
@@ -96,36 +89,8 @@ public class EstabelecimentoResponse  {
   private ConsultaCadastroEstabelecimentoDTO consulta2 = null;
   @SerializedName("consulta3")
   private ConsultaCadastroEstabelecimentoDTO consulta3 = null;
-  @SerializedName("terminal")
-  private String terminal = null;
-  @SerializedName("dataCadastramento")
-  private String dataCadastramento = null;
-  @SerializedName("usuario")
-  private String usuario = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-   **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.")
-  public String getNumeroEstabelecimento() {
-    return numeroEstabelecimento;
-  }
-  public void setNumeroEstabelecimento(String numeroEstabelecimento) {
-    this.numeroEstabelecimento = numeroEstabelecimento;
-  }
+  @SerializedName("sort")
+  private List<String> sort = null;
 
   
   /**
@@ -137,30 +102,6 @@ public class EstabelecimentoResponse  {
   }
   public void setFlagMatriz(Integer flagMatriz) {
     this.flagMatriz = flagMatriz;
-  }
-
-  
-  /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-   **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.")
-  public Long getIdCredor() {
-    return idCredor;
-  }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
-  }
-
-  
-  /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
-   **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.")
-  public Long getNumeroReceitaFederal() {
-    return numeroReceitaFederal;
-  }
-  public void setNumeroReceitaFederal(Long numeroReceitaFederal) {
-    this.numeroReceitaFederal = numeroReceitaFederal;
   }
 
   
@@ -228,10 +169,10 @@ public class EstabelecimentoResponse  {
    * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
-  public String getNumeroEndereco() {
+  public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
-  public void setNumeroEndereco(String numeroEndereco) {
+  public void setNumeroEndereco(Integer numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
   }
 
@@ -312,10 +253,10 @@ public class EstabelecimentoResponse  {
    * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
    **/
   @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
-  public String getNumeroEndereco2() {
+  public Integer getNumeroEndereco2() {
     return numeroEndereco2;
   }
-  public void setNumeroEndereco2(String numeroEndereco2) {
+  public void setNumeroEndereco2(Integer numeroEndereco2) {
     this.numeroEndereco2 = numeroEndereco2;
   }
 
@@ -573,38 +514,14 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Terminal do estabelecimento.
+   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    **/
-  @ApiModelProperty(value = "Terminal do estabelecimento.")
-  public String getTerminal() {
-    return terminal;
+  @ApiModelProperty(value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  public List<String> getSort() {
+    return sort;
   }
-  public void setTerminal(String terminal) {
-    this.terminal = terminal;
-  }
-
-  
-  /**
-   * Data de Cadastro do Estabelecimento.
-   **/
-  @ApiModelProperty(value = "Data de Cadastro do Estabelecimento.")
-  public String getDataCadastramento() {
-    return dataCadastramento;
-  }
-  public void setDataCadastramento(String dataCadastramento) {
-    this.dataCadastramento = dataCadastramento;
-  }
-
-  
-  /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  @ApiModelProperty(value = "Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.")
-  public String getUsuario() {
-    return usuario;
-  }
-  public void setUsuario(String usuario) {
-    this.usuario = usuario;
+  public void setSort(List<String> sort) {
+    this.sort = sort;
   }
 
   
@@ -612,13 +529,9 @@ public class EstabelecimentoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EstabelecimentoResponse {\n");
+    sb.append("class EstabelecimentoUpdate {\n");
     
-    sb.append("  id: ").append(id).append("\n");
-    sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
     sb.append("  flagMatriz: ").append(flagMatriz).append("\n");
-    sb.append("  idCredor: ").append(idCredor).append("\n");
-    sb.append("  numeroReceitaFederal: ").append(numeroReceitaFederal).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
     sb.append("  nomeFantasia: ").append(nomeFantasia).append("\n");
@@ -653,9 +566,7 @@ public class EstabelecimentoResponse  {
     sb.append("  consulta: ").append(consulta).append("\n");
     sb.append("  consulta2: ").append(consulta2).append("\n");
     sb.append("  consulta3: ").append(consulta3).append("\n");
-    sb.append("  terminal: ").append(terminal).append("\n");
-    sb.append("  dataCadastramento: ").append(dataCadastramento).append("\n");
-    sb.append("  usuario: ").append(usuario).append("\n");
+    sb.append("  sort: ").append(sort).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

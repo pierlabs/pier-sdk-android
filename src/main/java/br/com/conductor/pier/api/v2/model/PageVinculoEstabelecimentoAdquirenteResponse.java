@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.CredorResponse;
+import br.com.conductor.pier.api.v2.model.VinculoEstabelecimentoAdquirenteResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credores
+ * Lista de VinculoEstabelecimentoAdquirente
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credores")
-public class PageCredorResponse  {
+@ApiModel(description = "Lista de VinculoEstabelecimentoAdquirente")
+public class PageVinculoEstabelecimentoAdquirenteResponse  {
   
   @SerializedName("content")
-  private List<CredorResponse> content = null;
+  private List<VinculoEstabelecimentoAdquirenteResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageCredorResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<CredorResponse> getContent() {
+  public List<VinculoEstabelecimentoAdquirenteResponse> getContent() {
     return content;
   }
-  public void setContent(List<CredorResponse> content) {
+  public void setContent(List<VinculoEstabelecimentoAdquirenteResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PageCredorResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCredorResponse {\n");
+    sb.append("class PageVinculoEstabelecimentoAdquirenteResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

@@ -7,17 +7,35 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credor
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credor")
-public class CredorResponse  {
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico")
+public class GrupoEconomicoResponse  {
   
   @SerializedName("id")
   private Long id = null;
-  @SerializedName("idPessoaJuridica")
-  private Long idPessoaJuridica = null;
-  @SerializedName("nome")
-  private String nome = null;
+  @SerializedName("razaoSocial")
+  private String razaoSocial = null;
+  @SerializedName("nomeCredor")
+  private String nomeCredor = null;
+  @SerializedName("numeroReceitaFederal")
+  private String numeroReceitaFederal = null;
+  @SerializedName("inscricaoEstadual")
+  private String inscricaoEstadual = null;
+  @SerializedName("contato")
+  private String contato = null;
+  @SerializedName("banco")
+  private Integer banco = null;
+  @SerializedName("agencia")
+  private Integer agencia = null;
+  @SerializedName("digitoAgencia")
+  private String digitoAgencia = null;
+  @SerializedName("contaCorrente")
+  private String contaCorrente = null;
+  @SerializedName("digitoContaCorrente")
+  private String digitoContaCorrente = null;
+  @SerializedName("usuario")
+  private String usuario = null;
   public enum PeriodicidadeEnum {
      DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
   };
@@ -40,8 +58,6 @@ public class CredorResponse  {
   private Integer pagamentoQuinzenalPrimeiro = null;
   @SerializedName("pagamentoQuinzenalSegundo")
   private Integer pagamentoQuinzenalSegundo = null;
-  @SerializedName("credorBanco")
-  private Boolean credorBanco = null;
   @SerializedName("percentualRAV")
   private BigDecimal percentualRAV = null;
   public enum RecebeRAVEnum {
@@ -57,26 +73,12 @@ public class CredorResponse  {
   private BigDecimal taxaBanco = null;
   @SerializedName("limiteRAV")
   private BigDecimal limiteRAV = null;
-  @SerializedName("idCredorRAV")
-  private Long idCredorRAV = null;
-  @SerializedName("banco")
-  private Integer banco = null;
-  @SerializedName("agencia")
-  private Integer agencia = null;
-  @SerializedName("digitoVerificadorAgencia")
-  private String digitoVerificadorAgencia = null;
-  @SerializedName("contaCorrente")
-  private String contaCorrente = null;
-  @SerializedName("digitoVerificadorContaCorrente")
-  private String digitoVerificadorContaCorrente = null;
-  @SerializedName("usuario")
-  private String usuario = null;
 
   
   /**
-   * C\u00C3\u00B3digo identificador do credor
+   * C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do credor")
+  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico")
   public Long getId() {
     return id;
   }
@@ -86,14 +88,14 @@ public class CredorResponse  {
 
   
   /**
-   * Identificador da pessoa jur\u00C3\u00ADdica do credor
+   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
    **/
-  @ApiModelProperty(value = "Identificador da pessoa jur\u00C3\u00ADdica do credor")
-  public Long getIdPessoaJuridica() {
-    return idPessoaJuridica;
+  @ApiModelProperty(value = "Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica")
+  public String getRazaoSocial() {
+    return razaoSocial;
   }
-  public void setIdPessoaJuridica(Long idPessoaJuridica) {
-    this.idPessoaJuridica = idPessoaJuridica;
+  public void setRazaoSocial(String razaoSocial) {
+    this.razaoSocial = razaoSocial;
   }
 
   
@@ -101,11 +103,119 @@ public class CredorResponse  {
    * Nome do credor
    **/
   @ApiModelProperty(value = "Nome do credor")
-  public String getNome() {
-    return nome;
+  public String getNomeCredor() {
+    return nomeCredor;
   }
-  public void setNome(String nome) {
-    this.nome = nome;
+  public void setNomeCredor(String nomeCredor) {
+    this.nomeCredor = nomeCredor;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da Receita Federal
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da Receita Federal")
+  public String getNumeroReceitaFederal() {
+    return numeroReceitaFederal;
+  }
+  public void setNumeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   **/
+  @ApiModelProperty(value = "N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual")
+  public String getInscricaoEstadual() {
+    return inscricaoEstadual;
+  }
+  public void setInscricaoEstadual(String inscricaoEstadual) {
+    this.inscricaoEstadual = inscricaoEstadual;
+  }
+
+  
+  /**
+   * Nome da pessoa para entrar em contato
+   **/
+  @ApiModelProperty(value = "Nome da pessoa para entrar em contato")
+  public String getContato() {
+    return contato;
+  }
+  public void setContato(String contato) {
+    this.contato = contato;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo do banco
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo do banco")
+  public Integer getBanco() {
+    return banco;
+  }
+  public void setBanco(Integer banco) {
+    this.banco = banco;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo da ag\u00C3\u00AAncia")
+  public Integer getAgencia() {
+    return agencia;
+  }
+  public void setAgencia(Integer agencia) {
+    this.agencia = agencia;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+   **/
+  @ApiModelProperty(value = "D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia")
+  public String getDigitoAgencia() {
+    return digitoAgencia;
+  }
+  public void setDigitoAgencia(String digitoAgencia) {
+    this.digitoAgencia = digitoAgencia;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo da Conta Corrente
+   **/
+  @ApiModelProperty(value = "C\u00C3\u00B3digo da Conta Corrente")
+  public String getContaCorrente() {
+    return contaCorrente;
+  }
+  public void setContaCorrente(String contaCorrente) {
+    this.contaCorrente = contaCorrente;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito Verificador da Conta Corrente
+   **/
+  @ApiModelProperty(value = "D\u00C3\u00ADgito Verificador da Conta Corrente")
+  public String getDigitoContaCorrente() {
+    return digitoContaCorrente;
+  }
+  public void setDigitoContaCorrente(String digitoContaCorrente) {
+    this.digitoContaCorrente = digitoContaCorrente;
+  }
+
+  
+  /**
+   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+   **/
+  @ApiModelProperty(value = "Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o")
+  public String getUsuario() {
+    return usuario;
+  }
+  public void setUsuario(String usuario) {
+    this.usuario = usuario;
   }
 
   
@@ -206,18 +316,6 @@ public class CredorResponse  {
 
   
   /**
-   * Indica se este credor pode ser um Credor RAV de outros credores
-   **/
-  @ApiModelProperty(value = "Indica se este credor pode ser um Credor RAV de outros credores")
-  public Boolean getCredorBanco() {
-    return credorBanco;
-  }
-  public void setCredorBanco(Boolean credorBanco) {
-    this.credorBanco = credorBanco;
-  }
-
-  
-  /**
    * Valor percentual do RAV do credor
    **/
   @ApiModelProperty(value = "Valor percentual do RAV do credor")
@@ -289,99 +387,24 @@ public class CredorResponse  {
   }
 
   
-  /**
-   * C\u00C3\u00B3digo identificador do credor RAV
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do credor RAV")
-  public Long getIdCredorRAV() {
-    return idCredorRAV;
-  }
-  public void setIdCredorRAV(Long idCredorRAV) {
-    this.idCredorRAV = idCredorRAV;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo do banco
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do banco")
-  public Integer getBanco() {
-    return banco;
-  }
-  public void setBanco(Integer banco) {
-    this.banco = banco;
-  }
-
-  
-  /**
-   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-   **/
-  @ApiModelProperty(value = "Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica")
-  public Integer getAgencia() {
-    return agencia;
-  }
-  public void setAgencia(Integer agencia) {
-    this.agencia = agencia;
-  }
-
-  
-  /**
-   * D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-   **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia")
-  public String getDigitoVerificadorAgencia() {
-    return digitoVerificadorAgencia;
-  }
-  public void setDigitoVerificadorAgencia(String digitoVerificadorAgencia) {
-    this.digitoVerificadorAgencia = digitoVerificadorAgencia;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo da Conta Corrente
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da Conta Corrente")
-  public String getContaCorrente() {
-    return contaCorrente;
-  }
-  public void setContaCorrente(String contaCorrente) {
-    this.contaCorrente = contaCorrente;
-  }
-
-  
-  /**
-   * D\u00C3\u00ADgito Verificador da Conta Corrente
-   **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito Verificador da Conta Corrente")
-  public String getDigitoVerificadorContaCorrente() {
-    return digitoVerificadorContaCorrente;
-  }
-  public void setDigitoVerificadorContaCorrente(String digitoVerificadorContaCorrente) {
-    this.digitoVerificadorContaCorrente = digitoVerificadorContaCorrente;
-  }
-
-  
-  /**
-   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
-   **/
-  @ApiModelProperty(value = "Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o")
-  public String getUsuario() {
-    return usuario;
-  }
-  public void setUsuario(String usuario) {
-    this.usuario = usuario;
-  }
-
-  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CredorResponse {\n");
+    sb.append("class GrupoEconomicoResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
-    sb.append("  idPessoaJuridica: ").append(idPessoaJuridica).append("\n");
-    sb.append("  nome: ").append(nome).append("\n");
+    sb.append("  razaoSocial: ").append(razaoSocial).append("\n");
+    sb.append("  nomeCredor: ").append(nomeCredor).append("\n");
+    sb.append("  numeroReceitaFederal: ").append(numeroReceitaFederal).append("\n");
+    sb.append("  inscricaoEstadual: ").append(inscricaoEstadual).append("\n");
+    sb.append("  contato: ").append(contato).append("\n");
+    sb.append("  banco: ").append(banco).append("\n");
+    sb.append("  agencia: ").append(agencia).append("\n");
+    sb.append("  digitoAgencia: ").append(digitoAgencia).append("\n");
+    sb.append("  contaCorrente: ").append(contaCorrente).append("\n");
+    sb.append("  digitoContaCorrente: ").append(digitoContaCorrente).append("\n");
+    sb.append("  usuario: ").append(usuario).append("\n");
     sb.append("  periodicidade: ").append(periodicidade).append("\n");
     sb.append("  pagamentoSemanal: ").append(pagamentoSemanal).append("\n");
     sb.append("  pagamentoMensal: ").append(pagamentoMensal).append("\n");
@@ -390,20 +413,12 @@ public class CredorResponse  {
     sb.append("  pagamentoDecendialTerceiro: ").append(pagamentoDecendialTerceiro).append("\n");
     sb.append("  pagamentoQuinzenalPrimeiro: ").append(pagamentoQuinzenalPrimeiro).append("\n");
     sb.append("  pagamentoQuinzenalSegundo: ").append(pagamentoQuinzenalSegundo).append("\n");
-    sb.append("  credorBanco: ").append(credorBanco).append("\n");
     sb.append("  percentualRAV: ").append(percentualRAV).append("\n");
     sb.append("  recebeRAV: ").append(recebeRAV).append("\n");
     sb.append("  percentualMultiplica: ").append(percentualMultiplica).append("\n");
     sb.append("  taxaAdm: ").append(taxaAdm).append("\n");
     sb.append("  taxaBanco: ").append(taxaBanco).append("\n");
     sb.append("  limiteRAV: ").append(limiteRAV).append("\n");
-    sb.append("  idCredorRAV: ").append(idCredorRAV).append("\n");
-    sb.append("  banco: ").append(banco).append("\n");
-    sb.append("  agencia: ").append(agencia).append("\n");
-    sb.append("  digitoVerificadorAgencia: ").append(digitoVerificadorAgencia).append("\n");
-    sb.append("  contaCorrente: ").append(contaCorrente).append("\n");
-    sb.append("  digitoVerificadorContaCorrente: ").append(digitoVerificadorContaCorrente).append("\n");
-    sb.append("  usuario: ").append(usuario).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

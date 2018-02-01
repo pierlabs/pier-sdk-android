@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.PessoaJuridicaResponse;
+import br.com.conductor.pier.api.v2.model.VinculoOperacaoResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de pessoas jur\u00C3\u00ADdicas
+ * Lista de vinculosOperacao
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de pessoas jur\u00C3\u00ADdicas")
-public class PagePessoaJuridicaResponse  {
+@ApiModel(description = "Lista de vinculosOperacao")
+public class PageVinculoOperacaoResponse  {
   
   @SerializedName("content")
-  private List<PessoaJuridicaResponse> content = null;
+  private List<VinculoOperacaoResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PagePessoaJuridicaResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<PessoaJuridicaResponse> getContent() {
+  public List<VinculoOperacaoResponse> getContent() {
     return content;
   }
-  public void setContent(List<PessoaJuridicaResponse> content) {
+  public void setContent(List<VinculoOperacaoResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PagePessoaJuridicaResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PagePessoaJuridicaResponse {\n");
+    sb.append("class PageVinculoOperacaoResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

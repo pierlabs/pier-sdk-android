@@ -1,36 +1,26 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ProdutoOrigemResponse;
-import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
+ * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial")
-public class OrigemComercialResponse  {
+@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial")
+public class OrigemComercialUpdate  {
   
-  @SerializedName("id")
-  private Long id = null;
   @SerializedName("nome")
   private String nome = null;
   @SerializedName("descricao")
   private String descricao = null;
-  @SerializedName("produtosOrigem")
-  private List<ProdutoOrigemResponse> produtosOrigem = null;
   @SerializedName("idEstabelecimento")
   private Long idEstabelecimento = null;
   @SerializedName("idTipoOrigemComercial")
   private Long idTipoOrigemComercial = null;
-  @SerializedName("nomeTipoOrigemComercial")
-  private String nomeTipoOrigemComercial = null;
   @SerializedName("idGrupoOrigemComercial")
   private Long idGrupoOrigemComercial = null;
-  @SerializedName("nomeGrupoOrigemComercial")
-  private String nomeGrupoOrigemComercial = null;
   @SerializedName("status")
   private Integer status = null;
   @SerializedName("flagPreAprovado")
@@ -71,18 +61,6 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do OrigemComercial
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do OrigemComercial")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
    * Nome da origem comercial
    **/
   @ApiModelProperty(value = "Nome da origem comercial")
@@ -95,9 +73,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+   * Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial")
+  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial")
   public String getDescricao() {
     return descricao;
   }
@@ -107,21 +85,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Produtos da origem comercial
+   * Identificador do estabelecimento
    **/
-  @ApiModelProperty(value = "Produtos da origem comercial")
-  public List<ProdutoOrigemResponse> getProdutosOrigem() {
-    return produtosOrigem;
-  }
-  public void setProdutosOrigem(List<ProdutoOrigemResponse> produtosOrigem) {
-    this.produtosOrigem = produtosOrigem;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-   **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento")
+  @ApiModelProperty(value = "Identificador do estabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -131,9 +97,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+   * Identificador do tipo de origem comercial
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial")
+  @ApiModelProperty(value = "Identificador do tipo de origem comercial")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
   }
@@ -143,38 +109,14 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome do Tipo da Origem Comercial
+   * Identificador do grupo de origem comercial
    **/
-  @ApiModelProperty(value = "Nome do Tipo da Origem Comercial")
-  public String getNomeTipoOrigemComercial() {
-    return nomeTipoOrigemComercial;
-  }
-  public void setNomeTipoOrigemComercial(String nomeTipoOrigemComercial) {
-    this.nomeTipoOrigemComercial = nomeTipoOrigemComercial;
-  }
-
-  
-  /**
-   * Identificador do grupo da origem comercial
-   **/
-  @ApiModelProperty(value = "Identificador do grupo da origem comercial")
+  @ApiModelProperty(value = "Identificador do grupo de origem comercial")
   public Long getIdGrupoOrigemComercial() {
     return idGrupoOrigemComercial;
   }
   public void setIdGrupoOrigemComercial(Long idGrupoOrigemComercial) {
     this.idGrupoOrigemComercial = idGrupoOrigemComercial;
-  }
-
-  
-  /**
-   * Nome do grupo da origem comercial
-   **/
-  @ApiModelProperty(value = "Nome do grupo da origem comercial")
-  public String getNomeGrupoOrigemComercial() {
-    return nomeGrupoOrigemComercial;
-  }
-  public void setNomeGrupoOrigemComercial(String nomeGrupoOrigemComercial) {
-    this.nomeGrupoOrigemComercial = nomeGrupoOrigemComercial;
   }
 
   
@@ -386,17 +328,13 @@ public class OrigemComercialResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OrigemComercialResponse {\n");
+    sb.append("class OrigemComercialUpdate {\n");
     
-    sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
-    sb.append("  produtosOrigem: ").append(produtosOrigem).append("\n");
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
     sb.append("  idTipoOrigemComercial: ").append(idTipoOrigemComercial).append("\n");
-    sb.append("  nomeTipoOrigemComercial: ").append(nomeTipoOrigemComercial).append("\n");
     sb.append("  idGrupoOrigemComercial: ").append(idGrupoOrigemComercial).append("\n");
-    sb.append("  nomeGrupoOrigemComercial: ").append(nomeGrupoOrigemComercial).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  flagPreAprovado: ").append(flagPreAprovado).append("\n");
     sb.append("  flagAprovacaoImediata: ").append(flagAprovacaoImediata).append("\n");
