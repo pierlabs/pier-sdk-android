@@ -1991,7 +1991,7 @@ public class EstabelecimentoApi {
    * @param flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse  listarUsingGET18 (List<String> sort, Integer page, Integer limit, Long id, Long idCredor, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
+  public PageEstabelecimentoResponse  listarUsingGET19 (List<String> sort, Integer page, Integer limit, Long id, Long idCredor, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
     Object postBody = null;
     
 
@@ -2146,7 +2146,7 @@ public class EstabelecimentoApi {
    * @param idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
    * @return PageGrupoEconomicoResponse
    */
-  public PageGrupoEconomicoResponse  listarUsingGET20 (List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
+  public PageGrupoEconomicoResponse  listarUsingGET21 (List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
     Object postBody = null;
     
 
@@ -2259,7 +2259,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
    * @return PageMaquinetaResponse
    */
-  public PageMaquinetaResponse  listarUsingGET22 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageMaquinetaResponse  listarUsingGET23 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2326,7 +2326,7 @@ public class EstabelecimentoApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
    * @return PageMoedaResponse
    */
-  public PageMoedaResponse  listarUsingGET23 (List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
+  public PageMoedaResponse  listarUsingGET24 (List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -2397,7 +2397,7 @@ public class EstabelecimentoApi {
    * @param idProduto Apresenta o id do produto que vai ser alterado.
    * @return PageOperacaoCredorResponse
    */
-  public PageOperacaoCredorResponse  listarUsingGET24 (List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
+  public PageOperacaoCredorResponse  listarUsingGET25 (List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
     Object postBody = null;
     
 
@@ -2466,7 +2466,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
    * @return PageTelefoneEstabelecimentoResponse
    */
-  public PageTelefoneEstabelecimentoResponse  listarUsingGET35 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageTelefoneEstabelecimentoResponse  listarUsingGET36 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2534,7 +2534,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse  listarUsingGET37 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse  listarUsingGET38 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2607,7 +2607,7 @@ public class EstabelecimentoApi {
    * @param codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
    * @return PageVinculoEstabelecimentoAdquirenteResponse
    */
-  public PageVinculoEstabelecimentoAdquirenteResponse  listarUsingGET48 (List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
+  public PageVinculoEstabelecimentoAdquirenteResponse  listarUsingGET49 (List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
     Object postBody = null;
     
 
@@ -2679,12 +2679,12 @@ public class EstabelecimentoApi {
    * @param codigoMCC C\u00C3\u00B3digo MCC.
    * @return PageVinculoOperacaoResponse
    */
-  public PageVinculoOperacaoResponse  listarUsingGET49 (Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
+  public PageVinculoOperacaoResponse  listarUsingGET50 (Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET49");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET50");
     }
     
 

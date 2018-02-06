@@ -95,6 +95,10 @@ public class JsonUtil {
       return new TypeToken<List<AplicacaoMobileUpdate>>(){}.getType();
     }
     
+    if ("ArquivoDetalheResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ArquivoDetalheResponse>>(){}.getType();
+    }
+    
     if ("ArquivoDetalhesPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<ArquivoDetalhesPersist>>(){}.getType();
     }
@@ -499,6 +503,10 @@ public class JsonUtil {
       return new TypeToken<List<IntegracaoEmissorResponse>>(){}.getType();
     }
     
+    if ("IntegrarArquivoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<IntegrarArquivoRequest>>(){}.getType();
+    }
+    
     if ("IntegrarDocumentoRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<IntegrarDocumentoRequest>>(){}.getType();
     }
@@ -621,6 +629,10 @@ public class JsonUtil {
     
     if ("PageAplicacaoMobileResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageAplicacaoMobileResponse>>(){}.getType();
+    }
+    
+    if ("PageArquivoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PageArquivoResponse>>(){}.getType();
     }
     
     if ("PageAtendimentoClienteResponse".equalsIgnoreCase(className)) {
@@ -1421,6 +1433,10 @@ public class JsonUtil {
       return new TypeToken<AplicacaoMobileUpdate>(){}.getType();
     }
     
+    if ("ArquivoDetalheResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<ArquivoDetalheResponse>(){}.getType();
+    }
+    
     if ("ArquivoDetalhesPersist".equalsIgnoreCase(className)) {
       return new TypeToken<ArquivoDetalhesPersist>(){}.getType();
     }
@@ -1825,6 +1841,10 @@ public class JsonUtil {
       return new TypeToken<IntegracaoEmissorResponse>(){}.getType();
     }
     
+    if ("IntegrarArquivoRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<IntegrarArquivoRequest>(){}.getType();
+    }
+    
     if ("IntegrarDocumentoRequest".equalsIgnoreCase(className)) {
       return new TypeToken<IntegrarDocumentoRequest>(){}.getType();
     }
@@ -1947,6 +1967,10 @@ public class JsonUtil {
     
     if ("PageAplicacaoMobileResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageAplicacaoMobileResponse>(){}.getType();
+    }
+    
+    if ("PageArquivoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PageArquivoResponse>(){}.getType();
     }
     
     if ("PageAtendimentoClienteResponse".equalsIgnoreCase(className)) {

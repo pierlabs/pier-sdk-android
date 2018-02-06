@@ -21,6 +21,11 @@ public class ArquivoPersist  {
   private String nome = null;
   @SerializedName("extensao")
   private String extensao = null;
+  public enum TipoComunicacaoEnum {
+     SOAP,  REST, 
+  };
+  @SerializedName("tipoComunicacao")
+  private TipoComunicacaoEnum tipoComunicacao = null;
   @SerializedName("detalhes")
   private List<ArquivoDetalhesPersist> detalhes = null;
 
@@ -40,7 +45,7 @@ public class ArquivoPersist  {
   /**
    * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
   public String getArquivo() {
     return arquivo;
   }
@@ -74,6 +79,18 @@ public class ArquivoPersist  {
 
   
   /**
+   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   **/
+  @ApiModelProperty(value = "Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.")
+  public TipoComunicacaoEnum getTipoComunicacao() {
+    return tipoComunicacao;
+  }
+  public void setTipoComunicacao(TipoComunicacaoEnum tipoComunicacao) {
+    this.tipoComunicacao = tipoComunicacao;
+  }
+
+  
+  /**
    * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
    **/
   @ApiModelProperty(required = true, value = "Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo")
@@ -95,6 +112,7 @@ public class ArquivoPersist  {
     sb.append("  arquivo: ").append(arquivo).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  extensao: ").append(extensao).append("\n");
+    sb.append("  tipoComunicacao: ").append(tipoComunicacao).append("\n");
     sb.append("  detalhes: ").append(detalhes).append("\n");
     sb.append("}\n");
     return sb.toString();

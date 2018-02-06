@@ -11,7 +11,7 @@ import com.google.gson.annotations.SerializedName;
  * Objeto Response do arquivo.
  **/
 @ApiModel(description = "Objeto Response do arquivo.")
-public class ArquivoResponse  {
+public class ArquivoDetalheResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -19,6 +19,8 @@ public class ArquivoResponse  {
   private Long idTipoArquivo = null;
   @SerializedName("nomeTipoArquivo")
   private String nomeTipoArquivo = null;
+  @SerializedName("arquivo")
+  private String arquivo = null;
   @SerializedName("idStatusArquivo")
   private Long idStatusArquivo = null;
   @SerializedName("nomeStatusArquivo")
@@ -68,6 +70,18 @@ public class ArquivoResponse  {
   }
   public void setNomeTipoArquivo(String nomeTipoArquivo) {
     this.nomeTipoArquivo = nomeTipoArquivo;
+  }
+
+  
+  /**
+   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   **/
+  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  public String getArquivo() {
+    return arquivo;
+  }
+  public void setArquivo(String arquivo) {
+    this.arquivo = arquivo;
   }
 
   
@@ -159,11 +173,12 @@ public class ArquivoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ArquivoResponse {\n");
+    sb.append("class ArquivoDetalheResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idTipoArquivo: ").append(idTipoArquivo).append("\n");
     sb.append("  nomeTipoArquivo: ").append(nomeTipoArquivo).append("\n");
+    sb.append("  arquivo: ").append(arquivo).append("\n");
     sb.append("  idStatusArquivo: ").append(idStatusArquivo).append("\n");
     sb.append("  nomeStatusArquivo: ").append(nomeStatusArquivo).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
