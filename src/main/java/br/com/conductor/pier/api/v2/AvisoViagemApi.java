@@ -8,11 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.ArquivoDetalheResponse;
-import br.com.conductor.pier.api.v2.model.IntegrarArquivoRequest;
-import br.com.conductor.pier.api.v2.model.PageArquivoAUDResponse;
-import br.com.conductor.pier.api.v2.model.PageArquivoResponse;
-import br.com.conductor.pier.api.v2.model.ArquivoPersist;
+import br.com.conductor.pier.api.v2.model.AvisoViagemResponse;
+import br.com.conductor.pier.api.v2.model.PageAvisoViagemResponse;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -21,7 +18,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
 
-public class ArquivoApi {
+public class AvisoViagemApi {
   String basePath = "http://localhost/";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
@@ -43,22 +40,22 @@ public class ArquivoApi {
 
   
   /**
-   * Consulta de arquivo no PIER Cloud
-   * Este recurso permite consultar um determinado arquivo armazenado no PIER Cloud.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
-   * @return ArquivoDetalheResponse
+   * Consultar um aviso viagem de acordo com o id passado
+   * Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * @return AvisoViagemResponse
    */
-  public ArquivoDetalheResponse  consultarUsingGET2 (Long id) throws ApiException {
+  public AvisoViagemResponse  consultarUsingGET4 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
     }
     
 
     // create path and map variables
-    String path = "/api/arquivos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/avisos-viagens/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -91,7 +88,7 @@ public class ArquivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ArquivoDetalheResponse) ApiInvoker.deserialize(response, "", ArquivoDetalheResponse.class);
+        return (AvisoViagemResponse) ApiInvoker.deserialize(response, "", AvisoViagemResponse.class);
       }
       else {
         return null;
@@ -102,22 +99,22 @@ public class ArquivoApi {
   }
   
   /**
-   * Integrar Arquivos
-   * Este recurso foi desenvolvido para realizar a integra\u00C3\u00A7\u00C3\u00A3o de arquivos do PIER Cloud junto a reposit\u00C3\u00B3rios externos pr\u00C3\u00A9-configurado.
-   * @param integrarArquivoRequest integrarArquivoRequest
-   * @return Object
+   * Desabilitar um aviso viagem de acordo com o id passado
+   * Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * @return AvisoViagemResponse
    */
-  public Object  integrarUsingPOST (IntegrarArquivoRequest integrarArquivoRequest) throws ApiException {
-    Object postBody = integrarArquivoRequest;
+  public AvisoViagemResponse  desabilitarUsingPOST (Long id) throws ApiException {
+    Object postBody = null;
     
-    // verify the required parameter 'integrarArquivoRequest' is set
-    if (integrarArquivoRequest == null) {
-       throw new ApiException(400, "Missing the required parameter 'integrarArquivoRequest' when calling integrarUsingPOST");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling desabilitarUsingPOST");
     }
     
 
     // create path and map variables
-    String path = "/api/arquivos/integrar".replaceAll("\\{format\\}","json");
+    String path = "/api/avisos-viagens/{id}/desabilitar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -150,7 +147,7 @@ public class ArquivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+        return (AvisoViagemResponse) ApiInvoker.deserialize(response, "", AvisoViagemResponse.class);
       }
       else {
         return null;
@@ -161,24 +158,22 @@ public class ArquivoApi {
   }
   
   /**
-   * Lista as auditorias do arquivo
-   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageArquivoAUDResponse
+   * Habilitar um aviso viagem de acordo com o id passado
+   * Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * @return AvisoViagemResponse
    */
-  public PageArquivoAUDResponse  listarUsingGET3 (Long id, Integer page, Integer limit) throws ApiException {
+  public AvisoViagemResponse  habilitarUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET3");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling habilitarUsingPOST");
     }
     
 
     // create path and map variables
-    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/avisos-viagens/{id}/habilitar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -187,10 +182,6 @@ public class ArquivoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
     
@@ -213,9 +204,9 @@ public class ArquivoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageArquivoAUDResponse) ApiInvoker.deserialize(response, "", PageArquivoAUDResponse.class);
+        return (AvisoViagemResponse) ApiInvoker.deserialize(response, "", AvisoViagemResponse.class);
       }
       else {
         return null;
@@ -226,23 +217,24 @@ public class ArquivoApi {
   }
   
   /**
-   * Listar arquivos do Pier Cloud
-   * Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
+   * Lista os avisos viagens gerados pelo Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param nome Nome do arquivo
-   * @param idTipoArquivo Tipo do arquivo
-   * @param idStatusArquivo Identificador do status do arquivo
-   * @param extensao Extens\u00C3\u00A3o do arquivo
-   * @return PageArquivoResponse
+   * @param idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
+   * @param codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+   * @param dataInicio Data inicio do aviso viagem
+   * @param dataFim Data fim do aviso viagem
+   * @param flagAtivo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+   * @return PageAvisoViagemResponse
    */
-  public PageArquivoResponse  listarUsingGET4 (List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageAvisoViagemResponse  listarUsingGET6 (List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
     Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/arquivos".replaceAll("\\{format\\}","json");
+    String path = "/api/avisos-viagens".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -258,13 +250,15 @@ public class ArquivoApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoArquivo", idTipoArquivo));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoPais", codigoPais));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idStatusArquivo", idStatusArquivo));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "extensao", extensao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAtivo", flagAtivo));
     
 
     
@@ -289,7 +283,7 @@ public class ArquivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PageArquivoResponse) ApiInvoker.deserialize(response, "", PageArquivoResponse.class);
+        return (PageAvisoViagemResponse) ApiInvoker.deserialize(response, "", PageAvisoViagemResponse.class);
       }
       else {
         return null;
@@ -300,22 +294,40 @@ public class ArquivoApi {
   }
   
   /**
-   * Permite armazenar arquivos no PIER Cloud
-   * Este recurso permite o armazenamento de arquivos no PIER Cloud.
-   * @param arquivoPersist arquivoPersist
-   * @return ArquivoDetalheResponse
+   * Realiza o cadastro de um novo Aviso Viagem
+   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+   * @param idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
+   * @param codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+   * @param dataInicio Data inicio do aviso viagem
+   * @param dataFim Data fim do aviso viagem
+   * @return AvisoViagemResponse
    */
-  public ArquivoDetalheResponse  salvarUsingPOST1 (ArquivoPersist arquivoPersist) throws ApiException {
-    Object postBody = arquivoPersist;
+  public AvisoViagemResponse  salvarUsingPOST3 (Long idCartao, String codigoPais, String dataInicio, String dataFim) throws ApiException {
+    Object postBody = null;
     
-    // verify the required parameter 'arquivoPersist' is set
-    if (arquivoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'arquivoPersist' when calling salvarUsingPOST1");
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling salvarUsingPOST3");
+    }
+    
+    // verify the required parameter 'codigoPais' is set
+    if (codigoPais == null) {
+       throw new ApiException(400, "Missing the required parameter 'codigoPais' when calling salvarUsingPOST3");
+    }
+    
+    // verify the required parameter 'dataInicio' is set
+    if (dataInicio == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataInicio' when calling salvarUsingPOST3");
+    }
+    
+    // verify the required parameter 'dataFim' is set
+    if (dataFim == null) {
+       throw new ApiException(400, "Missing the required parameter 'dataFim' when calling salvarUsingPOST3");
     }
     
 
     // create path and map variables
-    String path = "/api/arquivos".replaceAll("\\{format\\}","json");
+    String path = "/api/avisos-viagens".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -324,6 +336,14 @@ public class ArquivoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoPais", codigoPais));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
     
 
     
@@ -348,7 +368,7 @@ public class ArquivoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ArquivoDetalheResponse) ApiInvoker.deserialize(response, "", ArquivoDetalheResponse.class);
+        return (AvisoViagemResponse) ApiInvoker.deserialize(response, "", AvisoViagemResponse.class);
       }
       else {
         return null;

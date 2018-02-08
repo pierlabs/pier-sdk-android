@@ -18,6 +18,7 @@ import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PageCartaoResponse;
+import br.com.conductor.pier.api.v2.model.ValidaCVVRequest;
 import br.com.conductor.pier.api.v2.model.ValidaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ValidaSenhaCartaoResponse;
 
@@ -768,12 +769,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse  consultarUsingGET7 (Long id) throws ApiException {
+  public CartaoDetalheResponse  consultarUsingGET8 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
     }
     
 
@@ -1249,7 +1250,7 @@ public class CartaoApi {
    * @param sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
    * @return PageCartaoResponse
    */
-  public PageCartaoResponse  listarUsingGET8 (List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
+  public PageCartaoResponse  listarUsingGET10 (List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
     Object postBody = null;
     
 
@@ -1389,6 +1390,71 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Validar CVV do cart\u00C3\u00A3o
+   * Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
+   * @param validaCVV validaCVV
+   * @return Object
+   */
+  public Object  validarCVVUsingPOST (Long id, ValidaCVVRequest validaCVV) throws ApiException {
+    Object postBody = validaCVV;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling validarCVVUsingPOST");
+    }
+    
+    // verify the required parameter 'validaCVV' is set
+    if (validaCVV == null) {
+       throw new ApiException(400, "Missing the required parameter 'validaCVV' when calling validarCVVUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/validar-cvv".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;

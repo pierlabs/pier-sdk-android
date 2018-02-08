@@ -66,8 +66,8 @@ public class RiscoFraudeDetalhadoResponse  {
   private String cnpj = null;
   @SerializedName("email")
   private String email = null;
-  @SerializedName("tefefones")
-  private List<TelefoneResponse> tefefones = null;
+  @SerializedName("telefones")
+  private List<TelefoneResponse> telefones = null;
 
   
   /**
@@ -386,11 +386,11 @@ public class RiscoFraudeDetalhadoResponse  {
    * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
    **/
   @ApiModelProperty(value = "Lista de telefones associados ao portador do Cart\u00C3\u00A3o")
-  public List<TelefoneResponse> getTefefones() {
-    return tefefones;
+  public List<TelefoneResponse> getTelefones() {
+    return telefones;
   }
-  public void setTefefones(List<TelefoneResponse> tefefones) {
-    this.tefefones = tefefones;
+  public void setTelefones(List<TelefoneResponse> telefones) {
+    this.telefones = telefones;
   }
 
   
@@ -426,7 +426,7 @@ public class RiscoFraudeDetalhadoResponse  {
     sb.append("  cpf: ").append(cpf).append("\n");
     sb.append("  cnpj: ").append(cnpj).append("\n");
     sb.append("  email: ").append(email).append("\n");
-    sb.append("  tefefones: ").append(tefefones).append("\n");
+    sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

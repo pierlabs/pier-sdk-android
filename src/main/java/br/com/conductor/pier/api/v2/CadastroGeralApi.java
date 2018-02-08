@@ -34,9 +34,9 @@ import br.com.conductor.pier.api.v2.model.PageConfiguracaoRotativoResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
-import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaPersist;
@@ -515,17 +515,76 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
+   * Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
+   * @return ConfiguracaoRotativoDetalheResponse
+   */
+  public ConfiguracaoRotativoDetalheResponse  consultarUsingGET10 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/configuracoes-rotativos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ConfiguracaoRotativoDetalheResponse) ApiInvoker.deserialize(response, "", ConfiguracaoRotativoDetalheResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de um determinado Produto
    * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
    * @return ProdutoDetalhesResponse
    */
-  public ProdutoDetalhesResponse  consultarUsingGET24 (Long id) throws ApiException {
+  public ProdutoDetalhesResponse  consultarUsingGET25 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
     }
     
 
@@ -642,7 +701,7 @@ public class CadastroGeralApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
    * @return PageTipoAjusteResponse
    */
-  public PageTipoAjusteResponse  consultarUsingGET31 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse  consultarUsingGET32 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -711,7 +770,7 @@ public class CadastroGeralApi {
    * @param banco C\u00C3\u00B3digo identificador do banco.
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse  consultarUsingGET32 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse  consultarUsingGET33 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
 
@@ -777,12 +836,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @return TipoEnderecoResponse
    */
-  public TipoEnderecoResponse  consultarUsingGET33 (Long id) throws ApiException {
+  public TipoEnderecoResponse  consultarUsingGET34 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
     }
     
 
@@ -838,22 +897,22 @@ public class CadastroGeralApi {
    * @param codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
    * @return TipoOperacaoResponse
    */
-  public TipoOperacaoResponse  consultarUsingGET34 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
+  public TipoOperacaoResponse  consultarUsingGET35 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idCartao' is set
     if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET35");
     }
     
     // verify the required parameter 'idEstabelecimento' is set
     if (idEstabelecimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET35");
     }
     
     // verify the required parameter 'codigoProcessamento' is set
     if (codigoProcessamento == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET35");
     }
     
 
@@ -913,12 +972,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse  consultarUsingGET36 (Long id) throws ApiException {
+  public TipoTelefoneResponse  consultarUsingGET37 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
     }
     
 
@@ -972,12 +1031,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
    * @return BancoResponse
    */
-  public BancoResponse  consultarUsingGET4 (Long id) throws ApiException {
+  public BancoResponse  consultarUsingGET5 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
     }
     
 
@@ -1031,12 +1090,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
    * @return ConfiguracaoRegistroCobrancaResponse
    */
-  public ConfiguracaoRegistroCobrancaResponse  consultarUsingGET8 (Long id) throws ApiException {
+  public ConfiguracaoRegistroCobrancaResponse  consultarUsingGET9 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
     }
     
 
@@ -1075,65 +1134,6 @@ public class CadastroGeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ConfiguracaoRegistroCobrancaResponse) ApiInvoker.deserialize(response, "", ConfiguracaoRegistroCobrancaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Apresenta dados de configura\u00C3\u00A7\u00C3\u00A3o do rotativo espec\u00C3\u00ADfico.
-   * Este recurso permite consultar dados de configura\u00C3\u00A7\u00C3\u00A3o do parcelamento rotativo a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
-   * @return ConfiguracaoRotativoDetalheResponse
-   */
-  public ConfiguracaoRotativoDetalheResponse  consultarUsingGET9 (Long id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/configuracoes-rotativos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ConfiguracaoRotativoDetalheResponse) ApiInvoker.deserialize(response, "", ConfiguracaoRotativoDetalheResponse.class);
       }
       else {
         return null;
@@ -1779,7 +1779,7 @@ public class CadastroGeralApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return ConfiguracaoRegistroCobrancaResponse
    */
-  public ConfiguracaoRegistroCobrancaResponse  listarUsingGET10 (List<String> sort, Integer page, Integer limit) throws ApiException {
+  public ConfiguracaoRegistroCobrancaResponse  listarUsingGET12 (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -1842,7 +1842,7 @@ public class CadastroGeralApi {
    * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Produto.
    * @return PageConfiguracaoRotativoResponse
    */
-  public PageConfiguracaoRotativoResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long idProduto) throws ApiException {
+  public PageConfiguracaoRotativoResponse  listarUsingGET13 (List<String> sort, Integer page, Integer limit, Long idProduto) throws ApiException {
     Object postBody = null;
     
 
@@ -1916,7 +1916,7 @@ public class CadastroGeralApi {
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @return PagePortadorResponse
    */
-  public PagePortadorResponse  listarUsingGET30 (List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
+  public PagePortadorResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
 
@@ -2001,7 +2001,7 @@ public class CadastroGeralApi {
    * @param idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
    * @return PageProdutoResponse
    */
-  public PageProdutoResponse  listarUsingGET31 (List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
+  public PageProdutoResponse  listarUsingGET33 (List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
     Object postBody = null;
     
 
@@ -2074,7 +2074,7 @@ public class CadastroGeralApi {
    * @param idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
    * @return PagePromotorResponse
    */
-  public PagePromotorResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
+  public PagePromotorResponse  listarUsingGET34 (List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
     Object postBody = null;
     
 
@@ -2139,80 +2139,6 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Lista todos os atendimentos
-   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @return PageAtendimentoClienteResponse
-   */
-  public PageAtendimentoClienteResponse  listarUsingGET4 (List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
    * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -2222,7 +2148,7 @@ public class CadastroGeralApi {
    * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @return PageTipoEnderecoResponse
    */
-  public PageTipoEnderecoResponse  listarUsingGET40 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoEnderecoResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2290,7 +2216,7 @@ public class CadastroGeralApi {
    * @param nome Nome do Tipo do Telefone
    * @return PageTipoTelefoneResponse
    */
-  public PageTipoTelefoneResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefoneResponse  listarUsingGET44 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2349,6 +2275,80 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Lista todos os atendimentos
+   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
+   * @return PageAtendimentoClienteResponse
+   */
+  public PageAtendimentoClienteResponse  listarUsingGET5 (List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeAtendente", nomeAtendente));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAtendimento", dataAtendimento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Listar Vencimentos
    * Este recurso permite que sejam listados os Vencimentos do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -2357,7 +2357,7 @@ public class CadastroGeralApi {
    * @param dataVencimento Indica a data de vencimento das faturas
    * @return PageControleVencimentoResponse
    */
-  public PageControleVencimentoResponse  listarUsingGET48 (List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageControleVencimentoResponse  listarUsingGET50 (List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2421,7 +2421,7 @@ public class CadastroGeralApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageBancoResponse
    */
-  public PageBancoResponse  listarUsingGET5 (List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageBancoResponse  listarUsingGET7 (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -2561,12 +2561,12 @@ public class CadastroGeralApi {
    * @param campanhaPersist campanhaPersist
    * @return CampanhaResponse
    */
-  public CampanhaResponse  salvarUsingPOST4 (CampanhaPersist campanhaPersist) throws ApiException {
+  public CampanhaResponse  salvarUsingPOST5 (CampanhaPersist campanhaPersist) throws ApiException {
     Object postBody = campanhaPersist;
     
     // verify the required parameter 'campanhaPersist' is set
     if (campanhaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST4");
+       throw new ApiException(400, "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST5");
     }
     
 
@@ -2620,12 +2620,12 @@ public class CadastroGeralApi {
    * @param configuracaoRotativoPersist configuracaoRotativoPersist
    * @return ConfiguracaoRotativoDetalheResponse
    */
-  public ConfiguracaoRotativoDetalheResponse  salvarUsingPOST6 (ConfiguracaoRotativoPersist configuracaoRotativoPersist) throws ApiException {
+  public ConfiguracaoRotativoDetalheResponse  salvarUsingPOST7 (ConfiguracaoRotativoPersist configuracaoRotativoPersist) throws ApiException {
     Object postBody = configuracaoRotativoPersist;
     
     // verify the required parameter 'configuracaoRotativoPersist' is set
     if (configuracaoRotativoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST6");
+       throw new ApiException(400, "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST7");
     }
     
 
