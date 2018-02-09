@@ -29,7 +29,7 @@ public class TransferenciaCreditoContaBancariaPersist  {
   @SerializedName("terminalRequisitante")
   private String terminalRequisitante = null;
   @SerializedName("numeroEstabelecimento")
-  private Long numeroEstabelecimento = null;
+  private String numeroEstabelecimento = null;
 
   
   /**
@@ -132,10 +132,10 @@ public class TransferenciaCreditoContaBancariaPersist  {
    * Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
    **/
   @ApiModelProperty(required = true, value = "Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.")
-  public Long getNumeroEstabelecimento() {
+  public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
-  public void setNumeroEstabelecimento(Long numeroEstabelecimento) {
+  public void setNumeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
   }
 

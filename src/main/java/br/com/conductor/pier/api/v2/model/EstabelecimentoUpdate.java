@@ -71,11 +71,8 @@ public class EstabelecimentoUpdate  {
   private Long mcc = null;
   @SerializedName("idTipoEstabelecimento")
   private Long idTipoEstabelecimento = null;
-  public enum TipoCorrespondenciaEnum {
-     ORIGEM,  CORRESPONDENCIA, 
-  };
-  @SerializedName("tipoCorrespondencia")
-  private TipoCorrespondenciaEnum tipoCorrespondencia = null;
+  @SerializedName("correspondencia")
+  private Integer correspondencia = null;
   @SerializedName("cargoContato")
   private String cargoContato = null;
   public enum TipoPagamentoEnum {
@@ -442,14 +439,14 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+   * Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
    **/
-  @ApiModelProperty(value = "Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).")
-  public TipoCorrespondenciaEnum getTipoCorrespondencia() {
-    return tipoCorrespondencia;
+  @ApiModelProperty(value = "Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.")
+  public Integer getCorrespondencia() {
+    return correspondencia;
   }
-  public void setTipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
-    this.tipoCorrespondencia = tipoCorrespondencia;
+  public void setCorrespondencia(Integer correspondencia) {
+    this.correspondencia = correspondencia;
   }
 
   
@@ -560,7 +557,7 @@ public class EstabelecimentoUpdate  {
     sb.append("  associadoSPCBrasil: ").append(associadoSPCBrasil).append("\n");
     sb.append("  mcc: ").append(mcc).append("\n");
     sb.append("  idTipoEstabelecimento: ").append(idTipoEstabelecimento).append("\n");
-    sb.append("  tipoCorrespondencia: ").append(tipoCorrespondencia).append("\n");
+    sb.append("  correspondencia: ").append(correspondencia).append("\n");
     sb.append("  cargoContato: ").append(cargoContato).append("\n");
     sb.append("  tipoPagamento: ").append(tipoPagamento).append("\n");
     sb.append("  consulta: ").append(consulta).append("\n");

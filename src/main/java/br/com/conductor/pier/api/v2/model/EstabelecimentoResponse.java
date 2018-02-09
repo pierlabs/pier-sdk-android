@@ -78,11 +78,8 @@ public class EstabelecimentoResponse  {
   private Long mcc = null;
   @SerializedName("idTipoEstabelecimento")
   private Long idTipoEstabelecimento = null;
-  public enum TipoCorrespondenciaEnum {
-     ORIGEM,  CORRESPONDENCIA, 
-  };
-  @SerializedName("tipoCorrespondencia")
-  private TipoCorrespondenciaEnum tipoCorrespondencia = null;
+  @SerializedName("correspondencia")
+  private Integer correspondencia = null;
   @SerializedName("cargoContato")
   private String cargoContato = null;
   public enum TipoPagamentoEnum {
@@ -504,11 +501,11 @@ public class EstabelecimentoResponse  {
    * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
    **/
   @ApiModelProperty(value = "Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).")
-  public TipoCorrespondenciaEnum getTipoCorrespondencia() {
-    return tipoCorrespondencia;
+  public Integer getCorrespondencia() {
+    return correspondencia;
   }
-  public void setTipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
-    this.tipoCorrespondencia = tipoCorrespondencia;
+  public void setCorrespondencia(Integer correspondencia) {
+    this.correspondencia = correspondencia;
   }
 
   
@@ -647,7 +644,7 @@ public class EstabelecimentoResponse  {
     sb.append("  associadoSPCBrasil: ").append(associadoSPCBrasil).append("\n");
     sb.append("  mcc: ").append(mcc).append("\n");
     sb.append("  idTipoEstabelecimento: ").append(idTipoEstabelecimento).append("\n");
-    sb.append("  tipoCorrespondencia: ").append(tipoCorrespondencia).append("\n");
+    sb.append("  correspondencia: ").append(correspondencia).append("\n");
     sb.append("  cargoContato: ").append(cargoContato).append("\n");
     sb.append("  tipoPagamento: ").append(tipoPagamento).append("\n");
     sb.append("  consulta: ").append(consulta).append("\n");
