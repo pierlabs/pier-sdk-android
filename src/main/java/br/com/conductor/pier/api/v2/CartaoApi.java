@@ -1404,9 +1404,9 @@ public class CartaoApi {
    * Esse recurso permite a valida\u00C3\u00A7\u00C3\u00A3o do cvv de um cart\u00C3\u00A3o
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
    * @param validaCVV validaCVV
-   * @return Object
+   * @return String
    */
-  public Object  validarCVVUsingPOST (Long id, ValidaCVVRequest validaCVV) throws ApiException {
+  public String  validarCVVUsingPOST (Long id, ValidaCVVRequest validaCVV) throws ApiException {
     Object postBody = validaCVV;
     
     // verify the required parameter 'id' is set
@@ -1454,7 +1454,7 @@ public class CartaoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+        return (String) ApiInvoker.deserialize(response, "", String.class);
       }
       else {
         return null;
