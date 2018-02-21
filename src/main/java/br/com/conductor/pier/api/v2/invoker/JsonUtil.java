@@ -1395,6 +1395,10 @@ public class JsonUtil {
       return new TypeToken<List<VinculoOperacaoResponse>>(){}.getType();
     }
     
+    if ("WebHook".equalsIgnoreCase(className)) {
+      return new TypeToken<List<WebHook>>(){}.getType();
+    }
+    
     if ("WebHookResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<WebHookResponse>>(){}.getType();
     }
@@ -2763,6 +2767,10 @@ public class JsonUtil {
     
     if ("VinculoOperacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<VinculoOperacaoResponse>(){}.getType();
+    }
+    
+    if ("WebHook".equalsIgnoreCase(className)) {
+      return new TypeToken<WebHook>(){}.getType();
     }
     
     if ("WebHookResponse".equalsIgnoreCase(className)) {
