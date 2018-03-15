@@ -20,9 +20,9 @@ public class DetalheOportunidadeUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do detalhe
+   * C\u00F3digo identificador do detalhe
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do detalhe")
+  @ApiModelProperty(value = "C\u00F3digo identificador do detalhe")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class DetalheOportunidadeUpdate  {
 
   
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    **/
-  @ApiModelProperty(value = "Nome do conte\u00C3\u00BAdo")
+  @ApiModelProperty(value = "Nome do conte\u00FAdo")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -44,9 +44,9 @@ public class DetalheOportunidadeUpdate  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do detalhe")
+  @ApiModelProperty(value = "Conte\u00FAdo do detalhe")
   public String getConteudo() {
     return conteudo;
   }

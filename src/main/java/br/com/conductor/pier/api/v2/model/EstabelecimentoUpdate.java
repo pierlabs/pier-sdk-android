@@ -1,16 +1,15 @@
 package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.ConsultaCadastroEstabelecimentoDTO;
-import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+ * Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
  **/
-@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento")
 public class EstabelecimentoUpdate  {
   
   @SerializedName("flagMatriz")
@@ -86,14 +85,12 @@ public class EstabelecimentoUpdate  {
   private ConsultaCadastroEstabelecimentoDTO consulta2 = null;
   @SerializedName("consulta3")
   private ConsultaCadastroEstabelecimentoDTO consulta3 = null;
-  @SerializedName("sort")
-  private List<String> sort = null;
 
   
   /**
-   * Indica se \u00C3\u00A9 matriz ou filial.
+   * Indica se \u00E9 matriz ou filial.
    **/
-  @ApiModelProperty(value = "Indica se \u00C3\u00A9 matriz ou filial.")
+  @ApiModelProperty(value = "Indica se \u00E9 matriz ou filial.")
   public Integer getFlagMatriz() {
     return flagMatriz;
   }
@@ -115,9 +112,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Raz\u00C3\u00A3o Social do Estabelecimento.
+   * Raz\u00E3o Social do Estabelecimento.
    **/
-  @ApiModelProperty(value = "Raz\u00C3\u00A3o Social do Estabelecimento.")
+  @ApiModelProperty(value = "Raz\u00E3o Social do Estabelecimento.")
   public String getDescricao() {
     return descricao;
   }
@@ -127,9 +124,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * T\u00C3\u00ADtulo Comercial do Estabelecimento.
+   * T\u00EDtulo Comercial do Estabelecimento.
    **/
-  @ApiModelProperty(value = "T\u00C3\u00ADtulo Comercial do Estabelecimento.")
+  @ApiModelProperty(value = "T\u00EDtulo Comercial do Estabelecimento.")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -139,9 +136,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).")
+  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
   public String getCep() {
     return cep;
   }
@@ -163,9 +160,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -175,9 +172,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
   public String getBairro() {
     return bairro;
   }
@@ -187,9 +184,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
   public String getCidade() {
     return cidade;
   }
@@ -199,9 +196,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
   public String getComplemento() {
     return complemento;
   }
@@ -211,9 +208,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
   public String getUf() {
     return uf;
   }
@@ -223,9 +220,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).")
+  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
   public String getCep2() {
     return cep2;
   }
@@ -247,9 +244,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
   public Integer getNumeroEndereco2() {
     return numeroEndereco2;
   }
@@ -259,9 +256,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
   public String getBairro2() {
     return bairro2;
   }
@@ -271,9 +268,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
   public String getCidade2() {
     return cidade2;
   }
@@ -283,9 +280,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
   public String getComplemento2() {
     return complemento2;
   }
@@ -295,9 +292,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
   public String getUf2() {
     return uf2;
   }
@@ -307,9 +304,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
    **/
-  @ApiModelProperty(value = "Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.")
+  @ApiModelProperty(value = "Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.")
   public String getObs() {
     return obs;
   }
@@ -343,9 +340,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.")
+  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
   }
@@ -355,9 +352,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
   }
@@ -367,9 +364,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Indica se o estabelecimento est\u00C3\u00A1 inativo.
+   * Indica se o estabelecimento est\u00E1 inativo.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento est\u00C3\u00A1 inativo.")
+  @ApiModelProperty(value = "Indica se o estabelecimento est\u00E1 inativo.")
   public Integer getInativo() {
     return inativo;
   }
@@ -379,9 +376,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da moeda.
+   * C\u00F3digo identificador da moeda.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da moeda.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da moeda.")
   public Long getIdMoeda() {
     return idMoeda;
   }
@@ -391,9 +388,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Identificador de Pa\u00C3\u00ADs.
+   * Identificador de Pa\u00EDs.
    **/
-  @ApiModelProperty(value = "Identificador de Pa\u00C3\u00ADs.")
+  @ApiModelProperty(value = "Identificador de Pa\u00EDs.")
   public Long getIdPais() {
     return idPais;
   }
@@ -403,9 +400,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do associado ao SPCBrasil.
+   * N\u00FAmero do associado ao SPCBrasil.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do associado ao SPCBrasil.")
+  @ApiModelProperty(value = "N\u00FAmero do associado ao SPCBrasil.")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
   }
@@ -415,9 +412,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de Categoria de Mercado.
+   * C\u00F3digo de Categoria de Mercado.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Categoria de Mercado.")
+  @ApiModelProperty(value = "C\u00F3digo de Categoria de Mercado.")
   public Long getMcc() {
     return mcc;
   }
@@ -427,9 +424,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
   }
@@ -439,9 +436,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+   * Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
    **/
-  @ApiModelProperty(value = "Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.")
+  @ApiModelProperty(value = "Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.")
   public Integer getCorrespondencia() {
     return correspondencia;
   }
@@ -475,9 +472,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero um.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero um.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
   }
@@ -487,9 +484,9 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero dois.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero dois.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
   }
@@ -499,26 +496,14 @@ public class EstabelecimentoUpdate  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero tr\u00EAs.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero tr\u00EAs.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
   }
   public void setConsulta3(ConsultaCadastroEstabelecimentoDTO consulta3) {
     this.consulta3 = consulta3;
-  }
-
-  
-  /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   **/
-  @ApiModelProperty(value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
-  public List<String> getSort() {
-    return sort;
-  }
-  public void setSort(List<String> sort) {
-    this.sort = sort;
   }
 
   
@@ -563,7 +548,6 @@ public class EstabelecimentoUpdate  {
     sb.append("  consulta: ").append(consulta).append("\n");
     sb.append("  consulta2: ").append(consulta2).append("\n");
     sb.append("  consulta3: ").append(consulta3).append("\n");
-    sb.append("  sort: ").append(sort).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

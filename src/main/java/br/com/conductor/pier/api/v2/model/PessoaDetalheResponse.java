@@ -36,9 +36,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da pessoa
+   * C\u00F3digo identificador da pessoa
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da pessoa")
+  @ApiModelProperty(value = "C\u00F3digo identificador da pessoa")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -48,9 +48,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * Apresenta o nome da m\u00E3e da pessoa fisica
    **/
-  @ApiModelProperty(value = "Apresenta o nome da m\u00C3\u00A3e da pessoa fisica")
+  @ApiModelProperty(value = "Apresenta o nome da m\u00E3e da pessoa fisica")
   public String getNomeMae() {
     return nomeMae;
   }
@@ -72,9 +72,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * Profiss\u00C3\u00A3o da pessoa fisica
+   * Profiss\u00E3o da pessoa fisica
    **/
-  @ApiModelProperty(value = "Profiss\u00C3\u00A3o da pessoa fisica")
+  @ApiModelProperty(value = "Profiss\u00E3o da pessoa fisica")
   public String getIdProfissao() {
     return idProfissao;
   }
@@ -84,9 +84,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    **/
-  @ApiModelProperty(value = "Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica")
+  @ApiModelProperty(value = "Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica")
   public Long getIdNaturezaOcupacao() {
     return idNaturezaOcupacao;
   }
@@ -108,9 +108,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do banco.
+   * N\u00FAmero do banco.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do banco.")
+  @ApiModelProperty(value = "N\u00FAmero do banco.")
   public Integer getNumeroBanco() {
     return numeroBanco;
   }
@@ -120,9 +120,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia.")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -132,9 +132,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(value = "N\u00FAmero da conta corrente.")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -156,9 +156,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    **/
-  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00E3o")
   public String getNomeEmpresa() {
     return nomeEmpresa;
   }

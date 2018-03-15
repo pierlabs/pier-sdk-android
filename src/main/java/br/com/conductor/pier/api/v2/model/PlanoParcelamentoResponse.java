@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento")
 public class PlanoParcelamentoResponse  {
   
   @SerializedName("id")
@@ -44,6 +44,8 @@ public class PlanoParcelamentoResponse  {
   private String dataProcessamentoAdesao = null;
   @SerializedName("idConta")
   private Long idConta = null;
+  @SerializedName("idServicoTipo")
+  private Long idServicoTipo = null;
   @SerializedName("descricaoServicoTipo")
   private String descricaoServicoTipo = null;
   @SerializedName("comEntrada")
@@ -77,9 +79,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * Data de vencimento padr\u00C3\u00A3o
+   * Data de vencimento padr\u00E3o
    **/
-  @ApiModelProperty(value = "Data de vencimento padr\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data de vencimento padr\u00E3o")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
   }
@@ -197,9 +199,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * Status da ades\u00C3\u00A3o
+   * Status da ades\u00E3o
    **/
-  @ApiModelProperty(value = "Status da ades\u00C3\u00A3o")
+  @ApiModelProperty(value = "Status da ades\u00E3o")
   public Integer getStatusAdesao() {
     return statusAdesao;
   }
@@ -209,9 +211,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o
+   * Data de inclus\u00E3o
    **/
-  @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data de inclus\u00E3o")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -221,9 +223,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * Data de processamento da ades\u00C3\u00A3o
+   * Data de processamento da ades\u00E3o
    **/
-  @ApiModelProperty(value = "Data de processamento da ades\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data de processamento da ades\u00E3o")
   public String getDataProcessamentoAdesao() {
     return dataProcessamentoAdesao;
   }
@@ -245,9 +247,21 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o")
+  public Long getIdServicoTipo() {
+    return idServicoTipo;
+  }
+  public void setIdServicoTipo(Long idServicoTipo) {
+    this.idServicoTipo = idServicoTipo;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o do tipo de servi\u00E7o
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de servi\u00E7o")
   public String getDescricaoServicoTipo() {
     return descricaoServicoTipo;
   }
@@ -302,6 +316,7 @@ public class PlanoParcelamentoResponse  {
     sb.append("  dataInclusao: ").append(dataInclusao).append("\n");
     sb.append("  dataProcessamentoAdesao: ").append(dataProcessamentoAdesao).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idServicoTipo: ").append(idServicoTipo).append("\n");
     sb.append("  descricaoServicoTipo: ").append(descricaoServicoTipo).append("\n");
     sb.append("  comEntrada: ").append(comEntrada).append("\n");
     sb.append("  nomeCampanha: ").append(nomeCampanha).append("\n");

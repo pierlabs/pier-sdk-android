@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidadeAUD
+ * Representa\u00E7\u00E3o da resposta do recurso TipoOportunidadeAUD
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOportunidadeAUD")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso TipoOportunidadeAUD")
 public class TipoOportunidadeAUDResponse  {
   
   @SerializedName("rev")
@@ -26,9 +26,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades
+   * C\u00F3digo identificador da auditoria dos tipos oportunidades
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades")
+  @ApiModelProperty(value = "C\u00F3digo identificador da auditoria dos tipos oportunidades")
   public Long getRev() {
     return rev;
   }
@@ -38,9 +38,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+   * C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(value = "C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
   public Long getRevType() {
     return revType;
   }
@@ -50,9 +50,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+   * Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
    **/
-  @ApiModelProperty(value = "Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(value = "Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
   public String getRevDate() {
     return revDate;
   }
@@ -62,9 +62,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o")
   public Long getId() {
     return id;
   }
@@ -74,9 +74,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o")
   public String getDescricao() {
     return descricao;
   }
@@ -86,9 +86,9 @@ public class TipoOportunidadeAUDResponse  {
 
   
   /**
-   * Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+   * Atributo que representa se o tipo oportunidade est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(value = "Atributo que representa se o tipo oportunidade est\u00E1 ativo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

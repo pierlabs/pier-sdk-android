@@ -18,9 +18,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.")
   public Long getCodigo() {
     return codigo;
   }
@@ -30,9 +30,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.
+   * Descri\u00E7\u00E3o do campo codificado.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do campo codificado.")
   public String getDescricao() {
     return descricao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha
+ * Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha")
 public class TipoCampanhaResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class TipoCampanhaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha
+   * Descri\u00E7\u00E3o do tipo de campanha
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de campanha")
   public String getDescricao() {
     return descricao;
   }

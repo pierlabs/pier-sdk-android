@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor
+ * Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
  **/
-@ApiModel(description = "Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor")
+@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor")
 public class IntegracaoEmissorPersist  {
   
   @SerializedName("canalEntrada")
@@ -16,9 +16,9 @@ public class IntegracaoEmissorPersist  {
 
   
   /**
-   * Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.
+   * Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.")
   public String getCanalEntrada() {
     return canalEntrada;
   }

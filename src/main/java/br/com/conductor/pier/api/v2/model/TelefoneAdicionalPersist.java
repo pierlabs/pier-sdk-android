@@ -22,9 +22,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -34,9 +34,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
+   * C\u00F3digo DDD do telefone (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone (id).")
+  @ApiModelProperty(value = "C\u00F3digo DDD do telefone (id).")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +46,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do telefone.
+   * N\u00FAmero do telefone.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do telefone.")
+  @ApiModelProperty(value = "N\u00FAmero do telefone.")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +58,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do ramal.
+   * N\u00FAmero do ramal.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do ramal.")
+  @ApiModelProperty(value = "N\u00FAmero do ramal.")
   public String getRamal() {
     return ramal;
   }

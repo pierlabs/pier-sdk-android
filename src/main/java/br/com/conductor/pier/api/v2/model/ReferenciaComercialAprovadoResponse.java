@@ -24,9 +24,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
+   * Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
    **/
-  @ApiModelProperty(value = "Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)")
+  @ApiModelProperty(value = "Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -36,9 +36,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
+   * Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
    **/
-  @ApiModelProperty(value = "Apresenta o nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(value = "Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial")
   public String getNomeContrato() {
     return nomeContrato;
   }
@@ -48,9 +48,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+   * Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
    **/
-  @ApiModelProperty(value = "Apresenta o DDD do n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(value = "Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+   * Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial
+   * Apresenta o e-mail de contato da refer\u00EAncia comercial
    **/
-  @ApiModelProperty(value = "Apresenta o e-mail de contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(value = "Apresenta o e-mail de contato da refer\u00EAncia comercial")
   public String getEmail() {
     return email;
   }

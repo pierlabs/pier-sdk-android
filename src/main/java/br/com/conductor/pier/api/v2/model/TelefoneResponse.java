@@ -28,9 +28,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -52,9 +52,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o telefone pertence.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence.")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -64,9 +64,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo DDD do telefone.
+   * C\u00F3digo DDD do telefone.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo DDD do telefone.")
+  @ApiModelProperty(value = "C\u00F3digo DDD do telefone.")
   public String getDdd() {
     return ddd;
   }
@@ -76,9 +76,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do telefone.
+   * N\u00FAmero do telefone.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do telefone.")
+  @ApiModelProperty(value = "N\u00FAmero do telefone.")
   public String getTelefone() {
     return telefone;
   }
@@ -88,9 +88,9 @@ public class TelefoneResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do ramal.
+   * N\u00FAmero do ramal.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do ramal.")
+  @ApiModelProperty(value = "N\u00FAmero do ramal.")
   public String getRamal() {
     return ramal;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Hist\u00C3\u00B3rico Pagamento Fatura Atraso
+ * Hist\u00F3rico Pagamento Fatura Atraso
  **/
-@ApiModel(description = "Hist\u00C3\u00B3rico Pagamento Fatura Atraso")
+@ApiModel(description = "Hist\u00F3rico Pagamento Fatura Atraso")
 public class HistoricoAtrasoFaturaResponse  {
   
   @SerializedName("dataVencimento")

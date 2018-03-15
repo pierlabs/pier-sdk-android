@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+ * Objeto Notifica\u00E7\u00E3o
  **/
-@ApiModel(description = "Objeto Notifica\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto Notifica\u00E7\u00E3o")
 public class NotificacaoSMSBody  {
   
   @SerializedName("nsu")
@@ -31,9 +31,9 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+   * N\u00FAmero sequencial \u00FAnico
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero sequencial \u00C3\u00BAnico")
+  @ApiModelProperty(required = true, value = "N\u00FAmero sequencial \u00FAnico")
   public Long getNsu() {
     return nsu;
   }
@@ -43,9 +43,9 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificado da pessoa")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -55,9 +55,9 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -91,9 +91,9 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o")
   public String getDataAgendamento() {
     return dataAgendamento;
   }
@@ -103,9 +103,9 @@ public class NotificacaoSMSBody  {
 
   
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }

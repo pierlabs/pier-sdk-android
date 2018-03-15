@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+ * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de plano de campanha")
 public class PlanoCampanhaResponse  {
   
   @SerializedName("id")
@@ -59,9 +59,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Nome do usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Nome do usu\u00E1rio")
   public String getUsuario() {
     return usuario;
   }

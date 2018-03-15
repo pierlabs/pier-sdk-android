@@ -15,9 +15,9 @@ public class GradePendenteRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta.")
   public Long getIdConta() {
     return idConta;
   }

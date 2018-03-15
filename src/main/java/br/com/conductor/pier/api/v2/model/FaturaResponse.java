@@ -36,9 +36,9 @@ public class FaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
   public Long getIdConta() {
     return idConta;
   }
@@ -48,9 +48,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+   * Situa\u00E7\u00E3o de Processamento da fatura.
    **/
-  @ApiModelProperty(value = "Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.")
+  @ApiModelProperty(value = "Situa\u00E7\u00E3o de Processamento da fatura.")
   public SituacaoProcessamentoEnum getSituacaoProcessamento() {
     return situacaoProcessamento;
   }
@@ -120,9 +120,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Valor do pagamento m\u00C3\u00ADnimo.
+   * Valor do pagamento m\u00EDnimo.
    **/
-  @ApiModelProperty(value = "Valor do pagamento m\u00C3\u00ADnimo.")
+  @ApiModelProperty(value = "Valor do pagamento m\u00EDnimo.")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
   }

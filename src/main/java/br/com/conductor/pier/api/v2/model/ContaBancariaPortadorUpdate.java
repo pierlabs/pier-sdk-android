@@ -38,9 +38,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+   * Descri\u00E7\u00E3o da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da ag\u00EAncia")
   public String getNomeAgencia() {
     return nomeAgencia;
   }
@@ -50,9 +50,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo do banco")
+  @ApiModelProperty(required = true, value = "C\u00F3digo do banco")
   public Long getBanco() {
     return banco;
   }
@@ -62,9 +62,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * N\u00FAmero da ag\u00EAncia
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia")
+  @ApiModelProperty(required = true, value = "N\u00FAmero da ag\u00EAncia")
   public String getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -74,9 +74,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito da ag\u00C3\u00AAncia")
+  @ApiModelProperty(value = "D\u00EDgito da ag\u00EAncia")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -86,9 +86,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero da conta
+   * N\u00FAmero da conta
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero da conta")
+  @ApiModelProperty(required = true, value = "N\u00FAmero da conta")
   public String getNumeroConta() {
     return numeroConta;
   }
@@ -98,9 +98,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * D\u00C3\u00ADgito da conta
+   * D\u00EDgito da conta
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito da conta")
+  @ApiModelProperty(value = "D\u00EDgito da conta")
   public String getDigitoConta() {
     return digitoConta;
   }
@@ -110,9 +110,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+   * Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
    **/
-  @ApiModelProperty(required = true, value = "Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)")
+  @ApiModelProperty(required = true, value = "Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
@@ -122,9 +122,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+   * Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
    **/
-  @ApiModelProperty(required = true, value = "Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)")
+  @ApiModelProperty(required = true, value = "Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)")
   public Integer getFlagContaOrigemDoc() {
     return flagContaOrigemDoc;
   }
@@ -134,9 +134,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
    **/
-  @ApiModelProperty(required = true, value = "Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)")
+  @ApiModelProperty(required = true, value = "Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
   }
@@ -170,9 +170,9 @@ public class ContaBancariaPortadorUpdate  {
 
   
   /**
-   * Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+   * Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
    **/
-  @ApiModelProperty(value = "Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular")
+  @ApiModelProperty(value = "Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular")
   public Integer getTitularidade() {
     return titularidade;
   }

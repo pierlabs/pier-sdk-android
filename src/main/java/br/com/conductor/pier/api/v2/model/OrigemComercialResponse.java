@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
+ * Representa\u00E7\u00E3o da resposta do recurso de origem comercial
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de origem comercial")
 public class OrigemComercialResponse  {
   
   @SerializedName("id")
@@ -71,9 +71,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do OrigemComercial
+   * C\u00F3digo identificador do OrigemComercial
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do OrigemComercial")
+  @ApiModelProperty(value = "C\u00F3digo identificador do OrigemComercial")
   public Long getId() {
     return id;
   }
@@ -95,9 +95,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+   * Descri\u00E7\u00E3o completa do nome da Origem Comercial
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o completa do nome da Origem Comercial")
   public String getDescricao() {
     return descricao;
   }
@@ -119,9 +119,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+   * C\u00F3digo de identifica\u00E7\u00E3o do Estabelecimento
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Estabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -131,9 +131,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo da Origem Comercial
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Tipo da Origem Comercial")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
   }
@@ -191,9 +191,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
+   * Indica se permite pr\u00E9 aprova\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Indica se permite pr\u00E9 aprova\u00E7\u00E3o")
   public Boolean getFlagPreAprovado() {
     return flagPreAprovado;
   }
@@ -203,9 +203,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
+   * Indica se permite aprova\u00E7\u00E3o imediata
    **/
-  @ApiModelProperty(value = "Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata")
+  @ApiModelProperty(value = "Indica se permite aprova\u00E7\u00E3o imediata")
   public Boolean getFlagAprovacaoImediata() {
     return flagAprovacaoImediata;
   }
@@ -215,9 +215,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome fantasia impresso no pl\u00C3\u00A1stico
+   * Nome fantasia impresso no pl\u00E1stico
    **/
-  @ApiModelProperty(value = "Nome fantasia impresso no pl\u00C3\u00A1stico")
+  @ApiModelProperty(value = "Nome fantasia impresso no pl\u00E1stico")
   public String getNomeFantasiaPlastico() {
     return nomeFantasiaPlastico;
   }
@@ -227,9 +227,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
+   * Indica se permite cart\u00E3o provis\u00F3rio
    **/
-  @ApiModelProperty(value = "Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio")
+  @ApiModelProperty(value = "Indica se permite cart\u00E3o provis\u00F3rio")
   public Boolean getFlagCartaoProvisorio() {
     return flagCartaoProvisorio;
   }
@@ -239,9 +239,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cart\u00C3\u00A3o definitivo
+   * Indica se permite cart\u00E3o definitivo
    **/
-  @ApiModelProperty(value = "Indica se permite cart\u00C3\u00A3o definitivo")
+  @ApiModelProperty(value = "Indica se permite cart\u00E3o definitivo")
   public Boolean getFlagCartaoDefinitivo() {
     return flagCartaoDefinitivo;
   }
@@ -251,9 +251,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
+   * Usu\u00E1rio para autentica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Usu\u00E1rio para autentica\u00E7\u00E3o")
   public String getUsuario() {
     return usuario;
   }
@@ -263,9 +263,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Senha para autentica\u00C3\u00A7\u00C3\u00A3o
+   * Senha para autentica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Senha para autentica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Senha para autentica\u00E7\u00E3o")
   public String getSenha() {
     return senha;
   }
@@ -275,9 +275,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se \u00C3\u00A9 origem externa
+   * Indica se \u00E9 origem externa
    **/
-  @ApiModelProperty(value = "Indica se \u00C3\u00A9 origem externa")
+  @ApiModelProperty(value = "Indica se \u00E9 origem externa")
   public Boolean getFlagOrigemExterna() {
     return flagOrigemExterna;
   }
@@ -287,9 +287,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+   * Indica se h\u00E1 modifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Indica se h\u00E1 modifica\u00E7\u00E3o")
   public Boolean getFlagModificado() {
     return flagModificado;
   }
@@ -311,9 +311,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cr\u00C3\u00A9dito de faturamento
+   * Indica se permite cr\u00E9dito de faturamento
    **/
-  @ApiModelProperty(value = "Indica se permite cr\u00C3\u00A9dito de faturamento")
+  @ApiModelProperty(value = "Indica se permite cr\u00E9dito de faturamento")
   public Boolean getFlagCreditoFaturamento() {
     return flagCreditoFaturamento;
   }
@@ -323,9 +323,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se concede limite provis\u00C3\u00B3rio
+   * Indica se concede limite provis\u00F3rio
    **/
-  @ApiModelProperty(value = "Indica se concede limite provis\u00C3\u00B3rio")
+  @ApiModelProperty(value = "Indica se concede limite provis\u00F3rio")
   public Boolean getFlagConcedeLimiteProvisorio() {
     return flagConcedeLimiteProvisorio;
   }
@@ -359,9 +359,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se realiza consulta pr\u00C3\u00A9via
+   * Indica se realiza consulta pr\u00E9via
    **/
-  @ApiModelProperty(value = "Indica se realiza consulta pr\u00C3\u00A9via")
+  @ApiModelProperty(value = "Indica se realiza consulta pr\u00E9via")
   public Boolean getFlagConsultaPrevia() {
     return flagConsultaPrevia;
   }

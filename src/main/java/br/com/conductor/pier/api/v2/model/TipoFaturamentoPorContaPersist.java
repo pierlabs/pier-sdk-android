@@ -26,9 +26,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+   * Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
    **/
-  @ApiModelProperty(required = true, value = "Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.")
+  @ApiModelProperty(required = true, value = "Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.")
   public Boolean getStatus() {
     return status;
   }
@@ -38,9 +38,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.")
   public Long getIdConta() {
     return idConta;
   }
@@ -50,9 +50,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
   }
@@ -62,9 +62,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
    **/
-  @ApiModelProperty(value = "Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
+  @ApiModelProperty(value = "Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -74,9 +74,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
    **/
-  @ApiModelProperty(value = "Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
+  @ApiModelProperty(value = "Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
   }
@@ -86,9 +86,9 @@ public class TipoFaturamentoPorContaPersist  {
 
   
   /**
-   * Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+   * Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
    **/
-  @ApiModelProperty(required = true, value = "Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.")
+  @ApiModelProperty(required = true, value = "Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.")
   public String getModificadoPor() {
     return modificadoPor;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao
+ * Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso TipoOperacao")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso TipoOperacao")
 public class TipoOperacaoResponse  {
   
   @SerializedName("id")
@@ -47,9 +47,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do TipoOperacao
+   * C\u00F3digo identificador do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do TipoOperacao")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do TipoOperacao")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do TipoOperacao
+   * C\u00F3digo do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo do TipoOperacao")
+  @ApiModelProperty(required = true, value = "C\u00F3digo do TipoOperacao")
   public String getTipoOperacao() {
     return tipoOperacao;
   }
@@ -83,9 +83,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Decri\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "Decri\u00C3\u00A7\u00C3\u00A3o do TipoOperacao")
+  @ApiModelProperty(required = true, value = "Decri\u00E7\u00E3o do TipoOperacao")
   public String getDescricao() {
     return descricao;
   }
@@ -119,9 +119,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "Valor minimo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao")
+  @ApiModelProperty(required = true, value = "Valor minimo para a transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
   }
@@ -131,9 +131,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "Valor maximo para a transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao")
+  @ApiModelProperty(required = true, value = "Valor maximo para a transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
   }
@@ -143,9 +143,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao
+   * Valor TAC da transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(value = "Valor TAC da transa\u00C3\u00A7\u00C3\u00A3o do TipoOperacao")
+  @ApiModelProperty(value = "Valor TAC da transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -203,9 +203,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao
+   * Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
    **/
-  @ApiModelProperty(value = "Remunera\u00C3\u00A7\u00C3\u00A3o do Emissor para o TipoOperacao")
+  @ApiModelProperty(value = "Remunera\u00E7\u00E3o do Emissor para o TipoOperacao")
   public BigDecimal getRemuneracaoEmissor() {
     return remuneracaoEmissor;
   }
@@ -215,9 +215,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Plano m\u00C3\u00A1ximo do TipoOperacao
+   * Plano m\u00E1ximo do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "Plano m\u00C3\u00A1ximo do TipoOperacao")
+  @ApiModelProperty(required = true, value = "Plano m\u00E1ximo do TipoOperacao")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }

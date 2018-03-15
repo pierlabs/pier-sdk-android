@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para confirma\u00C3\u00A7\u00C3\u00A3o da chave de criptograma
+ * Resposta da requisi\u00E7\u00E3o para confirma\u00E7\u00E3o da chave de criptograma
  **/
-@ApiModel(description = "Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para confirma\u00C3\u00A7\u00C3\u00A3o da chave de criptograma")
+@ApiModel(description = "Resposta da requisi\u00E7\u00E3o para confirma\u00E7\u00E3o da chave de criptograma")
 public class CartaoPayConfirmarChaveResponse  {
   
   @SerializedName("id")
@@ -35,9 +35,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Id do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Id do cart\u00E3o")
   public Long getId() {
     return id;
   }
@@ -47,9 +47,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado
+   * N\u00FAmero do cart\u00E3o real criptografado
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o real criptografado")
+  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o real criptografado")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -59,9 +59,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Data de validade do cart\u00C3\u00A3o
+   * Data de validade do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Data de validade do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data de validade do cart\u00E3o")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -71,9 +71,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Nome impresso no cart\u00C3\u00A3o criptografado
+   * Nome impresso no cart\u00E3o criptografado
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(value = "Nome impresso no cart\u00E3o criptografado")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -83,9 +83,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Identificador do emissor do cart\u00C3\u00A3o
+   * Identificador do emissor do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Identificador do emissor do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Identificador do emissor do cart\u00E3o")
   public Long getIdEntidade() {
     return idEntidade;
   }
@@ -95,9 +95,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Nome do emissor do cart\u00C3\u00A3o
+   * Nome do emissor do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Nome do emissor do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome do emissor do cart\u00E3o")
   public String getNomeEntidade() {
     return nomeEntidade;
   }
@@ -107,9 +107,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Status do cart\u00C3\u00A3o
+   * Status do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Status do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Status do cart\u00E3o")
   public StatusEnum getStatus() {
     return status;
   }
@@ -131,9 +131,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
    **/
-  @ApiModelProperty(value = "Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada")
+  @ApiModelProperty(value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada")
   public String getChaveCriptograma() {
     return chaveCriptograma;
   }

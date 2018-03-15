@@ -7,15 +7,15 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
+ * Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
  **/
-@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento")
 public class EstabelecimentoPersist  {
   
   @SerializedName("flagMatriz")
   private Integer flagMatriz = null;
-  @SerializedName("idCredor")
-  private Long idCredor = null;
+  @SerializedName("idGrupoEconomico")
+  private Long idGrupoEconomico = null;
   @SerializedName("numeroReceitaFederal")
   private String numeroReceitaFederal = null;
   @SerializedName("nome")
@@ -96,9 +96,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Indica se \u00C3\u00A9 matriz ou filial.
+   * Indica se \u00E9 matriz ou filial.
    **/
-  @ApiModelProperty(value = "Indica se \u00C3\u00A9 matriz ou filial.")
+  @ApiModelProperty(value = "Indica se \u00E9 matriz ou filial.")
   public Integer getFlagMatriz() {
     return flagMatriz;
   }
@@ -108,21 +108,21 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
+   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.")
-  public Long getIdCredor() {
-    return idCredor;
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.")
+  public Long getIdGrupoEconomico() {
+    return idGrupoEconomico;
   }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
+  public void setIdGrupoEconomico(Long idGrupoEconomico) {
+    this.idGrupoEconomico = idGrupoEconomico;
   }
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -144,9 +144,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Raz\u00C3\u00A3o Social do Estabelecimento.
+   * Raz\u00E3o Social do Estabelecimento.
    **/
-  @ApiModelProperty(value = "Raz\u00C3\u00A3o Social do Estabelecimento.")
+  @ApiModelProperty(value = "Raz\u00E3o Social do Estabelecimento.")
   public String getDescricao() {
     return descricao;
   }
@@ -156,9 +156,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * T\u00C3\u00ADtulo Comercial do Estabelecimento.
+   * T\u00EDtulo Comercial do Estabelecimento.
    **/
-  @ApiModelProperty(value = "T\u00C3\u00ADtulo Comercial do Estabelecimento.")
+  @ApiModelProperty(value = "T\u00EDtulo Comercial do Estabelecimento.")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -168,9 +168,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).")
+  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
   public String getCep() {
     return cep;
   }
@@ -192,9 +192,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -204,9 +204,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
   public String getBairro() {
     return bairro;
   }
@@ -216,9 +216,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
   public String getCidade() {
     return cidade;
   }
@@ -228,9 +228,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
   public String getComplemento() {
     return complemento;
   }
@@ -240,9 +240,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
   public String getUf() {
     return uf;
   }
@@ -252,9 +252,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).")
+  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
   public String getCep2() {
     return cep2;
   }
@@ -276,9 +276,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
+   * N\u00FAmero do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
   public Integer getNumeroEndereco2() {
     return numeroEndereco2;
   }
@@ -288,9 +288,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Nome do bairro do endere\u00C3\u00A7o.
+   * Nome do bairro do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
   public String getBairro2() {
     return bairro2;
   }
@@ -300,9 +300,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Nome da cidade do endere\u00C3\u00A7o.
+   * Nome da cidade do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
   public String getCidade2() {
     return cidade2;
   }
@@ -312,9 +312,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
   public String getComplemento2() {
     return complemento2;
   }
@@ -324,9 +324,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
   public String getUf2() {
     return uf2;
   }
@@ -336,9 +336,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
+   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
    **/
-  @ApiModelProperty(value = "Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.")
+  @ApiModelProperty(value = "Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.")
   public String getObs() {
     return obs;
   }
@@ -372,9 +372,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.")
+  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
   }
@@ -384,9 +384,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
+   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
   }
@@ -396,9 +396,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Indica se o estabelecimento est\u00C3\u00A1 inativo.
+   * Indica se o estabelecimento est\u00E1 inativo.
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento est\u00C3\u00A1 inativo.")
+  @ApiModelProperty(value = "Indica se o estabelecimento est\u00E1 inativo.")
   public Integer getInativo() {
     return inativo;
   }
@@ -408,9 +408,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da moeda.
+   * C\u00F3digo identificador da moeda.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da moeda.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da moeda.")
   public Long getIdMoeda() {
     return idMoeda;
   }
@@ -420,9 +420,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Identificador de Pa\u00C3\u00ADs.
+   * Identificador de Pa\u00EDs.
    **/
-  @ApiModelProperty(value = "Identificador de Pa\u00C3\u00ADs.")
+  @ApiModelProperty(value = "Identificador de Pa\u00EDs.")
   public Long getIdPais() {
     return idPais;
   }
@@ -432,9 +432,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do associado ao SPCBrasil.
+   * N\u00FAmero do associado ao SPCBrasil.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do associado ao SPCBrasil.")
+  @ApiModelProperty(value = "N\u00FAmero do associado ao SPCBrasil.")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
   }
@@ -444,9 +444,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Categoria de Mercado.
+   * C\u00F3digo de Categoria de Mercado.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Categoria de Mercado.")
+  @ApiModelProperty(value = "C\u00F3digo de Categoria de Mercado.")
   public Long getMcc() {
     return mcc;
   }
@@ -456,9 +456,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
   }
@@ -468,9 +468,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
+   * Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
    **/
-  @ApiModelProperty(value = "Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.")
+  @ApiModelProperty(value = "Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.")
   public Integer getCorrespondencia() {
     return correspondencia;
   }
@@ -504,9 +504,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero um.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero um.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
   }
@@ -516,9 +516,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero dois.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero dois.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
   }
@@ -528,9 +528,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Consulta de cadastro n\u00C3\u00BAmero um.
+   * Consulta de cadastro n\u00FAmero tr\u00EAs.
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00C3\u00BAmero um.")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero tr\u00EAs.")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
   }
@@ -540,9 +540,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
    **/
-  @ApiModelProperty(required = true, value = "Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(required = true, value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }
@@ -552,9 +552,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
    **/
-  @ApiModelProperty(required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }
@@ -570,7 +570,7 @@ public class EstabelecimentoPersist  {
     sb.append("class EstabelecimentoPersist {\n");
     
     sb.append("  flagMatriz: ").append(flagMatriz).append("\n");
-    sb.append("  idCredor: ").append(idCredor).append("\n");
+    sb.append("  idGrupoEconomico: ").append(idGrupoEconomico).append("\n");
     sb.append("  numeroReceitaFederal: ").append(numeroReceitaFederal).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");

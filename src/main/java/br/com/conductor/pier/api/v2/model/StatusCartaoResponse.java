@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o
+ * Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Status Cart\u00E3o")
 public class StatusCartaoResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) ")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) ")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+   * Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.")
   public String getNome() {
     return nome;
   }
@@ -50,9 +50,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
   }
@@ -62,9 +62,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
   }
@@ -74,9 +74,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
   }
@@ -86,9 +86,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
   public Integer getCobrarTarifaAoEmitirNovaVia() {
     return cobrarTarifaAoEmitirNovaVia;
   }

@@ -23,9 +23,9 @@ public class PlanoCampanhaUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do plano campanha
+   * C\u00F3digo identificador do plano campanha
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do plano campanha")
+  @ApiModelProperty(value = "C\u00F3digo identificador do plano campanha")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class PlanoCampanhaUpdate  {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Nome do usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Nome do usu\u00E1rio")
   public String getUsuario() {
     return usuario;
   }

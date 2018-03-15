@@ -64,9 +64,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.")
+  @ApiModelProperty(required = true, value = "Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -88,9 +88,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+   * N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)")
   public String getCnpj() {
     return cnpj;
   }
@@ -100,9 +100,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).")
+  @ApiModelProperty(value = "N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -148,9 +148,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia.")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -160,9 +160,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(value = "N\u00FAmero da conta corrente.")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -196,9 +196,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    **/
-  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00E3o")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -232,9 +232,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
    **/
-  @ApiModelProperty(value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @ApiModelProperty(value = "Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)")
   public Integer getValorPontuacao() {
     return valorPontuacao;
   }
@@ -256,9 +256,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
    **/
-  @ApiModelProperty(required = true, value = "Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros")
+  @ApiModelProperty(required = true, value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
   public List<EnderecoAprovadoPersist> getEnderecos() {
     return enderecos;
   }
@@ -268,9 +268,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
    **/
-  @ApiModelProperty(value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
+  @ApiModelProperty(value = "Apresenta os dados dos s\u00F3cios da empresa, caso exista")
   public List<PessoaPersist> getSocios() {
     return socios;
   }
@@ -280,9 +280,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Apresenta os dados das refer\u00C3\u00AAncias comerciais
+   * Apresenta os dados das refer\u00EAncias comerciais
    **/
-  @ApiModelProperty(value = "Apresenta os dados das refer\u00C3\u00AAncias comerciais")
+  @ApiModelProperty(value = "Apresenta os dados das refer\u00EAncias comerciais")
   public List<RefenciaComercialAprovadoPersist> getReferenciasComerciais() {
     return referenciasComerciais;
   }
@@ -304,9 +304,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
    **/
-  @ApiModelProperty(required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @ApiModelProperty(required = true, value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -316,9 +316,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }

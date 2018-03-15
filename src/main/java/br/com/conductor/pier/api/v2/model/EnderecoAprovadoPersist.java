@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Endere\u00C3\u00A7o Aprovado
+ * Objeto Endere\u00E7o Aprovado
  **/
-@ApiModel(description = "Objeto Endere\u00C3\u00A7o Aprovado")
+@ApiModel(description = "Objeto Endere\u00E7o Aprovado")
 public class EnderecoAprovadoPersist  {
   
   @SerializedName("idTipoEndereco")
@@ -36,9 +36,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -48,9 +48,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   * Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'")
   public String getCep() {
     return cep;
   }
@@ -72,9 +72,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * Apresenta o n\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero do endere\u00E7o")
   public Integer getNumero() {
     return numero;
   }
@@ -84,9 +84,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta descri\u00E7oes complementares referente ao endere\u00E7o")
   public String getComplemento() {
     return complemento;
   }
@@ -96,9 +96,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
   public String getPontoReferencia() {
     return pontoReferencia;
   }
@@ -156,9 +156,9 @@ public class EnderecoAprovadoPersist  {
 
   
   /**
-   * Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia
+   * Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
    **/
-  @ApiModelProperty(required = true, value = "Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia")
+  @ApiModelProperty(required = true, value = "Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia")
   public Boolean getEnderecoCorrespondencia() {
     return enderecoCorrespondencia;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay")
 public class TransacaoPaySecureRequest  {
   
   @SerializedName("dataHoraTransacao")
@@ -44,9 +44,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0
+   * Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
    **/
-  @ApiModelProperty(value = "Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0")
+  @ApiModelProperty(value = "Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
   }
@@ -68,9 +68,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Id do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Id do cart\u00E3o")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -80,9 +80,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local
+   * Valor da transa\u00E7\u00E3o em moeda local
    **/
-  @ApiModelProperty(value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local")
+  @ApiModelProperty(value = "Valor da transa\u00E7\u00E3o em moeda local")
   public BigDecimal getValor() {
     return valor;
   }
@@ -92,9 +92,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).")
+  @ApiModelProperty(value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -104,9 +104,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
    **/
-  @ApiModelProperty(value = "Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).")
+  @ApiModelProperty(value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
   }
@@ -116,9 +116,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Origem da transa\u00C3\u00A7\u00C3\u00A3o
+   * Origem da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Origem da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Origem da transa\u00E7\u00E3o")
   public String getOrigem() {
     return origem;
   }
@@ -128,9 +128,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }
@@ -140,9 +140,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -152,9 +152,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    **/
-  @ApiModelProperty(required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
+  @ApiModelProperty(required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -164,9 +164,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV).")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -176,9 +176,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero de Parcelas.
+   * N\u00FAmero de Parcelas.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero de Parcelas.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero de Parcelas.")
   public Long getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -188,9 +188,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).
+   * C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).")
   public String getCodigoSegurancaCartao() {
     return codigoSegurancaCartao;
   }
@@ -200,9 +200,9 @@ public class TransacaoPaySecureRequest  {
 
   
   /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * Tipo de ordena\u00E7\u00E3o dos registros.
    **/
-  @ApiModelProperty(value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  @ApiModelProperty(value = "Tipo de ordena\u00E7\u00E3o dos registros.")
   public List<String> getSort() {
     return sort;
   }

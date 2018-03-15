@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento
+ * Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
  **/
-@ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o das Taxas de Refinanciamento")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento")
 public class TaxasRefinanciamentoResponse  {
   
   @SerializedName("id")
@@ -155,9 +155,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro
+   * Recupera\u00E7\u00E3o de encargos financeiro
    **/
-  @ApiModelProperty(value = "Recupera\u00C3\u00A7\u00C3\u00A3o de encargos financeiro")
+  @ApiModelProperty(value = "Recupera\u00E7\u00E3o de encargos financeiro")
   public BigDecimal getRecuperacaoEncargosFinanceiros() {
     return recuperacaoEncargosFinanceiros;
   }
@@ -167,9 +167,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia
+   * Descri\u00E7\u00E3o da comiss\u00E3o de garantia
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da comiss\u00C3\u00A3o de garantia")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da comiss\u00E3o de garantia")
   public BigDecimal getComissaoGarantia() {
     return comissaoGarantia;
   }
@@ -179,9 +179,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento
+   * Descri\u00E7\u00E3o do agenciamento
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do agenciamento")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do agenciamento")
   public BigDecimal getAgenciamento() {
     return agenciamento;
   }
@@ -191,9 +191,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo
+   * Taxa m\u00E1xima do proximo per\u00EDodo
    **/
-  @ApiModelProperty(value = "Taxa m\u00C3\u00A1xima do proximo per\u00C3\u00ADodo")
+  @ApiModelProperty(value = "Taxa m\u00E1xima do proximo per\u00EDodo")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
   }
@@ -215,9 +215,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Taxa m\u00C3\u00A1xima de saque
+   * Taxa m\u00E1xima de saque
    **/
-  @ApiModelProperty(value = "Taxa m\u00C3\u00A1xima de saque")
+  @ApiModelProperty(value = "Taxa m\u00E1xima de saque")
   public BigDecimal getTaxaMaximaSaque() {
     return taxaMaximaSaque;
   }
@@ -239,9 +239,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Taxa m\u00C3\u00A1xima de compras juros
+   * Taxa m\u00E1xima de compras juros
    **/
-  @ApiModelProperty(value = "Taxa m\u00C3\u00A1xima de compras juros")
+  @ApiModelProperty(value = "Taxa m\u00E1xima de compras juros")
   public BigDecimal getTaxaMaximaCompraJuros() {
     return taxaMaximaCompraJuros;
   }
@@ -311,9 +311,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * Plano de taxa padr\u00C3\u00A3o
+   * Plano de taxa padr\u00E3o
    **/
-  @ApiModelProperty(value = "Plano de taxa padr\u00C3\u00A3o")
+  @ApiModelProperty(value = "Plano de taxa padr\u00E3o")
   public Integer getPlanoTaxaDefault() {
     return planoTaxaDefault;
   }

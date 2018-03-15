@@ -18,9 +18,9 @@ public class DetalheOportunidadePersist  {
 
   
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    **/
-  @ApiModelProperty(required = true, value = "Nome do conte\u00C3\u00BAdo")
+  @ApiModelProperty(required = true, value = "Nome do conte\u00FAdo")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -30,9 +30,9 @@ public class DetalheOportunidadePersist  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    **/
-  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo do detalhe")
+  @ApiModelProperty(required = true, value = "Conte\u00FAdo do detalhe")
   public String getConteudo() {
     return conteudo;
   }

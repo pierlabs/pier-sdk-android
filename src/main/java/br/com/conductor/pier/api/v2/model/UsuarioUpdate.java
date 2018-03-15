@@ -24,9 +24,9 @@ public class UsuarioUpdate  {
 
   
   /**
-   * Apresenta o nome do usu\u00C3\u00A1rio.
+   * Apresenta o nome do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Apresenta o nome do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Apresenta o nome do usu\u00E1rio.")
   public String getNome() {
     return nome;
   }
@@ -36,9 +36,9 @@ public class UsuarioUpdate  {
 
   
   /**
-   * Apresenta o login do usu\u00C3\u00A1rio.
+   * Apresenta o login do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Apresenta o login do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Apresenta o login do usu\u00E1rio.")
   public String getLogin() {
     return login;
   }
@@ -48,9 +48,9 @@ public class UsuarioUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF.
+   * N\u00FAmero do CPF.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF.")
+  @ApiModelProperty(value = "N\u00FAmero do CPF.")
   public String getCpf() {
     return cpf;
   }
@@ -60,9 +60,9 @@ public class UsuarioUpdate  {
 
   
   /**
-   * Apresenta o email do usu\u00C3\u00A1rio.
+   * Apresenta o email do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Apresenta o email do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Apresenta o email do usu\u00E1rio.")
   public String getEmail() {
     return email;
   }
@@ -72,9 +72,9 @@ public class UsuarioUpdate  {
 
   
   /**
-   * Apresenta o status do usu\u00C3\u00A1rio.
+   * Apresenta o status do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Apresenta o status do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Apresenta o status do usu\u00E1rio.")
   public String getStatus() {
     return status;
   }

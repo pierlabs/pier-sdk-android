@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Represneta\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+ * Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
  **/
-@ApiModel(description = "Represneta\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o")
+@ApiModel(description = "Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o")
 public class CartaoPayUpdate  {
   
   public enum StatusEnum {
@@ -19,9 +19,9 @@ public class CartaoPayUpdate  {
 
   
   /**
-   * Status do cart\u00C3\u00A3o
+   * Status do cart\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Status do cart\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Status do cart\u00E3o")
   public StatusEnum getStatus() {
     return status;
   }

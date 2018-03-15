@@ -65,9 +65,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -77,9 +77,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o")
   public String getDescricaoTipoTransacao() {
     return descricaoTipoTransacao;
   }
@@ -89,9 +89,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento
+   * C\u00F3digo identificador do tipo do evento
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do tipo do evento")
+  @ApiModelProperty(value = "C\u00F3digo identificador do tipo do evento")
   public Long getIdTipoEvento() {
     return idTipoEvento;
   }
@@ -101,9 +101,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+   * Descri\u00E7\u00E3o do tipo do evento
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo do evento")
   public String getDescricaoTipoEvento() {
     return descricaoTipoEvento;
   }
@@ -113,9 +113,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do evento")
+  @ApiModelProperty(value = "C\u00F3digo identificador do evento")
   public Long getIdEvento() {
     return idEvento;
   }
@@ -125,9 +125,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
   public Long getIdConta() {
     return idConta;
   }
@@ -137,9 +137,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+   * Descri\u00E7\u00E3o complementar do evento
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o complementar do evento")
   public String getComplemento() {
     return complemento;
   }
@@ -173,9 +173,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da parcela
+   * N\u00FAmero da parcela
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da parcela")
+  @ApiModelProperty(value = "N\u00FAmero da parcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
   }
@@ -197,9 +197,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Data da transa\u00C3\u00A7\u00C3\u00A3o
+   * Data da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Data da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data da transa\u00E7\u00E3o")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
   }
@@ -221,9 +221,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+   * Descri\u00E7\u00E3o do estabelecimento
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do estabelecimento")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
   }
@@ -245,9 +245,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+   * Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
    **/
-  @ApiModelProperty(value = "Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito")
+  @ApiModelProperty(value = "Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito")
   public Boolean getFlagCredito() {
     return flagCredito;
   }
@@ -257,9 +257,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+   * C\u00F3digo identificador do MCC (Merchant Category Codes)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)")
+  @ApiModelProperty(value = "C\u00F3digo identificador do MCC (Merchant Category Codes)")
   public Long getIdMCC() {
     return idMCC;
   }
@@ -269,9 +269,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do grupo MCC
+   * C\u00F3digo identificador do grupo MCC
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do grupo MCC")
+  @ApiModelProperty(value = "C\u00F3digo identificador do grupo MCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -281,9 +281,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+   * Descri\u00E7\u00E3o do grupo MCC
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo MCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
   }
@@ -293,9 +293,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+   * Indica se o portador do cart\u00E3o \u00E9 o titular da conta
    **/
-  @ApiModelProperty(value = "Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta")
+  @ApiModelProperty(value = "Indica se o portador do cart\u00E3o \u00E9 o titular da conta")
   public Boolean getTitular() {
     return titular;
   }
@@ -305,9 +305,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Nome impresso no cart\u00C3\u00A3o
+   * Nome impresso no cart\u00E3o
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome impresso no cart\u00E3o")
   public String getNomePortador() {
     return nomePortador;
   }
@@ -317,9 +317,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+   * N\u00FAmero do cart\u00E3o mascarado
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado")
+  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o mascarado")
   public String getNumeroCartaoMascarado() {
     return numeroCartaoMascarado;
   }
@@ -329,9 +329,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o")
   public Boolean getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
   }
@@ -353,9 +353,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+ * Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
  **/
-@ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o")
 public class ValidaSenhaCartaoResponse  {
   
   @SerializedName("mensagem")
@@ -36,9 +36,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -48,9 +48,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   public String getStatusCartao() {
     return statusCartao;
   }
@@ -72,9 +72,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * Quantidade m\u00C3\u00A1xima tentativas permitidas
+   * Quantidade m\u00E1xima tentativas permitidas
    **/
-  @ApiModelProperty(value = "Quantidade m\u00C3\u00A1xima tentativas permitidas")
+  @ApiModelProperty(value = "Quantidade m\u00E1xima tentativas permitidas")
   public Integer getQuantidadeMaximaTentativas() {
     return quantidadeMaximaTentativas;
   }

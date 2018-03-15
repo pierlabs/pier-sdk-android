@@ -23,9 +23,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +35,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +47,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Valor de Manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Valor de Manuten\u00E7\u00E3o da Maquineta.
    **/
-  @ApiModelProperty(required = true, value = "Valor de Manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(required = true, value = "Valor de Manuten\u00E7\u00E3o da Maquineta.")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Data da implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * Data da implanta\u00E7\u00E3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
    **/
-  @ApiModelProperty(required = true, value = "Data da implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
+  @ApiModelProperty(required = true, value = "Data da implanta\u00E7\u00E3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }

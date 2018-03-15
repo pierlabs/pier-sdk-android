@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+ * Representa\u00E7\u00E3o do recurso WebHook
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso WebHook")
 public class WebHookResponse  {
   
   @SerializedName("id")
@@ -57,9 +57,9 @@ public class WebHookResponse  {
 
   
   /**
-   * M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * M\u00E9todo que a ser chamado pelo WebHook
    **/
-  @ApiModelProperty(required = true, value = "M\u00C3\u00A9todo que a ser chamado pelo WebHook")
+  @ApiModelProperty(required = true, value = "M\u00E9todo que a ser chamado pelo WebHook")
   public MetodoEnum getMetodo() {
     return metodo;
   }

@@ -18,9 +18,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.
+   * Descri\u00E7\u00E3o do Tipo Terminal.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo Terminal.")
   public String getDescricaoTerminal() {
     return descricaoTerminal;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * D\u00C3\u00ADvida do cliente
+ * D\u00EDvida do cliente
  **/
-@ApiModel(description = "D\u00C3\u00ADvida do cliente")
+@ApiModel(description = "D\u00EDvida do cliente")
 public class DividaClienteResponse  {
   
   @SerializedName("id")
@@ -49,9 +49,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id)")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   public Long getId() {
     return id;
   }
@@ -61,9 +61,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Data de vencimento da cobran\u00C3\u00A7a
+   * Data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Data de vencimento da cobran\u00C3\u00A7a")
+  @ApiModelProperty(value = "Data de vencimento da cobran\u00E7a")
   public String getDataVencimentoFaturaAtraso() {
     return dataVencimentoFaturaAtraso;
   }
@@ -73,9 +73,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a")
+  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a")
   public Long getQuantidadeDiasAtraso() {
     return quantidadeDiasAtraso;
   }
@@ -97,9 +97,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
    **/
-  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00C3\u00A9 a data de vencimento do acordo")
+  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo")
   public Long getQuantidadeDiasAtrasoCorrigido() {
     return quantidadeDiasAtrasoCorrigido;
   }
@@ -109,9 +109,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a
+   * Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Valor do saldo devedor at\u00C3\u00A9 a data de vencimento da cobran\u00C3\u00A7a")
+  @ApiModelProperty(value = "Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a")
   public BigDecimal getValorSaldoDevedor() {
     return valorSaldoDevedor;
   }
@@ -121,9 +121,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Percentual de corre\u00C3\u00A7\u00C3\u00A3o
+   * Percentual de corre\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Percentual de corre\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Percentual de corre\u00E7\u00E3o")
   public BigDecimal getTaxaCorrecao() {
     return taxaCorrecao;
   }
@@ -133,9 +133,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Valor da corre\u00C3\u00A7\u00C3\u00A3o
+   * Valor da corre\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Valor da corre\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Valor da corre\u00E7\u00E3o")
   public BigDecimal getValorCorrecao() {
     return valorCorrecao;
   }
@@ -157,9 +157,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo
+   * Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
    **/
-  @ApiModelProperty(value = "Valor do saldo devedor corrido da d\u00C3\u00ADvida at\u00C3\u00A9 a data de vencimento do acordo")
+  @ApiModelProperty(value = "Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo")
   public BigDecimal getValorSaldoCorrigido() {
     return valorSaldoCorrigido;
   }
@@ -169,9 +169,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status da conta (id)")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -181,9 +181,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public String getDescricaoStatusConta() {
     return descricaoStatusConta;
   }
@@ -193,9 +193,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do acordo (id)")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)")
   public Long getIdStatusAcordo() {
     return idStatusAcordo;
   }
@@ -205,9 +205,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo
+   * Descri\u00E7\u00E3o do status do acordo
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do acordo")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do acordo")
   public String getDescricaoStatusAcordo() {
     return descricaoStatusAcordo;
   }
@@ -217,9 +217,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+   * C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a")
   public Long getIdEscritorioCobranca() {
     return idEscritorioCobranca;
   }
@@ -229,9 +229,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+   * Nome do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Nome do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a")
+  @ApiModelProperty(value = "Nome do escrit\u00F3rio de cobran\u00E7a")
   public String getNomeEscritorioCobranca() {
     return nomeEscritorioCobranca;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria
+ * Transfer\u00EAncia de cr\u00E9dito para conta banc\u00E1ria
  **/
-@ApiModel(description = "Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria")
+@ApiModel(description = "Transfer\u00EAncia de cr\u00E9dito para conta banc\u00E1ria")
 public class TransferenciaCreditoContaBancariaPersist  {
   
   @SerializedName("nsuOrigem")
@@ -33,9 +33,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    **/
-  @ApiModelProperty(required = true, value = "Representa o N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(required = true, value = "Representa o N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
   public Long getNsuOrigem() {
     return nsuOrigem;
   }
@@ -57,9 +57,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa o Identificador da conta banc\u00C3\u00A1ria.
+   * Representa o Identificador da conta banc\u00E1ria.
    **/
-  @ApiModelProperty(required = true, value = "Representa o Identificador da conta banc\u00C3\u00A1ria.")
+  @ApiModelProperty(required = true, value = "Representa o Identificador da conta banc\u00E1ria.")
   public Long getIdContaBancaria() {
     return idContaBancaria;
   }
@@ -69,9 +69,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa o Valor da transfer\u00C3\u00AAncia.
+   * Representa o Valor da transfer\u00EAncia.
    **/
-  @ApiModelProperty(required = true, value = "Representa o Valor da transfer\u00C3\u00AAncia.")
+  @ApiModelProperty(required = true, value = "Representa o Valor da transfer\u00EAncia.")
   public BigDecimal getValor() {
     return valor;
   }
@@ -81,9 +81,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.
+   * Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.
    **/
-  @ApiModelProperty(required = true, value = "Representa o N\u00C3\u00BAmero de Parcelas pelo qual o valor da transfer\u00C3\u00AAncia ser\u00C3\u00A1 dividido.")
+  @ApiModelProperty(required = true, value = "Representa o N\u00FAmero de Parcelas pelo qual o valor da transfer\u00EAncia ser\u00E1 dividido.")
   public Long getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -93,9 +93,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+   * Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
    **/
-  @ApiModelProperty(required = true, value = "Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.")
+  @ApiModelProperty(required = true, value = "Representa o N\u00FAmero de Meses concedido como car\u00EAncia.")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }
@@ -117,9 +117,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.
+   * Representa a identifica\u00E7\u00E3o do terminal requisitante.
    **/
-  @ApiModelProperty(required = true, value = "Representa a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante.")
+  @ApiModelProperty(required = true, value = "Representa a identifica\u00E7\u00E3o do terminal requisitante.")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }
@@ -129,9 +129,9 @@ public class TransferenciaCreditoContaBancariaPersist  {
 
   
   /**
-   * Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
+   * Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.
    **/
-  @ApiModelProperty(required = true, value = "Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.")
+  @ApiModelProperty(required = true, value = "Representa a identifica\u00E7\u00E3o do n\u00FAmero do estabelecimento.")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }

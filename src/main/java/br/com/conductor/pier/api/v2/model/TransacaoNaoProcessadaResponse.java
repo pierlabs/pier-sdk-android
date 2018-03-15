@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto transacao N\u00C3\u00A3o Processada
+ * Objeto transacao N\u00E3o Processada
  **/
-@ApiModel(description = "Objeto transacao N\u00C3\u00A3o Processada")
+@ApiModel(description = "Objeto transacao N\u00E3o Processada")
 public class TransacaoNaoProcessadaResponse  {
   
   @SerializedName("idTipoTransacaoNaoProcessada")
@@ -87,9 +87,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.")
   public Long getIdTipoTransacaoNaoProcessada() {
     return idTipoTransacaoNaoProcessada;
   }
@@ -99,9 +99,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o n\u00C3\u00A3o Processada.
+   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o n\u00C3\u00A3o Processada.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.")
   public String getDescricaoTipoTransacaoNaoProcessada() {
     return descricaoTipoTransacaoNaoProcessada;
   }
@@ -111,9 +111,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o Abreviada da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;
   }
@@ -123,9 +123,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).")
   public Long getIdConta() {
     return idConta;
   }
@@ -135,9 +135,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.
+   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do Cart\u00C3\u00A3o em Formato 0000XXXXXXXX0000.")
+  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.")
   public String getCartaoMascarado() {
     return cartaoMascarado;
   }
@@ -147,9 +147,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Nome completo do Portador do Cart\u00C3\u00A3o.
+   * Nome completo do Portador do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Nome completo do Portador do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Nome completo do Portador do Cart\u00E3o.")
   public String getNomePortador() {
     return nomePortador;
   }
@@ -159,9 +159,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
+   * Data em que a Transa\u00E7\u00E3o foi realizada.
    **/
-  @ApiModelProperty(value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.")
+  @ApiModelProperty(value = "Data em que a Transa\u00E7\u00E3o foi realizada.")
   public String getDataOrigem() {
     return dataOrigem;
   }
@@ -171,9 +171,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Data de Faturamento da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data de Faturamento da Transa\u00E7\u00E3o.")
   public String getDataFaturamento() {
     return dataFaturamento;
   }
@@ -195,9 +195,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Descreve o modo utilizado para realizar a leitura dos dados do cart\u00C3\u00A3o para realizar a Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.")
   public String getModoEntradaTransacao() {
     return modoEntradaTransacao;
   }
@@ -207,9 +207,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.
+   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
    **/
-  @ApiModelProperty(value = "Valor da Taxa de Embarque em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for relacionada a Compra de Passagens A\u00C3\u00A9reas.")
+  @ApiModelProperty(value = "Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.")
   public BigDecimal getValorTaxaEmbarque() {
     return valorTaxaEmbarque;
   }
@@ -219,9 +219,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.
+   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
    **/
-  @ApiModelProperty(value = "Valor da Entrada em Real (BRL) quando a transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada com o pagamento de um valor de Entrada.")
+  @ApiModelProperty(value = "Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.")
   public BigDecimal getValorEntrada() {
     return valorEntrada;
   }
@@ -231,9 +231,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).
+   * Valor da Transa\u00E7\u00E3o em Real (BRL).
    **/
-  @ApiModelProperty(value = "Valor da Transa\u00C3\u00A7\u00C3\u00A3o em Real (BRL).")
+  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em Real (BRL).")
   public BigDecimal getValorBRL() {
     return valorBRL;
   }
@@ -243,9 +243,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
+   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
    **/
-  @ApiModelProperty(value = "Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).")
+  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).")
   public BigDecimal getValorUSD() {
     return valorUSD;
   }
@@ -255,9 +255,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
    **/
-  @ApiModelProperty(value = "Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).")
+  @ApiModelProperty(value = "Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).")
   public BigDecimal getCotacaoUSD() {
     return cotacaoUSD;
   }
@@ -267,9 +267,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
+   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
    **/
-  @ApiModelProperty(value = "Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).")
+  @ApiModelProperty(value = "Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).")
   public String getDataCotacaoUSD() {
     return dataCotacaoUSD;
   }
@@ -279,9 +279,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda utilizada na Transa\u00C3\u00A7\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.")
   public String getCodigoMoedaOrigem() {
     return codigoMoedaOrigem;
   }
@@ -291,9 +291,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Moeda da Transa\u00C3\u00A7\u00C3\u00A3o ap\u00C3\u00B3s a convers\u00C3\u00A3o, seguindo padr\u00C3\u00A3o ISO 4217.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
   }
@@ -303,9 +303,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -315,9 +315,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.
+   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Refer\u00C3\u00AAncia da Transa\u00C3\u00A7\u00C3\u00A3o quando utilizado Cart\u00C3\u00A3o Bandeirado.")
+  @ApiModelProperty(value = "C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.")
   public String getCodigoReferencia() {
     return codigoReferencia;
   }
@@ -327,9 +327,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.")
   public String getCodigoTerminal() {
     return codigoTerminal;
   }
@@ -339,9 +339,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da categoria do Estabelecimento.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.")
   public Long getCodigoMCC() {
     return codigoMCC;
   }
@@ -351,9 +351,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.")
   public Long getGrupoMCC() {
     return grupoMCC;
   }
@@ -363,9 +363,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   * Descri\u00E7\u00E3o do grupo do Estabelecimento.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo do Estabelecimento.")
   public String getGrupoDescricaoMCC() {
     return grupoDescricaoMCC;
   }
@@ -375,9 +375,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -423,9 +423,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.
+   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero total de Parcelas.")
+  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.")
   public Long getPlanoParcelamento() {
     return planoParcelamento;
   }
@@ -435,9 +435,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.
+   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00C3\u00A7\u00C3\u00A3o for do tipo Parcelada, apresenta o n\u00C3\u00BAmero da Parcela.")
+  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.")
   public Long getNumeroParcela() {
     return numeroParcela;
   }
@@ -447,9 +447,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Detalhes complementares a respeito da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Detalhes complementares a respeito da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Detalhes complementares a respeito da Transa\u00E7\u00E3o.")
   public String getDetalhesTransacao() {
     return detalhesTransacao;
   }
@@ -459,9 +459,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo 'Cr\u00C3\u00A9dito'.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 do Tipo 'Cr\u00C3\u00A9dito'.")
+  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -471,9 +471,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi consolidada em uma Fatura.")
+  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.")
   public Integer getFlagFaturado() {
     return flagFaturado;
   }
@@ -483,9 +483,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.
+   * Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00C3\u00A7\u00C3\u00A3o foi estornada.")
+  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.")
   public Integer getFlagEstorno() {
     return flagEstorno;
   }
@@ -495,9 +495,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Transa\u00C3\u00A7\u00C3\u00A3o (id) que gerou o estorno.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.")
   public Long getIdTransacaoEstorno() {
     return idTransacaoEstorno;
   }
@@ -507,9 +507,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.")
   public Integer getStatus() {
     return status;
   }

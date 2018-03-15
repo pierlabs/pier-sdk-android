@@ -50,9 +50,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.
+   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Nome do Adicional que ser\u00C3\u00A1 gravado no Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -62,9 +62,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.
+   * N\u00FAmero do CPF ou CNPJ do Adicional.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do CPF ou CNPJ do Adicional.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do CPF ou CNPJ do Adicional.")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -86,9 +86,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).")
   public String getSexo() {
     return sexo;
   }
@@ -98,9 +98,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero do Documento de Identidade do Adicional.
+   * N\u00FAmero do Documento de Identidade do Adicional.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do Documento de Identidade do Adicional.")
+  @ApiModelProperty(value = "N\u00FAmero do Documento de Identidade do Adicional.")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -110,9 +110,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.
+   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.
    **/
-  @ApiModelProperty(value = "Nome do Org\u00C3\u00A3o Emissor do Documento de Identidade do Adicional.")
+  @ApiModelProperty(value = "Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -134,9 +134,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
+   * Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.
    **/
-  @ApiModelProperty(value = "Data de emiss\u00C3\u00A3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.")
+  @ApiModelProperty(value = "Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -146,9 +146,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
+   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.")
   public Long getIdParentesco() {
     return idParentesco;
   }

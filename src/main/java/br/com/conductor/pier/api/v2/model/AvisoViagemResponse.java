@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso aviso viagens
+ * Representa\u00E7\u00E3o da resposta do recurso aviso viagens
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso aviso viagens")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso aviso viagens")
 public class AvisoViagemResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)
+   * C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador \u00C3\u00BAnico do aviso viagem na base (id)")
+  @ApiModelProperty(value = "C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)
+   * C\u00F3digo identificador do cart\u00E3o na base (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do cart\u00C3\u00A3o na base (id)")
+  @ApiModelProperty(value = "C\u00F3digo identificador do cart\u00E3o na base (id)")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -50,9 +50,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Codigo identificador do pa\u00C3\u00ADs na base (id)
+   * Codigo identificador do pa\u00EDs na base (id)
    **/
-  @ApiModelProperty(value = "Codigo identificador do pa\u00C3\u00ADs na base (id)")
+  @ApiModelProperty(value = "Codigo identificador do pa\u00EDs na base (id)")
   public String getCodigoPais() {
     return codigoPais;
   }
@@ -86,9 +86,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+   * Identifica se o aviso viagem esta ativo ou n\u00E3o
    **/
-  @ApiModelProperty(value = "Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o")
+  @ApiModelProperty(value = "Identifica se o aviso viagem esta ativo ou n\u00E3o")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }

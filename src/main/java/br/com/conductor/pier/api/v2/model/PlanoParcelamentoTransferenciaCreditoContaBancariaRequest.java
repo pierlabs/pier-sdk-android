@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Transfer\u00C3\u00AAncia cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria request
+ * Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request
  **/
-@ApiModel(description = "Transfer\u00C3\u00AAncia cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria request")
+@ApiModel(description = "Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
   
   @SerializedName("idCartao")
@@ -21,9 +21,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -33,9 +33,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    **/
-  @ApiModelProperty(required = true, value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -45,9 +45,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.
+   * Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
    **/
-  @ApiModelProperty(required = true, value = "Representa o N\u00C3\u00BAmero de Meses concedido como car\u00C3\u00AAncia.")
+  @ApiModelProperty(required = true, value = "Representa o N\u00FAmero de Meses concedido como car\u00EAncia.")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }

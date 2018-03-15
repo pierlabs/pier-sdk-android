@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Parametros de requisi\u00C3\u00A7\u00C3\u00A3o da gera\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o embossing
+ * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
  **/
-@ApiModel(description = "Parametros de requisi\u00C3\u00A7\u00C3\u00A3o da gera\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o embossing")
+@ApiModel(description = "Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing")
 public class CartaoEmbossingRequest  {
   
   @SerializedName("id_pessoa")
@@ -18,9 +18,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -30,9 +30,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
   }

@@ -24,9 +24,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Apresenta o N\u00C3\u00BAmero do telefone.
+   * Apresenta o N\u00FAmero do telefone.
    **/
-  @ApiModelProperty(value = "Apresenta o N\u00C3\u00BAmero do telefone.")
+  @ApiModelProperty(value = "Apresenta o N\u00FAmero do telefone.")
   public String getTelefone() {
     return telefone;
   }
@@ -60,9 +60,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.
+   * Apresenta a descri\u00E7\u00E3o do tipo do telefone.
    **/
-  @ApiModelProperty(value = "Apresenta a descri\u00C3\u00A7\u00C3\u00A3o do tipo do telefone.")
+  @ApiModelProperty(value = "Apresenta a descri\u00E7\u00E3o do tipo do telefone.")
   public String getTipoTelefone() {
     return tipoTelefone;
   }

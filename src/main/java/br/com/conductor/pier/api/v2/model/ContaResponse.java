@@ -37,9 +37,9 @@ public class ContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o de conta (id).")
   public Long getId() {
     return id;
   }
@@ -49,9 +49,9 @@ public class ContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -61,9 +61,9 @@ public class ContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -73,9 +73,9 @@ public class ContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -85,9 +85,9 @@ public class ContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -121,9 +121,9 @@ public class ContaResponse  {
 
   
   /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
+  @ApiModelProperty(value = "Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.")
   public String getDataStatusConta() {
     return dataStatusConta;
   }
@@ -133,9 +133,9 @@ public class ContaResponse  {
 
   
   /**
-   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   * Apresenta a data em que o cart\u00E3o foi gerado.
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
+  @ApiModelProperty(value = "Apresenta a data em que o cart\u00E3o foi gerado.")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -145,9 +145,9 @@ public class ContaResponse  {
 
   
   /**
-   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
    **/
-  @ApiModelProperty(value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
+  @ApiModelProperty(value = "Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.")
   public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+ * Representa\u00E7\u00E3o da resposta para o recurso de Documento
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o recurso de Documento")
 public class DocumentoDetalhadoResponse  {
   
   @SerializedName("id")
@@ -64,9 +64,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+   * Representa\u00E7\u00E3o do documento em Base64.
    **/
-  @ApiModelProperty(value = "Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.")
+  @ApiModelProperty(value = "Representa\u00E7\u00E3o do documento em Base64.")
   public String getDocumento() {
     return documento;
   }
@@ -76,9 +76,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * Extens\u00C3\u00A3o do Documento.
+   * Extens\u00E3o do Documento.
    **/
-  @ApiModelProperty(value = "Extens\u00C3\u00A3o do Documento.")
+  @ApiModelProperty(value = "Extens\u00E3o do Documento.")
   public String getExtensao() {
     return extensao;
   }

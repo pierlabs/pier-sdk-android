@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Dados Cart\u00C3\u00A3o
+ * Objeto Dados Cart\u00E3o
  **/
-@ApiModel(description = "Objeto Dados Cart\u00C3\u00A3o")
+@ApiModel(description = "Objeto Dados Cart\u00E3o")
 public class DadosCartaoResponse  {
   
   @SerializedName("flagVirtual")
@@ -51,9 +51,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * N\u00FAmero do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o.")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -75,9 +75,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * CVV2 do cart\u00C3\u00A3o.
+   * CVV2 do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "CVV2 do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "CVV2 do cart\u00E3o.")
   public String getCvv2() {
     return cvv2;
   }
@@ -111,9 +111,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Identificador da cart\u00C3\u00A3o do portador.
+   * Identificador da cart\u00E3o do portador.
    **/
-  @ApiModelProperty(value = "Identificador da cart\u00C3\u00A3o do portador.")
+  @ApiModelProperty(value = "Identificador da cart\u00E3o do portador.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -123,9 +123,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -135,9 +135,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   * Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.")
   public String getNumeroContaCorente() {
     return numeroContaCorente;
   }
@@ -159,9 +159,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
+   * Descri\u00E7\u00E3o do status da conta do portador.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta do portador.")
   public String getStatusConta() {
     return statusConta;
   }
@@ -171,9 +171,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Status do cart\u00C3\u00A3o.
+   * Status do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Status do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Status do cart\u00E3o.")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -183,9 +183,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do status do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o.")
   public String getStatusCartao() {
     return statusCartao;
   }

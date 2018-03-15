@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * Objeto de Notifica\u00E7\u00E3o EMAIL
  **/
-@ApiModel(description = "Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL")
+@ApiModel(description = "Objeto de Notifica\u00E7\u00E3o EMAIL")
 public class TemplateNotificacaoResponse  {
   
   @SerializedName("id")
@@ -38,9 +38,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo Identificador.
+   * C\u00F3digo Identificador.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo Identificador.")
+  @ApiModelProperty(value = "C\u00F3digo Identificador.")
   public Long getId() {
     return id;
   }
@@ -50,9 +50,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.")
   public Long getIdConfiguracaoEmail() {
     return idConfiguracaoEmail;
   }
@@ -74,9 +74,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo da notifica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Tipo da notifica\u00E7\u00E3o.")
   public TipoNotificacaoEnum getTipoNotificacao() {
     return tipoNotificacao;
   }
@@ -86,9 +86,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * Template padr\u00C3\u00A3o.
+   * Template padr\u00E3o.
    **/
-  @ApiModelProperty(value = "Template padr\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Template padr\u00E3o.")
   public String getTemplatePadrao() {
     return templatePadrao;
   }
@@ -122,9 +122,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * Data da inclus\u00C3\u00A3o.
+   * Data da inclus\u00E3o.
    **/
-  @ApiModelProperty(value = "Data da inclus\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data da inclus\u00E3o.")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -134,9 +134,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * Data altera\u00C3\u00A7\u00C3\u00A3o.
+   * Data altera\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Data altera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data altera\u00E7\u00E3o.")
   public String getDataAlteracao() {
     return dataAlteracao;
   }

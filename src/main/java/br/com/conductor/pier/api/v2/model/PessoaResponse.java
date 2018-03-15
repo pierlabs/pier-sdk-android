@@ -36,9 +36,9 @@ public class PessoaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @ApiModelProperty(required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.")
   public String getNome() {
     return nome;
   }
@@ -60,9 +60,9 @@ public class PessoaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).")
   public String getTipo() {
     return tipo;
   }
@@ -72,9 +72,9 @@ public class PessoaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
+   * N\u00FAmero do CPF, quando PF.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF, quando PF.")
+  @ApiModelProperty(value = "N\u00FAmero do CPF, quando PF.")
   public String getCpf() {
     return cpf;
   }
@@ -84,9 +84,9 @@ public class PessoaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * N\u00FAmero do CNPJ, quando PJ.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CNPJ, quando PJ.")
+  @ApiModelProperty(value = "N\u00FAmero do CNPJ, quando PJ.")
   public String getCnpj() {
     return cnpj;
   }
@@ -108,9 +108,9 @@ public class PessoaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da Identidade
+   * N\u00FAmero da Identidade
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Identidade")
+  @ApiModelProperty(value = "N\u00FAmero da Identidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -120,9 +120,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Org\u00C3\u00A3o expedidor do RG.
+   * Org\u00E3o expedidor do RG.
    **/
-  @ApiModelProperty(value = "Org\u00C3\u00A3o expedidor do RG.")
+  @ApiModelProperty(value = "Org\u00E3o expedidor do RG.")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -132,9 +132,9 @@ public class PessoaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).")
   public String getSexo() {
     return sexo;
   }
@@ -156,9 +156,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   * Data emiss\u00E3o da identidade no formato aaaa-MM-dd
    **/
-  @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
+  @ApiModelProperty(value = "Data emiss\u00E3o da identidade no formato aaaa-MM-dd")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }

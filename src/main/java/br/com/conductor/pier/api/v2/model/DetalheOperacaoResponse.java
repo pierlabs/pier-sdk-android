@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+ * Representa\u00E7\u00E3o da resposta do recurso Operacao
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
 public class DetalheOperacaoResponse  {
   
   @SerializedName("idOperacao")
@@ -53,9 +53,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -65,9 +65,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -77,9 +77,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
   }
@@ -89,9 +89,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Nome da opera\u00C3\u00A7\u00C3\u00A3o
+   * Nome da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Nome da opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome da opera\u00E7\u00E3o")
   public String getNomeOperacao() {
     return nomeOperacao;
   }
@@ -101,9 +101,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da opera\u00E7\u00E3o")
   public String getDescricaoOperacao() {
     return descricaoOperacao;
   }
@@ -113,9 +113,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+   * Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Quantidade m\u00C3\u00ADnima de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -125,9 +125,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o
+   * Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Quantidade M\u00C3\u00A1ximo de meses permitido para opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
@@ -137,9 +137,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   *  Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+   *  Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = " Valor m\u00C3\u00ADnimo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = " Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
   }
@@ -149,9 +149,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   *  Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o
+   *  Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = " Valor m\u00C3\u00A1ximo permitido permitido para opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = " Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
   }
@@ -161,9 +161,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de juros
+   * Flag indicativa para crobran\u00E7a de juros
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00C3\u00A7a de juros")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de juros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
   }
@@ -173,9 +173,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros
+   * Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
    **/
-  @ApiModelProperty(value = "Valor do juros a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre juros")
+  @ApiModelProperty(value = "Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -185,9 +185,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de tarifas
+   * Flag indicativa para crobran\u00E7a de tarifas
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00C3\u00A7a de tarifas")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de tarifas")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
   }
@@ -197,9 +197,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas
+   * Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
    **/
-  @ApiModelProperty(value = "Valor da tarifa a ser cobrado, caso opera\u00C3\u00A7\u00C3\u00A3o cobre tarifas")
+  @ApiModelProperty(value = "Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas")
   public BigDecimal getTaxaTarifa() {
     return taxaTarifa;
   }
@@ -233,9 +233,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Valor da opera\u00C3\u00A7\u00C3\u00A3o
+   * Valor da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Valor da opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Valor da opera\u00E7\u00E3o")
   public BigDecimal getValorOperacao() {
     return valorOperacao;
   }
@@ -245,9 +245,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Quantidade de meses para car\u00C3\u00AAncia
+   * Quantidade de meses para car\u00EAncia
    **/
-  @ApiModelProperty(value = "Quantidade de meses para car\u00C3\u00AAncia")
+  @ApiModelProperty(value = "Quantidade de meses para car\u00EAncia")
   public Integer getCarencia() {
     return carencia;
   }
@@ -257,9 +257,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o
+   * Valor excedente permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Valor excedente permitido para opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Valor excedente permitido para opera\u00E7\u00E3o")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
   }
@@ -269,9 +269,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+   * Permitir transa\u00E7\u00F5es parceladas
    **/
-  @ApiModelProperty(value = "Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas")
+  @ApiModelProperty(value = "Permitir transa\u00E7\u00F5es parceladas")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
   }

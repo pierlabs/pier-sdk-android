@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada")
 public class AntecipacaoSimuladaLoteResponse  {
   
   @SerializedName("valorTotalAntecipado")
@@ -61,9 +61,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+   * Antecipa\u00E7\u00F5es Simuladas.
    **/
-  @ApiModelProperty(value = "Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.")
+  @ApiModelProperty(value = "Antecipa\u00E7\u00F5es Simuladas.")
   public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;
   }

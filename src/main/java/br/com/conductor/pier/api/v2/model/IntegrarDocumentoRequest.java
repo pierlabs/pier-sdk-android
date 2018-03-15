@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.
+ * Objeto de requisi\u00E7\u00E3o.
  **/
-@ApiModel(description = "Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.")
+@ApiModel(description = "Objeto de requisi\u00E7\u00E3o.")
 public class IntegrarDocumentoRequest  {
   
   @SerializedName("idTemplate")
@@ -36,9 +36,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(value = "Conte\u00FAdo do arquivo convertido em Base 64")
   public String getArquivo() {
     return arquivo;
   }
@@ -60,9 +60,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00E2metros para montagem do documento.
    **/
-  @ApiModelProperty(value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  @ApiModelProperty(value = "Lista de par\u00E2metros para montagem do documento.")
   public List<PropriedadeDocumentoRequest> getPropriedades() {
     return propriedades;
   }

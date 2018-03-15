@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades
+ * Representa\u00E7\u00E3o da resposta do recurso Oportunidades
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Oportunidades")
 public class OportunidadeAUDResponse  {
   
   @SerializedName("id")
@@ -42,9 +42,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da oportunidade
+   * C\u00F3digo identificador da oportunidade
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da oportunidade")
+  @ApiModelProperty(value = "C\u00F3digo identificador da oportunidade")
   public Long getId() {
     return id;
   }
@@ -54,9 +54,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo oportunidade
+   * C\u00F3digo identificador do tipo oportunidade
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do tipo oportunidade")
+  @ApiModelProperty(value = "C\u00F3digo identificador do tipo oportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -66,9 +66,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do status oportunidade
+   * C\u00F3digo identificador do status oportunidade
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do status oportunidade")
+  @ApiModelProperty(value = "C\u00F3digo identificador do status oportunidade")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
   }
@@ -90,9 +90,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+   * Data atualiza\u00E7\u00E3o da oportunidade.
    **/
-  @ApiModelProperty(value = "Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.")
+  @ApiModelProperty(value = "Data atualiza\u00E7\u00E3o da oportunidade.")
   public String getDataAtualizacao() {
     return dataAtualizacao;
   }
@@ -102,9 +102,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+   * N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade")
+  @ApiModelProperty(value = "N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -114,9 +114,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+   * In\u00EDcio da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(value = "In\u00EDcio da vig\u00EAncia da oportunidade")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
@@ -126,9 +126,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * fim da vig\u00C3\u00AAncia da oportunidade
+   * fim da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(value = "fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(value = "fim da vig\u00EAncia da oportunidade")
   public String getDataFimVigencia() {
     return dataFimVigencia;
   }
@@ -138,9 +138,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+   * Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
    **/
-  @ApiModelProperty(value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(value = "Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

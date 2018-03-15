@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+ * Representa\u00E7\u00E3o da resposta do recurso Operacao
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
 public class OperacaoResponse  {
   
   @SerializedName("idOperacao")
@@ -30,9 +30,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -42,9 +42,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -54,9 +54,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
   }
@@ -66,9 +66,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Nome da opera\u00C3\u00A7\u00C3\u00A3o
+   * Nome da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Nome da opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome da opera\u00E7\u00E3o")
   public String getNomeOperacao() {
     return nomeOperacao;
   }
@@ -78,9 +78,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de juros
+   * Flag indicativa para crobran\u00E7a de juros
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00C3\u00A7a de juros")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de juros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
   }
@@ -90,9 +90,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de tarifas
+   * Flag indicativa para crobran\u00E7a de tarifas
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00C3\u00A7a de tarifas")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de tarifas")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
   }
@@ -102,9 +102,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Quantidade de meses para car\u00C3\u00AAncia
+   * Quantidade de meses para car\u00EAncia
    **/
-  @ApiModelProperty(value = "Quantidade de meses para car\u00C3\u00AAncia")
+  @ApiModelProperty(value = "Quantidade de meses para car\u00EAncia")
   public Integer getCarencia() {
     return carencia;
   }
@@ -114,9 +114,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+   * Permitir transa\u00E7\u00F5es parceladas
    **/
-  @ApiModelProperty(value = "Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas")
+  @ApiModelProperty(value = "Permitir transa\u00E7\u00F5es parceladas")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
   }

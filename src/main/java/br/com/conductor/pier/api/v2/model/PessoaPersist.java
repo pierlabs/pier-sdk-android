@@ -54,9 +54,9 @@ public class PessoaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
+   * N\u00FAmero do CPF, quando PF.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF, quando PF.")
+  @ApiModelProperty(value = "N\u00FAmero do CPF, quando PF.")
   public String getCpf() {
     return cpf;
   }
@@ -78,9 +78,9 @@ public class PessoaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
   public String getSexo() {
     return sexo;
   }
@@ -90,9 +90,9 @@ public class PessoaPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero da Identidade.
+   * N\u00FAmero da Identidade.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Identidade.")
+  @ApiModelProperty(value = "N\u00FAmero da Identidade.")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -102,9 +102,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Org\u00C3\u00A3o expedidor da Identidade.
+   * Org\u00E3o expedidor da Identidade.
    **/
-  @ApiModelProperty(value = "Org\u00C3\u00A3o expedidor da Identidade.")
+  @ApiModelProperty(value = "Org\u00E3o expedidor da Identidade.")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -126,9 +126,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Data emiss\u00C3\u00A3o da Identidade
+   * Data emiss\u00E3o da Identidade
    **/
-  @ApiModelProperty(value = "Data emiss\u00C3\u00A3o da Identidade")
+  @ApiModelProperty(value = "Data emiss\u00E3o da Identidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -138,9 +138,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Estado civil do s\u00C3\u00B3cio
+   * Estado civil do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Estado civil do s\u00C3\u00B3cio")
+  @ApiModelProperty(value = "Estado civil do s\u00F3cio")
   public String getEstadoCivil() {
     return estadoCivil;
   }
@@ -150,9 +150,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+   * Profiss\u00E3o do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Profiss\u00C3\u00A3o do s\u00C3\u00B3cio")
+  @ApiModelProperty(value = "Profiss\u00E3o do s\u00F3cio")
   public String getProfissao() {
     return profissao;
   }
@@ -162,9 +162,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Nacionalidade do s\u00C3\u00B3cio
+   * Nacionalidade do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Nacionalidade do s\u00C3\u00B3cio")
+  @ApiModelProperty(value = "Nacionalidade do s\u00F3cio")
   public String getNacionalidade() {
     return nacionalidade;
   }
@@ -174,9 +174,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Email do s\u00C3\u00B3cio
+   * Email do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Email do s\u00C3\u00B3cio")
+  @ApiModelProperty(value = "Email do s\u00F3cio")
   public String getEmail() {
     return email;
   }
@@ -186,9 +186,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Informa os telefones do s\u00C3\u00B3cio
+   * Informa os telefones do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Informa os telefones do s\u00C3\u00B3cio")
+  @ApiModelProperty(value = "Informa os telefones do s\u00F3cio")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;
   }

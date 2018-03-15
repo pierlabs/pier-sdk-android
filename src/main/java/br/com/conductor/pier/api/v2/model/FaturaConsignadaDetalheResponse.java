@@ -111,9 +111,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da fatura.
+   * C\u00F3digo identificador da fatura.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da fatura.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da fatura.")
   public Long getId() {
     return id;
   }
@@ -123,9 +123,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta (id).
+   * C\u00F3digo identificador da conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta (id).")
   public Long getIdConta() {
     return idConta;
   }
@@ -135,9 +135,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.
+   * Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o valor do limite de cr\u00C3\u00A9dito que o portador do cart\u00C3\u00A3o possui.")
+  @ApiModelProperty(required = true, value = "Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui.")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -147,9 +147,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+   * C\u00F3digo identificador da conta a qual a fatura se refere.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta a qual a fatura se refere.")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
   }
@@ -159,9 +159,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Nacionais.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais.")
   public BigDecimal getLimiteCompra() {
     return limiteCompra;
   }
@@ -183,9 +183,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es de compras parceladas.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.")
   public BigDecimal getLimiteParcelado() {
     return limiteParcelado;
   }
@@ -195,9 +195,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade.")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -231,9 +231,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   * Valor m\u00EDnimo para pagamento da fatura.
    **/
-  @ApiModelProperty(value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
+  @ApiModelProperty(value = "Valor m\u00EDnimo para pagamento da fatura.")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
   }
@@ -243,9 +243,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.
+   * Valor da fatura pago atrav\u00E9s de desconto em folha.
    **/
-  @ApiModelProperty(value = "Valor da fatura pago atrav\u00C3\u00A9s de desconto em folha.")
+  @ApiModelProperty(value = "Valor da fatura pago atrav\u00E9s de desconto em folha.")
   public BigDecimal getValorPagamentoConsignado() {
     return valorPagamentoConsignado;
   }
@@ -255,9 +255,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional.")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -267,9 +267,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.
+   * Valor complementar para considerar o pagamento m\u00EDnimo da fatura.
    **/
-  @ApiModelProperty(value = "Valor complementar para considerar o pagamento m\u00C3\u00ADnimo da fatura.")
+  @ApiModelProperty(value = "Valor complementar para considerar o pagamento m\u00EDnimo da fatura.")
   public BigDecimal getValorPagamentoComplementar() {
     return valorPagamentoComplementar;
   }
@@ -279,9 +279,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.")
   public BigDecimal getLimiteSaquePeriodo() {
     return limiteSaquePeriodo;
   }
@@ -291,9 +291,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras nacionais lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das compras nacionais lan\u00E7adas na fatura.")
   public BigDecimal getTotalComprasNacionais() {
     return totalComprasNacionais;
   }
@@ -303,9 +303,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.
+   * Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00C3\u00A9dito que ele poder\u00C3\u00A1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00C3\u00A1rio/vencimentos.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos.")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
   }
@@ -315,9 +315,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras internacionais lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das compras internacionais lan\u00E7adas na fatura.")
   public BigDecimal getTotalComprasInternacionas() {
     return totalComprasInternacionas;
   }
@@ -327,9 +327,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para uso exclusivo em Compras Internacionais.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais.")
   public BigDecimal getLimiteInternacionalCompra() {
     return limiteInternacionalCompra;
   }
@@ -339,9 +339,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos saques nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalSaquesNacionais() {
     return totalSaquesNacionais;
   }
@@ -351,9 +351,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador possui para realizar transa\u00C3\u00A7\u00C3\u00B5es Internacionais de Compras Parceladas.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas.")
   public BigDecimal getLimiteInternacionalParcelado() {
     return limiteInternacionalParcelado;
   }
@@ -363,9 +363,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques internacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos saques internacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalSaquesInternacionais() {
     return totalSaquesInternacionais;
   }
@@ -375,9 +375,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
   public BigDecimal getLimiteInternacionalParcelas() {
     return limiteInternacionalParcelas;
   }
@@ -387,9 +387,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosNacionais() {
     return totalDebitosNacionais;
   }
@@ -399,9 +399,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional.")
   public BigDecimal getLimiteInternacionalSaqueGlobal() {
     return limiteInternacionalSaqueGlobal;
   }
@@ -411,9 +411,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosRecorrentes() {
     return totalDebitosRecorrentes;
   }
@@ -423,9 +423,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento.")
   public BigDecimal getLimiteInternacionalSaquePeriodo() {
     return limiteInternacionalSaquePeriodo;
   }
@@ -435,9 +435,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosInternacionais() {
     return totalDebitosInternacionais;
   }
@@ -447,9 +447,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.
+   * Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es.")
+  @ApiModelProperty(required = true, value = "Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es.")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -459,9 +459,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosDiversosNacionais() {
     return totalDebitosDiversosNacionais;
   }
@@ -471,9 +471,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.")
   public BigDecimal getSaldoDisponivelCompra() {
     return saldoDisponivelCompra;
   }
@@ -483,9 +483,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosOpcionais() {
     return totalDebitosOpcionais;
   }
@@ -495,9 +495,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de compra Nacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional.")
   public BigDecimal getSaldoDisponivelParcelado() {
     return saldoDisponivelParcelado;
   }
@@ -507,9 +507,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+   * Valor total dos pagamentos lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos pagamentos lan\u00E7ados na fatura.")
   public BigDecimal getTotalPagamentos() {
     return totalPagamentos;
   }
@@ -519,9 +519,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+   * Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
   public BigDecimal getSaldoDisponivelParcelas() {
     return saldoDisponivelParcelas;
   }
@@ -531,9 +531,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalCreditosNacionais() {
     return totalCreditosNacionais;
   }
@@ -543,9 +543,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos ajustes lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos ajustes lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos ajustes lan\u00E7ados na fatura.")
   public BigDecimal getTotalAjustes() {
     return totalAjustes;
   }
@@ -555,9 +555,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+   * Valor total das tarifas lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das tarifas lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das tarifas lan\u00E7adas na fatura.")
   public BigDecimal getTotalTarifas() {
     return totalTarifas;
   }
@@ -567,9 +567,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total da multa lan\u00C3\u00A7ada na fatura.
+   * Valor total da multa lan\u00E7ada na fatura.
    **/
-  @ApiModelProperty(value = "Valor total da multa lan\u00C3\u00A7ada na fatura.")
+  @ApiModelProperty(value = "Valor total da multa lan\u00E7ada na fatura.")
   public BigDecimal getTotalMulta() {
     return totalMulta;
   }
@@ -579,9 +579,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.
+   * Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Nacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -591,9 +591,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+   * Valor total dos juros de mora lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos juros de mora lan\u00E7ados na fatura.")
   public BigDecimal getTotalJuros() {
     return totalJuros;
   }
@@ -603,9 +603,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.
+   * Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00C3\u00A1 o saldo atual de pontos que o portador possui.")
+  @ApiModelProperty(required = true, value = "Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui.")
   public BigDecimal getSaldoPontosFidelidade() {
     return saldoPontosFidelidade;
   }
@@ -627,9 +627,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.
+   * Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Compra Internacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional.")
   public BigDecimal getSaldoDisponivelCompraInternacional() {
     return saldoDisponivelCompraInternacional;
   }
@@ -651,9 +651,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
+   * Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.
    **/
-  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00C3\u00A1 o valor de cr\u00C3\u00A9dito que o portador possui dispon\u00C3\u00ADvel para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.")
+  @ApiModelProperty(required = true, value = "Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional.")
   public BigDecimal getSaldoDisponivelSaqueInternacional() {
     return saldoDisponivelSaqueInternacional;
   }
@@ -663,9 +663,9 @@ public class FaturaConsignadaDetalheResponse  {
 
   
   /**
-   * Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+   * Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
    **/
-  @ApiModelProperty(value = "Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.")
+  @ApiModelProperty(value = "Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento")
 public class PagePlanoParcelamentoResponse  {
   
   @SerializedName("content")

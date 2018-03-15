@@ -71,9 +71,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+   * C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude")
   public Long getId() {
     return id;
   }
@@ -83,9 +83,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro")
   public Long getIdTipoResolucao() {
     return idTipoResolucao;
   }
@@ -95,9 +95,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro")
   public String getDescricaoTipoResolucao() {
     return descricaoTipoResolucao;
   }
@@ -107,9 +107,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+   * Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
    **/
-  @ApiModelProperty(value = "Indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas")
+  @ApiModelProperty(value = "Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas")
   public Boolean getFlagAltoRisco() {
     return flagAltoRisco;
   }
@@ -119,9 +119,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -131,9 +131,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -143,9 +143,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto
+   * C\u00F3digo de identifica\u00E7\u00E3o do produto
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do produto")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -155,9 +155,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -167,9 +167,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+   * Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
    **/
-  @ApiModelProperty(value = "Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada")
+  @ApiModelProperty(value = "Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada")
   public String getDataTransacao() {
     return dataTransacao;
   }
@@ -179,9 +179,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+   * Valor da transa\u00E7\u00E3o classificada com risco de fraude
    **/
-  @ApiModelProperty(value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude")
+  @ApiModelProperty(value = "Valor da transa\u00E7\u00E3o classificada com risco de fraude")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -191,9 +191,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da moeda de origem utilizada para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o")
   public String getCodigoMoedaOrigem() {
     return codigoMoedaOrigem;
   }
@@ -203,9 +203,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem
+   * Valor da transa\u00E7\u00E3o na moeda de origem
    **/
-  @ApiModelProperty(value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de origem")
+  @ApiModelProperty(value = "Valor da transa\u00E7\u00E3o na moeda de origem")
   public BigDecimal getValorOrigem() {
     return valorOrigem;
   }
@@ -215,9 +215,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da moeda de destino utilizada para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
   }
@@ -227,9 +227,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino
+   * Valor da transa\u00E7\u00E3o na moeda de destino
    **/
-  @ApiModelProperty(value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o na moeda de destino")
+  @ApiModelProperty(value = "Valor da transa\u00E7\u00E3o na moeda de destino")
   public BigDecimal getValorDestino() {
     return valorDestino;
   }
@@ -239,9 +239,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada
+   * Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
    **/
-  @ApiModelProperty(value = "Nome do estabelecimento onde a transa\u00C3\u00A7\u00C3\u00A3o  com risco de fraude foi realizada")
+  @ApiModelProperty(value = "Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -251,9 +251,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pa\u00C3\u00ADs")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs")
   public String getIdPais() {
     return idPais;
   }
@@ -263,9 +263,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o")
   public String getCodigoRespostaAutorizador() {
     return codigoRespostaAutorizador;
   }
@@ -275,9 +275,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da resposta do autorizador para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o")
   public String getDescricaoRespostaAutorizador() {
     return descricaoRespostaAutorizador;
   }
@@ -287,9 +287,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o")
   public String getCodigoRespostaFraude() {
     return codigoRespostaFraude;
   }
@@ -299,9 +299,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da resposta da ferramenta de Preven\u00C3\u00A7\u00C3\u00A3o a Fraude para a transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o")
   public String getDescricaoRespostaFraude() {
     return descricaoRespostaFraude;
   }
@@ -311,9 +311,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)
+   * Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
    **/
-  @ApiModelProperty(value = "Tipo de Terminal que originou a Transa\u00C3\u00A7\u00C3\u00A3o (POS, ATM, TEF, etc)")
+  @ApiModelProperty(value = "Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)")
   public String getOrigemTransacao() {
     return origemTransacao;
   }
@@ -323,9 +323,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o")
   public String getCodigoModoEntradaTerminal() {
     return codigoModoEntradaTerminal;
   }
@@ -335,9 +335,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do modo de origem da captura da Transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o")
   public String getDescricaoModoEntradaTerminal() {
     return descricaoModoEntradaTerminal;
   }
@@ -347,9 +347,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+   * N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica")
+  @ApiModelProperty(value = "N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica")
   public String getCpf() {
     return cpf;
   }
@@ -359,9 +359,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+   * N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica")
+  @ApiModelProperty(value = "N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica")
   public String getCnpj() {
     return cnpj;
   }
@@ -371,9 +371,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+   * Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o")
   public String getEmail() {
     return email;
   }
@@ -383,9 +383,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
+   * Lista de telefones associados ao portador do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "Lista de telefones associados ao portador do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Lista de telefones associados ao portador do Cart\u00E3o")
   public List<TelefoneResponse> getTelefones() {
     return telefones;
   }

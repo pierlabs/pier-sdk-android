@@ -32,9 +32,9 @@ public class DispositivoPersist  {
 
   
   /**
-   * Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o identificador da aplica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o identificador da aplica\u00E7\u00E3o.")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
   }
@@ -44,9 +44,9 @@ public class DispositivoPersist  {
 
   
   /**
-   * Apresenta o identificador do usu\u00C3\u00A1rio.
+   * Apresenta o identificador do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Apresenta o identificador do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Apresenta o identificador do usu\u00E1rio.")
   public Long getIdUsuario() {
     return idUsuario;
   }

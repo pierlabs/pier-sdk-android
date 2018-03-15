@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+ * Representa\u00E7\u00E3o do tipo de template.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
+@ApiModel(description = "Representa\u00E7\u00E3o do tipo de template.")
 public class TipoTemplateRequest  {
   
   @SerializedName("nome")
@@ -32,9 +32,9 @@ public class TipoTemplateRequest  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+   * Descri\u00E7\u00E3o do tipo de template.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de template.")
   public String getDescricao() {
     return descricao;
   }

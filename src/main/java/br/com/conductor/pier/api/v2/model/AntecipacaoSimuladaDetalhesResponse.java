@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
+ * Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada")
 public class AntecipacaoSimuladaDetalhesResponse  {
   
   @SerializedName("quantidadeParcelas")
@@ -59,9 +59,9 @@ public class AntecipacaoSimuladaDetalhesResponse  {
 
   
   /**
-   * Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.
+   * Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
    **/
-  @ApiModelProperty(value = "Valor total da parcela ap\u00C3\u00B3s a aplica\u00C3\u00A7\u00C3\u00A3o do desconto.")
+  @ApiModelProperty(value = "Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.")
   public BigDecimal getValorParcelasDesconto() {
     return valorParcelasDesconto;
   }

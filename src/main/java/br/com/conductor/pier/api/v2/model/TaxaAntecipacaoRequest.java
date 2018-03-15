@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
  **/
-@ApiModel(description = "Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o")
 public class TaxaAntecipacaoRequest  {
   
   public enum TipoTransacaoEnum {
@@ -22,9 +22,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+   * C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.")
+  @ApiModelProperty(value = "C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
   }
@@ -34,9 +34,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+   * Valor da Taxa de Antecipa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Valor da Taxa de Antecipa\u00E7\u00E3o.")
   public BigDecimal getValorTaxa() {
     return valorTaxa;
   }

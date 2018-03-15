@@ -31,9 +31,9 @@ public class FaqResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class FaqResponse  {
 
   
   /**
-   * Conte\u00C3\u00BAdo da pergunta.
+   * Conte\u00FAdo da pergunta.
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo da pergunta.")
+  @ApiModelProperty(value = "Conte\u00FAdo da pergunta.")
   public String getPergunta() {
     return pergunta;
   }
@@ -55,9 +55,9 @@ public class FaqResponse  {
 
   
   /**
-   * Conte\u00C3\u00BAdo da resposta.
+   * Conte\u00FAdo da resposta.
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo da resposta.")
+  @ApiModelProperty(value = "Conte\u00FAdo da resposta.")
   public String getResposta() {
     return resposta;
   }
@@ -67,9 +67,9 @@ public class FaqResponse  {
 
   
   /**
-   * N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+   * N\u00EDvel de relev\u00E2ncia da pergunta.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.")
+  @ApiModelProperty(value = "N\u00EDvel de relev\u00E2ncia da pergunta.")
   public Integer getRelevancia() {
     return relevancia;
   }
@@ -103,9 +103,9 @@ public class FaqResponse  {
 
   
   /**
-   * Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
    **/
-  @ApiModelProperty(value = "Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.")
+  @ApiModelProperty(value = "Status descrevendo a situa\u00E7\u00E3o atual da FAQ.")
   public StatusEnum getStatus() {
     return status;
   }

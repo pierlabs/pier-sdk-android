@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
+ * Representa\u00E7\u00E3o do recurso Usuario
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario")
 public class UsuarioResponse  {
   
   @SerializedName("id")
@@ -37,9 +37,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Id do Usu\u00C3\u00A1rio
+   * Id do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Id do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Id do Usu\u00E1rio")
   public Long getId() {
     return id;
   }
@@ -49,9 +49,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Nome do Usu\u00C3\u00A1rio
+   * Nome do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Nome do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Nome do Usu\u00E1rio")
   public String getNome() {
     return nome;
   }
@@ -61,9 +61,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Login do Usu\u00C3\u00A1rio
+   * Login do Usu\u00E1rio
    **/
-  @ApiModelProperty(required = true, value = "Login do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(required = true, value = "Login do Usu\u00E1rio")
   public String getLogin() {
     return login;
   }
@@ -73,9 +73,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Id do emissor do usu\u00C3\u00A1rio
+   * Id do emissor do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Id do emissor do usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Id do emissor do usu\u00E1rio")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -85,9 +85,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * CPF do Usu\u00C3\u00A1rio
+   * CPF do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "CPF do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "CPF do Usu\u00E1rio")
   public String getCpf() {
     return cpf;
   }
@@ -97,9 +97,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Email do Usu\u00C3\u00A1rio
+   * Email do Usu\u00E1rio
    **/
-  @ApiModelProperty(required = true, value = "Email do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(required = true, value = "Email do Usu\u00E1rio")
   public String getEmail() {
     return email;
   }
@@ -109,9 +109,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Status do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Status do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Status do Usu\u00E1rio")
   public StatusEnum getStatus() {
     return status;
   }
@@ -121,9 +121,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+   * Data de cria\u00E7\u00E3o do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Data de cria\u00E7\u00E3o do Usu\u00E1rio")
   public String getDataCriacao() {
     return dataCriacao;
   }
@@ -133,9 +133,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
+   * Data de modifica\u00E7\u00E3o do Usu\u00E1rio
    **/
-  @ApiModelProperty(value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Data de modifica\u00E7\u00E3o do Usu\u00E1rio")
   public String getDataModificacao() {
     return dataModificacao;
   }
@@ -145,9 +145,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
+   * N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas")
+  @ApiModelProperty(value = "N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas")
   public Long getTentativasIncorretas() {
     return tentativasIncorretas;
   }

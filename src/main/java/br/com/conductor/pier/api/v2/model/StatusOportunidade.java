@@ -32,9 +32,9 @@ public class StatusOportunidade  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
+   * Descri\u00E7\u00E3o do status oportunidade
    **/
-  @ApiModelProperty(required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade")
+  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do status oportunidade")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class StatusOportunidade  {
 
   
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+   * Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
    **/
-  @ApiModelProperty(required = true, value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(required = true, value = "Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

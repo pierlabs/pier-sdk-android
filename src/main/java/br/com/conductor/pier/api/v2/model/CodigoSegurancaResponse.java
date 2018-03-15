@@ -26,9 +26,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -50,9 +50,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+   * Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
    **/
-  @ApiModelProperty(value = "Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.")
+  @ApiModelProperty(value = "Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.")
   public String getModoEnvio() {
     return modoEnvio;
   }
@@ -62,9 +62,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o contato do c\u00F3digo de seguran\u00E7a.
    **/
-  @ApiModelProperty(value = "Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(value = "Apresenta o contato do c\u00F3digo de seguran\u00E7a.")
   public String getContato() {
     return contato;
   }
@@ -74,9 +74,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o status do c\u00F3digo de seguran\u00E7a.
    **/
-  @ApiModelProperty(value = "Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(value = "Apresenta o status do c\u00F3digo de seguran\u00E7a.")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -86,9 +86,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+   * Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
    **/
-  @ApiModelProperty(value = "Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.")
+  @ApiModelProperty(value = "Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.")
   public String getDataValidade() {
     return dataValidade;
   }

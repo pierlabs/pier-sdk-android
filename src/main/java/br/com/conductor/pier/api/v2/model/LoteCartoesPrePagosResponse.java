@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
+ * Lote Cart\u00F5es Pr\u00E9-Pagos
  **/
-@ApiModel(description = "Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos")
+@ApiModel(description = "Lote Cart\u00F5es Pr\u00E9-Pagos")
 public class LoteCartoesPrePagosResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id).")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da origem comercial.
+   * C\u00F3digo identificador da origem comercial.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da origem comercial.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da origem comercial.")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -60,9 +60,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do Produto.
+   * C\u00F3digo identificador do Produto.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do Produto.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do Produto.")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -72,9 +72,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.
+   * C\u00F3digo identificador do tipo do cart\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do tipo do cart\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do tipo do cart\u00E3o.")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -84,9 +84,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.
+   * C\u00F3digo identificador da Imagem do cart\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da Imagem do cart\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da Imagem do cart\u00E3o.")
   public Long getIdImagem() {
     return idImagem;
   }
@@ -96,9 +96,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.")
   public Long getIdEndereco() {
     return idEndereco;
   }
@@ -108,9 +108,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+   * N\u00FAmero de cart\u00F5es existentes no Lote.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero de cart\u00F5es existentes no Lote.")
   public Integer getQuantidade() {
     return quantidade;
   }
@@ -120,9 +120,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
+   * Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.
    **/
-  @ApiModelProperty(required = true, value = "Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.")
+  @ApiModelProperty(required = true, value = "Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos.")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -132,9 +132,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio que criou o lote.
+   * Nome do usu\u00E1rio que criou o lote.
    **/
-  @ApiModelProperty(required = true, value = "Nome do usu\u00C3\u00A1rio que criou o lote.")
+  @ApiModelProperty(required = true, value = "Nome do usu\u00E1rio que criou o lote.")
   public String getUsuarioCadastro() {
     return usuarioCadastro;
   }
@@ -156,9 +156,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+   * N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).")
+  @ApiModelProperty(required = true, value = "N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor).")
   public String getIdentificadorExterno() {
     return identificadorExterno;
   }

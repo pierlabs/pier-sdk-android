@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta")
 public class TransacaoPayQueryRequest  {
   
   @SerializedName("numeroCartao")
@@ -35,9 +35,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Id do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Id do cart\u00E3o")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -59,9 +59,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * Tipo de ordena\u00E7\u00E3o dos registros.
    **/
-  @ApiModelProperty(value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  @ApiModelProperty(value = "Tipo de ordena\u00E7\u00E3o dos registros.")
   public List<String> getSort() {
     return sort;
   }

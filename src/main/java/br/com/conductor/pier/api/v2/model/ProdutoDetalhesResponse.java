@@ -26,9 +26,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+   * Descri\u00E7\u00E3o do Nome do Produto.
    **/
-  @ApiModelProperty(required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.")
+  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do Nome do Produto.")
   public String getNome() {
     return nome;
   }
@@ -62,9 +62,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
   }
@@ -74,9 +74,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.
+   * Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.")
   public String getFantasiaBasica() {
     return fantasiaBasica;
   }
@@ -86,9 +86,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+   * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
    **/
-  @ApiModelProperty(value = "Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.")
+  @ApiModelProperty(value = "Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.")
   public Boolean getUsoExterior() {
     return usoExterior;
   }

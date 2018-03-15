@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+ * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.")
 public class CodigoSegurancaEMAILPersist  {
   
   @SerializedName("email")
@@ -18,9 +18,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
    **/
-  @ApiModelProperty(value = "E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(value = "E-mail usado para envio do c\u00F3digo de seguran\u00E7a.")
   public String getEmail() {
     return email;
   }
@@ -30,9 +30,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * Token para valida\u00C3\u00A7\u00C3\u00A3o.
+   * Token para valida\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Token para valida\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Token para valida\u00E7\u00E3o.")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
   }

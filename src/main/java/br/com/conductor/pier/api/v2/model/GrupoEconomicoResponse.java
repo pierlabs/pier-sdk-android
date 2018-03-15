@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
+ * Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico")
 public class GrupoEconomicoResponse  {
   
   @SerializedName("id")
@@ -58,6 +58,8 @@ public class GrupoEconomicoResponse  {
   private Integer pagamentoQuinzenalPrimeiro = null;
   @SerializedName("pagamentoQuinzenalSegundo")
   private Integer pagamentoQuinzenalSegundo = null;
+  @SerializedName("idCredorRAV")
+  private Long idCredorRAV = null;
   @SerializedName("percentualRAV")
   private BigDecimal percentualRAV = null;
   public enum RecebeRAVEnum {
@@ -76,9 +78,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+   * C\u00F3digo identificador do grupo econ\u00F4mico
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico")
+  @ApiModelProperty(value = "C\u00F3digo identificador do grupo econ\u00F4mico")
   public Long getId() {
     return id;
   }
@@ -88,9 +90,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * Raz\u00E3o social da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica")
+  @ApiModelProperty(value = "Raz\u00E3o social da pessoa jur\u00EDdica")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -112,9 +114,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da Receita Federal
+   * N\u00FAmero da Receita Federal
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Receita Federal")
+  @ApiModelProperty(value = "N\u00FAmero da Receita Federal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -124,9 +126,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * N\u00FAmero da inscri\u00E7\u00E3o estadual
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual")
+  @ApiModelProperty(value = "N\u00FAmero da inscri\u00E7\u00E3o estadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -148,9 +150,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do banco")
+  @ApiModelProperty(value = "C\u00F3digo do banco")
   public Integer getBanco() {
     return banco;
   }
@@ -160,9 +162,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+   * C\u00F3digo da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da ag\u00C3\u00AAncia")
+  @ApiModelProperty(value = "C\u00F3digo da ag\u00EAncia")
   public Integer getAgencia() {
     return agencia;
   }
@@ -172,9 +174,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+   * D\u00EDgito verificador da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia")
+  @ApiModelProperty(value = "D\u00EDgito verificador da ag\u00EAncia")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -184,9 +186,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo da Conta Corrente
+   * C\u00F3digo da Conta Corrente
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da Conta Corrente")
+  @ApiModelProperty(value = "C\u00F3digo da Conta Corrente")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -196,9 +198,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito Verificador da Conta Corrente
+   * D\u00EDgito Verificador da Conta Corrente
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito Verificador da Conta Corrente")
+  @ApiModelProperty(value = "D\u00EDgito Verificador da Conta Corrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -208,9 +210,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+   * Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Login do usu\u00E1rio para registro da inser\u00E7\u00E3o")
   public String getUsuario() {
     return usuario;
   }
@@ -316,6 +318,18 @@ public class GrupoEconomicoResponse  {
 
   
   /**
+   * Identificador do credor RAV
+   **/
+  @ApiModelProperty(value = "Identificador do credor RAV")
+  public Long getIdCredorRAV() {
+    return idCredorRAV;
+  }
+  public void setIdCredorRAV(Long idCredorRAV) {
+    this.idCredorRAV = idCredorRAV;
+  }
+
+  
+  /**
    * Valor percentual do RAV do credor
    **/
   @ApiModelProperty(value = "Valor percentual do RAV do credor")
@@ -413,6 +427,7 @@ public class GrupoEconomicoResponse  {
     sb.append("  pagamentoDecendialTerceiro: ").append(pagamentoDecendialTerceiro).append("\n");
     sb.append("  pagamentoQuinzenalPrimeiro: ").append(pagamentoQuinzenalPrimeiro).append("\n");
     sb.append("  pagamentoQuinzenalSegundo: ").append(pagamentoQuinzenalSegundo).append("\n");
+    sb.append("  idCredorRAV: ").append(idCredorRAV).append("\n");
     sb.append("  percentualRAV: ").append(percentualRAV).append("\n");
     sb.append("  recebeRAV: ").append(recebeRAV).append("\n");
     sb.append("  percentualMultiplica: ").append(percentualMultiplica).append("\n");

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+ * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o")
 public class CartaoPayPersist  {
   
   @SerializedName("numeroCartao")
@@ -26,9 +26,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado
+   * N\u00FAmero do cart\u00E3o criptografado
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do cart\u00E3o criptografado")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -38,9 +38,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Data de validade do cart\u00C3\u00A3o
+   * Data de validade do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Data de validade do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Data de validade do cart\u00E3o")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -50,9 +50,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * CVV do cart\u00C3\u00A3o criptografado
+   * CVV do cart\u00E3o criptografado
    **/
-  @ApiModelProperty(value = "CVV do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(value = "CVV do cart\u00E3o criptografado")
   public String getCvv() {
     return cvv;
   }
@@ -62,9 +62,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * CPF do portador do cart\u00C3\u00A3o criptografado
+   * CPF do portador do cart\u00E3o criptografado
    **/
-  @ApiModelProperty(value = "CPF do portador do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(value = "CPF do portador do cart\u00E3o criptografado")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -74,9 +74,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Nome impresso no cart\u00C3\u00A3o criptografado
+   * Nome impresso no cart\u00E3o criptografado
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(value = "Nome impresso no cart\u00E3o criptografado")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -86,9 +86,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Chave p\u00C3\u00BAblica do dispositivo criptografada
+   * Chave p\u00FAblica do dispositivo criptografada
    **/
-  @ApiModelProperty(required = true, value = "Chave p\u00C3\u00BAblica do dispositivo criptografada")
+  @ApiModelProperty(required = true, value = "Chave p\u00FAblica do dispositivo criptografada")
   public String getChavePublicaDevice() {
     return chavePublicaDevice;
   }

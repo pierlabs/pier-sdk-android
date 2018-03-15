@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+ * Representa\u00E7\u00E3o do template do documento.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.")
+@ApiModel(description = "Representa\u00E7\u00E3o do template do documento.")
 public class DocumentoTemplatePersist  {
   
   @SerializedName("idTipoTemplate")
@@ -34,9 +34,9 @@ public class DocumentoTemplatePersist  {
 
   
   /**
-   * Template para o conte\u00C3\u00BAdo do documento.
+   * Template para o conte\u00FAdo do documento.
    **/
-  @ApiModelProperty(value = "Template para o conte\u00C3\u00BAdo do documento.")
+  @ApiModelProperty(value = "Template para o conte\u00FAdo do documento.")
   public String getTemplate() {
     return template;
   }
@@ -46,9 +46,9 @@ public class DocumentoTemplatePersist  {
 
   
   /**
-   * Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+   * Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o")
   public List<ReferenciaIdPersist> getIntegracoes() {
     return integracoes;
   }

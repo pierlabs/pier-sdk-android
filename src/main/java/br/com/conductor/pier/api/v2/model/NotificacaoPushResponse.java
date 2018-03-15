@@ -54,9 +54,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -66,9 +66,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Nome do tipoEvento da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Nome do tipoEvento da notifica\u00E7\u00E3o")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -78,9 +78,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Status de envio da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Status de envio da notifica\u00E7\u00E3o")
   public StatusEnum getStatus() {
     return status;
   }
@@ -90,9 +90,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificado da pessoa")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -102,9 +102,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -114,9 +114,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+   * Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
    **/
-  @ApiModelProperty(required = true, value = "Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)")
+  @ApiModelProperty(required = true, value = "Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)")
   public String getTokenDispositivo() {
     return tokenDispositivo;
   }
@@ -126,9 +126,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * T\u00EDtulo da notifica\u00E7\u00E3o enviada.
    **/
-  @ApiModelProperty(required = true, value = "T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.")
+  @ApiModelProperty(required = true, value = "T\u00EDtulo da notifica\u00E7\u00E3o enviada.")
   public String getTitulo() {
     return titulo;
   }
@@ -138,9 +138,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
    **/
-  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.")
+  @ApiModelProperty(required = true, value = "Conte\u00FAdo da notifica\u00E7\u00E3o enviada.")
   public String getConteudo() {
     return conteudo;
   }
@@ -162,9 +162,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es")
+  @ApiModelProperty(value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
   public String getProtocolo() {
     return protocolo;
   }

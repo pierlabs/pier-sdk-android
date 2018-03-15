@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos
+ * Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos")
+@ApiModel(description = "Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos")
 public class HistoricoEventosResponse  {
   
   @SerializedName("idHistorico")
@@ -24,9 +24,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do evento")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do evento")
   public Long getIdHistorico() {
     return idHistorico;
   }
@@ -60,9 +60,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor anterior a modifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Valor anterior a modifica\u00E7\u00E3o")
   public String getValorAnterior() {
     return valorAnterior;
   }
@@ -72,9 +72,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor atribu\u00EDdo na modifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Valor atribu\u00EDdo na modifica\u00E7\u00E3o")
   public String getValorAtribuido() {
     return valorAtribuido;
   }

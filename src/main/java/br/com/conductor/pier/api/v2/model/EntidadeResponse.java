@@ -20,9 +20,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da entidade.")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * Descri\u00E7\u00E3o da entidade.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o da entidade.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da entidade.")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * Flag que indica se a entidade est\u00C3\u00A1 ativa.
+   * Flag que indica se a entidade est\u00E1 ativa.
    **/
-  @ApiModelProperty(value = "Flag que indica se a entidade est\u00C3\u00A1 ativa.")
+  @ApiModelProperty(value = "Flag que indica se a entidade est\u00E1 ativa.")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

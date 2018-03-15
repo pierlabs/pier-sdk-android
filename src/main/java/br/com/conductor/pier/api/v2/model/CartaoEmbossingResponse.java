@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Cart\u00C3\u00A3o para Impress\u00C3\u00A3o pela Gr\u00C3\u00A1fica
+ * Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
  **/
-@ApiModel(description = "Objeto Cart\u00C3\u00A3o para Impress\u00C3\u00A3o pela Gr\u00C3\u00A1fica")
+@ApiModel(description = "Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica")
 public class CartaoEmbossingResponse  {
   
   @SerializedName("flagVirtual")
@@ -34,9 +34,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
    **/
-  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual ")
+  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual ")
   public Integer getFlagVirtual() {
     return flagVirtual;
   }
@@ -46,9 +46,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
   public Long getIdConta() {
     return idConta;
   }
@@ -58,9 +58,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -70,9 +70,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -82,9 +82,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.")
   public Long getIdBandeira() {
     return idBandeira;
   }
@@ -94,9 +94,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -106,9 +106,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta a data de emiss\u00E3o do Cart\u00E3o.")
   public String getDataGeracao() {
     return dataGeracao;
   }
@@ -118,9 +118,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00C3\u00A3o.
+   * Apresenta a data de Validade do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00E3o.")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -130,9 +130,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.
+   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
    **/
-  @ApiModelProperty(value = "Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00C3\u00A3o pertence.")
+  @ApiModelProperty(value = "Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -142,9 +142,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o CPF do Portador do Cart\u00C3\u00A3o.
+   * Apresenta o CPF do Portador do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o CPF do Portador do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o CPF do Portador do Cart\u00E3o.")
   public String getCpf() {
     return cpf;
   }

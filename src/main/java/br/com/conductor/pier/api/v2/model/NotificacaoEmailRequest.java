@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
+ * Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.")
 public class NotificacaoEmailRequest  {
   
   @SerializedName("idTemplateNotificacao")
@@ -25,9 +25,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * ID para o template da notifica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "ID para o template da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "ID para o template da notifica\u00E7\u00E3o.")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
   }
@@ -37,9 +37,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
+   * Lista de email(s) do(s) destinat\u00E1rio(s).
    **/
-  @ApiModelProperty(value = "Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).")
+  @ApiModelProperty(value = "Lista de email(s) do(s) destinat\u00E1rio(s).")
   public List<String> getDestinatarios() {
     return destinatarios;
   }
@@ -61,9 +61,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Mapa de par\u00C3\u00A2metros para montagem da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.")
   public Map<String, Object> getParametrosConteudo() {
     return parametrosConteudo;
   }

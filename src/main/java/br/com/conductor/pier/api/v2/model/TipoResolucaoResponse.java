@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta de Tipo Resolu\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de resposta de Tipo Resolu\u00E7\u00E3o
  **/
-@ApiModel(description = "Objeto de resposta de Tipo Resolu\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de resposta de Tipo Resolu\u00E7\u00E3o")
 public class TipoResolucaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoResolucaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoResolucaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
   public String getDescricao() {
     return descricao;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
-@ApiModel(description = "Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias")
+@ApiModel(description = "Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 public class TransferenciaCreditoContaBancariaResponse  {
   
   @SerializedName("idTransferencia")
@@ -77,9 +77,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.
+   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transferencia.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transferencia.")
   public Long getIdTransferencia() {
     return idTransferencia;
   }
@@ -101,9 +101,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da autoriza\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o.")
   public Long getIdAutorizacao() {
     return idAutorizacao;
   }
@@ -113,9 +113,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo da autoriza\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo da autoriza\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo da autoriza\u00E7\u00E3o.")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -137,9 +137,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
   public Long getIdConta() {
     return idConta;
   }
@@ -149,9 +149,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -161,9 +161,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de opera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o.")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -173,9 +173,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da transfer\u00C3\u00AAncia.
+   * Valor da transfer\u00EAncia.
    **/
-  @ApiModelProperty(value = "Valor da transfer\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "Valor da transfer\u00EAncia.")
   public BigDecimal getValorCompra() {
     return valorCompra;
   }
@@ -197,9 +197,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
    **/
-  @ApiModelProperty(value = "Valor da transfer\u00C3\u00AAncia acrescido do valor da tarifa de saque se houver tarifa de saque.")
+  @ApiModelProperty(value = "Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.")
   public BigDecimal getValorContrato() {
     return valorContrato;
   }
@@ -209,9 +209,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas.
+   * N\u00FAmero de parcelas.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas.")
+  @ApiModelProperty(value = "N\u00FAmero de parcelas.")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -269,9 +269,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data da transfer\u00C3\u00AAncia.
+   * Data da transfer\u00EAncia.
    **/
-  @ApiModelProperty(value = "Data da transfer\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "Data da transfer\u00EAncia.")
   public String getDataCompra() {
     return dataCompra;
   }
@@ -305,9 +305,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura.
+   * Dia do vencimento padr\u00E3o da fatura.
    **/
-  @ApiModelProperty(value = "Dia do vencimento padr\u00C3\u00A3o da fatura.")
+  @ApiModelProperty(value = "Dia do vencimento padr\u00E3o da fatura.")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
   }
@@ -317,9 +317,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data da autoriza\u00C3\u00A7\u00C3\u00A3o.
+   * Data da autoriza\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Data da autoriza\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data da autoriza\u00E7\u00E3o.")
   public String getDataAutorizacao() {
     return dataAutorizacao;
   }
@@ -329,9 +329,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do Banco.")
+  @ApiModelProperty(value = "C\u00F3digo do Banco.")
   public Long getBanco() {
     return banco;
   }
@@ -341,9 +341,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da Ag\u00C3\u00AAncia.
+   * N\u00FAmero da Ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "N\u00FAmero da Ag\u00EAncia.")
   public String getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -353,9 +353,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito da Ag\u00C3\u00AAncia.
+   * D\u00EDgito da Ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito da Ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "D\u00EDgito da Ag\u00EAncia.")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -365,9 +365,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da Conta.
+   * N\u00FAmero da Conta.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da Conta.")
+  @ApiModelProperty(value = "N\u00FAmero da Conta.")
   public String getNumeroConta() {
     return numeroConta;
   }
@@ -377,9 +377,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito da Conta.
+   * D\u00EDgito da Conta.
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito da Conta.")
+  @ApiModelProperty(value = "D\u00EDgito da Conta.")
   public String getDigitoConta() {
     return digitoConta;
   }
@@ -425,9 +425,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do Status
+   * C\u00F3digo do Status
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do Status")
+  @ApiModelProperty(value = "C\u00F3digo do Status")
   public String getStatus() {
     return status;
   }

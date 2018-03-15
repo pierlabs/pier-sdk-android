@@ -61,9 +61,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+   * Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)
    **/
-  @ApiModelProperty(value = "Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)")
+  @ApiModelProperty(value = "Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default = false)")
   public Boolean getFlagIndice() {
     return flagIndice;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Cart\u00C3\u00A3o para Impresso
+ * Objeto Cart\u00E3o para Impresso
  **/
-@ApiModel(description = "Objeto Cart\u00C3\u00A3o para Impresso")
+@ApiModel(description = "Objeto Cart\u00E3o para Impresso")
 public class DadosCartaoImpressaoResponse  {
   
   @SerializedName("idConta")
@@ -105,12 +105,14 @@ public class DadosCartaoImpressaoResponse  {
   private String uf = null;
   @SerializedName("pais")
   private String pais = null;
+  @SerializedName("senhaCriptografada")
+  private String senhaCriptografada = null;
 
   
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.")
+  @ApiModelProperty(value = "O C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
   public Long getIdConta() {
     return idConta;
   }
@@ -120,9 +122,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.")
+  @ApiModelProperty(value = "O C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -132,9 +134,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.")
+  @ApiModelProperty(value = "O C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -144,9 +146,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Bandeira (id) a qual o Cart\u00C3\u00A3o pertence, quando bandeirado.")
+  @ApiModelProperty(value = "O C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.")
   public Long getIdBandeira() {
     return idBandeira;
   }
@@ -156,9 +158,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.
+   * O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id) atribu\u00C3\u00ADdo ao Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "O C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -168,9 +170,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * O n\u00FAmero do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "O n\u00C3\u00BAmero do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "O n\u00FAmero do cart\u00E3o.")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -180,9 +182,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O nome do Portador do Cart\u00C3\u00A3o.
+   * O nome do Portador do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "O nome do Portador do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "O nome do Portador do Cart\u00E3o.")
   public String getNomePlastico() {
     return nomePlastico;
   }
@@ -192,9 +194,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o
+   * O n\u00FAmero do CVV a ser impresso no Cart\u00E3o
    **/
-  @ApiModelProperty(value = "O n\u00C3\u00BAmero do CVV a ser impresso no Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "O n\u00FAmero do CVV a ser impresso no Cart\u00E3o")
   public String getCvv2() {
     return cvv2;
   }
@@ -204,9 +206,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
+   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta a data de emiss\u00E3o do Cart\u00E3o.")
   public String getDataGeracao() {
     return dataGeracao;
   }
@@ -216,9 +218,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00C3\u00A3o.
+   * Apresenta a data de Validade do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00E3o.")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -228,9 +230,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O CPF do Portador do Cart\u00C3\u00A3o.
+   * O CPF do Portador do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "O CPF do Portador do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "O CPF do Portador do Cart\u00E3o.")
   public String getCpf() {
     return cpf;
   }
@@ -240,9 +242,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
+   * O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
    **/
-  @ApiModelProperty(value = "O tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).")
+  @ApiModelProperty(value = "O tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).")
   public String getTipoPortador() {
     return tipoPortador;
   }
@@ -300,9 +302,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   * O status que informa se o cart\u00E3o \u00E9 virtual 
    **/
-  @ApiModelProperty(value = "O status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual ")
+  @ApiModelProperty(value = "O status que informa se o cart\u00E3o \u00E9 virtual ")
   public Integer getFlagVirtual() {
     return flagVirtual;
   }
@@ -336,9 +338,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o
+   * C\u00F3digo Sequencial do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo Sequencial do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo Sequencial do Cart\u00E3o")
   public Integer getSequencialCartao() {
     return sequencialCartao;
   }
@@ -348,9 +350,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Identificador do Status do Cart\u00C3\u00A3o
+   * Identificador do Status do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "Identificador do Status do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Identificador do Status do Cart\u00E3o")
   public Long getIdStatus() {
     return idStatus;
   }
@@ -360,9 +362,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do Status do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Status do Cart\u00E3o")
   public String getDescricaoStatusCartao() {
     return descricaoStatusCartao;
   }
@@ -372,9 +374,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.")
   public String getDataStatus() {
     return dataStatus;
   }
@@ -384,9 +386,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.
+   * Identificador do Est\u00E1gio do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Identificador do Est\u00C3\u00A1gio do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Identificador do Est\u00E1gio do Cart\u00E3o.")
   public Long getIdEstagio() {
     return idEstagio;
   }
@@ -396,9 +398,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Estagio do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Estagio do Cart\u00E3o.")
   public String getDescricaoEstagio() {
     return descricaoEstagio;
   }
@@ -408,9 +410,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  @ApiModelProperty(value = "Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver.")
   public String getDataEstagio() {
     return dataEstagio;
   }
@@ -420,9 +422,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o
+   * N\u00FAmero do Bin do Cart\u00E3o
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do Bin do Cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "N\u00FAmero do Bin do Cart\u00E3o")
   public String getNumeroBin() {
     return numeroBin;
   }
@@ -444,9 +446,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do produto
+   * Descri\u00E7\u00E3o do produto
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do produto")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do produto")
   public String getDescricaoProduto() {
     return descricaoProduto;
   }
@@ -468,9 +470,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public Long getDescricaoStatusConta() {
     return descricaoStatusConta;
   }
@@ -480,9 +482,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Data que o cart\u00C3\u00A3o foi embossado
+   * Data que o cart\u00E3o foi embossado
    **/
-  @ApiModelProperty(value = "Data que o cart\u00C3\u00A3o foi embossado")
+  @ApiModelProperty(value = "Data que o cart\u00E3o foi embossado")
   public String getDataEmbossing() {
     return dataEmbossing;
   }
@@ -492,9 +494,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o
+   * C\u00F3digo de desbloqueio do cart\u00E3o
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de desbloqueio do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "C\u00F3digo de desbloqueio do cart\u00E3o")
   public String getCodigoDesbloqueio() {
     return codigoDesbloqueio;
   }
@@ -504,9 +506,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    **/
-  @ApiModelProperty(value = "O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @ApiModelProperty(value = "O 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.")
   public String getNomePessoa() {
     return nomePessoa;
   }
@@ -516,9 +518,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00C3\u00ADsica), (\"PJ\": Pessoa Jur\u00C3\u00ADdica).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\"PF\": Pessoa F\u00EDsica), (\"PJ\": Pessoa Jur\u00EDdica).")
   public String getTipoPessoa() {
     return tipoPessoa;
   }
@@ -540,9 +542,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o
+   * Identificador do Endere\u00E7o do titular do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Identificador do Endere\u00C3\u00A7o do titular do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Identificador do Endere\u00E7o do titular do cart\u00E3o")
   public Long getIdEndereco() {
     return idEndereco;
   }
@@ -552,9 +554,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -564,9 +566,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o
+   * Descri\u00E7\u00E3o do Tipo de Endere\u00E7o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo de Endere\u00E7o")
   public String getDescricaoTipoEndereco() {
     return descricaoTipoEndereco;
   }
@@ -576,9 +578,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   * O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
    **/
-  @ApiModelProperty(value = "O C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
+  @ApiModelProperty(value = "O C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'")
   public String getCep() {
     return cep;
   }
@@ -600,9 +602,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * N\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o")
   public String getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -612,9 +614,9 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * Descri\u00E7oes complementares referente ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Descri\u00E7oes complementares referente ao endere\u00E7o")
   public String getComplementoEndereco() {
     return complementoEndereco;
   }
@@ -660,14 +662,26 @@ public class DadosCartaoImpressaoResponse  {
 
   
   /**
-   * Nome do pa\u00C3\u00ADs
+   * Nome do pa\u00EDs
    **/
-  @ApiModelProperty(value = "Nome do pa\u00C3\u00ADs")
+  @ApiModelProperty(value = "Nome do pa\u00EDs")
   public String getPais() {
     return pais;
   }
   public void setPais(String pais) {
     this.pais = pais;
+  }
+
+  
+  /**
+   * Senha Criptografada
+   **/
+  @ApiModelProperty(value = "Senha Criptografada")
+  public String getSenhaCriptografada() {
+    return senhaCriptografada;
+  }
+  public void setSenhaCriptografada(String senhaCriptografada) {
+    this.senhaCriptografada = senhaCriptografada;
   }
 
   
@@ -724,6 +738,7 @@ public class DadosCartaoImpressaoResponse  {
     sb.append("  cidade: ").append(cidade).append("\n");
     sb.append("  uf: ").append(uf).append("\n");
     sb.append("  pais: ").append(pais).append("\n");
+    sb.append("  senhaCriptografada: ").append(senhaCriptografada).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

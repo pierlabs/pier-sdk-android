@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Arquivo para persist\u00C3\u00AAncia de dados.
+ * Objeto Arquivo para persist\u00EAncia de dados.
  **/
-@ApiModel(description = "Objeto Arquivo para persist\u00C3\u00AAncia de dados.")
+@ApiModel(description = "Objeto Arquivo para persist\u00EAncia de dados.")
 public class ArquivoPersist  {
   
   @SerializedName("idTipoArquivo")
@@ -43,9 +43,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    **/
-  @ApiModelProperty(required = true, value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(required = true, value = "Conte\u00FAdo do arquivo convertido em Base 64")
   public String getArquivo() {
     return arquivo;
   }
@@ -67,9 +67,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * Formato/extens\u00C3\u00A3o do arquivo.
+   * Formato/extens\u00E3o do arquivo.
    **/
-  @ApiModelProperty(value = "Formato/extens\u00C3\u00A3o do arquivo.")
+  @ApiModelProperty(value = "Formato/extens\u00E3o do arquivo.")
   public String getExtensao() {
     return extensao;
   }
@@ -79,9 +79,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo de comunica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Tipo de comunica\u00E7\u00E3o.")
   public TipoComunicacaoEnum getTipoComunicacao() {
     return tipoComunicacao;
   }
@@ -91,9 +91,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
    **/
-  @ApiModelProperty(required = true, value = "Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo")
+  @ApiModelProperty(required = true, value = "Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo")
   public List<ArquivoDetalhesPersist> getDetalhes() {
     return detalhes;
   }

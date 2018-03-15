@@ -54,9 +54,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo Identificador.
+   * C\u00F3digo Identificador.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo Identificador.")
+  @ApiModelProperty(value = "C\u00F3digo Identificador.")
   public Long getId() {
     return id;
   }
@@ -66,9 +66,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.
+   * N\u00FAmero sequencial \u00FAnico.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero sequencial \u00C3\u00BAnico.")
+  @ApiModelProperty(value = "N\u00FAmero sequencial \u00FAnico.")
   public Long getNsu() {
     return nsu;
   }
@@ -78,9 +78,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -90,9 +90,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
+   * TipoEvento de notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(value = "TipoEvento de notifica\u00E7\u00E3o")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -102,9 +102,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Status de envio da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Status de envio da notifica\u00E7\u00E3o")
   public StatusEnum getStatus() {
     return status;
   }
@@ -114,9 +114,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -126,9 +126,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificado da pessoa")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -138,9 +138,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -174,9 +174,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado")
+  @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00E7\u00E3o a ser enviado")
   public String getConteudo() {
     return conteudo;
   }
@@ -186,9 +186,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+   * Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada")
+  @ApiModelProperty(required = true, value = "Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada")
   public String getResposta() {
     return resposta;
   }
@@ -198,9 +198,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o")
   public String getDataAgendamento() {
     return dataAgendamento;
   }
@@ -210,9 +210,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Quantidade de tentativas e envio da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Quantidade de tentativas e envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Quantidade de tentativas e envio da notifica\u00E7\u00E3o")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
   }
@@ -222,9 +222,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
+   * Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado")
+  @ApiModelProperty(required = true, value = "Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -246,9 +246,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es")
+  @ApiModelProperty(value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
   public String getProtocolo() {
     return protocolo;
   }

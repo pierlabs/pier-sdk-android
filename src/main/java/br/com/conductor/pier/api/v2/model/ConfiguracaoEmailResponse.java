@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * Objeto Configura\u00E7\u00E3o EMAIL
  **/
-@ApiModel(description = "Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL")
+@ApiModel(description = "Objeto Configura\u00E7\u00E3o EMAIL")
 public class ConfiguracaoEmailResponse  {
   
   @SerializedName("id")
@@ -40,9 +40,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.
+   * Id da Configura\u00E7\u00E3o EMAIL.
    **/
-  @ApiModelProperty(value = "Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.")
+  @ApiModelProperty(value = "Id da Configura\u00E7\u00E3o EMAIL.")
   public Long getId() {
     return id;
   }
@@ -76,9 +76,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+   * Porta usada pelo servi\u00E7o TLS/STARTTLS.
    **/
-  @ApiModelProperty(value = "Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.")
+  @ApiModelProperty(value = "Porta usada pelo servi\u00E7o TLS/STARTTLS.")
   public String getPortTLSSTARTTLS() {
     return portTLSSTARTTLS;
   }
@@ -88,9 +88,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Porta usada pelo servi\u00C3\u00A7o SSL.
+   * Porta usada pelo servi\u00E7o SSL.
    **/
-  @ApiModelProperty(value = "Porta usada pelo servi\u00C3\u00A7o SSL.")
+  @ApiModelProperty(value = "Porta usada pelo servi\u00E7o SSL.")
   public String getPortSSL() {
     return portSSL;
   }
@@ -100,9 +100,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).
+   * Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).
    **/
-  @ApiModelProperty(value = "Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).")
+  @ApiModelProperty(value = "Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).")
   public String getProtocolo() {
     return protocolo;
   }
@@ -112,9 +112,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+   * O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.")
   public Boolean getRequerAutenticacao() {
     return requerAutenticacao;
   }
@@ -124,9 +124,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer SSL.
+   * O servi\u00E7o de e-mail requer SSL.
    **/
-  @ApiModelProperty(value = "O servi\u00C3\u00A7o de e-mail requer SSL.")
+  @ApiModelProperty(value = "O servi\u00E7o de e-mail requer SSL.")
   public Boolean getRequerSSL() {
     return requerSSL;
   }
@@ -136,9 +136,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer TLS.
+   * O servi\u00E7o de e-mail requer TLS.
    **/
-  @ApiModelProperty(value = "O servi\u00C3\u00A7o de e-mail requer TLS.")
+  @ApiModelProperty(value = "O servi\u00E7o de e-mail requer TLS.")
   public Boolean getRequerTLS() {
     return requerTLS;
   }
@@ -148,9 +148,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Usuario do servi\u00C3\u00A7o de e-mail.
+   * Usuario do servi\u00E7o de e-mail.
    **/
-  @ApiModelProperty(value = "Usuario do servi\u00C3\u00A7o de e-mail.")
+  @ApiModelProperty(value = "Usuario do servi\u00E7o de e-mail.")
   public String getUsuario() {
     return usuario;
   }
@@ -160,9 +160,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+   * Senha de usu\u00E1rio do servi\u00E7o de e-mail.
    **/
-  @ApiModelProperty(value = "Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.")
+  @ApiModelProperty(value = "Senha de usu\u00E1rio do servi\u00E7o de e-mail.")
   public String getSenha() {
     return senha;
   }
@@ -172,9 +172,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o.
+   * Data de inclus\u00E3o.
    **/
-  @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data de inclus\u00E3o.")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -184,9 +184,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o.
+   * Data de altera\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Data de altera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Data de altera\u00E7\u00E3o.")
   public String getDataAlteracao() {
     return dataAlteracao;
   }

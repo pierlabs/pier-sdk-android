@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+ * Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
  **/
-@ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o")
 public class ValidaCartaoResponse  {
   
   @SerializedName("idStatusCartao")
@@ -30,9 +30,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -42,9 +42,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   public String getStatusCartao() {
     return statusCartao;
   }
@@ -54,9 +54,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -66,9 +66,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public String getStatusConta() {
     return statusConta;
   }
@@ -78,9 +78,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta.")
   public Long getIdConta() {
     return idConta;
   }
@@ -90,9 +90,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia.")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -102,9 +102,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(value = "N\u00FAmero da conta corrente.")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }

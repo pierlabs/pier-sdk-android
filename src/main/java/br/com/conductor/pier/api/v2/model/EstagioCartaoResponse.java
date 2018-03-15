@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o
+ * Representa\u00E7\u00E3o do recurso Est\u00E1gio Cart\u00E3o
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Est\u00C3\u00A1gio Cart\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Est\u00E1gio Cart\u00E3o")
 public class EstagioCartaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class EstagioCartaoResponse  {
 
   
   /**
-   * Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Id do est\u00E1gio cart\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Id do est\u00C3\u00A1gio cart\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Id do est\u00E1gio cart\u00E3o")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class EstagioCartaoResponse  {
 
   
   /**
-   * Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Nome do est\u00E1gio cart\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Nome do est\u00E1gio cart\u00E3o")
   public String getNome() {
     return nome;
   }

@@ -83,9 +83,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+   * C\u00F3digo de identifica\u00E7\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da compra.")
   public Long getIdCompra() {
     return idCompra;
   }
@@ -95,9 +95,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.")
   public String getStatus() {
     return status;
   }
@@ -155,9 +155,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas da compra.
+   * N\u00FAmero de parcelas da compra.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas da compra.")
+  @ApiModelProperty(value = "N\u00FAmero de parcelas da compra.")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -167,9 +167,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas antecip\u00C3\u00A1veis da compra.
+   * N\u00FAmero de parcelas antecip\u00E1veis da compra.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas antecip\u00C3\u00A1veis da compra.")
+  @ApiModelProperty(value = "N\u00FAmero de parcelas antecip\u00E1veis da compra.")
   public Integer getNumeroParcelasAntecipaveis() {
     return numeroParcelasAntecipaveis;
   }
@@ -191,9 +191,9 @@ public class CompraResponse  {
 
   
   /**
-   * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Tipo de transa\u00E7\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "Tipo de transa\u00E7\u00E3o da compra.")
   public String getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -215,9 +215,9 @@ public class CompraResponse  {
 
   
   /**
-   * Pa\u00C3\u00ADs onde a compra foi realizada.
+   * Pa\u00EDs onde a compra foi realizada.
    **/
-  @ApiModelProperty(value = "Pa\u00C3\u00ADs onde a compra foi realizada.")
+  @ApiModelProperty(value = "Pa\u00EDs onde a compra foi realizada.")
   public String getPais() {
     return pais;
   }
@@ -227,9 +227,9 @@ public class CompraResponse  {
 
   
   /**
-   * Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "Coordenada latitudinal da localiza\u00E7\u00E3o da compra.")
   public String getLatitude() {
     return latitude;
   }
@@ -239,9 +239,9 @@ public class CompraResponse  {
 
   
   /**
-   * Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "Coordenada longitudinal da localiza\u00E7\u00E3o da compra.")
   public String getLongitude() {
     return longitude;
   }
@@ -251,9 +251,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -263,9 +263,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   * Descri\u00E7\u00E3o do Grupo MCC da compra.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Grupo MCC da compra.")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
   }
@@ -275,9 +275,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta da compra.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.")
   public Long getIdConta() {
     return idConta;
   }
@@ -287,9 +287,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -299,9 +299,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   * Descri\u00E7\u00E3o do produto da compra.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do produto da compra.")
   public String getDescricaoProduto() {
     return descricaoProduto;
   }
@@ -311,9 +311,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o da compra.
+   * N\u00FAmero do cart\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o da compra.")
   public String getCartao() {
     return cartao;
   }
@@ -323,9 +323,9 @@ public class CompraResponse  {
 
   
   /**
-   * Nome do portador do cart\u00C3\u00A3o da compra.
+   * Nome do portador do cart\u00E3o da compra.
    **/
-  @ApiModelProperty(value = "Nome do portador do cart\u00C3\u00A3o da compra.")
+  @ApiModelProperty(value = "Nome do portador do cart\u00E3o da compra.")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
   }

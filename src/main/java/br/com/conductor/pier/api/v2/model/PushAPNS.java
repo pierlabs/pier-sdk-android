@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+ * Objeto Push Notifica\u00E7\u00E3o APNS
  **/
-@ApiModel(description = "Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS")
+@ApiModel(description = "Objeto Push Notifica\u00E7\u00E3o APNS")
 public class PushAPNS  {
   
   @SerializedName("idPessoa")
@@ -37,9 +37,9 @@ public class PushAPNS  {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificado da pessoa")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -49,9 +49,9 @@ public class PushAPNS  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -61,9 +61,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+   * Apresenta o token do dispositivo que dever\u00E1 receber o push.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.")
+  @ApiModelProperty(required = true, value = "Apresenta o token do dispositivo que dever\u00E1 receber o push.")
   public String getTokenDispositivo() {
     return tokenDispositivo;
   }
@@ -73,9 +73,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+   * Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.")
+  @ApiModelProperty(required = true, value = "Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.")
   public String getCertificado() {
     return certificado;
   }
@@ -85,9 +85,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+   * Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.")
+  @ApiModelProperty(required = true, value = "Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.")
   public String getSenha() {
     return senha;
   }
@@ -97,9 +97,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.")
   public String getTitulo() {
     return titulo;
   }
@@ -109,9 +109,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.")
+  @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.")
   public String getConteudo() {
     return conteudo;
   }
@@ -121,9 +121,9 @@ public class PushAPNS  {
 
   
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }

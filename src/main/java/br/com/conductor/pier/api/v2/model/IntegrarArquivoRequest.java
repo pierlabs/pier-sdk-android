@@ -6,24 +6,24 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+ * Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
  **/
-@ApiModel(description = "Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.")
+@ApiModel(description = "Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.")
 public class IntegrarArquivoRequest  {
   
-  @SerializedName("cpf")
-  private String cpf = null;
+  @SerializedName("numeroReceitaFederal")
+  private String numeroReceitaFederal = null;
 
   
   /**
-   * CPF do cliente de Arquivos a serem integrados
+   * N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "CPF do cliente de Arquivos a serem integrados")
-  public String getCpf() {
-    return cpf;
+  @ApiModelProperty(value = "N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o")
+  public String getNumeroReceitaFederal() {
+    return numeroReceitaFederal;
   }
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
+  public void setNumeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
   }
 
   
@@ -33,7 +33,7 @@ public class IntegrarArquivoRequest  {
     StringBuilder sb = new StringBuilder();
     sb.append("class IntegrarArquivoRequest {\n");
     
-    sb.append("  cpf: ").append(cpf).append("\n");
+    sb.append("  numeroReceitaFederal: ").append(numeroReceitaFederal).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

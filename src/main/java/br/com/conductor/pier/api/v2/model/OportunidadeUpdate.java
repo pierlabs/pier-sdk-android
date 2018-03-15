@@ -30,9 +30,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo oportunidade
+   * C\u00F3digo identificador do tipo oportunidade
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do tipo oportunidade")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do tipo oportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -42,9 +42,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do status oportunidade
+   * C\u00F3digo identificador do status oportunidade
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do status oportunidade")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do status oportunidade")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
   }
@@ -54,9 +54,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * N\u00C3\u00BAmero receita federal do cliente
+   * N\u00FAmero receita federal do cliente
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero receita federal do cliente")
+  @ApiModelProperty(required = true, value = "N\u00FAmero receita federal do cliente")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -66,9 +66,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+   * In\u00EDcio da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(required = true, value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(required = true, value = "In\u00EDcio da vig\u00EAncia da oportunidade")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
@@ -78,9 +78,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * Fim da vig\u00C3\u00AAncia da oportunidade
+   * Fim da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(required = true, value = "Fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(required = true, value = "Fim da vig\u00EAncia da oportunidade")
   public String getDataFimVigencia() {
     return dataFimVigencia;
   }
@@ -90,9 +90,9 @@ public class OportunidadeUpdate  {
 
   
   /**
-   * Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+   * Atributo que indica se a oportunidade est\u00E1 ativa
    **/
-  @ApiModelProperty(required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(required = true, value = "Atributo que indica se a oportunidade est\u00E1 ativa")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

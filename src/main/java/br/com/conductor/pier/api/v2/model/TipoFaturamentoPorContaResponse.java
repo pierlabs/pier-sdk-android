@@ -28,9 +28,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada ao tipo de faturamento.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.")
   public Long getIdConta() {
     return idConta;
   }
@@ -52,9 +52,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.
+   * Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.
    **/
-  @ApiModelProperty(value = "Status da configura\u00C3\u00A7\u00C3\u00A3o que representa que se o tipo de faturamento por conta est\u00C3\u00A1 ativo ou cancelado.")
+  @ApiModelProperty(value = "Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.")
   public Boolean getStatus() {
     return status;
   }
@@ -64,9 +64,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.
+   * C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da tipo de faturamento referenciado.")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
   }
@@ -76,9 +76,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+   * Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.
    **/
-  @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.")
+  @ApiModelProperty(value = "Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -88,9 +88,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.
+   * Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.
    **/
-  @ApiModelProperty(value = "Data de cancelamento da configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta.")
+  @ApiModelProperty(value = "Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
   }
@@ -100,9 +100,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do respons\u00C3\u00A1vel pela \u00C3\u00BAltima modifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.")
   public String getModificadoPor() {
     return modificadoPor;
   }

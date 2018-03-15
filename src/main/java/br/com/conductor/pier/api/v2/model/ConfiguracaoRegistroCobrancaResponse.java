@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
+ * Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.")
 public class ConfiguracaoRegistroCobrancaResponse  {
   
   @SerializedName("id")
@@ -47,9 +47,9 @@ public class ConfiguracaoRegistroCobrancaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo identificador da configura\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da configura\u00E7\u00E3o.")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class ConfiguracaoRegistroCobrancaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do emissor.
+   * C\u00F3digo do emissor.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do emissor.")
+  @ApiModelProperty(value = "C\u00F3digo do emissor.")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -71,9 +71,9 @@ public class ConfiguracaoRegistroCobrancaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do Banco.")
+  @ApiModelProperty(value = "C\u00F3digo do Banco.")
   public Long getCodigoBanco() {
     return codigoBanco;
   }
@@ -215,9 +215,9 @@ public class ConfiguracaoRegistroCobrancaResponse  {
 
   
   /**
-   * Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+   * Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
    **/
-  @ApiModelProperty(value = "Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.")
+  @ApiModelProperty(value = "Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.")
   public StatusEnum getStatus() {
     return status;
   }

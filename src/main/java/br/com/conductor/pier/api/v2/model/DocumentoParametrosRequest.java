@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+ * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
  **/
-@ApiModel(description = "Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento")
+@ApiModel(description = "Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento")
 public class DocumentoParametrosRequest  {
   
   @SerializedName("idTemplateDocumento")
@@ -46,9 +46,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00E2metros para montagem do documento.
    **/
-  @ApiModelProperty(value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  @ApiModelProperty(value = "Lista de par\u00E2metros para montagem do documento.")
   public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }

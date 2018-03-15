@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Endere\u00C3\u00A7o
+ * Objeto Endere\u00E7o
  **/
-@ApiModel(description = "Objeto Endere\u00C3\u00A7o")
+@ApiModel(description = "Objeto Endere\u00E7o")
 public class EnderecoResponse  {
   
   @SerializedName("id")
@@ -42,9 +42,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).")
   public Long getId() {
     return id;
   }
@@ -54,9 +54,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -66,9 +66,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -78,9 +78,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   * Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'")
   public String getCep() {
     return cep;
   }
@@ -102,9 +102,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
+   * Apresenta o n\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero do endere\u00E7o")
   public Integer getNumero() {
     return numero;
   }
@@ -114,9 +114,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
+   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta descri\u00E7oes complementares referente ao endere\u00E7o")
   public String getComplemento() {
     return complemento;
   }
@@ -126,9 +126,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
   public String getPontoReferencia() {
     return pontoReferencia;
   }
@@ -186,9 +186,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+   * Apresenta a data em que fora cadastrado o Endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Apresenta a data em que fora cadastrado o Endere\u00E7o")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -198,9 +198,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+   * Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
    **/
-  @ApiModelProperty(value = "Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao")
+  @ApiModelProperty(value = "Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao")
   public String getDataUltimaAtualizacao() {
     return dataUltimaAtualizacao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o
+ * Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o")
 public class TipoEnderecoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoEnderecoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoEnderecoResponse  {
 
   
   /**
-   * Nome do Tipo do Endere\u00C3\u00A7o
+   * Nome do Tipo do Endere\u00E7o
    **/
-  @ApiModelProperty(value = "Nome do Tipo do Endere\u00C3\u00A7o")
+  @ApiModelProperty(value = "Nome do Tipo do Endere\u00E7o")
   public String getNome() {
     return nome;
   }

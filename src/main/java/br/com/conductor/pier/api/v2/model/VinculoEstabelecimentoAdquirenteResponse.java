@@ -28,9 +28,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -52,9 +52,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).")
   public Long getIdAdquirente() {
     return idAdquirente;
   }
@@ -64,9 +64,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+   * C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.")
+  @ApiModelProperty(value = "C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
   }
@@ -76,9 +76,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
-  @ApiModelProperty(value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo.")
   public String getDataHoraCadastro() {
     return dataHoraCadastro;
   }
@@ -88,9 +88,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
-  @ApiModelProperty(value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo.")
   public String getMensagem() {
     return mensagem;
   }
@@ -100,9 +100,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
-  @ApiModelProperty(value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo.")
   public Integer getStatus() {
     return status;
   }

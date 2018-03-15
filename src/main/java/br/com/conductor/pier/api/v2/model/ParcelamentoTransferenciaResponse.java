@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
-@ApiModel(description = "Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias")
+@ApiModel(description = "Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 public class ParcelamentoTransferenciaResponse  {
   
   @SerializedName("numeroParcela")
@@ -29,9 +29,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+   * N\u00FAmero de parcelas dispon\u00EDveis.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.")
+  @ApiModelProperty(value = "N\u00FAmero de parcelas dispon\u00EDveis.")
   public Integer getNumeroParcela() {
     return numeroParcela;
   }
@@ -65,9 +65,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   * Valor da tarifa de contrata\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Valor da tarifa de contrata\u00E7\u00E3o.")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -77,9 +77,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * IOF
+   * IOF calculado para o cliente
    **/
-  @ApiModelProperty(value = "IOF")
+  @ApiModelProperty(value = "IOF calculado para o cliente")
   public BigDecimal getValorIOF() {
     return valorIOF;
   }

@@ -26,9 +26,9 @@ public class TerminalResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.
+   * N\u00FAmero \u00FAnico do terminal.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero \u00C3\u00BAnico do terminal.")
+  @ApiModelProperty(value = "N\u00FAmero \u00FAnico do terminal.")
   public String getTerminal() {
     return terminal;
   }
@@ -50,9 +50,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+   * N\u00FAmero do estabelecimento a qual o terminal pertence.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.")
+  @ApiModelProperty(value = "N\u00FAmero do estabelecimento a qual o terminal pertence.")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -62,9 +62,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+   * N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.")
+  @ApiModelProperty(value = "N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -74,9 +74,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
    **/
-  @ApiModelProperty(value = "Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }
@@ -86,9 +86,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
    **/
-  @ApiModelProperty(value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }

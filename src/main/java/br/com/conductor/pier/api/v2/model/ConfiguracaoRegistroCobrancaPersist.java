@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online")
 public class ConfiguracaoRegistroCobrancaPersist  {
   
   @SerializedName("codigoBanco")
@@ -43,9 +43,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo do Banco.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo do Banco.")
   public Long getCodigoBanco() {
     return codigoBanco;
   }
@@ -187,9 +187,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+   * Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.")
   public StatusEnum getStatus() {
     return status;
   }

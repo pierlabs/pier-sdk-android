@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo")
 public class AlterarProdutoRequest  {
   
   @SerializedName("idProduto")
@@ -22,9 +22,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do produto.
+   * C\u00F3digo identificador do produto.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo identificador do produto.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do produto.")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -34,9 +34,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da origem comercial.
+   * C\u00F3digo identificador da origem comercial.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da origem comercial.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da origem comercial.")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -46,9 +46,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
+   * Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.
    **/
-  @ApiModelProperty(value = "Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00C3\u00A3o informado, \u00C3\u00A9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.")
+  @ApiModelProperty(value = "Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta.")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -58,9 +58,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.
+   * Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.
    **/
-  @ApiModelProperty(value = "Deve ser preenchido com o C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Promotor que realizou o Grade. Quando n\u00C3\u00A3o informado, ser\u00C3\u00A1 gravado com um c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o padr\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o.")
   public Long getIdPromotor() {
     return idPromotor;
   }

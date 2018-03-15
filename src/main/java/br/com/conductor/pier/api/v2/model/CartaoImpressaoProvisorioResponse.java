@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto cart\u00C3\u00A3o provis\u00C3\u00B3rio
+ * Objeto cart\u00E3o provis\u00F3rio
  **/
-@ApiModel(description = "Objeto cart\u00C3\u00A3o provis\u00C3\u00B3rio")
+@ApiModel(description = "Objeto cart\u00E3o provis\u00F3rio")
 public class CartaoImpressaoProvisorioResponse  {
   
   @SerializedName("flagVirtual")
@@ -39,9 +39,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id) a qual o cart\u00C3\u00A3o gerado pertence.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
   public Long getIdConta() {
     return idConta;
   }
@@ -51,9 +51,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) portadora do cart\u00C3\u00A3o gerado.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -63,9 +63,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id) que foi gerado.")
+  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -75,9 +75,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
+   * Apresenta o n\u00FAmero do cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero do cart\u00E3o.")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -87,9 +87,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o nome do Portador do Cart\u00C3\u00A3o.
+   * Apresenta o nome do Portador do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o nome do Portador do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o nome do Portador do Cart\u00E3o.")
   public String getNomePlastico() {
     return nomePlastico;
   }
@@ -99,9 +99,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00C3\u00A3o.
+   * Apresenta a data de Validade do Cart\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00E3o.")
   public String getDataValidade() {
     return dataValidade;
   }

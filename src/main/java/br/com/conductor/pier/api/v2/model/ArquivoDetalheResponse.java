@@ -38,9 +38,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo")
   public Long getId() {
     return id;
   }
@@ -50,9 +50,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
   }
@@ -62,9 +62,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
+   * Descri\u00E7\u00E3o do tipo do arquivo
    **/
-  @ApiModelProperty(value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo do arquivo")
   public String getNomeTipoArquivo() {
     return nomeTipoArquivo;
   }
@@ -74,9 +74,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(value = "Conte\u00FAdo do arquivo convertido em Base 64")
   public String getArquivo() {
     return arquivo;
   }
@@ -86,9 +86,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo")
   public Long getIdStatusArquivo() {
     return idStatusArquivo;
   }
@@ -98,9 +98,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
+   * Desci\u00E7\u00E3o do status do arquivo
    **/
-  @ApiModelProperty(value = "Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo")
+  @ApiModelProperty(value = "Desci\u00E7\u00E3o do status do arquivo")
   public String getNomeStatusArquivo() {
     return nomeStatusArquivo;
   }
@@ -122,9 +122,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Formato/Extens\u00C3\u00A3o do arquivo
+   * Formato/Extens\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "Formato/Extens\u00C3\u00A3o do arquivo")
+  @ApiModelProperty(value = "Formato/Extens\u00E3o do arquivo")
   public String getExtensao() {
     return extensao;
   }
@@ -134,9 +134,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o do arquivo.
+   * Data de inclus\u00E3o do arquivo.
    **/
-  @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o do arquivo.")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do arquivo.")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -146,9 +146,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
+   * Data da \u00FAltima altera\u00E7\u00E3o do aquivo.
    **/
-  @ApiModelProperty(value = "Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.")
+  @ApiModelProperty(value = "Data da \u00FAltima altera\u00E7\u00E3o do aquivo.")
   public String getDataAlteracao() {
     return dataAlteracao;
   }
@@ -158,9 +158,9 @@ public class ArquivoDetalheResponse  {
 
   
   /**
-   * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.
    **/
-  @ApiModelProperty(value = "Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.")
+  @ApiModelProperty(value = "Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo.")
   public List<ArquivoParametroResponse> getDetalhes() {
     return detalhes;
   }

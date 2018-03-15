@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista arquivos armazenados na contig\u00C3\u00AAncia
+ * Lista arquivos armazenados na contig\u00EAncia
  **/
-@ApiModel(description = "Lista arquivos armazenados na contig\u00C3\u00AAncia")
+@ApiModel(description = "Lista arquivos armazenados na contig\u00EAncia")
 public class PageArquivoResponse  {
   
   @SerializedName("content")

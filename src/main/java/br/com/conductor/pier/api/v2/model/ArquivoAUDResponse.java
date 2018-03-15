@@ -54,9 +54,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    **/
-  @ApiModelProperty(value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)")
+  @ApiModelProperty(value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)")
   public Integer getRevType() {
     return revType;
   }
@@ -150,9 +150,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o do arquivo auditado
+   * Data de inclus\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "Data de inclus\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do arquivo auditado")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -162,9 +162,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+   * Data de altera\u00E7\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(value = "Data de altera\u00E7\u00E3o do arquivo auditado")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;
   }
@@ -174,9 +174,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * Extens\u00C3\u00A3o do arquivo auditado
+   * Extens\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "Extens\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(value = "Extens\u00E3o do arquivo auditado")
   public String getExtensao() {
     return extensao;
   }
@@ -186,9 +186,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * Lista  de par\u00C3\u00A2metros do arquivo auditado
+   * Lista  de par\u00E2metros do arquivo auditado
    **/
-  @ApiModelProperty(value = "Lista  de par\u00C3\u00A2metros do arquivo auditado")
+  @ApiModelProperty(value = "Lista  de par\u00E2metros do arquivo auditado")
   public List<ArquivoParametroAUDResponse> getParametros() {
     return parametros;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o
+ * Hist\u00F3rico Impress\u00E3o Cart\u00E3o
  **/
-@ApiModel(description = "Hist\u00C3\u00B3rico Impress\u00C3\u00A3o Cart\u00C3\u00A3o")
+@ApiModel(description = "Hist\u00F3rico Impress\u00E3o Cart\u00E3o")
 public class HistoricoImpressaoCartaoResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o Avulsa de Cart\u00C3\u00B5es (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id).")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -48,9 +48,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id).")
   public Long getIdStatusImpressaoCartao() {
     return idStatusImpressaoCartao;
   }
@@ -60,9 +60,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.
+   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.
    **/
-  @ApiModelProperty(value = "Apresenta uma mensagem que descreve a etapa do processo de impress\u00C3\u00A3o do cart\u00C3\u00A3o que fora realizado.")
+  @ApiModelProperty(value = "Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.")
   public String getMensagemHistorico() {
     return mensagemHistorico;
   }
@@ -72,9 +72,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+   * Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.
    **/
-  @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
+  @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.")
   public String getDataHistorico() {
     return dataHistorico;
   }

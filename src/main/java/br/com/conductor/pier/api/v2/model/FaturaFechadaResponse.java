@@ -71,9 +71,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da fatura.
+   * C\u00F3digo identificador da fatura.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da fatura.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da fatura.")
   public Long getId() {
     return id;
   }
@@ -83,9 +83,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta.")
   public Long getIdConta() {
     return idConta;
   }
@@ -95,9 +95,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
+   * C\u00F3digo identificador da conta a qual a fatura se refere.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.")
+  @ApiModelProperty(value = "C\u00F3digo identificador da conta a qual a fatura se refere.")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
   }
@@ -143,9 +143,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   * Valor m\u00EDnimo para pagamento da fatura.
    **/
-  @ApiModelProperty(value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
+  @ApiModelProperty(value = "Valor m\u00EDnimo para pagamento da fatura.")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
   }
@@ -155,9 +155,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras nacionais lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das compras nacionais lan\u00E7adas na fatura.")
   public BigDecimal getTotalComprasNacionais() {
     return totalComprasNacionais;
   }
@@ -167,9 +167,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+   * Valor total das compras internacionais lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das compras internacionais lan\u00E7adas na fatura.")
   public BigDecimal getTotalComprasInternacionas() {
     return totalComprasInternacionas;
   }
@@ -179,9 +179,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos saques nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalSaquesNacionais() {
     return totalSaquesNacionais;
   }
@@ -191,9 +191,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos saques internacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos saques internacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalSaquesInternacionais() {
     return totalSaquesInternacionais;
   }
@@ -203,9 +203,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosNacionais() {
     return totalDebitosNacionais;
   }
@@ -215,9 +215,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosRecorrentes() {
     return totalDebitosRecorrentes;
   }
@@ -227,9 +227,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosInternacionais() {
     return totalDebitosInternacionais;
   }
@@ -239,9 +239,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosDiversosNacionais() {
     return totalDebitosDiversosNacionais;
   }
@@ -251,9 +251,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalDebitosOpcionais() {
     return totalDebitosOpcionais;
   }
@@ -263,9 +263,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+   * Valor total dos pagamentos lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos pagamentos lan\u00E7ados na fatura.")
   public BigDecimal getTotalPagamentos() {
     return totalPagamentos;
   }
@@ -275,9 +275,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+   * Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.")
   public BigDecimal getTotalCreditosNacionais() {
     return totalCreditosNacionais;
   }
@@ -287,9 +287,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+   * Valor total dos ajustes lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos ajustes lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos ajustes lan\u00E7ados na fatura.")
   public BigDecimal getTotalAjustes() {
     return totalAjustes;
   }
@@ -299,9 +299,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+   * Valor total das tarifas lan\u00E7adas na fatura.
    **/
-  @ApiModelProperty(value = "Valor total das tarifas lan\u00C3\u00A7adas na fatura.")
+  @ApiModelProperty(value = "Valor total das tarifas lan\u00E7adas na fatura.")
   public BigDecimal getTotalTarifas() {
     return totalTarifas;
   }
@@ -311,9 +311,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total da multa lan\u00C3\u00A7ada na fatura.
+   * Valor total da multa lan\u00E7ada na fatura.
    **/
-  @ApiModelProperty(value = "Valor total da multa lan\u00C3\u00A7ada na fatura.")
+  @ApiModelProperty(value = "Valor total da multa lan\u00E7ada na fatura.")
   public BigDecimal getTotalMulta() {
     return totalMulta;
   }
@@ -323,9 +323,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+   * Valor total dos juros de mora lan\u00E7ados na fatura.
    **/
-  @ApiModelProperty(value = "Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.")
+  @ApiModelProperty(value = "Valor total dos juros de mora lan\u00E7ados na fatura.")
   public BigDecimal getTotalJuros() {
     return totalJuros;
   }
@@ -359,9 +359,9 @@ public class FaturaFechadaResponse  {
 
   
   /**
-   * Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+   * Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.
    **/
-  @ApiModelProperty(value = "Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.")
+  @ApiModelProperty(value = "Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
   }

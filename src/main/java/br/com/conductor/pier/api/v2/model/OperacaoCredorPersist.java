@@ -46,9 +46,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o id da Opera\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Apresenta o id da Opera\u00E7\u00E3o.")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -70,9 +70,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.
+   * Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.
    **/
-  @ApiModelProperty(value = "Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.")
+  @ApiModelProperty(value = "Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.")
   public List<Long> getIdsProduto() {
     return idsProduto;
   }
@@ -82,9 +82,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+   * Remunera\u00E7\u00E3o Percentual.
    **/
-  @ApiModelProperty(value = "Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.")
+  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Percentual.")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
   }
@@ -94,9 +94,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+   * Remunera\u00E7\u00E3o Fixa.
    **/
-  @ApiModelProperty(value = "Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.")
+  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Fixa.")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
   }
@@ -166,9 +166,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Plano m\u00C3\u00ADnimo da regra.
+   * Plano m\u00EDnimo da regra.
    **/
-  @ApiModelProperty(value = "Plano m\u00C3\u00ADnimo da regra.")
+  @ApiModelProperty(value = "Plano m\u00EDnimo da regra.")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -178,9 +178,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Plano m\u00C3\u00A1ximo da regra.
+   * Plano m\u00E1ximo da regra.
    **/
-  @ApiModelProperty(value = "Plano m\u00C3\u00A1ximo da regra.")
+  @ApiModelProperty(value = "Plano m\u00E1ximo da regra.")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }

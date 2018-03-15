@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o
  **/
-@ApiModel(description = "Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o")
 public class CancelamentoTransacaoOnUsRequest  {
   
   @SerializedName("nsuAutorizacaoTransacaoCancelada")
@@ -37,9 +37,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.
+   * N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico do HOST que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que autorizou.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou.")
   public String getNsuAutorizacaoTransacaoCancelada() {
     return nsuAutorizacaoTransacaoCancelada;
   }
@@ -49,9 +49,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -61,9 +61,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema a ser cancelada.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada.")
   public String getNsuOrigemTransacaoCancelada() {
     return nsuOrigemTransacaoCancelada;
   }
@@ -73,9 +73,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -85,9 +85,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e hora local da transa\u00C3\u00A7\u00C3\u00A3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(required = true, value = "Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   public String getDataHoraTransacaoCancelada() {
     return dataHoraTransacaoCancelada;
   }
@@ -97,9 +97,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    **/
-  @ApiModelProperty(required = true, value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -109,9 +109,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * N\u00FAmero Real do Cart\u00E3o.
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(required = true, value = "N\u00FAmero Real do Cart\u00E3o.")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
   }
@@ -121,9 +121,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    **/
-  @ApiModelProperty(required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
+  @ApiModelProperty(required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -133,9 +133,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    **/
-  @ApiModelProperty(required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV).")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -157,9 +157,9 @@ public class CancelamentoTransacaoOnUsRequest  {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }

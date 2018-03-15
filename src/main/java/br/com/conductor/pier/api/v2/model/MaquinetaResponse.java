@@ -31,9 +31,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -55,9 +55,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -67,9 +67,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Valor de manuten\u00E7\u00E3o da Maquineta.
    **/
-  @ApiModelProperty(value = "Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(value = "Valor de manuten\u00E7\u00E3o da Maquineta.")
   public BigDecimal getValor() {
     return valor;
   }
@@ -79,9 +79,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Data de implanta\u00E7\u00E3o da Maquineta.
    **/
-  @ApiModelProperty(value = "Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(value = "Data de implanta\u00E7\u00E3o da Maquineta.")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }
@@ -103,9 +103,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+   * N\u00FAmero do terminal vinculado a Maquineta.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do terminal vinculado a Maquineta.")
+  @ApiModelProperty(value = "N\u00FAmero do terminal vinculado a Maquineta.")
   public String getTerminal() {
     return terminal;
   }
@@ -115,9 +115,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Usu\u00E1rio da aplica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Usu\u00E1rio da aplica\u00E7\u00E3o.")
   public String getUsuarioApl() {
     return usuarioApl;
   }

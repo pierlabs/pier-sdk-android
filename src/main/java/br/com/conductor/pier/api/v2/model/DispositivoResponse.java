@@ -46,9 +46,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Identificador da Aplica\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Identificador da Aplica\u00E7\u00E3o.")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
   }
@@ -58,9 +58,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Identificador do usu\u00C3\u00A1rio.
+   * Identificador do usu\u00E1rio.
    **/
-  @ApiModelProperty(value = "Identificador do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(value = "Identificador do usu\u00E1rio.")
   public Long getIdUsuario() {
     return idUsuario;
   }

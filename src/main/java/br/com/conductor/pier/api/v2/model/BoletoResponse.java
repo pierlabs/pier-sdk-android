@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
+ * Representa\u00E7\u00E3o da resposta do boleto de fatura
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
 public class BoletoResponse  {
   
   @SerializedName("numeroDoDocumento")
@@ -76,9 +76,9 @@ public class BoletoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+   * N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente")
+  @ApiModelProperty(value = "N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente")
   public String getNumeroDoDocumento() {
     return numeroDoDocumento;
   }
@@ -88,9 +88,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+   * Data do processamento (emiss\u00E3o ou faturamento) do boleto
    **/
-  @ApiModelProperty(value = "Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto")
+  @ApiModelProperty(value = "Data do processamento (emiss\u00E3o ou faturamento) do boleto")
   public String getDataProcessamento() {
     return dataProcessamento;
   }
@@ -100,9 +100,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Data do documento (impress\u00C3\u00A3o)
+   * Data do documento (impress\u00E3o)
    **/
-  @ApiModelProperty(value = "Data do documento (impress\u00C3\u00A3o)")
+  @ApiModelProperty(value = "Data do documento (impress\u00E3o)")
   public String getDataDocumento() {
     return dataDocumento;
   }
@@ -148,9 +148,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
+   * Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
    **/
-  @ApiModelProperty(value = "Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto")
+  @ApiModelProperty(value = "Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
   }
@@ -172,9 +172,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Ag\u00C3\u00AAncia.
+   * Ag\u00EAncia.
    **/
-  @ApiModelProperty(value = "Ag\u00C3\u00AAncia.")
+  @ApiModelProperty(value = "Ag\u00EAncia.")
   public String getAgencia() {
     return agencia;
   }
@@ -184,9 +184,9 @@ public class BoletoResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   * C\u00F3digo do benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
+  @ApiModelProperty(value = "C\u00F3digo do benefici\u00E1rio")
   public String getCodigoBeneficiario() {
     return codigoBeneficiario;
   }
@@ -196,9 +196,9 @@ public class BoletoResponse  {
 
   
   /**
-   * N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+   * N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.")
+  @ApiModelProperty(value = "N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.")
   public String getNumeroConvenio() {
     return numeroConvenio;
   }
@@ -208,9 +208,9 @@ public class BoletoResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   * D\u00EDgito do c\u00F3digo do benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
+  @ApiModelProperty(value = "D\u00EDgito do c\u00F3digo do benefici\u00E1rio")
   public String getDigitoCodigoBeneficiario() {
     return digitoCodigoBeneficiario;
   }
@@ -220,9 +220,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
+   * Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
    **/
-  @ApiModelProperty(value = "Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto")
+  @ApiModelProperty(value = "Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto")
   public String getCarteira() {
     return carteira;
   }
@@ -232,9 +232,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
+   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
    **/
-  @ApiModelProperty(value = "Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos")
+  @ApiModelProperty(value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
   public String getNossoNumero() {
     return nossoNumero;
   }
@@ -244,9 +244,9 @@ public class BoletoResponse  {
 
   
   /**
-   * D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
+   * D\u00EDgito do nosso n\u00FAmero
    **/
-  @ApiModelProperty(value = "D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero")
+  @ApiModelProperty(value = "D\u00EDgito do nosso n\u00FAmero")
   public String getDigitoNossoNumero() {
     return digitoNossoNumero;
   }
@@ -268,9 +268,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
+   * Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")
    **/
-  @ApiModelProperty(value = "Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")")
+  @ApiModelProperty(value = "Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")")
   public Boolean getAceite() {
     return aceite;
   }
@@ -280,9 +280,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")
+   * Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")
    **/
-  @ApiModelProperty(value = "Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")")
+  @ApiModelProperty(value = "Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")")
   public String getEspecieDoDocumento() {
     return especieDoDocumento;
   }
@@ -292,9 +292,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")
+   * Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")
    **/
-  @ApiModelProperty(value = "Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")")
+  @ApiModelProperty(value = "Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")")
   public String getEspecie() {
     return especie;
   }
@@ -304,9 +304,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio
+   * Instru\u00E7\u00F5es para o benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio")
+  @ApiModelProperty(value = "Instru\u00E7\u00F5es para o benefici\u00E1rio")
   public List<String> getInstrucoes() {
     return instrucoes;
   }
@@ -328,9 +328,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
+   * Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
    **/
-  @ApiModelProperty(value = "Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto")
+  @ApiModelProperty(value = "Pagador \u00E9 a pessoa/empresa que deve pagar o boleto")
   public String getNomePagador() {
     return nomePagador;
   }
@@ -412,9 +412,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras
+   * Valor num\u00E9rico do c\u00F3digo de barras
    **/
-  @ApiModelProperty(value = "Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras")
+  @ApiModelProperty(value = "Valor num\u00E9rico do c\u00F3digo de barras")
   public String getCodigoDeBarras() {
     return codigoDeBarras;
   }
@@ -424,9 +424,9 @@ public class BoletoResponse  {
 
   
   /**
-   * Linha digit\u00C3\u00A1vel formatada
+   * Linha digit\u00E1vel formatada
    **/
-  @ApiModelProperty(value = "Linha digit\u00C3\u00A1vel formatada")
+  @ApiModelProperty(value = "Linha digit\u00E1vel formatada")
   public String getLinhaDigitavel() {
     return linhaDigitavel;
   }

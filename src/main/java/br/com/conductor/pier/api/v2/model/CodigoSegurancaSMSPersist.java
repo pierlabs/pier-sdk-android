@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.")
 public class CodigoSegurancaSMSPersist  {
   
   @SerializedName("ddd")
@@ -18,9 +18,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * DDD do n\u00C3\u00BAmero de telefone para envio do sms.
+   * DDD do n\u00FAmero de telefone para envio do sms.
    **/
-  @ApiModelProperty(value = "DDD do n\u00C3\u00BAmero de telefone para envio do sms.")
+  @ApiModelProperty(value = "DDD do n\u00FAmero de telefone para envio do sms.")
   public String getDdd() {
     return ddd;
   }
@@ -30,9 +30,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * N\u00C3\u00BAmero do telefone para envio do sms.
+   * N\u00FAmero do telefone para envio do sms.
    **/
-  @ApiModelProperty(value = "N\u00C3\u00BAmero do telefone para envio do sms.")
+  @ApiModelProperty(value = "N\u00FAmero do telefone para envio do sms.")
   public String getTelefone() {
     return telefone;
   }

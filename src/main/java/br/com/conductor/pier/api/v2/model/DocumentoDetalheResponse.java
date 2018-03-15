@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o detalhamento do documento
+ * Representa\u00E7\u00E3o da resposta para o detalhamento do documento
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o detalhamento do documento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o detalhamento do documento")
 public class DocumentoDetalheResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class DocumentoDetalheResponse  {
 
   
   /**
-   * ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.
+   * ID de identifica\u00E7\u00E3o do detalhamento do documento.
    **/
-  @ApiModelProperty(value = "ID de identifica\u00C3\u00A7\u00C3\u00A3o do detalhamento do documento.")
+  @ApiModelProperty(value = "ID de identifica\u00E7\u00E3o do detalhamento do documento.")
   public Long getId() {
     return id;
   }
@@ -44,9 +44,9 @@ public class DocumentoDetalheResponse  {
 
   
   /**
-   * Conte\u00C3\u00BAdo do detalhamento do documento.
+   * Conte\u00FAdo do detalhamento do documento.
    **/
-  @ApiModelProperty(value = "Conte\u00C3\u00BAdo do detalhamento do documento.")
+  @ApiModelProperty(value = "Conte\u00FAdo do detalhamento do documento.")
   public String getConteudo() {
     return conteudo;
   }

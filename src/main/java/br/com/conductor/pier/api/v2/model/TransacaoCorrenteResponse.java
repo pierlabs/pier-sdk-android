@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
+ * Representa\u00E7\u00E3o do recurso transacao
  **/
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso transacao")
 public class TransacaoCorrenteResponse  {
   
   @SerializedName("ultimaParcelaLancada")
@@ -62,9 +62,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id).")
   public Long getIdConta() {
     return idConta;
   }
@@ -74,9 +74,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).")
   public Long getIdTipoRegistro() {
     return idTipoRegistro;
   }
@@ -86,9 +86,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+   * Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).
    **/
-  @ApiModelProperty(value = "Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).")
+  @ApiModelProperty(value = "Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).")
   public Integer getOrdem() {
     return ordem;
   }
@@ -98,9 +98,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).
    **/
-  @ApiModelProperty(value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -110,9 +110,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.")
   public String getDescricao() {
     return descricao;
   }
@@ -122,9 +122,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o c\u00C3\u00B3digo identificador do status da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.")
   public Integer getStatus() {
     return status;
   }
@@ -134,9 +134,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa a descri\u00C3\u00A7\u00C3\u00A3o do status da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -146,9 +146,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o valor da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o valor da transa\u00E7\u00E3o.")
   public BigDecimal getValor() {
     return valor;
   }
@@ -158,9 +158,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o valor em D\u00C3\u00B3lar da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.")
   public BigDecimal getValorDolar() {
     return valorDolar;
   }
@@ -170,9 +170,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa a quantidade de parcelas da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -182,9 +182,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o valor da parcela da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o valor da parcela da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o valor da parcela da transa\u00E7\u00E3o.")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -194,9 +194,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa a data de envio da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa a data de envio da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa a data de envio da transa\u00E7\u00E3o.")
   public String getDataEvento() {
     return dataEvento;
   }
@@ -206,9 +206,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o estabelecimento da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o estabelecimento da transa\u00E7\u00E3o.")
   public String getEstabelecimento() {
     return estabelecimento;
   }
@@ -218,9 +218,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.
+   * Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.
    **/
-  @ApiModelProperty(value = "Atributo que identifica se a transa\u00C3\u00A7\u00C3\u00A3o \u00C3\u00A9 um cr\u00C3\u00A9dito ou d\u00C3\u00A9bito.")
+  @ApiModelProperty(value = "Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -230,9 +230,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o tipo de estabelecimento da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.")
   public String getTipoEstabelecimento() {
     return tipoEstabelecimento;
   }
@@ -242,9 +242,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que representa o grupo MCC da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que representa o grupo MCC da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que representa o grupo MCC da transa\u00E7\u00E3o.")
   public Integer getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -254,9 +254,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.
    **/
-  @ApiModelProperty(value = "Atributo que identifica se o portador solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(value = "Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.")
   public Integer getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
   }
