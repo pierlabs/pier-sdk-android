@@ -3,20 +3,22 @@ package br.com.conductor.pier.api.v2.model;
 import java.math.BigDecimal;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto OperacaoCredor
+ * {{{operacao_credor_persist_description}}}
  **/
-@ApiModel(description = "Objeto OperacaoCredor")
+@ApiModel(description = "{{{operacao_credor_persist_description}}}")
 public class OperacaoCredorPersist  {
   
   @SerializedName("idOperacao")
   private Long idOperacao = null;
-  @SerializedName("idCredor")
-  private Long idCredor = null;
+  @SerializedName("idGrupoEconomico")
+  private Long idGrupoEconomico = null;
   @SerializedName("idsProduto")
   private List<Long> idsProduto = null;
   @SerializedName("remuneracaoPercentual")
@@ -46,9 +48,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Apresenta o id da Opera\u00E7\u00E3o.
+   * {{{operacao_credor_persist_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id da Opera\u00E7\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -58,21 +60,21 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Apresenta o id do Credor.
+   * {{{operacao_credor_persist_id_grupo_economico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id do Credor.")
-  public Long getIdCredor() {
-    return idCredor;
+  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_id_grupo_economico_value}}}")
+  public Long getIdGrupoEconomico() {
+    return idGrupoEconomico;
   }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
+  public void setIdGrupoEconomico(Long idGrupoEconomico) {
+    this.idGrupoEconomico = idGrupoEconomico;
   }
 
   
   /**
-   * Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.
+   * {{{operacao_credor_persist_ids_produto_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.")
+  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_ids_produto_value}}}")
   public List<Long> getIdsProduto() {
     return idsProduto;
   }
@@ -82,9 +84,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Remunera\u00E7\u00E3o Percentual.
+   * {{{operacao_credor_persist_remuneracao_percentual_value}}}
    **/
-  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Percentual.")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_remuneracao_percentual_value}}}")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
   }
@@ -94,9 +96,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Remunera\u00E7\u00E3o Fixa.
+   * {{{operacao_credor_persist_remuneracao_fixa_value}}}
    **/
-  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Fixa.")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_remuneracao_fixa_value}}}")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
   }
@@ -106,9 +108,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).
+   * {{{operacao_credor_persist_periodicidade_value}}}
    **/
-  @ApiModelProperty(value = "Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_periodicidade_value}}}")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -118,9 +120,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Vencimento da primeira parcela.
+   * {{{operacao_credor_persist_vencimento_primeira_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Vencimento da primeira parcela.")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_vencimento_primeira_parcela_value}}}")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
   }
@@ -130,9 +132,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Dias afastamento.
+   * {{{operacao_credor_persist_dias_afastamento_value}}}
    **/
-  @ApiModelProperty(value = "Dias afastamento.")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_dias_afastamento_value}}}")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
   }
@@ -142,9 +144,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).
+   * {{{operacao_credor_persist_fator_multiplicador_value}}}
    **/
-  @ApiModelProperty(value = "Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_fator_multiplicador_value}}}")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
   }
@@ -154,9 +156,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Flag taxa fixada.
+   * {{{operacao_credor_persist_flag_taxa_fixada_value}}}
    **/
-  @ApiModelProperty(value = "Flag taxa fixada.")
+  @ApiModelProperty(value = "{{{operacao_credor_persist_flag_taxa_fixada_value}}}")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
   }
@@ -166,9 +168,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Plano m\u00EDnimo da regra.
+   * {{{operacao_credor_persist_plano_minimo_value}}}
    **/
-  @ApiModelProperty(value = "Plano m\u00EDnimo da regra.")
+  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_plano_minimo_value}}}")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -178,9 +180,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * Plano m\u00E1ximo da regra.
+   * {{{operacao_credor_persist_plano_maximo_value}}}
    **/
-  @ApiModelProperty(value = "Plano m\u00E1ximo da regra.")
+  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_plano_maximo_value}}}")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
@@ -196,7 +198,7 @@ public class OperacaoCredorPersist  {
     sb.append("class OperacaoCredorPersist {\n");
     
     sb.append("  idOperacao: ").append(idOperacao).append("\n");
-    sb.append("  idCredor: ").append(idCredor).append("\n");
+    sb.append("  idGrupoEconomico: ").append(idGrupoEconomico).append("\n");
     sb.append("  idsProduto: ").append(idsProduto).append("\n");
     sb.append("  remuneracaoPercentual: ").append(remuneracaoPercentual).append("\n");
     sb.append("  remuneracaoFixa: ").append(remuneracaoFixa).append("\n");
@@ -211,3 +213,5 @@ public class OperacaoCredorPersist  {
     return sb.toString();
   }
 }
+
+

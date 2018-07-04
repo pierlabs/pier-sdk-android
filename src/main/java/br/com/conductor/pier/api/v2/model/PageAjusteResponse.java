@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Ajustes
+ * {{{page_ajuste_response_description}}}
  **/
-@ApiModel(description = "Lista de Ajustes")
+@ApiModel(description = "{{{page_ajuste_response_description}}}")
 public class PageAjusteResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageAjusteResponse  {
     return sb.toString();
   }
 }
+
+

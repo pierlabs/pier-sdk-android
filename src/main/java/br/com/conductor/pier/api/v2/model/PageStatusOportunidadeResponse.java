@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.StatusOportunidadeResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de status oportunidades
+ * {{{page_status_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Lista de status oportunidades")
+@ApiModel(description = "{{{page_status_oportunidade_response_description}}}")
 public class PageStatusOportunidadeResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageStatusOportunidadeResponse  {
     return sb.toString();
   }
 }
+
+

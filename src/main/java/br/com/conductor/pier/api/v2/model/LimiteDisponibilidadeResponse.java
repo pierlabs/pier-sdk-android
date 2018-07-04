@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Limite Disponibilidade
+ * {{{limite_disponibilidade_response_description}}}
  **/
-@ApiModel(description = "Limite Disponibilidade")
+@ApiModel(description = "{{{limite_disponibilidade_response_description}}}")
 public class LimiteDisponibilidadeResponse  {
   
   @SerializedName("id")
@@ -59,9 +61,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
+   * {{{limite_disponibilidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -71,9 +73,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito.
+   * {{{limite_disponibilidade_response_limite_global_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_global_value}}}")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -83,9 +85,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
+   * {{{limite_disponibilidade_response_limite_compra_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_compra_value}}}")
   public BigDecimal getLimiteCompra() {
     return limiteCompra;
   }
@@ -95,9 +97,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_parcelado_value}}}")
   public BigDecimal getLimiteParcelado() {
     return limiteParcelado;
   }
@@ -107,9 +109,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_parcelas_value}}}")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -119,9 +121,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_limite_saque_global_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_saque_global_value}}}")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -131,9 +133,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_saque_periodo_value}}}")
   public BigDecimal getLimiteSaquePeriodo() {
     return limiteSaquePeriodo;
   }
@@ -143,9 +145,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
+   * {{{limite_disponibilidade_response_limite_consignado_value}}}
    **/
-  @ApiModelProperty(value = "Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_consignado_value}}}")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
   }
@@ -155,9 +157,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
+   * {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_compra_value}}}")
   public BigDecimal getLimiteInternacionalCompra() {
     return limiteInternacionalCompra;
   }
@@ -167,9 +169,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}")
   public BigDecimal getLimiteInternacionalParcelado() {
     return limiteInternacionalParcelado;
   }
@@ -179,9 +181,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}")
   public BigDecimal getLimiteInternacionalParcelas() {
     return limiteInternacionalParcelas;
   }
@@ -191,9 +193,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}")
   public BigDecimal getLimiteInternacionalSaqueGlobal() {
     return limiteInternacionalSaqueGlobal;
   }
@@ -203,9 +205,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
    **/
-  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}")
   public BigDecimal getLimiteInternacionalSaquePeriodo() {
     return limiteInternacionalSaquePeriodo;
   }
@@ -215,9 +217,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_limite_maximo_value}}}
    **/
-  @ApiModelProperty(value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_maximo_value}}}")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -227,9 +229,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_global_value}}}")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -239,9 +241,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}")
   public BigDecimal getSaldoDisponivelCompra() {
     return saldoDisponivelCompra;
   }
@@ -251,9 +253,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}")
   public BigDecimal getSaldoDisponivelParcelado() {
     return saldoDisponivelParcelado;
   }
@@ -263,9 +265,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}")
   public BigDecimal getSaldoDisponivelParcelas() {
     return saldoDisponivelParcelas;
   }
@@ -275,9 +277,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -287,9 +289,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Saldo atual de pontos do programa de fidelidade.
+   * {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
    **/
-  @ApiModelProperty(value = "Saldo atual de pontos do programa de fidelidade.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}")
   public BigDecimal getSaldoPontosFidelidade() {
     return saldoPontosFidelidade;
   }
@@ -299,9 +301,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}")
   public BigDecimal getSaldoDisponivelCompraInternacional() {
     return saldoDisponivelCompraInternacional;
   }
@@ -311,9 +313,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
    **/
-  @ApiModelProperty(value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}")
   public BigDecimal getSaldoDisponivelSaqueInternacional() {
     return saldoDisponivelSaqueInternacional;
   }
@@ -354,3 +356,5 @@ public class LimiteDisponibilidadeResponse  {
     return sb.toString();
   }
 }
+
+

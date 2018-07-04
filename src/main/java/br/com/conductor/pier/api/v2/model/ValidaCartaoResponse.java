@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
+ * {{{valida_cartao_response_description}}}
  **/
-@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o")
+@ApiModel(description = "{{{valida_cartao_response_description}}}")
 public class ValidaCartaoResponse  {
   
   @SerializedName("idStatusCartao")
@@ -30,9 +32,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status do cart\u00E3o
+   * {{{valida_cartao_response_id_status_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_status_cartao_value}}}")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -42,9 +44,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status do cart\u00E3o
+   * {{{valida_cartao_response_status_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
+  @ApiModelProperty(value = "{{{valida_cartao_response_status_cartao_value}}}")
   public String getStatusCartao() {
     return statusCartao;
   }
@@ -54,9 +56,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{valida_cartao_response_id_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_status_conta_value}}}")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -66,9 +68,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{valida_cartao_response_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
+  @ApiModelProperty(value = "{{{valida_cartao_response_status_conta_value}}}")
   public String getStatusConta() {
     return statusConta;
   }
@@ -78,9 +80,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * C\u00F3digo identificador da conta.
+   * {{{valida_cartao_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da conta.")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -90,9 +92,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{valida_cartao_response_numero_agencia_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia.")
+  @ApiModelProperty(value = "{{{valida_cartao_response_numero_agencia_value}}}")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -102,9 +104,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{valida_cartao_response_numero_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da conta corrente.")
+  @ApiModelProperty(value = "{{{valida_cartao_response_numero_conta_corrente_value}}}")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -114,9 +116,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Criptograma de resposta
+   * {{{valida_cartao_response_criptograma_resposta_value}}}
    **/
-  @ApiModelProperty(value = "Criptograma de resposta")
+  @ApiModelProperty(value = "{{{valida_cartao_response_criptograma_resposta_value}}}")
   public String getCriptogramaResposta() {
     return criptogramaResposta;
   }
@@ -143,3 +145,5 @@ public class ValidaCartaoResponse  {
     return sb.toString();
   }
 }
+
+

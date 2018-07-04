@@ -2,8 +2,10 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.ExtraInfo;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
+
 
 
 @ApiModel(description = "")
@@ -94,3 +96,5 @@ public class AuthToken  {
     return sb.toString();
   }
 }
+
+

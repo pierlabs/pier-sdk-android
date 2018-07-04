@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Compra
+ * {{{compra_response_description}}}
  **/
-@ApiModel(description = "Objeto de Compra")
+@ApiModel(description = "{{{compra_response_description}}}")
 public class CompraResponse  {
   
   @SerializedName("mcc")
@@ -83,9 +85,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da compra.
+   * {{{compra_response_id_compra_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_id_compra_value}}}")
   public Long getIdCompra() {
     return idCompra;
   }
@@ -95,9 +97,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{compra_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_status_value}}}")
   public String getStatus() {
     return status;
   }
@@ -107,9 +109,9 @@ public class CompraResponse  {
 
   
   /**
-   * Data da compra.
+   * {{{compra_response_data_compra_value}}}
    **/
-  @ApiModelProperty(value = "Data da compra.")
+  @ApiModelProperty(value = "{{{compra_response_data_compra_value}}}")
   public String getDataCompra() {
     return dataCompra;
   }
@@ -119,9 +121,9 @@ public class CompraResponse  {
 
   
   /**
-   * Valor total da compra.
+   * {{{compra_response_valor_total_compra_value}}}
    **/
-  @ApiModelProperty(value = "Valor total da compra.")
+  @ApiModelProperty(value = "{{{compra_response_valor_total_compra_value}}}")
   public BigDecimal getValorTotalCompra() {
     return valorTotalCompra;
   }
@@ -131,9 +133,9 @@ public class CompraResponse  {
 
   
   /**
-   * Valor da parcela da compra.
+   * {{{compra_response_valor_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela da compra.")
+  @ApiModelProperty(value = "{{{compra_response_valor_parcela_value}}}")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -143,9 +145,9 @@ public class CompraResponse  {
 
   
   /**
-   * Valor da primeira parcela da compra.
+   * {{{compra_response_primeira_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Valor da primeira parcela da compra.")
+  @ApiModelProperty(value = "{{{compra_response_primeira_parcela_value}}}")
   public BigDecimal getPrimeiraParcela() {
     return primeiraParcela;
   }
@@ -155,9 +157,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00FAmero de parcelas da compra.
+   * {{{compra_response_numero_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de parcelas da compra.")
+  @ApiModelProperty(value = "{{{compra_response_numero_parcelas_value}}}")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -167,9 +169,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00FAmero de parcelas antecip\u00E1veis da compra.
+   * {{{compra_response_numero_parcelas_antecipaveis_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de parcelas antecip\u00E1veis da compra.")
+  @ApiModelProperty(value = "{{{compra_response_numero_parcelas_antecipaveis_value}}}")
   public Integer getNumeroParcelasAntecipaveis() {
     return numeroParcelasAntecipaveis;
   }
@@ -179,9 +181,9 @@ public class CompraResponse  {
 
   
   /**
-   * Nome do estabelecimento da compra.
+   * {{{compra_response_nome_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Nome do estabelecimento da compra.")
+  @ApiModelProperty(value = "{{{compra_response_nome_estabelecimento_value}}}")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -191,9 +193,9 @@ public class CompraResponse  {
 
   
   /**
-   * Tipo de transa\u00E7\u00E3o da compra.
+   * {{{compra_response_tipo_origem_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Tipo de transa\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_tipo_origem_transacao_value}}}")
   public String getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -203,9 +205,9 @@ public class CompraResponse  {
 
   
   /**
-   * Cidade onde a compra foi realizada.
+   * {{{compra_response_cidade_value}}}
    **/
-  @ApiModelProperty(value = "Cidade onde a compra foi realizada.")
+  @ApiModelProperty(value = "{{{compra_response_cidade_value}}}")
   public String getCidade() {
     return cidade;
   }
@@ -215,9 +217,9 @@ public class CompraResponse  {
 
   
   /**
-   * Pa\u00EDs onde a compra foi realizada.
+   * {{{compra_response_pais_value}}}
    **/
-  @ApiModelProperty(value = "Pa\u00EDs onde a compra foi realizada.")
+  @ApiModelProperty(value = "{{{compra_response_pais_value}}}")
   public String getPais() {
     return pais;
   }
@@ -227,9 +229,9 @@ public class CompraResponse  {
 
   
   /**
-   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{compra_response_latitude_value}}}
    **/
-  @ApiModelProperty(value = "Coordenada latitudinal da localiza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_latitude_value}}}")
   public String getLatitude() {
     return latitude;
   }
@@ -239,9 +241,9 @@ public class CompraResponse  {
 
   
   /**
-   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{compra_response_longitude_value}}}
    **/
-  @ApiModelProperty(value = "Coordenada longitudinal da localiza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_longitude_value}}}")
   public String getLongitude() {
     return longitude;
   }
@@ -251,9 +253,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{compra_response_id_grupo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "{{{compra_response_id_grupo_m_c_c_value}}}")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -263,9 +265,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{compra_response_descricao_grupo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "{{{compra_response_descricao_grupo_m_c_c_value}}}")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
   }
@@ -275,9 +277,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.
+   * {{{compra_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.")
+  @ApiModelProperty(value = "{{{compra_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -287,9 +289,9 @@ public class CompraResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+   * {{{compra_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.")
+  @ApiModelProperty(value = "{{{compra_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -299,9 +301,9 @@ public class CompraResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do produto da compra.
+   * {{{compra_response_descricao_produto_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do produto da compra.")
+  @ApiModelProperty(value = "{{{compra_response_descricao_produto_value}}}")
   public String getDescricaoProduto() {
     return descricaoProduto;
   }
@@ -311,9 +313,9 @@ public class CompraResponse  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o da compra.
+   * {{{compra_response_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_cartao_value}}}")
   public String getCartao() {
     return cartao;
   }
@@ -323,9 +325,9 @@ public class CompraResponse  {
 
   
   /**
-   * Nome do portador do cart\u00E3o da compra.
+   * {{{compra_response_nome_portador_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Nome do portador do cart\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{compra_response_nome_portador_cartao_value}}}")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
   }
@@ -367,3 +369,5 @@ public class CompraResponse  {
     return sb.toString();
   }
 }
+
+

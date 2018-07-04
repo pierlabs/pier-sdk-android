@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request
+ * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
  **/
-@ApiModel(description = "Transfer\u00EAncia cr\u00E9dito conta banc\u00E1ria request")
+@ApiModel(description = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
   
   @SerializedName("idCartao")
@@ -21,9 +23,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -33,9 +35,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -45,9 +47,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Representa o N\u00FAmero de Meses concedido como car\u00EAncia.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Representa o N\u00FAmero de Meses concedido como car\u00EAncia.")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }
@@ -69,3 +71,5 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
     return sb.toString();
   }
 }
+
+

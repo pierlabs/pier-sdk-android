@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Tipos de Faturamentos
+ * {{{page_tipo_faturamento_response_description}}}
  **/
-@ApiModel(description = "Lista de Tipos de Faturamentos")
+@ApiModel(description = "{{{page_tipo_faturamento_response_description}}}")
 public class PageTipoFaturamentoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoFaturamentoResponse  {
     return sb.toString();
   }
 }
+
+

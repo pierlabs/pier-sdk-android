@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PlataformaMobileResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Plataformas Mobile
+ * {{{page_plataforma_mobile_response_description}}}
  **/
-@ApiModel(description = "Lista de Plataformas Mobile")
+@ApiModel(description = "{{{page_plataforma_mobile_response_description}}}")
 public class PagePlataformaMobileResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PagePlataformaMobileResponse  {
     return sb.toString();
   }
 }
+
+

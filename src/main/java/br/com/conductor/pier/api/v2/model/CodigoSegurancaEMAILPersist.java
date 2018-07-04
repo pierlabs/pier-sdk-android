@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+ * {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.")
+@ApiModel(description = "{{{codigo_seguranca_e_m_a_i_l_persist_description}}}")
 public class CodigoSegurancaEMAILPersist  {
   
   @SerializedName("email")
@@ -18,9 +20,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
    **/
-  @ApiModelProperty(value = "E-mail usado para envio do c\u00F3digo de seguran\u00E7a.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -30,9 +32,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * Token para valida\u00E7\u00E3o.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
    **/
-  @ApiModelProperty(value = "Token para valida\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
   }
@@ -53,3 +55,5 @@ public class CodigoSegurancaEMAILPersist  {
     return sb.toString();
   }
 }
+
+

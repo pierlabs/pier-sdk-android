@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.FaturaConsignadaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de faturas
+ * {{{page_fatura_consignada_response_description}}}
  **/
-@ApiModel(description = "Lista de faturas")
+@ApiModel(description = "{{{page_fatura_consignada_response_description}}}")
 public class PageFaturaConsignadaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageFaturaConsignadaResponse  {
     return sb.toString();
   }
 }
+
+

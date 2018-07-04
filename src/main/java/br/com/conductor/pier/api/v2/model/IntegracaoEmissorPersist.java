@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
+ * {{{integracao_emissor_persist_description}}}
  **/
-@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor")
+@ApiModel(description = "{{{integracao_emissor_persist_description}}}")
 public class IntegracaoEmissorPersist  {
   
   @SerializedName("canalEntrada")
@@ -16,9 +18,9 @@ public class IntegracaoEmissorPersist  {
 
   
   /**
-   * Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.
+   * {{{integracao_emissor_persist_canal_entrada_value}}}
    **/
-  @ApiModelProperty(value = "Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{integracao_emissor_persist_canal_entrada_value}}}")
   public String getCanalEntrada() {
     return canalEntrada;
   }
@@ -38,3 +40,5 @@ public class IntegracaoEmissorPersist  {
     return sb.toString();
   }
 }
+
+

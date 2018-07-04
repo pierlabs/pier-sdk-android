@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos
+ * {{{page_grupo_economico_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos")
+@ApiModel(description = "{{{page_grupo_economico_response_description}}}")
 public class PageGrupoEconomicoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageGrupoEconomicoResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Banco
+ * {{{banco_response_description}}}
  **/
-@ApiModel(description = "Objeto Banco")
+@ApiModel(description = "{{{banco_response_description}}}")
 public class BancoResponse  {
   
   @SerializedName("id")
@@ -22,9 +24,9 @@ public class BancoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
+   * {{{banco_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).")
+  @ApiModelProperty(value = "{{{banco_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +36,9 @@ public class BancoResponse  {
 
   
   /**
-   * Nome do banco
+   * {{{banco_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do banco")
+  @ApiModelProperty(value = "{{{banco_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +48,9 @@ public class BancoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do banco
+   * {{{banco_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do banco")
+  @ApiModelProperty(value = "{{{banco_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +60,9 @@ public class BancoResponse  {
 
   
   /**
-   * Digito do banco
+   * {{{banco_response_digito_banco_value}}}
    **/
-  @ApiModelProperty(value = "Digito do banco")
+  @ApiModelProperty(value = "{{{banco_response_digito_banco_value}}}")
   public String getDigitoBanco() {
     return digitoBanco;
   }
@@ -83,3 +85,5 @@ public class BancoResponse  {
     return sb.toString();
   }
 }
+
+

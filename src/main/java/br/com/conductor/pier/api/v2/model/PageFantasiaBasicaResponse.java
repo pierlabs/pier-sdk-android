@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.FantasiaBasicaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de fantasia b\u00E1sica
+ * {{{page_fantasia_basica_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de fantasia b\u00E1sica")
+@ApiModel(description = "{{{page_fantasia_basica_response_description}}}")
 public class PageFantasiaBasicaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageFantasiaBasicaResponse  {
     return sb.toString();
   }
 }
+
+

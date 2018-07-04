@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Telefone
+ * {{{telefone_estabelecimento_persist_description}}}
  **/
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_estabelecimento_persist_description}}}")
 public class TelefoneEstabelecimentoPersist  {
   
   @SerializedName("idEstabelecimento")
@@ -22,9 +24,9 @@ public class TelefoneEstabelecimentoPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
+  @ApiModelProperty(required = true, value = "{{{telefone_estabelecimento_persist_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -34,9 +36,9 @@ public class TelefoneEstabelecimentoPersist  {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_persist_ddd_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(required = true, value = "{{{telefone_estabelecimento_persist_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +48,9 @@ public class TelefoneEstabelecimentoPersist  {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_persist_telefone_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(required = true, value = "{{{telefone_estabelecimento_persist_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +60,9 @@ public class TelefoneEstabelecimentoPersist  {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_persist_ramal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_persist_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }
@@ -83,3 +85,5 @@ public class TelefoneEstabelecimentoPersist  {
     return sb.toString();
   }
 }
+
+

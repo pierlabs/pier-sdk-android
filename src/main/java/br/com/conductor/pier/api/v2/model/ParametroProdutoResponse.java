@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Resposta Par\u00E2metro Produto
+ * {{{parametro_produto_response_description}}}
  **/
-@ApiModel(description = "Objeto de Resposta Par\u00E2metro Produto")
+@ApiModel(description = "{{{parametro_produto_response_description}}}")
 public class ParametroProdutoResponse  {
   
   @SerializedName("idProduto")
@@ -28,9 +30,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{parametro_produto_response_id_produto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -40,9 +42,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).
+   * {{{parametro_produto_response_tipo_origem_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).")
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_tipo_origem_transacao_value}}}")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -52,9 +54,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+   * {{{parametro_produto_response_descricao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -64,9 +66,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Valor do Par\u00E2metro.
+   * {{{parametro_produto_response_valor_parametro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor do Par\u00E2metro.")
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_valor_parametro_value}}}")
   public BigDecimal getValorParametro() {
     return valorParametro;
   }
@@ -76,9 +78,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Data de Validade do Par\u00E2metro do Produto.
+   * {{{parametro_produto_response_data_validade_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data de Validade do Par\u00E2metro do Produto.")
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -102,3 +104,5 @@ public class ParametroProdutoResponse  {
     return sb.toString();
   }
 }
+
+

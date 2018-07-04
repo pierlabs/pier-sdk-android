@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Resposta de Telefone Estabelecimento
+ * {{{telefone_estabelecimento_response_description}}}
  **/
-@ApiModel(description = "Objeto de Resposta de Telefone Estabelecimento")
+@ApiModel(description = "{{{telefone_estabelecimento_response_description}}}")
 public class TelefoneEstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -24,9 +26,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+   * {{{telefone_estabelecimento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +38,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.
+   * {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -48,9 +50,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_response_ddd_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +62,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_response_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +74,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_response_ramal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }
@@ -98,3 +100,5 @@ public class TelefoneEstabelecimentoResponse  {
     return sb.toString();
   }
 }
+
+

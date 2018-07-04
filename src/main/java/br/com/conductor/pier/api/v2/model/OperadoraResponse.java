@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+ * {{{operadora_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica")
+@ApiModel(description = "{{{operadora_response_description}}}")
 public class OperadoraResponse  {
   
   @SerializedName("id")
@@ -18,9 +20,9 @@ public class OperadoraResponse  {
 
   
   /**
-   * Identificador da operadora
+   * {{{operadora_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador da operadora")
+  @ApiModelProperty(value = "{{{operadora_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +32,9 @@ public class OperadoraResponse  {
 
   
   /**
-   * Nome da operadora
+   * {{{operadora_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome da operadora")
+  @ApiModelProperty(value = "{{{operadora_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -53,3 +55,5 @@ public class OperadoraResponse  {
     return sb.toString();
   }
 }
+
+

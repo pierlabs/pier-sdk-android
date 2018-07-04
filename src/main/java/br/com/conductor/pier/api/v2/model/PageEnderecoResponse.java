@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Endere\u00E7os
+ * {{{page_endereco_response_description}}}
  **/
-@ApiModel(description = "Lista de Endere\u00E7os")
+@ApiModel(description = "{{{page_endereco_response_description}}}")
 public class PageEnderecoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageEnderecoResponse  {
     return sb.toString();
   }
 }
+
+

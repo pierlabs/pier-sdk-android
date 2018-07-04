@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TemplateNotificacaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Notifica\u00E7\u00F5es (layouts) de E-mail
+ * {{{page_template_notificacao_response_description}}}
  **/
-@ApiModel(description = "Lista de Notifica\u00E7\u00F5es (layouts) de E-mail")
+@ApiModel(description = "{{{page_template_notificacao_response_description}}}")
 public class PageTemplateNotificacaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTemplateNotificacaoResponse  {
     return sb.toString();
   }
 }
+
+

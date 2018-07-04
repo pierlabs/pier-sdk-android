@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
+ * {{{atribuir_assinatura_cliente_persist_description}}}
  **/
-@ApiModel(description = "Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente")
+@ApiModel(description = "{{{atribuir_assinatura_cliente_persist_description}}}")
 public class AtribuirAssinaturaClientePersist  {
   
   @SerializedName("idArquivo")
@@ -16,9 +18,9 @@ public class AtribuirAssinaturaClientePersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
+   * {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Arquivo")
+  @ApiModelProperty(value = "{{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}")
   public Long getIdArquivo() {
     return idArquivo;
   }
@@ -38,3 +40,5 @@ public class AtribuirAssinaturaClientePersist  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * {{{cartao_pay_update_description}}}
  **/
-@ApiModel(description = "Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_update_description}}}")
 public class CartaoPayUpdate  {
   
   public enum StatusEnum {
@@ -19,9 +21,9 @@ public class CartaoPayUpdate  {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_update_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Status do cart\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{cartao_pay_update_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -41,3 +43,5 @@ public class CartaoPayUpdate  {
     return sb.toString();
   }
 }
+
+

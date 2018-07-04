@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
+ * {{{status_cartao_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Status Cart\u00E3o")
+@ApiModel(description = "{{{status_cartao_response_description}}}")
 public class StatusCartaoResponse  {
   
   @SerializedName("id")
@@ -26,9 +28,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
+   * {{{status_cartao_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) ")
+  @ApiModelProperty(required = true, value = "{{{status_cartao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +40,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
+   * {{{status_cartao_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{status_cartao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -50,9 +52,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_desbloquear_value}}}
    **/
-  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_desbloquear_value}}}")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
   }
@@ -62,9 +64,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
    **/
-  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
   }
@@ -74,9 +76,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
    **/
-  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
   }
@@ -86,9 +88,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
    **/
-  @ApiModelProperty(value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(value = "{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}")
   public Integer getCobrarTarifaAoEmitirNovaVia() {
     return cobrarTarifaAoEmitirNovaVia;
   }
@@ -113,3 +115,5 @@ public class StatusCartaoResponse  {
     return sb.toString();
   }
 }
+
+

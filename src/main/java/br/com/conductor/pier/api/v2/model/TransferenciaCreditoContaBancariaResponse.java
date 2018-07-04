@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+ * {{{transferencia_credito_conta_bancaria_response_description}}}
  **/
-@ApiModel(description = "Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
+@ApiModel(description = "{{{transferencia_credito_conta_bancaria_response_description}}}")
 public class TransferenciaCreditoContaBancariaResponse  {
   
   @SerializedName("idTransferencia")
@@ -77,9 +79,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia.
+   * {{{transferencia_credito_conta_bancaria_response_id_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transferencia.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_id_transferencia_value}}}")
   public Long getIdTransferencia() {
     return idTransferencia;
   }
@@ -89,9 +91,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Taxa de custo efetivo total.
+   * {{{transferencia_credito_conta_bancaria_response_valor_c_e_t_value}}}
    **/
-  @ApiModelProperty(value = "Taxa de custo efetivo total.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_c_e_t_value}}}")
   public BigDecimal getValorCET() {
     return valorCET;
   }
@@ -101,9 +103,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_response_id_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_id_autorizacao_value}}}")
   public Long getIdAutorizacao() {
     return idAutorizacao;
   }
@@ -113,9 +115,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo da autoriza\u00E7\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_response_codigo_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo da autoriza\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_codigo_autorizacao_value}}}")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -125,9 +127,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * NSU de origem.
+   * {{{transferencia_credito_conta_bancaria_response_nsu_origem_value}}}
    **/
-  @ApiModelProperty(value = "NSU de origem.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_nsu_origem_value}}}")
   public Long getNsuOrigem() {
     return nsuOrigem;
   }
@@ -137,9 +139,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{transferencia_credito_conta_bancaria_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -149,9 +151,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -161,9 +163,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_response_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -173,9 +175,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da transfer\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_response_valor_compra_value}}}
    **/
-  @ApiModelProperty(value = "Valor da transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_compra_value}}}")
   public BigDecimal getValorCompra() {
     return valorCompra;
   }
@@ -185,9 +187,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da parcela.
+   * {{{transferencia_credito_conta_bancaria_response_valor_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_parcela_value}}}")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -197,9 +199,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.
+   * {{{transferencia_credito_conta_bancaria_response_valor_contrato_value}}}
    **/
-  @ApiModelProperty(value = "Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_contrato_value}}}")
   public BigDecimal getValorContrato() {
     return valorContrato;
   }
@@ -209,9 +211,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00FAmero de parcelas.
+   * {{{transferencia_credito_conta_bancaria_response_numero_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de parcelas.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_numero_parcelas_value}}}")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -221,9 +223,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor do IOF.
+   * {{{transferencia_credito_conta_bancaria_response_valor_i_o_f_value}}}
    **/
-  @ApiModelProperty(value = "Valor do IOF.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_i_o_f_value}}}")
   public BigDecimal getValorIOF() {
     return valorIOF;
   }
@@ -233,9 +235,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da TAC.
+   * {{{transferencia_credito_conta_bancaria_response_valor_t_a_c_value}}}
    **/
-  @ApiModelProperty(value = "Valor da TAC.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_t_a_c_value}}}")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -245,9 +247,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da taxa saque.
+   * {{{transferencia_credito_conta_bancaria_response_valor_taxa_saque_value}}}
    **/
-  @ApiModelProperty(value = "Valor da taxa saque.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_valor_taxa_saque_value}}}")
   public BigDecimal getValorTaxaSaque() {
     return valorTaxaSaque;
   }
@@ -257,9 +259,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Percentual de juros.
+   * {{{transferencia_credito_conta_bancaria_response_taxa_juros_value}}}
    **/
-  @ApiModelProperty(value = "Percentual de juros.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_taxa_juros_value}}}")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -269,9 +271,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data da transfer\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_response_data_compra_value}}}
    **/
-  @ApiModelProperty(value = "Data da transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_data_compra_value}}}")
   public String getDataCompra() {
     return dataCompra;
   }
@@ -281,9 +283,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data do movimento.
+   * {{{transferencia_credito_conta_bancaria_response_data_movimento_value}}}
    **/
-  @ApiModelProperty(value = "Data do movimento.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_data_movimento_value}}}")
   public String getDataMovimento() {
     return dataMovimento;
   }
@@ -293,9 +295,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data do vencimento real da fatura.
+   * {{{transferencia_credito_conta_bancaria_response_data_vencimento_real_value}}}
    **/
-  @ApiModelProperty(value = "Data do vencimento real da fatura.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_data_vencimento_real_value}}}")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
@@ -305,9 +307,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Dia do vencimento padr\u00E3o da fatura.
+   * {{{transferencia_credito_conta_bancaria_response_data_vencimento_padrao_value}}}
    **/
-  @ApiModelProperty(value = "Dia do vencimento padr\u00E3o da fatura.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_data_vencimento_padrao_value}}}")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
   }
@@ -317,9 +319,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data da autoriza\u00E7\u00E3o.
+   * {{{transferencia_credito_conta_bancaria_response_data_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "Data da autoriza\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_data_autorizacao_value}}}")
   public String getDataAutorizacao() {
     return dataAutorizacao;
   }
@@ -329,9 +331,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo do Banco.
+   * {{{transferencia_credito_conta_bancaria_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do Banco.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_banco_value}}}")
   public Long getBanco() {
     return banco;
   }
@@ -341,9 +343,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00FAmero da Ag\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_response_numero_agencia_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da Ag\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_numero_agencia_value}}}")
   public String getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -353,9 +355,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * D\u00EDgito da Ag\u00EAncia.
+   * {{{transferencia_credito_conta_bancaria_response_digito_agencia_value}}}
    **/
-  @ApiModelProperty(value = "D\u00EDgito da Ag\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_digito_agencia_value}}}")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -365,9 +367,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00FAmero da Conta.
+   * {{{transferencia_credito_conta_bancaria_response_numero_conta_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da Conta.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_numero_conta_value}}}")
   public String getNumeroConta() {
     return numeroConta;
   }
@@ -377,9 +379,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * D\u00EDgito da Conta.
+   * {{{transferencia_credito_conta_bancaria_response_digito_conta_value}}}
    **/
-  @ApiModelProperty(value = "D\u00EDgito da Conta.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_digito_conta_value}}}")
   public String getDigitoConta() {
     return digitoConta;
   }
@@ -389,9 +391,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Tipo da Conta.
+   * {{{transferencia_credito_conta_bancaria_response_flag_conta_poupanca_value}}}
    **/
-  @ApiModelProperty(value = "Tipo da Conta.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_flag_conta_poupanca_value}}}")
   public Boolean getFlagContaPoupanca() {
     return flagContaPoupanca;
   }
@@ -401,9 +403,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Documento do Favorecido.
+   * {{{transferencia_credito_conta_bancaria_response_documento_favorecido_value}}}
    **/
-  @ApiModelProperty(value = "Documento do Favorecido.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_documento_favorecido_value}}}")
   public String getDocumentoFavorecido() {
     return documentoFavorecido;
   }
@@ -413,9 +415,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Nome do Favorecido.
+   * {{{transferencia_credito_conta_bancaria_response_nome_favorecido_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Favorecido.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_nome_favorecido_value}}}")
   public String getNomeFavorecido() {
     return nomeFavorecido;
   }
@@ -425,9 +427,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * C\u00F3digo do Status
+   * {{{transferencia_credito_conta_bancaria_response_status_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do Status")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_status_value}}}")
   public String getStatus() {
     return status;
   }
@@ -437,9 +439,9 @@ public class TransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Status Processamento.
+   * {{{transferencia_credito_conta_bancaria_response_status_processamento_value}}}
    **/
-  @ApiModelProperty(value = "Status Processamento.")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_response_status_processamento_value}}}")
   public String getStatusProcessamento() {
     return statusProcessamento;
   }
@@ -489,3 +491,5 @@ public class TransferenciaCreditoContaBancariaResponse  {
     return sb.toString();
   }
 }
+
+

@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.BancoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Bancos
+ * {{{page_banco_response_description}}}
  **/
-@ApiModel(description = "Lista de Bancos")
+@ApiModel(description = "{{{page_banco_response_description}}}")
 public class PageBancoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageBancoResponse  {
     return sb.toString();
   }
 }
+
+

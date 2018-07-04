@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * ObjetoTipoTerminal
+ * {{{tipo_terminal_response_description}}}
  **/
-@ApiModel(description = "ObjetoTipoTerminal")
+@ApiModel(description = "{{{tipo_terminal_response_description}}}")
 public class TipoTerminalResponse  {
   
   @SerializedName("id")
@@ -18,9 +20,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
+   * {{{tipo_terminal_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).")
+  @ApiModelProperty(value = "{{{tipo_terminal_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +32,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Tipo Terminal.
+   * {{{tipo_terminal_response_descricao_terminal_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo Terminal.")
+  @ApiModelProperty(value = "{{{tipo_terminal_response_descricao_terminal_value}}}")
   public String getDescricaoTerminal() {
     return descricaoTerminal;
   }
@@ -53,3 +55,5 @@ public class TipoTerminalResponse  {
     return sb.toString();
   }
 }
+
+

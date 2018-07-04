@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
+ * {{{plano_campanha_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de plano de campanha")
+@ApiModel(description = "{{{plano_campanha_response_description}}}")
 public class PlanoCampanhaResponse  {
   
   @SerializedName("id")
@@ -23,9 +25,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * Identificador do plano de campanha
+   * {{{plano_campanha_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do plano de campanha")
+  @ApiModelProperty(value = "{{{plano_campanha_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -35,9 +37,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * Quantidade de parcelas
+   * {{{plano_campanha_response_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Quantidade de parcelas")
+  @ApiModelProperty(value = "{{{plano_campanha_response_parcelas_value}}}")
   public Integer getParcelas() {
     return parcelas;
   }
@@ -47,9 +49,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * Taxa de juros
+   * {{{plano_campanha_response_taxa_value}}}
    **/
-  @ApiModelProperty(value = "Taxa de juros")
+  @ApiModelProperty(value = "{{{plano_campanha_response_taxa_value}}}")
   public BigDecimal getTaxa() {
     return taxa;
   }
@@ -59,9 +61,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * Nome do usu\u00E1rio
+   * {{{plano_campanha_response_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Nome do usu\u00E1rio")
+  @ApiModelProperty(value = "{{{plano_campanha_response_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -84,3 +86,5 @@ public class PlanoCampanhaResponse  {
     return sb.toString();
   }
 }
+
+

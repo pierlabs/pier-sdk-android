@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * PlanoCampanha
+ * {{{plano_campanha_persist_description}}}
  **/
-@ApiModel(description = "PlanoCampanha")
+@ApiModel(description = "{{{plano_campanha_persist_description}}}")
 public class PlanoCampanhaPersist  {
   
   @SerializedName("parcelas")
@@ -66,3 +68,5 @@ public class PlanoCampanhaPersist  {
     return sb.toString();
   }
 }
+
+

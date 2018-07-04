@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoTemplateResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Tipo Template
+ * {{{page_tipo_template_response_description}}}
  **/
-@ApiModel(description = "Lista de Tipo Template")
+@ApiModel(description = "{{{page_tipo_template_response_description}}}")
 public class PageTipoTemplateResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoTemplateResponse  {
     return sb.toString();
   }
 }
+
+

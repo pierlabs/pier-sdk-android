@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Resposta da Entidade
+ * {{{entidade_response_description}}}
  **/
-@ApiModel(description = "Objeto de Resposta da Entidade")
+@ApiModel(description = "{{{entidade_response_description}}}")
 public class EntidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +22,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
+   * {{{entidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da entidade.")
+  @ApiModelProperty(value = "{{{entidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +34,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o da entidade.
+   * {{{entidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o da entidade.")
+  @ApiModelProperty(value = "{{{entidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +46,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * Flag que indica se a entidade est\u00E1 ativa.
+   * {{{entidade_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se a entidade est\u00E1 ativa.")
+  @ApiModelProperty(value = "{{{entidade_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -68,3 +70,5 @@ public class EntidadeResponse  {
     return sb.toString();
   }
 }
+
+

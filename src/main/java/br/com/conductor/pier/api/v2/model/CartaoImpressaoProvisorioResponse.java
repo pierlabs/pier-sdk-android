@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto cart\u00E3o provis\u00F3rio
+ * {{{cartao_impressao_provisorio_response_description}}}
  **/
-@ApiModel(description = "Objeto cart\u00E3o provis\u00F3rio")
+@ApiModel(description = "{{{cartao_impressao_provisorio_response_description}}}")
 public class CartaoImpressaoProvisorioResponse  {
   
   @SerializedName("flagVirtual")
@@ -39,9 +41,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_impressao_provisorio_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -51,9 +53,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -63,9 +65,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_impressao_provisorio_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -75,9 +77,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o n\u00FAmero do cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -87,9 +89,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta o nome do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome do Portador do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_nome_plastico_value}}}")
   public String getNomePlastico() {
     return nomePlastico;
   }
@@ -99,9 +101,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_impressao_provisorio_response_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -127,3 +129,5 @@ public class CartaoImpressaoProvisorioResponse  {
     return sb.toString();
   }
 }
+
+

@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.ConsultaCadastroEstabelecimentoDTO;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Estabelecimento
+ * {{{estabelecimento_response_description}}}
  **/
-@ApiModel(description = "Objeto Estabelecimento")
+@ApiModel(description = "{{{estabelecimento_response_description}}}")
 public class EstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -102,9 +104,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+   * {{{estabelecimento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -114,9 +116,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+   * {{{estabelecimento_response_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_estabelecimento_value}}}")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -126,9 +128,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indica se \u00E9 matriz ou filial.
+   * {{{estabelecimento_response_flag_matriz_value}}}
    **/
-  @ApiModelProperty(value = "Indica se \u00E9 matriz ou filial.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_matriz_value}}}")
   public Integer getFlagMatriz() {
     return flagMatriz;
   }
@@ -138,9 +140,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+   * {{{estabelecimento_response_id_grupo_economico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_grupo_economico_value}}}")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -150,9 +152,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
+   * {{{estabelecimento_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_receita_federal_value}}}")
   public Long getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -162,9 +164,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome do Estabelecimento.
+   * {{{estabelecimento_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -174,9 +176,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Raz\u00E3o Social do Estabelecimento.
+   * {{{estabelecimento_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Raz\u00E3o Social do Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -186,9 +188,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * T\u00EDtulo Comercial do Estabelecimento.
+   * {{{estabelecimento_response_nome_fantasia_value}}}
    **/
-  @ApiModelProperty(value = "T\u00EDtulo Comercial do Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_fantasia_value}}}")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -198,9 +200,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
+   * {{{estabelecimento_response_cep_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cep_value}}}")
   public String getCep() {
     return cep;
   }
@@ -210,9 +212,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome do Logradouro.
+   * {{{estabelecimento_response_nome_logradouro_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Logradouro.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_logradouro_value}}}")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -222,9 +224,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero do endere\u00E7o.
+   * {{{estabelecimento_response_numero_endereco_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_endereco_value}}}")
   public String getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -234,9 +236,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome do bairro do endere\u00E7o.
+   * {{{estabelecimento_response_bairro_value}}}
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_bairro_value}}}")
   public String getBairro() {
     return bairro;
   }
@@ -246,9 +248,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome da cidade do endere\u00E7o.
+   * {{{estabelecimento_response_cidade_value}}}
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cidade_value}}}")
   public String getCidade() {
     return cidade;
   }
@@ -258,9 +260,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * {{{estabelecimento_response_complemento_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_complemento_value}}}")
   public String getComplemento() {
     return complemento;
   }
@@ -270,9 +272,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * {{{estabelecimento_response_uf_value}}}
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_uf_value}}}")
   public String getUf() {
     return uf;
   }
@@ -282,9 +284,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de Endere\u00E7amento Postal (CEP).
+   * {{{estabelecimento_response_cep2_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal (CEP).")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cep2_value}}}")
   public String getCep2() {
     return cep2;
   }
@@ -294,9 +296,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome do Logradouro .
+   * {{{estabelecimento_response_nome_logradouro2_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Logradouro .")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_logradouro2_value}}}")
   public String getNomeLogradouro2() {
     return nomeLogradouro2;
   }
@@ -306,9 +308,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero do endere\u00E7o.
+   * {{{estabelecimento_response_numero_endereco2_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_endereco2_value}}}")
   public String getNumeroEndereco2() {
     return numeroEndereco2;
   }
@@ -318,9 +320,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome do bairro do endere\u00E7o.
+   * {{{estabelecimento_response_bairro2_value}}}
    **/
-  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_bairro2_value}}}")
   public String getBairro2() {
     return bairro2;
   }
@@ -330,9 +332,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome da cidade do endere\u00E7o.
+   * {{{estabelecimento_response_cidade2_value}}}
    **/
-  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cidade2_value}}}")
   public String getCidade2() {
     return cidade2;
   }
@@ -342,9 +344,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * {{{estabelecimento_response_complemento2_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_complemento2_value}}}")
   public String getComplemento2() {
     return complemento2;
   }
@@ -354,9 +356,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * {{{estabelecimento_response_uf2_value}}}
    **/
-  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_uf2_value}}}")
   public String getUf2() {
     return uf2;
   }
@@ -366,9 +368,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.
+   * {{{estabelecimento_response_obs_value}}}
    **/
-  @ApiModelProperty(value = "Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_obs_value}}}")
   public String getObs() {
     return obs;
   }
@@ -378,9 +380,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Nome da pessoa para contato com o Estabelecimento.
+   * {{{estabelecimento_response_contato_value}}}
    **/
-  @ApiModelProperty(value = "Nome da pessoa para contato com o Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_contato_value}}}")
   public String getContato() {
     return contato;
   }
@@ -390,9 +392,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * E-mail da pessoa para contato com o Estabelecimento.
+   * {{{estabelecimento_response_email_value}}}
    **/
-  @ApiModelProperty(value = "E-mail da pessoa para contato com o Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -402,9 +404,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
   }
@@ -414,9 +416,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+   * {{{estabelecimento_response_flag_cartao_digitado_value}}}
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_cartao_digitado_value}}}")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
   }
@@ -426,9 +428,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indica se o estabelecimento est\u00E1 inativo.
+   * {{{estabelecimento_response_inativo_value}}}
    **/
-  @ApiModelProperty(value = "Indica se o estabelecimento est\u00E1 inativo.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_inativo_value}}}")
   public Integer getInativo() {
     return inativo;
   }
@@ -438,9 +440,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo identificador da moeda.
+   * {{{estabelecimento_response_id_moeda_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da moeda.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_moeda_value}}}")
   public Long getIdMoeda() {
     return idMoeda;
   }
@@ -450,9 +452,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Identificador de Pa\u00EDs.
+   * {{{estabelecimento_response_id_pais_value}}}
    **/
-  @ApiModelProperty(value = "Identificador de Pa\u00EDs.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_pais_value}}}")
   public Long getIdPais() {
     return idPais;
   }
@@ -462,9 +464,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * N\u00FAmero do associado ao SPCBrasil.
+   * {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do associado ao SPCBrasil.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_associado_s_p_c_brasil_value}}}")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
   }
@@ -474,9 +476,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de Categoria de Mercado.
+   * {{{estabelecimento_response_mcc_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Categoria de Mercado.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_mcc_value}}}")
   public Long getMcc() {
     return mcc;
   }
@@ -486,9 +488,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+   * {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_tipo_estabelecimento_value}}}")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
   }
@@ -498,9 +500,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).
+   * {{{estabelecimento_response_correspondencia_value}}}
    **/
-  @ApiModelProperty(value = "Tipo da Correspond\u00EAncia (ORIGEM, CORRESPONDENCIA).")
+  @ApiModelProperty(value = "{{{estabelecimento_response_correspondencia_value}}}")
   public Integer getCorrespondencia() {
     return correspondencia;
   }
@@ -510,9 +512,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Cargo do contato do estabelecimento.
+   * {{{estabelecimento_response_cargo_contato_value}}}
    **/
-  @ApiModelProperty(value = "Cargo do contato do estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cargo_contato_value}}}")
   public String getCargoContato() {
     return cargoContato;
   }
@@ -522,9 +524,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Tipo do regime de pagamento do estabelecimento.
+   * {{{estabelecimento_response_tipo_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Tipo do regime de pagamento do estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_tipo_pagamento_value}}}")
   public TipoPagamentoEnum getTipoPagamento() {
     return tipoPagamento;
   }
@@ -534,9 +536,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Consulta de cadastro n\u00FAmero um.
+   * {{{estabelecimento_response_consulta_value}}}
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero um.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
   }
@@ -546,9 +548,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Consulta de cadastro n\u00FAmero dois.
+   * {{{estabelecimento_response_consulta2_value}}}
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero dois.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta2_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
   }
@@ -558,9 +560,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Consulta de cadastro n\u00FAmero tr\u00EAs.
+   * {{{estabelecimento_response_consulta3_value}}}
    **/
-  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero tr\u00EAs.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta3_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
   }
@@ -570,9 +572,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Terminal do estabelecimento.
+   * {{{estabelecimento_response_terminal_value}}}
    **/
-  @ApiModelProperty(value = "Terminal do estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_terminal_value}}}")
   public String getTerminal() {
     return terminal;
   }
@@ -582,9 +584,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Data de Cadastro do Estabelecimento.
+   * {{{estabelecimento_response_data_cadastramento_value}}}
    **/
-  @ApiModelProperty(value = "Data de Cadastro do Estabelecimento.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_data_cadastramento_value}}}")
   public String getDataCadastramento() {
     return dataCadastramento;
   }
@@ -594,9 +596,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Usu\u00E1rio da aplica\u00E7\u00E3o.
+   * {{{estabelecimento_response_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Usu\u00E1rio da aplica\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{estabelecimento_response_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -657,3 +659,5 @@ public class EstabelecimentoResponse  {
     return sb.toString();
   }
 }
+
+

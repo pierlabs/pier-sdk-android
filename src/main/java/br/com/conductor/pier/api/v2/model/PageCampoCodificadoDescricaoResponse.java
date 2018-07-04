@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.CampoCodificadoDescricaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Campos Codificados
+ * {{{page_campo_codificado_descricao_response_description}}}
  **/
-@ApiModel(description = "Lista de Campos Codificados")
+@ApiModel(description = "{{{page_campo_codificado_descricao_response_description}}}")
 public class PageCampoCodificadoDescricaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageCampoCodificadoDescricaoResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso Base
+ * {{{base_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Base")
+@ApiModel(description = "{{{base_response_description}}}")
 public class BaseResponse  {
   
   @SerializedName("id")
@@ -19,10 +21,10 @@ public class BaseResponse  {
   private String usuario = null;
   @SerializedName("nomeBase")
   private String nomeBase = null;
-  @SerializedName("senhaCriptografada")
-  private Boolean senhaCriptografada = null;
   @SerializedName("domain")
   private String domain = null;
+  @SerializedName("senhaCriptografada")
+  private Boolean senhaCriptografada = null;
   @SerializedName("nomeBaseControleAcesso")
   private String nomeBaseControleAcesso = null;
   @SerializedName("idEmissor")
@@ -38,9 +40,9 @@ public class BaseResponse  {
 
   
   /**
-   * C\u00F3digo identificador da base
+   * {{{base_dto_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da base")
+  @ApiModelProperty(value = "{{{base_dto_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -50,9 +52,9 @@ public class BaseResponse  {
 
   
   /**
-   * IP do servidor
+   * {{{base_dto_servidor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "IP do servidor")
+  @ApiModelProperty(value = "{{{base_dto_servidor_value}}}")
   public String getServidor() {
     return servidor;
   }
@@ -62,9 +64,9 @@ public class BaseResponse  {
 
   
   /**
-   * Nome do usu\u00E1rio
+   * {{{base_dto_usuario_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome do usu\u00E1rio")
+  @ApiModelProperty(value = "{{{base_dto_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -74,9 +76,9 @@ public class BaseResponse  {
 
   
   /**
-   * Nome da base
+   * {{{base_dto_nome_base_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome da base")
+  @ApiModelProperty(value = "{{{base_dto_nome_base_value}}}")
   public String getNomeBase() {
     return nomeBase;
   }
@@ -86,21 +88,9 @@ public class BaseResponse  {
 
   
   /**
-   * senha Criptografada
+   * {{{base_dto_domain_value}}}
    **/
-  @ApiModelProperty(required = true, value = "senha Criptografada")
-  public Boolean getSenhaCriptografada() {
-    return senhaCriptografada;
-  }
-  public void setSenhaCriptografada(Boolean senhaCriptografada) {
-    this.senhaCriptografada = senhaCriptografada;
-  }
-
-  
-  /**
-   * Dom\u00EDnio da base
-   **/
-  @ApiModelProperty(required = true, value = "Dom\u00EDnio da base")
+  @ApiModelProperty(value = "{{{base_dto_domain_value}}}")
   public String getDomain() {
     return domain;
   }
@@ -110,9 +100,21 @@ public class BaseResponse  {
 
   
   /**
-   * Nome da base de controle acesso
+   * {{{base_dto_senha_criptografada_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome da base de controle acesso")
+  @ApiModelProperty(value = "{{{base_dto_senha_criptografada_value}}}")
+  public Boolean getSenhaCriptografada() {
+    return senhaCriptografada;
+  }
+  public void setSenhaCriptografada(Boolean senhaCriptografada) {
+    this.senhaCriptografada = senhaCriptografada;
+  }
+
+  
+  /**
+   * {{{base_dto_nome_base_controle_acesso_value}}}
+   **/
+  @ApiModelProperty(value = "{{{base_dto_nome_base_controle_acesso_value}}}")
   public String getNomeBaseControleAcesso() {
     return nomeBaseControleAcesso;
   }
@@ -122,9 +124,9 @@ public class BaseResponse  {
 
   
   /**
-   * C\u00F3digo do identificador do emissor
+   * {{{base_dto_id_emissor_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do identificador do emissor")
+  @ApiModelProperty(value = "{{{base_dto_id_emissor_value}}}")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -134,9 +136,9 @@ public class BaseResponse  {
 
   
   /**
-   * Servidor do controle de acesso
+   * {{{base_dto_servidor_controle_acesso_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Servidor do controle de acesso")
+  @ApiModelProperty(value = "{{{base_dto_servidor_controle_acesso_value}}}")
   public String getServidorControleAcesso() {
     return servidorControleAcesso;
   }
@@ -146,9 +148,9 @@ public class BaseResponse  {
 
   
   /**
-   * Nome da base de usu\u00E1rios
+   * {{{base_dto_nome_base_usuarios_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome da base de usu\u00E1rios")
+  @ApiModelProperty(value = "{{{base_dto_nome_base_usuarios_value}}}")
   public String getNomeBaseUsuarios() {
     return nomeBaseUsuarios;
   }
@@ -158,9 +160,9 @@ public class BaseResponse  {
 
   
   /**
-   * Servidor do controle de acesso
+   * {{{base_dto_servidor_usuarios_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Servidor do controle de acesso")
+  @ApiModelProperty(value = "{{{base_dto_servidor_usuarios_value}}}")
   public String getServidorUsuarios() {
     return servidorUsuarios;
   }
@@ -170,9 +172,9 @@ public class BaseResponse  {
 
   
   /**
-   * Flag Cluester
+   * {{{base_dto_flag_cluster_value}}}
    **/
-  @ApiModelProperty(value = "Flag Cluester")
+  @ApiModelProperty(value = "{{{base_dto_flag_cluster_value}}}")
   public Boolean getFlagCluster() {
     return flagCluster;
   }
@@ -191,8 +193,8 @@ public class BaseResponse  {
     sb.append("  servidor: ").append(servidor).append("\n");
     sb.append("  usuario: ").append(usuario).append("\n");
     sb.append("  nomeBase: ").append(nomeBase).append("\n");
-    sb.append("  senhaCriptografada: ").append(senhaCriptografada).append("\n");
     sb.append("  domain: ").append(domain).append("\n");
+    sb.append("  senhaCriptografada: ").append(senhaCriptografada).append("\n");
     sb.append("  nomeBaseControleAcesso: ").append(nomeBaseControleAcesso).append("\n");
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
     sb.append("  servidorControleAcesso: ").append(servidorControleAcesso).append("\n");
@@ -203,3 +205,5 @@ public class BaseResponse  {
     return sb.toString();
   }
 }
+
+

@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoBoletoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista dos tipos de boletos
+ * {{{page_tipo_boleto_response_description}}}
  **/
-@ApiModel(description = "Lista dos tipos de boletos")
+@ApiModel(description = "{{{page_tipo_boleto_response_description}}}")
 public class PageTipoBoletoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoBoletoResponse  {
     return sb.toString();
   }
 }
+
+

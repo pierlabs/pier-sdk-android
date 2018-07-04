@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o
+ * {{{transacao_pay_query_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o")
+@ApiModel(description = "{{{transacao_pay_query_response_description}}}")
 public class TransacaoPayQueryResponse  {
   
   @SerializedName("codigo")
@@ -18,9 +20,9 @@ public class TransacaoPayQueryResponse  {
 
   
   /**
-   * Resultado de consulta de conta
+   * {{{transacao_pay_query_response_codigo_value}}}
    **/
-  @ApiModelProperty(value = "Resultado de consulta de conta")
+  @ApiModelProperty(value = "{{{transacao_pay_query_response_codigo_value}}}")
   public String getCodigo() {
     return codigo;
   }
@@ -30,9 +32,9 @@ public class TransacaoPayQueryResponse  {
 
   
   /**
-   * Mensagem descrevendo resposta.
+   * {{{transacao_pay_query_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Mensagem descrevendo resposta.")
+  @ApiModelProperty(value = "{{{transacao_pay_query_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -53,3 +55,5 @@ public class TransacaoPayQueryResponse  {
     return sb.toString();
   }
 }
+
+

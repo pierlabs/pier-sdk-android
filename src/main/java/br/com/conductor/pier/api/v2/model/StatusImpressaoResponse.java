@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso Status Impress\u00E3o
+ * {{{status_impressao_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Status Impress\u00E3o")
+@ApiModel(description = "{{{status_impressao_response_description}}}")
 public class StatusImpressaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +20,9 @@ public class StatusImpressaoResponse  {
 
   
   /**
-   * Id do est\u00E1gio cart\u00E3o
+   * {{{status_impressao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Id do est\u00E1gio cart\u00E3o")
+  @ApiModelProperty(value = "{{{status_impressao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +32,9 @@ public class StatusImpressaoResponse  {
 
   
   /**
-   * Nome do status impress\u00E3o
+   * {{{status_impressao_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do status impress\u00E3o")
+  @ApiModelProperty(value = "{{{status_impressao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -53,3 +55,5 @@ public class StatusImpressaoResponse  {
     return sb.toString();
   }
 }
+
+

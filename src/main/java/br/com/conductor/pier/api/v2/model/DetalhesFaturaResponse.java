@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.FaturaFechadaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto contendo os detalhes de uma fatura
+ * {{{detalhes_fatura_response_description}}}
  **/
-@ApiModel(description = "Objeto contendo os detalhes de uma fatura")
+@ApiModel(description = "{{{detalhes_fatura_response_description}}}")
 public class DetalhesFaturaResponse  {
   
   @SerializedName("fatura")
@@ -21,9 +23,9 @@ public class DetalhesFaturaResponse  {
 
   
   /**
-   * Apresenta os detalhes da fatura
+   * {{{detalhes_fatura_response_fatura_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta os detalhes da fatura")
+  @ApiModelProperty(value = "{{{detalhes_fatura_response_fatura_value}}}")
   public FaturaFechadaResponse getFatura() {
     return fatura;
   }
@@ -33,9 +35,9 @@ public class DetalhesFaturaResponse  {
 
   
   /**
-   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+   * {{{detalhes_fatura_response_transacoes_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta as transa\u00E7\u00F5es relacionadas a fatura.")
+  @ApiModelProperty(value = "{{{detalhes_fatura_response_transacoes_value}}}")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }
@@ -56,3 +58,5 @@ public class DetalhesFaturaResponse  {
     return sb.toString();
   }
 }
+
+

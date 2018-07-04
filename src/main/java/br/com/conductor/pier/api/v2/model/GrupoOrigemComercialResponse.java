@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de resposta do grupo de origem comercial
+ * {{{grupo_origem_comercial_response_description}}}
  **/
-@ApiModel(description = "Objeto de resposta do grupo de origem comercial")
+@ApiModel(description = "{{{grupo_origem_comercial_response_description}}}")
 public class GrupoOrigemComercialResponse  {
   
   @SerializedName("id")
@@ -18,9 +20,9 @@ public class GrupoOrigemComercialResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.
+   * {{{grupo_origem_comercial_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.")
+  @ApiModelProperty(value = "{{{grupo_origem_comercial_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +32,9 @@ public class GrupoOrigemComercialResponse  {
 
   
   /**
-   * Nome do grupo da origem comercial
+   * {{{grupo_origem_comercial_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do grupo da origem comercial")
+  @ApiModelProperty(value = "{{{grupo_origem_comercial_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -53,3 +55,5 @@ public class GrupoOrigemComercialResponse  {
     return sb.toString();
   }
 }
+
+

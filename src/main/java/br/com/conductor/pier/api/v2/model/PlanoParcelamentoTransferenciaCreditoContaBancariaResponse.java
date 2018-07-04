@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.ParcelamentoTransferenciaResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
+ * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
  **/
-@ApiModel(description = "Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
+@ApiModel(description = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
   
   @SerializedName("numeroMascaradoCartao")
@@ -27,9 +29,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.")
+  @ApiModelProperty(value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
   }
@@ -39,9 +41,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Data de vencimento da primeira parcela.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Data de vencimento da primeira parcela.")
+  @ApiModelProperty(value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}")
   public String getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
   }
@@ -51,9 +53,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Valor da solicita\u00E7\u00E3o de saque.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Valor da solicita\u00E7\u00E3o de saque.")
+  @ApiModelProperty(value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -63,9 +65,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * N\u00FAmero de meses para car\u00EAncia.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de meses para car\u00EAncia.")
+  @ApiModelProperty(value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }
@@ -75,9 +77,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
 
   
   /**
-   * Lista com os planos de parcelamento.
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Lista com os planos de parcelamento.")
+  @ApiModelProperty(value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}")
   public List<ParcelamentoTransferenciaResponse> getParcelas() {
     return parcelas;
   }
@@ -101,3 +103,5 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  {
     return sb.toString();
   }
 }
+
+

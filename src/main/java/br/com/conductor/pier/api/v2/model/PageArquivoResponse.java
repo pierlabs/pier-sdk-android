@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.ArquivoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista arquivos armazenados na contig\u00EAncia
+ * {{{page_arquivo_response_description}}}
  **/
-@ApiModel(description = "Lista arquivos armazenados na contig\u00EAncia")
+@ApiModel(description = "{{{page_arquivo_response_description}}}")
 public class PageArquivoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageArquivoResponse  {
     return sb.toString();
   }
 }
+
+

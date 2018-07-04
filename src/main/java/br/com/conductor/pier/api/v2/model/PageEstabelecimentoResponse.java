@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de estabelecimentos
+ * {{{page_estabelecimento_response_description}}}
  **/
-@ApiModel(description = "Lista de estabelecimentos")
+@ApiModel(description = "{{{page_estabelecimento_response_description}}}")
 public class PageEstabelecimentoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageEstabelecimentoResponse  {
     return sb.toString();
   }
 }
+
+

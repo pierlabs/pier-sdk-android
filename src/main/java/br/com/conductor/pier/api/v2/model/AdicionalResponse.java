@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Resposta do recurso de cadastrar adicional
+ * {{{adicional_response_description}}}
  **/
-@ApiModel(description = "Resposta do recurso de cadastrar adicional")
+@ApiModel(description = "{{{adicional_response_description}}}")
 public class AdicionalResponse  {
   
   @SerializedName("idConta")
@@ -44,9 +46,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
+   * {{{adicional_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -56,9 +58,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
+   * {{{adicional_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -68,9 +70,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Nome completo do Adicional
+   * {{{adicional_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome completo do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -80,9 +82,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
+   * {{{adicional_response_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o")
+  @ApiModelProperty(value = "{{{adicional_response_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -92,9 +94,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * N\u00FAmero do CPF ou CNPJ do Adicional
+   * {{{adicional_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do CPF ou CNPJ do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -104,9 +106,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Data de Nascimento do Adicional
+   * {{{adicional_response_data_nascimento_value}}}
    **/
-  @ApiModelProperty(value = "Data de Nascimento do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_data_nascimento_value}}}")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -116,9 +118,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).
+   * {{{adicional_response_sexo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00E3o Especificado).")
+  @ApiModelProperty(value = "{{{adicional_response_sexo_value}}}")
   public String getSexo() {
     return sexo;
   }
@@ -128,9 +130,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * N\u00FAmero do Documento de Identidade do Adicional
+   * {{{adicional_response_numero_identidade_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_numero_identidade_value}}}")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -140,9 +142,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
+   * {{{adicional_response_orgao_expedidor_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_orgao_expedidor_identidade_value}}}")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -152,9 +154,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido
+   * {{{adicional_response_unidade_federativa_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Sigla da Unidade Federativa onde o Documento de Identidade do Adicional foi emitido")
+  @ApiModelProperty(value = "{{{adicional_response_unidade_federativa_identidade_value}}}")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -164,9 +166,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Data de emiss\u00E3o do Documento de Identidade do Adicional
+   * {{{adicional_response_data_emissao_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Data de emiss\u00E3o do Documento de Identidade do Adicional")
+  @ApiModelProperty(value = "{{{adicional_response_data_emissao_identidade_value}}}")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -176,9 +178,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
+   * {{{adicional_response_id_parentesco_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular")
+  @ApiModelProperty(value = "{{{adicional_response_id_parentesco_value}}}")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -188,9 +190,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0
+   * {{{adicional_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Indica se o adicional est\u00E1 ativo = 1 ou inativo = 0")
+  @ApiModelProperty(value = "{{{adicional_response_flag_ativo_value}}}")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
@@ -200,9 +202,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Indica a data de cadastro do adicional
+   * {{{adicional_response_data_cadastro_portador_value}}}
    **/
-  @ApiModelProperty(value = "Indica a data de cadastro do adicional")
+  @ApiModelProperty(value = "{{{adicional_response_data_cadastro_portador_value}}}")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }
@@ -212,9 +214,9 @@ public class AdicionalResponse  {
 
   
   /**
-   * Indica a data de cancelamento do adicional
+   * {{{adicional_response_data_cancelamento_portador_value}}}
    **/
-  @ApiModelProperty(value = "Indica a data de cancelamento do adicional")
+  @ApiModelProperty(value = "{{{adicional_response_data_cancelamento_portador_value}}}")
   public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;
   }
@@ -248,3 +250,5 @@ public class AdicionalResponse  {
     return sb.toString();
   }
 }
+
+

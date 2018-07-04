@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.FaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto contendo os detalhes de uma fatura consignada
+ * {{{detalhes_fatura_consignada_response_description}}}
  **/
-@ApiModel(description = "Objeto contendo os detalhes de uma fatura consignada")
+@ApiModel(description = "{{{detalhes_fatura_consignada_response_description}}}")
 public class DetalhesFaturaConsignadaResponse  {
   
   @SerializedName("faturaConsignadaResponse")
@@ -21,9 +23,9 @@ public class DetalhesFaturaConsignadaResponse  {
 
   
   /**
-   * Apresenta os detalhes da fatura
+   * {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta os detalhes da fatura")
+  @ApiModelProperty(value = "{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}")
   public FaturaConsignadaResponse getFaturaConsignadaResponse() {
     return faturaConsignadaResponse;
   }
@@ -33,9 +35,9 @@ public class DetalhesFaturaConsignadaResponse  {
 
   
   /**
-   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+   * {{{detalhes_fatura_consignada_response_transacoes_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta as transa\u00E7\u00F5es relacionadas a fatura.")
+  @ApiModelProperty(value = "{{{detalhes_fatura_consignada_response_transacoes_value}}}")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }
@@ -56,3 +58,5 @@ public class DetalhesFaturaConsignadaResponse  {
     return sb.toString();
   }
 }
+
+

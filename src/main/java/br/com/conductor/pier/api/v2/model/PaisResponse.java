@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses
+ * {{{pais_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses")
+@ApiModel(description = "{{{pais_response_description}}}")
 public class PaisResponse  {
   
   @SerializedName("id")
@@ -29,9 +31,9 @@ public class PaisResponse  {
 
   
   /**
-   * C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
+   * {{{pais_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador \u00FAnico do pa\u00EDs na base")
+  @ApiModelProperty(value = "{{{pais_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -41,9 +43,9 @@ public class PaisResponse  {
 
   
   /**
-   * C\u00F3digo identificador do pa\u00EDs
+   * {{{pais_response_codigo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do pa\u00EDs")
+  @ApiModelProperty(value = "{{{pais_response_codigo_value}}}")
   public String getCodigo() {
     return codigo;
   }
@@ -53,9 +55,9 @@ public class PaisResponse  {
 
   
   /**
-   * Sigla do pa\u00EDs
+   * {{{pais_response_sigla_value}}}
    **/
-  @ApiModelProperty(value = "Sigla do pa\u00EDs")
+  @ApiModelProperty(value = "{{{pais_response_sigla_value}}}")
   public String getSigla() {
     return sigla;
   }
@@ -65,9 +67,9 @@ public class PaisResponse  {
 
   
   /**
-   * Nome do pa\u00EDs
+   * {{{pais_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Nome do pa\u00EDs")
+  @ApiModelProperty(value = "{{{pais_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -77,9 +79,9 @@ public class PaisResponse  {
 
   
   /**
-   * Continente no qual o pa\u00EDs faz parte
+   * {{{pais_response_continente_value}}}
    **/
-  @ApiModelProperty(value = "Continente no qual o pa\u00EDs faz parte")
+  @ApiModelProperty(value = "{{{pais_response_continente_value}}}")
   public ContinenteEnum getContinente() {
     return continente;
   }
@@ -89,9 +91,9 @@ public class PaisResponse  {
 
   
   /**
-   * Atributo que representa se o pa\u00EDs est\u00E1 ativo
+   * {{{pais_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Atributo que representa se o pa\u00EDs est\u00E1 ativo")
+  @ApiModelProperty(value = "{{{pais_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -116,3 +118,5 @@ public class PaisResponse  {
     return sb.toString();
   }
 }
+
+

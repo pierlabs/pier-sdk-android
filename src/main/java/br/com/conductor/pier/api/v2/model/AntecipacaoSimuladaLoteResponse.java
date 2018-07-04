@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
+ * {{{antecipacao_simulada_lote_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "{{{antecipacao_simulada_lote_response_description}}}")
 public class AntecipacaoSimuladaLoteResponse  {
   
   @SerializedName("valorTotalAntecipado")
@@ -25,9 +27,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * Valor total antecipado.
+   * {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
    **/
-  @ApiModelProperty(value = "Valor total antecipado.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}")
   public BigDecimal getValorTotalAntecipado() {
     return valorTotalAntecipado;
   }
@@ -37,9 +39,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * Valor total do desconto.
+   * {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
    **/
-  @ApiModelProperty(value = "Valor total do desconto.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}")
   public BigDecimal getValorTotalDesconto() {
     return valorTotalDesconto;
   }
@@ -49,9 +51,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * Valor total antecipado com o desconto.
+   * {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
    **/
-  @ApiModelProperty(value = "Valor total antecipado com o desconto.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}")
   public BigDecimal getValorTotalComDesconto() {
     return valorTotalComDesconto;
   }
@@ -61,9 +63,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * Antecipa\u00E7\u00F5es Simuladas.
+   * {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
    **/
-  @ApiModelProperty(value = "Antecipa\u00E7\u00F5es Simuladas.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}")
   public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;
   }
@@ -86,3 +88,5 @@ public class AntecipacaoSimuladaLoteResponse  {
     return sb.toString();
   }
 }
+
+

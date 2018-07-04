@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoDetalheResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Listar Configura\u00E7\u00E3o Rotativo
+ * {{{page_configuracao_rotativo_response_description}}}
  **/
-@ApiModel(description = "Listar Configura\u00E7\u00E3o Rotativo")
+@ApiModel(description = "{{{page_configuracao_rotativo_response_description}}}")
 public class PageConfiguracaoRotativoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageConfiguracaoRotativoResponse  {
     return sb.toString();
   }
 }
+
+

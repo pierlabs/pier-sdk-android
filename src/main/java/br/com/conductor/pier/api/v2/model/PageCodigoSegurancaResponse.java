@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de C\u00F3digos de Seguran\u00E7a
+ * {{{page_codigo_seguranca_response_description}}}
  **/
-@ApiModel(description = "Lista de C\u00F3digos de Seguran\u00E7a")
+@ApiModel(description = "{{{page_codigo_seguranca_response_description}}}")
 public class PageCodigoSegurancaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageCodigoSegurancaResponse  {
     return sb.toString();
   }
 }
+
+

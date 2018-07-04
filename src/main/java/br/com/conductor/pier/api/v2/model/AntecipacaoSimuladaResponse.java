@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaDetalhesResponse;
 import java.math.BigDecimal;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
+ * {{{antecipacao_simulada_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "{{{antecipacao_simulada_response_description}}}")
 public class AntecipacaoSimuladaResponse  {
   
   @SerializedName("mcc")
@@ -89,9 +91,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.
+   * {{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da simula\u00E7\u00E3o de antecipa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}")
   public Long getIdAntecipacaoSimulada() {
     return idAntecipacaoSimulada;
   }
@@ -101,9 +103,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo identificador da conta.
+   * {{{antecipacao_simulada_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da conta.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -113,9 +115,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo identificador do evento compra.
+   * {{{antecipacao_simulada_response_id_compra_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do evento compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_compra_value}}}")
   public Long getIdCompra() {
     return idCompra;
   }
@@ -125,9 +127,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo identificador do tipo do evento compra.
+   * {{{antecipacao_simulada_response_id_tipo_transacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do tipo do evento compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_tipo_transacao_value}}}")
   public Long getIdTipoTransacao() {
     return idTipoTransacao;
   }
@@ -137,9 +139,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Quantidade de parcelas antecip\u00E1veis.
+   * {{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}
    **/
-  @ApiModelProperty(value = "Quantidade de parcelas antecip\u00E1veis.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}")
   public Integer getQuantidadeParcelasAntecipaveis() {
     return quantidadeParcelasAntecipaveis;
   }
@@ -149,9 +151,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Valor da parcela.
+   * {{{antecipacao_simulada_response_valor_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_valor_parcela_value}}}")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -161,9 +163,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Data e hora em que a simula\u00E7\u00E3o foi feita.
+   * {{{antecipacao_simulada_response_data_hora_simulacao_value}}}
    **/
-  @ApiModelProperty(value = "Data e hora em que a simula\u00E7\u00E3o foi feita.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_data_hora_simulacao_value}}}")
   public String getDataHoraSimulacao() {
     return dataHoraSimulacao;
   }
@@ -173,9 +175,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).
+   * {{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}
    **/
-  @ApiModelProperty(value = "Taxa de antecipa\u00E7\u00E3o aplicada (ao ano).")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}")
   public BigDecimal getTaxaAntecipacaoAno() {
     return taxaAntecipacaoAno;
   }
@@ -185,9 +187,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Estabelecimento onde foi realizada a transa\u00E7\u00E3o
+   * {{{antecipacao_simulada_response_nome_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Estabelecimento onde foi realizada a transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_nome_estabelecimento_value}}}")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -197,9 +199,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_status_value}}}")
   public String getStatus() {
     return status;
   }
@@ -209,9 +211,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Data da compra.
+   * {{{antecipacao_simulada_response_data_compra_value}}}
    **/
-  @ApiModelProperty(value = "Data da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_data_compra_value}}}")
   public String getDataCompra() {
     return dataCompra;
   }
@@ -221,9 +223,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Tipo de transa\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_tipo_origem_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Tipo de transa\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_tipo_origem_transacao_value}}}")
   public String getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -233,9 +235,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Cidade onde a compra foi realizada.
+   * {{{antecipacao_simulada_response_cidade_value}}}
    **/
-  @ApiModelProperty(value = "Cidade onde a compra foi realizada.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_cidade_value}}}")
   public String getCidade() {
     return cidade;
   }
@@ -245,9 +247,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Pa\u00EDs onde a compra foi realizada.
+   * {{{antecipacao_simulada_response_pais_value}}}
    **/
-  @ApiModelProperty(value = "Pa\u00EDs onde a compra foi realizada.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_pais_value}}}")
   public String getPais() {
     return pais;
   }
@@ -257,9 +259,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Coordenada latitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_latitude_value}}}
    **/
-  @ApiModelProperty(value = "Coordenada latitudinal da localiza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_latitude_value}}}")
   public String getLatitude() {
     return latitude;
   }
@@ -269,9 +271,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Coordenada longitudinal da localiza\u00E7\u00E3o da compra.
+   * {{{antecipacao_simulada_response_longitude_value}}}
    **/
-  @ApiModelProperty(value = "Coordenada longitudinal da localiza\u00E7\u00E3o da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_longitude_value}}}")
   public String getLongitude() {
     return longitude;
   }
@@ -281,9 +283,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -293,9 +295,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Grupo MCC da compra.
+   * {{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Grupo MCC da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
   }
@@ -305,9 +307,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_simulada_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -317,9 +319,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do produto da compra.
+   * {{{antecipacao_simulada_response_descricao_produto_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do produto da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_descricao_produto_value}}}")
   public String getDescricaoProduto() {
     return descricaoProduto;
   }
@@ -329,9 +331,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do estabelecimento da compra.
+   * {{{antecipacao_simulada_response_descricao_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do estabelecimento da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_descricao_estabelecimento_value}}}")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
   }
@@ -341,9 +343,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Nome fantasia do estabelecimento da compra.
+   * {{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Nome fantasia do estabelecimento da compra.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}")
   public String getNomeFantasiaEstabelecimento() {
     return nomeFantasiaEstabelecimento;
   }
@@ -353,9 +355,9 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
-   * Detalhes da simula\u00E7\u00E3o.
+   * {{{antecipacao_simulada_response_detalhes_value}}}
    **/
-  @ApiModelProperty(value = "Detalhes da simula\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{antecipacao_simulada_response_detalhes_value}}}")
   public List<AntecipacaoSimuladaDetalhesResponse> getDetalhes() {
     return detalhes;
   }
@@ -399,3 +401,5 @@ public class AntecipacaoSimuladaResponse  {
     return sb.toString();
   }
 }
+
+

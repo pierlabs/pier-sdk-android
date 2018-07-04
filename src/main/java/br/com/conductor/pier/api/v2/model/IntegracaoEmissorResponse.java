@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
+ * {{{integracao_emissor_response_description}}}
  **/
-@ApiModel(description = "Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o")
+@ApiModel(description = "{{{integracao_emissor_response_description}}}")
 public class IntegracaoEmissorResponse  {
   
   @SerializedName("id")
@@ -26,9 +28,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
+   * {{{integracao_emissor_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +40,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{integracao_emissor_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -50,9 +52,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
+   * {{{integracao_emissor_response_id_arquivo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_id_arquivo_value}}}")
   public Long getIdArquivo() {
     return idArquivo;
   }
@@ -62,9 +64,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * Status do registro.
+   * {{{integracao_emissor_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do registro.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_status_value}}}")
   public String getStatus() {
     return status;
   }
@@ -74,9 +76,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * Data de inclus\u00E3o do registro.
+   * {{{integracao_emissor_response_data_inclusao_value}}}
    **/
-  @ApiModelProperty(value = "Data de inclus\u00E3o do registro.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_data_inclusao_value}}}")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -86,9 +88,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * Data da ultima altera\u00E7\u00E3o do registro.
+   * {{{integracao_emissor_response_data_alteracao_value}}}
    **/
-  @ApiModelProperty(value = "Data da ultima altera\u00E7\u00E3o do registro.")
+  @ApiModelProperty(value = "{{{integracao_emissor_response_data_alteracao_value}}}")
   public String getDataAlteracao() {
     return dataAlteracao;
   }
@@ -113,3 +115,5 @@ public class IntegracaoEmissorResponse  {
     return sb.toString();
   }
 }
+
+

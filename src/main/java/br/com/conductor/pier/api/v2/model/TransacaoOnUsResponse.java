@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.MapOfstringAndstring;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Resposta de Autoriza\u00E7\u00E3o
+ * {{{transacao_on_us_response_description}}}
  **/
-@ApiModel(description = "Objeto de Resposta de Autoriza\u00E7\u00E3o")
+@ApiModel(description = "{{{transacao_on_us_response_description}}}")
 public class TransacaoOnUsResponse  {
   
   @SerializedName("nsuOrigem")
@@ -30,9 +32,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
+   * {{{transacao_on_us_response_nsu_origem_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_nsu_origem_value}}}")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -42,9 +44,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_nsu_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_nsu_autorizacao_value}}}")
   public String getNsuAutorizacao() {
     return nsuAutorizacao;
   }
@@ -54,9 +56,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_plano_de_parcelamento_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_plano_de_parcelamento_value}}}")
   public List<MapOfstringAndstring> getPlanoDeParcelamento() {
     return planoDeParcelamento;
   }
@@ -66,9 +68,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
+   * {{{transacao_on_us_response_codigo_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_codigo_autorizacao_value}}}")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -78,9 +80,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
+   * {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_numero_mascarado_cartao_value}}}")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
   }
@@ -90,9 +92,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
+   * {{{transacao_on_us_response_nome_portador_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_on_us_response_nome_portador_cartao_value}}}")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
   }
@@ -102,9 +104,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_on_us_response_terminal_requisitante_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_response_terminal_requisitante_value}}}")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }
@@ -130,3 +132,5 @@ public class TransacaoOnUsResponse  {
     return sb.toString();
   }
 }
+
+

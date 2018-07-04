@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PropriedadeDocumentoRequest;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
+ * {{{documento_parametros_request_description}}}
  **/
-@ApiModel(description = "Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento")
+@ApiModel(description = "{{{documento_parametros_request_description}}}")
 public class DocumentoParametrosRequest  {
   
   @SerializedName("idTemplateDocumento")
@@ -22,9 +24,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * ID para o template do documento.
+   * {{{documento_parametros_request_id_template_documento_value}}}
    **/
-  @ApiModelProperty(value = "ID para o template do documento.")
+  @ApiModelProperty(value = "{{{documento_parametros_request_id_template_documento_value}}}")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
   }
@@ -34,9 +36,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * Nome para o arquivo.
+   * {{{documento_parametros_request_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome para o arquivo.")
+  @ApiModelProperty(value = "{{{documento_parametros_request_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +48,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * Lista de par\u00E2metros para montagem do documento.
+   * {{{documento_parametros_request_parametros_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Lista de par\u00E2metros para montagem do documento.")
+  @ApiModelProperty(value = "{{{documento_parametros_request_parametros_conteudo_value}}}")
   public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }
@@ -70,3 +72,5 @@ public class DocumentoParametrosRequest  {
     return sb.toString();
   }
 }
+
+

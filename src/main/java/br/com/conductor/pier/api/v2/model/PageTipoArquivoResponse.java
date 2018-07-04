@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoArquivoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista tipos de arquivos cadastrados no sistema
+ * {{{page_tipo_arquivo_response_description}}}
  **/
-@ApiModel(description = "Lista tipos de arquivos cadastrados no sistema")
+@ApiModel(description = "{{{page_tipo_arquivo_response_description}}}")
 public class PageTipoArquivoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoArquivoResponse  {
     return sb.toString();
   }
 }
+
+

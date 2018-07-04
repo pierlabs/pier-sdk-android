@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * {{{cartao_pay_persist_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_persist_description}}}")
 public class CartaoPayPersist  {
   
   @SerializedName("numeroCartao")
@@ -26,9 +28,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero do cart\u00E3o criptografado")
+  @ApiModelProperty(required = true, value = "{{{cartao_pay_persist_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -38,9 +40,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_persist_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_persist_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -50,9 +52,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * CVV do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_cvv_value}}}
    **/
-  @ApiModelProperty(value = "CVV do cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_persist_cvv_value}}}")
   public String getCvv() {
     return cvv;
   }
@@ -62,9 +64,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * CPF do portador do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "CPF do portador do cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_persist_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -74,9 +76,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_persist_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_persist_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -86,9 +88,9 @@ public class CartaoPayPersist  {
 
   
   /**
-   * Chave p\u00FAblica do dispositivo criptografada
+   * {{{cartao_pay_persist_chave_publica_device_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Chave p\u00FAblica do dispositivo criptografada")
+  @ApiModelProperty(required = true, value = "{{{cartao_pay_persist_chave_publica_device_value}}}")
   public String getChavePublicaDevice() {
     return chavePublicaDevice;
   }
@@ -113,3 +115,5 @@ public class CartaoPayPersist  {
     return sb.toString();
   }
 }
+
+

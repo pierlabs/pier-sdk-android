@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto transferencia
+ * {{{transferencia_detalhe_response_description}}}
  **/
-@ApiModel(description = "Objeto transferencia")
+@ApiModel(description = "{{{transferencia_detalhe_response_description}}}")
 public class TransferenciaDetalheResponse  {
   
   @SerializedName("id")
@@ -31,9 +33,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+   * {{{transferencia_detalhe_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -43,9 +45,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * Data estabelecida para ocorrer a transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_data_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "Data estabelecida para ocorrer a transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_data_transferencia_value}}}")
   public String getDataTransferencia() {
     return dataTransferencia;
   }
@@ -55,9 +57,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+   * {{{transferencia_detalhe_response_id_conta_origem_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_id_conta_origem_value}}}")
   public Long getIdContaOrigem() {
     return idContaOrigem;
   }
@@ -67,9 +69,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_nome_pessoa_origem_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_nome_pessoa_origem_value}}}")
   public String getNomePessoaOrigem() {
     return nomePessoaOrigem;
   }
@@ -79,9 +81,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
+   * {{{transferencia_detalhe_response_id_conta_destino_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_id_conta_destino_value}}}")
   public Long getIdContaDestino() {
     return idContaDestino;
   }
@@ -91,9 +93,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_nome_pessoa_destino_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_nome_pessoa_destino_value}}}")
   public String getNomePessoaDestino() {
     return nomePessoaDestino;
   }
@@ -103,9 +105,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * Valor estabelecido para ser transferido.
+   * {{{transferencia_detalhe_response_valor_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "Valor estabelecido para ser transferido.")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_valor_transferencia_value}}}")
   public BigDecimal getValorTransferencia() {
     return valorTransferencia;
   }
@@ -115,9 +117,9 @@ public class TransferenciaDetalheResponse  {
 
   
   /**
-   * Valor estabelecido da tarifa para a transfer\u00EAncia.
+   * {{{transferencia_detalhe_response_valor_tarifa_value}}}
    **/
-  @ApiModelProperty(value = "Valor estabelecido da tarifa para a transfer\u00EAncia.")
+  @ApiModelProperty(value = "{{{transferencia_detalhe_response_valor_tarifa_value}}}")
   public BigDecimal getValorTarifa() {
     return valorTarifa;
   }
@@ -144,3 +146,5 @@ public class TransferenciaDetalheResponse  {
     return sb.toString();
   }
 }
+
+

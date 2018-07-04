@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Campo Condificado
+ * {{{campo_codificado_descricao_response_description}}}
  **/
-@ApiModel(description = "Objeto Campo Condificado")
+@ApiModel(description = "{{{campo_codificado_descricao_response_description}}}")
 public class CampoCodificadoDescricaoResponse  {
   
   @SerializedName("codigo")
@@ -18,9 +20,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
+   * {{{campo_codificado_descricao_response_codigo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{campo_codificado_descricao_response_codigo_value}}}")
   public Long getCodigo() {
     return codigo;
   }
@@ -30,9 +32,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do campo codificado.
+   * {{{campo_codificado_descricao_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do campo codificado.")
+  @ApiModelProperty(value = "{{{campo_codificado_descricao_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -53,3 +55,5 @@ public class CampoCodificadoDescricaoResponse  {
     return sb.toString();
   }
 }
+
+

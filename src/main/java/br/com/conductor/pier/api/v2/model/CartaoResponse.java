@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Cart\u00E3o
+ * {{{cartao_response_description}}}
  **/
-@ApiModel(description = "Objeto Cart\u00E3o")
+@ApiModel(description = "{{{cartao_response_description}}}")
 public class CartaoResponse  {
   
   @SerializedName("id")
@@ -58,9 +60,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.
+   * {{{cartao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -70,9 +72,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).
+   * {{{cartao_response_flag_titular_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).")
+  @ApiModelProperty(value = "{{{cartao_response_flag_titular_value}}}")
   public Integer getFlagTitular() {
     return flagTitular;
   }
@@ -82,9 +84,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence
+   * {{{cartao_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence")
+  @ApiModelProperty(value = "{{{cartao_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -94,9 +96,9 @@ public class CartaoResponse  {
 
   
   /**
-   * N\u00FAmero sequencial do cart\u00E3o
+   * {{{cartao_response_sequencial_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero sequencial do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_response_sequencial_cartao_value}}}")
   public Integer getSequencialCartao() {
     return sequencialCartao;
   }
@@ -106,9 +108,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.
+   * {{{cartao_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o cart\u00E3o pertence.")
+  @ApiModelProperty(value = "{{{cartao_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -118,9 +120,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.
+   * {{{cartao_response_id_status_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_id_status_value}}}")
   public Long getIdStatus() {
     return idStatus;
   }
@@ -130,9 +132,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.
+   * {{{cartao_response_data_status_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver.")
+  @ApiModelProperty(value = "{{{cartao_response_data_status_value}}}")
   public String getDataStatus() {
     return dataStatus;
   }
@@ -142,9 +144,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.
+   * {{{cartao_response_id_estagio_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_id_estagio_value}}}")
   public Long getIdEstagio() {
     return idEstagio;
   }
@@ -154,9 +156,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.
+   * {{{cartao_response_data_estagio_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o idEstagio atual do cart\u00E3o fora aplicado, quando houver.")
+  @ApiModelProperty(value = "{{{cartao_response_data_estagio_value}}}")
   public String getDataEstagio() {
     return dataEstagio;
   }
@@ -166,9 +168,9 @@ public class CartaoResponse  {
 
   
   /**
-   * N\u00FAmero do bin do cart\u00E3o.
+   * {{{cartao_response_numero_bin_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do bin do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_numero_bin_value}}}")
   public Long getNumeroBin() {
     return numeroBin;
   }
@@ -178,9 +180,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta o n\u00FAmero do cart\u00E3o.
+   * {{{cartao_response_numero_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -190,9 +192,9 @@ public class CartaoResponse  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o hash.
+   * {{{cartao_response_numero_cartao_hash_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o hash.")
+  @ApiModelProperty(value = "{{{cartao_response_numero_cartao_hash_value}}}")
   public Long getNumeroCartaoHash() {
     return numeroCartaoHash;
   }
@@ -202,9 +204,9 @@ public class CartaoResponse  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o criptografado.
+   * {{{cartao_response_numero_cartao_criptografado_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o criptografado.")
+  @ApiModelProperty(value = "{{{cartao_response_numero_cartao_criptografado_value}}}")
   public String getNumeroCartaoCriptografado() {
     return numeroCartaoCriptografado;
   }
@@ -214,9 +216,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta a data de emiss\u00E3o do cart\u00E3o.
+   * {{{cartao_response_data_emissao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data de emiss\u00E3o do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_data_emissao_value}}}")
   public String getDataEmissao() {
     return dataEmissao;
   }
@@ -226,9 +228,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.
+   * {{{cartao_response_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data de validade do cart\u00E3o em formato yyyy-MM, quando houver.")
+  @ApiModelProperty(value = "{{{cartao_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -238,9 +240,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).
+   * {{{cartao_response_cartao_virtual_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual. Sendo: (1: True, 0: False).")
+  @ApiModelProperty(value = "{{{cartao_response_cartao_virtual_value}}}")
   public Integer getCartaoVirtual() {
     return cartaoVirtual;
   }
@@ -250,9 +252,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.
+   * {{{cartao_response_impressao_avulsa_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.")
+  @ApiModelProperty(value = "{{{cartao_response_impressao_avulsa_value}}}")
   public Integer getImpressaoAvulsa() {
     return impressaoAvulsa;
   }
@@ -262,9 +264,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.
+   * {{{cartao_response_data_impressao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.")
+  @ApiModelProperty(value = "{{{cartao_response_data_impressao_value}}}")
   public String getDataImpressao() {
     return dataImpressao;
   }
@@ -274,9 +276,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.
+   * {{{cartao_response_nome_arquivo_impressao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.")
+  @ApiModelProperty(value = "{{{cartao_response_nome_arquivo_impressao_value}}}")
   public String getNomeArquivoImpressao() {
     return nomeArquivoImpressao;
   }
@@ -286,9 +288,9 @@ public class CartaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.
+   * {{{cartao_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.")
+  @ApiModelProperty(value = "{{{cartao_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -298,9 +300,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta o nome impresso no cart\u00E3o.
+   * {{{cartao_response_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome impresso no cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_response_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -310,9 +312,9 @@ public class CartaoResponse  {
 
   
   /**
-   * Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.
+   * {{{cartao_response_codigo_desbloqueio_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.")
+  @ApiModelProperty(value = "{{{cartao_response_codigo_desbloqueio_value}}}")
   public String getCodigoDesbloqueio() {
     return codigoDesbloqueio;
   }
@@ -353,3 +355,5 @@ public class CartaoResponse  {
     return sb.toString();
   }
 }
+
+

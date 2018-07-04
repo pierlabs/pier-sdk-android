@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * ObjetoVinculoOperacao
+ * {{{vinculo_operacao_response_description}}}
  **/
-@ApiModel(description = "ObjetoVinculoOperacao")
+@ApiModel(description = "{{{vinculo_operacao_response_description}}}")
 public class VinculoOperacaoResponse  {
   
   @SerializedName("idProduto")
@@ -22,9 +24,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{vinculo_operacao_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
+  @ApiModelProperty(value = "{{{vinculo_operacao_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -34,9 +36,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+   * {{{vinculo_operacao_response_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).")
+  @ApiModelProperty(value = "{{{vinculo_operacao_response_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -46,9 +48,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * C\u00F3digo de processamento.
+   * {{{vinculo_operacao_response_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de processamento.")
+  @ApiModelProperty(value = "{{{vinculo_operacao_response_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -58,9 +60,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * C\u00F3digo MCC.
+   * {{{vinculo_operacao_response_codigo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo MCC.")
+  @ApiModelProperty(value = "{{{vinculo_operacao_response_codigo_m_c_c_value}}}")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }
@@ -83,3 +85,5 @@ public class VinculoOperacaoResponse  {
     return sb.toString();
   }
 }
+
+

@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.HistoricoAssessoriaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Historicos Assessorias
+ * {{{page_historico_assessoria_response_description}}}
  **/
-@ApiModel(description = "Lista de Historicos Assessorias")
+@ApiModel(description = "{{{page_historico_assessoria_response_description}}}")
 public class PageHistoricoAssessoriaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageHistoricoAssessoriaResponse  {
     return sb.toString();
   }
 }
+
+

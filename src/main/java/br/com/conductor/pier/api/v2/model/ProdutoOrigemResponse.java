@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial
+ * {{{produto_origem_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial")
+@ApiModel(description = "{{{produto_origem_response_description}}}")
 public class ProdutoOrigemResponse  {
   
   @SerializedName("idProduto")
@@ -16,9 +18,9 @@ public class ProdutoOrigemResponse  {
 
   
   /**
-   * C\u00F3digo identificador do produto
+   * {{{produto_origem_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do produto")
+  @ApiModelProperty(value = "{{{produto_origem_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -38,3 +40,5 @@ public class ProdutoOrigemResponse  {
     return sb.toString();
   }
 }
+
+

@@ -4,14 +4,16 @@ import br.com.conductor.pier.api.v2.model.AnexoNotificacaoEmailRequest;
 import java.util.*;
 import java.util.Map;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
+ * {{{notificacao_email_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.")
+@ApiModel(description = "{{{notificacao_email_request_description}}}")
 public class NotificacaoEmailRequest  {
   
   @SerializedName("idTemplateNotificacao")
@@ -25,9 +27,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * ID para o template da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_id_template_notificacao_value}}}
    **/
-  @ApiModelProperty(value = "ID para o template da notifica\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{notificacao_email_request_id_template_notificacao_value}}}")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
   }
@@ -37,9 +39,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Lista de email(s) do(s) destinat\u00E1rio(s).
+   * {{{notificacao_email_request_destinatarios_value}}}
    **/
-  @ApiModelProperty(value = "Lista de email(s) do(s) destinat\u00E1rio(s).")
+  @ApiModelProperty(value = "{{{notificacao_email_request_destinatarios_value}}}")
   public List<String> getDestinatarios() {
     return destinatarios;
   }
@@ -49,9 +51,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Lista de ids dos anexos a serem enviados.
+   * {{{notificacao_email_request_anexos_value}}}
    **/
-  @ApiModelProperty(value = "Lista de ids dos anexos a serem enviados.")
+  @ApiModelProperty(value = "{{{notificacao_email_request_anexos_value}}}")
   public List<AnexoNotificacaoEmailRequest> getAnexos() {
     return anexos;
   }
@@ -61,9 +63,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_parametros_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{notificacao_email_request_parametros_conteudo_value}}}")
   public Map<String, Object> getParametrosConteudo() {
     return parametrosConteudo;
   }
@@ -86,3 +88,5 @@ public class NotificacaoEmailRequest  {
     return sb.toString();
   }
 }
+
+
