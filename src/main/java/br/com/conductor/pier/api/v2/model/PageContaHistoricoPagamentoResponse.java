@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.ContaHistoricoPagamentoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de pagamentos da conta
+ * {{{page_conta_historico_pagamento_response_description}}}
  **/
-@ApiModel(description = "Lista de pagamentos da conta")
+@ApiModel(description = "{{{page_conta_historico_pagamento_response_description}}}")
 public class PageContaHistoricoPagamentoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageContaHistoricoPagamentoResponse  {
     return sb.toString();
   }
 }
+
+

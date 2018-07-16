@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Resposta do recurso de tipo de estabelecimento
+ * {{{tipo_estabelecimento_response_description}}}
  **/
-@ApiModel(description = "Resposta do recurso de tipo de estabelecimento")
+@ApiModel(description = "{{{tipo_estabelecimento_response_description}}}")
 public class TipoEstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -18,9 +20,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id).
+   * {{{tipo_estabelecimento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id).")
+  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +32,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de estabelecimento.
+   * {{{tipo_estabelecimento_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de estabelecimento.")
+  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -53,3 +55,5 @@ public class TipoEstabelecimentoResponse  {
     return sb.toString();
   }
 }
+
+

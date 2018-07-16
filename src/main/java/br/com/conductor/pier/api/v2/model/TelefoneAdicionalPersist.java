@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Telefone
+ * {{{telefone_adicional_persist_description}}}
  **/
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_adicional_persist_description}}}")
 public class TelefoneAdicionalPersist  {
   
   @SerializedName("idTipoTelefone")
@@ -22,9 +24,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * {{{telefone_adicional_persist_id_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_id_tipo_telefone_value}}}")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -34,9 +36,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * C\u00F3digo DDD do telefone (id).
+   * {{{telefone_adicional_persist_ddd_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo DDD do telefone (id).")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +48,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_adicional_persist_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +60,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_adicional_persist_ramal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }
@@ -83,3 +85,5 @@ public class TelefoneAdicionalPersist  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
+ * {{{historico_assessoria_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}")
+@ApiModel(description = "{{{historico_assessoria_response_description}}}")
 public class HistoricoAssessoriaResponse  {
   
   @SerializedName("dataHoraHistorico")
@@ -20,9 +22,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Apresenta a data e hora do hist\u00F3rico
+   * {{{historico_assessoria_response_data_hora_historico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data e hora do hist\u00F3rico")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_data_hora_historico_value}}}")
   public String getDataHoraHistorico() {
     return dataHoraHistorico;
   }
@@ -32,9 +34,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
+   * {{{historico_assessoria_response_tipo_historico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_tipo_historico_value}}}")
   public String getTipoHistorico() {
     return tipoHistorico;
   }
@@ -44,9 +46,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
+   * {{{historico_assessoria_response_nome_assessoria_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_nome_assessoria_value}}}")
   public String getNomeAssessoria() {
     return nomeAssessoria;
   }
@@ -68,3 +70,5 @@ public class HistoricoAssessoriaResponse  {
     return sb.toString();
   }
 }
+
+

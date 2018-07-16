@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Portadores
+ * {{{page_portador_response_description}}}
  **/
-@ApiModel(description = "Lista de Portadores")
+@ApiModel(description = "{{{page_portador_response_description}}}")
 public class PagePortadorResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PagePortadorResponse  {
     return sb.toString();
   }
 }
+
+

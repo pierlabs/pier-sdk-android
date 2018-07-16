@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Resposta da requisi\u00E7\u00E3o para cadastro de cart\u00E3o
+ * {{{cartao_pay_cadastro_response_description}}}
  **/
-@ApiModel(description = "Resposta da requisi\u00E7\u00E3o para cadastro de cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_cadastro_response_description}}}")
 public class CartaoPayCadastroResponse  {
   
   @SerializedName("id")
@@ -37,9 +39,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_pay_base_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Id do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -49,9 +51,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o real criptografado
+   * {{{cartao_pay_base_response_numero_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o real criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -61,9 +63,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_base_response_data_validade_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_data_validade_cartao_value}}}")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -73,9 +75,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_base_response_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -85,9 +87,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Identificador do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_id_entidade_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do emissor do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_id_entidade_value}}}")
   public Long getIdEntidade() {
     return idEntidade;
   }
@@ -97,9 +99,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Nome do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_nome_entidade_value}}}
    **/
-  @ApiModelProperty(value = "Nome do emissor do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_nome_entidade_value}}}")
   public String getNomeEntidade() {
     return nomeEntidade;
   }
@@ -109,9 +111,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_base_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -121,9 +123,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Data de validade da chave do criptograma
+   * {{{cartao_pay_response_data_validade_chave_criptograma_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade da chave do criptograma")
+  @ApiModelProperty(value = "{{{cartao_pay_response_data_validade_chave_criptograma_value}}}")
   public String getDataValidadeChaveCriptograma() {
     return dataValidadeChaveCriptograma;
   }
@@ -133,9 +135,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * CVV do cart\u00E3o criptografado
+   * {{{cartao_pay_cadastro_response_cvv_value}}}
    **/
-  @ApiModelProperty(value = "CVV do cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_cadastro_response_cvv_value}}}")
   public String getCvv() {
     return cvv;
   }
@@ -145,9 +147,9 @@ public class CartaoPayCadastroResponse  {
 
   
   /**
-   * Chave de gera\u00E7\u00E3o de criptograma criptografada
+   * {{{cartao_pay_cadastro_response_chave_criptograma_value}}}
    **/
-  @ApiModelProperty(value = "Chave de gera\u00E7\u00E3o de criptograma criptografada")
+  @ApiModelProperty(value = "{{{cartao_pay_cadastro_response_chave_criptograma_value}}}")
   public String getChaveCriptograma() {
     return chaveCriptograma;
   }
@@ -176,3 +178,5 @@ public class CartaoPayCadastroResponse  {
     return sb.toString();
   }
 }
+
+

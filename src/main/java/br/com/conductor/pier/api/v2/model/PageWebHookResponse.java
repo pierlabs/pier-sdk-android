@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.WebHookResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de WebHooks
+ * {{{page_web_hook_response_description}}}
  **/
-@ApiModel(description = "Lista de WebHooks")
+@ApiModel(description = "{{{page_web_hook_response_description}}}")
 public class PageWebHookResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageWebHookResponse  {
     return sb.toString();
   }
 }
+
+

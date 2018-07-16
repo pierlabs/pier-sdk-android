@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.OperacaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Opera\u00E7\u00F5es
+ * {{{page_operacao_response_description}}}
  **/
-@ApiModel(description = "Lista de Opera\u00E7\u00F5es")
+@ApiModel(description = "{{{page_operacao_response_description}}}")
 public class PageOperacaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageOperacaoResponse  {
     return sb.toString();
   }
 }
+
+

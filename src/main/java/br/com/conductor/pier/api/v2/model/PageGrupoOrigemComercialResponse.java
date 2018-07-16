@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.GrupoOrigemComercialResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Listar grupos de origens comerciais
+ * {{{page_grupo_origem_comercial_response_description}}}
  **/
-@ApiModel(description = "Listar grupos de origens comerciais")
+@ApiModel(description = "{{{page_grupo_origem_comercial_response_description}}}")
 public class PageGrupoOrigemComercialResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageGrupoOrigemComercialResponse  {
     return sb.toString();
   }
 }
+
+

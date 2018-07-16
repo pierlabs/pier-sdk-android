@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador.
+ * {{{dados_portador_request_description}}}
  **/
-@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador.")
+@ApiModel(description = "{{{dados_portador_request_description}}}")
 public class DadosPortadorRequest  {
   
   @SerializedName("cartao")
@@ -30,9 +32,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o.
+   * {{{dados_portador_request_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero do cart\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cartao_value}}}")
   public String getCartao() {
     return cartao;
   }
@@ -42,9 +44,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * N\u00FAmero do CPF.
+   * {{{dados_portador_request_cpf_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero do CPF.")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cpf_value}}}")
   public String getCpf() {
     return cpf;
   }
@@ -54,9 +56,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Nome do portador.
+   * {{{dados_portador_request_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do portador.")
+  @ApiModelProperty(value = "{{{dados_portador_request_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -66,9 +68,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Data de nascimento do portador do cart\u00E3o.
+   * {{{dados_portador_request_data_nascimento_value}}}
    **/
-  @ApiModelProperty(value = "Data de nascimento do portador do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{dados_portador_request_data_nascimento_value}}}")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -78,9 +80,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * CEP da resid\u00EAncia do portador da conta.
+   * {{{dados_portador_request_cep_residencial_value}}}
    **/
-  @ApiModelProperty(required = true, value = "CEP da resid\u00EAncia do portador da conta.")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cep_residencial_value}}}")
   public String getCepResidencial() {
     return cepResidencial;
   }
@@ -90,9 +92,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * E-mail do portador do cart\u00E3o.
+   * {{{dados_portador_request_email_value}}}
    **/
-  @ApiModelProperty(required = true, value = "E-mail do portador do cart\u00E3o.")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -102,9 +104,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * DDD do n\u00FAmero de telefone do portador do cart\u00E3o.
+   * {{{dados_portador_request_ddd_value}}}
    **/
-  @ApiModelProperty(value = "DDD do n\u00FAmero de telefone do portador do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{dados_portador_request_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -114,9 +116,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * N\u00FAmero do telefone do portador do cart\u00E3o.
+   * {{{dados_portador_request_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone do portador do cart\u00E3o.")
+  @ApiModelProperty(value = "{{{dados_portador_request_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -143,3 +145,5 @@ public class DadosPortadorRequest  {
     return sb.toString();
   }
 }
+
+

@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.EstagioCartaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Est\u00E1gios Cart\u00F5es
+ * {{{page_estagio_cartao_response_description}}}
  **/
-@ApiModel(description = "Lista de Est\u00E1gios Cart\u00F5es")
+@ApiModel(description = "{{{page_estagio_cartao_response_description}}}")
 public class PageEstagioCartaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageEstagioCartaoResponse  {
     return sb.toString();
   }
 }
+
+

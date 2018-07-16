@@ -1,11 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-@ApiModel(description = "")
+
+/**
+ * {{{beneficio_pagamento_atraso_response_description}}}
+ **/
+@ApiModel(description = "{{{beneficio_pagamento_atraso_response_description}}}")
 public class BeneficioPagamentoAtrasoResponse  {
   
   @SerializedName("dataBeneficio")
@@ -13,9 +18,9 @@ public class BeneficioPagamentoAtrasoResponse  {
 
   
   /**
-   * Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.
+   * {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
    **/
-  @ApiModelProperty(value = "Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.")
+  @ApiModelProperty(value = "{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}")
   public String getDataBeneficio() {
     return dataBeneficio;
   }
@@ -35,3 +40,5 @@ public class BeneficioPagamentoAtrasoResponse  {
     return sb.toString();
   }
 }
+
+

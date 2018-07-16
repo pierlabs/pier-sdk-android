@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o de objeto de refer\u00EAncia por Id.
+ * {{{referencia_id_persist_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o de objeto de refer\u00EAncia por Id.")
+@ApiModel(description = "{{{referencia_id_persist_description}}}")
 public class ReferenciaIdPersist  {
   
   @SerializedName("id")
@@ -37,3 +39,5 @@ public class ReferenciaIdPersist  {
     return sb.toString();
   }
 }
+
+

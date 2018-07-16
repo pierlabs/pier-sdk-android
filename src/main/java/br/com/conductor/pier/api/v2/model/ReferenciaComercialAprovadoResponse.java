@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * ReferenciaComercialAprovadoResponse
+ * {{{referencia_comercial_aprovado_response_description}}}
  **/
-@ApiModel(description = "ReferenciaComercialAprovadoResponse")
+@ApiModel(description = "{{{referencia_comercial_aprovado_response_description}}}")
 public class ReferenciaComercialAprovadoResponse  {
   
   @SerializedName("razaoSocial")
@@ -24,9 +26,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+   * {{{referencia_comercial_aprovado_response_razao_social_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)")
+  @ApiModelProperty(value = "{{{referencia_comercial_aprovado_response_razao_social_value}}}")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -36,9 +38,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial")
+  @ApiModelProperty(value = "{{{referencia_comercial_aprovado_response_nome_contrato_value}}}")
   public String getNomeContrato() {
     return nomeContrato;
   }
@@ -48,9 +50,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_ddd_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial")
+  @ApiModelProperty(value = "{{{referencia_comercial_aprovado_response_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +62,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial")
+  @ApiModelProperty(value = "{{{referencia_comercial_aprovado_response_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +74,9 @@ public class ReferenciaComercialAprovadoResponse  {
 
   
   /**
-   * Apresenta o e-mail de contato da refer\u00EAncia comercial
+   * {{{referencia_comercial_aprovado_response_email_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o e-mail de contato da refer\u00EAncia comercial")
+  @ApiModelProperty(value = "{{{referencia_comercial_aprovado_response_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -98,3 +100,5 @@ public class ReferenciaComercialAprovadoResponse  {
     return sb.toString();
   }
 }
+
+

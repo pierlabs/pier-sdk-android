@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PromotorResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Promotores
+ * {{{page_promotor_response_description}}}
  **/
-@ApiModel(description = "Lista de Promotores")
+@ApiModel(description = "{{{page_promotor_response_description}}}")
 public class PagePromotorResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PagePromotorResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Job
+ * {{{job_response_description}}}
  **/
-@ApiModel(description = "Job")
+@ApiModel(description = "{{{job_response_description}}}")
 public class JobResponse  {
   
   @SerializedName("id")
@@ -27,9 +29,9 @@ public class JobResponse  {
 
   
   /**
-   * Identificador do Job
+   * {{{job_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do Job")
+  @ApiModelProperty(value = "{{{job_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -39,9 +41,9 @@ public class JobResponse  {
 
   
   /**
-   * Descricao do Job
+   * {{{job_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descricao do Job")
+  @ApiModelProperty(value = "{{{job_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -51,9 +53,9 @@ public class JobResponse  {
 
   
   /**
-   * Script Groovy do Job
+   * {{{job_response_groovy_value}}}
    **/
-  @ApiModelProperty(value = "Script Groovy do Job")
+  @ApiModelProperty(value = "{{{job_response_groovy_value}}}")
   public String getGroovy() {
     return groovy;
   }
@@ -63,9 +65,9 @@ public class JobResponse  {
 
   
   /**
-   * Cron do Job
+   * {{{job_response_cron_value}}}
    **/
-  @ApiModelProperty(value = "Cron do Job")
+  @ApiModelProperty(value = "{{{job_response_cron_value}}}")
   public String getCron() {
     return cron;
   }
@@ -75,9 +77,9 @@ public class JobResponse  {
 
   
   /**
-   * Status do Job no agendador de tarefas
+   * {{{job_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do Job no agendador de tarefas")
+  @ApiModelProperty(value = "{{{job_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -101,3 +103,5 @@ public class JobResponse  {
     return sb.toString();
   }
 }
+
+

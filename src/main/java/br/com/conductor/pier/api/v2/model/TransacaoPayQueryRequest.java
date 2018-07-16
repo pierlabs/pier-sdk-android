@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
+ * {{{transacao_pay_query_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta")
+@ApiModel(description = "{{{transacao_pay_query_request_description}}}")
 public class TransacaoPayQueryRequest  {
   
   @SerializedName("numeroCartao")
@@ -23,9 +25,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Numero do cartao (criptografado)
+   * {{{transacao_pay_generic_request_numero_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Numero do cartao (criptografado)")
+  @ApiModelProperty(value = "{{{transacao_pay_generic_request_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -35,9 +37,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{transacao_pay_generic_request_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Id do cart\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_pay_generic_request_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -47,9 +49,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Origem
+   * {{{transacao_pay_query_request_origem_value}}}
    **/
-  @ApiModelProperty(value = "Origem")
+  @ApiModelProperty(value = "{{{transacao_pay_query_request_origem_value}}}")
   public String getOrigem() {
     return origem;
   }
@@ -59,9 +61,9 @@ public class TransacaoPayQueryRequest  {
 
   
   /**
-   * Tipo de ordena\u00E7\u00E3o dos registros.
+   * {{{global_menssagem_sort_sort}}}
    **/
-  @ApiModelProperty(value = "Tipo de ordena\u00E7\u00E3o dos registros.")
+  @ApiModelProperty(value = "{{{global_menssagem_sort_sort}}}")
   public List<String> getSort() {
     return sort;
   }
@@ -84,3 +86,5 @@ public class TransacaoPayQueryRequest  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto SMS
+ * {{{notificacao_s_m_s_response_description}}}
  **/
-@ApiModel(description = "Objeto SMS")
+@ApiModel(description = "{{{notificacao_s_m_s_response_description}}}")
 public class NotificacaoSMSResponse  {
   
   @SerializedName("id")
@@ -54,9 +56,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00F3digo Identificador.
+   * {{{notificacao_s_m_s_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo Identificador.")
+  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -66,9 +68,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * N\u00FAmero sequencial \u00FAnico.
+   * {{{notificacao_s_m_s_response_nsu_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero sequencial \u00FAnico.")
+  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_nsu_value}}}")
   public Long getNsu() {
     return nsu;
   }
@@ -78,9 +80,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
+   * {{{notificacao_s_m_s_response_id_emissor_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).")
+  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_id_emissor_value}}}")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -90,9 +92,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * TipoEvento de notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_tipo_evento_value}}}
    **/
-  @ApiModelProperty(value = "TipoEvento de notifica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_tipo_evento_value}}}")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -102,9 +104,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Status de envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Status de envio da notifica\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -114,9 +116,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_descricao_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do status de envio da notifica\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_descricao_status_value}}}")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -126,9 +128,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00F3digo identificado da pessoa
+   * {{{notificacao_s_m_s_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificado da pessoa")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -138,9 +140,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * C\u00F3digo identificador da conta
+   * {{{notificacao_s_m_s_response_id_conta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da conta")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -150,9 +152,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999
+   * {{{notificacao_s_m_s_response_celular_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o celular a ser eviado o SMS no formato 5588999999999 ou 5588999999999")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_celular_value}}}")
   public String getCelular() {
     return celular;
   }
@@ -162,9 +164,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a operadora do celular a ser eviado o SMS
+   * {{{notificacao_s_m_s_response_operadora_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a operadora do celular a ser eviado o SMS")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_operadora_value}}}")
   public String getOperadora() {
     return operadora;
   }
@@ -174,9 +176,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado
+   * {{{notificacao_s_m_s_response_conteudo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o texto da notifica\u00E7\u00E3o a ser enviado")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }
@@ -186,9 +188,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada
+   * {{{notificacao_s_m_s_response_resposta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o texto da resposta da notifica\u00E7\u00E3o que foi enviada")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_resposta_value}}}")
   public String getResposta() {
     return resposta;
   }
@@ -198,9 +200,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_data_agendamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_agendamento_value}}}")
   public String getDataAgendamento() {
     return dataAgendamento;
   }
@@ -210,9 +212,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Quantidade de tentativas e envio da notifica\u00E7\u00E3o
+   * {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Quantidade de tentativas e envio da notifica\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
   }
@@ -222,9 +224,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+   * {{{notificacao_s_m_s_response_data_inclusao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_inclusao_value}}}")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -234,9 +236,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * Apresenta a data e em que o Stattjus do registro foi modificado
+   * {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta a data e em que o Stattjus do registro foi modificado")
+  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_alteracao_status_value}}}")
   public String getDataAlteracaoStatus() {
     return dataAlteracaoStatus;
   }
@@ -246,9 +248,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+   * {{{notificacao_s_m_s_response_protocolo_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
+  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_protocolo_value}}}")
   public String getProtocolo() {
     return protocolo;
   }
@@ -284,3 +286,5 @@ public class NotificacaoSMSResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
+ * {{{tipo_template_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template")
+@ApiModel(description = "{{{tipo_template_response_description}}}")
 public class TipoTemplateResponse  {
   
   @SerializedName("id")
@@ -22,9 +24,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * ID do Tipo de Template.
+   * {{{tipo_template_response_id_value}}}
    **/
-  @ApiModelProperty(value = "ID do Tipo de Template.")
+  @ApiModelProperty(value = "{{{tipo_template_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +36,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Nome do Tipo de Template.
+   * {{{tipo_template_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Tipo de Template.")
+  @ApiModelProperty(value = "{{{tipo_template_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +48,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Tipo de Template.
+   * {{{tipo_template_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo de Template.")
+  @ApiModelProperty(value = "{{{tipo_template_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +60,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Sigla do Tipo de Template.
+   * {{{tipo_template_response_sigla_value}}}
    **/
-  @ApiModelProperty(value = "Sigla do Tipo de Template.")
+  @ApiModelProperty(value = "{{{tipo_template_response_sigla_value}}}")
   public String getSigla() {
     return sigla;
   }
@@ -83,3 +85,5 @@ public class TipoTemplateResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
+ * {{{historico_eventos_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos")
+@ApiModel(description = "{{{historico_eventos_response_description}}}")
 public class HistoricoEventosResponse  {
   
   @SerializedName("idHistorico")
@@ -24,9 +26,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * C\u00F3digo identificador do evento
+   * {{{historico_eventos_response_id_historico_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do evento")
+  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_id_historico_value}}}")
   public Long getIdHistorico() {
     return idHistorico;
   }
@@ -36,9 +38,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Data do evento
+   * {{{historico_eventos_response_data_historico_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data do evento")
+  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_data_historico_value}}}")
   public String getDataHistorico() {
     return dataHistorico;
   }
@@ -48,9 +50,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Nome do campo alterado
+   * {{{historico_eventos_response_tipo_historico_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome do campo alterado")
+  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_tipo_historico_value}}}")
   public String getTipoHistorico() {
     return tipoHistorico;
   }
@@ -60,9 +62,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Valor anterior a modifica\u00E7\u00E3o
+   * {{{historico_eventos_response_valor_anterior_value}}}
    **/
-  @ApiModelProperty(value = "Valor anterior a modifica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{historico_eventos_response_valor_anterior_value}}}")
   public String getValorAnterior() {
     return valorAnterior;
   }
@@ -72,9 +74,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * Valor atribu\u00EDdo na modifica\u00E7\u00E3o
+   * {{{historico_eventos_response_valor_atribuido_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor atribu\u00EDdo na modifica\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_valor_atribuido_value}}}")
   public String getValorAtribuido() {
     return valorAtribuido;
   }
@@ -98,3 +100,5 @@ public class HistoricoEventosResponse  {
     return sb.toString();
   }
 }
+
+

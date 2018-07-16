@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Acordo detalhado
+ * {{{acordo_detalhe_response_description}}}
  **/
-@ApiModel(description = "Objeto Acordo detalhado")
+@ApiModel(description = "{{{acordo_detalhe_response_description}}}")
 public class AcordoDetalheResponse  {
   
   @SerializedName("id")
@@ -49,9 +51,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+   * {{{acordo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).")
+  @ApiModelProperty(value = "{{{acordo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -61,9 +63,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+   * {{{acordo_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta.")
+  @ApiModelProperty(value = "{{{acordo_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -73,9 +75,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Status do acordo.
+   * {{{acordo_response_status_acordo_value}}}
    **/
-  @ApiModelProperty(value = "Status do acordo.")
+  @ApiModelProperty(value = "{{{acordo_response_status_acordo_value}}}")
   public Long getStatusAcordo() {
     return statusAcordo;
   }
@@ -85,9 +87,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Valor do Acordo.
+   * {{{acordo_response_valor_acordo_value}}}
    **/
-  @ApiModelProperty(value = "Valor do Acordo.")
+  @ApiModelProperty(value = "{{{acordo_response_valor_acordo_value}}}")
   public BigDecimal getValorAcordo() {
     return valorAcordo;
   }
@@ -97,9 +99,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Data e Hora do acordo.
+   * {{{acordo_response_data_acordo_value}}}
    **/
-  @ApiModelProperty(value = "Data e Hora do acordo.")
+  @ApiModelProperty(value = "{{{acordo_response_data_acordo_value}}}")
   public String getDataAcordo() {
     return dataAcordo;
   }
@@ -109,9 +111,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Quantidade de parcelas do acordo.
+   * {{{acordo_response_quantidade_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Quantidade de parcelas do acordo.")
+  @ApiModelProperty(value = "{{{acordo_response_quantidade_parcelas_value}}}")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -121,9 +123,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Saldo atual final.
+   * {{{acordo_response_saldo_atual_final_value}}}
    **/
-  @ApiModelProperty(value = "Saldo atual final.")
+  @ApiModelProperty(value = "{{{acordo_response_saldo_atual_final_value}}}")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
   }
@@ -133,9 +135,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Dias em atraso.
+   * {{{acordo_response_dias_em_atraso_value}}}
    **/
-  @ApiModelProperty(value = "Dias em atraso.")
+  @ApiModelProperty(value = "{{{acordo_response_dias_em_atraso_value}}}")
   public Integer getDiasEmAtraso() {
     return diasEmAtraso;
   }
@@ -145,9 +147,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Status da conta.
+   * {{{acordo_detalhe_response_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Status da conta.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_status_conta_value}}}")
   public Long getStatusConta() {
     return statusConta;
   }
@@ -157,9 +159,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Assessoria atual.
+   * {{{acordo_detalhe_response_assessoria_atual_value}}}
    **/
-  @ApiModelProperty(value = "Assessoria atual.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_assessoria_atual_value}}}")
   public String getAssessoriaAtual() {
     return assessoriaAtual;
   }
@@ -169,9 +171,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Total de pagamentos.
+   * {{{acordo_detalhe_response_total_pagamentos_value}}}
    **/
-  @ApiModelProperty(value = "Total de pagamentos.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_total_pagamentos_value}}}")
   public BigDecimal getTotalPagamentos() {
     return totalPagamentos;
   }
@@ -181,9 +183,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Data do vencimento da cobran\u00E7a.
+   * {{{acordo_detalhe_response_data_vencimento_cobranca_value}}}
    **/
-  @ApiModelProperty(value = "Data do vencimento da cobran\u00E7a.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_data_vencimento_cobranca_value}}}")
   public String getDataVencimentoCobranca() {
     return dataVencimentoCobranca;
   }
@@ -193,9 +195,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Data da quebra do acordo.
+   * {{{acordo_detalhe_response_data_quebra_acordo_value}}}
    **/
-  @ApiModelProperty(value = "Data da quebra do acordo.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_data_quebra_acordo_value}}}")
   public String getDataQuebraAcordo() {
     return dataQuebraAcordo;
   }
@@ -205,9 +207,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Valor da parcela 1.
+   * {{{acordo_detalhe_response_valor_parcela1_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela 1.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_valor_parcela1_value}}}")
   public BigDecimal getValorParcela1() {
     return valorParcela1;
   }
@@ -217,9 +219,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Valor da parcela N.
+   * {{{acordo_detalhe_response_valor_parcela_n_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela N.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_valor_parcela_n_value}}}")
   public BigDecimal getValorParcelaN() {
     return valorParcelaN;
   }
@@ -229,9 +231,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Parcela pedida.
+   * {{{acordo_detalhe_response_parcela_pedida_value}}}
    **/
-  @ApiModelProperty(value = "Parcela pedida.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_parcela_pedida_value}}}")
   public Integer getParcelaPedida() {
     return parcelaPedida;
   }
@@ -241,9 +243,9 @@ public class AcordoDetalheResponse  {
 
   
   /**
-   * Data de vencimento da parcela pedida.
+   * {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}
    **/
-  @ApiModelProperty(value = "Data de vencimento da parcela pedida.")
+  @ApiModelProperty(value = "{{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}")
   public String getVencimentoParcelaPedida() {
     return vencimentoParcelaPedida;
   }
@@ -279,3 +281,5 @@ public class AcordoDetalheResponse  {
     return sb.toString();
   }
 }
+
+

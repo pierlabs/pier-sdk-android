@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+ * {{{codigo_seguranca_s_m_s_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_request_description}}}")
 public class CodigoSegurancaSMSRequest  {
   
   @SerializedName("ddd")
@@ -20,9 +22,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * C\u00F3digo DDD do telefone (id).
+   * {{{codigo_seguranca_s_m_s_request_ddd_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo DDD do telefone (id).")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -32,9 +34,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{codigo_seguranca_s_m_s_request_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -44,9 +46,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * Token para valida\u00E7\u00E3o.
+   * {{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}
    **/
-  @ApiModelProperty(value = "Token para valida\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
   }
@@ -68,3 +70,5 @@ public class CodigoSegurancaSMSRequest  {
     return sb.toString();
   }
 }
+
+

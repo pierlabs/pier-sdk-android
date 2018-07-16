@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Origens Comerciais
+ * {{{page_origem_comercial_response_description}}}
  **/
-@ApiModel(description = "Lista de Origens Comerciais")
+@ApiModel(description = "{{{page_origem_comercial_response_description}}}")
 public class PageOrigemComercialResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageOrigemComercialResponse  {
     return sb.toString();
   }
 }
+
+

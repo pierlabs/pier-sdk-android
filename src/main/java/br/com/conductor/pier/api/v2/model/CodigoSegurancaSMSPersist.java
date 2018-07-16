@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.
+ * {{{codigo_seguranca_s_m_s_persist_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a.")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_persist_description}}}")
 public class CodigoSegurancaSMSPersist  {
   
   @SerializedName("ddd")
@@ -18,9 +20,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * DDD do n\u00FAmero de telefone para envio do sms.
+   * {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
    **/
-  @ApiModelProperty(value = "DDD do n\u00FAmero de telefone para envio do sms.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_persist_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -30,9 +32,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * N\u00FAmero do telefone para envio do sms.
+   * {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone para envio do sms.")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_persist_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -53,3 +55,5 @@ public class CodigoSegurancaSMSPersist  {
     return sb.toString();
   }
 }
+
+

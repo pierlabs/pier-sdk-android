@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.ControleVencimentoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Vencimentos
+ * {{{page_controle_vencimento_response_description}}}
  **/
-@ApiModel(description = "Lista de Vencimentos")
+@ApiModel(description = "{{{page_controle_vencimento_response_description}}}")
 public class PageControleVencimentoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageControleVencimentoResponse  {
     return sb.toString();
   }
 }
+
+

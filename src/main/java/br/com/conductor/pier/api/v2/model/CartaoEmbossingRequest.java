@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
+ * {{{cartao_embossing_request_description}}}
  **/
-@ApiModel(description = "Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing")
+@ApiModel(description = "{{{cartao_embossing_request_description}}}")
 public class CartaoEmbossingRequest  {
   
   @SerializedName("id_pessoa")
@@ -18,9 +20,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+   * {{{cartao_embossing_request_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)")
+  @ApiModelProperty(value = "{{{cartao_embossing_request_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -30,9 +32,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
+   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).")
+  @ApiModelProperty(value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
   }
@@ -53,3 +55,5 @@ public class CartaoEmbossingRequest  {
     return sb.toString();
   }
 }
+
+

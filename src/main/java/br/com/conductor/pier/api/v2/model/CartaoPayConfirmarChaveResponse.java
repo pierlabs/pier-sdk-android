@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Resposta da requisi\u00E7\u00E3o para confirma\u00E7\u00E3o da chave de criptograma
+ * {{{cartao_pay_confirmar_chave_response_description}}}
  **/
-@ApiModel(description = "Resposta da requisi\u00E7\u00E3o para confirma\u00E7\u00E3o da chave de criptograma")
+@ApiModel(description = "{{{cartao_pay_confirmar_chave_response_description}}}")
 public class CartaoPayConfirmarChaveResponse  {
   
   @SerializedName("id")
@@ -35,9 +37,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_pay_base_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Id do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -47,9 +49,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o real criptografado
+   * {{{cartao_pay_base_response_numero_cartao_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do cart\u00E3o real criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_numero_cartao_value}}}")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -59,9 +61,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_base_response_data_validade_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_data_validade_cartao_value}}}")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -71,9 +73,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_base_response_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -83,9 +85,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Identificador do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_id_entidade_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do emissor do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_id_entidade_value}}}")
   public Long getIdEntidade() {
     return idEntidade;
   }
@@ -95,9 +97,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Nome do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_nome_entidade_value}}}
    **/
-  @ApiModelProperty(value = "Nome do emissor do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_nome_entidade_value}}}")
   public String getNomeEntidade() {
     return nomeEntidade;
   }
@@ -107,9 +109,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_base_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do cart\u00E3o")
+  @ApiModelProperty(value = "{{{cartao_pay_base_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -119,9 +121,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Data de validade da chave do criptograma
+   * {{{cartao_pay_response_data_validade_chave_criptograma_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade da chave do criptograma")
+  @ApiModelProperty(value = "{{{cartao_pay_response_data_validade_chave_criptograma_value}}}")
   public String getDataValidadeChaveCriptograma() {
     return dataValidadeChaveCriptograma;
   }
@@ -131,9 +133,9 @@ public class CartaoPayConfirmarChaveResponse  {
 
   
   /**
-   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
+   * {{{cartao_pay_confirmar_chave_response_chave_criptograma_value}}}
    **/
-  @ApiModelProperty(value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada")
+  @ApiModelProperty(value = "{{{cartao_pay_confirmar_chave_response_chave_criptograma_value}}}")
   public String getChaveCriptograma() {
     return chaveCriptograma;
   }
@@ -161,3 +163,5 @@ public class CartaoPayConfirmarChaveResponse  {
     return sb.toString();
   }
 }
+
+

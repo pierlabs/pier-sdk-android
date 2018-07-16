@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto VinculoOperacao
+ * {{{vinculo_operacao_persist_description}}}
  **/
-@ApiModel(description = "Objeto VinculoOperacao")
+@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
 public class VinculoOperacaoPersist  {
   
   @SerializedName("idProduto")
@@ -20,9 +22,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{vinculo_operacao_persist_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -32,9 +34,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+   * {{{vinculo_operacao_persist_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -44,9 +46,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * C\u00F3digo MCC.
+   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo MCC.")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }
@@ -68,3 +70,5 @@ public class VinculoOperacaoPersist  {
     return sb.toString();
   }
 }
+
+

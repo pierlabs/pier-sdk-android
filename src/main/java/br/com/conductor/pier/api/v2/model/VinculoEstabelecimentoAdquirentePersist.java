@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto VinculoEstabelecimentoPersist
+ * {{{vinculo_estabelecimento_adquirente_persist_description}}}
  **/
-@ApiModel(description = "Objeto VinculoEstabelecimentoPersist")
+@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_persist_description}}}")
 public class VinculoEstabelecimentoAdquirentePersist  {
   
   @SerializedName("idEstabelecimento")
@@ -20,9 +22,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * Apresenta o id do estabelecimento.
+   * {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o id do estabelecimento.")
+  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -32,9 +34,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * Apresenta o id do adquirente.
+   * {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o id do adquirente.")
+  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}")
   public Long getIdAdquirente() {
     return idAdquirente;
   }
@@ -44,9 +46,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
+   * {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.")
+  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
   }
@@ -68,3 +70,5 @@ public class VinculoEstabelecimentoAdquirentePersist  {
     return sb.toString();
   }
 }
+
+

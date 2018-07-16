@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de anuidade
+ * {{{anuidade_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de anuidade")
+@ApiModel(description = "{{{anuidade_response_description}}}")
 public class AnuidadeResponse  {
   
   @SerializedName("id")
@@ -23,9 +25,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Identificador do Tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do Tipo de anuidade de b\u00F4nus de celular")
+  @ApiModelProperty(value = "{{{anuidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -35,9 +37,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular")
+  @ApiModelProperty(value = "{{{anuidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -47,9 +49,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Valor do tipo de anuidade de b\u00F4nus de celular
+   * {{{anuidade_response_valor_value}}}
    **/
-  @ApiModelProperty(value = "Valor do tipo de anuidade de b\u00F4nus de celular")
+  @ApiModelProperty(value = "{{{anuidade_response_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +61,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
+   * {{{anuidade_response_flag_anuidade_bonificada_value}}}
    **/
-  @ApiModelProperty(value = "Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada")
+  @ApiModelProperty(value = "{{{anuidade_response_flag_anuidade_bonificada_value}}}")
   public Boolean getFlagAnuidadeBonificada() {
     return flagAnuidadeBonificada;
   }
@@ -84,3 +86,5 @@ public class AnuidadeResponse  {
     return sb.toString();
   }
 }
+
+

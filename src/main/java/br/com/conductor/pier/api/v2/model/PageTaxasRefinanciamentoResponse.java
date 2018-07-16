@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TaxasRefinanciamentoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista das taxas e tarifas
+ * {{{page_taxas_refinanciamento_response_description}}}
  **/
-@ApiModel(description = "Lista das taxas e tarifas")
+@ApiModel(description = "{{{page_taxas_refinanciamento_response_description}}}")
 public class PageTaxasRefinanciamentoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTaxasRefinanciamentoResponse  {
     return sb.toString();
   }
 }
+
+

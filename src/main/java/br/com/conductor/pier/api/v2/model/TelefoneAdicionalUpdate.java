@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Telefone
+ * {{{telefone_adicional_update_description}}}
  **/
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_adicional_update_description}}}")
 public class TelefoneAdicionalUpdate  {
   
   @SerializedName("id")
@@ -24,9 +26,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+   * {{{telefone_adicional_update_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +38,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+   * {{{telefone_adicional_update_id_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_id_tipo_telefone_value}}}")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -48,9 +50,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_adicional_update_ddd_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +62,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_adicional_update_telefone_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +74,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_adicional_update_ramal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }
@@ -98,3 +100,5 @@ public class TelefoneAdicionalUpdate  {
     return sb.toString();
   }
 }
+
+

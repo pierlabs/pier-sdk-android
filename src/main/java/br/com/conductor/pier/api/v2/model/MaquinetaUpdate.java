@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
+ * {{{maquineta_update_description}}}
  **/
-@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta")
+@ApiModel(description = "{{{maquineta_update_description}}}")
 public class MaquinetaUpdate  {
   
   @SerializedName("idTerminal")
@@ -23,9 +25,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+   * {{{maquineta_update_id_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).")
+  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_terminal_value}}}")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +37,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).
+   * {{{maquineta_update_id_tipo_maquineta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id).")
+  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_tipo_maquineta_value}}}")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +49,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * Valor de Manuten\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_update_valor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor de Manuten\u00E7\u00E3o da Maquineta.")
+  @ApiModelProperty(required = true, value = "{{{maquineta_update_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +61,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * Data da implanta\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_update_data_hora_implantacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data da implanta\u00E7\u00E3o da Maquineta.")
+  @ApiModelProperty(required = true, value = "{{{maquineta_update_data_hora_implantacao_value}}}")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }
@@ -84,3 +86,5 @@ public class MaquinetaUpdate  {
     return sb.toString();
   }
 }
+
+

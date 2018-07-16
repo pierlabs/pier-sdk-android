@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.ArquivoAUDResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de auditorias do arquivo
+ * {{{page_arquivo_a_u_d_response_description}}}
  **/
-@ApiModel(description = "Lista de auditorias do arquivo")
+@ApiModel(description = "{{{page_arquivo_a_u_d_response_description}}}")
 public class PageArquivoAUDResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageArquivoAUDResponse  {
     return sb.toString();
   }
 }
+
+

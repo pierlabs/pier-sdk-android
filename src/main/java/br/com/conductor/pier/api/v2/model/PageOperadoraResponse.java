@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.OperadoraResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+ * {{{page_operadora_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica")
+@ApiModel(description = "{{{page_operadora_response_description}}}")
 public class PageOperadoraResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageOperadoraResponse  {
     return sb.toString();
   }
 }
+
+

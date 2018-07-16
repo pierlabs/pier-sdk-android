@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.VinculoEstabelecimentoAdquirenteResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de VinculoEstabelecimentoAdquirente
+ * {{{page_vinculo_estabelecimento_adquirente_response_description}}}
  **/
-@ApiModel(description = "Lista de VinculoEstabelecimentoAdquirente")
+@ApiModel(description = "{{{page_vinculo_estabelecimento_adquirente_response_description}}}")
 public class PageVinculoEstabelecimentoAdquirenteResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageVinculoEstabelecimentoAdquirenteResponse  {
     return sb.toString();
   }
 }
+
+

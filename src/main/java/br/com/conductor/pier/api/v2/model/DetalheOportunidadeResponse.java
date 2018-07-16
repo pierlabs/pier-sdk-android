@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades
+ * {{{detalhe_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades")
+@ApiModel(description = "{{{detalhe_oportunidade_response_description}}}")
 public class DetalheOportunidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +22,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * C\u00F3digo identificador do detalhe
+   * {{{detalhe_oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do detalhe")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +34,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * Nome do conte\u00FAdo
+   * {{{detalhe_oportunidade_response_nome_campo_value}}}
    **/
-  @ApiModelProperty(value = "Nome do conte\u00FAdo")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_nome_campo_value}}}")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -44,9 +46,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * Conte\u00FAdo do detalhe
+   * {{{detalhe_oportunidade_response_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Conte\u00FAdo do detalhe")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }
@@ -68,3 +70,5 @@ public class DetalheOportunidadeResponse  {
     return sb.toString();
   }
 }
+
+

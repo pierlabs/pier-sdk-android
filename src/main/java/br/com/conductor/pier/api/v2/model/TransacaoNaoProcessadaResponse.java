@@ -2,142 +2,94 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto transacao N\u00E3o Processada
+ * {{{transacao_nao_processada_response_description}}}
  **/
-@ApiModel(description = "Objeto transacao N\u00E3o Processada")
+@ApiModel(description = "{{{transacao_nao_processada_response_description}}}")
 public class TransacaoNaoProcessadaResponse  {
   
-  @SerializedName("idTipoTransacaoNaoProcessada")
-  private Long idTipoTransacaoNaoProcessada = null;
-  @SerializedName("descricaoTipoTransacaoNaoProcessada")
-  private String descricaoTipoTransacaoNaoProcessada = null;
-  @SerializedName("descricaoAbreviada")
-  private String descricaoAbreviada = null;
-  @SerializedName("idConta")
-  private Long idConta = null;
   @SerializedName("cartaoMascarado")
   private String cartaoMascarado = null;
-  @SerializedName("nomePortador")
-  private String nomePortador = null;
-  @SerializedName("dataOrigem")
-  private String dataOrigem = null;
-  @SerializedName("dataFaturamento")
-  private String dataFaturamento = null;
-  @SerializedName("dataVencimento")
-  private String dataVencimento = null;
-  @SerializedName("modoEntradaTransacao")
-  private String modoEntradaTransacao = null;
-  @SerializedName("valorTaxaEmbarque")
-  private BigDecimal valorTaxaEmbarque = null;
-  @SerializedName("valorEntrada")
-  private BigDecimal valorEntrada = null;
-  @SerializedName("valorBRL")
-  private BigDecimal valorBRL = null;
-  @SerializedName("valorUSD")
-  private BigDecimal valorUSD = null;
-  @SerializedName("cotacaoUSD")
-  private BigDecimal cotacaoUSD = null;
-  @SerializedName("dataCotacaoUSD")
-  private String dataCotacaoUSD = null;
-  @SerializedName("codigoMoedaOrigem")
-  private String codigoMoedaOrigem = null;
-  @SerializedName("codigoMoedaDestino")
-  private String codigoMoedaDestino = null;
   @SerializedName("codigoAutorizacao")
   private String codigoAutorizacao = null;
+  @SerializedName("codigoMCC")
+  private Long codigoMCC = null;
+  @SerializedName("codigoMoedaDestino")
+  private String codigoMoedaDestino = null;
+  @SerializedName("codigoMoedaOrigem")
+  private String codigoMoedaOrigem = null;
   @SerializedName("codigoReferencia")
   private String codigoReferencia = null;
   @SerializedName("codigoTerminal")
   private String codigoTerminal = null;
-  @SerializedName("codigoMCC")
-  private Long codigoMCC = null;
-  @SerializedName("grupoMCC")
-  private Long grupoMCC = null;
-  @SerializedName("grupoDescricaoMCC")
-  private String grupoDescricaoMCC = null;
-  @SerializedName("idEstabelecimento")
-  private Long idEstabelecimento = null;
-  @SerializedName("nomeEstabelecimento")
-  private String nomeEstabelecimento = null;
-  @SerializedName("nomeFantasiaEstabelecimento")
-  private String nomeFantasiaEstabelecimento = null;
-  @SerializedName("localidadeEstabelecimento")
-  private String localidadeEstabelecimento = null;
-  @SerializedName("planoParcelamento")
-  private Long planoParcelamento = null;
-  @SerializedName("numeroParcela")
-  private Long numeroParcela = null;
+  @SerializedName("cotacaoUSD")
+  private BigDecimal cotacaoUSD = null;
+  @SerializedName("dataCotacaoUSD")
+  private String dataCotacaoUSD = null;
+  @SerializedName("dataFaturamento")
+  private String dataFaturamento = null;
+  @SerializedName("dataOrigem")
+  private String dataOrigem = null;
+  @SerializedName("dataVencimentoReal")
+  private String dataVencimentoReal = null;
+  @SerializedName("descricaoAbreviada")
+  private String descricaoAbreviada = null;
+  @SerializedName("descricaoTipoTransacaoNaoProcessada")
+  private String descricaoTipoTransacaoNaoProcessada = null;
   @SerializedName("detalhesTransacao")
   private String detalhesTransacao = null;
   @SerializedName("flagCredito")
   private Integer flagCredito = null;
   @SerializedName("flagFaturado")
   private Integer flagFaturado = null;
-  @SerializedName("flagEstorno")
-  private Integer flagEstorno = null;
+  @SerializedName("grupoDescricaoMCC")
+  private String grupoDescricaoMCC = null;
+  @SerializedName("grupoMCC")
+  private Long grupoMCC = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
+  @SerializedName("idEstabelecimento")
+  private Long idEstabelecimento = null;
+  @SerializedName("idTipoTransacaoNaoProcessada")
+  private Long idTipoTransacaoNaoProcessada = null;
   @SerializedName("idTransacaoEstorno")
   private Long idTransacaoEstorno = null;
+  @SerializedName("localidadeEstabelecimento")
+  private String localidadeEstabelecimento = null;
+  @SerializedName("modoEntradaTransacao")
+  private String modoEntradaTransacao = null;
+  @SerializedName("nomeEstabelecimento")
+  private String nomeEstabelecimento = null;
+  @SerializedName("nomeFantasiaEstabelecimento")
+  private String nomeFantasiaEstabelecimento = null;
+  @SerializedName("nomePortador")
+  private String nomePortador = null;
+  @SerializedName("parcela")
+  private Long parcela = null;
+  @SerializedName("plano")
+  private Long plano = null;
   @SerializedName("status")
   private Integer status = null;
+  @SerializedName("taxaEmbarque")
+  private BigDecimal taxaEmbarque = null;
+  @SerializedName("valorBRL")
+  private BigDecimal valorBRL = null;
+  @SerializedName("valorEntrada")
+  private BigDecimal valorEntrada = null;
+  @SerializedName("valorUSD")
+  private BigDecimal valorUSD = null;
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_cartao_mascarado_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.")
-  public Long getIdTipoTransacaoNaoProcessada() {
-    return idTipoTransacaoNaoProcessada;
-  }
-  public void setIdTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
-    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
-  }
-
-  
-  /**
-   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
-   **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.")
-  public String getDescricaoTipoTransacaoNaoProcessada() {
-    return descricaoTipoTransacaoNaoProcessada;
-  }
-  public void setDescricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
-    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
-  }
-
-  
-  /**
-   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
-   **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.")
-  public String getDescricaoAbreviada() {
-    return descricaoAbreviada;
-  }
-  public void setDescricaoAbreviada(String descricaoAbreviada) {
-    this.descricaoAbreviada = descricaoAbreviada;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).")
-  public Long getIdConta() {
-    return idConta;
-  }
-  public void setIdConta(Long idConta) {
-    this.idConta = idConta;
-  }
-
-  
-  /**
-   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
-   **/
-  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_cartao_mascarado_value}}}")
   public String getCartaoMascarado() {
     return cartaoMascarado;
   }
@@ -147,165 +99,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Nome completo do Portador do Cart\u00E3o.
+   * {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "Nome completo do Portador do Cart\u00E3o.")
-  public String getNomePortador() {
-    return nomePortador;
-  }
-  public void setNomePortador(String nomePortador) {
-    this.nomePortador = nomePortador;
-  }
-
-  
-  /**
-   * Data em que a Transa\u00E7\u00E3o foi realizada.
-   **/
-  @ApiModelProperty(value = "Data em que a Transa\u00E7\u00E3o foi realizada.")
-  public String getDataOrigem() {
-    return dataOrigem;
-  }
-  public void setDataOrigem(String dataOrigem) {
-    this.dataOrigem = dataOrigem;
-  }
-
-  
-  /**
-   * Data de Faturamento da Transa\u00E7\u00E3o.
-   **/
-  @ApiModelProperty(value = "Data de Faturamento da Transa\u00E7\u00E3o.")
-  public String getDataFaturamento() {
-    return dataFaturamento;
-  }
-  public void setDataFaturamento(String dataFaturamento) {
-    this.dataFaturamento = dataFaturamento;
-  }
-
-  
-  /**
-   * Data de Vencimento da Fatura.
-   **/
-  @ApiModelProperty(value = "Data de Vencimento da Fatura.")
-  public String getDataVencimento() {
-    return dataVencimento;
-  }
-  public void setDataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
-  }
-
-  
-  /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
-   **/
-  @ApiModelProperty(value = "Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.")
-  public String getModoEntradaTransacao() {
-    return modoEntradaTransacao;
-  }
-  public void setModoEntradaTransacao(String modoEntradaTransacao) {
-    this.modoEntradaTransacao = modoEntradaTransacao;
-  }
-
-  
-  /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
-   **/
-  @ApiModelProperty(value = "Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.")
-  public BigDecimal getValorTaxaEmbarque() {
-    return valorTaxaEmbarque;
-  }
-  public void setValorTaxaEmbarque(BigDecimal valorTaxaEmbarque) {
-    this.valorTaxaEmbarque = valorTaxaEmbarque;
-  }
-
-  
-  /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
-   **/
-  @ApiModelProperty(value = "Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.")
-  public BigDecimal getValorEntrada() {
-    return valorEntrada;
-  }
-  public void setValorEntrada(BigDecimal valorEntrada) {
-    this.valorEntrada = valorEntrada;
-  }
-
-  
-  /**
-   * Valor da Transa\u00E7\u00E3o em Real (BRL).
-   **/
-  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em Real (BRL).")
-  public BigDecimal getValorBRL() {
-    return valorBRL;
-  }
-  public void setValorBRL(BigDecimal valorBRL) {
-    this.valorBRL = valorBRL;
-  }
-
-  
-  /**
-   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
-   **/
-  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).")
-  public BigDecimal getValorUSD() {
-    return valorUSD;
-  }
-  public void setValorUSD(BigDecimal valorUSD) {
-    this.valorUSD = valorUSD;
-  }
-
-  
-  /**
-   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
-   **/
-  @ApiModelProperty(value = "Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).")
-  public BigDecimal getCotacaoUSD() {
-    return cotacaoUSD;
-  }
-  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-  }
-
-  
-  /**
-   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
-   **/
-  @ApiModelProperty(value = "Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).")
-  public String getDataCotacaoUSD() {
-    return dataCotacaoUSD;
-  }
-  public void setDataCotacaoUSD(String dataCotacaoUSD) {
-    this.dataCotacaoUSD = dataCotacaoUSD;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.")
-  public String getCodigoMoedaOrigem() {
-    return codigoMoedaOrigem;
-  }
-  public void setCodigoMoedaOrigem(String codigoMoedaOrigem) {
-    this.codigoMoedaOrigem = codigoMoedaOrigem;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.")
-  public String getCodigoMoedaDestino() {
-    return codigoMoedaDestino;
-  }
-  public void setCodigoMoedaDestino(String codigoMoedaDestino) {
-    this.codigoMoedaDestino = codigoMoedaDestino;
-  }
-
-  
-  /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_autorizacao_value}}}")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -315,33 +111,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
+   * {{{transacao_nao_processada_response_codigo_mcc_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.")
-  public String getCodigoReferencia() {
-    return codigoReferencia;
-  }
-  public void setCodigoReferencia(String codigoReferencia) {
-    this.codigoReferencia = codigoReferencia;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.")
-  public String getCodigoTerminal() {
-    return codigoTerminal;
-  }
-  public void setCodigoTerminal(String codigoTerminal) {
-    this.codigoTerminal = codigoTerminal;
-  }
-
-  
-  /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
-   **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_mcc_value}}}")
   public Long getCodigoMCC() {
     return codigoMCC;
   }
@@ -351,105 +123,141 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.")
-  public Long getGrupoMCC() {
-    return grupoMCC;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_moeda_destino_value}}}")
+  public String getCodigoMoedaDestino() {
+    return codigoMoedaDestino;
   }
-  public void setGrupoMCC(Long grupoMCC) {
-    this.grupoMCC = grupoMCC;
+  public void setCodigoMoedaDestino(String codigoMoedaDestino) {
+    this.codigoMoedaDestino = codigoMoedaDestino;
   }
 
   
   /**
-   * Descri\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo do Estabelecimento.")
-  public String getGrupoDescricaoMCC() {
-    return grupoDescricaoMCC;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_moeda_origem_value}}}")
+  public String getCodigoMoedaOrigem() {
+    return codigoMoedaOrigem;
   }
-  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
-    this.grupoDescricaoMCC = grupoDescricaoMCC;
+  public void setCodigoMoedaOrigem(String codigoMoedaOrigem) {
+    this.codigoMoedaOrigem = codigoMoedaOrigem;
   }
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{transacao_nao_processada_response_codigo_referencia_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
-  public Long getIdEstabelecimento() {
-    return idEstabelecimento;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_referencia_value}}}")
+  public String getCodigoReferencia() {
+    return codigoReferencia;
   }
-  public void setIdEstabelecimento(Long idEstabelecimento) {
-    this.idEstabelecimento = idEstabelecimento;
+  public void setCodigoReferencia(String codigoReferencia) {
+    this.codigoReferencia = codigoReferencia;
   }
 
   
   /**
-   * Nome do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_terminal_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Estabelecimento.")
-  public String getNomeEstabelecimento() {
-    return nomeEstabelecimento;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_terminal_value}}}")
+  public String getCodigoTerminal() {
+    return codigoTerminal;
   }
-  public void setNomeEstabelecimento(String nomeEstabelecimento) {
-    this.nomeEstabelecimento = nomeEstabelecimento;
+  public void setCodigoTerminal(String codigoTerminal) {
+    this.codigoTerminal = codigoTerminal;
   }
 
   
   /**
-   * Nome Fantasia do Estabelecimento.
+   * {{{transacao_nao_processada_response_cotacao_usd_value}}}
    **/
-  @ApiModelProperty(value = "Nome Fantasia do Estabelecimento.")
-  public String getNomeFantasiaEstabelecimento() {
-    return nomeFantasiaEstabelecimento;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_cotacao_usd_value}}}")
+  public BigDecimal getCotacaoUSD() {
+    return cotacaoUSD;
   }
-  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
-    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
   }
 
   
   /**
-   * Localidade do Estabelecimento.
+   * {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
    **/
-  @ApiModelProperty(value = "Localidade do Estabelecimento.")
-  public String getLocalidadeEstabelecimento() {
-    return localidadeEstabelecimento;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_cotacao_usd_value}}}")
+  public String getDataCotacaoUSD() {
+    return dataCotacaoUSD;
   }
-  public void setLocalidadeEstabelecimento(String localidadeEstabelecimento) {
-    this.localidadeEstabelecimento = localidadeEstabelecimento;
+  public void setDataCotacaoUSD(String dataCotacaoUSD) {
+    this.dataCotacaoUSD = dataCotacaoUSD;
   }
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+   * {{{transacao_nao_processada_response_data_faturamento_value}}}
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.")
-  public Long getPlanoParcelamento() {
-    return planoParcelamento;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_faturamento_value}}}")
+  public String getDataFaturamento() {
+    return dataFaturamento;
   }
-  public void setPlanoParcelamento(Long planoParcelamento) {
-    this.planoParcelamento = planoParcelamento;
+  public void setDataFaturamento(String dataFaturamento) {
+    this.dataFaturamento = dataFaturamento;
   }
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+   * {{{transacao_nao_processada_response_data_origem_value}}}
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.")
-  public Long getNumeroParcela() {
-    return numeroParcela;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_origem_value}}}")
+  public String getDataOrigem() {
+    return dataOrigem;
   }
-  public void setNumeroParcela(Long numeroParcela) {
-    this.numeroParcela = numeroParcela;
+  public void setDataOrigem(String dataOrigem) {
+    this.dataOrigem = dataOrigem;
   }
 
   
   /**
-   * Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_data_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Detalhes complementares a respeito da Transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_vencimento_value}}}")
+  public String getDataVencimentoReal() {
+    return dataVencimentoReal;
+  }
+  public void setDataVencimentoReal(String dataVencimentoReal) {
+    this.dataVencimentoReal = dataVencimentoReal;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_descricao_abreviada_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_descricao_abreviada_value}}}")
+  public String getDescricaoAbreviada() {
+    return descricaoAbreviada;
+  }
+  public void setDescricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}")
+  public String getDescricaoTipoTransacaoNaoProcessada() {
+    return descricaoTipoTransacaoNaoProcessada;
+  }
+  public void setDescricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
+    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_detalhes_transacao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_detalhes_transacao_value}}}")
   public String getDetalhesTransacao() {
     return detalhesTransacao;
   }
@@ -459,9 +267,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+   * {{{transacao_nao_processada_response_flag_credito_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_flag_credito_value}}}")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -471,9 +279,9 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+   * {{{transacao_nao_processada_response_flag_faturado_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_flag_faturado_value}}}")
   public Integer getFlagFaturado() {
     return flagFaturado;
   }
@@ -483,21 +291,69 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+   * {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.")
-  public Integer getFlagEstorno() {
-    return flagEstorno;
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}")
+  public String getGrupoDescricaoMCC() {
+    return grupoDescricaoMCC;
   }
-  public void setFlagEstorno(Integer flagEstorno) {
-    this.flagEstorno = flagEstorno;
+  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
   }
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+   * {{{transacao_nao_processada_response_grupo_mcc_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_grupo_mcc_value}}}")
+  public Long getGrupoMCC() {
+    return grupoMCC;
+  }
+  public void setGrupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_conta_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_conta_value}}}")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_estabelecimento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_estabelecimento_value}}}")
+  public Long getIdEstabelecimento() {
+    return idEstabelecimento;
+  }
+  public void setIdEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}")
+  public Long getIdTipoTransacaoNaoProcessada() {
+    return idTipoTransacaoNaoProcessada;
+  }
+  public void setIdTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
+    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_transacao_estorno_value}}}")
   public Long getIdTransacaoEstorno() {
     return idTransacaoEstorno;
   }
@@ -507,14 +363,146 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
-   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}")
+  public String getLocalidadeEstabelecimento() {
+    return localidadeEstabelecimento;
+  }
+  public void setLocalidadeEstabelecimento(String localidadeEstabelecimento) {
+    this.localidadeEstabelecimento = localidadeEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_modo_entrada_transacao_value}}}")
+  public String getModoEntradaTransacao() {
+    return modoEntradaTransacao;
+  }
+  public void setModoEntradaTransacao(String modoEntradaTransacao) {
+    this.modoEntradaTransacao = modoEntradaTransacao;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_estabelecimento_value}}}")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}")
+  public String getNomeFantasiaEstabelecimento() {
+    return nomeFantasiaEstabelecimento;
+  }
+  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_portador_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_portador_value}}}")
+  public String getNomePortador() {
+    return nomePortador;
+  }
+  public void setNomePortador(String nomePortador) {
+    this.nomePortador = nomePortador;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_numero_parcela_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_numero_parcela_value}}}")
+  public Long getParcela() {
+    return parcela;
+  }
+  public void setParcela(Long parcela) {
+    this.parcela = parcela;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_plano_parcelamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_plano_parcelamento_value}}}")
+  public Long getPlano() {
+    return plano;
+  }
+  public void setPlano(Long plano) {
+    this.plano = plano;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_status_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
   public void setStatus(Integer status) {
     this.status = status;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_taxa_embarque_value}}}")
+  public BigDecimal getTaxaEmbarque() {
+    return taxaEmbarque;
+  }
+  public void setTaxaEmbarque(BigDecimal taxaEmbarque) {
+    this.taxaEmbarque = taxaEmbarque;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_brl_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_brl_value}}}")
+  public BigDecimal getValorBRL() {
+    return valorBRL;
+  }
+  public void setValorBRL(BigDecimal valorBRL) {
+    this.valorBRL = valorBRL;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_entrada_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_entrada_value}}}")
+  public BigDecimal getValorEntrada() {
+    return valorEntrada;
+  }
+  public void setValorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_usd_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_usd_value}}}")
+  public BigDecimal getValorUSD() {
+    return valorUSD;
+  }
+  public void setValorUSD(BigDecimal valorUSD) {
+    this.valorUSD = valorUSD;
   }
 
   
@@ -524,43 +512,44 @@ public class TransacaoNaoProcessadaResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransacaoNaoProcessadaResponse {\n");
     
-    sb.append("  idTipoTransacaoNaoProcessada: ").append(idTipoTransacaoNaoProcessada).append("\n");
-    sb.append("  descricaoTipoTransacaoNaoProcessada: ").append(descricaoTipoTransacaoNaoProcessada).append("\n");
-    sb.append("  descricaoAbreviada: ").append(descricaoAbreviada).append("\n");
-    sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  cartaoMascarado: ").append(cartaoMascarado).append("\n");
-    sb.append("  nomePortador: ").append(nomePortador).append("\n");
-    sb.append("  dataOrigem: ").append(dataOrigem).append("\n");
-    sb.append("  dataFaturamento: ").append(dataFaturamento).append("\n");
-    sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
-    sb.append("  modoEntradaTransacao: ").append(modoEntradaTransacao).append("\n");
-    sb.append("  valorTaxaEmbarque: ").append(valorTaxaEmbarque).append("\n");
-    sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
-    sb.append("  valorBRL: ").append(valorBRL).append("\n");
-    sb.append("  valorUSD: ").append(valorUSD).append("\n");
-    sb.append("  cotacaoUSD: ").append(cotacaoUSD).append("\n");
-    sb.append("  dataCotacaoUSD: ").append(dataCotacaoUSD).append("\n");
-    sb.append("  codigoMoedaOrigem: ").append(codigoMoedaOrigem).append("\n");
-    sb.append("  codigoMoedaDestino: ").append(codigoMoedaDestino).append("\n");
     sb.append("  codigoAutorizacao: ").append(codigoAutorizacao).append("\n");
+    sb.append("  codigoMCC: ").append(codigoMCC).append("\n");
+    sb.append("  codigoMoedaDestino: ").append(codigoMoedaDestino).append("\n");
+    sb.append("  codigoMoedaOrigem: ").append(codigoMoedaOrigem).append("\n");
     sb.append("  codigoReferencia: ").append(codigoReferencia).append("\n");
     sb.append("  codigoTerminal: ").append(codigoTerminal).append("\n");
-    sb.append("  codigoMCC: ").append(codigoMCC).append("\n");
-    sb.append("  grupoMCC: ").append(grupoMCC).append("\n");
-    sb.append("  grupoDescricaoMCC: ").append(grupoDescricaoMCC).append("\n");
-    sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
-    sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
-    sb.append("  nomeFantasiaEstabelecimento: ").append(nomeFantasiaEstabelecimento).append("\n");
-    sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");
-    sb.append("  planoParcelamento: ").append(planoParcelamento).append("\n");
-    sb.append("  numeroParcela: ").append(numeroParcela).append("\n");
+    sb.append("  cotacaoUSD: ").append(cotacaoUSD).append("\n");
+    sb.append("  dataCotacaoUSD: ").append(dataCotacaoUSD).append("\n");
+    sb.append("  dataFaturamento: ").append(dataFaturamento).append("\n");
+    sb.append("  dataOrigem: ").append(dataOrigem).append("\n");
+    sb.append("  dataVencimentoReal: ").append(dataVencimentoReal).append("\n");
+    sb.append("  descricaoAbreviada: ").append(descricaoAbreviada).append("\n");
+    sb.append("  descricaoTipoTransacaoNaoProcessada: ").append(descricaoTipoTransacaoNaoProcessada).append("\n");
     sb.append("  detalhesTransacao: ").append(detalhesTransacao).append("\n");
     sb.append("  flagCredito: ").append(flagCredito).append("\n");
     sb.append("  flagFaturado: ").append(flagFaturado).append("\n");
-    sb.append("  flagEstorno: ").append(flagEstorno).append("\n");
+    sb.append("  grupoDescricaoMCC: ").append(grupoDescricaoMCC).append("\n");
+    sb.append("  grupoMCC: ").append(grupoMCC).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
+    sb.append("  idTipoTransacaoNaoProcessada: ").append(idTipoTransacaoNaoProcessada).append("\n");
     sb.append("  idTransacaoEstorno: ").append(idTransacaoEstorno).append("\n");
+    sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");
+    sb.append("  modoEntradaTransacao: ").append(modoEntradaTransacao).append("\n");
+    sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
+    sb.append("  nomeFantasiaEstabelecimento: ").append(nomeFantasiaEstabelecimento).append("\n");
+    sb.append("  nomePortador: ").append(nomePortador).append("\n");
+    sb.append("  parcela: ").append(parcela).append("\n");
+    sb.append("  plano: ").append(plano).append("\n");
     sb.append("  status: ").append(status).append("\n");
+    sb.append("  taxaEmbarque: ").append(taxaEmbarque).append("\n");
+    sb.append("  valorBRL: ").append(valorBRL).append("\n");
+    sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
+    sb.append("  valorUSD: ").append(valorUSD).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
+
+

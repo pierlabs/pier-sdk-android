@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.StatusImpressaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Status Impress\u00E3o
+ * {{{page_status_impressao_response_description}}}
  **/
-@ApiModel(description = "Lista de Status Impress\u00E3o")
+@ApiModel(description = "{{{page_status_impressao_response_description}}}")
 public class PageStatusImpressaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageStatusImpressaoResponse  {
     return sb.toString();
   }
 }
+
+

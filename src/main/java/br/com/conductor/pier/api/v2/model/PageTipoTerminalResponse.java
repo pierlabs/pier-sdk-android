@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoTerminalResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista dos tipos de terminais
+ * {{{page_tipo_terminal_response_description}}}
  **/
-@ApiModel(description = "Lista dos tipos de terminais")
+@ApiModel(description = "{{{page_tipo_terminal_response_description}}}")
 public class PageTipoTerminalResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoTerminalResponse  {
     return sb.toString();
   }
 }
+
+

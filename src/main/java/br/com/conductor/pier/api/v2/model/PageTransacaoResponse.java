@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TransacaoCorrenteResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de transa\u00E7\u00F5es de uma conta
+ * {{{page_transacao_response_description}}}
  **/
-@ApiModel(description = "Lista de transa\u00E7\u00F5es de uma conta")
+@ApiModel(description = "{{{page_transacao_response_description}}}")
 public class PageTransacaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTransacaoResponse  {
     return sb.toString();
   }
 }
+
+

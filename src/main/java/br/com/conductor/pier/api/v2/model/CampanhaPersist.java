@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.PlanoCampanhaPersist;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Campanha
+ * {{{campanha_persist_description}}}
  **/
-@ApiModel(description = "Campanha")
+@ApiModel(description = "{{{campanha_persist_description}}}")
 public class CampanhaPersist  {
   
   @SerializedName("nome")
@@ -22,9 +24,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * Nome da campanha.
+   * {{{campanha_persist_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome da campanha.")
+  @ApiModelProperty(value = "{{{campanha_persist_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -34,9 +36,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.
+   * {{{campanha_persist_id_tipo_campanha_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha.")
+  @ApiModelProperty(value = "{{{campanha_persist_id_tipo_campanha_value}}}")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
   }
@@ -46,9 +48,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * Lista com os planos de campanha.
+   * {{{campanha_persist_planos_campanhas_value}}}
    **/
-  @ApiModelProperty(value = "Lista com os planos de campanha.")
+  @ApiModelProperty(value = "{{{campanha_persist_planos_campanhas_value}}}")
   public List<PlanoCampanhaPersist> getPlanosCampanhas() {
     return planosCampanhas;
   }
@@ -70,3 +72,5 @@ public class CampanhaPersist  {
     return sb.toString();
   }
 }
+
+

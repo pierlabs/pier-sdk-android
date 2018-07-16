@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.CampanhaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de campanhas
+ * {{{page_campanha_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de campanhas")
+@ApiModel(description = "{{{page_campanha_response_description}}}")
 public class PageCampanhaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageCampanhaResponse  {
     return sb.toString();
   }
 }
+
+

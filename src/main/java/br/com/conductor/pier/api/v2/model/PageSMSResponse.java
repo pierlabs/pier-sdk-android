@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de SMS
+ * {{{page_s_m_s_response_description}}}
  **/
-@ApiModel(description = "Lista de SMS")
+@ApiModel(description = "{{{page_s_m_s_response_description}}}")
 public class PageSMSResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageSMSResponse  {
     return sb.toString();
   }
 }
+
+

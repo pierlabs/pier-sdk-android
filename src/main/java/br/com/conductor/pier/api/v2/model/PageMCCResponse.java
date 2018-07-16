@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.MCCResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista dos MCCs
+ * {{{page_m_c_c_response_description}}}
  **/
-@ApiModel(description = "Lista dos MCCs")
+@ApiModel(description = "{{{page_m_c_c_response_description}}}")
 public class PageMCCResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageMCCResponse  {
     return sb.toString();
   }
 }
+
+

@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.AnuidadeResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso Tipos de Anuidades
+ * {{{page_anuidade_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Tipos de Anuidades")
+@ApiModel(description = "{{{page_anuidade_response_description}}}")
 public class PageAnuidadeResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageAnuidadeResponse  {
     return sb.toString();
   }
 }
+
+

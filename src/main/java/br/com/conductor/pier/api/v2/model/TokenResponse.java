@@ -1,15 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
-import java.util.Date;
+
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso token
+ * {{{token_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso token")
+@ApiModel(description = "{{{token_response_description}}}")
 public class TokenResponse  {
   
   @SerializedName("id")
@@ -26,17 +27,17 @@ public class TokenResponse  {
   @SerializedName("criadoPor")
   private String criadoPor = null;
   @SerializedName("dataCriacao")
-  private Date dataCriacao = null;
+  private String dataCriacao = null;
   @SerializedName("alteradoPor")
   private String alteradoPor = null;
   @SerializedName("dataModificacao")
-  private Date dataModificacao = null;
+  private String dataModificacao = null;
 
   
   /**
-   * C\u00F3digo identificador do token
+   * {{{token_dto_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do token")
+  @ApiModelProperty(value = "{{{token_dto_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -46,9 +47,9 @@ public class TokenResponse  {
 
   
   /**
-   * C\u00F3digo identificador da base
+   * {{{token_dto_base_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da base")
+  @ApiModelProperty(value = "{{{token_dto_base_value}}}")
   public Long getBase() {
     return base;
   }
@@ -58,9 +59,9 @@ public class TokenResponse  {
 
   
   /**
-   * Owner do token
+   * {{{token_dto_owner_value}}}
    **/
-  @ApiModelProperty(value = "Owner do token")
+  @ApiModelProperty(value = "{{{token_dto_owner_value}}}")
   public String getOwner() {
     return owner;
   }
@@ -70,9 +71,9 @@ public class TokenResponse  {
 
   
   /**
-   * Status do token
+   * {{{token_dto_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do token")
+  @ApiModelProperty(value = "{{{token_dto_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -82,9 +83,9 @@ public class TokenResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o de quem criou o token
+   * {{{token_dto_criado_por_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o de quem criou o token")
+  @ApiModelProperty(value = "{{{token_dto_criado_por_value}}}")
   public String getCriadoPor() {
     return criadoPor;
   }
@@ -94,21 +95,21 @@ public class TokenResponse  {
 
   
   /**
-   * Data de cria\u00E7\u00E3o do token
+   * {{{token_dto_data_criacao_value}}}
    **/
-  @ApiModelProperty(value = "Data de cria\u00E7\u00E3o do token")
-  public Date getDataCriacao() {
+  @ApiModelProperty(value = "{{{token_dto_data_criacao_value}}}")
+  public String getDataCriacao() {
     return dataCriacao;
   }
-  public void setDataCriacao(Date dataCriacao) {
+  public void setDataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
   }
 
   
   /**
-   * Descri\u00E7\u00E3o de quem alterou o token
+   * {{{token_dto_alterado_por_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o de quem alterou o token")
+  @ApiModelProperty(value = "{{{token_dto_alterado_por_value}}}")
   public String getAlteradoPor() {
     return alteradoPor;
   }
@@ -118,13 +119,13 @@ public class TokenResponse  {
 
   
   /**
-   * Data de modifica\u00E7\u00E3o do token
+   * {{{token_dto_data_modificacao_value}}}
    **/
-  @ApiModelProperty(value = "Data de modifica\u00E7\u00E3o do token")
-  public Date getDataModificacao() {
+  @ApiModelProperty(value = "{{{token_dto_data_modificacao_value}}}")
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 
@@ -147,3 +148,5 @@ public class TokenResponse  {
     return sb.toString();
   }
 }
+
+

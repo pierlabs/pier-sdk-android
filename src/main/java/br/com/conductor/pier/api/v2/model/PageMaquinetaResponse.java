@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de Maquinetas
+ * {{{page_maquineta_response_description}}}
  **/
-@ApiModel(description = "Lista de Maquinetas")
+@ApiModel(description = "{{{page_maquineta_response_description}}}")
 public class PageMaquinetaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageMaquinetaResponse  {
     return sb.toString();
   }
 }
+
+

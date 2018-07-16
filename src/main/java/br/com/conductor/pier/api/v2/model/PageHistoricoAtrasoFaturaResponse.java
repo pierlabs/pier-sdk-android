@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.HistoricoAtrasoFaturaResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista historicos atraso pagamento
+ * {{{page_historico_atraso_fatura_response_description}}}
  **/
-@ApiModel(description = "Lista historicos atraso pagamento")
+@ApiModel(description = "{{{page_historico_atraso_fatura_response_description}}}")
 public class PageHistoricoAtrasoFaturaResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageHistoricoAtrasoFaturaResponse  {
     return sb.toString();
   }
 }
+
+

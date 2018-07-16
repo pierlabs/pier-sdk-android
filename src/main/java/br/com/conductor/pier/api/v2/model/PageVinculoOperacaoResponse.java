@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.VinculoOperacaoResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de vinculosOperacao
+ * {{{page_vinculo_operacao_response_description}}}
  **/
-@ApiModel(description = "Lista de vinculosOperacao")
+@ApiModel(description = "{{{page_vinculo_operacao_response_description}}}")
 public class PageVinculoOperacaoResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageVinculoOperacaoResponse  {
     return sb.toString();
   }
 }
+
+

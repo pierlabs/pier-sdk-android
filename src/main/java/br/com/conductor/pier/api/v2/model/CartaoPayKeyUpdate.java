@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
+ * {{{cartao_pay_key_update_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave")
+@ApiModel(description = "{{{cartao_pay_key_update_description}}}")
 public class CartaoPayKeyUpdate  {
   
   @SerializedName("chaveCriptograma")
@@ -16,9 +18,9 @@ public class CartaoPayKeyUpdate  {
 
   
   /**
-   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
+   * {{{cartao_pay_key_update_chave_criptograma_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada")
+  @ApiModelProperty(required = true, value = "{{{cartao_pay_key_update_chave_criptograma_value}}}")
   public String getChaveCriptograma() {
     return chaveCriptograma;
   }
@@ -38,3 +40,5 @@ public class CartaoPayKeyUpdate  {
     return sb.toString();
   }
 }
+
+

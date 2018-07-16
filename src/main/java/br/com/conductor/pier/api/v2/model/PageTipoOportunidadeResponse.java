@@ -3,14 +3,16 @@ package br.com.conductor.pier.api.v2.model;
 import br.com.conductor.pier.api.v2.model.TipoOportunidadeResponse;
 import java.util.*;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Lista de tipos oportunidades
+ * {{{page_tipo_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Lista de tipos oportunidades")
+@ApiModel(description = "{{{page_tipo_oportunidade_response_description}}}")
 public class PageTipoOportunidadeResponse  {
   
   @SerializedName("content")
@@ -221,3 +223,5 @@ public class PageTipoOportunidadeResponse  {
     return sb.toString();
   }
 }
+
+

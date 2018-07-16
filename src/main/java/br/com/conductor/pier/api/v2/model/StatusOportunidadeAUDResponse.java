@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD
+ * {{{status_oportunidade_a_u_d_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD")
+@ApiModel(description = "{{{status_oportunidade_a_u_d_response_description}}}")
 public class StatusOportunidadeAUDResponse  {
   
   @SerializedName("rev")
@@ -30,9 +32,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador da auditoria dos tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da auditoria dos tipos oportunidades")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_value}}}")
   public Long getRev() {
     return rev;
   }
@@ -42,9 +44,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_type_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_type_value}}}")
   public Long getRevType() {
     return revType;
   }
@@ -54,9 +56,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * {{{status_oportunidade_a_u_d_response_rev_date_value}}}
    **/
-  @ApiModelProperty(value = "Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_date_value}}}")
   public String getRevDate() {
     return revDate;
   }
@@ -66,9 +68,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador do StatusOportunidade
+   * {{{status_oportunidade_a_u_d_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do StatusOportunidade")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -78,9 +80,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador do TipoOportunidade
+   * {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do TipoOportunidade")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -90,9 +92,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * Nome do status oportunidade
+   * {{{status_oportunidade_a_u_d_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do status oportunidade")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -102,9 +104,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * Descricao do StatusOportunidade
+   * {{{status_oportunidade_a_u_d_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descricao do StatusOportunidade")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -114,9 +116,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * Flag que representa se o tipo oportunidade est\u00E1 ativo
+   * {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que representa se o tipo oportunidade est\u00E1 ativo")
+  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -143,3 +145,5 @@ public class StatusOportunidadeAUDResponse  {
     return sb.toString();
   }
 }
+
+

@@ -2,14 +2,16 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto de Resposta de Maquineta
+ * {{{maquineta_response_description}}}
  **/
-@ApiModel(description = "Objeto de Resposta de Maquineta")
+@ApiModel(description = "{{{maquineta_response_description}}}")
 public class MaquinetaResponse  {
   
   @SerializedName("id")
@@ -31,9 +33,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -43,9 +45,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
+   * {{{maquineta_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.")
+  @ApiModelProperty(value = "{{{maquineta_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -55,9 +57,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
+   * {{{maquineta_response_id_tipo_maquineta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_id_tipo_maquineta_value}}}")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -67,9 +69,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Valor de manuten\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_response_valor_value}}}
    **/
-  @ApiModelProperty(value = "Valor de manuten\u00E7\u00E3o da Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -79,9 +81,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Data de implanta\u00E7\u00E3o da Maquineta.
+   * {{{maquineta_response_data_hora_implantacao_value}}}
    **/
-  @ApiModelProperty(value = "Data de implanta\u00E7\u00E3o da Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_data_hora_implantacao_value}}}")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }
@@ -91,9 +93,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Data de cadastramento da Maquineta.
+   * {{{maquineta_response_data_hora_cadastramento_value}}}
    **/
-  @ApiModelProperty(value = "Data de cadastramento da Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_data_hora_cadastramento_value}}}")
   public String getDataHoraCadastramento() {
     return dataHoraCadastramento;
   }
@@ -103,9 +105,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * N\u00FAmero do terminal vinculado a Maquineta.
+   * {{{maquineta_response_terminal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do terminal vinculado a Maquineta.")
+  @ApiModelProperty(value = "{{{maquineta_response_terminal_value}}}")
   public String getTerminal() {
     return terminal;
   }
@@ -115,9 +117,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * Usu\u00E1rio da aplica\u00E7\u00E3o.
+   * {{{maquineta_response_usuario_apl_value}}}
    **/
-  @ApiModelProperty(value = "Usu\u00E1rio da aplica\u00E7\u00E3o.")
+  @ApiModelProperty(value = "{{{maquineta_response_usuario_apl_value}}}")
   public String getUsuarioApl() {
     return usuarioApl;
   }
@@ -144,3 +146,5 @@ public class MaquinetaResponse  {
     return sb.toString();
   }
 }
+
+

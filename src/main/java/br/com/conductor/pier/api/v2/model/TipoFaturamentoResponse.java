@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Faturamento
+ * {{{tipo_faturamento_response_description}}}
  **/
-@ApiModel(description = "Objeto Faturamento")
+@ApiModel(description = "{{{tipo_faturamento_response_description}}}")
 public class TipoFaturamentoResponse  {
   
   @SerializedName("id")
@@ -22,9 +24,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+   * {{{tipo_faturamento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +36,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Desci\u00E7\u00E3o do tipo de faturamento.
+   * {{{tipo_faturamento_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Desci\u00E7\u00E3o do tipo de faturamento.")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -46,9 +48,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
   }
@@ -58,9 +60,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+   * {{{tipo_faturamento_response_id_convenio_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_convenio_value}}}")
   public Long getIdConvenio() {
     return idConvenio;
   }
@@ -83,3 +85,5 @@ public class TipoFaturamentoResponse  {
     return sb.toString();
   }
 }
+
+

@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
+ * {{{cartao_embossing_response_description}}}
  **/
-@ApiModel(description = "Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica")
+@ApiModel(description = "{{{cartao_embossing_response_description}}}")
 public class CartaoEmbossingResponse  {
   
   @SerializedName("flagVirtual")
@@ -34,9 +36,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+   * {{{cartao_embossing_response_flag_virtual_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual ")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_flag_virtual_value}}}")
   public Integer getFlagVirtual() {
     return flagVirtual;
   }
@@ -46,9 +48,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_embossing_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -58,9 +60,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_embossing_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -70,9 +72,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_embossing_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -82,9 +84,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+   * {{{cartao_embossing_response_id_bandeira_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_id_bandeira_value}}}")
   public Long getIdBandeira() {
     return idBandeira;
   }
@@ -94,9 +96,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+   * {{{cartao_embossing_response_id_tipo_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_id_tipo_cartao_value}}}")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -106,9 +108,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+   * {{{cartao_embossing_response_data_geracao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data de emiss\u00E3o do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_data_geracao_value}}}")
   public String getDataGeracao() {
     return dataGeracao;
   }
@@ -118,9 +120,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_embossing_response_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta a data de Validade do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -130,9 +132,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+   * {{{cartao_embossing_response_nome_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_nome_origem_comercial_value}}}")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -142,9 +144,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * Apresenta o CPF do Portador do Cart\u00E3o.
+   * {{{cartao_embossing_response_cpf_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o CPF do Portador do Cart\u00E3o.")
+  @ApiModelProperty(value = "{{{cartao_embossing_response_cpf_value}}}")
   public String getCpf() {
     return cpf;
   }
@@ -173,3 +175,5 @@ public class CartaoEmbossingResponse  {
     return sb.toString();
   }
 }
+
+

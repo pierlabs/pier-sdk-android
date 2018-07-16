@@ -1,14 +1,16 @@
 package br.com.conductor.pier.api.v2.model;
 
 
+
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
+
 /**
- * Objeto Response do tipo arquivo.
+ * {{{tipo_arquivo_response_description}}}
  **/
-@ApiModel(description = "Objeto Response do tipo arquivo.")
+@ApiModel(description = "{{{tipo_arquivo_response_description}}}")
 public class TipoArquivoResponse  {
   
   @SerializedName("id")
@@ -20,9 +22,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo
+   * {{{tipo_arquivo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +34,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * Nome do tipo do arquivo
+   * {{{tipo_arquivo_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do tipo do arquivo")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -44,9 +46,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo do arquivo
+   * {{{tipo_arquivo_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo do arquivo")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -68,3 +70,5 @@ public class TipoArquivoResponse  {
     return sb.toString();
   }
 }
+
+
