@@ -8,6 +8,8 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
+import br.com.conductor.pier.api.v2.model.TaxaJurosContaPersistValue;
+import br.com.conductor.pier.api.v2.model.TaxaJurosContaResponse;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorUpdateValue;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaResponse;
@@ -50,6 +52,71 @@ public class GlobaltagtransferenciabancariaApi {
     return basePath;
   }
 
+  
+  /**
+   * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param update update
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse  atualizarTaxasJurosContasUsingPUT (Long id, TaxaJurosContaPersistValue update) throws ApiException {
+    Object postBody = update;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarTaxasJurosContasUsingPUT");
+    }
+    
+    // verify the required parameter 'update' is set
+    if (update == null) {
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarTaxasJurosContasUsingPUT");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TaxaJurosContaResponse) ApiInvoker.deserialize(response, "", TaxaJurosContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
   
   /**
    * {{{conta_bancaria_resource_atualizar}}}
@@ -235,6 +302,73 @@ public class GlobaltagtransferenciabancariaApi {
   }
   
   /**
+   * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param numeroMesesCarencia numeroMesesCarencia
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse  consultarTaxasJurosContasUsingGET (Long id, Integer numeroMesesCarencia) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxasJurosContasUsingGET");
+    }
+    
+    // verify the required parameter 'numeroMesesCarencia' is set
+    if (numeroMesesCarencia == null) {
+       throw new ApiException(400, "Missing the required parameter 'numeroMesesCarencia' when calling consultarTaxasJurosContasUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroMesesCarencia", numeroMesesCarencia));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TaxaJurosContaResponse) ApiInvoker.deserialize(response, "", TaxaJurosContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
    * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_notes}}}
    * @param idTransferencia {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_param_id_transferencia}}}
@@ -299,12 +433,12 @@ public class GlobaltagtransferenciabancariaApi {
    * @param id {{{conta_bancaria_resource_consultar_param_id}}}
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse  consultarUsingGET12 (Long id) throws ApiException {
+  public ContaBancariaPortadorResponse  consultarUsingGET13 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
     }
     
 
@@ -360,17 +494,17 @@ public class GlobaltagtransferenciabancariaApi {
    * @param idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse  consultarUsingGET47 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse  consultarUsingGET48 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET47");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48");
     }
     
 
@@ -648,6 +782,71 @@ public class GlobaltagtransferenciabancariaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTransferenciaBancariaResponse) ApiInvoker.deserialize(response, "", PageTransferenciaBancariaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param persist persist
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse  salvarTaxasJurosContasUsingPOST (Long id, TaxaJurosContaPersistValue persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarTaxasJurosContasUsingPOST");
+    }
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarTaxasJurosContasUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TaxaJurosContaResponse) ApiInvoker.deserialize(response, "", TaxaJurosContaResponse.class);
       }
       else {
         return null;

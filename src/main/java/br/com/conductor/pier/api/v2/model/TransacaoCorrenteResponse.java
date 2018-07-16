@@ -50,6 +50,8 @@ public class TransacaoCorrenteResponse  {
   private Integer idGrupoMCC = null;
   @SerializedName("flagSolicitouContestacao")
   private Integer flagSolicitouContestacao = null;
+  @SerializedName("tipoTransacao")
+  private Integer tipoTransacao = null;
 
   
   /**
@@ -267,6 +269,18 @@ public class TransacaoCorrenteResponse  {
   }
 
   
+  /**
+   * {{{transacao_corrente_response_tipo_transacao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_corrente_response_tipo_transacao_value}}}")
+  public Integer getTipoTransacao() {
+    return tipoTransacao;
+  }
+  public void setTipoTransacao(Integer tipoTransacao) {
+    this.tipoTransacao = tipoTransacao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -291,6 +305,7 @@ public class TransacaoCorrenteResponse  {
     sb.append("  tipoEstabelecimento: ").append(tipoEstabelecimento).append("\n");
     sb.append("  idGrupoMCC: ").append(idGrupoMCC).append("\n");
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
+    sb.append("  tipoTransacao: ").append(tipoTransacao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

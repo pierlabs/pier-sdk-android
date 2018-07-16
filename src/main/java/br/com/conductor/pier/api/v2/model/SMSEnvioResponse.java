@@ -27,6 +27,8 @@ public class SMSEnvioResponse  {
   private Integer quantidadeTentativasEnvio = null;
   @SerializedName("dataInclusao")
   private String dataInclusao = null;
+  @SerializedName("cpf")
+  private String cpf = null;
 
   
   /**
@@ -113,6 +115,18 @@ public class SMSEnvioResponse  {
   }
 
   
+  /**
+   * {{{sms_envio_response_cpf_value}}}
+   **/
+  @ApiModelProperty(value = "{{{sms_envio_response_cpf_value}}}")
+  public String getCpf() {
+    return cpf;
+  }
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -126,6 +140,7 @@ public class SMSEnvioResponse  {
     sb.append("  conteudo: ").append(conteudo).append("\n");
     sb.append("  quantidadeTentativasEnvio: ").append(quantidadeTentativasEnvio).append("\n");
     sb.append("  dataInclusao: ").append(dataInclusao).append("\n");
+    sb.append("  cpf: ").append(cpf).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

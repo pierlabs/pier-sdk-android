@@ -43,6 +43,10 @@ public class JsonUtil {
       return new TypeToken<List<AcordoResponse>>(){}.getType();
     }
     
+    if ("AdesaoPagamentoSabadoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdesaoPagamentoSabadoResponse>>(){}.getType();
+    }
+    
     if ("AdicionalDetalheResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<AdicionalDetalheResponse>>(){}.getType();
     }
@@ -1503,6 +1507,18 @@ public class JsonUtil {
       return new TypeToken<List<TaxaAntecipacaoRequest>>(){}.getType();
     }
     
+    if ("TaxaJurosContaListaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TaxaJurosContaListaResponse>>(){}.getType();
+    }
+    
+    if ("TaxaJurosContaPersistValue".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TaxaJurosContaPersistValue>>(){}.getType();
+    }
+    
+    if ("TaxaJurosContaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TaxaJurosContaResponse>>(){}.getType();
+    }
+    
     if ("TaxasRefinanciamentoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TaxasRefinanciamentoResponse>>(){}.getType();
     }
@@ -1819,6 +1835,10 @@ public class JsonUtil {
     
     if ("AcordoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<AcordoResponse>(){}.getType();
+    }
+    
+    if ("AdesaoPagamentoSabadoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<AdesaoPagamentoSabadoResponse>(){}.getType();
     }
     
     if ("AdicionalDetalheResponse".equalsIgnoreCase(className)) {
@@ -3279,6 +3299,18 @@ public class JsonUtil {
     
     if ("TaxaAntecipacaoRequest".equalsIgnoreCase(className)) {
       return new TypeToken<TaxaAntecipacaoRequest>(){}.getType();
+    }
+    
+    if ("TaxaJurosContaListaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TaxaJurosContaListaResponse>(){}.getType();
+    }
+    
+    if ("TaxaJurosContaPersistValue".equalsIgnoreCase(className)) {
+      return new TypeToken<TaxaJurosContaPersistValue>(){}.getType();
+    }
+    
+    if ("TaxaJurosContaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<TaxaJurosContaResponse>(){}.getType();
     }
     
     if ("TaxasRefinanciamentoResponse".equalsIgnoreCase(className)) {
