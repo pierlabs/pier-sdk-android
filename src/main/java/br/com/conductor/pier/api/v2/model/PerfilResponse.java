@@ -1,16 +1,11 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-
-/**
- * {{{perfil_response_object_description}}}
- **/
-@ApiModel(description = "{{{perfil_response_object_description}}}")
+@ApiModel(description = "")
 public class PerfilResponse  {
   
   @SerializedName("id")
@@ -53,5 +48,3 @@ public class PerfilResponse  {
     return sb.toString();
   }
 }
-
-

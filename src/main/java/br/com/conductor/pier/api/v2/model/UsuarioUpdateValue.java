@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -42,7 +40,7 @@ public class UsuarioUpdateValue  {
   /**
    * {{{usuario_update_login_value}}}
    **/
-  @ApiModelProperty(value = "{{{usuario_update_login_value}}}")
+  @ApiModelProperty(required = true, value = "{{{usuario_update_login_value}}}")
   public String getLogin() {
     return login;
   }
@@ -66,7 +64,7 @@ public class UsuarioUpdateValue  {
   /**
    * {{{usuario_update_email_value}}}
    **/
-  @ApiModelProperty(value = "{{{usuario_update_email_value}}}")
+  @ApiModelProperty(required = true, value = "{{{usuario_update_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -115,5 +113,3 @@ public class UsuarioUpdateValue  {
     return sb.toString();
   }
 }
-
-

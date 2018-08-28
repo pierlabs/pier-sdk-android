@@ -19,6 +19,8 @@ import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
+import br.com.conductor.pier.api.v2.model.ContaMultiAppResponse;
+import br.com.conductor.pier.api.v2.model.ContaMultiAppPersistValue;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
@@ -36,14 +38,12 @@ import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagcontaApi {
   String basePath = "http://localhost/";
@@ -73,12 +73,11 @@ public class GlobaltagcontaApi {
    * @param idTipoAjuste {{{ajuste_persist_id_tipo_ajuste_value}}}
    * @param dataAjuste {{{ajuste_persist_data_ajuste_value}}}
    * @param valorAjuste {{{ajuste_persist_valor_ajuste_value}}}
-   * @param authorization Authorization
    * @param identificadorExterno {{{ajuste_persist_identificador_externo_value}}}
    * @param idTransacaoOriginal {{{ajuste_persist_id_transacao_original}}}
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse  ajustarContaUsingPOST1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String authorization, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
+  public AjusteFinanceiroResponse  ajustarContaUsingPOST1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -125,8 +124,6 @@ public class GlobaltagcontaApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -163,10 +160,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_alterar_produto_notes}}}
    * @param id {{{conta_resource_alterar_produto_param_id}}}
    * @param request request
-   * @param authorization Authorization
    * @return String
    */
-  public String  alterarProdutoUsingPOST (Long id, AlterarProdutoRequest request, String authorization) throws ApiException {
+  public String  alterarProdutoUsingPOST (Long id, AlterarProdutoRequest request) throws ApiException {
     Object postBody = request;
     
     // verify the required parameter 'id' is set
@@ -192,8 +188,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -231,10 +225,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_alterar_titular_notes}}}
    * @param id {{{conta_resource_alterar_titular_param_id_conta}}}
    * @param idPessoa {{{conta_resource_alterar_titular_param_id_pessoa}}}
-   * @param authorization Authorization
    * @return ContaResponse
    */
-  public ContaResponse  alterarTitularUsingPOST (Long id, Long idPessoa, String authorization) throws ApiException {
+  public ContaResponse  alterarTitularUsingPOST (Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -262,8 +255,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_pessoa", idPessoa));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -301,10 +292,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_alterar_vencimento_notes}}}
    * @param id {{{conta_resource_alterar_vencimento_param_id}}}
    * @param novoDiaVencimento {{{conta_resource_alterar_vencimento_param_novo_dia_vencimento}}}
-   * @param authorization Authorization
    * @return ContaResponse
    */
-  public ContaResponse  alterarVencimentoUsingPUT (Long id, Integer novoDiaVencimento, String authorization) throws ApiException {
+  public ContaResponse  alterarVencimentoUsingPUT (Long id, Integer novoDiaVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -332,8 +322,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "novo_dia_vencimento", novoDiaVencimento));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -371,7 +359,6 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_ativar_anuidade_notes}}}
    * @param id {{{conta_resource_ativar_anuidade_param_id}}}
    * @param idAnuidade {{{anuidade_request_id_anuidade_value}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -381,7 +368,7 @@ public class GlobaltagcontaApi {
    * @param idOrigemComercial {{{anuidade_request_id_origem_comercial_value}}}
    * @return Object
    */
-  public Object  ativarAnuidadeUsingPOST (Long id, Long idAnuidade, String authorization, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object  ativarAnuidadeUsingPOST (Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -424,8 +411,6 @@ public class GlobaltagcontaApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -461,10 +446,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_ativar_envio_fatura_email}}}
    * {{{conta_resource_ativar_envio_fatura_email_notes}}}
    * @param id {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  ativarEnvioFaturaEmailUsingPOST (Long id, String authorization) throws ApiException {
+  public Object  ativarEnvioFaturaEmailUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -485,8 +469,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -524,10 +506,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_bloquear_notes}}}
    * @param id {{{conta_resource_bloquear_param_id}}}
    * @param idStatus {{{conta_resource_bloquear_param_id_status}}}
-   * @param authorization Authorization
    * @return ContaResponse
    */
-  public ContaResponse  bloquearUsingPOST1 (Long id, Long idStatus, String authorization) throws ApiException {
+  public ContaResponse  bloquearUsingPOST1 (Long id, Long idStatus) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -555,8 +536,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status", idStatus));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -655,10 +634,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_cancelar_notes}}}
    * @param id {{{conta_resource_cancelar_param_id}}}
    * @param idStatus {{{conta_resource_cancelar_param_id_status}}}
-   * @param authorization Authorization
    * @return ContaResponse
    */
-  public ContaResponse  cancelarUsingPOST1 (Long id, Long idStatus, String authorization) throws ApiException {
+  public ContaResponse  cancelarUsingPOST1 (Long id, Long idStatus) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -686,8 +664,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status", idStatus));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -724,10 +700,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_consultar_beneficio_pagamento_atraso}}}
    * {{{conta_resource_consultar_beneficio_pagamento_atraso_notes}}}
    * @param id {{{conta_resource_consultar_beneficio_pagamento_atraso_param_id}}}
-   * @param authorization Authorization
    * @return BeneficioPagamentoAtrasoResponse
    */
-  public BeneficioPagamentoAtrasoResponse  consultarBeneficioPagamentoAtrasoUsingGET (Long id, String authorization) throws ApiException {
+  public BeneficioPagamentoAtrasoResponse  consultarBeneficioPagamentoAtrasoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -748,8 +723,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -786,10 +759,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_consultar_boleto_emitido}}}
    * {{{conta_resource_consultar_boleto_emitido_notes}}}
    * @param id {{{conta_resource_consultar_boleto_emitido_param_id}}}
-   * @param authorization Authorization
    * @return BoletoResponse
    */
-  public BoletoResponse  consultarBoletoEmitidoUsingGET (Long id, String authorization) throws ApiException {
+  public BoletoResponse  consultarBoletoEmitidoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -810,8 +782,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -848,7 +818,6 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_consultar_divida_atualizada_cliente}}}
    * {{{conta_resource_consultar_divida_atualizada_cliente_notes}}}
    * @param id {{{conta_resource_consultar_divida_atualizada_cliente_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -856,7 +825,7 @@ public class GlobaltagcontaApi {
    * @param idEscritorioCobranca {{{divida_cliente_request_id_escritorio_cobranca_value}}}
    * @return DividaClienteResponse
    */
-  public DividaClienteResponse  consultarDividaAtualizadaClienteUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
+  public DividaClienteResponse  consultarDividaAtualizadaClienteUsingGET (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -887,8 +856,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idEscritorioCobranca", idEscritorioCobranca));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -925,13 +892,12 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_consultar_taxas_tarifas}}}
    * {{{conta_resource_consultar_taxas_tarifas_notes}}}
    * @param id {{{conta_resource_consultar_taxas_tarifas_param_id_conta}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageTaxasRefinanciamentoResponse
    */
-  public PageTaxasRefinanciamentoResponse  consultarTaxasTarifasUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTaxasRefinanciamentoResponse  consultarTaxasTarifasUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -958,8 +924,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1065,15 +1029,14 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_consultar}}}
    * {{{conta_resource_consultar_notes}}}
    * @param id {{{conta_resource_consultar_param_id}}}
-   * @param authorization Authorization
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse  consultarUsingGET14 (Long id, String authorization) throws ApiException {
+  public ContaDetalheResponse  consultarUsingGET16 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
     }
     
 
@@ -1089,8 +1052,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1130,17 +1091,17 @@ public class GlobaltagcontaApi {
    * @param idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse  consultarUsingGET49 (Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse  consultarUsingGET51 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET49");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET51");
     }
     
 
@@ -1189,13 +1150,71 @@ public class GlobaltagcontaApi {
   }
   
   /**
+   * {{{conta_resource_cadastrar_conta_multiapp}}}
+   * {{{conta_resource_cadastrar_conta_multiapp_notes}}}
+   * @param contaMultiAppPersist contaMultiAppPersist
+   * @return ContaMultiAppResponse
+   */
+  public ContaMultiAppResponse  criarContasMultiAppUsingPOST (ContaMultiAppPersistValue contaMultiAppPersist) throws ApiException {
+    Object postBody = contaMultiAppPersist;
+    
+    // verify the required parameter 'contaMultiAppPersist' is set
+    if (contaMultiAppPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'contaMultiAppPersist' when calling criarContasMultiAppUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/cadastrar-conta-multiapp".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ContaMultiAppResponse) ApiInvoker.deserialize(response, "", ContaMultiAppResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{conta_resource_desativar_envio_fatura_email}}}
    * {{{conta_resource_desativar_envio_fatura_email_notes}}}
    * @param id {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  desativarEnvioFaturaEmailUsingPOST (Long id, String authorization) throws ApiException {
+  public Object  desativarEnvioFaturaEmailUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1216,8 +1235,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1256,10 +1273,9 @@ public class GlobaltagcontaApi {
    * @param id {{{conta_resource_gerar_boleto_recarga_param_id}}}
    * @param valor {{{boleto_recarga_request_valor_value}}}
    * @param dataVencimento {{{boleto_recarga_request_data_vencimento_value}}}
-   * @param authorization Authorization
    * @return BoletoResponse
    */
-  public BoletoResponse  gerarBoletoRecargaUsingPOST (Long id, BigDecimal valor, String dataVencimento, String authorization) throws ApiException {
+  public BoletoResponse  gerarBoletoRecargaUsingPOST (Long id, BigDecimal valor, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1294,8 +1310,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1333,10 +1347,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_gerar_cartao_embossing_notes}}}
    * @param id {{{conta_resource_gerar_cartao_embossing_param_id}}}
    * @param cartaoEmbossingRequest cartaoEmbossingRequest
-   * @param authorization Authorization
    * @return CartaoEmbossingResponse
    */
-  public CartaoEmbossingResponse  gerarCartaoEmbossingUsingPOST (Long id, CartaoEmbossingRequest cartaoEmbossingRequest, String authorization) throws ApiException {
+  public CartaoEmbossingResponse  gerarCartaoEmbossingUsingPOST (Long id, CartaoEmbossingRequest cartaoEmbossingRequest) throws ApiException {
     Object postBody = cartaoEmbossingRequest;
     
     // verify the required parameter 'id' is set
@@ -1362,8 +1375,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1400,10 +1411,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_gerar_cartao_provisorio}}}
    * {{{conta_resource_gerar_cartao_provisorio_notes}}}
    * @param id {{{conta_resource_gerar_cartao_provisorio_param_id_conta}}}
-   * @param authorization Authorization
    * @return CartaoImpressaoProvisorioResponse
    */
-  public CartaoImpressaoProvisorioResponse  gerarCartaoProvisorioUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoImpressaoProvisorioResponse  gerarCartaoProvisorioUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1424,8 +1434,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1463,11 +1471,10 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_gerar_cartao_notes}}}
    * @param id {{{conta_resource_gerar_cartao_param_id}}}
    * @param idPessoa {{{conta_resource_gerar_cartao_param_id_pessoa}}}
-   * @param authorization Authorization
    * @param idTipoPlastico {{{conta_resource_gerar_cartao_param_id_tipo_plastico}}}
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse  gerarCartaoUsingPOST (Long id, Long idPessoa, String authorization, Long idTipoPlastico) throws ApiException {
+  public CartaoImpressaoResponse  gerarCartaoUsingPOST (Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1495,8 +1502,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_tipo_plastico", idTipoPlastico));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1534,10 +1539,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_gerar_cartao_virtual_notes}}}
    * @param id {{{conta_resource_gerar_cartao_virtual_param_id}}}
    * @param dataValidade {{{conta_resource_gerar_cartao_virtual_param_data_validade}}}
-   * @param authorization Authorization
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse  gerarCartaoVirtualUsingPOST (Long id, String dataValidade, String authorization) throws ApiException {
+  public CartaoImpressaoResponse  gerarCartaoVirtualUsingPOST (Long id, String dataValidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1565,8 +1569,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataValidade", dataValidade));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1603,13 +1605,12 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_listar_historico_alteracoes_limites}}}
    * {{{conta_resource_listar_historico_alteracoes_limites_notes}}}
    * @param id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageHistoricoEventosResponse
    */
-  public PageHistoricoEventosResponse  listarHistoricoAlteracoesLimitesUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoEventosResponse  listarHistoricoAlteracoesLimitesUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1636,8 +1637,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1674,13 +1673,12 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_listar_historico_assessoria}}}
    * {{{conta_resource_listar_historico_assessoria_notes}}}
    * @param id {{{conta_resource_listar_historico_assessoria_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageHistoricoAssessoriaResponse
    */
-  public PageHistoricoAssessoriaResponse  listarHistoricoAssessoriaUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoAssessoriaResponse  listarHistoricoAssessoriaUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1707,8 +1705,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1745,13 +1741,12 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_listar_historico_atrasos_faturas}}}
    * {{{conta_resource_listar_historico_atrasos_faturas_notes}}}
    * @param id {{{conta_resource_listar_historico_atrasos_faturas_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageHistoricoAtrasoFaturaResponse
    */
-  public PageHistoricoAtrasoFaturaResponse  listarHistoricoAtrasosFaturasUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoAtrasoFaturaResponse  listarHistoricoAtrasosFaturasUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1778,8 +1773,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1972,7 +1965,6 @@ public class GlobaltagcontaApi {
   /**
    * {{{conta_resource_listar}}}
    * {{{conta_resource_listar_notes}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -1987,7 +1979,7 @@ public class GlobaltagcontaApi {
    * @param dataUltimaAlteracaoVencimento {{{conta_request_data_ultima_alteracao_vencimento_value}}}
    * @return PageContaResponse
    */
-  public PageContaResponse  listarUsingGET18 (String authorization, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse  listarUsingGET19 (List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2027,8 +2019,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataUltimaAlteracaoVencimento", dataUltimaAlteracaoVencimento));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -2074,12 +2064,12 @@ public class GlobaltagcontaApi {
    * @param idTipoTransacao {{{transacoes_processadas_request_tipo_transacao}}}
    * @return PageTransacaoProcessadaNaoProcessadaResponse
    */
-  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET58 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao) throws ApiException {
+  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET61 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET58");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET61");
     }
     
 
@@ -2155,12 +2145,12 @@ public class GlobaltagcontaApi {
    * @param dataTransferencia {{{transferencia_request_data_transferencia_value}}}
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse  listarUsingGET60 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse  listarUsingGET63 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET60");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET63");
     }
     
 
@@ -2228,10 +2218,9 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_reativar}}}
    * {{{conta_resource_reativar_notes}}}
    * @param id {{{conta_resource_reativar_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  reativarUsingPOST1 (Long id, String authorization) throws ApiException {
+  public Object  reativarUsingPOST1 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -2252,8 +2241,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -2290,15 +2277,14 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_salvar}}}
    * {{{conta_resource_salvar_notes}}}
    * @param contaPersist contaPersist
-   * @param authorization Authorization
    * @return ContaResponse
    */
-  public ContaResponse  salvarUsingPOST8 (ContaPersistValue contaPersist, String authorization) throws ApiException {
+  public ContaResponse  salvarUsingPOST9 (ContaPersistValue contaPersist) throws ApiException {
     Object postBody = contaPersist;
     
     // verify the required parameter 'contaPersist' is set
     if (contaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvarUsingPOST8");
+       throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvarUsingPOST9");
     }
     
 
@@ -2314,8 +2300,6 @@ public class GlobaltagcontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -2417,13 +2401,12 @@ public class GlobaltagcontaApi {
    * {{{conta_resource_transacoes}}}
    * {{{conta_resource_transacoes_notes}}}
    * @param id {{{conta_resource_transacoes_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageTransacaoResponse
    */
-  public PageTransacaoResponse  transacoesUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTransacaoResponse  transacoesUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -2450,8 +2433,6 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -2560,4 +2541,3 @@ public class GlobaltagcontaApi {
   }
   
 }
-

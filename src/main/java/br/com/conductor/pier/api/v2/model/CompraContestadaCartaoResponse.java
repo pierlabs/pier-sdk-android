@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -15,6 +13,8 @@ public class CompraContestadaCartaoResponse  {
   
   @SerializedName("idCartao")
   private Long idCartao = null;
+  @SerializedName("agingCompras")
+  private Long agingCompras = null;
   @SerializedName("agingContestacao")
   private Long agingContestacao = null;
   @SerializedName("cartao")
@@ -23,6 +23,8 @@ public class CompraContestadaCartaoResponse  {
   private String nome = null;
   @SerializedName("bandeira")
   private String bandeira = null;
+  @SerializedName("valorCompra")
+  private String valorCompra = null;
 
   
   /**
@@ -34,6 +36,18 @@ public class CompraContestadaCartaoResponse  {
   }
   public void setIdCartao(Long idCartao) {
     this.idCartao = idCartao;
+  }
+
+  
+  /**
+   * {{{compra_contestada_cartao_response_aging_compras_value}}}
+   **/
+  @ApiModelProperty(value = "{{{compra_contestada_cartao_response_aging_compras_value}}}")
+  public Long getAgingCompras() {
+    return agingCompras;
+  }
+  public void setAgingCompras(Long agingCompras) {
+    this.agingCompras = agingCompras;
   }
 
   
@@ -85,6 +99,18 @@ public class CompraContestadaCartaoResponse  {
   }
 
   
+  /**
+   * {{{compra_contestada_cartao_response_valor_compra_value}}}
+   **/
+  @ApiModelProperty(value = "{{{compra_contestada_cartao_response_valor_compra_value}}}")
+  public String getValorCompra() {
+    return valorCompra;
+  }
+  public void setValorCompra(String valorCompra) {
+    this.valorCompra = valorCompra;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -92,13 +118,13 @@ public class CompraContestadaCartaoResponse  {
     sb.append("class CompraContestadaCartaoResponse {\n");
     
     sb.append("  idCartao: ").append(idCartao).append("\n");
+    sb.append("  agingCompras: ").append(agingCompras).append("\n");
     sb.append("  agingContestacao: ").append(agingContestacao).append("\n");
     sb.append("  cartao: ").append(cartao).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  bandeira: ").append(bandeira).append("\n");
+    sb.append("  valorCompra: ").append(valorCompra).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-

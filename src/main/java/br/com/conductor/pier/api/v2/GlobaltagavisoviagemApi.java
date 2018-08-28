@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.AvisoViagemResponse;
 import br.com.conductor.pier.api.v2.model.PageAvisoViagemResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagavisoviagemApi {
   String basePath = "http://localhost/";
@@ -47,12 +45,12 @@ public class GlobaltagavisoviagemApi {
    * @param id {{{aviso_viagem_resource_consultar_param_id}}}
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse  consultarUsingGET7 (Long id) throws ApiException {
+  public AvisoViagemResponse  consultarUsingGET8 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
     }
     
 
@@ -231,7 +229,7 @@ public class GlobaltagavisoviagemApi {
    * @param flagAtivo {{{aviso_viagem_request_flag_ativo_value}}}
    * @return PageAvisoViagemResponse
    */
-  public PageAvisoViagemResponse  listarUsingGET8 (List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
+  public PageAvisoViagemResponse  listarUsingGET9 (List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -381,4 +379,3 @@ public class GlobaltagavisoviagemApi {
   }
   
 }
-

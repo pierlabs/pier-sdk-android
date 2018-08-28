@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.Date;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -38,6 +36,8 @@ public class CompraContestadaTransacaoResponse  {
   private String dataEnvioCB = null;
   @SerializedName("dataTransacao")
   private Date dataTransacao = null;
+  @SerializedName("historico")
+  private String historico = null;
   @SerializedName("idCompraContestada")
   private Long idCompraContestada = null;
   @SerializedName("internacional")
@@ -209,6 +209,17 @@ public class CompraContestadaTransacaoResponse  {
   }
   public void setDataTransacao(Date dataTransacao) {
     this.dataTransacao = dataTransacao;
+  }
+
+  
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public String getHistorico() {
+    return historico;
+  }
+  public void setHistorico(String historico) {
+    this.historico = historico;
   }
 
   
@@ -450,6 +461,7 @@ public class CompraContestadaTransacaoResponse  {
     sb.append("  dataContestacao: ").append(dataContestacao).append("\n");
     sb.append("  dataEnvioCB: ").append(dataEnvioCB).append("\n");
     sb.append("  dataTransacao: ").append(dataTransacao).append("\n");
+    sb.append("  historico: ").append(historico).append("\n");
     sb.append("  idCompraContestada: ").append(idCompraContestada).append("\n");
     sb.append("  internacional: ").append(internacional).append("\n");
     sb.append("  mcc: ").append(mcc).append("\n");
@@ -474,5 +486,3 @@ public class CompraContestadaTransacaoResponse  {
     return sb.toString();
   }
 }
-
-

@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import br.com.conductor.pier.api.v2.model.ConsultaCadastroEstabelecimentoDTO;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -659,5 +657,3 @@ public class EstabelecimentoResponse  {
     return sb.toString();
   }
 }
-
-

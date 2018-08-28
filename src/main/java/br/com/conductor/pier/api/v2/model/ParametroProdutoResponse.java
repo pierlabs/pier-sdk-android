@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -14,6 +12,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "{{{parametro_produto_response_description}}}")
 public class ParametroProdutoResponse  {
   
+  @SerializedName("id")
+  private Long id = null;
   @SerializedName("idProduto")
   private Long idProduto = null;
   public enum TipoOrigemTransacaoEnum {
@@ -27,6 +27,18 @@ public class ParametroProdutoResponse  {
   private BigDecimal valorParametro = null;
   @SerializedName("dataValidade")
   private String dataValidade = null;
+
+  
+  /**
+   * {{{parametro_produto_response_id_value}}}
+   **/
+  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_id_value}}}")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   
   /**
@@ -95,6 +107,7 @@ public class ParametroProdutoResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ParametroProdutoResponse {\n");
     
+    sb.append("  id: ").append(id).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  tipoOrigemTransacao: ").append(tipoOrigemTransacao).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
@@ -104,5 +117,3 @@ public class ParametroProdutoResponse  {
     return sb.toString();
   }
 }
-
-

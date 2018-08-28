@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -18,12 +16,12 @@ public class TemplateNotificacaoDetalheResponse  {
   @SerializedName("idConfiguracaoEmail")
   private Long idConfiguracaoEmail = null;
   public enum TipoLayoutEnum {
-     RECUPERAR_SENHA,  FATURA_POR_EMAIL,  VALIDAR_DISPOSITIVO,  NOTIFICACAO_EMAIL, 
+     RECUPERAR_SENHA,  FATURA_POR_EMAIL,  VALIDAR_DISPOSITIVO,  NOTIFICACAO_EMAIL,  OTP_3D_SECURE, 
   };
   @SerializedName("tipoLayout")
   private TipoLayoutEnum tipoLayout = null;
   public enum TipoNotificacaoEnum {
-     SMS,  PUSH_APNS,  PUSH_FCM,  PUSH_GCM,  EMAIL, 
+     SMS,  PUSH_APNS,  PUSH_FCM,  PUSH_GCM,  WEBHOOK,  EMAIL, 
   };
   @SerializedName("tipoNotificacao")
   private TipoNotificacaoEnum tipoNotificacao = null;
@@ -181,5 +179,3 @@ public class TemplateNotificacaoDetalheResponse  {
     return sb.toString();
   }
 }
-
-

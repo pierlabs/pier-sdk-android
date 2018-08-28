@@ -1,12 +1,10 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.NotificacaoPushResponseValue;
+import br.com.conductor.pier.api.v2.model.NotificacaoPushResponse;
 import java.util.*;
-
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -16,7 +14,7 @@ import com.google.gson.annotations.SerializedName;
 public class PagePushResponse  {
   
   @SerializedName("content")
-  private List<NotificacaoPushResponseValue> content = null;
+  private List<NotificacaoPushResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -48,10 +46,10 @@ public class PagePushResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<NotificacaoPushResponseValue> getContent() {
+  public List<NotificacaoPushResponse> getContent() {
     return content;
   }
-  public void setContent(List<NotificacaoPushResponseValue> content) {
+  public void setContent(List<NotificacaoPushResponse> content) {
     this.content = content;
   }
 
@@ -223,5 +221,3 @@ public class PagePushResponse  {
     return sb.toString();
   }
 }
-
-

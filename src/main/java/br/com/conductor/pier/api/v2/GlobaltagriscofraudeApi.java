@@ -12,14 +12,12 @@ import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
 import br.com.conductor.pier.api.v2.model.TipoResolucaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosPortadorRequest;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagriscofraudeApi {
   String basePath = "http://localhost/";
@@ -48,12 +46,12 @@ public class GlobaltagriscofraudeApi {
    * @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse  consultarUsingGET35 (Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse  consultarUsingGET37 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
     }
     
 
@@ -338,4 +336,3 @@ public class GlobaltagriscofraudeApi {
   }
   
 }
-

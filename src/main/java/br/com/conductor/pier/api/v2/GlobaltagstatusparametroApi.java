@@ -17,14 +17,12 @@ import br.com.conductor.pier.api.v2.model.PageStatusCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusImpressaoResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagstatusparametroApi {
   String basePath = "http://localhost/";
@@ -171,12 +169,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_conta_resource_consultar_param_id}}}
    * @return StatusContaResponse
    */
-  public StatusContaResponse  consultarUsingGET36 (Long id) throws ApiException {
+  public StatusContaResponse  consultarUsingGET38 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
     }
     
 
@@ -230,12 +228,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_impressao_resource_consultar_param_id}}}
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse  consultarUsingGET37 (Long id) throws ApiException {
+  public StatusImpressaoResponse  consultarUsingGET39 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
     }
     
 
@@ -503,7 +501,7 @@ public class GlobaltagstatusparametroApi {
    * @param permiteAtribuirComoCancelamento {{{status_conta_request_permite_atribuir_como_cancelamento_value}}}
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse  listarUsingGET47 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+  public PageStatusContaResponse  listarUsingGET49 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
     Object postBody = null;
     
 
@@ -589,7 +587,7 @@ public class GlobaltagstatusparametroApi {
    * @param nome {{{status_impressao_request_nome_value}}}
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse  listarUsingGET48 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse  listarUsingGET50 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -648,4 +646,3 @@ public class GlobaltagstatusparametroApi {
   }
   
 }
-

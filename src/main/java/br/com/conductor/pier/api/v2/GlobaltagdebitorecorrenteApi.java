@@ -14,14 +14,12 @@ import br.com.conductor.pier.api.v2.model.PageContaDebitoRecorrenteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoDebitoRecorrenteResponse;
 import java.math.BigDecimal;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagdebitorecorrenteApi {
   String basePath = "http://localhost/";
@@ -182,12 +180,12 @@ public class GlobaltagdebitorecorrenteApi {
    * @param dataHoraUltimoPagamento {{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}}
    * @return PageContaDebitoRecorrenteResponse
    */
-  public PageContaDebitoRecorrenteResponse  listarUsingGET17 (Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
+  public PageContaDebitoRecorrenteResponse  listarUsingGET18 (Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET17");
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET18");
     }
     
 
@@ -265,7 +263,7 @@ public class GlobaltagdebitorecorrenteApi {
    * @param flagAtivo {{{tipo_debito_recorrente_request_flag_ativo_value}}}
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse  listarUsingGET53 (List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse  listarUsingGET56 (List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -328,4 +326,3 @@ public class GlobaltagdebitorecorrenteApi {
   }
   
 }
-

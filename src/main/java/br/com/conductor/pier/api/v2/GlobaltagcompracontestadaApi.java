@@ -8,8 +8,9 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
+import br.com.conductor.pier.api.v2.model.ContestarCompraRequest;
 import br.com.conductor.pier.api.v2.model.PageGrupoChargebackResponse;
-
+import java.math.BigDecimal;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -17,7 +18,6 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagcompracontestadaApi {
   String basePath = "http://localhost/";
@@ -39,6 +39,72 @@ public class GlobaltagcompracontestadaApi {
     return basePath;
   }
 
+  
+  /**
+   * {{{compra_contestada_transacoes_resource_contestar}}}
+   * {{{compra_contestada_transacoes_resource_contestar_notes}}}
+   * @param idCartao idCartao
+   * @param request request
+   * @param login login
+   * @return Object
+   */
+  public Object  contestarUsingPOST (Long idCartao, ContestarCompraRequest request, String login) throws ApiException {
+    Object postBody = login;
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling contestarUsingPOST");
+    }
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling contestarUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes-com-contestacoes/{idCartao}/contestar".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
   
   /**
    * {{{compra_contestada_detalhe_cartao_resource_listar}}}
@@ -105,9 +171,25 @@ public class GlobaltagcompracontestadaApi {
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
+   * @param agingContestacao 
+   * @param nome 
+   * @param bandeira 
+   * @param cartao 
+   * @param cpf 
+   * @param conta 
+   * @param statusCartao 
+   * @param statusContestacao 
+   * @param dataContestacao 
+   * @param dataAlteracao 
+   * @param dataReapresentacao 
+   * @param diasContestacao 
+   * @param diasCompra 
+   * @param modoEntrada 
+   * @param motivo 
+   * @param valorCompra 
    * @return PageGrupoChargebackResponse
    */
-  public PageGrupoChargebackResponse  listarUsingGET12 (List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageGrupoChargebackResponse  listarUsingGET13 (List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, Long statusCartao, Long statusContestacao, String dataContestacao, String dataAlteracao, String dataReapresentacao, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
     Object postBody = null;
     
 
@@ -127,6 +209,38 @@ public class GlobaltagcompracontestadaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "agingContestacao", agingContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "bandeira", bandeira));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cartao", cartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "conta", conta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "statusCartao", statusCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "statusContestacao", statusContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacao", dataContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracao", dataAlteracao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacao", dataReapresentacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "diasContestacao", diasContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "diasCompra", diasCompra));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "modoEntrada", modoEntrada));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "motivo", motivo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "valorCompra", valorCompra));
     
 
     
@@ -168,9 +282,25 @@ public class GlobaltagcompracontestadaApi {
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
+   * @param agingContestacao 
+   * @param nome 
+   * @param bandeira 
+   * @param cartao 
+   * @param cpf 
+   * @param conta 
+   * @param statusCartao 
+   * @param statusContestacao 
+   * @param dataContestacao 
+   * @param dataAlteracao 
+   * @param dataReapresentacao 
+   * @param diasContestacao 
+   * @param diasCompra 
+   * @param modoEntrada 
+   * @param motivo 
+   * @param valorCompra 
    * @return PageGrupoChargebackResponse
    */
-  public PageGrupoChargebackResponse  transacaoUsingGET (Long idCartao, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageGrupoChargebackResponse  transacaoUsingGET (Long idCartao, List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, Long statusCartao, Long statusContestacao, String dataContestacao, String dataAlteracao, String dataReapresentacao, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idCartao' is set
@@ -195,6 +325,38 @@ public class GlobaltagcompracontestadaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "agingContestacao", agingContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "bandeira", bandeira));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cartao", cartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "conta", conta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "statusCartao", statusCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "statusContestacao", statusContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacao", dataContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracao", dataAlteracao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacao", dataReapresentacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "diasContestacao", diasContestacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "diasCompra", diasCompra));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "modoEntrada", modoEntrada));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "motivo", motivo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "valorCompra", valorCompra));
     
 
     
@@ -230,4 +392,3 @@ public class GlobaltagcompracontestadaApi {
   }
   
 }
-

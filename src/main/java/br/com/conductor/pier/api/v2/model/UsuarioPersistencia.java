@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -44,7 +42,7 @@ public class UsuarioPersistencia  {
   /**
    * {{{usuario_persistencia_login_descricao}}}
    **/
-  @ApiModelProperty(value = "{{{usuario_persistencia_login_descricao}}}")
+  @ApiModelProperty(required = true, value = "{{{usuario_persistencia_login_descricao}}}")
   public String getLogin() {
     return login;
   }
@@ -68,7 +66,7 @@ public class UsuarioPersistencia  {
   /**
    * {{{usuario_persistencia_email_descricao}}}
    **/
-  @ApiModelProperty(value = "{{{usuario_persistencia_email_descricao}}}")
+  @ApiModelProperty(required = true, value = "{{{usuario_persistencia_email_descricao}}}")
   public String getEmail() {
     return email;
   }
@@ -80,7 +78,7 @@ public class UsuarioPersistencia  {
   /**
    * {{{usuario_persistencia_senha_descricao}}}
    **/
-  @ApiModelProperty(value = "{{{usuario_persistencia_senha_descricao}}}")
+  @ApiModelProperty(required = true, value = "{{{usuario_persistencia_senha_descricao}}}")
   public String getSenha() {
     return senha;
   }
@@ -130,5 +128,3 @@ public class UsuarioPersistencia  {
     return sb.toString();
   }
 }
-
-

@@ -15,14 +15,12 @@ import br.com.conductor.pier.api.v2.model.PageCompraResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaLoteResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagantecipacaoApi {
   String basePath = "http://localhost/";
@@ -332,12 +330,12 @@ public class GlobaltagantecipacaoApi {
    * @param tipoOrigemTransacao {{{compra_d_t_o_tipo_origem_transacao_value}}}
    * @return PageCompraResponse
    */
-  public PageCompraResponse  listarUsingGET13 (Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
+  public PageCompraResponse  listarUsingGET14 (Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idConta' is set
     if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET13");
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET14");
     }
     
 
@@ -536,4 +534,3 @@ public class GlobaltagantecipacaoApi {
   }
   
 }
-

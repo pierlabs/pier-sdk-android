@@ -13,14 +13,12 @@ import br.com.conductor.pier.api.v2.model.PlataformaMobileUpdateValue;
 import br.com.conductor.pier.api.v2.model.PagePlataformaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PlataformaMobilePersistValue;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagplataformamobileApi {
   String basePath = "http://localhost/";
@@ -117,7 +115,7 @@ public class GlobaltagplataformamobileApi {
    * @param nome {{{plataforma_mobile_request_nome_value}}}
    * @return PagePlataformaMobileResponse
    */
-  public PagePlataformaMobileResponse  listarUsingGET40 (List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -179,12 +177,12 @@ public class GlobaltagplataformamobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse  salvarUsingPOST26 (PlataformaMobilePersistValue persist) throws ApiException {
+  public PlataformaMobileResponse  salvarUsingPOST27 (PlataformaMobilePersistValue persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST26");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST27");
     }
     
 
@@ -233,4 +231,3 @@ public class GlobaltagplataformamobileApi {
   }
   
 }
-

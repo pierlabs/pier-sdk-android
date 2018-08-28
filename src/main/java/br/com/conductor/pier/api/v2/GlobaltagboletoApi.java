@@ -14,14 +14,12 @@ import br.com.conductor.pier.api.v2.model.BoletoRequest;
 import br.com.conductor.pier.api.v2.model.PageBoletoListarResponse;
 import java.math.BigDecimal;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagboletoApi {
   String basePath = "http://localhost/";
@@ -48,14 +46,15 @@ public class GlobaltagboletoApi {
    * {{{boleto_resource_consultar}}}
    * {{{boleto_resource_consultar_notes}}}
    * @param id {{{boleto_resource_consultar_param_id}}}
+   * @param zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
    * @return BoletoResponse
    */
-  public BoletoResponse  consultarUsingGET34 (Long id) throws ApiException {
+  public BoletoResponse  consultarUsingGET36 (Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
     }
     
 
@@ -69,6 +68,8 @@ public class GlobaltagboletoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "zeraValorCodigoBarras", zeraValorCodigoBarras));
     
 
     
@@ -239,7 +240,7 @@ public class GlobaltagboletoApi {
    * @param idTipoBoleto {{{boleto_listar_request_id_tipo_boleto_value}}}
    * @return PageBoletoListarResponse
    */
-  public PageBoletoListarResponse  listarUsingGET45 (List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto) throws ApiException {
+  public PageBoletoListarResponse  listarUsingGET47 (List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto) throws ApiException {
     Object postBody = null;
     
 
@@ -420,4 +421,3 @@ public class GlobaltagboletoApi {
   }
   
 }
-

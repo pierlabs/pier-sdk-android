@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.LogAcessoUsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.LogAcessoUsuarioResposta;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltaglogApi {
   String basePath = "http://localhost/";
@@ -47,12 +45,12 @@ public class GlobaltaglogApi {
    * @param logAcessoUsuarioPersist logAcessoUsuarioPersist
    * @return LogAcessoUsuarioResposta
    */
-  public LogAcessoUsuarioResposta  salvarUsingPOST18 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
+  public LogAcessoUsuarioResposta  salvarUsingPOST19 (LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
     Object postBody = logAcessoUsuarioPersist;
     
     // verify the required parameter 'logAcessoUsuarioPersist' is set
     if (logAcessoUsuarioPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST18");
+       throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST19");
     }
     
 
@@ -101,4 +99,3 @@ public class GlobaltaglogApi {
   }
   
 }
-

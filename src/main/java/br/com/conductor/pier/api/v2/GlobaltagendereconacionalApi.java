@@ -10,14 +10,12 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagendereconacionalApi {
   String basePath = "http://localhost/";
@@ -102,4 +100,3 @@ public class GlobaltagendereconacionalApi {
   }
   
 }
-

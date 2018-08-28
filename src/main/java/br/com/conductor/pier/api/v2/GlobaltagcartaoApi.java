@@ -17,6 +17,8 @@ import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
+import br.com.conductor.pier.api.v2.model.VinculoCartoesResponse;
+import br.com.conductor.pier.api.v2.model.CartaoMultiAppPersistValue;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PageCartaoResponse;
@@ -24,14 +26,12 @@ import br.com.conductor.pier.api.v2.model.ValidaCVVRequest;
 import br.com.conductor.pier.api.v2.model.ValidaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ValidaSenhaCartaoResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagcartaoApi {
   String basePath = "http://localhost/";
@@ -59,10 +59,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_alterar_alterar_senha_notes}}}
    * @param id {{{cartao_resource_alterar_alterar_senha_param_id}}}
    * @param senha {{{cartao_resource_alterar_alterar_senha_param_nova_senha}}}
-   * @param authorization Authorization
    * @return String
    */
-  public String  alterarAlterarSenhaUsingPUT (Long id, String senha, String authorization) throws ApiException {
+  public String  alterarAlterarSenhaUsingPUT (Long id, String senha) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -88,8 +87,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
     headerParams.put("senha", ApiInvoker.parameterToString(senha));
     
@@ -129,10 +126,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_alterar_estagio_notes}}}
    * @param id {{{cartao_resource_alterar_estagio_param_id}}}
    * @param update {{{cartao_resource_alterar_estagio_param_id_estagio_cartao}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  alterarEstagioUsingPOST (Long id, EstagioCartaoUpdate update, String authorization) throws ApiException {
+  public CartaoResponse  alterarEstagioUsingPOST (Long id, EstagioCartaoUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
@@ -158,8 +154,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -197,10 +191,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_alterar_status_impressao_notes}}}
    * @param id {{{cartao_resource_alterar_status_impressao_param_id}}}
    * @param idStatusImpressao {{{cartao_resource_alterar_status_impressao_param_id_status_impressao}}}
-   * @param authorization Authorization
    * @return HistoricoImpressaoCartaoResponse
    */
-  public HistoricoImpressaoCartaoResponse  alterarStatusImpressaoUsingPUT (Long id, Long idStatusImpressao, String authorization) throws ApiException {
+  public HistoricoImpressaoCartaoResponse  alterarStatusImpressaoUsingPUT (Long id, Long idStatusImpressao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -228,8 +221,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status_impressao", idStatusImpressao));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -267,10 +258,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_atribuir_pessoa_notes}}}
    * @param id {{{cartao_resource_atribuir_pessoa_param_id_cartao}}}
    * @param idPessoa {{{cartao_resource_atribuir_pessoa_param_id_pessoa}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  atribuirPessoaUsingPUT (Long id, Long idPessoa, String authorization) throws ApiException {
+  public CartaoResponse  atribuirPessoaUsingPUT (Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -298,8 +288,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_pessoa", idPessoa));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -338,10 +326,9 @@ public class GlobaltagcartaoApi {
    * @param id {{{cartao_resource_bloquear_param_id}}}
    * @param idStatus {{{cartao_resource_bloquear_param_id_status}}}
    * @param observacao {{{cartao_resource_bloquear_param_observacao}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  bloquearUsingPOST (Long id, Long idStatus, String observacao, String authorization) throws ApiException {
+  public CartaoResponse  bloquearUsingPOST (Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -376,8 +363,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -415,10 +400,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_cadastrar_alterar_senha_notes}}}
    * @param id {{{cartao_resource_cadastrar_alterar_senha_param_id}}}
    * @param senha {{{cartao_resource_cadastrar_alterar_senha_param_nova_senha}}}
-   * @param authorization Authorization
    * @return String
    */
-  public String  cadastrarAlterarSenhaUsingPOST (Long id, String senha, String authorization) throws ApiException {
+  public String  cadastrarAlterarSenhaUsingPOST (Long id, String senha) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -444,8 +428,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
     headerParams.put("senha", ApiInvoker.parameterToString(senha));
     
@@ -486,10 +468,9 @@ public class GlobaltagcartaoApi {
    * @param id {{{cartao_resource_cancelar_param_id}}}
    * @param idStatus {{{cartao_resource_cancelar_param_id_status}}}
    * @param observacao {{{cartao_resource_cancelar_param_observacao}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  cancelarUsingPOST (Long id, Long idStatus, String observacao, String authorization) throws ApiException {
+  public CartaoResponse  cancelarUsingPOST (Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -524,8 +505,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -562,10 +541,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar_cartao_impressao}}}
    * {{{cartao_resource_consultar_cartao_impressao_notes}}}
    * @param id {{{cartao_resource_consultar_cartao_impressao_param_id}}}
-   * @param authorization Authorization
    * @return DadosCartaoImpressaoResponse
    */
-  public DadosCartaoImpressaoResponse  consultarCartaoImpressaoUsingGET (Long id, String authorization) throws ApiException {
+  public DadosCartaoImpressaoResponse  consultarCartaoImpressaoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -586,8 +564,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -624,10 +600,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar_dados_reais_cartao}}}
    * {{{cartao_resource_consultar_dados_reais_cartao_notes}}}
    * @param id id
-   * @param authorization Authorization
    * @return DadosCartaoResponse
    */
-  public DadosCartaoResponse  consultarDadosReaisCartaoUsingGET (Long id, String authorization) throws ApiException {
+  public DadosCartaoResponse  consultarDadosReaisCartaoUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -648,8 +623,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -686,10 +659,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar_limite_disponibilidade}}}
    * {{{cartao_resource_consultar_limite_disponibilidade_notes}}}
    * @param id {{{cartao_resource_consultar_limite_disponibilidade_param_id}}}
-   * @param authorization Authorization
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse  consultarLimiteDisponibilidadeUsingGET (Long id, String authorization) throws ApiException {
+  public LimiteDisponibilidadeResponse  consultarLimiteDisponibilidadeUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -710,8 +682,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -748,10 +718,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos}}}
    * {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_notes}}}
    * @param id {{{cartao_resource_consultar_lotes_cartoes_pre_pagos_param_id_lote}}}
-   * @param authorization Authorization
    * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagosResponse  consultarLotesCartoesPrePagosUsingGET (Long id, String authorization) throws ApiException {
+  public LoteCartoesPrePagosResponse  consultarLotesCartoesPrePagosUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -772,8 +741,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -810,10 +777,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar_portador}}}
    * {{{cartao_resource_consultar_portador_notes}}}
    * @param id {{{cartao_resource_consultar_portador_param_id}}}
-   * @param authorization Authorization
    * @return PortadorResponse
    */
-  public PortadorResponse  consultarPortadorUsingGET (Long id, String authorization) throws ApiException {
+  public PortadorResponse  consultarPortadorUsingGET (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -834,8 +800,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -872,15 +836,14 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_consultar}}}
    * {{{cartao_resource_consultar_notes}}}
    * @param id {{{cartao_resource_consultar_param_id}}}
-   * @param authorization Authorization
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse  consultarUsingGET10 (Long id, String authorization) throws ApiException {
+  public CartaoDetalheResponse  consultarUsingGET12 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
     }
     
 
@@ -896,8 +859,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -931,13 +892,71 @@ public class GlobaltagcartaoApi {
   }
   
   /**
+   * {{{conta_resource_cadastrar_cartao_multiapp}}}
+   * {{{conta_resource_cadastrar_cartao_multiapp_notes}}}
+   * @param cartaoMultiAppPersist cartaoMultiAppPersist
+   * @return VinculoCartoesResponse
+   */
+  public VinculoCartoesResponse  criarCartoesMultiAppUsingPOST (CartaoMultiAppPersistValue cartaoMultiAppPersist) throws ApiException {
+    Object postBody = cartaoMultiAppPersist;
+    
+    // verify the required parameter 'cartaoMultiAppPersist' is set
+    if (cartaoMultiAppPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'cartaoMultiAppPersist' when calling criarCartoesMultiAppUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/gerar-cartoes-multiapp".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (VinculoCartoesResponse) ApiInvoker.deserialize(response, "", VinculoCartoesResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{cartao_resource_desbloquear_senha_incorreta}}}
    * {{{cartao_resource_desbloquear_senha_incorreta_notes}}}
    * @param id {{{cartao_resource_desbloquear_senha_incorreta_param_id}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  desbloquearSenhaIncorretaUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoResponse  desbloquearSenhaIncorretaUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -958,8 +977,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -996,10 +1013,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_desbloquear}}}
    * {{{cartao_resource_desbloquear_notes}}}
    * @param id {{{cartao_resource_desbloquear_param_id}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  desbloquearUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoResponse  desbloquearUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1020,8 +1036,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1057,7 +1071,6 @@ public class GlobaltagcartaoApi {
   /**
    * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos}}}
    * {{{cartao_resource_gerar_lotes_cartoes_pre_pagos_notes}}}
-   * @param authorization Authorization
    * @param idOrigemComercial {{{lote_cartoes_pre_pagos_persist_id_origem_comercial_value}}}
    * @param idProduto {{{lote_cartoes_pre_pagos_persist_id_produto_value}}}
    * @param idTipoCartao {{{lote_cartoes_pre_pagos_persist_id_tipo_cartao_value}}}
@@ -1067,7 +1080,7 @@ public class GlobaltagcartaoApi {
    * @param identificadorExterno {{{lote_cartoes_pre_pagos_persist_identificador_externo_value}}}
    * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagosResponse  gerarLotesCartoesPrePagosUsingPOST (String authorization, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String identificadorExterno) throws ApiException {
+  public LoteCartoesPrePagosResponse  gerarLotesCartoesPrePagosUsingPOST (Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String identificadorExterno) throws ApiException {
     Object postBody = null;
     
 
@@ -1097,8 +1110,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "identificadorExterno", identificadorExterno));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1135,10 +1146,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_gerar_nova_via_multiplo}}}
    * {{{cartao_resource_gerar_nova_via_multiplo_notes}}}
    * @param id {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-   * @param authorization Authorization
    * @return CartaoMultiAppImpressaoResponse
    */
-  public CartaoMultiAppImpressaoResponse  gerarNovaViaCartaoMultiAppUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoMultiAppImpressaoResponse  gerarNovaViaCartaoMultiAppUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1159,8 +1169,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1197,10 +1205,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_gerar_nova_via}}}
    * {{{cartao_resource_gerar_nova_via_notes}}}
    * @param id {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  gerarNovaViaUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoResponse  gerarNovaViaUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1221,8 +1228,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1259,10 +1264,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_lancar_tarifa_segunda_via}}}
    * {{{cartao_resource_lancar_tarifa_segunda_via_notes}}}
    * @param id {{{cartao_resource_lancar_tarifa_segunda_via_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  lancarTarifaSegundaViaUsingPOST (Long id, String authorization) throws ApiException {
+  public Object  lancarTarifaSegundaViaUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1283,8 +1287,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1320,7 +1322,6 @@ public class GlobaltagcartaoApi {
   /**
    * {{{cartao_resource_listar_lotes_cartoes_pre_pagos}}}
    * {{{cartao_resource_listar_lotes_cartoes_pre_pagos_notes}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -1336,7 +1337,7 @@ public class GlobaltagcartaoApi {
    * @param identificadorExterno {{{lote_cartoes_pre_pagos_request_identificador_externo_value}}}
    * @return PageLoteCartoesPrePagosResponse
    */
-  public PageLoteCartoesPrePagosResponse  listarLotesCartoesPrePagosUsingGET (String authorization, List<String> sort, Integer page, Integer limit, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String dataCadastro, String usuarioCadastro, Integer statusProcessamento, String identificadorExterno) throws ApiException {
+  public PageLoteCartoesPrePagosResponse  listarLotesCartoesPrePagosUsingGET (List<String> sort, Integer page, Integer limit, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String dataCadastro, String usuarioCadastro, Integer statusProcessamento, String identificadorExterno) throws ApiException {
     Object postBody = null;
     
 
@@ -1379,8 +1380,6 @@ public class GlobaltagcartaoApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -1415,7 +1414,6 @@ public class GlobaltagcartaoApi {
   /**
    * {{{cartao_resource_listar}}}
    * {{{cartao_resource_listar_notes}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -1437,9 +1435,10 @@ public class GlobaltagcartaoApi {
    * @param flagProvisorio {{{cartao_request_flag_provisorio_value}}}
    * @param codigoDesbloqueio {{{cartao_request_codigo_desbloqueio_value}}}
    * @param sequencialCartao {{{cartao_request_sequencial_cartao_value}}}
+   * @param identificadorExterno {{{cartao_request_identificador_externo_value}}}
    * @return PageCartaoResponse
    */
-  public PageCartaoResponse  listarUsingGET11 (String authorization, List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
+  public PageCartaoResponse  listarUsingGET12 (List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao, Long identificadorExterno) throws ApiException {
     Object postBody = null;
     
 
@@ -1496,9 +1495,9 @@ public class GlobaltagcartaoApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "sequencialCartao", sequencialCartao));
     
-
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "identificadorExterno", identificadorExterno));
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
+
     
 
     String[] contentTypes = {
@@ -1535,10 +1534,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_reativar}}}
    * {{{cartao_resource_reativar_notes}}}
    * @param id {{{cartao_resource_reativar_param_id}}}
-   * @param authorization Authorization
    * @return CartaoResponse
    */
-  public CartaoResponse  reativarUsingPOST (Long id, String authorization) throws ApiException {
+  public CartaoResponse  reativarUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1559,8 +1557,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1598,10 +1594,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_validar_c_v_v_notes}}}
    * @param id {{{cartao_resource_validar_c_v_v_param_id}}}
    * @param validaCVV validaCVV
-   * @param authorization Authorization
    * @return String
    */
-  public String  validarCVVUsingPOST (Long id, ValidaCVVRequest validaCVV, String authorization) throws ApiException {
+  public String  validarCVVUsingPOST (Long id, ValidaCVVRequest validaCVV) throws ApiException {
     Object postBody = validaCVV;
     
     // verify the required parameter 'id' is set
@@ -1627,8 +1622,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1668,10 +1661,9 @@ public class GlobaltagcartaoApi {
    * @param nomePortador {{{cartao_resource_validar_dados_impressos_bandeirado_param_nome_portador}}}
    * @param dataValidade {{{cartao_resource_validar_dados_impressos_bandeirado_param_data_validade}}}
    * @param codigoSeguranca {{{cartao_resource_validar_dados_impressos_bandeirado_param_codigo_seguranca}}}
-   * @param authorization Authorization
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse  validarDadosImpressosBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca, String authorization) throws ApiException {
+  public ValidaCartaoResponse  validarDadosImpressosBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1716,8 +1708,6 @@ public class GlobaltagcartaoApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -1756,10 +1746,9 @@ public class GlobaltagcartaoApi {
    * @param nomePortador {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_nome_portador}}}
    * @param dataValidade {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_data_validade}}}
    * @param codigoSeguranca {{{cartao_resource_validar_dados_impressos_nao_bandeirado_param_codigo_seguranca}}}
-   * @param authorization Authorization
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse  validarDadosImpressosNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca, String authorization) throws ApiException {
+  public ValidaCartaoResponse  validarDadosImpressosNaoBandeiradoUsingGET (String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1804,8 +1793,6 @@ public class GlobaltagcartaoApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -1842,10 +1829,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_validar_de55_cartao_mastercard_notes}}}
    * @param numeroCartao {{{cartao_resource_validar_de55_cartao_mastercard_param_numero_cartao}}}
    * @param criptograma {{{cartao_resource_validar_de55_cartao_mastercard_param_criptograma}}}
-   * @param authorization Authorization
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse  validarDe55CartaoMastercardUsingGET (String numeroCartao, String criptograma, String authorization) throws ApiException {
+  public ValidaCartaoResponse  validarDe55CartaoMastercardUsingGET (String numeroCartao, String criptograma) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -1875,8 +1861,6 @@ public class GlobaltagcartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "criptograma", criptograma));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -1914,10 +1898,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_validar_senha_notes}}}
    * @param id {{{cartao_resource_validar_senha_param_id}}}
    * @param senha {{{cartao_resource_validar_senha_param_senha}}}
-   * @param authorization Authorization
    * @return ValidaSenhaCartaoResponse
    */
-  public ValidaSenhaCartaoResponse  validarSenhaUsingGET (Long id, String senha, String authorization) throws ApiException {
+  public ValidaSenhaCartaoResponse  validarSenhaUsingGET (Long id, String senha) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -1943,8 +1926,6 @@ public class GlobaltagcartaoApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
     headerParams.put("senha", ApiInvoker.parameterToString(senha));
     
@@ -1985,10 +1966,9 @@ public class GlobaltagcartaoApi {
    * @param numeroCartao {{{cartao_resource_validar_tarja_param_numero_cartao}}}
    * @param trilha1 {{{cartao_resource_validar_tarja_param_trilha1}}}
    * @param trilha2 {{{cartao_resource_validar_tarja_param_trilha2}}}
-   * @param authorization Authorization
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse  validarTarjaUsingGET (String numeroCartao, String trilha1, String trilha2, String authorization) throws ApiException {
+  public ValidaCartaoResponse  validarTarjaUsingGET (String numeroCartao, String trilha1, String trilha2) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroCartao' is set
@@ -2026,8 +2006,6 @@ public class GlobaltagcartaoApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -2060,4 +2038,3 @@ public class GlobaltagcartaoApi {
   }
   
 }
-

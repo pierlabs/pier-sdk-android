@@ -10,14 +10,12 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltaglimiteApi {
   String basePath = "http://localhost/";
@@ -44,13 +42,12 @@ public class GlobaltaglimiteApi {
    * {{{conta_resource_listar_historico_alteracoes_limites}}}
    * {{{conta_resource_listar_historico_alteracoes_limites_notes}}}
    * @param id {{{conta_resource_listar_historico_alteracoes_limites_param_id}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageHistoricoEventosResponse
    */
-  public PageHistoricoEventosResponse  listarHistoricoAlteracoesLimitesUsingGET (Long id, String authorization, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoEventosResponse  listarHistoricoAlteracoesLimitesUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -77,8 +74,6 @@ public class GlobaltaglimiteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -112,4 +107,3 @@ public class GlobaltaglimiteApi {
   }
   
 }
-

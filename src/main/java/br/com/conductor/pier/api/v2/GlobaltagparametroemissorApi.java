@@ -10,14 +10,12 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.ParametroEmissorResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagparametroemissorApi {
   String basePath = "http://localhost/";
@@ -46,12 +44,12 @@ public class GlobaltagparametroemissorApi {
    * @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
    * @return ParametroEmissorResponse
    */
-  public ParametroEmissorResponse  consultarUsingGET27 (String codigo) throws ApiException {
+  public ParametroEmissorResponse  consultarUsingGET29 (String codigo) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'codigo' is set
     if (codigo == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET27");
+       throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET29");
     }
     
 
@@ -100,4 +98,3 @@ public class GlobaltagparametroemissorApi {
   }
   
 }
-

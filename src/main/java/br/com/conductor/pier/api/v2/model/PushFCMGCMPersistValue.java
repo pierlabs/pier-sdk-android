@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -26,7 +24,7 @@ public class PushFCMGCMPersistValue  {
   @SerializedName("conteudo")
   private String conteudo = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS,  OTP_3D_SECURE, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -39,9 +37,9 @@ public class PushFCMGCMPersistValue  {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+   * {{{push_a_p_n_s_persist_id_pessoa_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -51,9 +49,9 @@ public class PushFCMGCMPersistValue  {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+   * {{{push_a_p_n_s_persist_id_conta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_id_conta_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -63,9 +61,9 @@ public class PushFCMGCMPersistValue  {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+   * {{{push_a_p_n_s_persist_token_dispositivo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_token_dispositivo_value}}}")
   public String getTokenDispositivo() {
     return tokenDispositivo;
   }
@@ -87,9 +85,9 @@ public class PushFCMGCMPersistValue  {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+   * {{{push_a_p_n_s_persist_titulo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_titulo_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_titulo_value}}}")
   public String getTitulo() {
     return titulo;
   }
@@ -99,9 +97,9 @@ public class PushFCMGCMPersistValue  {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+   * {{{push_a_p_n_s_persist_conteudo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_conteudo_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }
@@ -178,5 +176,3 @@ public class PushFCMGCMPersistValue  {
     return sb.toString();
   }
 }
-
-

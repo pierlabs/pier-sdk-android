@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -28,7 +26,7 @@ public class PushAPNSPersistValue  {
   @SerializedName("conteudo")
   private String conteudo = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS,  OTP_3D_SECURE, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -123,9 +121,9 @@ public class PushAPNSPersistValue  {
 
   
   /**
-   * {{{push_a_p_n_s_persist_tipo_evento_value}}}
+   * {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{push_a_p_n_s_persist_tipo_evento_value}}}")
+  @ApiModelProperty(required = true, value = "{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -135,9 +133,9 @@ public class PushAPNSPersistValue  {
 
   
   /**
-   * {{{push_a_p_n_s_persist_icone_value}}}
+   * {{{push_f_c_m_g_c_m_persist_icone_value}}}
    **/
-  @ApiModelProperty(value = "{{{push_a_p_n_s_persist_icone_value}}}")
+  @ApiModelProperty(value = "{{{push_f_c_m_g_c_m_persist_icone_value}}}")
   public String getIcone() {
     return icone;
   }
@@ -147,9 +145,9 @@ public class PushAPNSPersistValue  {
 
   
   /**
-   * {{{push_a_p_n_s_persist_som_value}}}
+   * {{{push_f_c_m_g_c_m_persist_som_value}}}
    **/
-  @ApiModelProperty(value = "{{{push_a_p_n_s_persist_som_value}}}")
+  @ApiModelProperty(value = "{{{push_f_c_m_g_c_m_persist_som_value}}}")
   public String getSom() {
     return som;
   }
@@ -178,5 +176,3 @@ public class PushAPNSPersistValue  {
     return sb.toString();
   }
 }
-
-

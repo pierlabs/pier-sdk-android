@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -16,7 +14,7 @@ public class WebHookResponse  {
   @SerializedName("id")
   private Long id = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS,  OTP_3D_SECURE, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -109,5 +107,3 @@ public class WebHookResponse  {
     return sb.toString();
   }
 }
-
-

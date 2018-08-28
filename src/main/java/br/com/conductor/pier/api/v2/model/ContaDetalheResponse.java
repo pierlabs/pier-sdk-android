@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.math.BigDecimal;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -66,6 +64,8 @@ public class ContaDetalheResponse  {
   private BigDecimal saldoDisponivelSaque = null;
   @SerializedName("diasAtraso")
   private Long diasAtraso = null;
+  @SerializedName("proximoVencimentoPadrao")
+  private String proximoVencimentoPadrao = null;
 
   
   /**
@@ -380,6 +380,18 @@ public class ContaDetalheResponse  {
   }
 
   
+  /**
+   * {{{conta_response_proximo_vencimento_padrao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_response_proximo_vencimento_padrao_value}}}")
+  public String getProximoVencimentoPadrao() {
+    return proximoVencimentoPadrao;
+  }
+  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
+    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -412,9 +424,8 @@ public class ContaDetalheResponse  {
     sb.append("  saldoDisponivelGlobal: ").append(saldoDisponivelGlobal).append("\n");
     sb.append("  saldoDisponivelSaque: ").append(saldoDisponivelSaque).append("\n");
     sb.append("  diasAtraso: ").append(diasAtraso).append("\n");
+    sb.append("  proximoVencimentoPadrao: ").append(proximoVencimentoPadrao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-

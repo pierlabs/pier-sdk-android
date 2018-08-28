@@ -2,10 +2,8 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.Date;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -130,5 +128,3 @@ public class ArquivoAjusteLoteResponse  {
     return sb.toString();
   }
 }
-
-

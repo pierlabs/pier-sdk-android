@@ -12,14 +12,12 @@ import br.com.conductor.pier.api.v2.model.DispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.DispositivoPersistValue;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagdispositivoApi {
   String basePath = "http://localhost/";
@@ -173,7 +171,7 @@ public class GlobaltagdispositivoApi {
    * @param dataDesativacao {{{dispositivo_request_data_desativacao_value}}}
    * @return PageDispositivoResponse
    */
-  public PageDispositivoResponse  listarUsingGET20 (List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse  listarUsingGET21 (List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
 
@@ -243,12 +241,12 @@ public class GlobaltagdispositivoApi {
    * @param persist persist
    * @return DispositivoResponse
    */
-  public DispositivoResponse  salvarUsingPOST10 (DispositivoPersistValue persist) throws ApiException {
+  public DispositivoResponse  salvarUsingPOST11 (DispositivoPersistValue persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
     }
     
 
@@ -297,4 +295,3 @@ public class GlobaltagdispositivoApi {
   }
   
 }
-

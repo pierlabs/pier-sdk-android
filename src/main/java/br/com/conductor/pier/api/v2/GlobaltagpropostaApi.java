@@ -13,14 +13,12 @@ import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
 import br.com.conductor.pier.api.v2.model.PageStatusPropostaResponse;
 import br.com.conductor.pier.api.v2.model.PagePropostaResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagpropostaApi {
   String basePath = "http://localhost/";
@@ -114,12 +112,12 @@ public class GlobaltagpropostaApi {
    * @param id {{{proposta_resource_consultar_param_id}}}
    * @return PropostaResponse
    */
-  public PropostaResponse  consultarUsingGET33 (Long id) throws ApiException {
+  public PropostaResponse  consultarUsingGET35 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
     }
     
 
@@ -244,7 +242,7 @@ public class GlobaltagpropostaApi {
    * @param status {{{proposta_request_status_value}}}
    * @return PagePropostaResponse
    */
-  public PagePropostaResponse  listarUsingGET44 (List<String> sort, Integer page, Integer limit, Integer status) throws ApiException {
+  public PagePropostaResponse  listarUsingGET46 (List<String> sort, Integer page, Integer limit, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -301,4 +299,3 @@ public class GlobaltagpropostaApi {
   }
   
 }
-

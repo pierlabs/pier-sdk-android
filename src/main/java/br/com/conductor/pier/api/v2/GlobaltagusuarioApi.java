@@ -15,10 +15,9 @@ import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoUpdateValo
 import br.com.conductor.pier.api.v2.model.PageUsuarioContasResponse;
 import br.com.conductor.pier.api.v2.model.PageControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
-import br.com.conductor.pier.api.v2.model.UsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoPersistencia;
+import br.com.conductor.pier.api.v2.model.UsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.UsuarioSenhaFortePersistencia;
-
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -26,7 +25,6 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagusuarioApi {
   String basePath = "http://localhost/";
@@ -321,12 +319,12 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse  atualizarUsingPUT2 (ControleSegurancaDispositivoUpdateValor update) throws ApiException {
+  public ControleSegurancaDispositivoResponse  atualizarUsingPUT3 (ControleSegurancaDispositivoUpdateValor update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT2");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT3");
     }
     
 
@@ -451,12 +449,12 @@ public class GlobaltagusuarioApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageControleSegurancaDispositivoResponse
    */
-  public PageControleSegurancaDispositivoResponse  consultarUsingGET15 (Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageControleSegurancaDispositivoResponse  consultarUsingGET17 (Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idUsuario' is set
     if (idUsuario == null) {
-       throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET15");
+       throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET17");
     }
     
 
@@ -518,12 +516,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse  consultarUsingGET51 (Long id) throws ApiException {
+  public UsuarioResponse  consultarUsingGET53 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
     }
     
 
@@ -642,7 +640,7 @@ public class GlobaltagusuarioApi {
    * @param status {{{usuario_request_status_value}}}
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse  listarUsingGET62 (List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse  listarUsingGET65 (List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
 
@@ -764,76 +762,17 @@ public class GlobaltagusuarioApi {
   }
   
   /**
-   * {{{usuario_resource_salvar}}}
-   * {{{usuario_resource_salvar_notes}}}
-   * @param persist persist
-   * @return UsuarioResponse
-   */
-  public UsuarioResponse  salvarUsingPOST33 (UsuarioPersistencia persist) throws ApiException {
-    Object postBody = persist;
-    
-    // verify the required parameter 'persist' is set
-    if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST33");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * {{{controle_seguranca_dispositivo_salvar}}}
    * {{{controle_seguranca_dispositivo_salvar_notas}}}
    * @param persist persist
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse  salvarUsingPOST9 (ControleSegurancaDispositivoPersistencia persist) throws ApiException {
+  public ControleSegurancaDispositivoResponse  salvarUsingPOST10 (ControleSegurancaDispositivoPersistencia persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
     }
     
 
@@ -872,6 +811,65 @@ public class GlobaltagusuarioApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ControleSegurancaDispositivoResponse) ApiInvoker.deserialize(response, "", ControleSegurancaDispositivoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{usuario_resource_salvar}}}
+   * {{{usuario_resource_salvar_notes}}}
+   * @param persist persist
+   * @return UsuarioResponse
+   */
+  public UsuarioResponse  salvarUsingPOST34 (UsuarioPersistencia persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST34");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
       }
       else {
         return null;
@@ -1142,4 +1140,3 @@ public class GlobaltagusuarioApi {
   }
   
 }
-

@@ -1,10 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -21,6 +19,8 @@ public class TokenPartialUpdateValue  {
   private String criadoPor = null;
   @SerializedName("alteradoPor")
   private String alteradoPor = null;
+  @SerializedName("idAplicacao")
+  private Long idAplicacao = null;
 
   
   /**
@@ -71,6 +71,18 @@ public class TokenPartialUpdateValue  {
   }
 
   
+  /**
+   * {{{token_dto_id_application_value}}}
+   **/
+  @ApiModelProperty(value = "{{{token_dto_id_application_value}}}")
+  public Long getIdAplicacao() {
+    return idAplicacao;
+  }
+  public void setIdAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -81,9 +93,8 @@ public class TokenPartialUpdateValue  {
     sb.append("  owner: ").append(owner).append("\n");
     sb.append("  criadoPor: ").append(criadoPor).append("\n");
     sb.append("  alteradoPor: ").append(alteradoPor).append("\n");
+    sb.append("  idAplicacao: ").append(idAplicacao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-

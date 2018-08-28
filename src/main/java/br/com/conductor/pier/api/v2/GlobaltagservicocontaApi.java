@@ -11,14 +11,12 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.PageAnuidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageOperadoraResponse;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagservicocontaApi {
   String basePath = "http://localhost/";
@@ -46,7 +44,6 @@ public class GlobaltagservicocontaApi {
    * {{{conta_resource_ativar_anuidade_notes}}}
    * @param id {{{conta_resource_ativar_anuidade_param_id}}}
    * @param idAnuidade {{{anuidade_request_id_anuidade_value}}}
-   * @param authorization Authorization
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
@@ -56,7 +53,7 @@ public class GlobaltagservicocontaApi {
    * @param idOrigemComercial {{{anuidade_request_id_origem_comercial_value}}}
    * @return Object
    */
-  public Object  ativarAnuidadeUsingPOST (Long id, Long idAnuidade, String authorization, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object  ativarAnuidadeUsingPOST (Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -99,8 +96,6 @@ public class GlobaltagservicocontaApi {
     
 
     
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
-    
 
     String[] contentTypes = {
       "application/json"
@@ -136,10 +131,9 @@ public class GlobaltagservicocontaApi {
    * {{{conta_resource_ativar_envio_fatura_email}}}
    * {{{conta_resource_ativar_envio_fatura_email_notes}}}
    * @param id {{{conta_resource_ativar_envio_fatura_email_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  ativarEnvioFaturaEmailUsingPOST (Long id, String authorization) throws ApiException {
+  public Object  ativarEnvioFaturaEmailUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -160,8 +154,6 @@ public class GlobaltagservicocontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -198,10 +190,9 @@ public class GlobaltagservicocontaApi {
    * {{{conta_resource_desativar_envio_fatura_email}}}
    * {{{conta_resource_desativar_envio_fatura_email_notes}}}
    * @param id {{{conta_resource_desativar_envio_fatura_email_param_id}}}
-   * @param authorization Authorization
    * @return Object
    */
-  public Object  desativarEnvioFaturaEmailUsingPOST (Long id, String authorization) throws ApiException {
+  public Object  desativarEnvioFaturaEmailUsingPOST (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -222,8 +213,6 @@ public class GlobaltagservicocontaApi {
 
     
 
-    
-    headerParams.put("Authorization", ApiInvoker.parameterToString(authorization));
     
 
     String[] contentTypes = {
@@ -381,4 +370,3 @@ public class GlobaltagservicocontaApi {
   }
   
 }
-

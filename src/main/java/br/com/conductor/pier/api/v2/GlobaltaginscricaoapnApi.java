@@ -12,14 +12,12 @@ import br.com.conductor.pier.api.v2.model.InscricaoAPNResponse;
 import br.com.conductor.pier.api.v2.model.PageInscricaoAPNResponse;
 import br.com.conductor.pier.api.v2.model.InscricaoApnPersistencia;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltaginscricaoapnApi {
   String basePath = "http://localhost/";
@@ -115,7 +113,7 @@ public class GlobaltaginscricaoapnApi {
    * @param idAplicacaoMobile {{{inscricao_apn_requisicao_id_aplicacao_mobile_descricao}}}
    * @return PageInscricaoAPNResponse
    */
-  public PageInscricaoAPNResponse  listarUsingGET30 (List<String> sort, List<Long> idCartoes, Integer page, Integer limit, String deviceToken, String dataCriacao, String dataDesativacao, Boolean ativo, Long idAplicacaoMobile) throws ApiException {
+  public PageInscricaoAPNResponse  listarUsingGET31 (List<String> sort, List<Long> idCartoes, Integer page, Integer limit, String deviceToken, String dataCriacao, String dataDesativacao, Boolean ativo, Long idAplicacaoMobile) throws ApiException {
     Object postBody = null;
     
 
@@ -187,12 +185,12 @@ public class GlobaltaginscricaoapnApi {
    * @param inscricaoPersist inscricaoPersist
    * @return List<InscricaoAPNResponse>
    */
-  public List<InscricaoAPNResponse>  salvarUsingPOST14 (InscricaoApnPersistencia inscricaoPersist) throws ApiException {
+  public List<InscricaoAPNResponse>  salvarUsingPOST15 (InscricaoApnPersistencia inscricaoPersist) throws ApiException {
     Object postBody = inscricaoPersist;
     
     // verify the required parameter 'inscricaoPersist' is set
     if (inscricaoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST14");
+       throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST15");
     }
     
 
@@ -241,4 +239,3 @@ public class GlobaltaginscricaoapnApi {
   }
   
 }
-

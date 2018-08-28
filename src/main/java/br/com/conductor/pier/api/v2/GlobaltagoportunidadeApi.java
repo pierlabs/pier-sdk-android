@@ -22,14 +22,12 @@ import br.com.conductor.pier.api.v2.model.PageOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadePersistValue;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.Map;
 import java.util.HashMap;
 import java.io.File;
-
 
 public class GlobaltagoportunidadeApi {
   String basePath = "http://localhost/";
@@ -324,12 +322,12 @@ public class GlobaltagoportunidadeApi {
    * @param id {{{oportunidade_resource_consultar_param_id}}}
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  consultarUsingGET26 (Long id) throws ApiException {
+  public OportunidadeResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
@@ -383,12 +381,12 @@ public class GlobaltagoportunidadeApi {
    * @param id {{{tipo_oportunidade_resource_consultar_param_id}}}
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  consultarUsingGET45 (Long id) throws ApiException {
+  public TipoOportunidadeResponse  consultarUsingGET47 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
     }
     
 
@@ -786,7 +784,7 @@ public class GlobaltagoportunidadeApi {
    * @param flagAtivo {{{oportunidade_request_flag_ativo_value}}}
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse  listarUsingGET35 (List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse  listarUsingGET36 (List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -864,7 +862,7 @@ public class GlobaltagoportunidadeApi {
    * @param flagAtivo {{{tipo_oportunidade_request_flag_ativo_value}}}
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse  listarUsingGET55 (List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse  listarUsingGET58 (List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 
@@ -993,12 +991,12 @@ public class GlobaltagoportunidadeApi {
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse  salvarUsingPOST21 (OportunidadePersistValue persist) throws ApiException {
+  public OportunidadeResponse  salvarUsingPOST22 (OportunidadePersistValue persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST21");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST22");
     }
     
 
@@ -1052,12 +1050,12 @@ public class GlobaltagoportunidadeApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse  salvarUsingPOST30 (TipoOportunidadePersistValue persist) throws ApiException {
+  public TipoOportunidadeResponse  salvarUsingPOST31 (TipoOportunidadePersistValue persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST30");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST31");
     }
     
 
@@ -1106,4 +1104,3 @@ public class GlobaltagoportunidadeApi {
   }
   
 }
-

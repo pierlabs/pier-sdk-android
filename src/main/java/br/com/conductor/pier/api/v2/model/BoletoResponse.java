@@ -3,10 +3,8 @@ package br.com.conductor.pier.api.v2.model;
 import java.math.BigDecimal;
 import java.util.*;
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
@@ -83,6 +81,8 @@ public class BoletoResponse  {
   private String enderecoCobrancaBeneficiario = null;
   @SerializedName("status")
   private Long status = null;
+  @SerializedName("boletoRegistrado")
+  private Boolean boletoRegistrado = null;
 
   
   /**
@@ -493,6 +493,18 @@ public class BoletoResponse  {
   }
 
   
+  /**
+   * {{{boleto_response_registrado_value}}}
+   **/
+  @ApiModelProperty(value = "{{{boleto_response_registrado_value}}}")
+  public Boolean getBoletoRegistrado() {
+    return boletoRegistrado;
+  }
+  public void setBoletoRegistrado(Boolean boletoRegistrado) {
+    this.boletoRegistrado = boletoRegistrado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -533,9 +545,8 @@ public class BoletoResponse  {
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  enderecoCobrancaBeneficiario: ").append(enderecoCobrancaBeneficiario).append("\n");
     sb.append("  status: ").append(status).append("\n");
+    sb.append("  boletoRegistrado: ").append(boletoRegistrado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
 }
-
-

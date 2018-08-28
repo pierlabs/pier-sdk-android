@@ -1,24 +1,22 @@
 package br.com.conductor.pier.api.v2.model;
 
 
-
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
-
 
 
 /**
  * {{{notificacao_push_response_description}}}
  **/
 @ApiModel(description = "{{{notificacao_push_response_description}}}")
-public class NotificacaoPushResponseValue  {
+public class NotificacaoPushResponse  {
   
   @SerializedName("dataEnvio")
   private String dataEnvio = null;
   @SerializedName("idEmissor")
   private Long idEmissor = null;
   public enum TipoEventoEnum {
-     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS, 
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS,  OTP_3D_SECURE, 
   };
   @SerializedName("tipoEvento")
   private TipoEventoEnum tipoEvento = null;
@@ -182,7 +180,7 @@ public class NotificacaoPushResponseValue  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NotificacaoPushResponseValue {\n");
+    sb.append("class NotificacaoPushResponse {\n");
     
     sb.append("  dataEnvio: ").append(dataEnvio).append("\n");
     sb.append("  idEmissor: ").append(idEmissor).append("\n");
@@ -199,5 +197,3 @@ public class NotificacaoPushResponseValue  {
     return sb.toString();
   }
 }
-
-
