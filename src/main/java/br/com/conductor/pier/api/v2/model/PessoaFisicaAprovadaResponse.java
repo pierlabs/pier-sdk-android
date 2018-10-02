@@ -75,8 +75,16 @@ public class PessoaFisicaAprovadaResponse  {
   private BigDecimal limiteGlobal = null;
   @SerializedName("limiteMaximo")
   private BigDecimal limiteMaximo = null;
+  @SerializedName("enderecoReferencia1")
+  private String enderecoReferencia1 = null;
+  @SerializedName("enderecoReferencia2")
+  private String enderecoReferencia2 = null;
   @SerializedName("limiteParcelas")
   private BigDecimal limiteParcelas = null;
+  @SerializedName("nomeReferencia1")
+  private String nomeReferencia1 = null;
+  @SerializedName("nomeReferencia2")
+  private String nomeReferencia2 = null;
   @SerializedName("limiteConsignado")
   private BigDecimal limiteConsignado = null;
 
@@ -442,6 +450,30 @@ public class PessoaFisicaAprovadaResponse  {
 
   
   /**
+   * {{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
+  /**
    * {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
    **/
   @ApiModelProperty(required = true, value = "{{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}")
@@ -450,6 +482,30 @@ public class PessoaFisicaAprovadaResponse  {
   }
   public void setLimiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
   }
 
   
@@ -501,7 +557,11 @@ public class PessoaFisicaAprovadaResponse  {
     sb.append("  enderecos: ").append(enderecos).append("\n");
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
+    sb.append("  enderecoReferencia1: ").append(enderecoReferencia1).append("\n");
+    sb.append("  enderecoReferencia2: ").append(enderecoReferencia2).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
+    sb.append("  nomeReferencia1: ").append(nomeReferencia1).append("\n");
+    sb.append("  nomeReferencia2: ").append(nomeReferencia2).append("\n");
     sb.append("  limiteConsignado: ").append(limiteConsignado).append("\n");
     sb.append("}\n");
     return sb.toString();

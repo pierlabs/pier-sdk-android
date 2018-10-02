@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.EnderecoResponse;
+import br.com.conductor.pier.api.v2.model.EnderecoNacionalResponse;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -42,9 +42,9 @@ public class GlobaltagendereconacionalApi {
    * {{{c_e_p_endereco_resource_consultar_endereco}}}
    * {{{c_e_p_endereco_resource_consultar_endereco_notes}}}
    * @param CEP CEP
-   * @return EnderecoResponse
+   * @return EnderecoNacionalResponse
    */
-  public EnderecoResponse  consultarEnderecoUsingGET (String CEP) throws ApiException {
+  public EnderecoNacionalResponse  consultarEnderecoUsingGET (String CEP) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'CEP' is set
@@ -89,7 +89,7 @@ public class GlobaltagendereconacionalApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (EnderecoResponse) ApiInvoker.deserialize(response, "", EnderecoResponse.class);
+        return (EnderecoNacionalResponse) ApiInvoker.deserialize(response, "", EnderecoNacionalResponse.class);
       }
       else {
         return null;

@@ -10,6 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.PageAnuidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageOperadoraResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoServicoResponse;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -360,6 +361,68 @@ public class GlobaltagservicocontaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageOperadoraResponse) ApiInvoker.deserialize(response, "", PageOperadoraResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{tipo_servico_resource_listar_tipo_servico}}}
+   * {{{tipo_servico_resource_listar_tipo_servico}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @return PageTipoServicoResponse
+   */
+  public PageTipoServicoResponse  listarTipoServicoUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/tipos-servicos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoServicoResponse) ApiInvoker.deserialize(response, "", PageTipoServicoResponse.class);
       }
       else {
         return null;

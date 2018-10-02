@@ -36,6 +36,10 @@ public class UsuarioResponse  {
   private Long tentativasIncorretas = null;
   @SerializedName("bloquearAcesso")
   private Boolean bloquearAcesso = null;
+  @SerializedName("dataValidade")
+  private String dataValidade = null;
+  @SerializedName("idPlataforma")
+  private Integer idPlataforma = null;
 
   
   /**
@@ -170,6 +174,30 @@ public class UsuarioResponse  {
   }
 
   
+  /**
+   * {{{usuario_response_data_validade_value}}}
+   **/
+  @ApiModelProperty(value = "{{{usuario_response_data_validade_value}}}")
+  public String getDataValidade() {
+    return dataValidade;
+  }
+  public void setDataValidade(String dataValidade) {
+    this.dataValidade = dataValidade;
+  }
+
+  
+  /**
+   * {{{usuario_response_id_plataforma_value}}}
+   **/
+  @ApiModelProperty(value = "{{{usuario_response_id_plataforma_value}}}")
+  public Integer getIdPlataforma() {
+    return idPlataforma;
+  }
+  public void setIdPlataforma(Integer idPlataforma) {
+    this.idPlataforma = idPlataforma;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -187,6 +215,8 @@ public class UsuarioResponse  {
     sb.append("  dataModificacao: ").append(dataModificacao).append("\n");
     sb.append("  tentativasIncorretas: ").append(tentativasIncorretas).append("\n");
     sb.append("  bloquearAcesso: ").append(bloquearAcesso).append("\n");
+    sb.append("  dataValidade: ").append(dataValidade).append("\n");
+    sb.append("  idPlataforma: ").append(idPlataforma).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

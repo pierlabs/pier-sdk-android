@@ -177,11 +177,15 @@ public class GlobaltagcompracontestadaApi {
    * @param cartao 
    * @param cpf 
    * @param conta 
+   * @param autorizacao 
    * @param statusCartao 
    * @param statusContestacao 
-   * @param dataContestacao 
-   * @param dataAlteracao 
-   * @param dataReapresentacao 
+   * @param dataContestacaoInicio 
+   * @param dataContestacaoFim 
+   * @param dataAlteracaoInicio 
+   * @param dataAlteracaoFim 
+   * @param dataReapresentacaoInicio 
+   * @param dataReapresentacaoFim 
    * @param diasContestacao 
    * @param diasCompra 
    * @param modoEntrada 
@@ -189,7 +193,7 @@ public class GlobaltagcompracontestadaApi {
    * @param valorCompra 
    * @return PageGrupoChargebackResponse
    */
-  public PageGrupoChargebackResponse  listarUsingGET13 (List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, Long statusCartao, Long statusContestacao, String dataContestacao, String dataAlteracao, String dataReapresentacao, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
+  public PageGrupoChargebackResponse  listarUsingGET11 (List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, String autorizacao, Long statusCartao, Long statusContestacao, String dataContestacaoInicio, String dataContestacaoFim, String dataAlteracaoInicio, String dataAlteracaoFim, String dataReapresentacaoInicio, String dataReapresentacaoFim, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
     Object postBody = null;
     
 
@@ -222,15 +226,23 @@ public class GlobaltagcompracontestadaApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "conta", conta));
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "autorizacao", autorizacao));
+    
     queryParams.addAll(ApiInvoker.parameterToPairs("", "statusCartao", statusCartao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "statusContestacao", statusContestacao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacao", dataContestacao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacaoInicio", dataContestacaoInicio));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracao", dataAlteracao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacaoFim", dataContestacaoFim));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacao", dataReapresentacao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracaoInicio", dataAlteracaoInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracaoFim", dataAlteracaoFim));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacaoInicio", dataReapresentacaoInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacaoFim", dataReapresentacaoFim));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "diasContestacao", diasContestacao));
     
@@ -288,11 +300,15 @@ public class GlobaltagcompracontestadaApi {
    * @param cartao 
    * @param cpf 
    * @param conta 
+   * @param autorizacao 
    * @param statusCartao 
    * @param statusContestacao 
-   * @param dataContestacao 
-   * @param dataAlteracao 
-   * @param dataReapresentacao 
+   * @param dataContestacaoInicio 
+   * @param dataContestacaoFim 
+   * @param dataAlteracaoInicio 
+   * @param dataAlteracaoFim 
+   * @param dataReapresentacaoInicio 
+   * @param dataReapresentacaoFim 
    * @param diasContestacao 
    * @param diasCompra 
    * @param modoEntrada 
@@ -300,7 +316,7 @@ public class GlobaltagcompracontestadaApi {
    * @param valorCompra 
    * @return PageGrupoChargebackResponse
    */
-  public PageGrupoChargebackResponse  transacaoUsingGET (Long idCartao, List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, Long statusCartao, Long statusContestacao, String dataContestacao, String dataAlteracao, String dataReapresentacao, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
+  public PageGrupoChargebackResponse  transacaoUsingGET (Long idCartao, List<String> sort, Integer page, Integer limit, Long agingContestacao, String nome, String bandeira, String cartao, String cpf, String conta, String autorizacao, Long statusCartao, Long statusContestacao, String dataContestacaoInicio, String dataContestacaoFim, String dataAlteracaoInicio, String dataAlteracaoFim, String dataReapresentacaoInicio, String dataReapresentacaoFim, Long diasContestacao, Long diasCompra, String modoEntrada, String motivo, BigDecimal valorCompra) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idCartao' is set
@@ -338,15 +354,23 @@ public class GlobaltagcompracontestadaApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "conta", conta));
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "autorizacao", autorizacao));
+    
     queryParams.addAll(ApiInvoker.parameterToPairs("", "statusCartao", statusCartao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "statusContestacao", statusContestacao));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacao", dataContestacao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacaoInicio", dataContestacaoInicio));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracao", dataAlteracao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataContestacaoFim", dataContestacaoFim));
     
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacao", dataReapresentacao));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracaoInicio", dataAlteracaoInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataAlteracaoFim", dataAlteracaoFim));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacaoInicio", dataReapresentacaoInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataReapresentacaoFim", dataReapresentacaoFim));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "diasContestacao", diasContestacao));
     

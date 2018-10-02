@@ -27,6 +27,8 @@ public class OperacaoResponse  {
   private Integer carencia = null;
   @SerializedName("flagPermitirParcelamento")
   private Boolean flagPermitirParcelamento = null;
+  @SerializedName("flagManterTaxaJurosNoRotativo")
+  private Boolean flagManterTaxaJurosNoRotativo = null;
 
   
   /**
@@ -125,6 +127,18 @@ public class OperacaoResponse  {
   }
 
   
+  /**
+   * {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+   **/
+  @ApiModelProperty(value = "{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
+  public Boolean getFlagManterTaxaJurosNoRotativo() {
+    return flagManterTaxaJurosNoRotativo;
+  }
+  public void setFlagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
+    this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -139,6 +153,7 @@ public class OperacaoResponse  {
     sb.append("  flagCobraTarifa: ").append(flagCobraTarifa).append("\n");
     sb.append("  carencia: ").append(carencia).append("\n");
     sb.append("  flagPermitirParcelamento: ").append(flagPermitirParcelamento).append("\n");
+    sb.append("  flagManterTaxaJurosNoRotativo: ").append(flagManterTaxaJurosNoRotativo).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

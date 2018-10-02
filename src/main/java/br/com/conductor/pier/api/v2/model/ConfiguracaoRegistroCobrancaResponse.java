@@ -54,6 +54,8 @@ public class ConfiguracaoRegistroCobrancaResponse  {
   };
   @SerializedName("clientID")
   private ClientIDEnum clientID = null;
+  @SerializedName("chave")
+  private String chave = null;
 
   
   /**
@@ -260,6 +262,18 @@ public class ConfiguracaoRegistroCobrancaResponse  {
   }
 
   
+  /**
+   * {{{configuracao_registro_cobranca_persist_chave_value}}}
+   **/
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_chave_value}}}")
+  public String getChave() {
+    return chave;
+  }
+  public void setChave(String chave) {
+    this.chave = chave;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -283,6 +297,7 @@ public class ConfiguracaoRegistroCobrancaResponse  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  secret: ").append(secret).append("\n");
     sb.append("  clientID: ").append(clientID).append("\n");
+    sb.append("  chave: ").append(chave).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

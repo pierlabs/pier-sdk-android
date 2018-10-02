@@ -12,6 +12,8 @@ import br.com.conductor.pier.api.v2.model.ConvenioPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioResponse;
 import br.com.conductor.pier.api.v2.model.ControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.VencimentoUpdate;
+import br.com.conductor.pier.api.v2.model.TipoOperacaoParcialUpdate;
+import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaUpdateValue;
 import br.com.conductor.pier.api.v2.model.CampanhaResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaPersist;
@@ -24,19 +26,15 @@ import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.TipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
-import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
-import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageConvenioResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
-import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoCampanhaResponse;
-import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoRotativoResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
@@ -46,6 +44,7 @@ import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaPersist;
 
 import org.apache.http.HttpEntity;
@@ -197,6 +196,71 @@ public class GlobaltagcadastrogeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ControleVencimentoResponse) ApiInvoker.deserialize(response, "", ControleVencimentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{tipo_operacao_resource_alterar}}}
+   * {{{tipo_operacao_resource_alterar_notes}}}
+   * @param id {{{tipo_operacao_resource_alterar_param_id}}}
+   * @param tipoOperacaoParcialUpdate tipoOperacaoParcialUpdate
+   * @return TipoOperacaoResponse
+   */
+  public TipoOperacaoResponse  alterarParcialUsingPATCH (Long id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate) throws ApiException {
+    Object postBody = tipoOperacaoParcialUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcialUsingPATCH");
+    }
+    
+    // verify the required parameter 'tipoOperacaoParcialUpdate' is set
+    if (tipoOperacaoParcialUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipoOperacaoParcialUpdate' when calling alterarParcialUsingPATCH");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-operacoes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoOperacaoResponse) ApiInvoker.deserialize(response, "", TipoOperacaoResponse.class);
       }
       else {
         return null;
@@ -775,12 +839,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{configuracao_registro_cobranca_resource_consultar_param_id}}}
    * @return ConfiguracaoRegistroCobrancaResponse
    */
-  public ConfiguracaoRegistroCobrancaResponse  consultarUsingGET13 (Long id) throws ApiException {
+  public ConfiguracaoRegistroCobrancaResponse  consultarUsingGET10 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
     }
     
 
@@ -834,12 +898,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{configuracao_rotativo_resource_consultar_param_id}}}
    * @return ConfiguracaoRotativoDetalheResponse
    */
-  public ConfiguracaoRotativoDetalheResponse  consultarUsingGET14 (Long id) throws ApiException {
+  public ConfiguracaoRotativoDetalheResponse  consultarUsingGET11 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
     }
     
 
@@ -893,12 +957,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{produto_resource_consultar_param_id}}}
    * @return ProdutoDetalhesResponse
    */
-  public ProdutoDetalhesResponse  consultarUsingGET34 (Long id) throws ApiException {
+  public ProdutoDetalhesResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
@@ -952,12 +1016,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{tipo_transacoes_ajuste_resource_consultar_param_id}}}
    * @return TipoAjusteResponse
    */
-  public TipoAjusteResponse  consultarUsingGET43 (Long id) throws ApiException {
+  public TipoAjusteResponse  consultarUsingGET37 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET43");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
     }
     
 
@@ -1016,7 +1080,7 @@ public class GlobaltagcadastrogeralApi {
    * @param banco {{{tipo_boleto_request_banco_value}}}
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse  consultarUsingGET44 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse  consultarUsingGET38 (List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
 
@@ -1082,12 +1146,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{tipo_endereco_resource_consultar_param_id}}}
    * @return TipoEnderecoResponse
    */
-  public TipoEnderecoResponse  consultarUsingGET45 (Long id) throws ApiException {
+  public TipoEnderecoResponse  consultarUsingGET39 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
     }
     
 
@@ -1143,22 +1207,22 @@ public class GlobaltagcadastrogeralApi {
    * @param codigoProcessamento {{{tipo_operacao_resource_consultar_param_codigo_processamento}}}
    * @return TipoOperacaoResponse
    */
-  public TipoOperacaoResponse  consultarUsingGET46 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
+  public TipoOperacaoResponse  consultarUsingGET40 (Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idCartao' is set
     if (idCartao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET46");
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET40");
     }
     
     // verify the required parameter 'idEstabelecimento' is set
     if (idEstabelecimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET46");
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET40");
     }
     
     // verify the required parameter 'codigoProcessamento' is set
     if (codigoProcessamento == null) {
-       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET46");
+       throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET40");
     }
     
 
@@ -1218,12 +1282,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{tipo_telefone_resource_consultar_param_id}}}
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse  consultarUsingGET48 (Long id) throws ApiException {
+  public TipoTelefoneResponse  consultarUsingGET42 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
     }
     
 
@@ -1277,12 +1341,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{atendimento_cliente_resource_consultar_param_id_atendimento}}}
    * @return AtendimentoClienteResponse
    */
-  public AtendimentoClienteResponse  consultarUsingGET7 (Long id) throws ApiException {
+  public AtendimentoClienteResponse  consultarUsingGET6 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
     }
     
 
@@ -1336,12 +1400,12 @@ public class GlobaltagcadastrogeralApi {
    * @param id {{{banco_resource_consultar_param_id}}}
    * @return BancoResponse
    */
-  public BancoResponse  consultarUsingGET9 (Long id) throws ApiException {
+  public BancoResponse  consultarUsingGET8 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
     }
     
 
@@ -1445,76 +1509,6 @@ public class GlobaltagcadastrogeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageCampanhaResponse) ApiInvoker.deserialize(response, "", PageCampanhaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * {{{pessoa_resource_listar_contas_por_pessoa}}}
-   * {{{pessoa_resource_listar_contas_por_pessoa_notes}}}
-   * @param numeroReceitaFederal {{{pessoa_resource_listar_contas_por_pessoa_param_numero_receita_federal}}}
-   * @param sort {{{global_menssagem_sort_sort}}}
-   * @param page {{{global_menssagem_sort_page_value}}}
-   * @param limit {{{global_menssagem_sort_limit}}}
-   * @return PageContaDetalheResponse
-   */
-  public PageContaDetalheResponse  listarContasPorPessoaUsingGET (String numeroReceitaFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'numeroReceitaFederal' is set
-    if (numeroReceitaFederal == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarContasPorPessoaUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/pessoas/listar-contas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageContaDetalheResponse) ApiInvoker.deserialize(response, "", PageContaDetalheResponse.class);
       }
       else {
         return null;
@@ -1713,65 +1707,6 @@ public class GlobaltagcadastrogeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageFantasiaBasicaResponse) ApiInvoker.deserialize(response, "", PageFantasiaBasicaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * {{{pessoa_resource_listar_historico_telefones}}}
-   * {{{pessoa_resource_listar_historico_telefones_notes}}}
-   * @param id {{{pessoa_resource_listar_historico_telefones_param_id_pessoa}}}
-   * @return HistoricoTelefoneResponse
-   */
-  public HistoricoTelefoneResponse  listarHistoricoTelefonesUsingGET (Long id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoTelefonesUsingGET");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/pessoas/{id}/historico-telefones".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (HistoricoTelefoneResponse) ApiInvoker.deserialize(response, "", HistoricoTelefoneResponse.class);
       }
       else {
         return null;
@@ -2092,68 +2027,6 @@ public class GlobaltagcadastrogeralApi {
   }
   
   /**
-   * {{{banco_resource_listar}}}
-   * {{{banco_resource_listar_notes}}}
-   * @param sort {{{global_menssagem_sort_sort}}}
-   * @param page {{{global_menssagem_sort_page_value}}}
-   * @param limit {{{global_menssagem_sort_limit}}}
-   * @return PageBancoResponse
-   */
-  public PageBancoResponse  listarUsingGET10 (List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/bancos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageBancoResponse) ApiInvoker.deserialize(response, "", PageBancoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * {{{configuracao_registro_cobranca_resource_listar}}}
    * {{{configuracao_registro_cobranca_resource_listar_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -2161,7 +2034,7 @@ public class GlobaltagcadastrogeralApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return ConfiguracaoRegistroCobrancaResponse
    */
-  public ConfiguracaoRegistroCobrancaResponse  listarUsingGET15 (List<String> sort, Integer page, Integer limit) throws ApiException {
+  public ConfiguracaoRegistroCobrancaResponse  listarUsingGET13 (List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -2224,7 +2097,7 @@ public class GlobaltagcadastrogeralApi {
    * @param idProduto {{{configuracao_rotativo_request_id_produto_value}}}
    * @return PageConfiguracaoRotativoResponse
    */
-  public PageConfiguracaoRotativoResponse  listarUsingGET16 (List<String> sort, Integer page, Integer limit, Long idProduto) throws ApiException {
+  public PageConfiguracaoRotativoResponse  listarUsingGET14 (List<String> sort, Integer page, Integer limit, Long idProduto) throws ApiException {
     Object postBody = null;
     
 
@@ -2298,7 +2171,7 @@ public class GlobaltagcadastrogeralApi {
    * @param dataCancelamentoPortador {{{portador_request_data_cancelamento_portador_value}}}
    * @return PagePortadorResponse
    */
-  public PagePortadorResponse  listarUsingGET43 (List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
+  public PagePortadorResponse  listarUsingGET35 (List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
 
@@ -2383,7 +2256,7 @@ public class GlobaltagcadastrogeralApi {
    * @param idFantasiaBasica {{{produto_request_id_fantasia_basica_value}}}
    * @return PageProdutoResponse
    */
-  public PageProdutoResponse  listarUsingGET44 (List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
+  public PageProdutoResponse  listarUsingGET36 (List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
     Object postBody = null;
     
 
@@ -2456,7 +2329,7 @@ public class GlobaltagcadastrogeralApi {
    * @param idUsuario {{{promotor_request_id_usuario_value}}}
    * @return PagePromotorResponse
    */
-  public PagePromotorResponse  listarUsingGET45 (List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
+  public PagePromotorResponse  listarUsingGET37 (List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
     Object postBody = null;
     
 
@@ -2530,7 +2403,7 @@ public class GlobaltagcadastrogeralApi {
    * @param descricao {{{tipo_ajuste_request_descricao_value}}}
    * @return PageTipoAjusteResponse
    */
-  public PageTipoAjusteResponse  listarUsingGET55 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse  listarUsingGET47 (List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -2598,7 +2471,7 @@ public class GlobaltagcadastrogeralApi {
    * @param nome {{{tipo_endereco_request_nome_value}}}
    * @return PageTipoEnderecoResponse
    */
-  public PageTipoEnderecoResponse  listarUsingGET57 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoEnderecoResponse  listarUsingGET49 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2666,7 +2539,7 @@ public class GlobaltagcadastrogeralApi {
    * @param nome {{{tipo_telefone_request_nome_value}}}
    * @return PageTipoTelefoneResponse
    */
-  public PageTipoTelefoneResponse  listarUsingGET59 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefoneResponse  listarUsingGET51 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
@@ -2734,7 +2607,7 @@ public class GlobaltagcadastrogeralApi {
    * @param dataVencimentoFim {{{calendario_fatura_request_data_fim_value}}}
    * @return PageControleVencimentoResponse
    */
-  public PageControleVencimentoResponse  listarUsingGET66 (List<String> sort, Integer page, Integer limit, String dataVencimento, String dataVencimentoFim) throws ApiException {
+  public PageControleVencimentoResponse  listarUsingGET57 (List<String> sort, Integer page, Integer limit, String dataVencimento, String dataVencimentoFim) throws ApiException {
     Object postBody = null;
     
 
@@ -2804,7 +2677,7 @@ public class GlobaltagcadastrogeralApi {
    * @param dataAtendimento {{{atendimento_cliente_request_data_atendimento_value}}}
    * @return PageAtendimentoClienteResponse
    */
-  public PageAtendimentoClienteResponse  listarUsingGET8 (List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
+  public PageAtendimentoClienteResponse  listarUsingGET7 (List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2857,6 +2730,68 @@ public class GlobaltagcadastrogeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageAtendimentoClienteResponse) ApiInvoker.deserialize(response, "", PageAtendimentoClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{banco_resource_listar}}}
+   * {{{banco_resource_listar_notes}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @return PageBancoResponse
+   */
+  public PageBancoResponse  listarUsingGET9 (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/bancos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageBancoResponse) ApiInvoker.deserialize(response, "", PageBancoResponse.class);
       }
       else {
         return null;
@@ -2952,12 +2887,12 @@ public class GlobaltagcadastrogeralApi {
    * @param campanhaPersist campanhaPersist
    * @return CampanhaResponse
    */
-  public CampanhaResponse  salvarUsingPOST5 (CampanhaPersist campanhaPersist) throws ApiException {
+  public CampanhaResponse  salvarUsingPOST4 (CampanhaPersist campanhaPersist) throws ApiException {
     Object postBody = campanhaPersist;
     
     // verify the required parameter 'campanhaPersist' is set
     if (campanhaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST5");
+       throw new ApiException(400, "Missing the required parameter 'campanhaPersist' when calling salvarUsingPOST4");
     }
     
 
@@ -3011,12 +2946,12 @@ public class GlobaltagcadastrogeralApi {
    * @param configuracaoRotativoPersist configuracaoRotativoPersist
    * @return ConfiguracaoRotativoDetalheResponse
    */
-  public ConfiguracaoRotativoDetalheResponse  salvarUsingPOST7 (ConfiguracaoRotativoPersist configuracaoRotativoPersist) throws ApiException {
+  public ConfiguracaoRotativoDetalheResponse  salvarUsingPOST5 (ConfiguracaoRotativoPersist configuracaoRotativoPersist) throws ApiException {
     Object postBody = configuracaoRotativoPersist;
     
     // verify the required parameter 'configuracaoRotativoPersist' is set
     if (configuracaoRotativoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST7");
+       throw new ApiException(400, "Missing the required parameter 'configuracaoRotativoPersist' when calling salvarUsingPOST5");
     }
     
 

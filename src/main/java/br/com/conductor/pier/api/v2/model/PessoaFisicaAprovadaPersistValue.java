@@ -75,6 +75,14 @@ public class PessoaFisicaAprovadaPersistValue  {
   private BigDecimal limiteParcelas = null;
   @SerializedName("limiteConsignado")
   private BigDecimal limiteConsignado = null;
+  @SerializedName("nomeReferencia1")
+  private String nomeReferencia1 = null;
+  @SerializedName("enderecoReferencia1")
+  private String enderecoReferencia1 = null;
+  @SerializedName("nomeReferencia2")
+  private String nomeReferencia2 = null;
+  @SerializedName("enderecoReferencia2")
+  private String enderecoReferencia2 = null;
 
   
   /**
@@ -437,6 +445,54 @@ public class PessoaFisicaAprovadaPersistValue  {
   }
 
   
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -473,6 +529,10 @@ public class PessoaFisicaAprovadaPersistValue  {
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
     sb.append("  limiteConsignado: ").append(limiteConsignado).append("\n");
+    sb.append("  nomeReferencia1: ").append(nomeReferencia1).append("\n");
+    sb.append("  enderecoReferencia1: ").append(enderecoReferencia1).append("\n");
+    sb.append("  nomeReferencia2: ").append(nomeReferencia2).append("\n");
+    sb.append("  enderecoReferencia2: ").append(enderecoReferencia2).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

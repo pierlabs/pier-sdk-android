@@ -180,13 +180,8 @@ public class GlobaltagdebitorecorrenteApi {
    * @param dataHoraUltimoPagamento {{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}}
    * @return PageContaDebitoRecorrenteResponse
    */
-  public PageContaDebitoRecorrenteResponse  listarUsingGET18 (Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
+  public PageContaDebitoRecorrenteResponse  listarUsingGET16 (Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
     Object postBody = null;
-    
-    // verify the required parameter 'idConta' is set
-    if (idConta == null) {
-       throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET18");
-    }
     
 
     // create path and map variables
@@ -263,7 +258,7 @@ public class GlobaltagdebitorecorrenteApi {
    * @param flagAtivo {{{tipo_debito_recorrente_request_flag_ativo_value}}}
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse  listarUsingGET56 (List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse  listarUsingGET48 (List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
 

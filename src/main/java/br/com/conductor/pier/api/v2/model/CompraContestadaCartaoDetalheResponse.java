@@ -16,6 +16,8 @@ public class CompraContestadaCartaoDetalheResponse  {
   private String numeroCartao = null;
   @SerializedName("portador")
   private String portador = null;
+  @SerializedName("idConta")
+  private Long idConta = null;
   @SerializedName("nomePlastico")
   private String nomePlastico = null;
   @SerializedName("dataValidade")
@@ -47,6 +49,18 @@ public class CompraContestadaCartaoDetalheResponse  {
   }
   public void setPortador(String portador) {
     this.portador = portador;
+  }
+
+  
+  /**
+   * {{{compra_contestada_cartao_detalhe_response_id_conta_value}}}
+   **/
+  @ApiModelProperty(value = "{{{compra_contestada_cartao_detalhe_response_id_conta_value}}}")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
   }
 
   
@@ -106,6 +120,7 @@ public class CompraContestadaCartaoDetalheResponse  {
     
     sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
     sb.append("  portador: ").append(portador).append("\n");
+    sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  nomePlastico: ").append(nomePlastico).append("\n");
     sb.append("  dataValidade: ").append(dataValidade).append("\n");
     sb.append("  statusCartao: ").append(statusCartao).append("\n");

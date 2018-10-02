@@ -44,6 +44,8 @@ public class ConfiguracaoRegistroCobrancaPersist  {
   private String secret = null;
   @SerializedName("clientID")
   private String clientID = null;
+  @SerializedName("chave")
+  private String chave = null;
 
   
   /**
@@ -226,6 +228,18 @@ public class ConfiguracaoRegistroCobrancaPersist  {
   }
 
   
+  /**
+   * {{{configuracao_registro_cobranca_persist_chave_value}}}
+   **/
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_chave_value}}}")
+  public String getChave() {
+    return chave;
+  }
+  public void setChave(String chave) {
+    this.chave = chave;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -247,6 +261,7 @@ public class ConfiguracaoRegistroCobrancaPersist  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  secret: ").append(secret).append("\n");
     sb.append("  clientID: ").append(clientID).append("\n");
+    sb.append("  chave: ").append(chave).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

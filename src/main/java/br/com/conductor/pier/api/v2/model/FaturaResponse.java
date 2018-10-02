@@ -33,6 +33,8 @@ public class FaturaResponse  {
   private BigDecimal valorPagamentoMinimo = null;
   @SerializedName("saldoAnterior")
   private BigDecimal saldoAnterior = null;
+  @SerializedName("idBoleto")
+  private Long idBoleto = null;
 
   
   /**
@@ -143,6 +145,18 @@ public class FaturaResponse  {
   }
 
   
+  /**
+   * {{{fatura_response_id_boleto_value}}}
+   **/
+  @ApiModelProperty(value = "{{{fatura_response_id_boleto_value}}}")
+  public Long getIdBoleto() {
+    return idBoleto;
+  }
+  public void setIdBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -158,6 +172,7 @@ public class FaturaResponse  {
     sb.append("  valorTotal: ").append(valorTotal).append("\n");
     sb.append("  valorPagamentoMinimo: ").append(valorPagamentoMinimo).append("\n");
     sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
+    sb.append("  idBoleto: ").append(idBoleto).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -37,6 +37,8 @@ public class FaturaDetalheResponse  {
   private List<LancamentoFaturaResponse> lancamentosFaturaResponse = null;
   @SerializedName("saldoAnterior")
   private BigDecimal saldoAnterior = null;
+  @SerializedName("idBoleto")
+  private Long idBoleto = null;
 
   
   /**
@@ -159,6 +161,18 @@ public class FaturaDetalheResponse  {
   }
 
   
+  /**
+   * {{{fatura_response_id_boleto_value}}}
+   **/
+  @ApiModelProperty(value = "{{{fatura_response_id_boleto_value}}}")
+  public Long getIdBoleto() {
+    return idBoleto;
+  }
+  public void setIdBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -175,6 +189,7 @@ public class FaturaDetalheResponse  {
     sb.append("  valorPagamentoMinimo: ").append(valorPagamentoMinimo).append("\n");
     sb.append("  lancamentosFaturaResponse: ").append(lancamentosFaturaResponse).append("\n");
     sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
+    sb.append("  idBoleto: ").append(idBoleto).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -169,12 +169,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_conta_resource_consultar_param_id}}}
    * @return StatusContaResponse
    */
-  public StatusContaResponse  consultarUsingGET38 (Long id) throws ApiException {
+  public StatusContaResponse  consultarUsingGET32 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
     }
     
 
@@ -228,12 +228,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_impressao_resource_consultar_param_id}}}
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse  consultarUsingGET39 (Long id) throws ApiException {
+  public StatusImpressaoResponse  consultarUsingGET33 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
     }
     
 
@@ -430,59 +430,6 @@ public class GlobaltagstatusparametroApi {
   }
   
   /**
-   * {{{enum_resource_listar_tipos_eventos_transacoes}}}
-   * {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
-   * @return List<Object>
-   */
-  public List<Object>  listarTiposEventosTransacoesUsingGET () throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/tipos-eventos-transacoes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (List<Object>) ApiInvoker.deserialize(response, "array", Object.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * {{{status_conta_resource_listar}}}
    * {{{status_conta_resource_listar_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -501,7 +448,7 @@ public class GlobaltagstatusparametroApi {
    * @param permiteAtribuirComoCancelamento {{{status_conta_request_permite_atribuir_como_cancelamento_value}}}
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse  listarUsingGET49 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+  public PageStatusContaResponse  listarUsingGET41 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
     Object postBody = null;
     
 
@@ -587,7 +534,7 @@ public class GlobaltagstatusparametroApi {
    * @param nome {{{status_impressao_request_nome_value}}}
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse  listarUsingGET50 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 

@@ -66,6 +66,24 @@ public class ContaDetalheResponse  {
   private Long diasAtraso = null;
   @SerializedName("proximoVencimentoPadrao")
   private String proximoVencimentoPadrao = null;
+  @SerializedName("idProposta")
+  private Long idProposta = null;
+  @SerializedName("quantidadePagamentos")
+  private Integer quantidadePagamentos = null;
+  @SerializedName("correspondencia")
+  private Long correspondencia = null;
+  @SerializedName("dataInicioAtraso")
+  private String dataInicioAtraso = null;
+  @SerializedName("aceitaNovaContaPorGrupoProduto")
+  private Boolean aceitaNovaContaPorGrupoProduto = null;
+  @SerializedName("rotativoPagaJuros")
+  private BigDecimal rotativoPagaJuros = null;
+  @SerializedName("totalPosProx")
+  private BigDecimal totalPosProx = null;
+  @SerializedName("saldoAtualFinal")
+  private BigDecimal saldoAtualFinal = null;
+  @SerializedName("saldoExtratoAnterior")
+  private BigDecimal saldoExtratoAnterior = null;
 
   
   /**
@@ -392,6 +410,114 @@ public class ContaDetalheResponse  {
   }
 
   
+  /**
+   * {{{conta_detalhe_response_id_proposta_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_id_proposta_value}}}")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_quantidade_pagamentos_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_quantidade_pagamentos_value}}}")
+  public Integer getQuantidadePagamentos() {
+    return quantidadePagamentos;
+  }
+  public void setQuantidadePagamentos(Integer quantidadePagamentos) {
+    this.quantidadePagamentos = quantidadePagamentos;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_correspondencia_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_correspondencia_value}}}")
+  public Long getCorrespondencia() {
+    return correspondencia;
+  }
+  public void setCorrespondencia(Long correspondencia) {
+    this.correspondencia = correspondencia;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_data_inicio_atraso_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_data_inicio_atraso_value}}}")
+  public String getDataInicioAtraso() {
+    return dataInicioAtraso;
+  }
+  public void setDataInicioAtraso(String dataInicioAtraso) {
+    this.dataInicioAtraso = dataInicioAtraso;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}")
+  public Boolean getAceitaNovaContaPorGrupoProduto() {
+    return aceitaNovaContaPorGrupoProduto;
+  }
+  public void setAceitaNovaContaPorGrupoProduto(Boolean aceitaNovaContaPorGrupoProduto) {
+    this.aceitaNovaContaPorGrupoProduto = aceitaNovaContaPorGrupoProduto;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_rotativo_paga_juros}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_rotativo_paga_juros}}}")
+  public BigDecimal getRotativoPagaJuros() {
+    return rotativoPagaJuros;
+  }
+  public void setRotativoPagaJuros(BigDecimal rotativoPagaJuros) {
+    this.rotativoPagaJuros = rotativoPagaJuros;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_total_pos_proximo}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_total_pos_proximo}}}")
+  public BigDecimal getTotalPosProx() {
+    return totalPosProx;
+  }
+  public void setTotalPosProx(BigDecimal totalPosProx) {
+    this.totalPosProx = totalPosProx;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_atual_final}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_saldo_atual_final}}}")
+  public BigDecimal getSaldoAtualFinal() {
+    return saldoAtualFinal;
+  }
+  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_extrato_anterior}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_saldo_extrato_anterior}}}")
+  public BigDecimal getSaldoExtratoAnterior() {
+    return saldoExtratoAnterior;
+  }
+  public void setSaldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
+    this.saldoExtratoAnterior = saldoExtratoAnterior;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -425,6 +551,15 @@ public class ContaDetalheResponse  {
     sb.append("  saldoDisponivelSaque: ").append(saldoDisponivelSaque).append("\n");
     sb.append("  diasAtraso: ").append(diasAtraso).append("\n");
     sb.append("  proximoVencimentoPadrao: ").append(proximoVencimentoPadrao).append("\n");
+    sb.append("  idProposta: ").append(idProposta).append("\n");
+    sb.append("  quantidadePagamentos: ").append(quantidadePagamentos).append("\n");
+    sb.append("  correspondencia: ").append(correspondencia).append("\n");
+    sb.append("  dataInicioAtraso: ").append(dataInicioAtraso).append("\n");
+    sb.append("  aceitaNovaContaPorGrupoProduto: ").append(aceitaNovaContaPorGrupoProduto).append("\n");
+    sb.append("  rotativoPagaJuros: ").append(rotativoPagaJuros).append("\n");
+    sb.append("  totalPosProx: ").append(totalPosProx).append("\n");
+    sb.append("  saldoAtualFinal: ").append(saldoAtualFinal).append("\n");
+    sb.append("  saldoExtratoAnterior: ").append(saldoExtratoAnterior).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

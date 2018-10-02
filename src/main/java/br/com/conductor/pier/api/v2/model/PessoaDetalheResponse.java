@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
+import java.math.BigDecimal;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -33,6 +34,16 @@ public class PessoaDetalheResponse  {
   private String email = null;
   @SerializedName("nomeEmpresa")
   private String nomeEmpresa = null;
+  @SerializedName("nomeReferencia1")
+  private String nomeReferencia1 = null;
+  @SerializedName("salario")
+  private BigDecimal salario = null;
+  @SerializedName("enderecoReferencia1")
+  private String enderecoReferencia1 = null;
+  @SerializedName("nomeReferencia2")
+  private String nomeReferencia2 = null;
+  @SerializedName("enderecoReferencia2")
+  private String enderecoReferencia2 = null;
 
   
   /**
@@ -167,6 +178,66 @@ public class PessoaDetalheResponse  {
   }
 
   
+  /**
+   * {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_referencia_1_value}}}")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_salario_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_salario_value}}}")
+  public BigDecimal getSalario() {
+    return salario;
+  }
+  public void setSalario(BigDecimal salario) {
+    this.salario = salario;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_endereco_referencia_1_value}}}")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_referencia_2_value}}}")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_endereco_referencia_2_value}}}")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -184,6 +255,11 @@ public class PessoaDetalheResponse  {
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
     sb.append("  email: ").append(email).append("\n");
     sb.append("  nomeEmpresa: ").append(nomeEmpresa).append("\n");
+    sb.append("  nomeReferencia1: ").append(nomeReferencia1).append("\n");
+    sb.append("  salario: ").append(salario).append("\n");
+    sb.append("  enderecoReferencia1: ").append(enderecoReferencia1).append("\n");
+    sb.append("  nomeReferencia2: ").append(nomeReferencia2).append("\n");
+    sb.append("  enderecoReferencia2: ").append(enderecoReferencia2).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
