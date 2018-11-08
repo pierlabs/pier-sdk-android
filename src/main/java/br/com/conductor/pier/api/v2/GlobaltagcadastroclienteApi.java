@@ -27,8 +27,8 @@ import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponseValue;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaPersistValue;
-import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaPersist;
 
@@ -149,14 +149,21 @@ public class GlobaltagcadastroclienteApi {
    * @param enderecoReferencia1 {{{pessoa_detalhe_update_endereco_referencia_1_value}}}
    * @param nomeReferencia2 {{{pessoa_detalhe_update_nome_referencia_2_value}}}
    * @param enderecoReferencia2 {{{pessoa_detalhe_update_endereco_referencia_2_value}}}
+   * @param impedidoFinanciamento {{{pessoa_detalhe_update_impedido_de_financiamento_value}}}
+   * @param naturalidadeCidade {{{pessoa_detalhe_update_naturalidade_Cidade_value}}}
+   * @param naturalidadeEstado {{{pessoa_detalhe_update_naturalidade_Estado_value}}}
+   * @param grauInstrucao {{{pessoa_detalhe_update_grau_Instrucao_value}}}
+   * @param numeroDependentes {{{pessoa_detalhe_update_numero_Dependentes_value}}}
+   * @param nomePai {{{pessoa_detalhe_update_nome_Pai_value}}}
+   * @param chequeEspecial {{{pessoa_detalhe_update_cheque_Especial_value}}}
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  alterarUsingPUT12 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2) throws ApiException {
+  public PessoaDetalheResponse  alterarUsingPUT13 (Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, Boolean impedidoFinanciamento, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT12");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT13");
     }
     
 
@@ -198,6 +205,20 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeReferencia2", nomeReferencia2));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "enderecoReferencia2", enderecoReferencia2));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "impedidoFinanciamento", impedidoFinanciamento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeCidade", naturalidadeCidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeEstado", naturalidadeEstado));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "grauInstrucao", grauInstrucao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroDependentes", numeroDependentes));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomePai", nomePai));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "chequeEspecial", chequeEspecial));
     
 
     
@@ -248,27 +269,27 @@ public class GlobaltagcadastroclienteApi {
    * @param dataEmissaoIdentidade {{{pessoa_persist_data_emissao_identidade_value}}}
    * @return PessoaResponse
    */
-  public PessoaResponse  alterarUsingPUT13 (Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse  alterarUsingPUT14 (Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT13");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT14");
     }
     
     // verify the required parameter 'nome' is set
     if (nome == null) {
-       throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT13");
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT14");
     }
     
     // verify the required parameter 'tipo' is set
     if (tipo == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT13");
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT14");
     }
     
     // verify the required parameter 'dataNascimento' is set
     if (dataNascimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT13");
+       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT14");
     }
     
 
@@ -346,12 +367,12 @@ public class GlobaltagcadastroclienteApi {
    * @param ramal {{{telefone_alterar_persist_ramal_value}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse  alterarUsingPUT15 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse  alterarUsingPUT16 (Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT15");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT16");
     }
     
 
@@ -424,14 +445,16 @@ public class GlobaltagcadastroclienteApi {
    * @param cidade {{{endereco_persist_cidade_value}}}
    * @param uf {{{endereco_persist_uf_value}}}
    * @param pais {{{endereco_persist_pais_value}}}
+   * @param tempoResidenciaAnos {{{endereco_persist_tempo_residencia_anos_value}}}
+   * @param tempoResidenciaMeses {{{endereco_persist_tempo_residencia_meses_value}}}
    * @return EnderecoResponse
    */
-  public EnderecoResponse  alterarUsingPUT4 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse  alterarUsingPUT5 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT4");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT5");
     }
     
 
@@ -469,6 +492,10 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "uf", uf));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "pais", pais));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaAnos", tempoResidenciaAnos));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaMeses", tempoResidenciaMeses));
     
 
     
@@ -955,12 +982,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  consultarUsingGET26 (Long id) throws ApiException {
+  public PessoaDetalheResponse  consultarUsingGET27 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
     }
     
 
@@ -1014,12 +1041,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{pessoa_resource_consultar_param_id}}}
    * @return PessoaResponse
    */
-  public PessoaResponse  consultarUsingGET27 (Long id) throws ApiException {
+  public PessoaResponse  consultarUsingGET28 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
     }
     
 
@@ -1073,12 +1100,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{telefone_resource_consultar_param_id}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse  consultarUsingGET35 (Long id) throws ApiException {
+  public TelefoneResponse  consultarUsingGET36 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
     }
     
 
@@ -1476,9 +1503,11 @@ public class GlobaltagcadastroclienteApi {
    * @param pais {{{endereco_request_pais_value}}}
    * @param dataInclusao {{{endereco_request_data_inclusao_value}}}
    * @param dataUltimaAtualizacao {{{endereco_request_data_ultima_atualizacao_value}}}
+   * @param tempoResidenciaAnos {{{endereco_request_tempo_residencia_anos_value}}}
+   * @param tempoResidenciaMeses {{{endereco_request_tempo_residencia_meses_value}}}
    * @return PageEnderecoResponse
    */
-  public PageEnderecoResponse  listarUsingGET21 (List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
+  public PageEnderecoResponse  listarUsingGET20 (List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses) throws ApiException {
     Object postBody = null;
     
 
@@ -1526,6 +1555,10 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInclusao", dataInclusao));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataUltimaAtualizacao", dataUltimaAtualizacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaAnos", tempoResidenciaAnos));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaMeses", tempoResidenciaMeses));
     
 
     
@@ -1577,9 +1610,16 @@ public class GlobaltagcadastroclienteApi {
    * @param numeroContaCorrente {{{pessoa_detalhe_request_numero_conta_corrente_value}}}
    * @param email {{{pessoa_detalhe_request_email_value}}}
    * @param nomeEmpresa {{{pessoa_detalhe_request_nome_empresa_value}}}
+   * @param naturalidadeCidade {{{pessoa_detalhe_request_naturalidade_Cidade_value}}}
+   * @param naturalidadeEstado {{{pessoa_detalhe_request_naturalidade_Estado_value}}}
+   * @param grauInstrucao {{{pessoa_detalhe_request_grau_Instrucao_value}}}
+   * @param numeroDependentes {{{pessoa_detalhe_request_numero_Dependentes_value}}}
+   * @param nomePai {{{pessoa_detalhe_request_nome_Pai_value}}}
+   * @param chequeEspecial {{{pessoa_detalhe_request_cheque_Especial_value}}}
+   * @param impedidoFinanciamento {{{pessoa_detalhe_request_impedido_de_financiamento_value}}}
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento) throws ApiException {
     Object postBody = null;
     
 
@@ -1621,6 +1661,20 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "email", email));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeEmpresa", nomeEmpresa));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeCidade", naturalidadeCidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeEstado", naturalidadeEstado));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "grauInstrucao", grauInstrucao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroDependentes", numeroDependentes));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomePai", nomePai));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "chequeEspecial", chequeEspecial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "impedidoFinanciamento", impedidoFinanciamento));
     
 
     
@@ -1765,7 +1819,7 @@ public class GlobaltagcadastroclienteApi {
    * @param status {{{telefone_request_status_value}}}
    * @return PageTelefoneResponse
    */
-  public PageTelefoneResponse  listarUsingGET45 (List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefoneResponse  listarUsingGET46 (List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -1837,9 +1891,9 @@ public class GlobaltagcadastroclienteApi {
    * {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada}}}
    * {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada_notes}}}
    * @param pessoaPersist pessoaPersist
-   * @return PessoaFisicaAprovadaResponse
+   * @return PessoaFisicaAprovadaResponseValue
    */
-  public PessoaFisicaAprovadaResponse  salvarPessoaFisicaAprovadaUsingPOST (PessoaFisicaAprovadaPersistValue pessoaPersist) throws ApiException {
+  public PessoaFisicaAprovadaResponseValue  salvarPessoaFisicaAprovadaUsingPOST (PessoaFisicaAprovadaPersistValue pessoaPersist) throws ApiException {
     Object postBody = pessoaPersist;
     
     // verify the required parameter 'pessoaPersist' is set
@@ -1882,7 +1936,7 @@ public class GlobaltagcadastroclienteApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PessoaFisicaAprovadaResponse) ApiInvoker.deserialize(response, "", PessoaFisicaAprovadaResponse.class);
+        return (PessoaFisicaAprovadaResponseValue) ApiInvoker.deserialize(response, "", PessoaFisicaAprovadaResponseValue.class);
       }
       else {
         return null;
@@ -1965,9 +2019,11 @@ public class GlobaltagcadastroclienteApi {
    * @param cidade {{{endereco_persist_cidade_value}}}
    * @param uf {{{endereco_persist_uf_value}}}
    * @param pais {{{endereco_persist_pais_value}}}
+   * @param tempoResidenciaAnos {{{endereco_persist_tempo_residencia_anos_value}}}
+   * @param tempoResidenciaMeses {{{endereco_persist_tempo_residencia_meses_value}}}
    * @return EnderecoResponse
    */
-  public EnderecoResponse  salvarUsingPOST12 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse  salvarUsingPOST13 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses) throws ApiException {
     Object postBody = null;
     
 
@@ -2003,6 +2059,10 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "uf", uf));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "pais", pais));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaAnos", tempoResidenciaAnos));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaMeses", tempoResidenciaMeses));
     
 
     
@@ -2044,12 +2104,12 @@ public class GlobaltagcadastroclienteApi {
    * @param body {{{integracao_emissor_resource_salvar_param_body}}}
    * @return IntegracaoEmissorResponse
    */
-  public IntegracaoEmissorResponse  salvarUsingPOST15 (Long id, IntegracaoEmissorPersist body) throws ApiException {
+  public IntegracaoEmissorResponse  salvarUsingPOST16 (Long id, IntegracaoEmissorPersist body) throws ApiException {
     Object postBody = body;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST15");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST16");
     }
     
 
@@ -2115,14 +2175,21 @@ public class GlobaltagcadastroclienteApi {
    * @param enderecoReferencia1 {{{pessoa_detalhe_persist_endereco_referencia_1_value}}}
    * @param nomeReferencia2 {{{pessoa_detalhe_persist_nome_referencia_2_value}}}
    * @param enderecoReferencia2 {{{pessoa_detalhe_persist_endereco_referencia_2_value}}}
+   * @param naturalidadeCidade {{{pessoa_detalhe_persist_naturalidade_Cidade_value}}}
+   * @param naturalidadeEstado {{{pessoa_detalhe_persist_naturalidade_Estado_value}}}
+   * @param grauInstrucao {{{pessoa_detalhe_persist_grau_Instrucao_value}}}
+   * @param numeroDependentes {{{pessoa_detalhe_persist_numero_Dependentes_value}}}
+   * @param nomePai {{{pessoa_detalhe_persist_nome_Pai_value}}}
+   * @param chequeEspecial {{{pessoa_detalhe_persist_cheque_Especial_value}}}
+   * @param impedidoFinanciamento {{{pessoa_detalhe_persist_impedido_de_financiamento_value}}}
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse  salvarUsingPOST20 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2) throws ApiException {
+  public PessoaDetalheResponse  salvarUsingPOST21 (Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idPessoa' is set
     if (idPessoa == null) {
-       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST20");
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST21");
     }
     
 
@@ -2166,6 +2233,20 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeReferencia2", nomeReferencia2));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "enderecoReferencia2", enderecoReferencia2));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeCidade", naturalidadeCidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "naturalidadeEstado", naturalidadeEstado));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "grauInstrucao", grauInstrucao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroDependentes", numeroDependentes));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomePai", nomePai));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "chequeEspecial", chequeEspecial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "impedidoFinanciamento", impedidoFinanciamento));
     
 
     
@@ -2215,22 +2296,22 @@ public class GlobaltagcadastroclienteApi {
    * @param dataEmissaoIdentidade {{{pessoa_persist_data_emissao_identidade_value}}}
    * @return PessoaResponse
    */
-  public PessoaResponse  salvarUsingPOST21 (String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse  salvarUsingPOST22 (String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'nome' is set
     if (nome == null) {
-       throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST21");
+       throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST22");
     }
     
     // verify the required parameter 'tipo' is set
     if (tipo == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST21");
+       throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST22");
     }
     
     // verify the required parameter 'dataNascimento' is set
     if (dataNascimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST21");
+       throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST22");
     }
     
 
@@ -2308,7 +2389,7 @@ public class GlobaltagcadastroclienteApi {
    * @param ramal {{{telefone_persist_ramal_value}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse  salvarUsingPOST24 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse  salvarUsingPOST26 (Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
 

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{Bin_response_description}}}
+ * {{{tipo_chave_response_description}}}
  **/
-@ApiModel(description = "{{{Bin_response_description}}}")
+@ApiModel(description = "{{{tipo_chave_response_description}}}")
 public class TipoChaveResponse  {
   
   @SerializedName("id")

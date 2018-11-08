@@ -10,6 +10,10 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.PropostaResponse;
 import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
+import br.com.conductor.pier.api.v2.model.DocumentoPropostaResponse;
+import br.com.conductor.pier.api.v2.model.DocumentoPropostaPersist;
+import br.com.conductor.pier.api.v2.model.PageDocumentoCreditoResponse;
+import br.com.conductor.pier.api.v2.model.PageDocumentoPropostaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusPropostaResponse;
 import br.com.conductor.pier.api.v2.model.PagePropostaResponse;
 
@@ -112,12 +116,12 @@ public class GlobaltagpropostaApi {
    * @param id {{{proposta_resource_consultar_param_id}}}
    * @return PropostaResponse
    */
-  public PropostaResponse  consultarUsingGET29 (Long id) throws ApiException {
+  public PropostaResponse  consultarUsingGET30 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
     }
     
 
@@ -156,6 +160,249 @@ public class GlobaltagpropostaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PropostaResponse) ApiInvoker.deserialize(response, "", PropostaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{documento_proposta_resource_enviar}}}
+   * {{{documento_proposta_resource_enviar_notes}}}
+   * @param persist persist
+   * @return DocumentoPropostaResponse
+   */
+  public DocumentoPropostaResponse  enviarDocumentoPropostaUsingPOST (DocumentoPropostaPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling enviarDocumentoPropostaUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/documentos-propostas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (DocumentoPropostaResponse) ApiInvoker.deserialize(response, "", DocumentoPropostaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{documento_proposta_resource_listar_documentos_credito}}}
+   * {{{documento_proposta_resource_listar_documentos_credito_notes}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @param id {{{documento_credito_request_id_value}}}
+   * @param descricao {{{documento_credito_request_descricao_value}}}
+   * @param tela {{{documento_credito_request_flag_tela_value}}}
+   * @param doc {{{documento_credito_request_flag_doc_value}}}
+   * @param idAtividadeDeCredito {{{documento_credito_request_id_atividade_credito_value}}}
+   * @param obrigatorio {{{documento_credito_request_flag_obrigatorio_value}}}
+   * @return PageDocumentoCreditoResponse
+   */
+  public PageDocumentoCreditoResponse  listarDocumentosCreditoUsingGET (List<String> sort, Integer page, Integer limit, Long id, String descricao, Integer tela, Integer doc, Long idAtividadeDeCredito, Integer obrigatorio) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/documentos-creditos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tela", tela));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "doc", doc));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idAtividadeDeCredito", idAtividadeDeCredito));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "obrigatorio", obrigatorio));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageDocumentoCreditoResponse) ApiInvoker.deserialize(response, "", PageDocumentoCreditoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{documento_proposta_resource_listar}}}
+   * {{{documento_proposta_resource_listar_notes}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @param id {{{documento_proposta_request_id_value}}}
+   * @param idProposta {{{documento_proposta_request_id_proposta_value}}}
+   * @param idDocumentosCredito {{{documento_proposta_request_id_tipo_documento_value}}}
+   * @param idStatusDocumentosCredito {{{documento_proposta_request_id_status_documento_credito_value}}}
+   * @param idCondicoesDocumentosCredito {{{documento_proposta_request_id_condicao_documento_credito_value}}}
+   * @param idTipoDocumentoCredito {{{documento_proposta_request_id_tipo_documento_credito_value}}}
+   * @param idPessoaFisica {{{documento_proposta_request_id_pessoa_fisica_value}}}
+   * @param idLogAtendimento {{{documento_proposta_request_id_log_atendimento_value}}}
+   * @param responsavel {{{documento_proposta_request_responsavel_value}}}
+   * @param flagDocumentoDigitalizado {{{documento_proposta_request_flag_documento_digitalizado_value}}}
+   * @param documentoDigitalizado {{{documento_proposta_request_documento_digitalizado_value}}}
+   * @param seqAnaliseCondicao {{{documento_proposta_request_seq_analise_condicao_value}}}
+   * @param observacao {{{documento_proposta_request_observacao_value}}}
+   * @param dataStatus {{{documento_proposta_request_data_status_value}}}
+   * @return PageDocumentoPropostaResponse
+   */
+  public PageDocumentoPropostaResponse  listarDocumentosPropostaUsingGET (List<String> sort, Integer page, Integer limit, Long id, Long idProposta, Long idDocumentosCredito, Long idStatusDocumentosCredito, Long idCondicoesDocumentosCredito, Long idTipoDocumentoCredito, Long idPessoaFisica, Long idLogAtendimento, String responsavel, Integer flagDocumentoDigitalizado, String documentoDigitalizado, Long seqAnaliseCondicao, String observacao, String dataStatus) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/documentos-propostas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idProposta", idProposta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idDocumentosCredito", idDocumentosCredito));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idStatusDocumentosCredito", idStatusDocumentosCredito));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCondicoesDocumentosCredito", idCondicoesDocumentosCredito));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoDocumentoCredito", idTipoDocumentoCredito));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idLogAtendimento", idLogAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "responsavel", responsavel));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagDocumentoDigitalizado", flagDocumentoDigitalizado));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "documentoDigitalizado", documentoDigitalizado));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "seqAnaliseCondicao", seqAnaliseCondicao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataStatus", dataStatus));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageDocumentoPropostaResponse) ApiInvoker.deserialize(response, "", PageDocumentoPropostaResponse.class);
       }
       else {
         return null;

@@ -20,6 +20,8 @@ public class AutorizacaoOnUsRequest  {
   private String codigoProcessamento = null;
   @SerializedName("codigoSegurancaCartao")
   private String codigoSegurancaCartao = null;
+  @SerializedName("nomeEstabelecimento")
+  private String nomeEstabelecimento = null;
   @SerializedName("valorTransacao")
   private BigDecimal valorTransacao = null;
   @SerializedName("numeroRealCartao")
@@ -79,6 +81,18 @@ public class AutorizacaoOnUsRequest  {
   }
   public void setCodigoSegurancaCartao(String codigoSegurancaCartao) {
     this.codigoSegurancaCartao = codigoSegurancaCartao;
+  }
+
+  
+  /**
+   * {{{autorizacao_on_us_request_nome_estabelecimento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{autorizacao_on_us_request_nome_estabelecimento_value}}}")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
   }
 
   
@@ -164,6 +178,7 @@ public class AutorizacaoOnUsRequest  {
     sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");
     sb.append("  codigoProcessamento: ").append(codigoProcessamento).append("\n");
     sb.append("  codigoSegurancaCartao: ").append(codigoSegurancaCartao).append("\n");
+    sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
     sb.append("  valorTransacao: ").append(valorTransacao).append("\n");
     sb.append("  numeroRealCartao: ").append(numeroRealCartao).append("\n");
     sb.append("  dataValidadeCartao: ").append(dataValidadeCartao).append("\n");

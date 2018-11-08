@@ -20,6 +20,8 @@ public class TransacaoOnUsPorIdCartaoRequest  {
   private BigDecimal valorTransacao = null;
   @SerializedName("numeroEstabelecimento")
   private Long numeroEstabelecimento = null;
+  @SerializedName("nomeEstabelecimento")
+  private String nomeEstabelecimento = null;
   @SerializedName("dataHoraTerminal")
   private String dataHoraTerminal = null;
   @SerializedName("terminalRequisitante")
@@ -77,6 +79,18 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
+   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
    * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    **/
   @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}")
@@ -122,6 +136,7 @@ public class TransacaoOnUsPorIdCartaoRequest  {
     sb.append("  codigoProcessamento: ").append(codigoProcessamento).append("\n");
     sb.append("  valorTransacao: ").append(valorTransacao).append("\n");
     sb.append("  numeroEstabelecimento: ").append(numeroEstabelecimento).append("\n");
+    sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
     sb.append("  dataHoraTerminal: ").append(dataHoraTerminal).append("\n");
     sb.append("  terminalRequisitante: ").append(terminalRequisitante).append("\n");
     sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");

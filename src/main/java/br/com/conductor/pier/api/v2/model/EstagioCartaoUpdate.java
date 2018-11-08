@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{estagio_cartao_update_id}}}
+ * {{{estagio_cartao_update}}}
  **/
-@ApiModel(description = "{{{estagio_cartao_update_id}}}")
+@ApiModel(description = "{{{estagio_cartao_update}}}")
 public class EstagioCartaoUpdate  {
   
   @SerializedName("id")

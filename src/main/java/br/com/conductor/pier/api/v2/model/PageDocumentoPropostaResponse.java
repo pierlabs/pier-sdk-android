@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.CompraContestadaTransacaoResponse;
+import br.com.conductor.pier.api.v2.model.CdtDocumentoProposta;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_compra_contestada_transacao_response_description}}}
+ * {{{page_documento_proposta_response_description}}}
  **/
-@ApiModel(description = "{{{page_compra_contestada_transacao_response_description}}}")
-public class PageCompraContestadaTransacaoResponse  {
+@ApiModel(description = "{{{page_documento_proposta_response_description}}}")
+public class PageDocumentoPropostaResponse  {
   
   @SerializedName("content")
-  private List<CompraContestadaTransacaoResponse> content = null;
+  private List<CdtDocumentoProposta> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageCompraContestadaTransacaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<CompraContestadaTransacaoResponse> getContent() {
+  public List<CdtDocumentoProposta> getContent() {
     return content;
   }
-  public void setContent(List<CompraContestadaTransacaoResponse> content) {
+  public void setContent(List<CdtDocumentoProposta> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PageCompraContestadaTransacaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCompraContestadaTransacaoResponse {\n");
+    sb.append("class PageDocumentoPropostaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

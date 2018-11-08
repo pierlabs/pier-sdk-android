@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponseValue;
 import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
@@ -56,7 +56,7 @@ public class PessoaJuridicaAprovadaResponse  {
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
-  private List<EnderecoAprovadoResponse> enderecos = null;
+  private List<EnderecoAprovadoResponseValue> enderecos = null;
   @SerializedName("socios")
   private List<SocioAprovadoResponse> socios = null;
   @SerializedName("referencias")
@@ -67,6 +67,8 @@ public class PessoaJuridicaAprovadaResponse  {
   private BigDecimal limiteMaximo = null;
   @SerializedName("limiteParcelas")
   private BigDecimal limiteParcelas = null;
+  @SerializedName("impedidoFinanciamento")
+  private Boolean impedidoFinanciamento = null;
 
   
   /**
@@ -301,10 +303,10 @@ public class PessoaJuridicaAprovadaResponse  {
    * {{{pessoa_juridica_aprovada_response_enderecos_value}}}
    **/
   @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_enderecos_value}}}")
-  public List<EnderecoAprovadoResponse> getEnderecos() {
+  public List<EnderecoAprovadoResponseValue> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<EnderecoAprovadoResponse> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
   }
 
@@ -369,6 +371,18 @@ public class PessoaJuridicaAprovadaResponse  {
   }
 
   
+  /**
+   * {{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -400,6 +414,7 @@ public class PessoaJuridicaAprovadaResponse  {
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
+    sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -34,6 +34,13 @@ public class ContaResponse  {
   private String dataUltimaAlteracaoVencimento = null;
   @SerializedName("valorRenda")
   private BigDecimal valorRenda = null;
+  @SerializedName("idProposta")
+  private Long idProposta = null;
+  public enum FuncaoAtivaEnum {
+     DEBITO_CREDITO,  CREDITO, 
+  };
+  @SerializedName("funcaoAtiva")
+  private FuncaoAtivaEnum funcaoAtiva = null;
 
   
   /**
@@ -168,6 +175,30 @@ public class ContaResponse  {
   }
 
   
+  /**
+   * {{{conta_response_id_proposta}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_response_id_proposta}}}")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * {{{conta_response_funcao_ativa_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_response_funcao_ativa_value}}}")
+  public FuncaoAtivaEnum getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(FuncaoAtivaEnum funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -185,6 +216,8 @@ public class ContaResponse  {
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
+    sb.append("  idProposta: ").append(idProposta).append("\n");
+    sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

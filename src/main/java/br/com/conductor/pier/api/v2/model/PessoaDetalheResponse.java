@@ -36,14 +36,28 @@ public class PessoaDetalheResponse  {
   private String nomeEmpresa = null;
   @SerializedName("nomeReferencia1")
   private String nomeReferencia1 = null;
-  @SerializedName("salario")
-  private BigDecimal salario = null;
   @SerializedName("enderecoReferencia1")
   private String enderecoReferencia1 = null;
   @SerializedName("nomeReferencia2")
   private String nomeReferencia2 = null;
   @SerializedName("enderecoReferencia2")
   private String enderecoReferencia2 = null;
+  @SerializedName("salario")
+  private BigDecimal salario = null;
+  @SerializedName("impedidoFinanciamento")
+  private Boolean impedidoFinanciamento = null;
+  @SerializedName("naturalidadeCidade")
+  private String naturalidadeCidade = null;
+  @SerializedName("naturalidadeEstado")
+  private String naturalidadeEstado = null;
+  @SerializedName("grauInstrucao")
+  private Integer grauInstrucao = null;
+  @SerializedName("numeroDependentes")
+  private Integer numeroDependentes = null;
+  @SerializedName("nomePai")
+  private String nomePai = null;
+  @SerializedName("chequeEspecial")
+  private Integer chequeEspecial = null;
 
   
   /**
@@ -191,18 +205,6 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_salario_value}}}
-   **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_salario_value}}}")
-  public BigDecimal getSalario() {
-    return salario;
-  }
-  public void setSalario(BigDecimal salario) {
-    this.salario = salario;
-  }
-
-  
-  /**
    * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
    **/
   @ApiModelProperty(value = "{{{pessoa_detalhe_response_endereco_referencia_1_value}}}")
@@ -238,6 +240,102 @@ public class PessoaDetalheResponse  {
   }
 
   
+  /**
+   * {{{pessoa_detalhe_response_salario_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_salario_value}}}")
+  public BigDecimal getSalario() {
+    return salario;
+  }
+  public void setSalario(BigDecimal salario) {
+    this.salario = salario;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}")
+  public String getNaturalidadeCidade() {
+    return naturalidadeCidade;
+  }
+  public void setNaturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_naturalidade_Estado_value}}}")
+  public String getNaturalidadeEstado() {
+    return naturalidadeEstado;
+  }
+  public void setNaturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_grau_Instrucao_value}}}")
+  public Integer getGrauInstrucao() {
+    return grauInstrucao;
+  }
+  public void setGrauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_numero_Dependentes_value}}}")
+  public Integer getNumeroDependentes() {
+    return numeroDependentes;
+  }
+  public void setNumeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_nome_Pai_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_Pai_value}}}")
+  public String getNomePai() {
+    return nomePai;
+  }
+  public void setNomePai(String nomePai) {
+    this.nomePai = nomePai;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_cheque_Especial_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_detalhe_response_cheque_Especial_value}}}")
+  public Integer getChequeEspecial() {
+    return chequeEspecial;
+  }
+  public void setChequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -256,10 +354,17 @@ public class PessoaDetalheResponse  {
     sb.append("  email: ").append(email).append("\n");
     sb.append("  nomeEmpresa: ").append(nomeEmpresa).append("\n");
     sb.append("  nomeReferencia1: ").append(nomeReferencia1).append("\n");
-    sb.append("  salario: ").append(salario).append("\n");
     sb.append("  enderecoReferencia1: ").append(enderecoReferencia1).append("\n");
     sb.append("  nomeReferencia2: ").append(nomeReferencia2).append("\n");
     sb.append("  enderecoReferencia2: ").append(enderecoReferencia2).append("\n");
+    sb.append("  salario: ").append(salario).append("\n");
+    sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
+    sb.append("  naturalidadeCidade: ").append(naturalidadeCidade).append("\n");
+    sb.append("  naturalidadeEstado: ").append(naturalidadeEstado).append("\n");
+    sb.append("  grauInstrucao: ").append(grauInstrucao).append("\n");
+    sb.append("  numeroDependentes: ").append(numeroDependentes).append("\n");
+    sb.append("  nomePai: ").append(nomePai).append("\n");
+    sb.append("  chequeEspecial: ").append(chequeEspecial).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

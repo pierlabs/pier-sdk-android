@@ -10,6 +10,8 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.OrigemComercialUpdate;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
+import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
+import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorResponse;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoResponse;
@@ -20,8 +22,6 @@ import br.com.conductor.pier.api.v2.model.EstabelecimentoUpdate;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoDTO;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoResponse;
-import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
-import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OrigemComercialPersist;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.DetalheOperacaoResponse;
@@ -146,23 +146,88 @@ public class GlobaltagestabelecimentoApi {
   }
   
   /**
-   * {{{operacao_credor_resource_alterar}}}
-   * {{{operacao_credor_resource_alterar_notes}}}
-   * @param id {{{operacao_credor_resource_alterar_param_id}}}
-   * @param operacaoCredorUpdate operacaoCredorUpdate
-   * @return OperacaoCredorResponse
+   * {{{maquineta_resource_alterar}}}
+   * {{{maquineta_resource_alterar_notes}}}
+   * @param id {{{maquineta_resource_alterar_param_id}}}
+   * @param maquinetaUpdate maquinetaUpdate
+   * @return MaquinetaResponse
    */
-  public OperacaoCredorResponse  alterarUsingPUT10 (Long id, OperacaoCredorUpdate operacaoCredorUpdate) throws ApiException {
-    Object postBody = operacaoCredorUpdate;
+  public MaquinetaResponse  alterarUsingPUT10 (Long id, MaquinetaUpdate maquinetaUpdate) throws ApiException {
+    Object postBody = maquinetaUpdate;
     
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
     }
     
+    // verify the required parameter 'maquinetaUpdate' is set
+    if (maquinetaUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'maquinetaUpdate' when calling alterarUsingPUT10");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/maquinetas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (MaquinetaResponse) ApiInvoker.deserialize(response, "", MaquinetaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{operacao_credor_resource_alterar}}}
+   * {{{operacao_credor_resource_alterar_notes}}}
+   * @param id {{{operacao_credor_resource_alterar_param_id}}}
+   * @param operacaoCredorUpdate operacaoCredorUpdate
+   * @return OperacaoCredorResponse
+   */
+  public OperacaoCredorResponse  alterarUsingPUT11 (Long id, OperacaoCredorUpdate operacaoCredorUpdate) throws ApiException {
+    Object postBody = operacaoCredorUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT11");
+    }
+    
     // verify the required parameter 'operacaoCredorUpdate' is set
     if (operacaoCredorUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'operacaoCredorUpdate' when calling alterarUsingPUT10");
+       throw new ApiException(400, "Missing the required parameter 'operacaoCredorUpdate' when calling alterarUsingPUT11");
     }
     
 
@@ -217,17 +282,17 @@ public class GlobaltagestabelecimentoApi {
    * @param telefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse  alterarUsingPUT14 (Long id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate) throws ApiException {
+  public TelefoneEstabelecimentoResponse  alterarUsingPUT15 (Long id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate) throws ApiException {
     Object postBody = telefoneEstabelecimentoUpdate;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT14");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT15");
     }
     
     // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
     if (telefoneEstabelecimentoUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT14");
+       throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT15");
     }
     
 
@@ -282,17 +347,17 @@ public class GlobaltagestabelecimentoApi {
    * @param terminalUpdate terminalUpdate
    * @return TerminalResponse
    */
-  public TerminalResponse  alterarUsingPUT16 (Long id, TerminalUpdateValue terminalUpdate) throws ApiException {
+  public TerminalResponse  alterarUsingPUT17 (Long id, TerminalUpdateValue terminalUpdate) throws ApiException {
     Object postBody = terminalUpdate;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT16");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT17");
     }
     
     // verify the required parameter 'terminalUpdate' is set
     if (terminalUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'terminalUpdate' when calling alterarUsingPUT16");
+       throw new ApiException(400, "Missing the required parameter 'terminalUpdate' when calling alterarUsingPUT17");
     }
     
 
@@ -347,17 +412,17 @@ public class GlobaltagestabelecimentoApi {
    * @param update update
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse  alterarUsingPUT5 (Long id, EstabelecimentoUpdate update) throws ApiException {
+  public EstabelecimentoResponse  alterarUsingPUT6 (Long id, EstabelecimentoUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT5");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT6");
     }
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT5");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT6");
     }
     
 
@@ -412,17 +477,17 @@ public class GlobaltagestabelecimentoApi {
    * @param grupoEconomicoDTO grupoEconomicoDTO
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse  alterarUsingPUT7 (Long id, GrupoEconomicoDTO grupoEconomicoDTO) throws ApiException {
+  public GrupoEconomicoResponse  alterarUsingPUT8 (Long id, GrupoEconomicoDTO grupoEconomicoDTO) throws ApiException {
     Object postBody = grupoEconomicoDTO;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT8");
     }
     
     // verify the required parameter 'grupoEconomicoDTO' is set
     if (grupoEconomicoDTO == null) {
-       throw new ApiException(400, "Missing the required parameter 'grupoEconomicoDTO' when calling alterarUsingPUT7");
+       throw new ApiException(400, "Missing the required parameter 'grupoEconomicoDTO' when calling alterarUsingPUT8");
     }
     
 
@@ -461,71 +526,6 @@ public class GlobaltagestabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEconomicoResponse) ApiInvoker.deserialize(response, "", GrupoEconomicoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * {{{maquineta_resource_alterar}}}
-   * {{{maquineta_resource_alterar_notes}}}
-   * @param id {{{maquineta_resource_alterar_param_id}}}
-   * @param maquinetaUpdate maquinetaUpdate
-   * @return MaquinetaResponse
-   */
-  public MaquinetaResponse  alterarUsingPUT9 (Long id, MaquinetaUpdate maquinetaUpdate) throws ApiException {
-    Object postBody = maquinetaUpdate;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
-    }
-    
-    // verify the required parameter 'maquinetaUpdate' is set
-    if (maquinetaUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'maquinetaUpdate' when calling alterarUsingPUT9");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/maquinetas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (MaquinetaResponse) ApiInvoker.deserialize(response, "", MaquinetaResponse.class);
       }
       else {
         return null;
@@ -895,12 +895,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{grupo_economico_resource_consultar_param_id}}}
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse  consultarUsingGET20 (Long id) throws ApiException {
+  public GrupoEconomicoResponse  consultarUsingGET21 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
     }
     
 
@@ -954,12 +954,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{maquineta_resource_consultar_param_id}}}
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse  consultarUsingGET22 (Long id) throws ApiException {
+  public MaquinetaResponse  consultarUsingGET23 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
     }
     
 
@@ -1013,12 +1013,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{operacao_credor_resource_consultar_param_id}}}
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse  consultarUsingGET23 (Long id) throws ApiException {
+  public OperacaoCredorResponse  consultarUsingGET24 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
     }
     
 
@@ -1072,12 +1072,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{telefone_estabelecimento_resource_consultar_param_id}}}
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse  consultarUsingGET34 (Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse  consultarUsingGET35 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
     }
     
 
@@ -1131,12 +1131,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{terminal_resource_consultar_param_id}}}
    * @return TerminalResponse
    */
-  public TerminalResponse  consultarUsingGET36 (Long id) throws ApiException {
+  public TerminalResponse  consultarUsingGET37 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
     }
     
 
@@ -1190,12 +1190,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse  consultarUsingGET47 (Long id) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse  consultarUsingGET49 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
     }
     
 
@@ -2117,7 +2117,7 @@ public class GlobaltagestabelecimentoApi {
    * @param flagMatriz {{{estabelecimento_request_flag_matriz_value}}}
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse  listarUsingGET22 (List<String> sort, Integer page, Integer limit, Long id, Long idGrupoEconomico, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Integer correspondencia, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
+  public PageEstabelecimentoResponse  listarUsingGET21 (List<String> sort, Integer page, Integer limit, Long id, Long idGrupoEconomico, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Integer correspondencia, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
     Object postBody = null;
     
 
@@ -2659,7 +2659,7 @@ public class GlobaltagestabelecimentoApi {
    * @param idEstabelecimento {{{telefone_estabelecimento_request_id_estabelecimento_value}}}
    * @return PageTelefoneEstabelecimentoResponse
    */
-  public PageTelefoneEstabelecimentoResponse  listarUsingGET44 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageTelefoneEstabelecimentoResponse  listarUsingGET45 (List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2727,7 +2727,7 @@ public class GlobaltagestabelecimentoApi {
    * @param idEstabelecimento {{{terminal_request_id_estabelecimento_value}}}
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse  listarUsingGET46 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse  listarUsingGET47 (List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
 
@@ -2800,7 +2800,7 @@ public class GlobaltagestabelecimentoApi {
    * @param codigoEstabelecimentoAdquirente {{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}}
    * @return PageVinculoEstabelecimentoAdquirenteResponse
    */
-  public PageVinculoEstabelecimentoAdquirenteResponse  listarUsingGET58 (List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
+  public PageVinculoEstabelecimentoAdquirenteResponse  listarUsingGET60 (List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
     Object postBody = null;
     
 
@@ -2872,12 +2872,12 @@ public class GlobaltagestabelecimentoApi {
    * @param codigoMCC {{{vinculo_operacao_request_codigo_m_c_c_value}}}
    * @return PageVinculoOperacaoResponse
    */
-  public PageVinculoOperacaoResponse  listarUsingGET59 (Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
+  public PageVinculoOperacaoResponse  listarUsingGET61 (Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET59");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET61");
     }
     
 
@@ -2943,12 +2943,12 @@ public class GlobaltagestabelecimentoApi {
    * @param maquinetaPersist maquinetaPersist
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse  salvarUsingPOST17 (MaquinetaPersist maquinetaPersist) throws ApiException {
+  public MaquinetaResponse  salvarUsingPOST18 (MaquinetaPersist maquinetaPersist) throws ApiException {
     Object postBody = maquinetaPersist;
     
     // verify the required parameter 'maquinetaPersist' is set
     if (maquinetaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST17");
+       throw new ApiException(400, "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST18");
     }
     
 
@@ -3002,12 +3002,12 @@ public class GlobaltagestabelecimentoApi {
    * @param operacaoCredorPersist operacaoCredorPersist
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse  salvarUsingPOST18 (OperacaoCredorPersist operacaoCredorPersist) throws ApiException {
+  public OperacaoCredorResponse  salvarUsingPOST19 (OperacaoCredorPersist operacaoCredorPersist) throws ApiException {
     Object postBody = operacaoCredorPersist;
     
     // verify the required parameter 'operacaoCredorPersist' is set
     if (operacaoCredorPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'operacaoCredorPersist' when calling salvarUsingPOST18");
+       throw new ApiException(400, "Missing the required parameter 'operacaoCredorPersist' when calling salvarUsingPOST19");
     }
     
 
@@ -3061,12 +3061,12 @@ public class GlobaltagestabelecimentoApi {
    * @param telefoneEstabelecimentoPersist telefoneEstabelecimentoPersist
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse  salvarUsingPOST23 (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist) throws ApiException {
+  public TelefoneEstabelecimentoResponse  salvarUsingPOST25 (TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist) throws ApiException {
     Object postBody = telefoneEstabelecimentoPersist;
     
     // verify the required parameter 'telefoneEstabelecimentoPersist' is set
     if (telefoneEstabelecimentoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST23");
+       throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST25");
     }
     
 
@@ -3120,12 +3120,12 @@ public class GlobaltagestabelecimentoApi {
    * @param terminalPersist terminalPersist
    * @return TerminalResponse
    */
-  public TerminalResponse  salvarUsingPOST25 (TerminalPersist terminalPersist) throws ApiException {
+  public TerminalResponse  salvarUsingPOST27 (TerminalPersist terminalPersist) throws ApiException {
     Object postBody = terminalPersist;
     
     // verify the required parameter 'terminalPersist' is set
     if (terminalPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST25");
+       throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST27");
     }
     
 
@@ -3179,12 +3179,12 @@ public class GlobaltagestabelecimentoApi {
    * @param vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse  salvarUsingPOST29 (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse  salvarUsingPOST31 (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
     Object postBody = vinculoEstabelecimentoAdquirentePersist;
     
     // verify the required parameter 'vinculoEstabelecimentoAdquirentePersist' is set
     if (vinculoEstabelecimentoAdquirentePersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST29");
+       throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST31");
     }
     
 

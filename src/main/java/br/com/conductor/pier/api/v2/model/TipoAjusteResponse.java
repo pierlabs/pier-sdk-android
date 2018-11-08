@@ -17,6 +17,8 @@ public class TipoAjusteResponse  {
   private Long id = null;
   @SerializedName("descricao")
   private String descricao = null;
+  @SerializedName("flagPagamentoLojista")
+  private Boolean flagPagamentoLojista = null;
   @SerializedName("transacoes")
   private List<TipoTransacaoAjusteResponse> transacoes = null;
 
@@ -46,6 +48,18 @@ public class TipoAjusteResponse  {
 
   
   /**
+   * {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
+   **/
+  @ApiModelProperty(value = "{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}")
+  public Boolean getFlagPagamentoLojista() {
+    return flagPagamentoLojista;
+  }
+  public void setFlagPagamentoLojista(Boolean flagPagamentoLojista) {
+    this.flagPagamentoLojista = flagPagamentoLojista;
+  }
+
+  
+  /**
    * {{{tipo_ajuste_response_transacoes_value}}}
    **/
   @ApiModelProperty(value = "{{{tipo_ajuste_response_transacoes_value}}}")
@@ -65,6 +79,7 @@ public class TipoAjusteResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
+    sb.append("  flagPagamentoLojista: ").append(flagPagamentoLojista).append("\n");
     sb.append("  transacoes: ").append(transacoes).append("\n");
     sb.append("}\n");
     return sb.toString();

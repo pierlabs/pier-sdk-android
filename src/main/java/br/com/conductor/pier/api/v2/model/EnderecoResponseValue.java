@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * {{{endereco_response_description}}}
  **/
 @ApiModel(description = "{{{endereco_response_description}}}")
-public class EnderecoNacionalResponse  {
+public class EnderecoResponseValue  {
   
   @SerializedName("cep")
   private String cep = null;
@@ -87,7 +87,7 @@ public class EnderecoNacionalResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EnderecoNacionalResponse {\n");
+    sb.append("class EnderecoResponseValue {\n");
     
     sb.append("  cep: ").append(cep).append("\n");
     sb.append("  endereco: ").append(endereco).append("\n");

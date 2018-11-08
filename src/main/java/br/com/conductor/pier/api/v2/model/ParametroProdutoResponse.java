@@ -30,9 +30,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_id_value}}}
+   * {{{parametro_produto_dto_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_id_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_id_produto_value}}}
+   * {{{parametro_produto_dto_id_produto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_id_produto_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -54,9 +54,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_tipo_origem_transacao_value}}}
+   * {{{parametro_produto_dto_tipo_origem_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_tipo_origem_transacao_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_tipo_origem_transacao_value}}}")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -66,9 +66,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_descricao_value}}}
+   * {{{parametro_produto_dto_descricao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_descricao_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -78,9 +78,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_valor_parametro_value}}}
+   * {{{parametro_produto_dto_valor_parametro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_valor_parametro_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_valor_parametro_value}}}")
   public BigDecimal getValorParametro() {
     return valorParametro;
   }
@@ -90,9 +90,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * {{{parametro_produto_response_data_validade_value}}}
+   * {{{parametro_produto_dto_data_validade_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_response_data_validade_value}}}")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }

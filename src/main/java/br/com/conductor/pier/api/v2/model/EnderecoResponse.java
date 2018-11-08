@@ -11,6 +11,10 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "{{{endereco_response_description}}}")
 public class EnderecoResponse  {
   
+  @SerializedName("tempoResidenciaAnos")
+  private Integer tempoResidenciaAnos = null;
+  @SerializedName("tempoResidenciaMeses")
+  private Integer tempoResidenciaMeses = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("idPessoa")
@@ -41,6 +45,30 @@ public class EnderecoResponse  {
   private String dataUltimaAtualizacao = null;
   @SerializedName("flagCorrespondencia")
   private Boolean flagCorrespondencia = null;
+
+  
+  /**
+   * {{{endereco_response_tempo_residencia_anos_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_response_tempo_residencia_anos_value}}}")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_response_tempo_residencia_meses_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_response_tempo_residencia_meses_value}}}")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
 
   
   /**
@@ -229,6 +257,8 @@ public class EnderecoResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnderecoResponse {\n");
     
+    sb.append("  tempoResidenciaAnos: ").append(tempoResidenciaAnos).append("\n");
+    sb.append("  tempoResidenciaMeses: ").append(tempoResidenciaMeses).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
     sb.append("  idTipoEndereco: ").append(idTipoEndereco).append("\n");

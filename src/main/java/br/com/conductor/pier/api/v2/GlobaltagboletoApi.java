@@ -11,6 +11,7 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoEmailRequest;
 import br.com.conductor.pier.api.v2.model.BoletoRequest;
+import br.com.conductor.pier.api.v2.model.PageStatusBoletoResponse;
 import br.com.conductor.pier.api.v2.model.PageBoletoListarResponse;
 import java.math.BigDecimal;
 
@@ -49,12 +50,12 @@ public class GlobaltagboletoApi {
    * @param zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
    * @return BoletoResponse
    */
-  public BoletoResponse  consultarUsingGET30 (Long id, Boolean zeraValorCodigoBarras) throws ApiException {
+  public BoletoResponse  consultarUsingGET31 (Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
     }
     
 
@@ -229,6 +230,74 @@ public class GlobaltagboletoApi {
   }
   
   /**
+   * {{{boleto_resource_historico_status_boleto}}}
+   * {{{boleto_resource_historico_status_boleto_notes}}}
+   * @param id {{{boleto_resource_historico_status_boleto_param_id}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @return PageStatusBoletoResponse
+   */
+  public PageStatusBoletoResponse  listarHistoricoStatusBoletoUsingGET (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoStatusBoletoUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/boletos/{id}/historicos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageStatusBoletoResponse) ApiInvoker.deserialize(response, "", PageStatusBoletoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{boleto_resource_listar}}}
    * {{{boleto_resource_listar_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -238,9 +307,10 @@ public class GlobaltagboletoApi {
    * @param dataVencimento {{{boleto_listar_request_data_vencimento_value}}}
    * @param valorBoleto {{{boleto_listar_request_valor_value}}}
    * @param idTipoBoleto {{{boleto_listar_request_id_tipo_boleto_value}}}
+   * @param nossoNumero {{{boleto_listar_request_nosso_numero_value}}}
    * @return PageBoletoListarResponse
    */
-  public PageBoletoListarResponse  listarUsingGET39 (List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto) throws ApiException {
+  public PageBoletoListarResponse  listarUsingGET39 (List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto, Long nossoNumero) throws ApiException {
     Object postBody = null;
     
 
@@ -268,6 +338,8 @@ public class GlobaltagboletoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "valorBoleto", valorBoleto));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoBoleto", idTipoBoleto));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nossoNumero", nossoNumero));
     
 
     

@@ -38,6 +38,14 @@ public class ContaPersistValue  {
   private BigDecimal limiteConsignado = null;
   @SerializedName("flagFaturaPorEmail")
   private Integer flagFaturaPorEmail = null;
+  @SerializedName("funcaoAtiva")
+  private String funcaoAtiva = null;
+  @SerializedName("matricula")
+  private String matricula = null;
+  @SerializedName("responsavelDigitacao")
+  private String responsavelDigitacao = null;
+  @SerializedName("idPromotorVenda")
+  private Integer idPromotorVenda = null;
 
   
   /**
@@ -196,6 +204,54 @@ public class ContaPersistValue  {
   }
 
   
+  /**
+   * {{{conta_persist_funcao_ativa_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_persist_funcao_ativa_value}}}")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_matricula_value}}}")
+  public String getMatricula() {
+    return matricula;
+  }
+  public void setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}")
+  public String getResponsavelDigitacao() {
+    return responsavelDigitacao;
+  }
+  public void setResponsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}")
+  public Integer getIdPromotorVenda() {
+    return idPromotorVenda;
+  }
+  public void setIdPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -215,6 +271,10 @@ public class ContaPersistValue  {
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
     sb.append("  limiteConsignado: ").append(limiteConsignado).append("\n");
     sb.append("  flagFaturaPorEmail: ").append(flagFaturaPorEmail).append("\n");
+    sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
+    sb.append("  matricula: ").append(matricula).append("\n");
+    sb.append("  responsavelDigitacao: ").append(responsavelDigitacao).append("\n");
+    sb.append("  idPromotorVenda: ").append(idPromotorVenda).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

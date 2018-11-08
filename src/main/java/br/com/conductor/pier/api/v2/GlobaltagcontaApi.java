@@ -12,6 +12,7 @@ import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.ContaPartialUpdate;
 import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
@@ -76,9 +77,10 @@ public class GlobaltagcontaApi {
    * @param login login
    * @param identificadorExterno {{{ajuste_persist_identificador_externo_value}}}
    * @param idTransacaoOriginal {{{ajuste_persist_id_transacao_original}}}
+   * @param idEstabelecimento {{{ajuste_persist_id_estabelecimento_value}}}
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse  ajustarContaUsingPOST1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
+  public AjusteFinanceiroResponse  ajustarContaUsingPOST1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -122,6 +124,8 @@ public class GlobaltagcontaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "identificadorExterno", identificadorExterno));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idTransacaoOriginal", idTransacaoOriginal));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
     
 
     
@@ -495,6 +499,71 @@ public class GlobaltagcontaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{conta_resource_atualizar_parcial}}}
+   * {{{conta_resource_atualizar_parcial_notes}}}
+   * @param id {{{conta_resource_atualizar_parcial_param_id}}}
+   * @param contaPartialUpdate contaPartialUpdate
+   * @return ContaResponse
+   */
+  public ContaResponse  atualizarParcialUsingPATCH (Long id, ContaPartialUpdate contaPartialUpdate) throws ApiException {
+    Object postBody = contaPartialUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialUsingPATCH");
+    }
+    
+    // verify the required parameter 'contaPartialUpdate' is set
+    if (contaPartialUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'contaPartialUpdate' when calling atualizarParcialUsingPATCH");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ContaResponse) ApiInvoker.deserialize(response, "", ContaResponse.class);
       }
       else {
         return null;
@@ -1034,12 +1103,12 @@ public class GlobaltagcontaApi {
    * @param id {{{conta_resource_consultar_param_id}}}
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse  consultarUsingGET13 (Long id) throws ApiException {
+  public ContaDetalheResponse  consultarUsingGET12 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
     }
     
 
@@ -1088,23 +1157,82 @@ public class GlobaltagcontaApi {
   }
   
   /**
+   * {{{funcao_conta_resource_consultar}}}
+   * {{{funcao_conta_resource_consultar_notes}}}
+   * @param id {{{funcao_conta_resource_consultar_param_id}}}
+   * @return String
+   */
+  public String  consultarUsingGET20 (Integer id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/tipos-funcoes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{transferencia_resource_consultar}}}
    * {{{transferencia_resource_consultar_notes}}}
    * @param id {{{transferencia_resource_consultar_param_id_conta}}}
    * @param idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse  consultarUsingGET45 (Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse  consultarUsingGET47 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET45");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET47");
     }
     
 
@@ -1980,9 +2108,10 @@ public class GlobaltagcontaApi {
    * @param dataStatusConta {{{conta_request_data_status_conta_value}}}
    * @param dataCadastro {{{conta_request_data_cadastro_value}}}
    * @param dataUltimaAlteracaoVencimento {{{conta_request_data_ultima_alteracao_vencimento_value}}}
+   * @param funcaoAtiva 
    * @return PageContaResponse
    */
-  public PageContaResponse  listarUsingGET17 (List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse  listarUsingGET15 (List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento, String funcaoAtiva) throws ApiException {
     Object postBody = null;
     
 
@@ -2021,6 +2150,8 @@ public class GlobaltagcontaApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "dataUltimaAlteracaoVencimento", dataUltimaAlteracaoVencimento));
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "funcaoAtiva", funcaoAtiva));
+    
 
     
 
@@ -2055,6 +2186,59 @@ public class GlobaltagcontaApi {
   }
   
   /**
+   * {{{funcao_conta_resource_listar}}}
+   * {{{funcao_conta_resource_listar_notes}}}
+   * @return String
+   */
+  public String  listarUsingGET23 () throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/contas/tipos-funcoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
    * {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas_notes}}}
    * @param id {{{transacoes_correntes_resource_listar_nao_processadas_param_id}}}
@@ -2074,12 +2258,12 @@ public class GlobaltagcontaApi {
    * @param grupoMCC {{{transacoes_processadas_request_grupo_mcc}}}
    * @return PageTransacaoProcessadaNaoProcessadaResponse
    */
-  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET53 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer status, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
+  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET55 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer status, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET53");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET55");
     }
     
 
@@ -2169,12 +2353,12 @@ public class GlobaltagcontaApi {
    * @param dataTransferencia {{{transferencia_request_data_transferencia_value}}}
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse  listarUsingGET55 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse  listarUsingGET57 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET55");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET57");
     }
     
 

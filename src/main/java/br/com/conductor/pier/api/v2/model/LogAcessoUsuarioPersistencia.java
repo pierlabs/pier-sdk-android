@@ -83,9 +83,9 @@ public class LogAcessoUsuarioPersistencia  {
 
   
   /**
-   * {{{log_acesso_usuario_persistencia_versao_app_descricao}}}
+   * {{{log_acesso_usuario_persistencia_device_descricao}}}
    **/
-  @ApiModelProperty(value = "{{{log_acesso_usuario_persistencia_versao_app_descricao}}}")
+  @ApiModelProperty(value = "{{{log_acesso_usuario_persistencia_device_descricao}}}")
   public String getDevice() {
     return device;
   }
@@ -131,9 +131,9 @@ public class LogAcessoUsuarioPersistencia  {
 
   
   /**
-   * {{{log_acesso_usuario_persistencia_status_log_acesso}}}
+   * {{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}
    **/
-  @ApiModelProperty(value = "{{{log_acesso_usuario_persistencia_status_log_acesso}}}")
+  @ApiModelProperty(value = "{{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}")
   public StatusEnum getStatus() {
     return status;
   }

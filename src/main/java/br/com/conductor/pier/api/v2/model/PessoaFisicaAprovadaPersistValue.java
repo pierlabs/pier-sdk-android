@@ -9,10 +9,7 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-/**
- * {{{pessoa_fisica_aprovada_persist_description}}}
- **/
-@ApiModel(description = "{{{pessoa_fisica_aprovada_persist_description}}}")
+@ApiModel(description = "")
 public class PessoaFisicaAprovadaPersistValue  {
   
   @SerializedName("nome")
@@ -83,6 +80,30 @@ public class PessoaFisicaAprovadaPersistValue  {
   private String nomeReferencia2 = null;
   @SerializedName("enderecoReferencia2")
   private String enderecoReferencia2 = null;
+  @SerializedName("impedidoFinanciamento")
+  private Boolean impedidoFinanciamento = null;
+  @SerializedName("funcaoAtiva")
+  private String funcaoAtiva = null;
+  @SerializedName("naturalidadeCidade")
+  private String naturalidadeCidade = null;
+  @SerializedName("naturalidadeEstado")
+  private String naturalidadeEstado = null;
+  @SerializedName("grauInstrucao")
+  private Integer grauInstrucao = null;
+  @SerializedName("numeroDependentes")
+  private Integer numeroDependentes = null;
+  @SerializedName("nomePai")
+  private String nomePai = null;
+  @SerializedName("chequeEspecial")
+  private Integer chequeEspecial = null;
+  @SerializedName("numeroBanco")
+  private Integer numeroBanco = null;
+  @SerializedName("matricula")
+  private String matricula = null;
+  @SerializedName("responsavelDigitacao")
+  private String responsavelDigitacao = null;
+  @SerializedName("idPromotorVenda")
+  private Integer idPromotorVenda = null;
 
   
   /**
@@ -493,6 +514,150 @@ public class PessoaFisicaAprovadaPersistValue  {
   }
 
   
+  /**
+   * {{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}")
+  public String getNaturalidadeCidade() {
+    return naturalidadeCidade;
+  }
+  public void setNaturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}")
+  public String getNaturalidadeEstado() {
+    return naturalidadeEstado;
+  }
+  public void setNaturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}")
+  public Integer getGrauInstrucao() {
+    return grauInstrucao;
+  }
+  public void setGrauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}")
+  public Integer getNumeroDependentes() {
+    return numeroDependentes;
+  }
+  public void setNumeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}")
+  public String getNomePai() {
+    return nomePai;
+  }
+  public void setNomePai(String nomePai) {
+    this.nomePai = nomePai;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}")
+  public Integer getChequeEspecial() {
+    return chequeEspecial;
+  }
+  public void setChequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}")
+  public Integer getNumeroBanco() {
+    return numeroBanco;
+  }
+  public void setNumeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_matricula_value}}}")
+  public String getMatricula() {
+    return matricula;
+  }
+  public void setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}")
+  public String getResponsavelDigitacao() {
+    return responsavelDigitacao;
+  }
+  public void setResponsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}")
+  public Integer getIdPromotorVenda() {
+    return idPromotorVenda;
+  }
+  public void setIdPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -533,6 +698,18 @@ public class PessoaFisicaAprovadaPersistValue  {
     sb.append("  enderecoReferencia1: ").append(enderecoReferencia1).append("\n");
     sb.append("  nomeReferencia2: ").append(nomeReferencia2).append("\n");
     sb.append("  enderecoReferencia2: ").append(enderecoReferencia2).append("\n");
+    sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
+    sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
+    sb.append("  naturalidadeCidade: ").append(naturalidadeCidade).append("\n");
+    sb.append("  naturalidadeEstado: ").append(naturalidadeEstado).append("\n");
+    sb.append("  grauInstrucao: ").append(grauInstrucao).append("\n");
+    sb.append("  numeroDependentes: ").append(numeroDependentes).append("\n");
+    sb.append("  nomePai: ").append(nomePai).append("\n");
+    sb.append("  chequeEspecial: ").append(chequeEspecial).append("\n");
+    sb.append("  numeroBanco: ").append(numeroBanco).append("\n");
+    sb.append("  matricula: ").append(matricula).append("\n");
+    sb.append("  responsavelDigitacao: ").append(responsavelDigitacao).append("\n");
+    sb.append("  idPromotorVenda: ").append(idPromotorVenda).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

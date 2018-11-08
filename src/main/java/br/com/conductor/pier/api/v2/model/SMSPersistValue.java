@@ -33,7 +33,7 @@ public class SMSPersistValue  {
   /**
    * {{{s_m_s_persist_nsu_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{s_m_s_persist_nsu_value}}}")
+  @ApiModelProperty(value = "{{{s_m_s_persist_nsu_value}}}")
   public Long getNsu() {
     return nsu;
   }
@@ -45,7 +45,7 @@ public class SMSPersistValue  {
   /**
    * {{{s_m_s_persist_id_pessoa_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{s_m_s_persist_id_pessoa_value}}}")
+  @ApiModelProperty(value = "{{{s_m_s_persist_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -57,7 +57,7 @@ public class SMSPersistValue  {
   /**
    * {{{s_m_s_persist_id_conta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{s_m_s_persist_id_conta_value}}}")
+  @ApiModelProperty(value = "{{{s_m_s_persist_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }

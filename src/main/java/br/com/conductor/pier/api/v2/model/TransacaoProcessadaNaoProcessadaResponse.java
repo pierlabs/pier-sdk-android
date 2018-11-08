@@ -52,6 +52,8 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
   private Long idConta = null;
   @SerializedName("idEstabelecimento")
   private Long idEstabelecimento = null;
+  @SerializedName("idEventoAjuste")
+  private Long idEventoAjuste = null;
   @SerializedName("idTipoTransacaoNaoProcessada")
   private Long idTipoTransacaoNaoProcessada = null;
   @SerializedName("idTransacaoEstorno")
@@ -323,6 +325,18 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
+   * {{{transacao_nao_processada_response_id_evento_ajuste_value}}}
+   **/
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_evento_ajuste_value}}}")
+  public Long getIdEventoAjuste() {
+    return idEventoAjuste;
+  }
+  public void setIdEventoAjuste(Long idEventoAjuste) {
+    this.idEventoAjuste = idEventoAjuste;
+  }
+
+  
+  /**
    * {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
    **/
   @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}")
@@ -516,6 +530,7 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
     sb.append("  grupoMCC: ").append(grupoMCC).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
+    sb.append("  idEventoAjuste: ").append(idEventoAjuste).append("\n");
     sb.append("  idTipoTransacaoNaoProcessada: ").append(idTipoTransacaoNaoProcessada).append("\n");
     sb.append("  idTransacaoEstorno: ").append(idTransacaoEstorno).append("\n");
     sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");

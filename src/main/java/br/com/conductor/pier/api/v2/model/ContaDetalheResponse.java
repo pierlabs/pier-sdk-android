@@ -38,8 +38,6 @@ public class ContaDetalheResponse  {
   private Integer melhorDiaCompra = null;
   @SerializedName("dataStatusConta")
   private String dataStatusConta = null;
-  @SerializedName("valorRenda")
-  private BigDecimal valorRenda = null;
   @SerializedName("dataCadastro")
   private String dataCadastro = null;
   @SerializedName("dataUltimaAlteracaoVencimento")
@@ -50,6 +48,8 @@ public class ContaDetalheResponse  {
   private Integer numeroAgencia = null;
   @SerializedName("numeroContaCorrente")
   private String numeroContaCorrente = null;
+  @SerializedName("valorRenda")
+  private BigDecimal valorRenda = null;
   @SerializedName("formaEnvioFatura")
   private String formaEnvioFatura = null;
   @SerializedName("titular")
@@ -62,6 +62,8 @@ public class ContaDetalheResponse  {
   private BigDecimal saldoDisponivelGlobal = null;
   @SerializedName("saldoDisponivelSaque")
   private BigDecimal saldoDisponivelSaque = null;
+  @SerializedName("impedidoFinanciamento")
+  private Boolean impedidoFinanciamento = null;
   @SerializedName("diasAtraso")
   private Long diasAtraso = null;
   @SerializedName("proximoVencimentoPadrao")
@@ -74,8 +76,6 @@ public class ContaDetalheResponse  {
   private Long correspondencia = null;
   @SerializedName("dataInicioAtraso")
   private String dataInicioAtraso = null;
-  @SerializedName("aceitaNovaContaPorGrupoProduto")
-  private Boolean aceitaNovaContaPorGrupoProduto = null;
   @SerializedName("rotativoPagaJuros")
   private BigDecimal rotativoPagaJuros = null;
   @SerializedName("totalPosProx")
@@ -84,6 +84,13 @@ public class ContaDetalheResponse  {
   private BigDecimal saldoAtualFinal = null;
   @SerializedName("saldoExtratoAnterior")
   private BigDecimal saldoExtratoAnterior = null;
+  @SerializedName("aceitaNovaContaPorGrupoProduto")
+  private Boolean aceitaNovaContaPorGrupoProduto = null;
+  public enum FuncaoAtivaEnum {
+     DEBITO_CREDITO,  CREDITO, 
+  };
+  @SerializedName("funcaoAtiva")
+  private FuncaoAtivaEnum funcaoAtiva = null;
 
   
   /**
@@ -243,18 +250,6 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_valor_renda_value}}}
-   **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_valor_renda_value}}}")
-  public BigDecimal getValorRenda() {
-    return valorRenda;
-  }
-  public void setValorRenda(BigDecimal valorRenda) {
-    this.valorRenda = valorRenda;
-  }
-
-  
-  /**
    * {{{conta_detalhe_response_data_cadastro_value}}}
    **/
   @ApiModelProperty(value = "{{{conta_detalhe_response_data_cadastro_value}}}")
@@ -311,6 +306,18 @@ public class ContaDetalheResponse  {
   }
   public void setNumeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_valor_renda_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_valor_renda_value}}}")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
   }
 
   
@@ -387,6 +394,18 @@ public class ContaDetalheResponse  {
 
   
   /**
+   * {{{conta_detalhe_response_impedido_de_financiamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{conta_detalhe_response_impedido_de_financiamento_value}}}")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
    * {{{conta_detalhe_response_dias_atraso_value}}}
    **/
   @ApiModelProperty(value = "{{{conta_detalhe_response_dias_atraso_value}}}")
@@ -459,6 +478,54 @@ public class ContaDetalheResponse  {
 
   
   /**
+   * {{{estado_conta_response_rotativo_paga_juros_value}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_rotativo_paga_juros_value}}}")
+  public BigDecimal getRotativoPagaJuros() {
+    return rotativoPagaJuros;
+  }
+  public void setRotativoPagaJuros(BigDecimal rotativoPagaJuros) {
+    this.rotativoPagaJuros = rotativoPagaJuros;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_total_pos_proximo_value}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_total_pos_proximo_value}}}")
+  public BigDecimal getTotalPosProx() {
+    return totalPosProx;
+  }
+  public void setTotalPosProx(BigDecimal totalPosProx) {
+    this.totalPosProx = totalPosProx;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_atual_final_value}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_saldo_atual_final_value}}}")
+  public BigDecimal getSaldoAtualFinal() {
+    return saldoAtualFinal;
+  }
+  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_extrato_anterior_value}}}
+   **/
+  @ApiModelProperty(value = "{{{estado_conta_response_saldo_extrato_anterior_value}}}")
+  public BigDecimal getSaldoExtratoAnterior() {
+    return saldoExtratoAnterior;
+  }
+  public void setSaldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
+    this.saldoExtratoAnterior = saldoExtratoAnterior;
+  }
+
+  
+  /**
    * {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
    **/
   @ApiModelProperty(value = "{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}")
@@ -471,50 +538,14 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{estado_conta_response_rotativo_paga_juros}}}
+   * {{{conta_response_funcao_ativa_value}}}
    **/
-  @ApiModelProperty(value = "{{{estado_conta_response_rotativo_paga_juros}}}")
-  public BigDecimal getRotativoPagaJuros() {
-    return rotativoPagaJuros;
+  @ApiModelProperty(value = "{{{conta_response_funcao_ativa_value}}}")
+  public FuncaoAtivaEnum getFuncaoAtiva() {
+    return funcaoAtiva;
   }
-  public void setRotativoPagaJuros(BigDecimal rotativoPagaJuros) {
-    this.rotativoPagaJuros = rotativoPagaJuros;
-  }
-
-  
-  /**
-   * {{{estado_conta_response_total_pos_proximo}}}
-   **/
-  @ApiModelProperty(value = "{{{estado_conta_response_total_pos_proximo}}}")
-  public BigDecimal getTotalPosProx() {
-    return totalPosProx;
-  }
-  public void setTotalPosProx(BigDecimal totalPosProx) {
-    this.totalPosProx = totalPosProx;
-  }
-
-  
-  /**
-   * {{{estado_conta_response_saldo_atual_final}}}
-   **/
-  @ApiModelProperty(value = "{{{estado_conta_response_saldo_atual_final}}}")
-  public BigDecimal getSaldoAtualFinal() {
-    return saldoAtualFinal;
-  }
-  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
-  }
-
-  
-  /**
-   * {{{estado_conta_response_saldo_extrato_anterior}}}
-   **/
-  @ApiModelProperty(value = "{{{estado_conta_response_saldo_extrato_anterior}}}")
-  public BigDecimal getSaldoExtratoAnterior() {
-    return saldoExtratoAnterior;
-  }
-  public void setSaldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
-    this.saldoExtratoAnterior = saldoExtratoAnterior;
+  public void setFuncaoAtiva(FuncaoAtivaEnum funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
   }
 
   
@@ -537,29 +568,31 @@ public class ContaDetalheResponse  {
     sb.append("  diaVencimento: ").append(diaVencimento).append("\n");
     sb.append("  melhorDiaCompra: ").append(melhorDiaCompra).append("\n");
     sb.append("  dataStatusConta: ").append(dataStatusConta).append("\n");
-    sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  dataUltimaAlteracaoVencimento: ").append(dataUltimaAlteracaoVencimento).append("\n");
     sb.append("  dataHoraUltimaCompra: ").append(dataHoraUltimaCompra).append("\n");
     sb.append("  numeroAgencia: ").append(numeroAgencia).append("\n");
     sb.append("  numeroContaCorrente: ").append(numeroContaCorrente).append("\n");
+    sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  formaEnvioFatura: ").append(formaEnvioFatura).append("\n");
     sb.append("  titular: ").append(titular).append("\n");
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteSaqueGlobal: ").append(limiteSaqueGlobal).append("\n");
     sb.append("  saldoDisponivelGlobal: ").append(saldoDisponivelGlobal).append("\n");
     sb.append("  saldoDisponivelSaque: ").append(saldoDisponivelSaque).append("\n");
+    sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
     sb.append("  diasAtraso: ").append(diasAtraso).append("\n");
     sb.append("  proximoVencimentoPadrao: ").append(proximoVencimentoPadrao).append("\n");
     sb.append("  idProposta: ").append(idProposta).append("\n");
     sb.append("  quantidadePagamentos: ").append(quantidadePagamentos).append("\n");
     sb.append("  correspondencia: ").append(correspondencia).append("\n");
     sb.append("  dataInicioAtraso: ").append(dataInicioAtraso).append("\n");
-    sb.append("  aceitaNovaContaPorGrupoProduto: ").append(aceitaNovaContaPorGrupoProduto).append("\n");
     sb.append("  rotativoPagaJuros: ").append(rotativoPagaJuros).append("\n");
     sb.append("  totalPosProx: ").append(totalPosProx).append("\n");
     sb.append("  saldoAtualFinal: ").append(saldoAtualFinal).append("\n");
     sb.append("  saldoExtratoAnterior: ").append(saldoExtratoAnterior).append("\n");
+    sb.append("  aceitaNovaContaPorGrupoProduto: ").append(aceitaNovaContaPorGrupoProduto).append("\n");
+    sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

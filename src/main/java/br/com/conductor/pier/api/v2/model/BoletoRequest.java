@@ -20,6 +20,8 @@ public class BoletoRequest  {
   private BigDecimal valor = null;
   @SerializedName("dataVencimento")
   private String dataVencimento = null;
+  @SerializedName("idConvenio")
+  private Long idConvenio = null;
 
   
   /**
@@ -70,6 +72,18 @@ public class BoletoRequest  {
   }
 
   
+  /**
+   * {{{boleto_request_id_convenio_value}}}
+   **/
+  @ApiModelProperty(value = "{{{boleto_request_id_convenio_value}}}")
+  public Long getIdConvenio() {
+    return idConvenio;
+  }
+  public void setIdConvenio(Long idConvenio) {
+    this.idConvenio = idConvenio;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -80,6 +94,7 @@ public class BoletoRequest  {
     sb.append("  tipoBoleto: ").append(tipoBoleto).append("\n");
     sb.append("  valor: ").append(valor).append("\n");
     sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
+    sb.append("  idConvenio: ").append(idConvenio).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

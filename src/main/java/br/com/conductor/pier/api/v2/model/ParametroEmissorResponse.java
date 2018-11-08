@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{parametro_emissor_resposta_descricao}}}
+ * {{{parametro_emissor_resposta_description}}}
  **/
-@ApiModel(description = "{{{parametro_emissor_resposta_descricao}}}")
+@ApiModel(description = "{{{parametro_emissor_resposta_description}}}")
 public class ParametroEmissorResponse  {
   
   @SerializedName("codigo")
@@ -48,9 +48,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * {{{parametro_emissor_resposta_descricao_descricao}}}
+   * {{{parametro_emissor_resposta_descricao_description}}}
    **/
-  @ApiModelProperty(value = "{{{parametro_emissor_resposta_descricao_descricao}}}")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_descricao_description}}}")
   public String getDescricao() {
     return descricao;
   }

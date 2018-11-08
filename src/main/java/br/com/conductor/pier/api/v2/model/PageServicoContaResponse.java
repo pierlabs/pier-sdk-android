@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.CompraContestadaCartaoResponse;
+import br.com.conductor.pier.api.v2.model.ServicoContaResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_page_compra_contestada_cartao_response_description}}}
+ * {{{page_servico_conta_response_description}}}
  **/
-@ApiModel(description = "{{{page_page_compra_contestada_cartao_response_description}}}")
-public class PageCompraContestadaCartaoResponse  {
+@ApiModel(description = "{{{page_servico_conta_response_description}}}")
+public class PageServicoContaResponse  {
   
   @SerializedName("content")
-  private List<CompraContestadaCartaoResponse> content = null;
+  private List<ServicoContaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageCompraContestadaCartaoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<CompraContestadaCartaoResponse> getContent() {
+  public List<ServicoContaResponse> getContent() {
     return content;
   }
-  public void setContent(List<CompraContestadaCartaoResponse> content) {
+  public void setContent(List<ServicoContaResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PageCompraContestadaCartaoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCompraContestadaCartaoResponse {\n");
+    sb.append("class PageServicoContaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

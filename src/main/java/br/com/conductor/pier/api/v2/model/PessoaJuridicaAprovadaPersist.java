@@ -63,6 +63,8 @@ public class PessoaJuridicaAprovadaPersist  {
   private BigDecimal limiteMaximo = null;
   @SerializedName("limiteParcelas")
   private BigDecimal limiteParcelas = null;
+  @SerializedName("impedidoFinanciamento")
+  private Boolean impedidoFinanciamento = null;
 
   
   /**
@@ -341,6 +343,18 @@ public class PessoaJuridicaAprovadaPersist  {
   }
 
   
+  /**
+   * {{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}
+   **/
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -370,6 +384,7 @@ public class PessoaJuridicaAprovadaPersist  {
     sb.append("  limiteGlobal: ").append(limiteGlobal).append("\n");
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
+    sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

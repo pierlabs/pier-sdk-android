@@ -5,10 +5,7 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-/**
- * {{{endereco_aprovado_persist_description}}}
- **/
-@ApiModel(description = "{{{endereco_aprovado_persist_description}}}")
+@ApiModel(description = "")
 public class EnderecoAprovadoPersistValue  {
   
   @SerializedName("idTipoEndereco")
@@ -33,6 +30,10 @@ public class EnderecoAprovadoPersistValue  {
   private String pais = null;
   @SerializedName("enderecoCorrespondencia")
   private Boolean enderecoCorrespondencia = null;
+  @SerializedName("tempoResidenciaAnos")
+  private Integer tempoResidenciaAnos = null;
+  @SerializedName("tempoResidenciaMeses")
+  private Integer tempoResidenciaMeses = null;
 
   
   /**
@@ -167,6 +168,30 @@ public class EnderecoAprovadoPersistValue  {
   }
 
   
+  /**
+   * {{{endereco_aprovado_persist_tempo_residencia_anos_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_aprovado_persist_tempo_residencia_anos_value}}}")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_aprovado_persist_tempo_residencia_meses_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_aprovado_persist_tempo_residencia_meses_value}}}")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -184,6 +209,8 @@ public class EnderecoAprovadoPersistValue  {
     sb.append("  uf: ").append(uf).append("\n");
     sb.append("  pais: ").append(pais).append("\n");
     sb.append("  enderecoCorrespondencia: ").append(enderecoCorrespondencia).append("\n");
+    sb.append("  tempoResidenciaAnos: ").append(tempoResidenciaAnos).append("\n");
+    sb.append("  tempoResidenciaMeses: ").append(tempoResidenciaMeses).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

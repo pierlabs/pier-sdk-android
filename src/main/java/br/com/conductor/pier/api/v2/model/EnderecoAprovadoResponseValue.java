@@ -5,11 +5,8 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-/**
- * {{{endereco_aprovado_response_description}}}
- **/
-@ApiModel(description = "{{{endereco_aprovado_response_description}}}")
-public class EnderecoAprovadoResponse  {
+@ApiModel(description = "")
+public class EnderecoAprovadoResponseValue  {
   
   @SerializedName("id")
   private Long id = null;
@@ -35,6 +32,10 @@ public class EnderecoAprovadoResponse  {
   private String pais = null;
   @SerializedName("enderecoCorrespondencia")
   private Boolean enderecoCorrespondencia = null;
+  @SerializedName("tempoResidenciaAnos")
+  private Integer tempoResidenciaAnos = null;
+  @SerializedName("tempoResidenciaMeses")
+  private Integer tempoResidenciaMeses = null;
 
   
   /**
@@ -181,11 +182,35 @@ public class EnderecoAprovadoResponse  {
   }
 
   
+  /**
+   * {{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}
+   **/
+  @ApiModelProperty(value = "{{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EnderecoAprovadoResponse {\n");
+    sb.append("class EnderecoAprovadoResponseValue {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idTipoEndereco: ").append(idTipoEndereco).append("\n");
@@ -199,6 +224,8 @@ public class EnderecoAprovadoResponse  {
     sb.append("  uf: ").append(uf).append("\n");
     sb.append("  pais: ").append(pais).append("\n");
     sb.append("  enderecoCorrespondencia: ").append(enderecoCorrespondencia).append("\n");
+    sb.append("  tempoResidenciaAnos: ").append(tempoResidenciaAnos).append("\n");
+    sb.append("  tempoResidenciaMeses: ").append(tempoResidenciaMeses).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

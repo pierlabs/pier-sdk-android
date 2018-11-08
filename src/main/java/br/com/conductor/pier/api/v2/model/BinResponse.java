@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{Bin_response_description}}}
+ * {{{bin_response_description}}}
  **/
-@ApiModel(description = "{{{Bin_response_description}}}")
+@ApiModel(description = "{{{bin_response_description}}}")
 public class BinResponse  {
   
   @SerializedName("id")
@@ -16,9 +16,9 @@ public class BinResponse  {
 
   
   /**
-   * {{{bin_request_id_value}}}
+   * {{{bin_response_id_value}}}
    **/
-  @ApiModelProperty(value = "{{{bin_request_id_value}}}")
+  @ApiModelProperty(value = "{{{bin_response_id_value}}}")
   public Long getId() {
     return id;
   }

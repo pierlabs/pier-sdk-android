@@ -13,6 +13,7 @@ import br.com.conductor.pier.api.v2.model.StatusCartaoResponse;
 import br.com.conductor.pier.api.v2.model.StatusContaResponse;
 import br.com.conductor.pier.api.v2.model.StatusImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageEstagioCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusImpressaoResponse;
@@ -169,12 +170,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_conta_resource_consultar_param_id}}}
    * @return StatusContaResponse
    */
-  public StatusContaResponse  consultarUsingGET32 (Long id) throws ApiException {
+  public StatusContaResponse  consultarUsingGET33 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
     }
     
 
@@ -228,12 +229,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_impressao_resource_consultar_param_id}}}
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse  consultarUsingGET33 (Long id) throws ApiException {
+  public StatusImpressaoResponse  consultarUsingGET34 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
     }
     
 
@@ -350,6 +351,68 @@ public class GlobaltagstatusparametroApi {
   }
   
   /**
+   * {{{status_cnab_sumarizado_resource_listar}}}
+   * {{{status_cnab_sumarizado_resource_listar_notes}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @return PageTipoBoletoResponse
+   */
+  public PageTipoBoletoResponse  listarStatusCNABSumarizadosUsingGET (List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/status-cnab-sumarizados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoBoletoResponse) ApiInvoker.deserialize(response, "", PageTipoBoletoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{status_cartao_resource_listar_status_cartoes}}}
    * {{{status_cartao_resource_listar_status_cartoes_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -448,7 +511,7 @@ public class GlobaltagstatusparametroApi {
    * @param permiteAtribuirComoCancelamento {{{status_conta_request_permite_atribuir_como_cancelamento_value}}}
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse  listarUsingGET41 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+  public PageStatusContaResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
     Object postBody = null;
     
 
@@ -534,7 +597,7 @@ public class GlobaltagstatusparametroApi {
    * @param nome {{{status_impressao_request_nome_value}}}
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse  listarUsingGET42 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse  listarUsingGET43 (List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
 
