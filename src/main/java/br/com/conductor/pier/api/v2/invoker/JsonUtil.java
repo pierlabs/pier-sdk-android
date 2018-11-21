@@ -59,6 +59,14 @@ public class JsonUtil {
       return new TypeToken<List<AdesaoPagamentoSabadoResponse>>(){}.getType();
     }
     
+    if ("AdesaoServicoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdesaoServicoPersist>>(){}.getType();
+    }
+    
+    if ("AdesaoServicoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<AdesaoServicoResponse>>(){}.getType();
+    }
+    
     if ("AdicionalContaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<AdicionalContaPersist>>(){}.getType();
     }
@@ -283,6 +291,14 @@ public class JsonUtil {
       return new TypeToken<List<CdtTipoResolucaoContestacao>>(){}.getType();
     }
     
+    if ("CelularRecargaProgramadaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CelularRecargaProgramadaPersist>>(){}.getType();
+    }
+    
+    if ("CelularRecargaProgramadaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CelularRecargaProgramadaResponse>>(){}.getType();
+    }
+    
     if ("ChaveCriptografiaRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<ChaveCriptografiaRequest>>(){}.getType();
     }
@@ -419,6 +435,18 @@ public class JsonUtil {
       return new TypeToken<List<ConvenioResponse>>(){}.getType();
     }
     
+    if ("CredorPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CredorPersist>>(){}.getType();
+    }
+    
+    if ("CredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CredorResponse>>(){}.getType();
+    }
+    
+    if ("CredorUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CredorUpdate>>(){}.getType();
+    }
+    
     if ("DadosBancariosContaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<DadosBancariosContaPersist>>(){}.getType();
     }
@@ -547,6 +575,10 @@ public class JsonUtil {
       return new TypeToken<List<EntidadeResponse>>(){}.getType();
     }
     
+    if ("EscritorioCobrancaDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<EscritorioCobrancaDTO>>(){}.getType();
+    }
+    
     if ("EstabelecimentoPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<EstabelecimentoPersist>>(){}.getType();
     }
@@ -649,6 +681,14 @@ public class JsonUtil {
     
     if ("IntegracaoEmissorPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<IntegracaoEmissorPersist>>(){}.getType();
+    }
+    
+    if ("IntegracaoEmissorPropostaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<IntegracaoEmissorPropostaPersist>>(){}.getType();
+    }
+    
+    if ("IntegracaoEmissorPropostaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<IntegracaoEmissorPropostaResponse>>(){}.getType();
     }
     
     if ("IntegracaoEmissorResponse".equalsIgnoreCase(className)) {
@@ -1539,6 +1579,10 @@ public class JsonUtil {
       return new TypeToken<List<TelefoneAdicionalUpdate>>(){}.getType();
     }
     
+    if ("TelefoneEscritorioCobrancaDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<TelefoneEscritorioCobrancaDTO>>(){}.getType();
+    }
+    
     if ("TelefoneEstabelecimentoPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<TelefoneEstabelecimentoPersist>>(){}.getType();
     }
@@ -1849,6 +1893,14 @@ public class JsonUtil {
       return new TypeToken<AdesaoPagamentoSabadoResponse>(){}.getType();
     }
     
+    if ("AdesaoServicoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<AdesaoServicoPersist>(){}.getType();
+    }
+    
+    if ("AdesaoServicoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<AdesaoServicoResponse>(){}.getType();
+    }
+    
     if ("AdicionalContaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<AdicionalContaPersist>(){}.getType();
     }
@@ -2073,6 +2125,14 @@ public class JsonUtil {
       return new TypeToken<CdtTipoResolucaoContestacao>(){}.getType();
     }
     
+    if ("CelularRecargaProgramadaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<CelularRecargaProgramadaPersist>(){}.getType();
+    }
+    
+    if ("CelularRecargaProgramadaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CelularRecargaProgramadaResponse>(){}.getType();
+    }
+    
     if ("ChaveCriptografiaRequest".equalsIgnoreCase(className)) {
       return new TypeToken<ChaveCriptografiaRequest>(){}.getType();
     }
@@ -2209,6 +2269,18 @@ public class JsonUtil {
       return new TypeToken<ConvenioResponse>(){}.getType();
     }
     
+    if ("CredorPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<CredorPersist>(){}.getType();
+    }
+    
+    if ("CredorResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CredorResponse>(){}.getType();
+    }
+    
+    if ("CredorUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<CredorUpdate>(){}.getType();
+    }
+    
     if ("DadosBancariosContaPersist".equalsIgnoreCase(className)) {
       return new TypeToken<DadosBancariosContaPersist>(){}.getType();
     }
@@ -2337,6 +2409,10 @@ public class JsonUtil {
       return new TypeToken<EntidadeResponse>(){}.getType();
     }
     
+    if ("EscritorioCobrancaDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<EscritorioCobrancaDTO>(){}.getType();
+    }
+    
     if ("EstabelecimentoPersist".equalsIgnoreCase(className)) {
       return new TypeToken<EstabelecimentoPersist>(){}.getType();
     }
@@ -2439,6 +2515,14 @@ public class JsonUtil {
     
     if ("IntegracaoEmissorPersist".equalsIgnoreCase(className)) {
       return new TypeToken<IntegracaoEmissorPersist>(){}.getType();
+    }
+    
+    if ("IntegracaoEmissorPropostaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<IntegracaoEmissorPropostaPersist>(){}.getType();
+    }
+    
+    if ("IntegracaoEmissorPropostaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<IntegracaoEmissorPropostaResponse>(){}.getType();
     }
     
     if ("IntegracaoEmissorResponse".equalsIgnoreCase(className)) {
@@ -3327,6 +3411,10 @@ public class JsonUtil {
     
     if ("TelefoneAdicionalUpdate".equalsIgnoreCase(className)) {
       return new TypeToken<TelefoneAdicionalUpdate>(){}.getType();
+    }
+    
+    if ("TelefoneEscritorioCobrancaDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<TelefoneEscritorioCobrancaDTO>(){}.getType();
     }
     
     if ("TelefoneEstabelecimentoPersist".equalsIgnoreCase(className)) {

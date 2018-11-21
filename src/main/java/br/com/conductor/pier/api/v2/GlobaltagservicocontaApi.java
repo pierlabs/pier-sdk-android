@@ -634,12 +634,12 @@ public class GlobaltagservicocontaApi {
    * @param servicoContaPersist servicoContaPersist
    * @return Object
    */
-  public Object  salvarUsingPOST24 (ServicoContaPersistValue servicoContaPersist) throws ApiException {
+  public Object  salvarUsingPOST25 (ServicoContaPersistValue servicoContaPersist) throws ApiException {
     Object postBody = servicoContaPersist;
     
     // verify the required parameter 'servicoContaPersist' is set
     if (servicoContaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'servicoContaPersist' when calling salvarUsingPOST24");
+       throw new ApiException(400, "Missing the required parameter 'servicoContaPersist' when calling salvarUsingPOST25");
     }
     
 

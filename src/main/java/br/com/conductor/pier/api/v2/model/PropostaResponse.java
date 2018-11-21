@@ -17,6 +17,8 @@ public class PropostaResponse  {
   private Integer status = null;
   @SerializedName("dataCadastramento")
   private String dataCadastramento = null;
+  @SerializedName("dataAprovacaoNegacaoPendencia")
+  private String dataAprovacaoNegacaoPendencia = null;
 
   
   /**
@@ -55,6 +57,18 @@ public class PropostaResponse  {
   }
 
   
+  /**
+   * {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
+   **/
+  @ApiModelProperty(value = "{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}")
+  public String getDataAprovacaoNegacaoPendencia() {
+    return dataAprovacaoNegacaoPendencia;
+  }
+  public void setDataAprovacaoNegacaoPendencia(String dataAprovacaoNegacaoPendencia) {
+    this.dataAprovacaoNegacaoPendencia = dataAprovacaoNegacaoPendencia;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -64,6 +78,7 @@ public class PropostaResponse  {
     sb.append("  id: ").append(id).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  dataCadastramento: ").append(dataCadastramento).append("\n");
+    sb.append("  dataAprovacaoNegacaoPendencia: ").append(dataAprovacaoNegacaoPendencia).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
