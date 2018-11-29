@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * {{{adesao_pacote_tarifa_persistencia_descricao}}}
  **/
 @ApiModel(description = "{{{adesao_pacote_tarifa_persistencia_descricao}}}")
-public class AdesaoPacoteTarifaPersistencia  {
+public class AdesaoPacoteTarifaPersist  {
   
   @SerializedName("idPacoteTarifa")
   private Long idPacoteTarifa = null;
@@ -213,7 +213,7 @@ public class AdesaoPacoteTarifaPersistencia  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AdesaoPacoteTarifaPersistencia {\n");
+    sb.append("class AdesaoPacoteTarifaPersist {\n");
     
     sb.append("  idPacoteTarifa: ").append(idPacoteTarifa).append("\n");
     sb.append("  ciclo: ").append(ciclo).append("\n");

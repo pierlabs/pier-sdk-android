@@ -45,7 +45,7 @@ public class GlobaltagdadosbancarioscontaApi {
   /**
    * {{{dados_bancarios_conta_resource_alterar}}}
    * {{{dados_bancarios_conta_resource_alterar_notes}}}
-   * @param id {{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}
+   * @param id id
    * @param update update
    * @return DadosBancariosContaResponse
    */
@@ -172,12 +172,12 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param id {{{tipo_conta_bancaria_resource_consultar_param_id}}}
    * @return CdtTipoContaBancaria
    */
-  public CdtTipoContaBancaria  consultarUsingGET41 (Long id) throws ApiException {
+  public CdtTipoContaBancaria  consultarUsingGET42 (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET41");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
     }
     
 
@@ -314,7 +314,7 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param descricao {{{tipo_conta_bancaria_request_descricao_value}}}
    * @return CdtTipoContaBancaria
    */
-  public CdtTipoContaBancaria  listarUsingGET49 (List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+  public CdtTipoContaBancaria  listarUsingGET50 (List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
     Object postBody = null;
     
 

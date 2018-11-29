@@ -18,8 +18,9 @@ public class StatusBoletoResponse  {
 
   
   /**
+   * {{{status_boleto_dto_status_value}}}
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "{{{status_boleto_dto_status_value}}}")
   public String getStatus() {
     return status;
   }
@@ -29,8 +30,9 @@ public class StatusBoletoResponse  {
 
   
   /**
+   * {{{status_boleto_dto_data_value}}}
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "{{{status_boleto_dto_data_value}}}")
   public String getData() {
     return data;
   }

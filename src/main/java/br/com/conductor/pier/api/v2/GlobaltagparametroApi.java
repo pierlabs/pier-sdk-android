@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.ParametroEmissorResponse;
+import br.com.conductor.pier.api.v2.model.ParametrosProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PageParametroProdutoResponse;
 
 import org.apache.http.HttpEntity;
@@ -99,6 +100,65 @@ public class GlobaltagparametroApi {
   }
   
   /**
+   * {{{parametro_produto_consultar}}}
+   * {{{parametro_produto_consultar_notas}}}
+   * @param id id
+   * @return ParametrosProdutoResponse
+   */
+  public ParametrosProdutoResponse  consultarUsingGET28 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/parametros-produto/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ParametrosProdutoResponse) ApiInvoker.deserialize(response, "", ParametrosProdutoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * {{{parametro_produto_listar}}}
    * {{{parametro_produto_listar_notas}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -108,9 +168,10 @@ public class GlobaltagparametroApi {
    * @param codigo {{{parametro_produto_dto_codigo_value}}}
    * @param tipo {{{parametro_produto_dto_tipo_value}}}
    * @param idProduto {{{parametro_produto_dto_id_produto_value}}}
+   * @param descricao {{{parametro_produto_dto_descricao_value}}}
    * @return PageParametroProdutoResponse
    */
-  public PageParametroProdutoResponse  listarParametrosProdutoUsingGET (List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto) throws ApiException {
+  public PageParametroProdutoResponse  listarParametrosProdutoUsingGET (List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto, String descricao) throws ApiException {
     Object postBody = null;
     
 
@@ -138,6 +199,8 @@ public class GlobaltagparametroApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "tipo", tipo));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idProduto", idProduto));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
     
 
     

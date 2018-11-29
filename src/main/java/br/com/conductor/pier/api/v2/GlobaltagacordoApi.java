@@ -8,8 +8,11 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
+import br.com.conductor.pier.api.v2.model.ParcelaAcordoResponse;
 import br.com.conductor.pier.api.v2.model.AcordoDetalheResponse;
+import br.com.conductor.pier.api.v2.model.BoletoParcelaAcordoResponse;
 import br.com.conductor.pier.api.v2.model.PageAcordoResponse;
+import br.com.conductor.pier.api.v2.model.PageAcordoParcelaResponse;
 import br.com.conductor.pier.api.v2.model.AcordoQuebraResponse;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentoAcordoRequestValue;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentosAcordoResponseValue;
@@ -41,6 +44,65 @@ public class GlobaltagacordoApi {
     return basePath;
   }
 
+  
+  /**
+   * {{parcela_acordo_resource_consultar}}
+   * {{parcela_acordo_resource_consultar_notes}}
+   * @param id {{parcela_acordo_resource_param_value_id}}
+   * @return ParcelaAcordoResponse
+   */
+  public ParcelaAcordoResponse  consultarPorIdUsingGET (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarPorIdUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/parcelas-acordos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ParcelaAcordoResponse) ApiInvoker.deserialize(response, "", ParcelaAcordoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
   
   /**
    * {{{acordo_resource_consultar}}}
@@ -92,6 +154,65 @@ public class GlobaltagacordoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (AcordoDetalheResponse) ApiInvoker.deserialize(response, "", AcordoDetalheResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{parcela_acordo_resource_gerar_boleto}}
+   * {{parcela_acordo_resource_gerar_boleto_notes}}
+   * @param id {{parcela_acordo_resource_param_value_id}}
+   * @return BoletoParcelaAcordoResponse
+   */
+  public BoletoParcelaAcordoResponse  gerarBoletoUsingPOST (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling gerarBoletoUsingPOST");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/parcelas-acordos/{id}/boletos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (BoletoParcelaAcordoResponse) ApiInvoker.deserialize(response, "", BoletoParcelaAcordoResponse.class);
       }
       else {
         return null;
@@ -166,6 +287,80 @@ public class GlobaltagacordoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageAcordoResponse) ApiInvoker.deserialize(response, "", PageAcordoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{parcela_acordo_resource_listar}}
+   * {{parcela_acordo_resource_listar_notes}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @param idAcordo {{acordo_parcela_request_id_acordo_value}}
+   * @param nossoNumero {{acordo_parcela_request_nosso_numero_value}}
+   * @param numeroParcela {{acordo_parcela_request_numero_parcela_value}}
+   * @param dataVencimento {{acordo_parcela_request_data_vencimento_value}}
+   * @return PageAcordoParcelaResponse
+   */
+  public PageAcordoParcelaResponse  listarUsingGET32 (List<String> sort, Integer page, Integer limit, Long idAcordo, String nossoNumero, Integer numeroParcela, String dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/parcelas-acordos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idAcordo", idAcordo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nossoNumero", nossoNumero));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroParcela", numeroParcela));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageAcordoParcelaResponse) ApiInvoker.deserialize(response, "", PageAcordoParcelaResponse.class);
       }
       else {
         return null;
