@@ -1447,6 +1447,10 @@ public class JsonUtil {
       return new TypeToken<List<PromotorResponse>>(){}.getType();
     }
     
+    if ("PropostaParcialUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PropostaParcialUpdate>>(){}.getType();
+    }
+    
     if ("PropostaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PropostaResponse>>(){}.getType();
     }
@@ -3291,6 +3295,10 @@ public class JsonUtil {
     
     if ("PromotorResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PromotorResponse>(){}.getType();
+    }
+    
+    if ("PropostaParcialUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<PropostaParcialUpdate>(){}.getType();
     }
     
     if ("PropostaResponse".equalsIgnoreCase(className)) {

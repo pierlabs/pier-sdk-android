@@ -451,9 +451,10 @@ public class GlobaltagcadastroclienteApi {
    * @param pais {{{endereco_persist_pais_value}}}
    * @param tempoResidenciaAnos {{{endereco_persist_tempo_residencia_anos_value}}}
    * @param tempoResidenciaMeses {{{endereco_persist_tempo_residencia_meses_value}}}
+   * @param aplicativoAlteracao {{{endereco_persist_aplicativo_alteracao_value}}}
    * @return EnderecoResponse
    */
-  public EnderecoResponse  alterarUsingPUT6 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses) throws ApiException {
+  public EnderecoResponse  alterarUsingPUT6 (Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses, String aplicativoAlteracao) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -500,6 +501,8 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaAnos", tempoResidenciaAnos));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaMeses", tempoResidenciaMeses));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "aplicativoAlteracao", aplicativoAlteracao));
     
 
     
@@ -2149,9 +2152,10 @@ public class GlobaltagcadastroclienteApi {
    * @param pais {{{endereco_persist_pais_value}}}
    * @param tempoResidenciaAnos {{{endereco_persist_tempo_residencia_anos_value}}}
    * @param tempoResidenciaMeses {{{endereco_persist_tempo_residencia_meses_value}}}
+   * @param aplicativoAlteracao {{{endereco_persist_aplicativo_alteracao_value}}}
    * @return EnderecoResponse
    */
-  public EnderecoResponse  salvarUsingPOST14 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses) throws ApiException {
+  public EnderecoResponse  salvarUsingPOST14 (Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Integer tempoResidenciaAnos, Integer tempoResidenciaMeses, String aplicativoAlteracao) throws ApiException {
     Object postBody = null;
     
 
@@ -2191,6 +2195,8 @@ public class GlobaltagcadastroclienteApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaAnos", tempoResidenciaAnos));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "tempoResidenciaMeses", tempoResidenciaMeses));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "aplicativoAlteracao", aplicativoAlteracao));
     
 
     

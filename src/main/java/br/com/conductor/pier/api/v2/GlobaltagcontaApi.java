@@ -17,6 +17,7 @@ import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
+import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
@@ -953,6 +954,71 @@ public class GlobaltagcontaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (DividaClienteResponse) ApiInvoker.deserialize(response, "", DividaClienteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * {{{transacoes_correntes_resource_consultar_processada}}}
+   * {{{transacoes_correntes_resource_consultar_processada_notes}}}
+   * @param id {{{transacoes_correntes_resource_consultar_processada_param_id}}}
+   * @param idTransacao {{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}
+   * @return TransacoesCorrentesResponse
+   */
+  public TransacoesCorrentesResponse  consultarProcessadaUsingGET (Long id, Long idTransacao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarProcessadaUsingGET");
+    }
+    
+    // verify the required parameter 'idTransacao' is set
+    if (idTransacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idTransacao' when calling consultarProcessadaUsingGET");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes-processadas/{idTransacao}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idTransacao" + "\\}", apiInvoker.escapeString(idTransacao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransacoesCorrentesResponse) ApiInvoker.deserialize(response, "", TransacoesCorrentesResponse.class);
       }
       else {
         return null;
