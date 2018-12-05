@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "{{{telefone_escritorio_cobranca_d_t_o_description}}}")
 public class TelefoneEscritorioCobrancaDTO  {
   
-  @SerializedName("idCredor")
-  private Long idCredor = null;
+  @SerializedName("id")
+  private Long id = null;
   @SerializedName("ddd")
   private String ddd = null;
   @SerializedName("telefone")
@@ -22,14 +22,14 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}
+   * {{{telefone_escritorio_cobranca_d_t_o_id}}}
    **/
-  @ApiModelProperty(required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}")
-  public Long getIdCredor() {
-    return idCredor;
+  @ApiModelProperty(value = "{{{telefone_escritorio_cobranca_d_t_o_id}}}")
+  public Long getId() {
+    return id;
   }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
@@ -75,7 +75,7 @@ public class TelefoneEscritorioCobrancaDTO  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TelefoneEscritorioCobrancaDTO {\n");
     
-    sb.append("  idCredor: ").append(idCredor).append("\n");
+    sb.append("  id: ").append(id).append("\n");
     sb.append("  ddd: ").append(ddd).append("\n");
     sb.append("  telefone: ").append(telefone).append("\n");
     sb.append("  ramal: ").append(ramal).append("\n");

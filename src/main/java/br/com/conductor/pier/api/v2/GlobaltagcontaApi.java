@@ -1290,17 +1290,17 @@ public class GlobaltagcontaApi {
    * @param idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse  consultarUsingGET49 (Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse  consultarUsingGET50 (Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET50");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET49");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET50");
     }
     
 
@@ -2326,12 +2326,12 @@ public class GlobaltagcontaApi {
    * @param grupoMCC {{{transacoes_processadas_request_grupo_mcc}}}
    * @return PageTransacaoProcessadaNaoProcessadaResponse
    */
-  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET56 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer status, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
+  public PageTransacaoProcessadaNaoProcessadaResponse  listarUsingGET57 (Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer status, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET56");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET57");
     }
     
 
@@ -2421,12 +2421,12 @@ public class GlobaltagcontaApi {
    * @param dataTransferencia {{{transferencia_request_data_transferencia_value}}}
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse  listarUsingGET58 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse  listarUsingGET59 (Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET58");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET59");
     }
     
 

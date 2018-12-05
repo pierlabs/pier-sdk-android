@@ -579,10 +579,6 @@ public class JsonUtil {
       return new TypeToken<List<EntidadeResponse>>(){}.getType();
     }
     
-    if ("EscritorioCobrancaDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EscritorioCobrancaDTO>>(){}.getType();
-    }
-    
     if ("EstabelecimentoPersist".equalsIgnoreCase(className)) {
       return new TypeToken<List<EstabelecimentoPersist>>(){}.getType();
     }
@@ -1075,6 +1071,10 @@ public class JsonUtil {
       return new TypeToken<List<PagePessoaDetalheResponse>>(){}.getType();
     }
     
+    if ("PagePessoaJuridicaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PagePessoaJuridicaResponse>>(){}.getType();
+    }
+    
     if ("PagePessoaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PagePessoaResponse>>(){}.getType();
     }
@@ -1369,6 +1369,18 @@ public class JsonUtil {
     
     if ("PessoaJuridicaAprovadaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PessoaJuridicaAprovadaResponse>>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PessoaJuridicaPersist>>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PessoaJuridicaResponse>>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PessoaJuridicaUpdate>>(){}.getType();
     }
     
     if ("PessoaResponse".equalsIgnoreCase(className)) {
@@ -2429,10 +2441,6 @@ public class JsonUtil {
       return new TypeToken<EntidadeResponse>(){}.getType();
     }
     
-    if ("EscritorioCobrancaDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<EscritorioCobrancaDTO>(){}.getType();
-    }
-    
     if ("EstabelecimentoPersist".equalsIgnoreCase(className)) {
       return new TypeToken<EstabelecimentoPersist>(){}.getType();
     }
@@ -2925,6 +2933,10 @@ public class JsonUtil {
       return new TypeToken<PagePessoaDetalheResponse>(){}.getType();
     }
     
+    if ("PagePessoaJuridicaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PagePessoaJuridicaResponse>(){}.getType();
+    }
+    
     if ("PagePessoaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PagePessoaResponse>(){}.getType();
     }
@@ -3219,6 +3231,18 @@ public class JsonUtil {
     
     if ("PessoaJuridicaAprovadaResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PessoaJuridicaAprovadaResponse>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<PessoaJuridicaPersist>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PessoaJuridicaResponse>(){}.getType();
+    }
+    
+    if ("PessoaJuridicaUpdate".equalsIgnoreCase(className)) {
+      return new TypeToken<PessoaJuridicaUpdate>(){}.getType();
     }
     
     if ("PessoaResponse".equalsIgnoreCase(className)) {

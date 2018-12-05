@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class CredorUpdate  {
   
-  @SerializedName("telefoneEscritorioCobranca")
-  private List<TelefoneEscritorioCobrancaDTO> telefoneEscritorioCobranca = null;
+  @SerializedName("telefonesEscritoriosCobranca")
+  private List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca = null;
   @SerializedName("nomeCredor")
   private String nomeCredor = null;
   @SerializedName("diaPagamentoSemanal")
@@ -103,11 +103,11 @@ public class CredorUpdate  {
    * {{{credor_update_telefones_escritorio_cobranca_value}}}
    **/
   @ApiModelProperty(value = "{{{credor_update_telefones_escritorio_cobranca_value}}}")
-  public List<TelefoneEscritorioCobrancaDTO> getTelefoneEscritorioCobranca() {
-    return telefoneEscritorioCobranca;
+  public List<TelefoneEscritorioCobrancaDTO> getTelefonesEscritoriosCobranca() {
+    return telefonesEscritoriosCobranca;
   }
-  public void setTelefoneEscritorioCobranca(List<TelefoneEscritorioCobrancaDTO> telefoneEscritorioCobranca) {
-    this.telefoneEscritorioCobranca = telefoneEscritorioCobranca;
+  public void setTelefonesEscritoriosCobranca(List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca) {
+    this.telefonesEscritoriosCobranca = telefonesEscritoriosCobranca;
   }
 
   
@@ -585,7 +585,7 @@ public class CredorUpdate  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CredorUpdate {\n");
     
-    sb.append("  telefoneEscritorioCobranca: ").append(telefoneEscritorioCobranca).append("\n");
+    sb.append("  telefonesEscritoriosCobranca: ").append(telefonesEscritoriosCobranca).append("\n");
     sb.append("  nomeCredor: ").append(nomeCredor).append("\n");
     sb.append("  diaPagamentoSemanal: ").append(diaPagamentoSemanal).append("\n");
     sb.append("  diaPagamentoMensal: ").append(diaPagamentoMensal).append("\n");

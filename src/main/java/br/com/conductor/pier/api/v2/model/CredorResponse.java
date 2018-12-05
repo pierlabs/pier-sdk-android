@@ -1,6 +1,5 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.EscritorioCobrancaDTO;
 import br.com.conductor.pier.api.v2.model.TelefoneEscritorioCobrancaDTO;
 import java.math.BigDecimal;
 import java.util.*;
@@ -68,10 +67,38 @@ public class CredorResponse  {
   private Long idPessoaJuridica = null;
   @SerializedName("flagEscritorioCobranca")
   private Boolean flagEscritorioCobranca = null;
-  @SerializedName("escritoriosCobranca")
-  private EscritorioCobrancaDTO escritoriosCobranca = null;
+  @SerializedName("prefixo")
+  private String prefixo = null;
+  @SerializedName("ativo")
+  private Boolean ativo = null;
   @SerializedName("telefonesEscritoriosCobranca")
   private List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca = null;
+  @SerializedName("nomeContato")
+  private String nomeContato = null;
+  @SerializedName("email")
+  private String email = null;
+  @SerializedName("nomeLogradouro")
+  private String nomeLogradouro = null;
+  @SerializedName("numeroEndereco")
+  private Integer numeroEndereco = null;
+  @SerializedName("complementoEndereco")
+  private String complementoEndereco = null;
+  @SerializedName("bairro")
+  private String bairro = null;
+  @SerializedName("cidade")
+  private String cidade = null;
+  @SerializedName("cep")
+  private String cep = null;
+  @SerializedName("uf")
+  private String uf = null;
+  @SerializedName("responsavel")
+  private String responsavel = null;
+  @SerializedName("flagSegundaViaAcordo")
+  private Integer flagSegundaViaAcordo = null;
+  @SerializedName("valorMinimoParcela")
+  private BigDecimal valorMinimoParcela = null;
+  @SerializedName("descontoMaximo")
+  private BigDecimal descontoMaximo = null;
 
   
   /**
@@ -375,14 +402,26 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_escritorio_cobranca_value}}}
+   * {{{credor_response_prefixo_value}}}
    **/
-  @ApiModelProperty(value = "{{{credor_response_escritorio_cobranca_value}}}")
-  public EscritorioCobrancaDTO getEscritoriosCobranca() {
-    return escritoriosCobranca;
+  @ApiModelProperty(value = "{{{credor_response_prefixo_value}}}")
+  public String getPrefixo() {
+    return prefixo;
   }
-  public void setEscritoriosCobranca(EscritorioCobrancaDTO escritoriosCobranca) {
-    this.escritoriosCobranca = escritoriosCobranca;
+  public void setPrefixo(String prefixo) {
+    this.prefixo = prefixo;
+  }
+
+  
+  /**
+   * {{{credor_response_ativo_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_ativo_value}}}")
+  public Boolean getAtivo() {
+    return ativo;
+  }
+  public void setAtivo(Boolean ativo) {
+    this.ativo = ativo;
   }
 
   
@@ -395,6 +434,162 @@ public class CredorResponse  {
   }
   public void setTelefonesEscritoriosCobranca(List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca) {
     this.telefonesEscritoriosCobranca = telefonesEscritoriosCobranca;
+  }
+
+  
+  /**
+   * {{{credor_response_nome_contato_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_nome_contato_value}}}")
+  public String getNomeContato() {
+    return nomeContato;
+  }
+  public void setNomeContato(String nomeContato) {
+    this.nomeContato = nomeContato;
+  }
+
+  
+  /**
+   * {{{credor_response_email_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_email_value}}}")
+  public String getEmail() {
+    return email;
+  }
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  
+  /**
+   * {{{credor_response_nome_logradouro_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_nome_logradouro_value}}}")
+  public String getNomeLogradouro() {
+    return nomeLogradouro;
+  }
+  public void setNomeLogradouro(String nomeLogradouro) {
+    this.nomeLogradouro = nomeLogradouro;
+  }
+
+  
+  /**
+   * {{{credor_response_numero_endereco_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_numero_endereco_value}}}")
+  public Integer getNumeroEndereco() {
+    return numeroEndereco;
+  }
+  public void setNumeroEndereco(Integer numeroEndereco) {
+    this.numeroEndereco = numeroEndereco;
+  }
+
+  
+  /**
+   * {{{credor_response_complemento_endereco_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_complemento_endereco_value}}}")
+  public String getComplementoEndereco() {
+    return complementoEndereco;
+  }
+  public void setComplementoEndereco(String complementoEndereco) {
+    this.complementoEndereco = complementoEndereco;
+  }
+
+  
+  /**
+   * {{{credor_response_bairro_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_bairro_value}}}")
+  public String getBairro() {
+    return bairro;
+  }
+  public void setBairro(String bairro) {
+    this.bairro = bairro;
+  }
+
+  
+  /**
+   * {{{credor_response_cidade_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_cidade_value}}}")
+  public String getCidade() {
+    return cidade;
+  }
+  public void setCidade(String cidade) {
+    this.cidade = cidade;
+  }
+
+  
+  /**
+   * {{{credor_response_cep_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_cep_value}}}")
+  public String getCep() {
+    return cep;
+  }
+  public void setCep(String cep) {
+    this.cep = cep;
+  }
+
+  
+  /**
+   * {{{credor_response_uf_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_uf_value}}}")
+  public String getUf() {
+    return uf;
+  }
+  public void setUf(String uf) {
+    this.uf = uf;
+  }
+
+  
+  /**
+   * {{{credor_response_responsavel_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_responsavel_value}}}")
+  public String getResponsavel() {
+    return responsavel;
+  }
+  public void setResponsavel(String responsavel) {
+    this.responsavel = responsavel;
+  }
+
+  
+  /**
+   * {{{credor_response_flag_segunda_via_acordo_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_flag_segunda_via_acordo_value}}}")
+  public Integer getFlagSegundaViaAcordo() {
+    return flagSegundaViaAcordo;
+  }
+  public void setFlagSegundaViaAcordo(Integer flagSegundaViaAcordo) {
+    this.flagSegundaViaAcordo = flagSegundaViaAcordo;
+  }
+
+  
+  /**
+   * {{{credor_response_valor_minimo_parcela_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_valor_minimo_parcela_value}}}")
+  public BigDecimal getValorMinimoParcela() {
+    return valorMinimoParcela;
+  }
+  public void setValorMinimoParcela(BigDecimal valorMinimoParcela) {
+    this.valorMinimoParcela = valorMinimoParcela;
+  }
+
+  
+  /**
+   * {{{credor_response_desconto_maximo_value}}}
+   **/
+  @ApiModelProperty(value = "{{{credor_response_desconto_maximo_value}}}")
+  public BigDecimal getDescontoMaximo() {
+    return descontoMaximo;
+  }
+  public void setDescontoMaximo(BigDecimal descontoMaximo) {
+    this.descontoMaximo = descontoMaximo;
   }
 
   
@@ -429,8 +624,22 @@ public class CredorResponse  {
     sb.append("  periodicidade: ").append(periodicidade).append("\n");
     sb.append("  idPessoaJuridica: ").append(idPessoaJuridica).append("\n");
     sb.append("  flagEscritorioCobranca: ").append(flagEscritorioCobranca).append("\n");
-    sb.append("  escritoriosCobranca: ").append(escritoriosCobranca).append("\n");
+    sb.append("  prefixo: ").append(prefixo).append("\n");
+    sb.append("  ativo: ").append(ativo).append("\n");
     sb.append("  telefonesEscritoriosCobranca: ").append(telefonesEscritoriosCobranca).append("\n");
+    sb.append("  nomeContato: ").append(nomeContato).append("\n");
+    sb.append("  email: ").append(email).append("\n");
+    sb.append("  nomeLogradouro: ").append(nomeLogradouro).append("\n");
+    sb.append("  numeroEndereco: ").append(numeroEndereco).append("\n");
+    sb.append("  complementoEndereco: ").append(complementoEndereco).append("\n");
+    sb.append("  bairro: ").append(bairro).append("\n");
+    sb.append("  cidade: ").append(cidade).append("\n");
+    sb.append("  cep: ").append(cep).append("\n");
+    sb.append("  uf: ").append(uf).append("\n");
+    sb.append("  responsavel: ").append(responsavel).append("\n");
+    sb.append("  flagSegundaViaAcordo: ").append(flagSegundaViaAcordo).append("\n");
+    sb.append("  valorMinimoParcela: ").append(valorMinimoParcela).append("\n");
+    sb.append("  descontoMaximo: ").append(descontoMaximo).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
