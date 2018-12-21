@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{emprestimo_pessoal_request_description}}}
+ * Request Representation of the Device resource
  **/
-@ApiModel(description = "{{{emprestimo_pessoal_request_description}}}")
+@ApiModel(description = "Request Representation of the Device resource")
 public class EmprestimoPessoalRequest  {
   
   @SerializedName("valorSolicitado")
@@ -27,9 +27,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_valor_solicitado_value}}}
+   * Value of the Loan/financing
    **/
-  @ApiModelProperty(required = true, value = "{{{emprestimo_pessoal_request_valor_solicitado_value}}}")
+  @ApiModelProperty(required = true, value = "Value of the Loan/financing")
   public BigDecimal getValorSolicitado() {
     return valorSolicitado;
   }
@@ -39,9 +39,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_numero_parcelas_value}}}
+   * Total Number of the portions of the loan/financing
    **/
-  @ApiModelProperty(required = true, value = "{{{emprestimo_pessoal_request_numero_parcelas_value}}}")
+  @ApiModelProperty(required = true, value = "Total Number of the portions of the loan/financing")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -51,9 +51,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_taxa_juros_value}}}
+   * Percent value of the taxes of interest to be applied
    **/
-  @ApiModelProperty(required = true, value = "{{{emprestimo_pessoal_request_taxa_juros_value}}}")
+  @ApiModelProperty(required = true, value = "Percent value of the taxes of interest to be applied")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -63,9 +63,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_periodo_taxa_value}}}
+   * Period of application of the taxes of interest
    **/
-  @ApiModelProperty(required = true, value = "{{{emprestimo_pessoal_request_periodo_taxa_value}}}")
+  @ApiModelProperty(required = true, value = "Period of application of the taxes of interest")
   public String getPeriodoTaxa() {
     return periodoTaxa;
   }
@@ -75,9 +75,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
+   * System to diminish the value of the portions
    **/
-  @ApiModelProperty(required = true, value = "{{{emprestimo_pessoal_request_sistema_amortizacao_value}}}")
+  @ApiModelProperty(required = true, value = "System to diminish the value of the portions")
   public String getSistemaAmortizacao() {
     return sistemaAmortizacao;
   }
@@ -87,9 +87,9 @@ public class EmprestimoPessoalRequest  {
 
   
   /**
-   * {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
+   * Number of months to the collection of the first portion
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_request_numero_meses_carencia_value}}}")
+  @ApiModelProperty(value = "Number of months to the collection of the first portion")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_response_description}}}
+ * Object Response of the file
  **/
-@ApiModel(description = "{{{arquivo_response_description}}}")
+@ApiModel(description = "Object Response of the file")
 public class ArquivoResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_value}}}
+   * Identification Code of the File
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the File")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_tipo_arquivo_value}}}
+   * Identification Code of the File Type
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_tipo_arquivo_value}}}")
+  @ApiModelProperty(value = "Identification Code of the File Type")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
   }
@@ -60,9 +60,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_tipo_arquivo_value}}}
+   * Description of the type of the file
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_tipo_arquivo_value}}}")
+  @ApiModelProperty(value = "Description of the type of the file")
   public String getNomeTipoArquivo() {
     return nomeTipoArquivo;
   }
@@ -72,9 +72,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_status_arquivo_value}}}
+   * Identification Code of the File Staus
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_status_arquivo_value}}}")
+  @ApiModelProperty(value = "Identification Code of the File Staus")
   public Long getIdStatusArquivo() {
     return idStatusArquivo;
   }
@@ -84,9 +84,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_status_arquivo_value}}}
+   * Description of the File Status
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_status_arquivo_value}}}")
+  @ApiModelProperty(value = "Description of the File Status")
   public String getNomeStatusArquivo() {
     return nomeStatusArquivo;
   }
@@ -96,9 +96,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_value}}}
+   * File name
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_value}}}")
+  @ApiModelProperty(value = "File name")
   public String getNome() {
     return nome;
   }
@@ -108,9 +108,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_extensao_value}}}
+   * Format/Extens of the file
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_extensao_value}}}")
+  @ApiModelProperty(value = "Format/Extens of the file")
   public String getExtensao() {
     return extensao;
   }
@@ -120,9 +120,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_data_inclusao_value}}}
+   * Date of Inclusion of the File
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Date of Inclusion of the File")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -132,9 +132,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_data_alteracao_value}}}
+   * Date of the last update of the file
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_data_alteracao_value}}}")
+  @ApiModelProperty(value = "Date of the last update of the file")
   public String getDataAlteracao() {
     return dataAlteracao;
   }
@@ -144,9 +144,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_detalhes_value}}}
+   * Details containing additional information, realted to the file
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_detalhes_value}}}")
+  @ApiModelProperty(value = "Details containing additional information, realted to the file")
   public List<ArquivoParametroResponse> getDetalhes() {
     return detalhes;
   }

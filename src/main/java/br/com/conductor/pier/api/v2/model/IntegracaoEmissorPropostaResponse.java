@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{integracao_emissor_proposta_resposta_descricao}}}
+ * Response of the inclusion of the record of the proposal for integration
  **/
-@ApiModel(description = "{{{integracao_emissor_proposta_resposta_descricao}}}")
+@ApiModel(description = "Response of the inclusion of the record of the proposal for integration")
 public class IntegracaoEmissorPropostaResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_id}}}
+   * Identification code
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id}}}")
+  @ApiModelProperty(value = "Identification code")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_id_conta}}}
+   * Account ID code
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id_conta}}}")
+  @ApiModelProperty(value = "Account ID code")
   public Long getIdConta() {
     return idConta;
   }
@@ -52,9 +52,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_status}}}
+   * Registration status
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_status}}}")
+  @ApiModelProperty(value = "Registration status")
   public Integer getStatus() {
     return status;
   }
@@ -64,9 +64,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_observacao}}}
+   * Record notice
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_observacao}}}")
+  @ApiModelProperty(value = "Record notice")
   public String getObservacao() {
     return observacao;
   }
@@ -76,9 +76,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_flag_selecionado}}}
+   * Flag selected
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_flag_selecionado}}}")
+  @ApiModelProperty(value = "Flag selected")
   public Boolean getFlagSelecionado() {
     return flagSelecionado;
   }
@@ -88,9 +88,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_id_proposta_externa}}}
+   * Identification code of the external proposal
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id_proposta_externa}}}")
+  @ApiModelProperty(value = "Identification code of the external proposal")
   public Long getIdPropostaExterna() {
     return idPropostaExterna;
   }
@@ -100,9 +100,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * {{{integracao_emissor_proposta_resposta_data_evento}}}
+   * Date of the event
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_data_evento}}}")
+  @ApiModelProperty(value = "Date of the event")
   public String getDataEvento() {
     return dataEvento;
   }

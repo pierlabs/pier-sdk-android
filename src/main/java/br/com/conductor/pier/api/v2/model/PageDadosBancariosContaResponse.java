@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_dados_bancarios_conta_response_description}}}
+ * Bank data list
  **/
-@ApiModel(description = "{{{page_dados_bancarios_conta_response_description}}}")
+@ApiModel(description = "Bank data list")
 public class PageDadosBancariosContaResponse  {
   
   @SerializedName("content")

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{operacao_credor_persist_description}}}
+ * Object OperationCreditor
  **/
-@ApiModel(description = "{{{operacao_credor_persist_description}}}")
+@ApiModel(description = "Object OperationCreditor")
 public class OperacaoCredorPersist  {
   
   @SerializedName("idOperacao")
@@ -46,9 +46,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_id_operacao_value}}}
+   * Show the Operation Id
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_id_operacao_value}}}")
+  @ApiModelProperty(required = true, value = "Show the Operation Id")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -58,9 +58,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_id_grupo_economico_value}}}
+   * Show the id of the Economic Group
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_id_grupo_economico_value}}}")
+  @ApiModelProperty(required = true, value = "Show the id of the Economic Group")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -70,9 +70,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_ids_produto_value}}}
+   * Show the list of ids products that will have register rules
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_ids_produto_value}}}")
+  @ApiModelProperty(required = true, value = "Show the list of ids products that will have register rules")
   public List<Long> getIdsProduto() {
     return idsProduto;
   }
@@ -82,9 +82,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_remuneracao_percentual_value}}}
+   * Remuneration Percentage
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_remuneracao_percentual_value}}}")
+  @ApiModelProperty(value = "Remuneration Percentage")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
   }
@@ -94,9 +94,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_remuneracao_fixa_value}}}
+   * Remuneration fixed
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_remuneracao_fixa_value}}}")
+  @ApiModelProperty(value = "Remuneration fixed")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
   }
@@ -106,9 +106,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_periodicidade_value}}}
+   * Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_periodicidade_value}}}")
+  @ApiModelProperty(value = "Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -118,9 +118,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_vencimento_primeira_parcela_value}}}
+   * Expiration of the first parcel
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_vencimento_primeira_parcela_value}}}")
+  @ApiModelProperty(value = "Expiration of the first parcel")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
   }
@@ -130,9 +130,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_dias_afastamento_value}}}
+   * Clearance days
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_dias_afastamento_value}}}")
+  @ApiModelProperty(value = "Clearance days")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
   }
@@ -142,9 +142,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_fator_multiplicador_value}}}
+   * Factor multiplier (OUT_SCHEDULE(0), SCHEDULE(1))
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_fator_multiplicador_value}}}")
+  @ApiModelProperty(value = "Factor multiplier (OUT_SCHEDULE(0), SCHEDULE(1))")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
   }
@@ -154,9 +154,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_flag_taxa_fixada_value}}}
+   * Flag taxe fixed
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_persist_flag_taxa_fixada_value}}}")
+  @ApiModelProperty(value = "Flag taxe fixed")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
   }
@@ -166,9 +166,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_plano_minimo_value}}}
+   * Minimum plan of the rule
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_plano_minimo_value}}}")
+  @ApiModelProperty(required = true, value = "Minimum plan of the rule")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -178,9 +178,9 @@ public class OperacaoCredorPersist  {
 
   
   /**
-   * {{{operacao_credor_persist_plano_maximo_value}}}
+   * Maximum plan of the rule
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_persist_plano_maximo_value}}}")
+  @ApiModelProperty(required = true, value = "Maximum plan of the rule")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }

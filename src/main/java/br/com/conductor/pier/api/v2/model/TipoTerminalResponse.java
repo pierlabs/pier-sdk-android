@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_terminal_response_description}}}
+ * ObjecttypeTerminal
  **/
-@ApiModel(description = "{{{tipo_terminal_response_description}}}")
+@ApiModel(description = "ObjecttypeTerminal")
 public class TipoTerminalResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * {{{tipo_terminal_response_id_value}}}
+   * Identification Code of the Terminal Type (id)
    **/
-  @ApiModelProperty(value = "{{{tipo_terminal_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Terminal Type (id)")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoTerminalResponse  {
 
   
   /**
-   * {{{tipo_terminal_response_descricao_terminal_value}}}
+   * Description of the Terminal Type
    **/
-  @ApiModelProperty(value = "{{{tipo_terminal_response_descricao_terminal_value}}}")
+  @ApiModelProperty(value = "Description of the Terminal Type")
   public String getDescricaoTerminal() {
     return descricaoTerminal;
   }

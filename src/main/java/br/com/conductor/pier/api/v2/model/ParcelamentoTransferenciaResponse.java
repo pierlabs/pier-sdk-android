@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{parcelamento_transferencia_response_description}}}
+ * Detail of the installment plan for credit transfer to banking accounts
  **/
-@ApiModel(description = "{{{parcelamento_transferencia_response_description}}}")
+@ApiModel(description = "Detail of the installment plan for credit transfer to banking accounts")
 public class ParcelamentoTransferenciaResponse  {
   
   @SerializedName("numeroParcela")
@@ -29,9 +29,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_numero_parcela_value}}}
+   * Number of the available parcels
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_numero_parcela_value}}}")
+  @ApiModelProperty(value = "Number of the available parcels")
   public Integer getNumeroParcela() {
     return numeroParcela;
   }
@@ -41,9 +41,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_parcelas_value}}}
+   * Value of the other parcels
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_valor_parcelas_value}}}")
+  @ApiModelProperty(value = "Value of the other parcels")
   public BigDecimal getValorParcelas() {
     return valorParcelas;
   }
@@ -53,9 +53,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_total_value}}}
+   * Total value of the financing
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_valor_total_value}}}")
+  @ApiModelProperty(value = "Total value of the financing")
   public BigDecimal getValorTotal() {
     return valorTotal;
   }
@@ -65,9 +65,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
+   * Value of the hiring fee
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_valor_t_a_c_value}}}")
+  @ApiModelProperty(value = "Value of the hiring fee")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -77,9 +77,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
+   * IOF calculated for the client
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_valor_i_o_f_value}}}")
+  @ApiModelProperty(value = "IOF calculated for the client")
   public BigDecimal getValorIOF() {
     return valorIOF;
   }
@@ -89,9 +89,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_taxa_juros_value}}}
+   * Value of the interest taxes
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_taxa_juros_value}}}")
+  @ApiModelProperty(value = "Value of the interest taxes")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -101,9 +101,9 @@ public class ParcelamentoTransferenciaResponse  {
 
   
   /**
-   * {{{parcelamento_transferencia_response_cet_anual_value}}}
+   * CET annual
    **/
-  @ApiModelProperty(value = "{{{parcelamento_transferencia_response_cet_anual_value}}}")
+  @ApiModelProperty(value = "CET annual")
   public BigDecimal getCetAnual() {
     return cetAnual;
   }

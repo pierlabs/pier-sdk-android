@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{portador_response_description}}}
+ * Cardholder
  **/
-@ApiModel(description = "{{{portador_response_description}}}")
+@ApiModel(description = "Cardholder")
 public class PortadorResponse  {
   
   @SerializedName("idConta")
@@ -34,9 +34,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_conta_value}}}
+   * Identification Code of the Account (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Account (id)")
   public Long getIdConta() {
     return idConta;
   }
@@ -46,9 +46,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_produto_value}}}
+   * Identification Code of the Product (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_produto_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Product (id)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -58,9 +58,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_pessoa_value}}}
+   * Identification Code of the Person (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Person (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -70,9 +70,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_parentesco_value}}}
+   * Identification Code of the Kinship (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_parentesco_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Kinship (id)")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -82,9 +82,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_tipo_portador_value}}}
+   * Show the type of Cardholder, being ('H': Holder, 'A': Additional)
    **/
-  @ApiModelProperty(value = "{{{portador_response_tipo_portador_value}}}")
+  @ApiModelProperty(value = "Show the type of Cardholder, being ('H': Holder, 'A': Additional)")
   public String getTipoPortador() {
     return tipoPortador;
   }
@@ -94,9 +94,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_nome_impresso_value}}}
+   * Show the name to be printed on the card
    **/
-  @ApiModelProperty(value = "{{{portador_response_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Show the name to be printed on the card")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -106,9 +106,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_tipo_cartao_value}}}
+   * Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_tipo_cartao_value}}}")
+  @ApiModelProperty(value = "Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -118,9 +118,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_flag_ativo_value}}}
+   * When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement
    **/
-  @ApiModelProperty(value = "{{{portador_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
@@ -130,9 +130,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_data_cadastro_portador_value}}}
+   * show the date which the Cardholder was registered, when there is this information
    **/
-  @ApiModelProperty(value = "{{{portador_response_data_cadastro_portador_value}}}")
+  @ApiModelProperty(value = "show the date which the Cardholder was registered, when there is this information")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }
@@ -142,9 +142,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_data_cancelamento_portador_value}}}
+   * Show the date which the Cardholder was canceled, when there is this information
    **/
-  @ApiModelProperty(value = "{{{portador_response_data_cancelamento_portador_value}}}")
+  @ApiModelProperty(value = "Show the date which the Cardholder was canceled, when there is this information")
   public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;
   }

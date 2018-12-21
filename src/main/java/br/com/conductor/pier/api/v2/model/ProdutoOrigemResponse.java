@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{produto_origem_response_description}}}
+ * response Representation of the Commercial Origin productsOrigin resource
  **/
-@ApiModel(description = "{{{produto_origem_response_description}}}")
+@ApiModel(description = "response Representation of the Commercial Origin productsOrigin resource")
 public class ProdutoOrigemResponse  {
   
   @SerializedName("idProduto")
@@ -16,9 +16,9 @@ public class ProdutoOrigemResponse  {
 
   
   /**
-   * {{{produto_origem_response_id_produto_value}}}
+   * Identifier Code of the Product
    **/
-  @ApiModelProperty(value = "{{{produto_origem_response_id_produto_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the Product")
   public Long getIdProduto() {
     return idProduto;
   }

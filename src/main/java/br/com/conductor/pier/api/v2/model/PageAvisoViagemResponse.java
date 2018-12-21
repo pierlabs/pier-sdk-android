@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_aviso_viagem_response_description}}}
+ * List of travel notification
  **/
-@ApiModel(description = "{{{page_aviso_viagem_response_description}}}")
+@ApiModel(description = "List of travel notification")
 public class PageAvisoViagemResponse  {
   
   @SerializedName("content")

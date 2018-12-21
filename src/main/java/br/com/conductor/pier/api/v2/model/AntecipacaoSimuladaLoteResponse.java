@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{antecipacao_simulada_lote_response_description}}}
+ * Representa??o da resposta do recurso Antecipacao Simulada
  **/
-@ApiModel(description = "{{{antecipacao_simulada_lote_response_description}}}")
+@ApiModel(description = "Representa??o da resposta do recurso Antecipacao Simulada")
 public class AntecipacaoSimuladaLoteResponse  {
   
   @SerializedName("valorTotalAntecipado")
@@ -25,9 +25,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
+   * Total value antecipated
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}")
+  @ApiModelProperty(value = "Total value antecipated")
   public BigDecimal getValorTotalAntecipado() {
     return valorTotalAntecipado;
   }
@@ -37,9 +37,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
+   * Total value of the discount
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}")
+  @ApiModelProperty(value = "Total value of the discount")
   public BigDecimal getValorTotalDesconto() {
     return valorTotalDesconto;
   }
@@ -49,9 +49,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
+   * Total value anticipated with the discount
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}")
+  @ApiModelProperty(value = "Total value anticipated with the discount")
   public BigDecimal getValorTotalComDesconto() {
     return valorTotalComDesconto;
   }
@@ -61,9 +61,9 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
+   * Antecipations Simulated
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}")
+  @ApiModelProperty(value = "Antecipations Simulated")
   public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;
   }

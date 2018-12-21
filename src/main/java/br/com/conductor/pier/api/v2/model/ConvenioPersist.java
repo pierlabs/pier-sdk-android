@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{convenio_persist_description}}} 
+ * Request Object for save Convenant 
  **/
-@ApiModel(description = "{{{convenio_persist_description}}} ")
+@ApiModel(description = "Request Object for save Convenant ")
 public class ConvenioPersist  {
   
   @SerializedName("banco")
@@ -47,9 +47,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_banco_value}}}
+   * Bank Id
    **/
-  @ApiModelProperty(required = true, value = "{{{convenio_persist_banco_value}}}")
+  @ApiModelProperty(required = true, value = "Bank Id")
   public Long getBanco() {
     return banco;
   }
@@ -59,9 +59,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_agencia_value}}}
+   * Agency Number
    **/
-  @ApiModelProperty(required = true, value = "{{{convenio_persist_agencia_value}}}")
+  @ApiModelProperty(required = true, value = "Agency Number")
   public Long getAgencia() {
     return agencia;
   }
@@ -71,9 +71,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_conta_corrente_value}}}
+   * Current Account
    **/
-  @ApiModelProperty(required = true, value = "{{{convenio_persist_conta_corrente_value}}}")
+  @ApiModelProperty(required = true, value = "Current Account")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -83,9 +83,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_especie_value}}}
+   * Convenant Id code
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_especie_value}}}")
+  @ApiModelProperty(value = "Convenant Id code")
   public String getEspecie() {
     return especie;
   }
@@ -95,9 +95,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_numero_convenio_value}}}
+   * Number Convenant
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_numero_convenio_value}}}")
+  @ApiModelProperty(value = "Number Convenant")
   public BigDecimal getNumeroConvenio() {
     return numeroConvenio;
   }
@@ -107,9 +107,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_carteira_value}}}
+   * Wallet Id Code
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_carteira_value}}}")
+  @ApiModelProperty(value = "Wallet Id Code")
   public Long getCarteira() {
     return carteira;
   }
@@ -119,9 +119,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_codigo_cedente_value}}}
+   * Assignor code
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_codigo_cedente_value}}}")
+  @ApiModelProperty(value = "Assignor code")
   public String getCodigoCedente() {
     return codigoCedente;
   }
@@ -131,9 +131,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_especie_tipo_value}}}
+   * Species Value
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_especie_tipo_value}}}")
+  @ApiModelProperty(value = "Species Value")
   public String getEspecieTipo() {
     return especieTipo;
   }
@@ -143,9 +143,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_especie_documento_value}}}
+   * Species Document Value
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_especie_documento_value}}}")
+  @ApiModelProperty(value = "Species Document Value")
   public String getEspecieDocumento() {
     return especieDocumento;
   }
@@ -155,9 +155,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_aceite_value}}}
+   * Information about if payer signed billing document
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_aceite_value}}}")
+  @ApiModelProperty(value = "Information about if payer signed billing document")
   public Boolean getAceite() {
     return aceite;
   }
@@ -167,9 +167,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_instrucoes_value}}}
+   * Instructions for the payment
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_instrucoes_value}}}")
+  @ApiModelProperty(value = "Instructions for the payment")
   public String getInstrucoes() {
     return instrucoes;
   }
@@ -179,9 +179,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_local_pagamento1_value}}}
+   * preferred place for payment
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_local_pagamento1_value}}}")
+  @ApiModelProperty(value = "preferred place for payment")
   public String getLocalPagamento1() {
     return localPagamento1;
   }
@@ -191,9 +191,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_local_pagamento2_value}}}
+   * preferred place for payment(additional)
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_local_pagamento2_value}}}")
+  @ApiModelProperty(value = "preferred place for payment(additional)")
   public String getLocalPagamento2() {
     return localPagamento2;
   }
@@ -203,9 +203,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_endereco_cobranca_emissor_value}}}
+   * billing address
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_endereco_cobranca_emissor_value}}}")
+  @ApiModelProperty(value = "billing address")
   public String getEnderecoCobrancaEmissor() {
     return enderecoCobrancaEmissor;
   }
@@ -215,9 +215,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_nome_beneficiario_emissor_value}}}
+   * Beneficiary name
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_nome_beneficiario_emissor_value}}}")
+  @ApiModelProperty(value = "Beneficiary name")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
   }
@@ -227,9 +227,9 @@ public class ConvenioPersist  {
 
   
   /**
-   * {{{convenio_persist_cnpj_beneficiario_emissor_value}}}
+   * Beneficiary cnpj
    **/
-  @ApiModelProperty(value = "{{{convenio_persist_cnpj_beneficiario_emissor_value}}}")
+  @ApiModelProperty(value = "Beneficiary cnpj")
   public String getCnpjBeneficiario() {
     return cnpjBeneficiario;
   }

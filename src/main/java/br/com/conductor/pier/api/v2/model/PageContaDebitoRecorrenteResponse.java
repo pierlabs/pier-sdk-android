@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_conta_debito_recorrente_response_description}}}
+ * Response Representation??o of the recurrent debit Account resource
  **/
-@ApiModel(description = "{{{page_conta_debito_recorrente_response_description}}}")
+@ApiModel(description = "Response Representation??o of the recurrent debit Account resource")
 public class PageContaDebitoRecorrenteResponse  {
   
   @SerializedName("content")

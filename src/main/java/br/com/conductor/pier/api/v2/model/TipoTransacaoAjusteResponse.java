@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_ajuste_response_description}}}
+ * Type of adjustment
  **/
-@ApiModel(description = "{{{tipo_ajuste_response_description}}}")
+@ApiModel(description = "Type of adjustment")
 public class TipoTransacaoAjusteResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoTransacaoAjusteResponse  {
 
   
   /**
-   * {{{tipo_transacao_ajuste_response_id_value}}}
+   * Transaction type ID
    **/
-  @ApiModelProperty(value = "{{{tipo_transacao_ajuste_response_id_value}}}")
+  @ApiModelProperty(value = "Transaction type ID")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoTransacaoAjusteResponse  {
 
   
   /**
-   * {{{tipo_transacao_ajuste_response_descricao_value}}}
+   * Transaction type description
    **/
-  @ApiModelProperty(value = "{{{tipo_transacao_ajuste_response_descricao_value}}}")
+  @ApiModelProperty(value = "Transaction type description")
   public String getDescricao() {
     return descricao;
   }

@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{risco_fraude_detalhado_response_description}}}
+ * Object of response of Detailed Fraud Risk
  **/
-@ApiModel(description = "{{{risco_fraude_detalhado_response_description}}}")
+@ApiModel(description = "Object of response of Detailed Fraud Risk")
 public class RiscoFraudeDetalhadoResponse  {
   
   @SerializedName("id")
@@ -71,9 +71,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_value}}}
+   * Identification Code of risk of fraud
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of risk of fraud")
   public Long getId() {
     return id;
   }
@@ -83,9 +83,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}
+   * Identification code of the type of resolution attributed to the register
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}")
+  @ApiModelProperty(value = "Identification code of the type of resolution attributed to the register")
   public Long getIdTipoResolucao() {
     return idTipoResolucao;
   }
@@ -95,9 +95,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}
+   * Description of the type of resolution attributed to the resgister
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}")
+  @ApiModelProperty(value = "Description of the type of resolution attributed to the resgister")
   public String getDescricaoTipoResolucao() {
     return descricaoTipoResolucao;
   }
@@ -107,9 +107,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_flag_alto_risco_value}}}
+   * Indicate that a transaction has a great risk of fraud and all the following transactions will be denied until all the transactions ranked as a risk of fraud be analyzed
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_flag_alto_risco_value}}}")
+  @ApiModelProperty(value = "Indicate that a transaction has a great risk of fraud and all the following transactions will be denied until all the transactions ranked as a risk of fraud be analyzed")
   public Boolean getFlagAltoRisco() {
     return flagAltoRisco;
   }
@@ -119,9 +119,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_conta_value}}}
+   * Code of identification of the account
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Code of identification of the account")
   public Long getIdConta() {
     return idConta;
   }
@@ -131,9 +131,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_cartao_value}}}
+   * Identification code of the card
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "Identification code of the card")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -143,9 +143,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_produto_value}}}
+   * Code of identification of the product
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_produto_value}}}")
+  @ApiModelProperty(value = "Code of identification of the product")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -155,9 +155,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_transacao_value}}}
+   * Identification Code of the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_transacao_value}}}")
+  @ApiModelProperty(value = "Identification Code of the transaction")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -167,9 +167,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_data_transacao_value}}}
+   * Date that the transaction ranked as a risk of fraude was made
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_data_transacao_value}}}")
+  @ApiModelProperty(value = "Date that the transaction ranked as a risk of fraude was made")
   public String getDataTransacao() {
     return dataTransacao;
   }
@@ -179,9 +179,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_valor_transacao_value}}}
+   * Value of the transaction ranked as a risk of fraud
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_valor_transacao_value}}}")
+  @ApiModelProperty(value = "Value of the transaction ranked as a risk of fraud")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -191,9 +191,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}
+   * Code of the origin currency used for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}")
+  @ApiModelProperty(value = "Code of the origin currency used for the transaction")
   public String getCodigoMoedaOrigem() {
     return codigoMoedaOrigem;
   }
@@ -203,9 +203,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_valor_origem_value}}}
+   * Value of the transactions in the origin currency
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_valor_origem_value}}}")
+  @ApiModelProperty(value = "Value of the transactions in the origin currency")
   public BigDecimal getValorOrigem() {
     return valorOrigem;
   }
@@ -215,9 +215,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}
+   * Code of the destination currency used for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}")
+  @ApiModelProperty(value = "Code of the destination currency used for the transaction")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
   }
@@ -227,9 +227,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_valor_destino_value}}}
+   * Value of the transaction of the intended currency of the transaction of the destination currency
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_valor_destino_value}}}")
+  @ApiModelProperty(value = "Value of the transaction of the intended currency of the transaction of the destination currency")
   public BigDecimal getValorDestino() {
     return valorDestino;
   }
@@ -239,9 +239,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}
+   * Name of the establishment where the transaction with risk of fraud was made
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Name of the establishment where the transaction with risk of fraud was made")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -251,9 +251,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_id_pais_value}}}
+   * Identification code of the Country
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_id_pais_value}}}")
+  @ApiModelProperty(value = "Identification code of the Country")
   public String getIdPais() {
     return idPais;
   }
@@ -263,9 +263,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}
+   * Response code of the authorizer for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}")
+  @ApiModelProperty(value = "Response code of the authorizer for the transaction")
   public String getCodigoRespostaAutorizador() {
     return codigoRespostaAutorizador;
   }
@@ -275,9 +275,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}
+   * Description of the response of the authorizer for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}")
+  @ApiModelProperty(value = "Description of the response of the authorizer for the transaction")
   public String getDescricaoRespostaAutorizador() {
     return descricaoRespostaAutorizador;
   }
@@ -287,9 +287,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}
+   * Response code of the tool of fraund prevention for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}")
+  @ApiModelProperty(value = "Response code of the tool of fraund prevention for the transaction")
   public String getCodigoRespostaFraude() {
     return codigoRespostaFraude;
   }
@@ -299,9 +299,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}
+   * Description of the response of the Prevention tool to the fraud for the transaction
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}")
+  @ApiModelProperty(value = "Description of the response of the Prevention tool to the fraud for the transaction")
   public String getDescricaoRespostaFraude() {
     return descricaoRespostaFraude;
   }
@@ -311,9 +311,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_origem_transacao_value}}}
+   * Type of Terminal that caused the Transaction (POS, ATM, TEF, etc)
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_origem_transacao_value}}}")
+  @ApiModelProperty(value = "Type of Terminal that caused the Transaction (POS, ATM, TEF, etc)")
   public String getOrigemTransacao() {
     return origemTransacao;
   }
@@ -323,9 +323,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}
+   * Code of identification of the origin mode of the transaction capture
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}")
+  @ApiModelProperty(value = "Code of identification of the origin mode of the transaction capture")
   public String getCodigoModoEntradaTerminal() {
     return codigoModoEntradaTerminal;
   }
@@ -335,9 +335,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}
+   * Description of the origin mode of the transaction capture
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}")
+  @ApiModelProperty(value = "Description of the origin mode of the transaction capture")
   public String getDescricaoModoEntradaTerminal() {
     return descricaoModoEntradaTerminal;
   }
@@ -347,9 +347,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_cpf_value}}}
+   * Number of CPF of the Person carrdholder, when it is the Physical type
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_cpf_value}}}")
+  @ApiModelProperty(value = "Number of CPF of the Person carrdholder, when it is the Physical type")
   public String getCpf() {
     return cpf;
   }
@@ -359,9 +359,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_cnpj_value}}}
+   * CNPJ number of the Per?son cardholder, when it is the Legal type
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_cnpj_value}}}")
+  @ApiModelProperty(value = "CNPJ number of the Per?son cardholder, when it is the Legal type")
   public String getCnpj() {
     return cnpj;
   }
@@ -371,9 +371,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_email_value}}}
+   * Email Address of the Cardholder
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_email_value}}}")
+  @ApiModelProperty(value = "Email Address of the Cardholder")
   public String getEmail() {
     return email;
   }
@@ -383,9 +383,9 @@ public class RiscoFraudeDetalhadoResponse  {
 
   
   /**
-   * {{{risco_fraude_detalhado_response_telefones_value}}}
+   * List of associated telephones to the cardholder
    **/
-  @ApiModelProperty(value = "{{{risco_fraude_detalhado_response_telefones_value}}}")
+  @ApiModelProperty(value = "List of associated telephones to the cardholder")
   public List<TelefoneResponse> getTelefones() {
     return telefones;
   }

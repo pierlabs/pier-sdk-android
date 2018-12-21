@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{operadora_response_description}}}
+ * response Representation of the telephonic operator resource
  **/
-@ApiModel(description = "{{{operadora_response_description}}}")
+@ApiModel(description = "response Representation of the telephonic operator resource")
 public class OperadoraResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class OperadoraResponse  {
 
   
   /**
-   * {{{operadora_response_id_value}}}
+   * Identifier of the operator
    **/
-  @ApiModelProperty(value = "{{{operadora_response_id_value}}}")
+  @ApiModelProperty(value = "Identifier of the operator")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class OperadoraResponse  {
 
   
   /**
-   * {{{operadora_response_nome_value}}}
+   * Operator Name
    **/
-  @ApiModelProperty(value = "{{{operadora_response_nome_value}}}")
+  @ApiModelProperty(value = "Operator Name")
   public String getNome() {
     return nome;
   }

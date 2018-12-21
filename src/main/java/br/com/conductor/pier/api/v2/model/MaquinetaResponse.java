@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{maquineta_response_description}}}
+ * POS response object
  **/
-@ApiModel(description = "{{{maquineta_response_description}}}")
+@ApiModel(description = "POS response object")
 public class MaquinetaResponse  {
   
   @SerializedName("id")
@@ -31,9 +31,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_id_value}}}
+   * Identification Code of the Card Machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Card Machine")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_id_estabelecimento_value}}}
+   * Identification Code of the Merchant
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Merchant")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -55,9 +55,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_id_tipo_maquineta_value}}}
+   * Identification Code of the Card Machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_id_tipo_maquineta_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Card Machine")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -67,9 +67,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_valor_value}}}
+   * Maintenance valeu of the card machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_valor_value}}}")
+  @ApiModelProperty(value = "Maintenance valeu of the card machine")
   public BigDecimal getValor() {
     return valor;
   }
@@ -79,9 +79,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_data_hora_implantacao_value}}}
+   * Deployment date of the card machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_data_hora_implantacao_value}}}")
+  @ApiModelProperty(value = "Deployment date of the card machine")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }
@@ -91,9 +91,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_data_hora_cadastramento_value}}}
+   * Registerment date of the Card Machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_data_hora_cadastramento_value}}}")
+  @ApiModelProperty(value = "Registerment date of the Card Machine")
   public String getDataHoraCadastramento() {
     return dataHoraCadastramento;
   }
@@ -103,9 +103,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_terminal_value}}}
+   * Terminal number linked to the card machine
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_terminal_value}}}")
+  @ApiModelProperty(value = "Terminal number linked to the card machine")
   public String getTerminal() {
     return terminal;
   }
@@ -115,9 +115,9 @@ public class MaquinetaResponse  {
 
   
   /**
-   * {{{maquineta_response_usuario_apl_value}}}
+   * User of the application
    **/
-  @ApiModelProperty(value = "{{{maquineta_response_usuario_apl_value}}}")
+  @ApiModelProperty(value = "User of the application")
   public String getUsuarioApl() {
     return usuarioApl;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{convenio_response_description}}}
+ * Request Object for response Convenant
  **/
-@ApiModel(description = "{{{convenio_response_description}}}")
+@ApiModel(description = "Request Object for response Convenant")
 public class ConvenioResponse  {
   
   @SerializedName("id")
@@ -55,9 +55,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_id_convenio}}}
+   * Convenant Id
    **/
-  @ApiModelProperty(value = "{{{convenio_response_id_convenio}}}")
+  @ApiModelProperty(value = "Convenant Id")
   public Long getId() {
     return id;
   }
@@ -67,9 +67,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_banco_value}}}
+   * Bank Id
    **/
-  @ApiModelProperty(value = "{{{convenio_response_banco_value}}}")
+  @ApiModelProperty(value = "Bank Id")
   public Long getBanco() {
     return banco;
   }
@@ -79,9 +79,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_agencia_value}}}
+   * agency Number
    **/
-  @ApiModelProperty(value = "{{{convenio_response_agencia_value}}}")
+  @ApiModelProperty(value = "agency Number")
   public Long getAgencia() {
     return agencia;
   }
@@ -91,9 +91,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_conta_corrente_value}}}
+   * Current Account
    **/
-  @ApiModelProperty(value = "{{{convenio_response_conta_corrente_value}}}")
+  @ApiModelProperty(value = "Current Account")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -103,9 +103,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_especie_value}}}
+   * Species Code
    **/
-  @ApiModelProperty(value = "{{{convenio_response_especie_value}}}")
+  @ApiModelProperty(value = "Species Code")
   public String getEspecie() {
     return especie;
   }
@@ -115,9 +115,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_numero_convenio_value}}}
+   * Covenant Number
    **/
-  @ApiModelProperty(value = "{{{convenio_response_numero_convenio_value}}}")
+  @ApiModelProperty(value = "Covenant Number")
   public BigDecimal getNumeroConvenio() {
     return numeroConvenio;
   }
@@ -127,9 +127,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_carteira_value}}}
+   * Wallet
    **/
-  @ApiModelProperty(value = "{{{convenio_response_carteira_value}}}")
+  @ApiModelProperty(value = "Wallet")
   public Long getCarteira() {
     return carteira;
   }
@@ -139,9 +139,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_codigo_cedente_value}}}
+   * Assignor code
    **/
-  @ApiModelProperty(value = "{{{convenio_response_codigo_cedente_value}}}")
+  @ApiModelProperty(value = "Assignor code")
   public String getCodigoCedente() {
     return codigoCedente;
   }
@@ -151,9 +151,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_especie_tipo_value}}}
+   * Species Type
    **/
-  @ApiModelProperty(value = "{{{convenio_response_especie_tipo_value}}}")
+  @ApiModelProperty(value = "Species Type")
   public String getEspecieTipo() {
     return especieTipo;
   }
@@ -163,9 +163,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_especie_documento_value}}}
+   * Species Document
    **/
-  @ApiModelProperty(value = "{{{convenio_response_especie_documento_value}}}")
+  @ApiModelProperty(value = "Species Document")
   public String getEspecieDocumento() {
     return especieDocumento;
   }
@@ -175,9 +175,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_aceite_value}}}
+   * payer signed the billing document that originated the ticket. The default value is N
    **/
-  @ApiModelProperty(value = "{{{convenio_response_aceite_value}}}")
+  @ApiModelProperty(value = "payer signed the billing document that originated the ticket. The default value is N")
   public String getAceite() {
     return aceite;
   }
@@ -187,9 +187,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_instrucoes_value}}}
+   * Instructions for payment
    **/
-  @ApiModelProperty(value = "{{{convenio_response_instrucoes_value}}}")
+  @ApiModelProperty(value = "Instructions for payment")
   public String getInstrucoes() {
     return instrucoes;
   }
@@ -199,9 +199,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_local_pagamento1_value}}}
+   * Prefencial Place for payment
    **/
-  @ApiModelProperty(value = "{{{convenio_response_local_pagamento1_value}}}")
+  @ApiModelProperty(value = "Prefencial Place for payment")
   public String getLocalPagamento1() {
     return localPagamento1;
   }
@@ -211,9 +211,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_local_pagamento2_value}}}
+   * Prefencial Place for payment
    **/
-  @ApiModelProperty(value = "{{{convenio_response_local_pagamento2_value}}}")
+  @ApiModelProperty(value = "Prefencial Place for payment")
   public String getLocalPagamento2() {
     return localPagamento2;
   }
@@ -223,9 +223,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_endereco_cobranca_emissor_value}}}
+   * Charge Address
    **/
-  @ApiModelProperty(value = "{{{convenio_response_endereco_cobranca_emissor_value}}}")
+  @ApiModelProperty(value = "Charge Address")
   public String getEnderecoCobrancaEmissor() {
     return enderecoCobrancaEmissor;
   }
@@ -235,9 +235,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_nome_beneficiario_emissor_value}}}
+   * Beneficiary Name
    **/
-  @ApiModelProperty(value = "{{{convenio_response_nome_beneficiario_emissor_value}}}")
+  @ApiModelProperty(value = "Beneficiary Name")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
   }
@@ -247,9 +247,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_cnpj_beneficiario_emissor_value}}}
+   * Beneficiary CNPJ
    **/
-  @ApiModelProperty(value = "{{{convenio_response_cnpj_beneficiario_emissor_value}}}")
+  @ApiModelProperty(value = "Beneficiary CNPJ")
   public String getCnpjBeneficiario() {
     return cnpjBeneficiario;
   }
@@ -259,9 +259,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_operador_value}}}
+   * Responsable User from Convenant register or update
    **/
-  @ApiModelProperty(value = "{{{convenio_response_operador_value}}}")
+  @ApiModelProperty(value = "Responsable User from Convenant register or update")
   public String getOperador() {
     return operador;
   }
@@ -271,9 +271,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_data_value}}}
+   * Created/Update Date
    **/
-  @ApiModelProperty(value = "{{{convenio_response_data_value}}}")
+  @ApiModelProperty(value = "Created/Update Date")
   public String getData() {
     return data;
   }
@@ -283,9 +283,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * {{{convenio_response_maquina_value}}}
+   * Used Machine
    **/
-  @ApiModelProperty(value = "{{{convenio_response_maquina_value}}}")
+  @ApiModelProperty(value = "Used Machine")
   public String getMaquina() {
     return maquina;
   }

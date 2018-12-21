@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{pacote_tarifa_resposta}}}
+ * Representation of an fee package tariff
  **/
-@ApiModel(description = "{{{pacote_tarifa_resposta}}}")
+@ApiModel(description = "Representation of an fee package tariff")
 public class PacoteTarifaResponse  {
   
   @SerializedName("descricao")
@@ -35,9 +35,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_descricao_descricao}}}
+   * The description of the fee
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_descricao_descricao}}}")
+  @ApiModelProperty(value = "The description of the fee")
   public String getDescricao() {
     return descricao;
   }
@@ -47,9 +47,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_id_descricao}}}
+   * Fee package id
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Fee package id")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}
+   * Application amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}")
+  @ApiModelProperty(value = "Application amount")
   public Integer getQuantidadeAplicacoes() {
     return quantidadeAplicacoes;
   }
@@ -71,9 +71,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}
+   * Unique ticket amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}")
+  @ApiModelProperty(value = "Unique ticket amount")
   public Integer getQuantidadeBilheteUnico() {
     return quantidadeBilheteUnico;
   }
@@ -83,9 +83,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}
+   * Chage ticket amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}")
+  @ApiModelProperty(value = "Chage ticket amount")
   public Integer getQuantidadeBoleto() {
     return quantidadeBoleto;
   }
@@ -95,9 +95,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}
+   * Cellphone recharge amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}")
+  @ApiModelProperty(value = "Cellphone recharge amount")
   public Integer getQuantidadeRecargaCelular() {
     return quantidadeRecargaCelular;
   }
@@ -107,9 +107,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_saque_descricao}}}
+   * Cash out amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_saque_descricao}}}")
+  @ApiModelProperty(value = "Cash out amount")
   public Integer getQuantidadeSaque() {
     return quantidadeSaque;
   }
@@ -119,9 +119,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}
+   * Payment tax account amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}")
+  @ApiModelProperty(value = "Payment tax account amount")
   public Integer getQuantidadeTaxaPagamentoConta() {
     return quantidadeTaxaPagamentoConta;
   }
@@ -131,9 +131,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}
+   * Transfer amount
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}")
+  @ApiModelProperty(value = "Transfer amount")
   public Integer getQuantidadeTransferencia() {
     return quantidadeTransferencia;
   }
@@ -143,9 +143,9 @@ public class PacoteTarifaResponse  {
 
   
   /**
-   * {{{pacote_tarifa_resposta_valor_tarifa_descricao}}}
+   * Tax value
    **/
-  @ApiModelProperty(value = "{{{pacote_tarifa_resposta_valor_tarifa_descricao}}}")
+  @ApiModelProperty(value = "Tax value")
   public BigDecimal getValorTarifa() {
     return valorTarifa;
   }

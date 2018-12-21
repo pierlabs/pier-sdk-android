@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vinculo_estabelecimento_adquirente_persist_description}}}
+ * Object LinkMerchantPersist
  **/
-@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_persist_description}}}")
+@ApiModel(description = "Object LinkMerchantPersist")
 public class VinculoEstabelecimentoAdquirentePersist  {
   
   @SerializedName("idEstabelecimento")
@@ -20,9 +20,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
+   * Show the id of the Merchant
    **/
-  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}")
+  @ApiModelProperty(required = true, value = "Show the id of the Merchant")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -32,9 +32,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
+   * Show the id of the Acquirer
    **/
-  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}")
+  @ApiModelProperty(required = true, value = "Show the id of the Acquirer")
   public Long getIdAdquirente() {
     return idAdquirente;
   }
@@ -44,9 +44,9 @@ public class VinculoEstabelecimentoAdquirentePersist  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
+   * Show the link code between the merchant and the acquirer
    **/
-  @ApiModelProperty(required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}")
+  @ApiModelProperty(required = true, value = "Show the link code between the merchant and the acquirer")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
   }

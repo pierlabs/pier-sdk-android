@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adicional_update_description}}}
+ * Object Additionanl
  **/
-@ApiModel(description = "{{{adicional_update_description}}}")
+@ApiModel(description = "Object Additionanl")
 public class AdicionalUpdate  {
   
   @SerializedName("nome")
@@ -38,9 +38,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_nome_value}}}
+   * Full name of the additional
    **/
-  @ApiModelProperty(required = true, value = "{{{adicional_update_nome_value}}}")
+  @ApiModelProperty(required = true, value = "Full name of the additional")
   public String getNome() {
     return nome;
   }
@@ -50,9 +50,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_nome_impresso_value}}}
+   * Additional name that will be printed on the card
    **/
-  @ApiModelProperty(value = "{{{adicional_update_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Additional name that will be printed on the card")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -62,9 +62,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_numero_receita_federal_value}}}
+   * Federal Revenue Number
    **/
-  @ApiModelProperty(required = true, value = "{{{adicional_update_numero_receita_federal_value}}}")
+  @ApiModelProperty(required = true, value = "Federal Revenue Number")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -74,9 +74,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_data_nascimento_value}}}
+   * Birth date of the additional in the format yyyy-MM-dd
    **/
-  @ApiModelProperty(value = "{{{adicional_update_data_nascimento_value}}}")
+  @ApiModelProperty(value = "Birth date of the additional in the format yyyy-MM-dd")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -86,9 +86,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_sexo_value}}}
+   * Additional Gender
    **/
-  @ApiModelProperty(value = "{{{adicional_update_sexo_value}}}")
+  @ApiModelProperty(value = "Additional Gender")
   public String getSexo() {
     return sexo;
   }
@@ -98,9 +98,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_numero_identidade_value}}}
+   * Identity number of the Additional
    **/
-  @ApiModelProperty(value = "{{{adicional_update_numero_identidade_value}}}")
+  @ApiModelProperty(value = "Identity number of the Additional")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -110,9 +110,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_orgao_expedidor_identidade_value}}}
+   * Name of the Issuer organ of the Additional Identity Document
    **/
-  @ApiModelProperty(value = "{{{adicional_update_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(value = "Name of the Issuer organ of the Additional Identity Document")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -122,9 +122,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_unidade_federativa_identidade_value}}}
+   * Federative unit
    **/
-  @ApiModelProperty(value = "{{{adicional_update_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(value = "Federative unit")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -134,9 +134,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_data_emissao_identidade_value}}}
+   * Issue date of the identity document of the additional in the format yyyy-MM-dd
    **/
-  @ApiModelProperty(value = "{{{adicional_update_data_emissao_identidade_value}}}")
+  @ApiModelProperty(value = "Issue date of the identity document of the additional in the format yyyy-MM-dd")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -146,9 +146,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_id_parentesco_value}}}
+   * Identification Code of the Additional Kinship with the Owner
    **/
-  @ApiModelProperty(value = "{{{adicional_update_id_parentesco_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Additional Kinship with the Owner")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -158,9 +158,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_telefones_value}}}
+   * Additional Telephone List
    **/
-  @ApiModelProperty(value = "{{{adicional_update_telefones_value}}}")
+  @ApiModelProperty(value = "Additional Telephone List")
   public List<TelefoneAdicionalUpdate> getTelefones() {
     return telefones;
   }

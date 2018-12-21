@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{promotor_response_description}}}
+ * Object Prosecutor
  **/
-@ApiModel(description = "{{{promotor_response_description}}}")
+@ApiModel(description = "Object Prosecutor")
 public class PromotorResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_value}}}
+   * Identification Code of the Prosecutor (id)
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Prosecutor (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_nome_value}}}
+   * Prosecutor Name
    **/
-  @ApiModelProperty(value = "{{{promotor_response_nome_value}}}")
+  @ApiModelProperty(value = "Prosecutor Name")
   public String getNome() {
     return nome;
   }
@@ -48,9 +48,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_data_cadastro_value}}}
+   * Inclusion date
    **/
-  @ApiModelProperty(value = "{{{promotor_response_data_cadastro_value}}}")
+  @ApiModelProperty(value = "Inclusion date")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -60,9 +60,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_estabelecimento_value}}}
+   * Identification Code of the Merchant
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Merchant")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -72,9 +72,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_usuario_value}}}
+   * Identification Code of the user
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_usuario_value}}}")
+  @ApiModelProperty(value = "Identification Code of the user")
   public Long getIdUsuario() {
     return idUsuario;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_impressao_multiapp_response_description}}}
+ * Result of two cards created associated
  **/
-@ApiModel(description = "{{{cartao_impressao_multiapp_response_description}}}")
+@ApiModel(description = "Result of two cards created associated")
 public class CartaoMultiAppImpressaoResponse  {
   
   @SerializedName("cartaoPai")
@@ -19,9 +19,9 @@ public class CartaoMultiAppImpressaoResponse  {
 
   
   /**
-   * {{{cartao_impressao_multiapp_response_cartao_pai_value}}}
+   * Primary card
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_multiapp_response_cartao_pai_value}}}")
+  @ApiModelProperty(value = "Primary card")
   public CartaoImpressaoResponse getCartaoPai() {
     return cartaoPai;
   }
@@ -31,9 +31,9 @@ public class CartaoMultiAppImpressaoResponse  {
 
   
   /**
-   * {{{cartao_impressao_multiapp_response_cartao_filho_value}}}
+   * Secondary card
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_multiapp_response_cartao_filho_value}}}")
+  @ApiModelProperty(value = "Secondary card")
   public CartaoImpressaoResponse getCartao() {
     return cartao;
   }

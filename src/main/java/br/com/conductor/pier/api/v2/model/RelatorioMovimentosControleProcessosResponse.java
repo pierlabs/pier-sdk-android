@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{relatorio_movimentos_controle_processos_response_description}}}
+ * Representation of response fields from a process control list
  **/
-@ApiModel(description = "{{{relatorio_movimentos_controle_processos_response_description}}}")
+@ApiModel(description = "Representation of response fields from a process control list")
 public class RelatorioMovimentosControleProcessosResponse  {
   
   @SerializedName("vencimento")

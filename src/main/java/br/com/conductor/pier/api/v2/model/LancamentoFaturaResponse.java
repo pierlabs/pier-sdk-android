@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{lancamento_fatura_response_description}}}
+ * Future Invoice
  **/
-@ApiModel(description = "{{{lancamento_fatura_response_description}}}")
+@ApiModel(description = "Future Invoice")
 public class LancamentoFaturaResponse  {
   
   @SerializedName("idTransacao")
@@ -65,9 +65,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_transacao_value}}}
+   * Identification Code of the transaction
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_transacao_value}}}")
+  @ApiModelProperty(value = "Identification Code of the transaction")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -77,9 +77,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
+   * Description of the transaction type
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_descricao_tipo_transacao_value}}}")
+  @ApiModelProperty(value = "Description of the transaction type")
   public String getDescricaoTipoTransacao() {
     return descricaoTipoTransacao;
   }
@@ -89,9 +89,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_tipo_evento_value}}}
+   * Identifier Code of the event type
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_tipo_evento_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the event type")
   public Long getIdTipoEvento() {
     return idTipoEvento;
   }
@@ -101,9 +101,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
+   * Description of the event type
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_descricao_tipo_evento_value}}}")
+  @ApiModelProperty(value = "Description of the event type")
   public String getDescricaoTipoEvento() {
     return descricaoTipoEvento;
   }
@@ -113,9 +113,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_evento_value}}}
+   * Identifier Code of the event
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_evento_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the event")
   public Long getIdEvento() {
     return idEvento;
   }
@@ -125,9 +125,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_conta_value}}}
+   * Identification Code of the Account
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Account")
   public Long getIdConta() {
     return idConta;
   }
@@ -137,9 +137,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_complemento_value}}}
+   * Complementary Description of the event
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_complemento_value}}}")
+  @ApiModelProperty(value = "Complementary Description of the event")
   public String getComplemento() {
     return complemento;
   }
@@ -149,9 +149,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_valor_b_r_l_value}}}
+   * Value in reais
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_valor_b_r_l_value}}}")
+  @ApiModelProperty(value = "Value in reais")
   public BigDecimal getValorBRL() {
     return valorBRL;
   }
@@ -161,9 +161,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_valor_u_s_d_value}}}
+   * value in dollar
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_valor_u_s_d_value}}}")
+  @ApiModelProperty(value = "value in dollar")
   public BigDecimal getValorUSD() {
     return valorUSD;
   }
@@ -173,9 +173,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_numero_parcela_value}}}
+   * Number of the parcels
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_numero_parcela_value}}}")
+  @ApiModelProperty(value = "Number of the parcels")
   public Integer getNumeroParcela() {
     return numeroParcela;
   }
@@ -185,9 +185,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_quantidade_parcelas_value}}}
+   * Quantity of parcels
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_quantidade_parcelas_value}}}")
+  @ApiModelProperty(value = "Quantity of parcels")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -197,9 +197,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_data_hora_transacao_value}}}
+   * Transaction date
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_data_hora_transacao_value}}}")
+  @ApiModelProperty(value = "Transaction date")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
   }
@@ -209,9 +209,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_nome_estabelecimento_value}}}
+   * Merchant Name
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_nome_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Merchant Name")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -221,9 +221,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
+   * Merchant Description
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_descricao_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Merchant Description")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
   }
@@ -233,9 +233,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
+   * Fantasy Name of the Merchant
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Fantasy Name of the Merchant")
   public String getNomeFantasiaEstabelecimento() {
     return nomeFantasiaEstabelecimento;
   }
@@ -245,9 +245,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_flag_credito_value}}}
+   * Flag that indicates if the launch is of credit
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_flag_credito_value}}}")
+  @ApiModelProperty(value = "Flag that indicates if the launch is of credit")
   public Boolean getFlagCredito() {
     return flagCredito;
   }
@@ -257,9 +257,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_m_c_c_value}}}
+   * Identifier Code of the MCC (Merchant Category Codes)
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_m_c_c_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the MCC (Merchant Category Codes)")
   public Long getIdMCC() {
     return idMCC;
   }
@@ -269,9 +269,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
+   * Identifier Code of the Group MCC
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_id_grupo_m_c_c_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the Group MCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -281,9 +281,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
+   * Description of the group MCC
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}")
+  @ApiModelProperty(value = "Description of the group MCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
   }
@@ -293,9 +293,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_titular_value}}}
+   * Indicate if the the cardholder is the holder of the account
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_titular_value}}}")
+  @ApiModelProperty(value = "Indicate if the the cardholder is the holder of the account")
   public Boolean getTitular() {
     return titular;
   }
@@ -305,9 +305,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_nome_portador_value}}}
+   * Printed name on the card
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_nome_portador_value}}}")
+  @ApiModelProperty(value = "Printed name on the card")
   public String getNomePortador() {
     return nomePortador;
   }
@@ -317,9 +317,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
+   * Card number masked
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_numero_cartao_mascarado_value}}}")
+  @ApiModelProperty(value = "Card number masked")
   public String getNumeroCartaoMascarado() {
     return numeroCartaoMascarado;
   }
@@ -329,9 +329,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
+   * Flag that indicates if the client requested the contest of the transaction
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}")
+  @ApiModelProperty(value = "Flag that indicates if the client requested the contest of the transaction")
   public Boolean getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
   }
@@ -341,9 +341,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
+   * Value of the Boarding taxe
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_valor_taxa_embarque_value}}}")
+  @ApiModelProperty(value = "Value of the Boarding taxe")
   public BigDecimal getValorTaxaEmbarque() {
     return valorTaxaEmbarque;
   }
@@ -353,9 +353,9 @@ public class LancamentoFaturaResponse  {
 
   
   /**
-   * {{{lancamento_fatura_response_descricao_abreviada_value}}}
+   * Description abbreviated of the transaction
    **/
-  @ApiModelProperty(value = "{{{lancamento_fatura_response_descricao_abreviada_value}}}")
+  @ApiModelProperty(value = "Description abbreviated of the transaction")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;
   }

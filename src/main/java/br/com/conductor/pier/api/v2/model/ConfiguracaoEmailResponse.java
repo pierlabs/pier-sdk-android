@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{configuracao_email_response_description}}}
+ * Object EMAIL Configuration
  **/
-@ApiModel(description = "{{{configuracao_email_response_description}}}")
+@ApiModel(description = "Object EMAIL Configuration")
 public class ConfiguracaoEmailResponse  {
   
   @SerializedName("id")
@@ -40,9 +40,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_id_value}}}
+   * Id of the EMAIL Configuration
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_id_value}}}")
+  @ApiModelProperty(value = "Id of the EMAIL Configuration")
   public Long getId() {
     return id;
   }
@@ -52,9 +52,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_host_value}}}
+   * IP (Host) of the e-mail server
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_host_value}}}")
+  @ApiModelProperty(value = "IP (Host) of the e-mail server")
   public String getHost() {
     return host;
   }
@@ -64,9 +64,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_port_value}}}
+   * Door used by the e-mail server
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_port_value}}}")
+  @ApiModelProperty(value = "Door used by the e-mail server")
   public String getPort() {
     return port;
   }
@@ -76,9 +76,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}
+   * Door used by the server TLS/STARTTLS
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}")
+  @ApiModelProperty(value = "Door used by the server TLS/STARTTLS")
   public String getPortTLSSTARTTLS() {
     return portTLSSTARTTLS;
   }
@@ -88,9 +88,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_port_s_s_l_value}}}
+   * Door used by the server SSL
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_port_s_s_l_value}}}")
+  @ApiModelProperty(value = "Door used by the server SSL")
   public String getPortSSL() {
     return portSSL;
   }
@@ -100,9 +100,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_protocolo_value}}}
+   * Protocol of communication used by the email service (Ex: smtp)
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_protocolo_value}}}")
+  @ApiModelProperty(value = "Protocol of communication used by the email service (Ex: smtp)")
   public String getProtocolo() {
     return protocolo;
   }
@@ -112,9 +112,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_requer_autenticacao_value}}}
+   * The e-mail service requires authentication
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_requer_autenticacao_value}}}")
+  @ApiModelProperty(value = "The e-mail service requires authentication")
   public Boolean getRequerAutenticacao() {
     return requerAutenticacao;
   }
@@ -124,9 +124,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_requer_s_s_l_value}}}
+   * The service of email requieres SSL
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_requer_s_s_l_value}}}")
+  @ApiModelProperty(value = "The service of email requieres SSL")
   public Boolean getRequerSSL() {
     return requerSSL;
   }
@@ -136,9 +136,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_requer_t_l_s_value}}}
+   * the e-mail service requires TLS
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_requer_t_l_s_value}}}")
+  @ApiModelProperty(value = "the e-mail service requires TLS")
   public Boolean getRequerTLS() {
     return requerTLS;
   }
@@ -148,9 +148,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_usuario_value}}}
+   * User of the e-mail service
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_usuario_value}}}")
+  @ApiModelProperty(value = "User of the e-mail service")
   public String getUsuario() {
     return usuario;
   }
@@ -160,9 +160,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_senha_value}}}
+   * Password of user of the e-mail service
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_senha_value}}}")
+  @ApiModelProperty(value = "Password of user of the e-mail service")
   public String getSenha() {
     return senha;
   }
@@ -172,9 +172,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_data_inclusao_value}}}
+   * Date of inlcusion
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Date of inlcusion")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -184,9 +184,9 @@ public class ConfiguracaoEmailResponse  {
 
   
   /**
-   * {{{configuracao_email_response_data_alteracao_value}}}
+   * Date of update
    **/
-  @ApiModelProperty(value = "{{{configuracao_email_response_data_alteracao_value}}}")
+  @ApiModelProperty(value = "Date of update")
   public String getDataAlteracao() {
     return dataAlteracao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{alterar_produto_request_description}}}
+ * Request Representation of the device resource
  **/
-@ApiModel(description = "{{{alterar_produto_request_description}}}")
+@ApiModel(description = "Request Representation of the device resource")
 public class AlterarProdutoRequest  {
   
   @SerializedName("idProduto")
@@ -22,9 +22,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * {{{alterar_produto_request_id_produto_value}}}
+   * Identifier Code of the product
    **/
-  @ApiModelProperty(required = true, value = "{{{alterar_produto_request_id_produto_value}}}")
+  @ApiModelProperty(required = true, value = "Identifier Code of the product")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -34,9 +34,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * {{{alterar_produto_request_id_origem_comercial_value}}}
+   * Identifier Code of the commercial origin
    **/
-  @ApiModelProperty(value = "{{{alterar_produto_request_id_origem_comercial_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the commercial origin")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -46,9 +46,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * {{{alterar_produto_request_id_estabelecimento_value}}}
+   * It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account
    **/
-  @ApiModelProperty(value = "{{{alterar_produto_request_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -58,9 +58,9 @@ public class AlterarProdutoRequest  {
 
   
   /**
-   * {{{alterar_produto_request_id_promotor_value}}}
+   * It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code
    **/
-  @ApiModelProperty(value = "{{{alterar_produto_request_id_promotor_value}}}")
+  @ApiModelProperty(value = "It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code")
   public Long getIdPromotor() {
     return idPromotor;
   }

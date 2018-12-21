@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{valida_senha_cartao_response_description}}}
+ * Object of response for the validation of the card password
  **/
-@ApiModel(description = "{{{valida_senha_cartao_response_description}}}")
+@ApiModel(description = "Object of response for the validation of the card password")
 public class ValidaSenhaCartaoResponse  {
   
   @SerializedName("mensagem")
@@ -24,9 +24,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * {{{valida_senha_cartao_response_mensagem_value}}}
+   * Message
    **/
-  @ApiModelProperty(value = "{{{valida_senha_cartao_response_mensagem_value}}}")
+  @ApiModelProperty(value = "Message")
   public String getMensagem() {
     return mensagem;
   }
@@ -36,9 +36,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * {{{valida_senha_cartao_response_id_status_cartao_value}}}
+   * Description of the card status
    **/
-  @ApiModelProperty(value = "{{{valida_senha_cartao_response_id_status_cartao_value}}}")
+  @ApiModelProperty(value = "Description of the card status")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -48,9 +48,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * {{{valida_senha_cartao_response_status_cartao_value}}}
+   * Description of the card status
    **/
-  @ApiModelProperty(value = "{{{valida_senha_cartao_response_status_cartao_value}}}")
+  @ApiModelProperty(value = "Description of the card status")
   public String getStatusCartao() {
     return statusCartao;
   }
@@ -60,9 +60,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * {{{valida_senha_cartao_response_quantidade_tentativas_value}}}
+   * Quantity attempts
    **/
-  @ApiModelProperty(value = "{{{valida_senha_cartao_response_quantidade_tentativas_value}}}")
+  @ApiModelProperty(value = "Quantity attempts")
   public Integer getQuantidadeTentativas() {
     return quantidadeTentativas;
   }
@@ -72,9 +72,9 @@ public class ValidaSenhaCartaoResponse  {
 
   
   /**
-   * {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}
+   * Maximum Quantity of allowed attempts
    **/
-  @ApiModelProperty(value = "{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}")
+  @ApiModelProperty(value = "Maximum Quantity of allowed attempts")
   public Integer getQuantidadeMaximaTentativas() {
     return quantidadeMaximaTentativas;
   }

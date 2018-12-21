@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{maquineta_update_description}}}
+ * Request Parameters to update POS
  **/
-@ApiModel(description = "{{{maquineta_update_description}}}")
+@ApiModel(description = "Request Parameters to update POS")
 public class MaquinetaUpdate  {
   
   @SerializedName("idTerminal")
@@ -23,9 +23,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_id_terminal_value}}}
+   * Identification Code of the Terminal (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_terminal_value}}}")
+  @ApiModelProperty(required = true, value = "Identification Code of the Terminal (id)")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +35,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_id_tipo_maquineta_value}}}
+   * Identification Code of the POS type (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_tipo_maquineta_value}}}")
+  @ApiModelProperty(required = true, value = "Identification Code of the POS type (id)")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +47,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_valor_value}}}
+   * Value of Maintenance of the POS
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_valor_value}}}")
+  @ApiModelProperty(required = true, value = "Value of Maintenance of the POS")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_data_hora_implantacao_value}}}
+   * Date of the POS deploy
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_data_hora_implantacao_value}}}")
+  @ApiModelProperty(required = true, value = "Date of the POS deploy")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }

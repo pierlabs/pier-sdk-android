@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{plano_parcelamento_response_description}}}
+ * Response Representa??o of the installment plan resource
  **/
-@ApiModel(description = "{{{plano_parcelamento_response_description}}}")
+@ApiModel(description = "Response Representa??o of the installment plan resource")
 public class PlanoParcelamentoResponse  {
   
   @SerializedName("id")
@@ -55,9 +55,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_id_value}}}
+   * Identifier of the Installment
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_id_value}}}")
+  @ApiModelProperty(value = "Identifier of the Installment")
   public Long getId() {
     return id;
   }
@@ -67,9 +67,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
+   * date of the Closing invoice
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_data_fechamento_fatura_value}}}")
+  @ApiModelProperty(value = "date of the Closing invoice")
   public String getDataFechamentoFatura() {
     return dataFechamentoFatura;
   }
@@ -79,9 +79,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
+   * Standard Expiration Date
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_data_vencimento_padrao_value}}}")
+  @ApiModelProperty(value = "Standard Expiration Date")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
   }
@@ -91,9 +91,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_total_fatura_value}}}
+   * Total value of the invoice
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_total_fatura_value}}}")
+  @ApiModelProperty(value = "Total value of the invoice")
   public BigDecimal getValorTotalFatura() {
     return valorTotalFatura;
   }
@@ -103,9 +103,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_quantidade_parcelas_value}}}
+   * Quantity of parcels
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_quantidade_parcelas_value}}}")
+  @ApiModelProperty(value = "Quantity of parcels")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -115,9 +115,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_parcela_value}}}
+   * Parcel Value
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_parcela_value}}}")
+  @ApiModelProperty(value = "Parcel Value")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -127,9 +127,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_entrada_value}}}
+   * entrance value
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_entrada_value}}}")
+  @ApiModelProperty(value = "entrance value")
   public BigDecimal getValorEntrada() {
     return valorEntrada;
   }
@@ -139,9 +139,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
+   * Refinancing Taxes
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_taxa_refinanciamento_value}}}")
+  @ApiModelProperty(value = "Refinancing Taxes")
   public BigDecimal getTaxaRefinanciamento() {
     return taxaRefinanciamento;
   }
@@ -151,9 +151,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_custo_efetivo_total_value}}}
+   * Total acquisition cost
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_custo_efetivo_total_value}}}")
+  @ApiModelProperty(value = "Total acquisition cost")
   public BigDecimal getCustoEfetivoTotal() {
     return custoEfetivoTotal;
   }
@@ -163,9 +163,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
+   * Total value of the refinancing
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_total_refinanciamento_value}}}")
+  @ApiModelProperty(value = "Total value of the refinancing")
   public BigDecimal getValorTotalRefinanciamento() {
     return valorTotalRefinanciamento;
   }
@@ -175,9 +175,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_i_o_f_value}}}
+   * Value of the IOF
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_i_o_f_value}}}")
+  @ApiModelProperty(value = "Value of the IOF")
   public BigDecimal getValorIOF() {
     return valorIOF;
   }
@@ -187,9 +187,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_valor_t_a_c_value}}}
+   * TAC value
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_valor_t_a_c_value}}}")
+  @ApiModelProperty(value = "TAC value")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -199,9 +199,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_status_adesao_value}}}
+   * Status of the Accession
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_status_adesao_value}}}")
+  @ApiModelProperty(value = "Status of the Accession")
   public Integer getStatusAdesao() {
     return statusAdesao;
   }
@@ -211,9 +211,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_data_inclusao_value}}}
+   * Inclusion date
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Inclusion date")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -223,9 +223,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_data_processamento_adesao_value}}}
+   * Processing date of the Accession
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_data_processamento_adesao_value}}}")
+  @ApiModelProperty(value = "Processing date of the Accession")
   public String getDataProcessamentoAdesao() {
     return dataProcessamentoAdesao;
   }
@@ -235,9 +235,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_id_conta_value}}}
+   * Identifier of the Account
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identifier of the Account")
   public Long getIdConta() {
     return idConta;
   }
@@ -247,9 +247,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_id_servico_tipo_value}}}
+   * Identification Code of the Service type
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_id_servico_tipo_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Service type")
   public Long getIdServicoTipo() {
     return idServicoTipo;
   }
@@ -259,9 +259,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
+   * Description of the service type
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_descricao_servico_tipo_value}}}")
+  @ApiModelProperty(value = "Description of the service type")
   public String getDescricaoServicoTipo() {
     return descricaoServicoTipo;
   }
@@ -271,9 +271,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_com_entrada_value}}}
+   * Indicate if the invoice was with an entrance
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_com_entrada_value}}}")
+  @ApiModelProperty(value = "Indicate if the invoice was with an entrance")
   public Boolean getComEntrada() {
     return comEntrada;
   }
@@ -283,9 +283,9 @@ public class PlanoParcelamentoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_response_nome_campanha_value}}}
+   * Campaign Name
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_response_nome_campanha_value}}}")
+  @ApiModelProperty(value = "Campaign Name")
   public String getNomeCampanha() {
     return nomeCampanha;
   }

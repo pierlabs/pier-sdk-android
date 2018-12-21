@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adicional_conta_persist_description}}}
+ * Representation of the entry of the additional registration feature
  **/
-@ApiModel(description = "{{{adicional_conta_persist_description}}}")
+@ApiModel(description = "Representation of the entry of the additional registration feature")
 public class AdicionalContaPersist  {
   
   @SerializedName("idPessoa")
@@ -28,9 +28,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_id_pessoa_value}}}
+   * Id of the person who will be the additional account
    **/
-  @ApiModelProperty(required = true, value = "{{{adicional_conta_persist_id_pessoa_value}}}")
+  @ApiModelProperty(required = true, value = "Id of the person who will be the additional account")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -40,9 +40,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_nome_impresso_value}}}
+   * Name of the Additional that will be recorded on the Card
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Name of the Additional that will be recorded on the Card")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -52,9 +52,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_id_estado_civil_value}}}
+   * Additional Civil Status Identification Code
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_id_estado_civil_value}}}")
+  @ApiModelProperty(value = "Additional Civil Status Identification Code")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
   }
@@ -64,9 +64,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_id_profissao_value}}}
+   * Professional Identification Code of Additional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_id_profissao_value}}}")
+  @ApiModelProperty(value = "Professional Identification Code of Additional")
   public Long getIdProfissao() {
     return idProfissao;
   }
@@ -76,9 +76,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_id_nacionalidade_value}}}
+   * Nationality Identification Code of Additional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_id_nacionalidade_value}}}")
+  @ApiModelProperty(value = "Nationality Identification Code of Additional")
   public Long getIdNacionalidade() {
     return idNacionalidade;
   }
@@ -88,9 +88,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_id_parentesco_value}}}
+   * Identification Code of the Relationship of the Additional with the Holder
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_id_parentesco_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Relationship of the Additional with the Holder")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -100,9 +100,9 @@ public class AdicionalContaPersist  {
 
   
   /**
-   * {{{adicional_conta_persist_email_value}}}
+   * Email of Additional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_persist_email_value}}}")
+  @ApiModelProperty(value = "Email of Additional")
   public String getEmail() {
     return email;
   }

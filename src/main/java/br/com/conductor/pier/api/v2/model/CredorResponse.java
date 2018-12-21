@@ -102,9 +102,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_id_value}}}
+   * lender response id lender
    **/
-  @ApiModelProperty(value = "{{{credor_response_id_value}}}")
+  @ApiModelProperty(value = "lender response id lender")
   public Long getId() {
     return id;
   }
@@ -114,9 +114,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_nome_credor_value}}}
+   * lender response name lender
    **/
-  @ApiModelProperty(value = "{{{credor_response_nome_credor_value}}}")
+  @ApiModelProperty(value = "lender response name lender")
   public String getNomeCredor() {
     return nomeCredor;
   }
@@ -126,9 +126,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_semanal_value}}}
+   * creditor response weekly payment
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_semanal_value}}}")
+  @ApiModelProperty(value = "creditor response weekly payment")
   public Integer getDiaPagamentoSemanal() {
     return diaPagamentoSemanal;
   }
@@ -138,9 +138,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_mensal_value}}}
+   * creditor response monthly payment
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_mensal_value}}}")
+  @ApiModelProperty(value = "creditor response monthly payment")
   public Integer getDiaPagamentoMensal() {
     return diaPagamentoMensal;
   }
@@ -150,9 +150,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_decendial_primeiro_value}}}
+   * lender pays off the first ten-day payment
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_decendial_primeiro_value}}}")
+  @ApiModelProperty(value = "lender pays off the first ten-day payment")
   public Integer getDiaPagamentoDecendialPrimeiro() {
     return diaPagamentoDecendialPrimeiro;
   }
@@ -162,9 +162,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_decendial_segundo_value}}}
+   * lender pays second decimal payment
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_decendial_segundo_value}}}")
+  @ApiModelProperty(value = "lender pays second decimal payment")
   public Integer getDiaPagamentoDecendialSegundo() {
     return diaPagamentoDecendialSegundo;
   }
@@ -174,9 +174,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_decendial_terceiro_value}}}
+   * creditor replies third decimal payment
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_decendial_terceiro_value}}}")
+  @ApiModelProperty(value = "creditor replies third decimal payment")
   public Integer getDiaPagamentoDecendialTerceiro() {
     return diaPagamentoDecendialTerceiro;
   }
@@ -186,9 +186,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_quinzenal_primeiro_value}}}
+   * lender replies biweekly payment first
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_quinzenal_primeiro_value}}}")
+  @ApiModelProperty(value = "lender replies biweekly payment first")
   public Integer getDiaPagamentoQuinzenalPrimeiro() {
     return diaPagamentoQuinzenalPrimeiro;
   }
@@ -198,9 +198,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_pagamento_quinzenal_segundo_value}}}
+   * lender replies biweekly payment first
    **/
-  @ApiModelProperty(value = "{{{credor_response_pagamento_quinzenal_segundo_value}}}")
+  @ApiModelProperty(value = "lender replies biweekly payment first")
   public Integer getDiaPagamentoQuinzenalSegundo() {
     return diaPagamentoQuinzenalSegundo;
   }
@@ -210,9 +210,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_banco_value}}}
+   * bank lender response
    **/
-  @ApiModelProperty(value = "{{{credor_response_banco_value}}}")
+  @ApiModelProperty(value = "bank lender response")
   public Integer getBanco() {
     return banco;
   }
@@ -222,9 +222,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_agencia_value}}}
+   * lender response agency
    **/
-  @ApiModelProperty(value = "{{{credor_response_agencia_value}}}")
+  @ApiModelProperty(value = "lender response agency")
   public Integer getAgencia() {
     return agencia;
   }
@@ -234,9 +234,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_digito_agencia_value}}}
+   * lender response agency digit
    **/
-  @ApiModelProperty(value = "{{{credor_response_digito_agencia_value}}}")
+  @ApiModelProperty(value = "lender response agency digit")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -246,9 +246,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_conta_corrente_value}}}
+   * creditor response checking account
    **/
-  @ApiModelProperty(value = "{{{credor_response_conta_corrente_value}}}")
+  @ApiModelProperty(value = "creditor response checking account")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -258,9 +258,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_digito_conta_corrente_value}}}
+   * current account lender
    **/
-  @ApiModelProperty(value = "{{{credor_response_digito_conta_corrente_value}}}")
+  @ApiModelProperty(value = "current account lender")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -270,9 +270,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_credor_banco_value}}}
+   * lender response bank creditor
    **/
-  @ApiModelProperty(value = "{{{credor_response_credor_banco_value}}}")
+  @ApiModelProperty(value = "lender response bank creditor")
   public Boolean getCredorBanco() {
     return credorBanco;
   }
@@ -282,9 +282,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_percentual_rav_value}}}
+   * percent rav response creditor
    **/
-  @ApiModelProperty(value = "{{{credor_response_percentual_rav_value}}}")
+  @ApiModelProperty(value = "percent rav response creditor")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
   }
@@ -294,9 +294,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_recebe_rav_value}}}
+   * creditor response receives rav
    **/
-  @ApiModelProperty(value = "{{{credor_response_recebe_rav_value}}}")
+  @ApiModelProperty(value = "creditor response receives rav")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
   }
@@ -306,9 +306,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_percentual_multiplica_value}}}
+   * percentage response creditor multiplies
    **/
-  @ApiModelProperty(value = "{{{credor_response_percentual_multiplica_value}}}")
+  @ApiModelProperty(value = "percentage response creditor multiplies")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
   }
@@ -318,9 +318,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_taxa_adm_value}}}
+   * lender response rate adm
    **/
-  @ApiModelProperty(value = "{{{credor_response_taxa_adm_value}}}")
+  @ApiModelProperty(value = "lender response rate adm")
   public BigDecimal getTaxaAdministrativa() {
     return taxaAdministrativa;
   }
@@ -330,9 +330,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_taxa_banco_value}}}
+   * creditor bank rate response
    **/
-  @ApiModelProperty(value = "{{{credor_response_taxa_banco_value}}}")
+  @ApiModelProperty(value = "creditor bank rate response")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
   }
@@ -342,9 +342,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_limite_rav_value}}}
+   * creditor response limit rav
    **/
-  @ApiModelProperty(value = "{{{credor_response_limite_rav_value}}}")
+  @ApiModelProperty(value = "creditor response limit rav")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
   }
@@ -354,9 +354,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_id_credor_rav_value}}}
+   * creditor response id creditor rav
    **/
-  @ApiModelProperty(value = "{{{credor_response_id_credor_rav_value}}}")
+  @ApiModelProperty(value = "creditor response id creditor rav")
   public Long getIdCredorRAV() {
     return idCredorRAV;
   }
@@ -366,9 +366,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_periodicidade_value}}}
+   * creditor request periodicity
    **/
-  @ApiModelProperty(value = "{{{credor_response_periodicidade_value}}}")
+  @ApiModelProperty(value = "creditor request periodicity")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -378,9 +378,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_id_pessoa_juridica_value}}}
+   * creditor request legal id person
    **/
-  @ApiModelProperty(value = "{{{credor_response_id_pessoa_juridica_value}}}")
+  @ApiModelProperty(value = "creditor request legal id person")
   public Long getIdPessoaJuridica() {
     return idPessoaJuridica;
   }
@@ -390,9 +390,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_flag_escritorio_cobranca_value}}}
+   * creditor response flag billing desk
    **/
-  @ApiModelProperty(value = "{{{credor_response_flag_escritorio_cobranca_value}}}")
+  @ApiModelProperty(value = "creditor response flag billing desk")
   public Boolean getFlagEscritorioCobranca() {
     return flagEscritorioCobranca;
   }
@@ -402,9 +402,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_prefixo_value}}}
+   * Cerdor response prefix desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_prefixo_value}}}")
+  @ApiModelProperty(value = "Cerdor response prefix desktop collection")
   public String getPrefixo() {
     return prefixo;
   }
@@ -414,9 +414,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_ativo_value}}}
+   * Creditor response active desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_ativo_value}}}")
+  @ApiModelProperty(value = "Creditor response active desktop collection")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -426,9 +426,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_telefone_escritorio_cobranca_value}}}
+   * creditor response telephone bill collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_telefone_escritorio_cobranca_value}}}")
+  @ApiModelProperty(value = "creditor response telephone bill collection")
   public List<TelefoneEscritorioCobrancaDTO> getTelefonesEscritoriosCobranca() {
     return telefonesEscritoriosCobranca;
   }
@@ -438,9 +438,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_nome_contato_value}}}
+   * Lender response name contact desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_nome_contato_value}}}")
+  @ApiModelProperty(value = "Lender response name contact desk collection")
   public String getNomeContato() {
     return nomeContato;
   }
@@ -450,9 +450,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_email_value}}}
+   * Creditor response email contact desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_email_value}}}")
+  @ApiModelProperty(value = "Creditor response email contact desktop collection")
   public String getEmail() {
     return email;
   }
@@ -462,9 +462,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_nome_logradouro_value}}}
+   * Creditor response public place office collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_nome_logradouro_value}}}")
+  @ApiModelProperty(value = "Creditor response public place office collection")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -474,9 +474,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_numero_endereco_value}}}
+   * Creditor response number address desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_numero_endereco_value}}}")
+  @ApiModelProperty(value = "Creditor response number address desk collection")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -486,9 +486,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_complemento_endereco_value}}}
+   * Creditor response complement address desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_complemento_endereco_value}}}")
+  @ApiModelProperty(value = "Creditor response complement address desk collection")
   public String getComplementoEndereco() {
     return complementoEndereco;
   }
@@ -498,9 +498,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_bairro_value}}}
+   * Lender response neighborhood desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_bairro_value}}}")
+  @ApiModelProperty(value = "Lender response neighborhood desk collection")
   public String getBairro() {
     return bairro;
   }
@@ -510,9 +510,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_cidade_value}}}
+   * Creditor response city desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_cidade_value}}}")
+  @ApiModelProperty(value = "Creditor response city desk collection")
   public String getCidade() {
     return cidade;
   }
@@ -522,9 +522,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_cep_value}}}
+   * Lender response cep desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_cep_value}}}")
+  @ApiModelProperty(value = "Lender response cep desktop collection")
   public String getCep() {
     return cep;
   }
@@ -534,9 +534,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_uf_value}}}
+   * Creditor response uf desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_uf_value}}}")
+  @ApiModelProperty(value = "Creditor response uf desktop collection")
   public String getUf() {
     return uf;
   }
@@ -546,9 +546,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_responsavel_value}}}
+   * Creditor response responsible desk charge
    **/
-  @ApiModelProperty(value = "{{{credor_response_responsavel_value}}}")
+  @ApiModelProperty(value = "Creditor response responsible desk charge")
   public String getResponsavel() {
     return responsavel;
   }
@@ -558,9 +558,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_flag_segunda_via_acordo_value}}}
+   * Lender response flag second via agreement desk collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_flag_segunda_via_acordo_value}}}")
+  @ApiModelProperty(value = "Lender response flag second via agreement desk collection")
   public Integer getFlagSegundaViaAcordo() {
     return flagSegundaViaAcordo;
   }
@@ -570,9 +570,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_valor_minimo_parcela_value}}}
+   * Lender response value minimum desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_valor_minimo_parcela_value}}}")
+  @ApiModelProperty(value = "Lender response value minimum desktop collection")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -582,9 +582,9 @@ public class CredorResponse  {
 
   
   /**
-   * {{{credor_response_desconto_maximo_value}}}
+   * Creditor response discount maximum desktop collection
    **/
-  @ApiModelProperty(value = "{{{credor_response_desconto_maximo_value}}}")
+  @ApiModelProperty(value = "Creditor response discount maximum desktop collection")
   public BigDecimal getDescontoMaximo() {
     return descontoMaximo;
   }

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{boleto_listar_response_description}}}
+ * Representation of bank slips response
  **/
-@ApiModel(description = "{{{boleto_listar_response_description}}}")
+@ApiModel(description = "Representation of bank slips response")
 public class BoletoListarResponse  {
   
   @SerializedName("id")
@@ -27,9 +27,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_id_value}}}
+   * id
    **/
-  @ApiModelProperty(value = "{{{boleto_response_id_value}}}")
+  @ApiModelProperty(value = "id")
   public Long getId() {
     return id;
   }
@@ -39,9 +39,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_id_conta_value}}}
+   * id_account
    **/
-  @ApiModelProperty(value = "{{{boleto_response_id_conta_value}}}")
+  @ApiModelProperty(value = "id_account")
   public Long getIdConta() {
     return idConta;
   }
@@ -51,9 +51,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_nosso_numero_value}}}
+   * Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips
    **/
-  @ApiModelProperty(value = "{{{boleto_response_nosso_numero_value}}}")
+  @ApiModelProperty(value = "Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips")
   public String getNossoNumero() {
     return nossoNumero;
   }
@@ -63,9 +63,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_data_vencimento_value}}}
+   * Date of the expiration
    **/
-  @ApiModelProperty(value = "{{{boleto_response_data_vencimento_value}}}")
+  @ApiModelProperty(value = "Date of the expiration")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -75,9 +75,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_valor_boleto_value}}}
+   * Value of the Bank slip
    **/
-  @ApiModelProperty(value = "{{{boleto_response_valor_boleto_value}}}")
+  @ApiModelProperty(value = "Value of the Bank slip")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
   }
@@ -87,9 +87,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * {{{boleto_response_id_tipo_boleto_value}}}
+   * id_type_bank_slip
    **/
-  @ApiModelProperty(value = "{{{boleto_response_id_tipo_boleto_value}}}")
+  @ApiModelProperty(value = "id_type_bank_slip")
   public Long getIdTipoBoleto() {
     return idTipoBoleto;
   }

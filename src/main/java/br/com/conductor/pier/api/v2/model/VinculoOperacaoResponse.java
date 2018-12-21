@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vinculo_operacao_response_description}}}
+ * ObjectLinkedOperation
  **/
-@ApiModel(description = "{{{vinculo_operacao_response_description}}}")
+@ApiModel(description = "ObjectLinkedOperation")
 public class VinculoOperacaoResponse  {
   
   @SerializedName("idProduto")
@@ -22,9 +22,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * {{{vinculo_operacao_response_id_produto_value}}}
+   * Identification Code of the Product (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_response_id_produto_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Product (id)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -34,9 +34,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * {{{vinculo_operacao_response_id_operacao_value}}}
+   * Identification Code of the Operation (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_response_id_operacao_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Operation (id)")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -46,9 +46,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * {{{vinculo_operacao_response_codigo_processamento_value}}}
+   * Processing Code
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_response_codigo_processamento_value}}}")
+  @ApiModelProperty(value = "Processing Code")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -58,9 +58,9 @@ public class VinculoOperacaoResponse  {
 
   
   /**
-   * {{{vinculo_operacao_response_codigo_m_c_c_value}}}
+   * MCC code
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_response_codigo_m_c_c_value}}}")
+  @ApiModelProperty(value = "MCC code")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }

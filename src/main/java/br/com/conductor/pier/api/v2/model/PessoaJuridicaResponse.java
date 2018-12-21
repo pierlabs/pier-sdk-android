@@ -31,9 +31,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_id_value}}}
+   * Id legal person
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_id_value}}}")
+  @ApiModelProperty(value = "Id legal person")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_contato_value}}}
+   * Legal person contact
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_contato_value}}}")
+  @ApiModelProperty(value = "Legal person contact")
   public String getContato() {
     return contato;
   }
@@ -55,9 +55,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_razao_social_value}}}
+   * Legal person corporate name
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_razao_social_value}}}")
+  @ApiModelProperty(value = "Legal person corporate name")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -67,9 +67,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_CGC_value}}}
+   * CGC (CNPJ) legal person
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_CGC_value}}}")
+  @ApiModelProperty(value = "CGC (CNPJ) legal person")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -79,9 +79,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_inscricao_estadual_value}}}
+   * Legal person state registration
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_inscricao_estadual_value}}}")
+  @ApiModelProperty(value = "Legal person state registration")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -91,9 +91,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_banco_value}}}
+   * Bank of the legal person
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_banco_value}}}")
+  @ApiModelProperty(value = "Bank of the legal person")
   public Integer getBanco() {
     return banco;
   }
@@ -103,9 +103,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_agencia_value}}}
+   * Agency of the legal person
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_agencia_value}}}")
+  @ApiModelProperty(value = "Agency of the legal person")
   public Integer getAgencia() {
     return agencia;
   }
@@ -115,9 +115,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_digito_agencia_value}}}
+   * Agency's digit
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_digito_agencia_value}}}")
+  @ApiModelProperty(value = "Agency's digit")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -127,9 +127,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_conta_corrente_value}}}
+   * Current account legal person
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_conta_corrente_value}}}")
+  @ApiModelProperty(value = "Current account legal person")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -139,9 +139,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * {{{pessoa_juridica_persist_digito_conta_corrente_value}}}
+   * Digit current account
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_persist_digito_conta_corrente_value}}}")
+  @ApiModelProperty(value = "Digit current account")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }

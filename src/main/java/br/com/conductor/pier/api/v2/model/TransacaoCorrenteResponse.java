@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{transacao_corrente_response_description}}}
+ * Representation of the transaction resource
  **/
-@ApiModel(description = "{{{transacao_corrente_response_description}}}")
+@ApiModel(description = "Representation of the transaction resource")
 public class TransacaoCorrenteResponse  {
   
   @SerializedName("ultimaParcelaLancada")
@@ -64,9 +64,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_conta_value}}}
+   * Identification Code of the Account (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Account (id)")
   public Long getIdConta() {
     return idConta;
   }
@@ -76,9 +76,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_tipo_registro_value}}}
+   * Identification code of the transaction type (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_tipo_registro_value}}}")
+  @ApiModelProperty(value = "Identification code of the transaction type (id)")
   public Long getIdTipoRegistro() {
     return idTipoRegistro;
   }
@@ -88,9 +88,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_ordem_value}}}
+   * Representation of the transaction order (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_ordem_value}}}")
+  @ApiModelProperty(value = "Representation of the transaction order (id)")
   public Integer getOrdem() {
     return ordem;
   }
@@ -100,9 +100,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_transacao_value}}}
+   * Identification Code of the transaction (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_transacao_value}}}")
+  @ApiModelProperty(value = "Identification Code of the transaction (id)")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -112,9 +112,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_descricao_value}}}
+   * Attribute that represents the description of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_descricao_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the description of the transaction")
   public String getDescricao() {
     return descricao;
   }
@@ -124,9 +124,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_status_value}}}
+   * Attribute that represents the identifier code of the transaction status
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_status_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the identifier code of the transaction status")
   public Integer getStatus() {
     return status;
   }
@@ -136,9 +136,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_descricao_status_value}}}
+   * Attribute that represent the description of the transaction status
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_descricao_status_value}}}")
+  @ApiModelProperty(value = "Attribute that represent the description of the transaction status")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -148,9 +148,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_value}}}
+   * Attribute that represents the value of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the value of the transaction")
   public BigDecimal getValor() {
     return valor;
   }
@@ -160,9 +160,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_dolar_value}}}
+   * Attribute that represents the value in dollar of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_dolar_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the value in dollar of the transaction")
   public BigDecimal getValorDolar() {
     return valorDolar;
   }
@@ -172,9 +172,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_quantidade_parcelas_value}}}
+   * Attribute that represents the quantity of parcels of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_quantidade_parcelas_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the quantity of parcels of the transaction")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -184,9 +184,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_parcela_value}}}
+   * Attribute that represents the parcel value of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_parcela_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the parcel value of the transaction")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -196,9 +196,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_data_evento_value}}}
+   * Attribute that represents the sending date of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_data_evento_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the sending date of the transaction")
   public String getDataEvento() {
     return dataEvento;
   }
@@ -208,9 +208,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_estabelecimento_value}}}
+   * Attribute that represents the merchant of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the merchant of the transaction")
   public String getEstabelecimento() {
     return estabelecimento;
   }
@@ -220,9 +220,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_flag_credito_value}}}
+   * Attribute that identifies if the transaction is a credit one or debit one
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_flag_credito_value}}}")
+  @ApiModelProperty(value = "Attribute that identifies if the transaction is a credit one or debit one")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -232,9 +232,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_tipo_estabelecimento_value}}}
+   * Attribute that represents the type merchant of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_tipo_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the type merchant of the transaction")
   public String getTipoEstabelecimento() {
     return tipoEstabelecimento;
   }
@@ -244,9 +244,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
+   * Attribute that represents the MCC group of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_grupo_m_c_c_value}}}")
+  @ApiModelProperty(value = "Attribute that represents the MCC group of the transaction")
   public Integer getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -256,9 +256,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
+   * Attribute that identifier if the cardholder requested the contesting of the transaction
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}")
+  @ApiModelProperty(value = "Attribute that identifier if the cardholder requested the contesting of the transaction")
   public Integer getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
   }
@@ -268,9 +268,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_tipo_transacao_value}}}
+   * Attribute that identifies if the transaction is a credit one or debit one
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_tipo_transacao_value}}}")
+  @ApiModelProperty(value = "Attribute that identifies if the transaction is a credit one or debit one")
   public Integer getTipoTransacao() {
     return tipoTransacao;
   }

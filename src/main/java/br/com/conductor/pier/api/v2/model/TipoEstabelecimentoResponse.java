@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_estabelecimento_response_description}}}
+ * Response of the merchant type resource
  **/
-@ApiModel(description = "{{{tipo_estabelecimento_response_description}}}")
+@ApiModel(description = "Response of the merchant type resource")
 public class TipoEstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * {{{tipo_estabelecimento_response_id_value}}}
+   * Identification Code of the Merchant Type (id)
    **/
-  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Merchant Type (id)")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * {{{tipo_estabelecimento_response_descricao_value}}}
+   * Description of the Merchant Type
    **/
-  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_descricao_value}}}")
+  @ApiModelProperty(value = "Description of the Merchant Type")
   public String getDescricao() {
     return descricao;
   }

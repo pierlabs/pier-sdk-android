@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
+ * Representation of the validate resource security code
  **/
-@ApiModel(description = "{{{codigo_seguranca_e_m_a_i_l_persist_description}}}")
+@ApiModel(description = "Representation of the validate resource security code")
 public class CodigoSegurancaEMAILPersist  {
   
   @SerializedName("email")
@@ -18,9 +18,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
+   * E-mail used to sending the security code
    **/
-  @ApiModelProperty(value = "{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}")
+  @ApiModelProperty(value = "E-mail used to sending the security code")
   public String getEmail() {
     return email;
   }
@@ -30,9 +30,9 @@ public class CodigoSegurancaEMAILPersist  {
 
   
   /**
-   * {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
+   * Security Code
    **/
-  @ApiModelProperty(value = "{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}")
+  @ApiModelProperty(value = "Security Code")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
   }

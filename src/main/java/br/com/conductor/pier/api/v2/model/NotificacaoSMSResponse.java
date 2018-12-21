@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{notificacao_s_m_s_response_description}}}
+ * Object SMS
  **/
-@ApiModel(description = "{{{notificacao_s_m_s_response_description}}}")
+@ApiModel(description = "Object SMS")
 public class NotificacaoSMSResponse  {
   
   @SerializedName("id")
@@ -54,9 +54,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_id_value}}}
+   * Identifier Code
    **/
-  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_id_value}}}")
+  @ApiModelProperty(value = "Identifier Code")
   public Long getId() {
     return id;
   }
@@ -66,9 +66,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_nsu_value}}}
+   * Unique Sequel Number
    **/
-  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_nsu_value}}}")
+  @ApiModelProperty(value = "Unique Sequel Number")
   public Long getNsu() {
     return nsu;
   }
@@ -78,9 +78,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_id_emissor_value}}}
+   * Identification Code of the issuer (id)
    **/
-  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_id_emissor_value}}}")
+  @ApiModelProperty(value = "Identification Code of the issuer (id)")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -90,9 +90,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_tipo_evento_value}}}
+   * TipoEvento de notifica??o
    **/
-  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_tipo_evento_value}}}")
+  @ApiModelProperty(value = "TipoEvento de notifica??o")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -102,9 +102,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_status_value}}}
+   * Notification Sending Status
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_status_value}}}")
+  @ApiModelProperty(required = true, value = "Notification Sending Status")
   public StatusEnum getStatus() {
     return status;
   }
@@ -114,9 +114,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_descricao_status_value}}}
+   * Description of the sending status of the notification
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_descricao_status_value}}}")
+  @ApiModelProperty(required = true, value = "Description of the sending status of the notification")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -126,9 +126,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_id_pessoa_value}}}
+   * Identified Code of the person
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_id_pessoa_value}}}")
+  @ApiModelProperty(required = true, value = "Identified Code of the person")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -138,9 +138,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_id_conta_value}}}
+   * Identifier Code of the Account
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_id_conta_value}}}")
+  @ApiModelProperty(required = true, value = "Identifier Code of the Account")
   public Long getIdConta() {
     return idConta;
   }
@@ -150,9 +150,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_celular_value}}}
+   * Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_celular_value}}}")
+  @ApiModelProperty(required = true, value = "Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999")
   public String getCelular() {
     return celular;
   }
@@ -162,9 +162,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_operadora_value}}}
+   * Show the operator of the cell phone to be sent the SMS
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_operadora_value}}}")
+  @ApiModelProperty(required = true, value = "Show the operator of the cell phone to be sent the SMS")
   public String getOperadora() {
     return operadora;
   }
@@ -174,9 +174,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_conteudo_value}}}
+   * Show the notification text to be sent
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_conteudo_value}}}")
+  @ApiModelProperty(required = true, value = "Show the notification text to be sent")
   public String getConteudo() {
     return conteudo;
   }
@@ -186,9 +186,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_resposta_value}}}
+   * Show the text of the notification response that was sent
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_resposta_value}}}")
+  @ApiModelProperty(required = true, value = "Show the text of the notification response that was sent")
   public String getResposta() {
     return resposta;
   }
@@ -198,9 +198,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_data_agendamento_value}}}
+   * Show the date and time which will be sent the notification
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_agendamento_value}}}")
+  @ApiModelProperty(required = true, value = "Show the date and time which will be sent the notification")
   public String getDataAgendamento() {
     return dataAgendamento;
   }
@@ -210,9 +210,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
+   * Quantity of attempts and notification sending
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}")
+  @ApiModelProperty(required = true, value = "Quantity of attempts and notification sending")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
   }
@@ -222,9 +222,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_data_inclusao_value}}}
+   * Show the date which the register was included in the base to be sent
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_inclusao_value}}}")
+  @ApiModelProperty(required = true, value = "Show the date which the register was included in the base to be sent")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -234,9 +234,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
+   * Show the date which the status of the register was modified
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_s_m_s_response_data_alteracao_status_value}}}")
+  @ApiModelProperty(required = true, value = "Show the date which the status of the register was modified")
   public String getDataAlteracaoStatus() {
     return dataAlteracaoStatus;
   }
@@ -246,9 +246,9 @@ public class NotificacaoSMSResponse  {
 
   
   /**
-   * {{{notificacao_s_m_s_response_protocolo_value}}}
+   * Protocol Number of the notification sending
    **/
-  @ApiModelProperty(value = "{{{notificacao_s_m_s_response_protocolo_value}}}")
+  @ApiModelProperty(value = "Protocol Number of the notification sending")
   public String getProtocolo() {
     return protocolo;
   }

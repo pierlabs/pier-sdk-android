@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adesao_servico_resposta_descricao}}}
+ * Reponse object for services adhesion
  **/
-@ApiModel(description = "{{{adesao_servico_resposta_descricao}}}")
+@ApiModel(description = "Reponse object for services adhesion")
 public class AdesaoServicoResponse  {
   
   @SerializedName("canal")
@@ -41,9 +41,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_canal_descricao}}}
+   * Input channer
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_canal_descricao}}}")
+  @ApiModelProperty(value = "Input channer")
   public String getCanal() {
     return canal;
   }
@@ -53,9 +53,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}
+   * Credit limit charge
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Credit limit charge")
   public Boolean getCobrancaLimiteCredito() {
     return cobrancaLimiteCredito;
   }
@@ -65,9 +65,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_estabelecimento_descricao}}}
+   * Establishment
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_estabelecimento_descricao}}}")
+  @ApiModelProperty(value = "Establishment")
   public Integer getEstabelecimento() {
     return estabelecimento;
   }
@@ -77,9 +77,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}
+   * Offer billing at credit limit
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Offer billing at credit limit")
   public Boolean getFlagCobrancaLimiteCredito() {
     return flagCobrancaLimiteCredito;
   }
@@ -89,9 +89,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}
+   * Offer Avaliable Deals
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Offer Avaliable Deals")
   public Boolean getFlagOfertasPromocoes() {
     return flagOfertasPromocoes;
   }
@@ -101,9 +101,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertas_promocoes_descricao}}}
+   * Offer deals
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Offer deals")
   public Boolean getFlagPromocoes() {
     return flagPromocoes;
   }
@@ -113,9 +113,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}
+   * offer type of invoice submission
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "offer type of invoice submission")
   public Boolean getFlagTipoEnvioFatura() {
     return flagTipoEnvioFatura;
   }
@@ -125,9 +125,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}
+   * Offer SMS type
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Offer SMS type")
   public Boolean getFlagTipoSms() {
     return flagTipoSms;
   }
@@ -137,9 +137,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_id_descricao}}}
+   * Identify account
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Identify account")
   public Long getId() {
     return id;
   }
@@ -149,9 +149,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_responsavel_descricao}}}
+   * Responsible
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_responsavel_descricao}}}")
+  @ApiModelProperty(value = "Responsible")
   public String getResponsavel() {
     return responsavel;
   }
@@ -161,9 +161,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}
+   * Invoice submission type
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "Invoice submission type")
   public Integer getTipoEnvioFatura() {
     return tipoEnvioFatura;
   }
@@ -173,9 +173,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_tipo_sms_descricao}}}
+   * Sms type
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Sms type")
   public TipoSmsEnum getTipoSms() {
     return tipoSms;
   }

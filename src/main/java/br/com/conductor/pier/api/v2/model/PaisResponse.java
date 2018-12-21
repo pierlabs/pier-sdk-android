@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{pais_response_description}}}
+ * Response Representation of the country resource
  **/
-@ApiModel(description = "{{{pais_response_description}}}")
+@ApiModel(description = "Response Representation of the country resource")
 public class PaisResponse  {
   
   @SerializedName("id")
@@ -29,9 +29,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_id_value}}}
+   * Unique Identifier Code of the country in the base
    **/
-  @ApiModelProperty(value = "{{{pais_response_id_value}}}")
+  @ApiModelProperty(value = "Unique Identifier Code of the country in the base")
   public Long getId() {
     return id;
   }
@@ -41,9 +41,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_codigo_value}}}
+   * Identifier Code of the Country
    **/
-  @ApiModelProperty(value = "{{{pais_response_codigo_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the Country")
   public String getCodigo() {
     return codigo;
   }
@@ -53,9 +53,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_sigla_value}}}
+   * Country Acronym
    **/
-  @ApiModelProperty(value = "{{{pais_response_sigla_value}}}")
+  @ApiModelProperty(value = "Country Acronym")
   public String getSigla() {
     return sigla;
   }
@@ -65,9 +65,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_descricao_value}}}
+   * Country Name
    **/
-  @ApiModelProperty(value = "{{{pais_response_descricao_value}}}")
+  @ApiModelProperty(value = "Country Name")
   public String getDescricao() {
     return descricao;
   }
@@ -77,9 +77,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_continente_value}}}
+   * Continent which the country takes part
    **/
-  @ApiModelProperty(value = "{{{pais_response_continente_value}}}")
+  @ApiModelProperty(value = "Continent which the country takes part")
   public ContinenteEnum getContinente() {
     return continente;
   }
@@ -89,9 +89,9 @@ public class PaisResponse  {
 
   
   /**
-   * {{{pais_response_flag_ativo_value}}}
+   * Attribute that represents if the country is active
    **/
-  @ApiModelProperty(value = "{{{pais_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Attribute that represents if the country is active")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

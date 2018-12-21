@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_embossing_response_description}}}
+ * Object Card to Print
  **/
-@ApiModel(description = "{{{cartao_embossing_response_description}}}")
+@ApiModel(description = "Object Card to Print")
 public class CartaoEmbossingResponse  {
   
   @SerializedName("flagVirtual")
@@ -34,9 +34,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_flag_virtual_value}}}
+   * Show the status that informs if the card is virtual
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_flag_virtual_value}}}")
+  @ApiModelProperty(value = "Show the status that informs if the card is virtual")
   public Integer getFlagVirtual() {
     return flagVirtual;
   }
@@ -46,9 +46,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_id_conta_value}}}
+   * Show the Identification Code of the Account (id) which the created card belongs
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Show the Identification Code of the Account (id) which the created card belongs")
   public Long getIdConta() {
     return idConta;
   }
@@ -58,9 +58,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_id_pessoa_value}}}
+   * Show the Identification Code of the Person (id) cardholder of the card created
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Show the Identification Code of the Person (id) cardholder of the card created")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -70,9 +70,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_id_cartao_value}}}
+   * Show the identification Code of the Card (id) which was created
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "Show the identification Code of the Card (id) which was created")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -82,9 +82,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_id_bandeira_value}}}
+   * Show the identification code of the flag (id) which the card belongs, when it is flagged
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_id_bandeira_value}}}")
+  @ApiModelProperty(value = "Show the identification code of the flag (id) which the card belongs, when it is flagged")
   public Long getIdBandeira() {
     return idBandeira;
   }
@@ -94,9 +94,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_id_tipo_cartao_value}}}
+   * Show the identification Code of the Card type (id) attributed to the card
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_id_tipo_cartao_value}}}")
+  @ApiModelProperty(value = "Show the identification Code of the Card type (id) attributed to the card")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -106,9 +106,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_data_geracao_value}}}
+   * Show the date of issue of the card
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_data_geracao_value}}}")
+  @ApiModelProperty(value = "Show the date of issue of the card")
   public String getDataGeracao() {
     return dataGeracao;
   }
@@ -118,9 +118,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_data_validade_value}}}
+   * Show the expiration date of the Card
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_data_validade_value}}}")
+  @ApiModelProperty(value = "Show the expiration date of the Card")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -130,9 +130,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_nome_origem_comercial_value}}}
+   * Show the name of the Commercial Origin that the register was made of the holder which the Card belongs
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_nome_origem_comercial_value}}}")
+  @ApiModelProperty(value = "Show the name of the Commercial Origin that the register was made of the holder which the Card belongs")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -142,9 +142,9 @@ public class CartaoEmbossingResponse  {
 
   
   /**
-   * {{{cartao_embossing_response_cpf_value}}}
+   * Show the CPF of the Cardholder
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_response_cpf_value}}}")
+  @ApiModelProperty(value = "Show the CPF of the Cardholder")
   public String getCpf() {
     return cpf;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{status_boleto_response_description}}}
+ * Representation of the ticket status resource response
  **/
-@ApiModel(description = "{{{status_boleto_response_description}}}")
+@ApiModel(description = "Representation of the ticket status resource response")
 public class StatusBoletoResponse  {
   
   @SerializedName("status")
@@ -18,9 +18,9 @@ public class StatusBoletoResponse  {
 
   
   /**
-   * {{{status_boleto_dto_status_value}}}
+   * Description of the CNAB summarized status of the ticket
    **/
-  @ApiModelProperty(value = "{{{status_boleto_dto_status_value}}}")
+  @ApiModelProperty(value = "Description of the CNAB summarized status of the ticket")
   public String getStatus() {
     return status;
   }
@@ -30,9 +30,9 @@ public class StatusBoletoResponse  {
 
   
   /**
-   * {{{status_boleto_dto_data_value}}}
+   * Date the status was set
    **/
-  @ApiModelProperty(value = "{{{status_boleto_dto_data_value}}}")
+  @ApiModelProperty(value = "Date the status was set")
   public String getData() {
     return data;
   }

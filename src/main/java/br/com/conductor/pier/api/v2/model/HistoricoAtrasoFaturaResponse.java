@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{historico_atraso_fatura_response_description}}}
+ * Historic Payment Invoice Delay
  **/
-@ApiModel(description = "{{{historico_atraso_fatura_response_description}}}")
+@ApiModel(description = "Historic Payment Invoice Delay")
 public class HistoricoAtrasoFaturaResponse  {
   
   @SerializedName("dataVencimento")
@@ -18,9 +18,9 @@ public class HistoricoAtrasoFaturaResponse  {
 
   
   /**
-   * {{{historico_atraso_fatura_response_data_vencimento_value}}}
+   * Expiration date of the invoice
    **/
-  @ApiModelProperty(value = "{{{historico_atraso_fatura_response_data_vencimento_value}}}")
+  @ApiModelProperty(value = "Expiration date of the invoice")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -30,9 +30,9 @@ public class HistoricoAtrasoFaturaResponse  {
 
   
   /**
-   * {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
+   * Quantity of day in delay
    **/
-  @ApiModelProperty(value = "{{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}")
+  @ApiModelProperty(value = "Quantity of day in delay")
   public Long getDiasPagamentoAposVencimento() {
     return diasPagamentoAposVencimento;
   }

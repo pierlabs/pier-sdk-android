@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{historico_eventos_response_description}}}
+ * Representation of the object that abstract the historic of the events
  **/
-@ApiModel(description = "{{{historico_eventos_response_description}}}")
+@ApiModel(description = "Representation of the object that abstract the historic of the events")
 public class HistoricoEventosResponse  {
   
   @SerializedName("idHistorico")
@@ -24,9 +24,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * {{{historico_eventos_response_id_historico_value}}}
+   * Identifier Code of the event
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_id_historico_value}}}")
+  @ApiModelProperty(required = true, value = "Identifier Code of the event")
   public Long getIdHistorico() {
     return idHistorico;
   }
@@ -36,9 +36,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * {{{historico_eventos_response_data_historico_value}}}
+   * Date of the event
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_data_historico_value}}}")
+  @ApiModelProperty(required = true, value = "Date of the event")
   public String getDataHistorico() {
     return dataHistorico;
   }
@@ -48,9 +48,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * {{{historico_eventos_response_tipo_historico_value}}}
+   * Name of the updated field
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_tipo_historico_value}}}")
+  @ApiModelProperty(required = true, value = "Name of the updated field")
   public String getTipoHistorico() {
     return tipoHistorico;
   }
@@ -60,9 +60,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * {{{historico_eventos_response_valor_anterior_value}}}
+   * Previous value to the modification
    **/
-  @ApiModelProperty(value = "{{{historico_eventos_response_valor_anterior_value}}}")
+  @ApiModelProperty(value = "Previous value to the modification")
   public String getValorAnterior() {
     return valorAnterior;
   }
@@ -72,9 +72,9 @@ public class HistoricoEventosResponse  {
 
   
   /**
-   * {{{historico_eventos_response_valor_atribuido_value}}}
+   * Value attributed in the modification
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_eventos_response_valor_atribuido_value}}}")
+  @ApiModelProperty(required = true, value = "Value attributed in the modification")
   public String getValorAtribuido() {
     return valorAtribuido;
   }

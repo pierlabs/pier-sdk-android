@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{pessoa_detalhe_response_description}}}
+ * PersonDetailResponse
  **/
-@ApiModel(description = "{{{pessoa_detalhe_response_description}}}")
+@ApiModel(description = "PersonDetailResponse")
 public class PessoaDetalheResponse  {
   
   @SerializedName("idPessoa")
@@ -61,9 +61,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_pessoa_value}}}
+   * Identifier Code of the Person
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the Person")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -73,9 +73,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_mae_value}}}
+   * Show the name of the mother of the physical person
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_mae_value}}}")
+  @ApiModelProperty(value = "Show the name of the mother of the physical person")
   public String getNomeMae() {
     return nomeMae;
   }
@@ -85,9 +85,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_estado_civil_value}}}
+   * Id Marital status of the physical person
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_id_estado_civil_value}}}")
+  @ApiModelProperty(value = "Id Marital status of the physical person")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
   }
@@ -97,9 +97,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_profissao_value}}}
+   * Physical Person Occupation
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_id_profissao_value}}}")
+  @ApiModelProperty(value = "Physical Person Occupation")
   public String getIdProfissao() {
     return idProfissao;
   }
@@ -109,9 +109,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
+   * Physical Person Occupation
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}")
+  @ApiModelProperty(value = "Physical Person Occupation")
   public Long getIdNaturezaOcupacao() {
     return idNaturezaOcupacao;
   }
@@ -121,9 +121,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_nacionalidade_value}}}
+   * Id Nationality of the physical person
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_id_nacionalidade_value}}}")
+  @ApiModelProperty(value = "Id Nationality of the physical person")
   public Long getIdNacionalidade() {
     return idNacionalidade;
   }
@@ -133,9 +133,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_banco_value}}}
+   * Bank Number
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_numero_banco_value}}}")
+  @ApiModelProperty(value = "Bank Number")
   public Integer getNumeroBanco() {
     return numeroBanco;
   }
@@ -145,9 +145,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_agencia_value}}}
+   * Agency Number
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_numero_agencia_value}}}")
+  @ApiModelProperty(value = "Agency Number")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -157,9 +157,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
+   * Current Account number
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_numero_conta_corrente_value}}}")
+  @ApiModelProperty(value = "Current Account number")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -169,9 +169,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_email_value}}}
+   * Physical Person Email
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_email_value}}}")
+  @ApiModelProperty(value = "Physical Person Email")
   public String getEmail() {
     return email;
   }
@@ -181,9 +181,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_empresa_value}}}
+   * Name that must be printed on the card
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_empresa_value}}}")
+  @ApiModelProperty(value = "Name that must be printed on the card")
   public String getNomeEmpresa() {
     return nomeEmpresa;
   }
@@ -193,9 +193,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+   * Name Reference 1
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_referencia_1_value}}}")
+  @ApiModelProperty(value = "Name Reference 1")
   public String getNomeReferencia1() {
     return nomeReferencia1;
   }
@@ -205,9 +205,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+   * Reference Address 1
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_endereco_referencia_1_value}}}")
+  @ApiModelProperty(value = "Reference Address 1")
   public String getEnderecoReferencia1() {
     return enderecoReferencia1;
   }
@@ -217,9 +217,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+   * Name Reference 2
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_referencia_2_value}}}")
+  @ApiModelProperty(value = "Name Reference 2")
   public String getNomeReferencia2() {
     return nomeReferencia2;
   }
@@ -229,9 +229,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+   * Reference Address 2
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_endereco_referencia_2_value}}}")
+  @ApiModelProperty(value = "Reference Address 2")
   public String getEnderecoReferencia2() {
     return enderecoReferencia2;
   }
@@ -241,9 +241,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_salario_value}}}
+   * Salary
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_salario_value}}}")
+  @ApiModelProperty(value = "Salary")
   public BigDecimal getSalario() {
     return salario;
   }
@@ -253,9 +253,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+   * Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}")
+  @ApiModelProperty(value = "Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
   }
@@ -265,9 +265,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+   * Displays the name of the birth city of the individual
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}")
+  @ApiModelProperty(value = "Displays the name of the birth city of the individual")
   public String getNaturalidadeCidade() {
     return naturalidadeCidade;
   }
@@ -277,9 +277,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+   * Presents the acronym of the person's state of birth
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_naturalidade_Estado_value}}}")
+  @ApiModelProperty(value = "Presents the acronym of the person's state of birth")
   public String getNaturalidadeEstado() {
     return naturalidadeEstado;
   }
@@ -289,9 +289,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+   * It shows the degree of instruction of the individual
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_grau_Instrucao_value}}}")
+  @ApiModelProperty(value = "It shows the degree of instruction of the individual")
   public Integer getGrauInstrucao() {
     return grauInstrucao;
   }
@@ -301,9 +301,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+   * Displays the number of dependents of the individual
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_numero_Dependentes_value}}}")
+  @ApiModelProperty(value = "Displays the number of dependents of the individual")
   public Integer getNumeroDependentes() {
     return numeroDependentes;
   }
@@ -313,9 +313,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_Pai_value}}}
+   * Displays the name of the parent of the individual
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_nome_Pai_value}}}")
+  @ApiModelProperty(value = "Displays the name of the parent of the individual")
   public String getNomePai() {
     return nomePai;
   }
@@ -325,9 +325,9 @@ public class PessoaDetalheResponse  {
 
   
   /**
-   * {{{pessoa_detalhe_response_cheque_Especial_value}}}
+   * Indicates whether individual person joins the overdraft
    **/
-  @ApiModelProperty(value = "{{{pessoa_detalhe_response_cheque_Especial_value}}}")
+  @ApiModelProperty(value = "Indicates whether individual person joins the overdraft")
   public Integer getChequeEspecial() {
     return chequeEspecial;
   }

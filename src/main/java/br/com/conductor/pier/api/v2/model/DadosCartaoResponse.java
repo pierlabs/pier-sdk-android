@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{dados_cartao_response_description}}}
+ * Object Card Dates
  **/
-@ApiModel(description = "{{{dados_cartao_response_description}}}")
+@ApiModel(description = "Object Card Dates")
 public class DadosCartaoResponse  {
   
   @SerializedName("flagVirtual")
@@ -51,9 +51,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_numero_cartao_value}}}
+   * Number of the Card
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_numero_cartao_value}}}")
+  @ApiModelProperty(value = "Number of the Card")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -63,9 +63,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_data_validade_value}}}
+   * Expiration date
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_data_validade_value}}}")
+  @ApiModelProperty(value = "Expiration date")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -75,9 +75,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_cvv2_value}}}
+   * CVV2 of the card
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_cvv2_value}}}")
+  @ApiModelProperty(value = "CVV2 of the card")
   public String getCvv2() {
     return cvv2;
   }
@@ -87,9 +87,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_nome_plastico_value}}}
+   * Cardholder name
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_nome_plastico_value}}}")
+  @ApiModelProperty(value = "Cardholder name")
   public String getNomePlastico() {
     return nomePlastico;
   }
@@ -99,9 +99,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_id_conta_value}}}
+   * Identifier of the Cardholder
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identifier of the Cardholder")
   public Long getIdConta() {
     return idConta;
   }
@@ -111,9 +111,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_id_cartao_value}}}
+   * Identifier of the cardholder
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "Identifier of the cardholder")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -123,9 +123,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_numero_agencia_value}}}
+   * Show the agency number to be printed on the card, when it is applicable
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_numero_agencia_value}}}")
+  @ApiModelProperty(value = "Show the agency number to be printed on the card, when it is applicable")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -135,9 +135,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_numero_conta_corente_value}}}
+   * Show the current account number to be printed on the Card, when it is applicable
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_numero_conta_corente_value}}}")
+  @ApiModelProperty(value = "Show the current account number to be printed on the Card, when it is applicable")
   public String getNumeroContaCorente() {
     return numeroContaCorente;
   }
@@ -147,9 +147,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_id_status_conta_value}}}
+   * Cardholder account Status
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_id_status_conta_value}}}")
+  @ApiModelProperty(value = "Cardholder account Status")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -159,9 +159,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_status_conta_value}}}
+   * Description of the cardholder status
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_status_conta_value}}}")
+  @ApiModelProperty(value = "Description of the cardholder status")
   public String getStatusConta() {
     return statusConta;
   }
@@ -171,9 +171,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_id_status_cartao_value}}}
+   * Status of the card
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_id_status_cartao_value}}}")
+  @ApiModelProperty(value = "Status of the card")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -183,9 +183,9 @@ public class DadosCartaoResponse  {
 
   
   /**
-   * {{{dados_cartao_response_status_cartao_value}}}
+   * Description of the card status
    **/
-  @ApiModelProperty(value = "{{{dados_cartao_response_status_cartao_value}}}")
+  @ApiModelProperty(value = "Description of the card status")
   public String getStatusCartao() {
     return statusCartao;
   }

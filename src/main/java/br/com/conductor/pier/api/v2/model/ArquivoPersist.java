@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_persist_description}}}
+ * Object File for the dates persistence
  **/
-@ApiModel(description = "{{{arquivo_persist_description}}}")
+@ApiModel(description = "Object File for the dates persistence")
 public class ArquivoPersist  {
   
   @SerializedName("idTipoArquivo")
@@ -31,9 +31,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_id_tipo_arquivo_value}}}
+   * File type
    **/
-  @ApiModelProperty(value = "{{{arquivo_persist_id_tipo_arquivo_value}}}")
+  @ApiModelProperty(value = "File type")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
   }
@@ -43,9 +43,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_arquivo_value}}}
+   * Content of the converted file in base 64
    **/
-  @ApiModelProperty(required = true, value = "{{{arquivo_persist_arquivo_value}}}")
+  @ApiModelProperty(required = true, value = "Content of the converted file in base 64")
   public String getArquivo() {
     return arquivo;
   }
@@ -55,9 +55,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_nome_value}}}
+   * File name
    **/
-  @ApiModelProperty(value = "{{{arquivo_persist_nome_value}}}")
+  @ApiModelProperty(value = "File name")
   public String getNome() {
     return nome;
   }
@@ -67,9 +67,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_extensao_value}}}
+   * File extension
    **/
-  @ApiModelProperty(value = "{{{arquivo_persist_extensao_value}}}")
+  @ApiModelProperty(value = "File extension")
   public String getExtensao() {
     return extensao;
   }
@@ -79,9 +79,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_tipo_comunicacao_value}}}
+   * Communication Type
    **/
-  @ApiModelProperty(value = "{{{arquivo_persist_tipo_comunicacao_value}}}")
+  @ApiModelProperty(value = "Communication Type")
   public TipoComunicacaoEnum getTipoComunicacao() {
     return tipoComunicacao;
   }
@@ -91,9 +91,9 @@ public class ArquivoPersist  {
 
   
   /**
-   * {{{arquivo_persist_detalhes_value}}}
+   * Details containing additional information, related to the file
    **/
-  @ApiModelProperty(required = true, value = "{{{arquivo_persist_detalhes_value}}}")
+  @ApiModelProperty(required = true, value = "Details containing additional information, related to the file")
   public List<ArquivoDetalhesPersist> getDetalhes() {
     return detalhes;
   }

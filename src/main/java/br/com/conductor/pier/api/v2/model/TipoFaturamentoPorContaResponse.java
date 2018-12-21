@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_faturamento_por_conta_response_description}}}
+ * Billing Object
  **/
-@ApiModel(description = "{{{tipo_faturamento_por_conta_response_description}}}")
+@ApiModel(description = "Billing Object")
 public class TipoFaturamentoPorContaResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_value}}}
+   * Identification Code of the billing type per account (id)
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the billing type per account (id)")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_conta_value}}}
+   * Identification Code of the related account to the billing type
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identification Code of the related account to the billing type")
   public Long getIdConta() {
     return idConta;
   }
@@ -52,9 +52,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_status_value}}}
+   * Status of the configuration that represents if the billing type per account is active or canceled
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_status_value}}}")
+  @ApiModelProperty(value = "Status of the configuration that represents if the billing type per account is active or canceled")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -64,9 +64,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
+   * Identification Code of the referenced billing type
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}")
+  @ApiModelProperty(value = "Identification Code of the referenced billing type")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
   }
@@ -76,9 +76,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
+   * Inclusion date of the configuration of the billing type per account
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(value = "Inclusion date of the configuration of the billing type per account")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -88,9 +88,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
+   * Cancellation date of the configuration type of billing per account
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}")
+  @ApiModelProperty(value = "Cancellation date of the configuration type of billing per account")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
   }
@@ -100,9 +100,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
+   * Description of the responsable for the last update of the configuration
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_modificado_por_value}}}")
+  @ApiModelProperty(value = "Description of the responsable for the last update of the configuration")
   public String getModificadoPor() {
     return modificadoPor;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_chave_response_description}}}
+ * Response Representation of the Key Type
  **/
-@ApiModel(description = "{{{tipo_chave_response_description}}}")
+@ApiModel(description = "Response Representation of the Key Type")
 public class TipoChaveResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoChaveResponse  {
 
   
   /**
-   * {{{tipo_chave_response_id_value}}}
+   * Type key id
    **/
-  @ApiModelProperty(value = "{{{tipo_chave_response_id_value}}}")
+  @ApiModelProperty(value = "Type key id")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoChaveResponse  {
 
   
   /**
-   * {{{tipo_chave_response_descricao_value}}}
+   * Type key description response
    **/
-  @ApiModelProperty(value = "{{{tipo_chave_response_descricao_value}}}")
+  @ApiModelProperty(value = "Type key description response")
   public String getDescricao() {
     return descricao;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{status_boleto_dto_page_description}}}
+ * CNAB Status List Summarized
  **/
-@ApiModel(description = "{{{status_boleto_dto_page_description}}}")
+@ApiModel(description = "CNAB Status List Summarized")
 public class PageStatusBoletoResponse  {
   
   @SerializedName("content")

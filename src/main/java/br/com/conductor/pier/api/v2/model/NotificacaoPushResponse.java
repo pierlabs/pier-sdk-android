@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{notificacao_push_response_description}}}
+ * Response Object for push notification
  **/
-@ApiModel(description = "{{{notificacao_push_response_description}}}")
+@ApiModel(description = "Response Object for push notification")
 public class NotificacaoPushResponse  {
   
   @SerializedName("dataEnvio")
@@ -45,9 +45,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_data_envio_value}}}
+   * Show the date and in order the register was sent to the device
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_data_envio_value}}}")
+  @ApiModelProperty(value = "Show the date and in order the register was sent to the device")
   public String getDataEnvio() {
     return dataEnvio;
   }
@@ -57,9 +57,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_id_emissor_value}}}
+   * Identification Code of the issuer (id)
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_id_emissor_value}}}")
+  @ApiModelProperty(value = "Identification Code of the issuer (id)")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -69,9 +69,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_tipo_evento_value}}}
+   * TypeEvent name of the notification
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_tipo_evento_value}}}")
+  @ApiModelProperty(value = "TypeEvent name of the notification")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -81,9 +81,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_status_value}}}
+   * Status of the notification sending
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_status_value}}}")
+  @ApiModelProperty(value = "Status of the notification sending")
   public StatusEnum getStatus() {
     return status;
   }
@@ -93,9 +93,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_id_pessoa_value}}}
+   * Identified Code of the person
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_push_response_id_pessoa_value}}}")
+  @ApiModelProperty(required = true, value = "Identified Code of the person")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -105,9 +105,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_id_conta_value}}}
+   * Identifier Code of the Account
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_push_response_id_conta_value}}}")
+  @ApiModelProperty(required = true, value = "Identifier Code of the Account")
   public Long getIdConta() {
     return idConta;
   }
@@ -117,9 +117,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_token_dispositivo_value}}}
+   * Token of the device which was destined the notificatio (device_token)
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_push_response_token_dispositivo_value}}}")
+  @ApiModelProperty(required = true, value = "Token of the device which was destined the notificatio (device_token)")
   public String getTokenDispositivo() {
     return tokenDispositivo;
   }
@@ -129,9 +129,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_titulo_value}}}
+   * Sending Notification Title
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_push_response_titulo_value}}}")
+  @ApiModelProperty(required = true, value = "Sending Notification Title")
   public String getTitulo() {
     return titulo;
   }
@@ -141,9 +141,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_conteudo_value}}}
+   * Content of the sent notification
    **/
-  @ApiModelProperty(required = true, value = "{{{notificacao_push_response_conteudo_value}}}")
+  @ApiModelProperty(required = true, value = "Content of the sent notification")
   public String getConteudo() {
     return conteudo;
   }
@@ -153,9 +153,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_plataforma_value}}}
+   * Name of the Operational System which was sent the Push
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_plataforma_value}}}")
+  @ApiModelProperty(value = "Name of the Operational System which was sent the Push")
   public PlataformaEnum getPlataforma() {
     return plataforma;
   }
@@ -165,9 +165,9 @@ public class NotificacaoPushResponse  {
 
   
   /**
-   * {{{notificacao_push_response_protocolo_value}}}
+   * Protocol number of the notification sending
    **/
-  @ApiModelProperty(value = "{{{notificacao_push_response_protocolo_value}}}")
+  @ApiModelProperty(value = "Protocol number of the notification sending")
   public String getProtocolo() {
     return protocolo;
   }

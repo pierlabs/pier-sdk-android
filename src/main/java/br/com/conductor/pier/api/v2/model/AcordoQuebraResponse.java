@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{acordo_quebra_response_description}}}
+ * Representation Object Response for agreement breaking
  **/
-@ApiModel(description = "{{{acordo_quebra_response_description}}}")
+@ApiModel(description = "Representation Object Response for agreement breaking")
 public class AcordoQuebraResponse  {
   
   @SerializedName("id")
@@ -25,9 +25,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_id_value}}}
+   * Identification code of the agreement (id)
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_id_value}}}")
+  @ApiModelProperty(value = "Identification code of the agreement (id)")
   public Long getId() {
     return id;
   }
@@ -37,9 +37,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_id_conta_value}}}
+   * Account Identification Code (idConta)
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Account Identification Code (idConta)")
   public Long getIdConta() {
     return idConta;
   }
@@ -49,9 +49,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_status_conta_value}}}
+   * Agreement Account Status
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_status_conta_value}}}")
+  @ApiModelProperty(value = "Agreement Account Status")
   public Long getStatusConta() {
     return statusConta;
   }
@@ -61,9 +61,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_saldo_atual_final_value}}}
+   * Account Current Current Balance
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_saldo_atual_final_value}}}")
+  @ApiModelProperty(value = "Account Current Current Balance")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
   }
@@ -73,9 +73,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_data_quebra_acordo_value}}}
+   * Date of breach of agreement
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_data_quebra_acordo_value}}}")
+  @ApiModelProperty(value = "Date of breach of agreement")
   public String getDataQuebraAcordo() {
     return dataQuebraAcordo;
   }

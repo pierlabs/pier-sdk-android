@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_impressao_provisorio_response_description}}}
+ * Object Provisory Card
  **/
-@ApiModel(description = "{{{cartao_impressao_provisorio_response_description}}}")
+@ApiModel(description = "Object Provisory Card")
 public class CartaoImpressaoProvisorioResponse  {
   
   @SerializedName("flagVirtual")
@@ -39,9 +39,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_conta_value}}}
+   * Show the identification code of the account (id) which the created card belongs
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Show the identification code of the account (id) which the created card belongs")
   public Long getIdConta() {
     return idConta;
   }
@@ -51,9 +51,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
+   * Show the Identification Code of the Person (id) cardholder of the card created
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Show the Identification Code of the Person (id) cardholder of the card created")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -63,9 +63,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_cartao_value}}}
+   * Show the Identification Code of the Card (id) that was created
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "Show the Identification Code of the Card (id) that was created")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -75,9 +75,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
+   * Show the card number
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_numero_cartao_value}}}")
+  @ApiModelProperty(value = "Show the card number")
   public String getNumeroCartao() {
     return numeroCartao;
   }
@@ -87,9 +87,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
+   * Show the name of the Cardholder
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_nome_plastico_value}}}")
+  @ApiModelProperty(value = "Show the name of the Cardholder")
   public String getNomePlastico() {
     return nomePlastico;
   }
@@ -99,9 +99,9 @@ public class CartaoImpressaoProvisorioResponse  {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_data_validade_value}}}
+   * Show the expiration date of the card
    **/
-  @ApiModelProperty(value = "{{{cartao_impressao_provisorio_response_data_validade_value}}}")
+  @ApiModelProperty(value = "Show the expiration date of the card")
   public String getDataValidade() {
     return dataValidade;
   }

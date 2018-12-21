@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{entidade_response_description}}}
+ * Objeto de Resposta da Entidade
  **/
-@ApiModel(description = "{{{entidade_response_description}}}")
+@ApiModel(description = "Objeto de Resposta da Entidade")
 public class EntidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * {{{entidade_response_id_value}}}
+   * Identification Code of the entity
    **/
-  @ApiModelProperty(value = "{{{entidade_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the entity")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * {{{entidade_response_descricao_value}}}
+   * Entity Description
    **/
-  @ApiModelProperty(value = "{{{entidade_response_descricao_value}}}")
+  @ApiModelProperty(value = "Entity Description")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class EntidadeResponse  {
 
   
   /**
-   * {{{entidade_response_flag_ativo_value}}}
+   * Flag that indicates if the  Entity is active
    **/
-  @ApiModelProperty(value = "{{{entidade_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Flag that indicates if the  Entity is active")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

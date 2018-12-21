@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_arquivo_response_description}}}
+ * File List stored in the contingency
  **/
-@ApiModel(description = "{{{page_arquivo_response_description}}}")
+@ApiModel(description = "File List stored in the contingency")
 public class PageArquivoResponse  {
   
   @SerializedName("content")

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{telefone_estabelecimento_update_description}}}
+ * Object telephone
  **/
-@ApiModel(description = "{{{telefone_estabelecimento_update_description}}}")
+@ApiModel(description = "Object telephone")
 public class TelefoneEstabelecimentoUpdate  {
   
   @SerializedName("ddd")
@@ -20,9 +20,9 @@ public class TelefoneEstabelecimentoUpdate  {
 
   
   /**
-   * {{{telefone_estabelecimento_update_ddd_value}}}
+   * Telephone area code
    **/
-  @ApiModelProperty(required = true, value = "{{{telefone_estabelecimento_update_ddd_value}}}")
+  @ApiModelProperty(required = true, value = "Telephone area code")
   public String getDdd() {
     return ddd;
   }
@@ -32,9 +32,9 @@ public class TelefoneEstabelecimentoUpdate  {
 
   
   /**
-   * {{{telefone_estabelecimento_update_telefone_value}}}
+   * Phone Number
    **/
-  @ApiModelProperty(required = true, value = "{{{telefone_estabelecimento_update_telefone_value}}}")
+  @ApiModelProperty(required = true, value = "Phone Number")
   public String getTelefone() {
     return telefone;
   }
@@ -44,9 +44,9 @@ public class TelefoneEstabelecimentoUpdate  {
 
   
   /**
-   * {{{telefone_estabelecimento_update_ramal_value}}}
+   * Phone branch
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_update_ramal_value}}}")
+  @ApiModelProperty(value = "Phone branch")
   public String getRamal() {
     return ramal;
   }

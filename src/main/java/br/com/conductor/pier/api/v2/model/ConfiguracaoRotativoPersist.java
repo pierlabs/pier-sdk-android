@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{configuracao_rotativo_persist_description}}}
+ * Revolving Configuration
  **/
-@ApiModel(description = "{{{configuracao_rotativo_persist_description}}}")
+@ApiModel(description = "Revolving Configuration")
 public class ConfiguracaoRotativoPersist  {
   
   @SerializedName("idProduto")
@@ -45,9 +45,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_id_produto_value}}}
+   * C?digo de Identifica??o do Produto (idProduto)
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_id_produto_value}}}")
+  @ApiModelProperty(value = "C?digo de Identifica??o do Produto (idProduto)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -57,9 +57,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}
+   * When it is true, indicates that the revolving value must compose the installment offer
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}")
+  @ApiModelProperty(value = "When it is true, indicates that the revolving value must compose the installment offer")
   public Boolean getCompoeOfertaValorRotativo() {
     return compoeOfertaValorRotativo;
   }
@@ -69,9 +69,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}
+   * When it is true, indicate that the non financing value must compose the offer of installment
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}")
+  @ApiModelProperty(value = "When it is true, indicate that the non financing value must compose the offer of installment")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
   }
@@ -81,9 +81,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}
+   * When it is true, indicate that the value of the new lauching must have the offer of installment
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}")
+  @ApiModelProperty(value = "When it is true, indicate that the value of the new lauching must have the offer of installment")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
   }
@@ -93,9 +93,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}
+   * When it is true, it indicates that must recalculate the installment in case the entrance paid value be higher than the expected value
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}")
+  @ApiModelProperty(value = "When it is true, it indicates that must recalculate the installment in case the entrance paid value be higher than the expected value")
   public Boolean getRecalculaParcelamentoParaEntradaMaior() {
     return recalculaParcelamentoParaEntradaMaior;
   }
@@ -105,9 +105,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}
+   * Indicate the minimum of parcels that will be abided by the recalculation of the installment
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}")
+  @ApiModelProperty(value = "Indicate the minimum of parcels that will be abided by the recalculation of the installment")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
   }
@@ -117,9 +117,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}
+   * when it is true, indicate that the installment must be recalculated in case the value calculated of the offer is inferior to the configurated minimum parcel value (valueMinimumParcel) and the opened percentage
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}")
+  @ApiModelProperty(value = "when it is true, indicate that the installment must be recalculated in case the value calculated of the offer is inferior to the configurated minimum parcel value (valueMinimumParcel) and the opened percentage")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
   }
@@ -129,9 +129,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}
+   * Minimum number of parcels that will be abided in the offer recalculate
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}")
+  @ApiModelProperty(value = "Minimum number of parcels that will be abided in the offer recalculate")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
   }
@@ -141,9 +141,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}
+   * When it is true, indicates that values paid between the entrance value and the minimum of the invoice will be abided to the accession of the installment
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}")
+  @ApiModelProperty(value = "When it is true, indicates that values paid between the entrance value and the minimum of the invoice will be abided to the accession of the installment")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
   }
@@ -153,9 +153,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}
+   * When it is true, indicates that mus include the value of the installment opened
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}")
+  @ApiModelProperty(value = "When it is true, indicates that mus include the value of the installment opened")
   public Boolean getAntecipaParcelamentosAbertos() {
     return antecipaParcelamentosAbertos;
   }
@@ -165,9 +165,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}
+   * Minimum value of the parcel must be accepted in the offer
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}")
+  @ApiModelProperty(value = "Minimum value of the parcel must be accepted in the offer")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -177,9 +177,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}
+   * Percentage about the previous installment values opened that must be considered to limit valueMinimumParcel
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}")
+  @ApiModelProperty(value = "Percentage about the previous installment values opened that must be considered to limit valueMinimumParcel")
   public BigDecimal getPercentualLimitarValorMinimoParcela() {
     return percentualLimitarValorMinimoParcela;
   }
@@ -189,9 +189,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_id_regra_campanha_value}}}
+   * C?digo de Identifica??o da regra de campanha
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_id_regra_campanha_value}}}")
+  @ApiModelProperty(value = "C?digo de Identifica??o da regra de campanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
   }
@@ -201,9 +201,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}
+   * When it is true, indicate that the offered installment will have as value base the minimum value of the transactions
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}")
+  @ApiModelProperty(value = "When it is true, indicate that the offered installment will have as value base the minimum value of the transactions")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
   }
@@ -213,9 +213,9 @@ public class ConfiguracaoRotativoPersist  {
 
   
   /**
-   * {{{configuracao_rotativo_persist_usuario_value}}}
+   * Username
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_persist_usuario_value}}}")
+  @ApiModelProperty(value = "Username")
   public String getUsuario() {
     return usuario;
   }

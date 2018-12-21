@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_push_response_description}}}
+ * List of the Push
  **/
-@ApiModel(description = "{{{page_push_response_description}}}")
+@ApiModel(description = "List of the Push")
 public class PagePushResponse  {
   
   @SerializedName("content")

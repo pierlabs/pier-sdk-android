@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{integracao_emissor_persist_description}}}
+ * Request Representation of the issuer integration including resource
  **/
-@ApiModel(description = "{{{integracao_emissor_persist_description}}}")
+@ApiModel(description = "Request Representation of the issuer integration including resource")
 public class IntegracaoEmissorPersist  {
   
   @SerializedName("canalEntrada")
@@ -16,9 +16,9 @@ public class IntegracaoEmissorPersist  {
 
   
   /**
-   * {{{integracao_emissor_persist_canal_entrada_value}}}
+   * Input channel where must be informed the device used in the communication
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_persist_canal_entrada_value}}}")
+  @ApiModelProperty(value = "Input channel where must be informed the device used in the communication")
   public String getCanalEntrada() {
     return canalEntrada;
   }

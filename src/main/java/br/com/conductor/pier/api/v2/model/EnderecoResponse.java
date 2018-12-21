@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{endereco_response_description}}}
+ * Object Address
  **/
-@ApiModel(description = "{{{endereco_response_description}}}")
+@ApiModel(description = "Object Address")
 public class EnderecoResponse  {
   
   @SerializedName("tempoResidenciaAnos")
@@ -48,9 +48,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_tempo_residencia_anos_value}}}
+   * Displays the number of years spent living in the residence
    **/
-  @ApiModelProperty(value = "{{{endereco_response_tempo_residencia_anos_value}}}")
+  @ApiModelProperty(value = "Displays the number of years spent living in the residence")
   public Integer getTempoResidenciaAnos() {
     return tempoResidenciaAnos;
   }
@@ -60,9 +60,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_tempo_residencia_meses_value}}}
+   * Displays the number of months spent living in the residence
    **/
-  @ApiModelProperty(value = "{{{endereco_response_tempo_residencia_meses_value}}}")
+  @ApiModelProperty(value = "Displays the number of months spent living in the residence")
   public Integer getTempoResidenciaMeses() {
     return tempoResidenciaMeses;
   }
@@ -72,9 +72,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_id_value}}}
+   * Identification Code of the address (id)
    **/
-  @ApiModelProperty(value = "{{{endereco_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the address (id)")
   public Long getId() {
     return id;
   }
@@ -84,9 +84,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_id_pessoa_value}}}
+   * Identification Code of the Person which the address belongs (id)
    **/
-  @ApiModelProperty(value = "{{{endereco_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Person which the address belongs (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -96,9 +96,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_id_tipo_endereco_value}}}
+   * Identification Code of the address (id)
    **/
-  @ApiModelProperty(value = "{{{endereco_response_id_tipo_endereco_value}}}")
+  @ApiModelProperty(value = "Identification Code of the address (id)")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -108,9 +108,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_cep_value}}}
+   * Show the Zipcode in format '58800000'
    **/
-  @ApiModelProperty(value = "{{{endereco_response_cep_value}}}")
+  @ApiModelProperty(value = "Show the Zipcode in format '58800000'")
   public String getCep() {
     return cep;
   }
@@ -120,9 +120,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_logradouro_value}}}
+   * Show the name of the Street
    **/
-  @ApiModelProperty(value = "{{{endereco_response_logradouro_value}}}")
+  @ApiModelProperty(value = "Show the name of the Street")
   public String getLogradouro() {
     return logradouro;
   }
@@ -132,9 +132,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_numero_value}}}
+   * Show the address number
    **/
-  @ApiModelProperty(value = "{{{endereco_response_numero_value}}}")
+  @ApiModelProperty(value = "Show the address number")
   public Integer getNumero() {
     return numero;
   }
@@ -144,9 +144,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_complemento_value}}}
+   * Show the complementary descriptions referring to the address
    **/
-  @ApiModelProperty(value = "{{{endereco_response_complemento_value}}}")
+  @ApiModelProperty(value = "Show the complementary descriptions referring to the address")
   public String getComplemento() {
     return complemento;
   }
@@ -156,9 +156,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_ponto_referencia_value}}}
+   * Show the description of the landmark
    **/
-  @ApiModelProperty(value = "{{{endereco_response_ponto_referencia_value}}}")
+  @ApiModelProperty(value = "Show the description of the landmark")
   public String getPontoReferencia() {
     return pontoReferencia;
   }
@@ -168,9 +168,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_bairro_value}}}
+   * Show the name of the neighborhood
    **/
-  @ApiModelProperty(value = "{{{endereco_response_bairro_value}}}")
+  @ApiModelProperty(value = "Show the name of the neighborhood")
   public String getBairro() {
     return bairro;
   }
@@ -180,9 +180,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_cidade_value}}}
+   * Show the name of the city
    **/
-  @ApiModelProperty(value = "{{{endereco_response_cidade_value}}}")
+  @ApiModelProperty(value = "Show the name of the city")
   public String getCidade() {
     return cidade;
   }
@@ -192,9 +192,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_uf_value}}}
+   * Show the acronym of the Federal Unity
    **/
-  @ApiModelProperty(value = "{{{endereco_response_uf_value}}}")
+  @ApiModelProperty(value = "Show the acronym of the Federal Unity")
   public String getUf() {
     return uf;
   }
@@ -204,9 +204,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_pais_value}}}
+   * Show the name of the country
    **/
-  @ApiModelProperty(value = "{{{endereco_response_pais_value}}}")
+  @ApiModelProperty(value = "Show the name of the country")
   public String getPais() {
     return pais;
   }
@@ -216,9 +216,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_data_inclusao_value}}}
+   * Show the date tat was registered the address
    **/
-  @ApiModelProperty(value = "{{{endereco_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Show the date tat was registered the address")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -228,9 +228,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_data_ultima_atualizacao_value}}}
+   * Date that was made the last update in this address. When there isn't change, it will have the same information that the field dateInclusion
    **/
-  @ApiModelProperty(value = "{{{endereco_response_data_ultima_atualizacao_value}}}")
+  @ApiModelProperty(value = "Date that was made the last update in this address. When there isn't change, it will have the same information that the field dateInclusion")
   public String getDataUltimaAtualizacao() {
     return dataUltimaAtualizacao;
   }
@@ -240,9 +240,9 @@ public class EnderecoResponse  {
 
   
   /**
-   * {{{endereco_response_flag_correspondencia_value}}}
+   * Displays the flag that informs if the address is the correspondence
    **/
-  @ApiModelProperty(value = "{{{endereco_response_flag_correspondencia_value}}}")
+  @ApiModelProperty(value = "Displays the flag that informs if the address is the correspondence")
   public Boolean getFlagCorrespondencia() {
     return flagCorrespondencia;
   }

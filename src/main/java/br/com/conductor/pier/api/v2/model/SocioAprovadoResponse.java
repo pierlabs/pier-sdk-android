@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{socio_aprovado_response_description}}}
+ * PersonPersist
  **/
-@ApiModel(description = "{{{socio_aprovado_response_description}}}")
+@ApiModel(description = "PersonPersist")
 public class SocioAprovadoResponse  {
   
   @SerializedName("id")
@@ -44,9 +44,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_id_value}}}
+   * Identification code of the Partner (id)
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_id_value}}}")
+  @ApiModelProperty(value = "Identification code of the Partner (id)")
   public Long getId() {
     return id;
   }
@@ -56,9 +56,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_nome_value}}}
+   * Show the name of the partner
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_nome_value}}}")
+  @ApiModelProperty(value = "Show the name of the partner")
   public String getNome() {
     return nome;
   }
@@ -68,9 +68,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_cpf_value}}}
+   * CPF number, when it is PP
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_cpf_value}}}")
+  @ApiModelProperty(value = "CPF number, when it is PP")
   public String getCpf() {
     return cpf;
   }
@@ -80,9 +80,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_data_nascimento_value}}}
+   * Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_data_nascimento_value}}}")
+  @ApiModelProperty(value = "Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -92,9 +92,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_sexo_value}}}
+   * Identification code of the person sex, when it is PP, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_sexo_value}}}")
+  @ApiModelProperty(value = "Identification code of the person sex, when it is PP, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)")
   public String getSexo() {
     return sexo;
   }
@@ -104,9 +104,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_numero_identidade_value}}}
+   * Identity Number
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_numero_identidade_value}}}")
+  @ApiModelProperty(value = "Identity Number")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -116,9 +116,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
+   * Issuer organ of the ID document
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(value = "Issuer organ of the ID document")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -128,9 +128,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
+   * Acronym Federal Unity where was issued the Identity
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(value = "Acronym Federal Unity where was issued the Identity")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -140,9 +140,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_data_emissao_identidade_value}}}
+   * Issue date of the identity
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_data_emissao_identidade_value}}}")
+  @ApiModelProperty(value = "Issue date of the identity")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -152,9 +152,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_estado_civil_value}}}
+   * Marital Status of the partner
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_estado_civil_value}}}")
+  @ApiModelProperty(value = "Marital Status of the partner")
   public String getEstadoCivil() {
     return estadoCivil;
   }
@@ -164,9 +164,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_profissao_value}}}
+   * Partner occupation
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_profissao_value}}}")
+  @ApiModelProperty(value = "Partner occupation")
   public String getProfissao() {
     return profissao;
   }
@@ -176,9 +176,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_nacionalidade_value}}}
+   * Partner Nationality
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_nacionalidade_value}}}")
+  @ApiModelProperty(value = "Partner Nationality")
   public String getNacionalidade() {
     return nacionalidade;
   }
@@ -188,9 +188,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_email_value}}}
+   * Email of the partner
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_email_value}}}")
+  @ApiModelProperty(value = "Email of the partner")
   public String getEmail() {
     return email;
   }
@@ -200,9 +200,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_telefones_value}}}
+   * Inform the telephones of the partner
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_telefones_value}}}")
+  @ApiModelProperty(value = "Inform the telephones of the partner")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
   }

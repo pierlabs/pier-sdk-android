@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_embossing_request_description}}}
+ * Request Parameters of the embossing card creation
  **/
-@ApiModel(description = "{{{cartao_embossing_request_description}}}")
+@ApiModel(description = "Request Parameters of the embossing card creation")
 public class CartaoEmbossingRequest  {
   
   @SerializedName("id_pessoa")
@@ -18,9 +18,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * {{{cartao_embossing_request_id_pessoa_value}}}
+   * Identification Code of the Person which the card belongs (id)
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_request_id_pessoa_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Person which the card belongs (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -30,9 +30,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
+   * Identification Code of TypePlastic (id)
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
+  @ApiModelProperty(value = "Identification Code of TypePlastic (id)")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
   }

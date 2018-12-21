@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{telefone_pessoa_aprovada_response_description}}}
+ * Object Telephone of the Approved Person
  **/
-@ApiModel(description = "{{{telefone_pessoa_aprovada_response_description}}}")
+@ApiModel(description = "Object Telephone of the Approved Person")
 public class TelefonePessoaAprovadaResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_id_value}}}
+   * Identification Code of the Address (id)
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_id_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Address (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}
+   * Identification Code of the Telephone (id)
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}")
+  @ApiModelProperty(value = "Identification Code of the Telephone (id)")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -48,9 +48,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_ddd_value}}}
+   * DDD Code of the telephone (id)
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_ddd_value}}}")
+  @ApiModelProperty(value = "DDD Code of the telephone (id)")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_telefone_value}}}
+   * Telephone Number
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_telefone_value}}}")
+  @ApiModelProperty(value = "Telephone Number")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_ramal_value}}}
+   * Extension number
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_ramal_value}}}")
+  @ApiModelProperty(value = "Extension number")
   public String getRamal() {
     return ramal;
   }

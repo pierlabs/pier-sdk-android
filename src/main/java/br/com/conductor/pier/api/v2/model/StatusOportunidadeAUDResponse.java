@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{status_oportunidade_a_u_d_response_description}}}
+ * Response Representation of the StatusTypeOpportunityAUD resource
  **/
-@ApiModel(description = "{{{status_oportunidade_a_u_d_response_description}}}")
+@ApiModel(description = "Response Representation of the StatusTypeOpportunityAUD resource")
 public class StatusOportunidadeAUDResponse  {
   
   @SerializedName("rev")
@@ -30,9 +30,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_rev_value}}}
+   * Identifer code of the auditorial of the opportunity types
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_value}}}")
+  @ApiModelProperty(value = "Identifer code of the auditorial of the opportunity types")
   public Long getRev() {
     return rev;
   }
@@ -42,9 +42,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_rev_type_value}}}
+   * code that represent the action type made in the resource of opportunity type
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_type_value}}}")
+  @ApiModelProperty(value = "code that represent the action type made in the resource of opportunity type")
   public Long getRevType() {
     return revType;
   }
@@ -54,9 +54,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_rev_date_value}}}
+   * Action date made in the resource of opportunity types
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_rev_date_value}}}")
+  @ApiModelProperty(value = "Action date made in the resource of opportunity types")
   public String getRevDate() {
     return revDate;
   }
@@ -66,9 +66,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_id_value}}}
+   * Identifier Code of the StatusOpportunity
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_id_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the StatusOpportunity")
   public Long getId() {
     return id;
   }
@@ -78,9 +78,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
+   * Identifier Code of the TypeOpportunity
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}")
+  @ApiModelProperty(value = "Identifier Code of the TypeOpportunity")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -90,9 +90,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_nome_value}}}
+   * Name of the opportunity status
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_nome_value}}}")
+  @ApiModelProperty(value = "Name of the opportunity status")
   public String getNome() {
     return nome;
   }
@@ -102,9 +102,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_descricao_value}}}
+   * Description of the StatusOpportunity
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_descricao_value}}}")
+  @ApiModelProperty(value = "Description of the StatusOpportunity")
   public String getDescricao() {
     return descricao;
   }
@@ -114,9 +114,9 @@ public class StatusOportunidadeAUDResponse  {
 
   
   /**
-   * {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
+   * Flag that represent if the opportunity type is active
    **/
-  @ApiModelProperty(value = "{{{status_oportunidade_a_u_d_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Flag that represent if the opportunity type is active")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{parametro_produto_persist_description}}}
+ * Parameters used in the product parameter register
  **/
-@ApiModel(description = "{{{parametro_produto_persist_description}}}")
+@ApiModel(description = "Parameters used in the product parameter register")
 public class ParametroProdutoPersist  {
   
   @SerializedName("idProduto")
@@ -26,9 +26,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_id_produto_value}}}
+   * Product identifier
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_dto_id_produto_value}}}")
+  @ApiModelProperty(required = true, value = "Product identifier")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -38,9 +38,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_data_validade_value}}}
+   * Product parameter expiration date
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_dto_data_validade_value}}}")
+  @ApiModelProperty(required = true, value = "Product parameter expiration date")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -50,9 +50,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_codigo_value}}}
+   * Product parameter code
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_dto_codigo_value}}}")
+  @ApiModelProperty(required = true, value = "Product parameter code")
   public String getCodigo() {
     return codigo;
   }
@@ -62,9 +62,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_descricao_value}}}
+   * Description of the product parameter
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_dto_descricao_value}}}")
+  @ApiModelProperty(required = true, value = "Description of the product parameter")
   public String getDescricao() {
     return descricao;
   }
@@ -74,9 +74,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_tipo_value}}}
+   * Product Parameter Type
    **/
-  @ApiModelProperty(required = true, value = "{{{parametro_produto_dto_tipo_value}}}")
+  @ApiModelProperty(required = true, value = "Product Parameter Type")
   public String getTipo() {
     return tipo;
   }
@@ -86,9 +86,9 @@ public class ParametroProdutoPersist  {
 
   
   /**
-   * {{{parametro_produto_dto_valor_parametro_value}}}
+   * Product parameter value
    **/
-  @ApiModelProperty(value = "{{{parametro_produto_dto_valor_parametro_value}}}")
+  @ApiModelProperty(value = "Product parameter value")
   public String getValorParametro() {
     return valorParametro;
   }

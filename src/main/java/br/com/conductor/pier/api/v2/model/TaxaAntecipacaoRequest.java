@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{taxa_antecipacao_request_description}}}
+ * Object Request of the Antecipation Taxe
  **/
-@ApiModel(description = "{{{taxa_antecipacao_request_description}}}")
+@ApiModel(description = "Object Request of the Antecipation Taxe")
 public class TaxaAntecipacaoRequest  {
   
   public enum TipoTransacaoEnum {
@@ -22,9 +22,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * {{{taxa_antecipacao_request_tipo_transacao_value}}}
+   * Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us
    **/
-  @ApiModelProperty(value = "{{{taxa_antecipacao_request_tipo_transacao_value}}}")
+  @ApiModelProperty(value = "Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
   }
@@ -34,9 +34,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * {{{taxa_antecipacao_request_valor_taxa_value}}}
+   * Value of the Antecipation Taxe
    **/
-  @ApiModelProperty(value = "{{{taxa_antecipacao_request_valor_taxa_value}}}")
+  @ApiModelProperty(value = "Value of the Antecipation Taxe")
   public BigDecimal getValorTaxa() {
     return valorTaxa;
   }

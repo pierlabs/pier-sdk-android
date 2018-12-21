@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{propriedade_documento_request_description}}}
+ * Object that encapsulate the properties of document detailing
  **/
-@ApiModel(description = "{{{propriedade_documento_request_description}}}")
+@ApiModel(description = "Object that encapsulate the properties of document detailing")
 public class PropriedadeDocumentoRequest  {
   
   @SerializedName("chave")
@@ -25,9 +25,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * {{{propriedade_documento_request_chave_value}}}
+   * Value of the property of document
    **/
-  @ApiModelProperty(value = "{{{propriedade_documento_request_chave_value}}}")
+  @ApiModelProperty(value = "Value of the property of document")
   public String getChave() {
     return chave;
   }
@@ -37,9 +37,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * {{{propriedade_documento_request_valor_value}}}
+   * Value of the property of document
    **/
-  @ApiModelProperty(value = "{{{propriedade_documento_request_valor_value}}}")
+  @ApiModelProperty(value = "Value of the property of document")
   public String getValor() {
     return valor;
   }
@@ -49,9 +49,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * {{{propriedade_documento_request_detalhes_tipo_value}}}
+   * Type of the property of document
    **/
-  @ApiModelProperty(value = "{{{propriedade_documento_request_detalhes_tipo_value}}}")
+  @ApiModelProperty(value = "Type of the property of document")
   public DetalhesTipoEnum getDetalhesTipo() {
     return detalhesTipo;
   }
@@ -61,9 +61,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * {{{propriedade_documento_request_flag_indice_value}}}
+   * Atrributed to what indicates if the parameter is an index (default =false)
    **/
-  @ApiModelProperty(value = "{{{propriedade_documento_request_flag_indice_value}}}")
+  @ApiModelProperty(value = "Atrributed to what indicates if the parameter is an index (default =false)")
   public Boolean getFlagIndice() {
     return flagIndice;
   }

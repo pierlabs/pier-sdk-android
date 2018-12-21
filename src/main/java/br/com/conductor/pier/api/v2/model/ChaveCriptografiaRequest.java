@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{chave_criptografia_requisicao_descricao}}}
+ * Representation of the content decryption request
  **/
-@ApiModel(description = "{{{chave_criptografia_requisicao_descricao}}}")
+@ApiModel(description = "Representation of the content decryption request")
 public class ChaveCriptografiaRequest  {
   
   @SerializedName("idChave")
@@ -18,9 +18,9 @@ public class ChaveCriptografiaRequest  {
 
   
   /**
-   * {{{chave_criptografia_requisicao_id_chave_valor}}}
+   * Decryption key identifier
    **/
-  @ApiModelProperty(required = true, value = "{{{chave_criptografia_requisicao_id_chave_valor}}}")
+  @ApiModelProperty(required = true, value = "Decryption key identifier")
   public Long getIdChave() {
     return idChave;
   }
@@ -30,9 +30,9 @@ public class ChaveCriptografiaRequest  {
 
   
   /**
-   * {{{chave_criptografia_requisicao_conteudo_valor}}}
+   * Content to be decrypted
    **/
-  @ApiModelProperty(required = true, value = "{{{chave_criptografia_requisicao_conteudo_valor}}}")
+  @ApiModelProperty(required = true, value = "Content to be decrypted")
   public String getConteudo() {
     return conteudo;
   }

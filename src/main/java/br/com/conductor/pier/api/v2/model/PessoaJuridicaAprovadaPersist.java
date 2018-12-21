@@ -1,9 +1,9 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersistValue;
-import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoPersistValue;
-import br.com.conductor.pier.api.v2.model.SocioAprovadoPersistValue;
-import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersistValue;
+import br.com.conductor.pier.api.v2.model.ObjectAddressApproved;
+import br.com.conductor.pier.api.v2.model.PersonPersist;
+import br.com.conductor.pier.api.v2.model.RefenceCommercialApprovedPersist;
+import br.com.conductor.pier.api.v2.model.TelephonePersonApprovedPersist;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -12,9 +12,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{pessoa_juridica_aprovada_persist_description}}}
+ * PersonLegalApprovedPersist
  **/
-@ApiModel(description = "{{{pessoa_juridica_aprovada_persist_description}}}")
+@ApiModel(description = "PersonLegalApprovedPersist")
 public class PessoaJuridicaAprovadaPersist  {
   
   @SerializedName("razaoSocial")
@@ -50,13 +50,13 @@ public class PessoaJuridicaAprovadaPersist  {
   @SerializedName("valorPontuacao")
   private Integer valorPontuacao = null;
   @SerializedName("telefones")
-  private List<TelefonePessoaAprovadaPersistValue> telefones = null;
+  private List<TelephonePersonApprovedPersist> telefones = null;
   @SerializedName("enderecos")
-  private List<EnderecoAprovadoPersistValue> enderecos = null;
+  private List<ObjectAddressApproved> enderecos = null;
   @SerializedName("socios")
-  private List<SocioAprovadoPersistValue> socios = null;
+  private List<PersonPersist> socios = null;
   @SerializedName("referenciasComerciais")
-  private List<ReferenciaComercialAprovadoPersistValue> referenciasComerciais = null;
+  private List<RefenceCommercialApprovedPersist> referenciasComerciais = null;
   @SerializedName("limiteGlobal")
   private BigDecimal limiteGlobal = null;
   @SerializedName("limiteMaximo")
@@ -68,9 +68,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_razao_social_value}}}
+   * Show the full name of the social reason (business name)'
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_razao_social_value}}}")
+  @ApiModelProperty(required = true, value = "Show the full name of the social reason (business name)'")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -80,9 +80,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}}
+   * Show the fantasy name of the company
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_nome_fantasia_value}}}")
+  @ApiModelProperty(value = "Show the fantasy name of the company")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -92,9 +92,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_cnpj_value}}}
+   * CNPJ
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_cnpj_value}}}")
+  @ApiModelProperty(required = true, value = "CNPJ")
   public String getCnpj() {
     return cnpj;
   }
@@ -104,9 +104,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}}
+   * State registration number
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_inscricao_estadual_value}}}")
+  @ApiModelProperty(value = "State registration number")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -116,9 +116,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}}
+   * Company opening date, this date must be informed in the format: yyyy-MM-dd
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_data_abertura_empresa_value}}}")
+  @ApiModelProperty(required = true, value = "Company opening date, this date must be informed in the format: yyyy-MM-dd")
   public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
@@ -128,9 +128,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}}
+   * Id or the commercial origin
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_id_origem_comercial_value}}}")
+  @ApiModelProperty(required = true, value = "Id or the commercial origin")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -140,9 +140,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_id_produto_value}}}
+   * Id product
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_id_produto_value}}}")
+  @ApiModelProperty(required = true, value = "Id product")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -152,9 +152,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_numero_banco_value}}}
+   * Bank number
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_numero_banco_value}}}")
+  @ApiModelProperty(value = "Bank number")
   public Integer getNumeroBanco() {
     return numeroBanco;
   }
@@ -164,9 +164,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_numero_agencia_value}}}
+   * Agency Number
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_numero_agencia_value}}}")
+  @ApiModelProperty(value = "Agency Number")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -176,9 +176,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}}
+   * Number of the current account
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_numero_conta_corrente_value}}}")
+  @ApiModelProperty(value = "Number of the current account")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -188,9 +188,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_email_value}}}
+   * Email of the company
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_email_value}}}")
+  @ApiModelProperty(value = "Email of the company")
   public String getEmail() {
     return email;
   }
@@ -200,9 +200,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}}
+   * Expiration date
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_dia_vencimento_value}}}")
+  @ApiModelProperty(required = true, value = "Expiration date")
   public Integer getDiaVencimento() {
     return diaVencimento;
   }
@@ -212,9 +212,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_nome_impresso_value}}}
+   * Name that must be printed on the card
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Name that must be printed on the card")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -224,9 +224,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_valor_renda_value}}}
+   * Apresenta o valor da renda compravada
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_valor_renda_value}}}")
+  @ApiModelProperty(value = "Apresenta o valor da renda compravada")
   public BigDecimal getValorRenda() {
     return valorRenda;
   }
@@ -236,9 +236,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_canal_entrada_value}}}
+   * Indicate the channel which the register of the client was created
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_canal_entrada_value}}}")
+  @ApiModelProperty(value = "Indicate the channel which the register of the client was created")
   public String getCanalEntrada() {
     return canalEntrada;
   }
@@ -248,9 +248,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}}
+   * Indicate the value of the puntuaction attributed to the client (case it is not informed it will be attributed the value =0)
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_valor_pontuacao_value}}}")
+  @ApiModelProperty(value = "Indicate the value of the puntuaction attributed to the client (case it is not informed it will be attributed the value =0)")
   public Integer getValorPontuacao() {
     return valorPontuacao;
   }
@@ -260,57 +260,57 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_telefones_value}}}
+   * List the Telephones of the Company
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_telefones_value}}}")
-  public List<TelefonePessoaAprovadaPersistValue> getTelefones() {
+  @ApiModelProperty(value = "List the Telephones of the Company")
+  public List<TelephonePersonApprovedPersist> getTelefones() {
     return telefones;
   }
-  public void setTelefones(List<TelefonePessoaAprovadaPersistValue> telefones) {
+  public void setTelefones(List<TelephonePersonApprovedPersist> telefones) {
     this.telefones = telefones;
   }
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_enderecos_value}}}
+   * It can be informed the following types of address: Residencial, Commercial and Others
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_enderecos_value}}}")
-  public List<EnderecoAprovadoPersistValue> getEnderecos() {
+  @ApiModelProperty(required = true, value = "It can be informed the following types of address: Residencial, Commercial and Others")
+  public List<ObjectAddressApproved> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<EnderecoAprovadoPersistValue> enderecos) {
+  public void setEnderecos(List<ObjectAddressApproved> enderecos) {
     this.enderecos = enderecos;
   }
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_socios_value}}}
+   * Show the dates of the partners, in case of existence
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_socios_value}}}")
-  public List<SocioAprovadoPersistValue> getSocios() {
+  @ApiModelProperty(value = "Show the dates of the partners, in case of existence")
+  public List<PersonPersist> getSocios() {
     return socios;
   }
-  public void setSocios(List<SocioAprovadoPersistValue> socios) {
+  public void setSocios(List<PersonPersist> socios) {
     this.socios = socios;
   }
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}}
+   * show the dates of the commercial references
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_referencias_comerciais_value}}}")
-  public List<ReferenciaComercialAprovadoPersistValue> getReferenciasComerciais() {
+  @ApiModelProperty(value = "show the dates of the commercial references")
+  public List<RefenceCommercialApprovedPersist> getReferenciasComerciais() {
     return referenciasComerciais;
   }
-  public void setReferenciasComerciais(List<ReferenciaComercialAprovadoPersistValue> referenciasComerciais) {
+  public void setReferenciasComerciais(List<RefenceCommercialApprovedPersist> referenciasComerciais) {
     this.referenciasComerciais = referenciasComerciais;
   }
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_limite_global_value}}}
+   * Value of the Global Limit
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_limite_global_value}}}")
+  @ApiModelProperty(required = true, value = "Value of the Global Limit")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -320,9 +320,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_limite_maximo_value}}}
+   * Maximum value of the credit limit to make transactions
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_limite_maximo_value}}}")
+  @ApiModelProperty(required = true, value = "Maximum value of the credit limit to make transactions")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -332,9 +332,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}}
+   * Credit Limit Value accumulated of the sum of the purchase parcels
    **/
-  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}}")
+  @ApiModelProperty(required = true, value = "Credit Limit Value accumulated of the sum of the purchase parcels")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -344,9 +344,9 @@ public class PessoaJuridicaAprovadaPersist  {
 
   
   /**
-   * {{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}
+   * Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) 
    **/
-  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}")
+  @ApiModelProperty(value = "Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) ")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
   }

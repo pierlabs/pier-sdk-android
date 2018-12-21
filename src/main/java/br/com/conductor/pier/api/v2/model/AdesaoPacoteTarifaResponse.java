@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adesao_pacote_tarifa_resposta_descricao}}}
+ * Representation of the Accession Fee Package Tariff
  **/
-@ApiModel(description = "{{{adesao_pacote_tarifa_resposta_descricao}}}")
+@ApiModel(description = "Representation of the Accession Fee Package Tariff")
 public class AdesaoPacoteTarifaResponse  {
   
   @SerializedName("aplicacaoUtilizado")
@@ -47,9 +47,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_aplicacao_utilizado_descricao}}}
+   * application used
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_aplicacao_utilizado_descricao}}}")
+  @ApiModelProperty(value = "application used")
   public Integer getAplicacaoUtilizado() {
     return aplicacaoUtilizado;
   }
@@ -59,9 +59,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_bilhete_unico_utilizado_descricao}}}
+   * single ticket used
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_bilhete_unico_utilizado_descricao}}}")
+  @ApiModelProperty(value = "single ticket used")
   public Integer getBilheteUnicoUtilizado() {
     return bilheteUnicoUtilizado;
   }
@@ -71,9 +71,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_boleto_utilizado_descricao}}}
+   * ticket used
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_boleto_utilizado_descricao}}}")
+  @ApiModelProperty(value = "ticket used")
   public Integer getBoletoUtilizado() {
     return boletoUtilizado;
   }
@@ -83,9 +83,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_ciclo_descricao}}}
+   * adhesion cycle
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_ciclo_descricao}}}")
+  @ApiModelProperty(value = "adhesion cycle")
   public Integer getCiclo() {
     return ciclo;
   }
@@ -95,9 +95,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_cobra_tarifa_descricao}}}
+   * tariff charged
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_cobra_tarifa_descricao}}}")
+  @ApiModelProperty(value = "tariff charged")
   public Boolean getCobraTarifa() {
     return cobraTarifa;
   }
@@ -107,9 +107,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_data_fim_ciclo_descricao}}}
+   * end date of the cycle
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_data_fim_ciclo_descricao}}}")
+  @ApiModelProperty(value = "end date of the cycle")
   public String getDataFimCiclo() {
     return dataFimCiclo;
   }
@@ -119,9 +119,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_data_hora_ativacao_descricao}}}
+   * date of activation
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_data_hora_ativacao_descricao}}}")
+  @ApiModelProperty(value = "date of activation")
   public String getDataHoraAtivacao() {
     return dataHoraAtivacao;
   }
@@ -131,9 +131,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_data_hora_desativacao_descricao}}}
+   * date of deactivation
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_data_hora_desativacao_descricao}}}")
+  @ApiModelProperty(value = "date of deactivation")
   public String getDataHoraDesativacao() {
     return dataHoraDesativacao;
   }
@@ -143,9 +143,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_id_descricao}}}
+   * Adhesion id
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Adhesion id")
   public Long getId() {
     return id;
   }
@@ -155,9 +155,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_id_conta_descricao}}}
+   * account id
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_id_conta_descricao}}}")
+  @ApiModelProperty(value = "account id")
   public Long getIdConta() {
     return idConta;
   }
@@ -167,9 +167,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_pacote_tarifa_descricao}}}
+   * Rate package
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_pacote_tarifa_descricao}}}")
+  @ApiModelProperty(value = "Rate package")
   public PacoteTarifaResponse getPacoteTarifa() {
     return pacoteTarifa;
   }
@@ -179,9 +179,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_pagamento_conta_utilizado_descricao}}}
+   * payment for the account used
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_pagamento_conta_utilizado_descricao}}}")
+  @ApiModelProperty(value = "payment for the account used")
   public Integer getPagamentoContaUtilizado() {
     return pagamentoContaUtilizado;
   }
@@ -191,9 +191,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_recarga_celular_utilizado_descricao}}}
+   * used cellular recharge
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_recarga_celular_utilizado_descricao}}}")
+  @ApiModelProperty(value = "used cellular recharge")
   public Integer getRecargaCelularUtilizado() {
     return recargaCelularUtilizado;
   }
@@ -203,9 +203,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_saque_utilizado_descricao}}}
+   * used service
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_saque_utilizado_descricao}}}")
+  @ApiModelProperty(value = "used service")
   public Integer getSaqueUtilizado() {
     return saqueUtilizado;
   }
@@ -215,9 +215,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_tarifa_manutencao_cobrada_descricao}}}
+   * maintenance charge charged
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_tarifa_manutencao_cobrada_descricao}}}")
+  @ApiModelProperty(value = "maintenance charge charged")
   public Boolean getTarifaManutencaoCobrada() {
     return tarifaManutencaoCobrada;
   }
@@ -227,9 +227,9 @@ public class AdesaoPacoteTarifaResponse  {
 
   
   /**
-   * {{{adesao_pacote_tarifa_resposta_transferencia_utilizado_descricao}}}
+   * used transfer
    **/
-  @ApiModelProperty(value = "{{{adesao_pacote_tarifa_resposta_transferencia_utilizado_descricao}}}")
+  @ApiModelProperty(value = "used transfer")
   public Integer getTransferenciaUtilizado() {
     return transferenciaUtilizado;
   }

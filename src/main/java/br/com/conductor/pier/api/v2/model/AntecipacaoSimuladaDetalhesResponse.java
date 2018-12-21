@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{antecipacao_simulada_detalhes_response_description}}}
+ * Response Representation of the details of Simulated Antecipation Resource
  **/
-@ApiModel(description = "{{{antecipacao_simulada_detalhes_response_description}}}")
+@ApiModel(description = "Response Representation of the details of Simulated Antecipation Resource")
 public class AntecipacaoSimuladaDetalhesResponse  {
   
   @SerializedName("quantidadeParcelas")
@@ -23,9 +23,9 @@ public class AntecipacaoSimuladaDetalhesResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
+   * Quantity of parcel of the installment plan simulated
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}")
+  @ApiModelProperty(value = "Quantity of parcel of the installment plan simulated")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -35,9 +35,9 @@ public class AntecipacaoSimuladaDetalhesResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
+   * Total value of the parcel
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}")
+  @ApiModelProperty(value = "Total value of the parcel")
   public BigDecimal getValorParcelas() {
     return valorParcelas;
   }
@@ -47,9 +47,9 @@ public class AntecipacaoSimuladaDetalhesResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
+   * Value of the discount for the installment plan
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}")
+  @ApiModelProperty(value = "Value of the discount for the installment plan")
   public BigDecimal getValorDesconto() {
     return valorDesconto;
   }
@@ -59,9 +59,9 @@ public class AntecipacaoSimuladaDetalhesResponse  {
 
   
   /**
-   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
+   * Total value of the parcel after the discount application
    **/
-  @ApiModelProperty(value = "{{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}")
+  @ApiModelProperty(value = "Total value of the parcel after the discount application")
   public BigDecimal getValorParcelasDesconto() {
     return valorParcelasDesconto;
   }

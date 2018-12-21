@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vencimento_update_description}}}
+ * Representation Object Update for Expirations
  **/
-@ApiModel(description = "{{{vencimento_update_description}}}")
+@ApiModel(description = "Representation Object Update for Expirations")
 public class VencimentoUpdate  {
   
   @SerializedName("dataPrevistaCorte")
@@ -16,9 +16,9 @@ public class VencimentoUpdate  {
 
   
   /**
-   * {{{vencimento_update_data_prevista_corte_value}}}
+   * expected expiring date
    **/
-  @ApiModelProperty(value = "{{{vencimento_update_data_prevista_corte_value}}}")
+  @ApiModelProperty(value = "expected expiring date")
   public String getDataPrevistaCorte() {
     return dataPrevistaCorte;
   }

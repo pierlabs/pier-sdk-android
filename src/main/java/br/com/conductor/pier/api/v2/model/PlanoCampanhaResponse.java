@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{plano_campanha_response_description}}}
+ * Response representation of the campaign plan resource
  **/
-@ApiModel(description = "{{{plano_campanha_response_description}}}")
+@ApiModel(description = "Response representation of the campaign plan resource")
 public class PlanoCampanhaResponse  {
   
   @SerializedName("id")
@@ -23,9 +23,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * {{{plano_campanha_response_id_value}}}
+   * Identifier of the Campaign plan
    **/
-  @ApiModelProperty(value = "{{{plano_campanha_response_id_value}}}")
+  @ApiModelProperty(value = "Identifier of the Campaign plan")
   public Long getId() {
     return id;
   }
@@ -35,9 +35,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * {{{plano_campanha_response_parcelas_value}}}
+   * Quantity of the parcels
    **/
-  @ApiModelProperty(value = "{{{plano_campanha_response_parcelas_value}}}")
+  @ApiModelProperty(value = "Quantity of the parcels")
   public Integer getParcelas() {
     return parcelas;
   }
@@ -47,9 +47,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * {{{plano_campanha_response_taxa_value}}}
+   * Interest taxes
    **/
-  @ApiModelProperty(value = "{{{plano_campanha_response_taxa_value}}}")
+  @ApiModelProperty(value = "Interest taxes")
   public BigDecimal getTaxa() {
     return taxa;
   }
@@ -59,9 +59,9 @@ public class PlanoCampanhaResponse  {
 
   
   /**
-   * {{{plano_campanha_response_usuario_value}}}
+   * Username
    **/
-  @ApiModelProperty(value = "{{{plano_campanha_response_usuario_value}}}")
+  @ApiModelProperty(value = "Username")
   public String getUsuario() {
     return usuario;
   }

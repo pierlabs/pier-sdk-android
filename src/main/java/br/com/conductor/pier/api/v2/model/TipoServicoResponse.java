@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_servico_response_description}}}
+ * Response Object of the Service Type
  **/
-@ApiModel(description = "{{{tipo_servico_response_description}}}")
+@ApiModel(description = "Response Object of the Service Type")
 public class TipoServicoResponse  {
   
   @SerializedName("descricao")
@@ -29,9 +29,9 @@ public class TipoServicoResponse  {
 
   
   /**
-   * {{{tipo_servico_response_id_value}}}
+   * Service Type Identifier
    **/
-  @ApiModelProperty(value = "{{{tipo_servico_response_id_value}}}")
+  @ApiModelProperty(value = "Service Type Identifier")
   public Long getId() {
     return id;
   }

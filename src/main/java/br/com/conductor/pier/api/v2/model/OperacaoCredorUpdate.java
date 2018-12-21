@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{operacao_credor_update_description}}}
+ * Object OperationCreditor
  **/
-@ApiModel(description = "{{{operacao_credor_update_description}}}")
+@ApiModel(description = "Object OperationCreditor")
 public class OperacaoCredorUpdate  {
   
   @SerializedName("idOperacao")
@@ -45,9 +45,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_id_operacao_value}}}
+   * Show the Operation id
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_update_id_operacao_value}}}")
+  @ApiModelProperty(required = true, value = "Show the Operation id")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -57,9 +57,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_id_grupo_economico_value}}}
+   * Show the id of the Economic Group
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_update_id_grupo_economico_value}}}")
+  @ApiModelProperty(required = true, value = "Show the id of the Economic Group")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -69,9 +69,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_id_produto_value}}}
+   * Show the id of the product that will be updated
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_id_produto_value}}}")
+  @ApiModelProperty(value = "Show the id of the product that will be updated")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -81,9 +81,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_remuneracao_percentual_value}}}
+   * Remuneration Percentage
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_remuneracao_percentual_value}}}")
+  @ApiModelProperty(value = "Remuneration Percentage")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
   }
@@ -93,9 +93,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_remuneracao_fixa_value}}}
+   * Remuneration Fixed
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_remuneracao_fixa_value}}}")
+  @ApiModelProperty(value = "Remuneration Fixed")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
   }
@@ -105,9 +105,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_periodicidade_value}}}
+   * Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_periodicidade_value}}}")
+  @ApiModelProperty(value = "Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -117,9 +117,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_vencimento_primeira_parcela_value}}}
+   * Expiration of the first parcel
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_vencimento_primeira_parcela_value}}}")
+  @ApiModelProperty(value = "Expiration of the first parcel")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
   }
@@ -129,9 +129,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_dias_afastamento_value}}}
+   * Clearance days
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_dias_afastamento_value}}}")
+  @ApiModelProperty(value = "Clearance days")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
   }
@@ -141,9 +141,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_fator_multiplicador_value}}}
+   * Multiplier Factor (OUR_SCHEDULE(0), SCHEDULE(1))
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_fator_multiplicador_value}}}")
+  @ApiModelProperty(value = "Multiplier Factor (OUR_SCHEDULE(0), SCHEDULE(1))")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
   }
@@ -153,9 +153,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_flag_taxa_fixada_value}}}
+   * Flag taxe fixed
    **/
-  @ApiModelProperty(value = "{{{operacao_credor_update_flag_taxa_fixada_value}}}")
+  @ApiModelProperty(value = "Flag taxe fixed")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
   }
@@ -165,9 +165,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_plano_minimo_value}}}
+   * Minimum plan of the rule
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_update_plano_minimo_value}}}")
+  @ApiModelProperty(required = true, value = "Minimum plan of the rule")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -177,9 +177,9 @@ public class OperacaoCredorUpdate  {
 
   
   /**
-   * {{{operacao_credor_update_plano_maximo_value}}}
+   * Maximum plan of the rule
    **/
-  @ApiModelProperty(required = true, value = "{{{operacao_credor_update_plano_maximo_value}}}")
+  @ApiModelProperty(required = true, value = "Maximum plan of the rule")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
