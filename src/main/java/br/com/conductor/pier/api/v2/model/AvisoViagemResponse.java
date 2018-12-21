@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response representation of the travel notification resource
+ * {{{aviso_viagem_response_description}}}
  **/
-@ApiModel(description = "Response representation of the travel notification resource")
+@ApiModel(description = "{{{aviso_viagem_response_description}}}")
 public class AvisoViagemResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Unique identifier Code of the travel notification in the base (id)
+   * {{{aviso_viagem_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Unique identifier Code of the travel notification in the base (id)")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Identifier Code of the card in the base (id)
+   * {{{aviso_viagem_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the card in the base (id)")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -50,9 +50,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Identifier Code of the country in the base (id)
+   * {{{aviso_viagem_response_codigo_pais_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the country in the base (id)")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_codigo_pais_value}}}")
   public String getCodigoPais() {
     return codigoPais;
   }
@@ -62,9 +62,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Beginning date of the travel notification
+   * {{{aviso_viagem_response_data_inicio_value}}}
    **/
-  @ApiModelProperty(value = "Beginning date of the travel notification")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_data_inicio_value}}}")
   public String getDataInicio() {
     return dataInicio;
   }
@@ -74,9 +74,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Ending date of the travel notification
+   * {{{aviso_viagem_response_data_fim_value}}}
    **/
-  @ApiModelProperty(value = "Ending date of the travel notification")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_data_fim_value}}}")
   public String getDataFim() {
     return dataFim;
   }
@@ -86,9 +86,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * Identify if the travel notification is active or not
+   * {{{aviso_viagem_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Identify if the travel notification is active or not")
+  @ApiModelProperty(value = "{{{aviso_viagem_response_flag_ativo_value}}}")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }

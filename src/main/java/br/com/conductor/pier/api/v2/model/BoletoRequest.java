@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Parameters of a Bank Slip
+ * {{{boleto_request_description}}}
  **/
-@ApiModel(description = "Request Parameters of a Bank Slip")
+@ApiModel(description = "{{{boleto_request_description}}}")
 public class BoletoRequest  {
   
   @SerializedName("idConta")
@@ -25,9 +25,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Account ID code (id)
+   * {{{boleto_request_id_conta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Account ID code (id)")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -37,9 +37,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Identification Code of the type of BAnk slip (id)
+   * {{{boleto_request_tipo_boleto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the type of BAnk slip (id)")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_tipo_boleto_value}}}")
   public Long getTipoBoleto() {
     return tipoBoleto;
   }
@@ -49,9 +49,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Value of Ticket
+   * {{{boleto_request_valor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of Ticket")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -61,9 +61,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Due Date
+   * {{{boleto_request_data_vencimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Due Date")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_data_vencimento_value}}}")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -73,9 +73,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Covenant Code from the Charging
+   * {{{boleto_request_id_convenio_value}}}
    **/
-  @ApiModelProperty(value = "Covenant Code from the Charging")
+  @ApiModelProperty(value = "{{{boleto_request_id_convenio_value}}}")
   public Long getIdConvenio() {
     return idConvenio;
   }

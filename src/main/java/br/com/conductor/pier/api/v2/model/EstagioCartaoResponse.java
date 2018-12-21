@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the Card Stage Resource
+ * {{{estagio_cartao_response_description}}}
  **/
-@ApiModel(description = "Representation of the Card Stage Resource")
+@ApiModel(description = "{{{estagio_cartao_response_description}}}")
 public class EstagioCartaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class EstagioCartaoResponse  {
 
   
   /**
-   * Stage Card Id
+   * {{{estagio_cartao_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Stage Card Id")
+  @ApiModelProperty(required = true, value = "{{{estagio_cartao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class EstagioCartaoResponse  {
 
   
   /**
-   * Stage Card Name
+   * {{{estagio_cartao_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Stage Card Name")
+  @ApiModelProperty(required = true, value = "{{{estagio_cartao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

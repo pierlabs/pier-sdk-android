@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response object of the LinkMerchantAcquirer
+ * {{{vinculo_estabelecimento_adquirente_response_description}}}
  **/
-@ApiModel(description = "Response object of the LinkMerchantAcquirer")
+@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_response_description}}}")
 public class VinculoEstabelecimentoAdquirenteResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Identification Code of the LinkEstablishmentAcquirer (id)
+   * {{{vinculo_estabelecimento_adquirente_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the LinkEstablishmentAcquirer (id)")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Identification Code of the Establishment (id)
+   * {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Establishment (id)")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -52,9 +52,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Identification Code of the Acquirer (id)
+   * {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Acquirer (id)")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}")
   public Long getIdAdquirente() {
     return idAdquirente;
   }
@@ -64,9 +64,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Link Code between the establishment and the acquirer
+   * {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
    **/
-  @ApiModelProperty(value = "Link Code between the establishment and the acquirer")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
   }
@@ -76,9 +76,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Register date of the link
+   * {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
    **/
-  @ApiModelProperty(value = "Register date of the link")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}")
   public String getDataHoraCadastro() {
     return dataHoraCadastro;
   }
@@ -88,9 +88,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Register date of the link
+   * {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
    **/
-  @ApiModelProperty(value = "Register date of the link")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}")
   public String getMensagem() {
     return mensagem;
   }
@@ -100,9 +100,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * Register date of the link
+   * {{{vinculo_estabelecimento_adquirente_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Register date of the link")
+  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }

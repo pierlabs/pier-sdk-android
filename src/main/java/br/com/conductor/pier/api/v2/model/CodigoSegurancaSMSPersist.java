@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Representation of the safety code creation resource
+ * {{{codigo_seguranca_s_m_s_persist_description}}}
  **/
-@ApiModel(description = "Request Representation of the safety code creation resource")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_persist_description}}}")
 public class CodigoSegurancaSMSPersist  {
   
   @SerializedName("ddd")
@@ -18,9 +18,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * Phone DDD
+   * {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
    **/
-  @ApiModelProperty(value = "Phone DDD")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_persist_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -30,9 +30,9 @@ public class CodigoSegurancaSMSPersist  {
 
   
   /**
-   * Phone for send
+   * {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Phone for send")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_persist_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }

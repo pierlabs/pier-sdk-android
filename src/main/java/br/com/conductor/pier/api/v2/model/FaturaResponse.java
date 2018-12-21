@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Future Invoice
+ * {{{fatura_response_description}}}
  **/
-@ApiModel(description = "Future Invoice")
+@ApiModel(description = "{{{fatura_response_description}}}")
 public class FaturaResponse  {
   
   @SerializedName("idConta")
@@ -38,9 +38,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Identification Code of the Account
+   * {{{fatura_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Account")
+  @ApiModelProperty(value = "{{{fatura_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -50,9 +50,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Processing situation of the invoice
+   * {{{fatura_response_situacao_processamento_value}}}
    **/
-  @ApiModelProperty(value = "Processing situation of the invoice")
+  @ApiModelProperty(value = "{{{fatura_response_situacao_processamento_value}}}")
   public SituacaoProcessamentoEnum getSituacaoProcessamento() {
     return situacaoProcessamento;
   }
@@ -62,9 +62,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Effected Payment Status
+   * {{{fatura_response_pagamento_efetuado_value}}}
    **/
-  @ApiModelProperty(value = "Effected Payment Status")
+  @ApiModelProperty(value = "{{{fatura_response_pagamento_efetuado_value}}}")
   public Boolean getPagamentoEfetuado() {
     return pagamentoEfetuado;
   }
@@ -74,9 +74,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Expiration date of the invoice
+   * {{{fatura_response_data_vencimento_fatura_value}}}
    **/
-  @ApiModelProperty(value = "Expiration date of the invoice")
+  @ApiModelProperty(value = "{{{fatura_response_data_vencimento_fatura_value}}}")
   public String getDataVencimentoFatura() {
     return dataVencimentoFatura;
   }
@@ -86,9 +86,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Real expiration date of the invoice
+   * {{{fatura_response_data_vencimento_real_value}}}
    **/
-  @ApiModelProperty(value = "Real expiration date of the invoice")
+  @ApiModelProperty(value = "{{{fatura_response_data_vencimento_real_value}}}")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
@@ -98,9 +98,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Closing date of the invoice
+   * {{{fatura_response_data_fechamento_value}}}
    **/
-  @ApiModelProperty(value = "Closing date of the invoice")
+  @ApiModelProperty(value = "{{{fatura_response_data_fechamento_value}}}")
   public String getDataFechamento() {
     return dataFechamento;
   }
@@ -110,9 +110,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Total value of the invoice
+   * {{{fatura_response_valor_total_value}}}
    **/
-  @ApiModelProperty(value = "Total value of the invoice")
+  @ApiModelProperty(value = "{{{fatura_response_valor_total_value}}}")
   public BigDecimal getValorTotal() {
     return valorTotal;
   }
@@ -122,9 +122,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Value of the minimum payment
+   * {{{fatura_response_valor_pagamento_minimo_value}}}
    **/
-  @ApiModelProperty(value = "Value of the minimum payment")
+  @ApiModelProperty(value = "{{{fatura_response_valor_pagamento_minimo_value}}}")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
   }
@@ -134,9 +134,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Value of the previous value
+   * {{{fatura_response_saldo_anterior_value}}}
    **/
-  @ApiModelProperty(value = "Value of the previous value")
+  @ApiModelProperty(value = "{{{fatura_response_saldo_anterior_value}}}")
   public BigDecimal getSaldoAnterior() {
     return saldoAnterior;
   }
@@ -146,9 +146,9 @@ public class FaturaResponse  {
 
   
   /**
-   * Identification Code of the Ticket
+   * {{{fatura_response_id_boleto_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Ticket")
+  @ApiModelProperty(value = "{{{fatura_response_id_boleto_value}}}")
   public Long getIdBoleto() {
     return idBoleto;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response representation of the campaign type resource
+ * {{{page_tipo_campanha_response_description}}}
  **/
-@ApiModel(description = "Response representation of the campaign type resource")
+@ApiModel(description = "{{{page_tipo_campanha_response_description}}}")
 public class PageTipoCampanhaResponse  {
   
   @SerializedName("content")

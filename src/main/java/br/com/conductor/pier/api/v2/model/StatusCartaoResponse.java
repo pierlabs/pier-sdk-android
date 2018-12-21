@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of Card Status Resource
+ * {{{status_cartao_response_description}}}
  **/
-@ApiModel(description = "Representation of Card Status Resource")
+@ApiModel(description = "{{{status_cartao_response_description}}}")
 public class StatusCartaoResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Identification Code of the Card Status (id)
+   * {{{status_cartao_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Card Status (id)")
+  @ApiModelProperty(required = true, value = "{{{status_cartao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Name attributed to the status of the Card Delivery
+   * {{{status_cartao_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Name attributed to the status of the Card Delivery")
+  @ApiModelProperty(required = true, value = "{{{status_cartao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -50,9 +50,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+   * {{{status_cartao_response_permite_desbloquear_value}}}
    **/
-  @ApiModelProperty(value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_desbloquear_value}}}")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
   }
@@ -62,9 +62,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+   * {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
    **/
-  @ApiModelProperty(value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
   }
@@ -74,9 +74,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+   * {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
    **/
-  @ApiModelProperty(value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
+  @ApiModelProperty(value = "{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
   }
@@ -86,9 +86,9 @@ public class StatusCartaoResponse  {
 
   
   /**
-   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+   * {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
    **/
-  @ApiModelProperty(value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
+  @ApiModelProperty(value = "{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}")
   public Integer getCobrarTarifaAoEmitirNovaVia() {
     return cobrarTarifaAoEmitirNovaVia;
   }

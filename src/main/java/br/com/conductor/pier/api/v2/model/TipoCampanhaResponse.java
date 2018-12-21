@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response representation of the campaign type resource
+ * {{{tipo_campanha_response_description}}}
  **/
-@ApiModel(description = "Response representation of the campaign type resource")
+@ApiModel(description = "{{{tipo_campanha_response_description}}}")
 public class TipoCampanhaResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoCampanhaResponse  {
 
   
   /**
-   * Identifier of the campaign type
+   * {{{tipo_campanha_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the campaign type")
+  @ApiModelProperty(value = "{{{tipo_campanha_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoCampanhaResponse  {
 
   
   /**
-   * Description of the campaign type
+   * {{{tipo_campanha_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the campaign type")
+  @ApiModelProperty(value = "{{{tipo_campanha_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

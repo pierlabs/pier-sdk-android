@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Telephone
+ * {{{telefone_adicional_persist_description}}}
  **/
-@ApiModel(description = "Object Telephone")
+@ApiModel(description = "{{{telefone_adicional_persist_description}}}")
 public class TelefoneAdicionalPersist  {
   
   @SerializedName("idTipoTelefone")
@@ -22,9 +22,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * Identification Code of the Telephone type (id)
+   * {{{telefone_adicional_persist_id_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Telephone type (id)")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_id_tipo_telefone_value}}}")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -34,9 +34,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * Phone DDD
+   * {{{telefone_adicional_persist_ddd_value}}}
    **/
-  @ApiModelProperty(value = "Phone DDD")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +46,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * Phone Number
+   * {{{telefone_adicional_persist_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Phone Number")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +58,9 @@ public class TelefoneAdicionalPersist  {
 
   
   /**
-   * Phone branch
+   * {{{telefone_adicional_persist_ramal_value}}}
    **/
-  @ApiModelProperty(value = "Phone branch")
+  @ApiModelProperty(value = "{{{telefone_adicional_persist_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }

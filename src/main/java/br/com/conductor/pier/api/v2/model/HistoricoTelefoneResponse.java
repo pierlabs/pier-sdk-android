@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object response for the telephone historic
+ * {{{historico_telefone_response_description}}}
  **/
-@ApiModel(description = "Object response for the telephone historic")
+@ApiModel(description = "{{{historico_telefone_response_description}}}")
 public class HistoricoTelefoneResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Identification Code of the Telephone (id)
+   * {{{historico_telefone_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Telephone (id)")
+  @ApiModelProperty(value = "{{{historico_telefone_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Show the telephone number
+   * {{{historico_telefone_response_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Show the telephone number")
+  @ApiModelProperty(value = "{{{historico_telefone_response_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -48,9 +48,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Show the id type of the telephone
+   * {{{historico_telefone_response_id_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Show the id type of the telephone")
+  @ApiModelProperty(value = "{{{historico_telefone_response_id_tipo_telefone_value}}}")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -60,9 +60,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Show the description of the telephone type
+   * {{{historico_telefone_response_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Show the description of the telephone type")
+  @ApiModelProperty(value = "{{{historico_telefone_response_tipo_telefone_value}}}")
   public String getTipoTelefone() {
     return tipoTelefone;
   }
@@ -72,9 +72,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * Show the date which the telephone was updated
+   * {{{historico_telefone_response_data_modificacao_value}}}
    **/
-  @ApiModelProperty(value = "Show the date which the telephone was updated")
+  @ApiModelProperty(value = "{{{historico_telefone_response_data_modificacao_value}}}")
   public String getDataModificacao() {
     return dataModificacao;
   }

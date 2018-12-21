@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of the LinkMerchantAcquirer
+ * {{{page_vinculo_estabelecimento_adquirente_response_description}}}
  **/
-@ApiModel(description = "List of the LinkMerchantAcquirer")
+@ApiModel(description = "{{{page_vinculo_estabelecimento_adquirente_response_description}}}")
 public class PageVinculoEstabelecimentoAdquirenteResponse  {
   
   @SerializedName("content")

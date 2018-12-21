@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Containing the details of an invoice
+ * {{{detalhes_fatura_response_description}}}
  **/
-@ApiModel(description = "Object Containing the details of an invoice")
+@ApiModel(description = "{{{detalhes_fatura_response_description}}}")
 public class DetalhesFaturaResponse  {
   
   @SerializedName("fatura")
@@ -21,9 +21,9 @@ public class DetalhesFaturaResponse  {
 
   
   /**
-   * Show the details of the invoice
+   * {{{detalhes_fatura_response_fatura_value}}}
    **/
-  @ApiModelProperty(value = "Show the details of the invoice")
+  @ApiModelProperty(value = "{{{detalhes_fatura_response_fatura_value}}}")
   public FaturaFechadaResponse getFatura() {
     return fatura;
   }
@@ -33,9 +33,9 @@ public class DetalhesFaturaResponse  {
 
   
   /**
-   * Show the transactions related to the invoice
+   * {{{detalhes_fatura_response_transacoes_value}}}
    **/
-  @ApiModelProperty(value = "Show the transactions related to the invoice")
+  @ApiModelProperty(value = "{{{detalhes_fatura_response_transacoes_value}}}")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }

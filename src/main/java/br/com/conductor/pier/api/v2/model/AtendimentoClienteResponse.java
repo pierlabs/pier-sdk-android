@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object AttendanceClient
+ * {{{atendimento_cliente_response_description}}}
  **/
-@ApiModel(description = "Object AttendanceClient")
+@ApiModel(description = "{{{atendimento_cliente_response_description}}}")
 public class AtendimentoClienteResponse  {
   
   @SerializedName("idAtendimento")
@@ -42,9 +42,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Identification Code of the Attendance (id)
+   * {{{atendimento_cliente_response_id_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Attendance (id)")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_id_atendimento_value}}}")
   public Long getIdAtendimento() {
     return idAtendimento;
   }
@@ -54,9 +54,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Identification Code of the account which the attendance is associated
+   * {{{atendimento_cliente_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the account which the attendance is associated")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -66,9 +66,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Identification Code of the type of attendance (id)
+   * {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the type of attendance (id)")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_id_tipo_atendimento_value}}}")
   public Long getIdTipoAtendimento() {
     return idTipoAtendimento;
   }
@@ -78,9 +78,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the description of the Type of Attendance
+   * {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the description of the Type of Attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}")
   public String getDescricaoTipoAtendimento() {
     return descricaoTipoAtendimento;
   }
@@ -90,9 +90,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the information that were used to retrieve, register or update information related to the Attendance
+   * {{{atendimento_cliente_response_conteudo_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the information that were used to retrieve, register or update information related to the Attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_conteudo_atendimento_value}}}")
   public String getConteudoAtendimento() {
     return conteudoAtendimento;
   }
@@ -102,9 +102,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the details launched by the system or by the attendant during the attendance
+   * {{{atendimento_cliente_response_detalhes_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the details launched by the system or by the attendant during the attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_detalhes_atendimento_value}}}")
   public String getDetalhesAtendimento() {
     return detalhesAtendimento;
   }
@@ -114,9 +114,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the name of the Attendant that registered the Attendance
+   * {{{atendimento_cliente_response_nome_atendente_value}}}
    **/
-  @ApiModelProperty(value = "Show the name of the Attendant that registered the Attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_nome_atendente_value}}}")
   public String getNomeAtendente() {
     return nomeAtendente;
   }
@@ -126,9 +126,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the name of the System, Server, Module or Method REST that originated the register of the Attendance
+   * {{{atendimento_cliente_response_nome_sistema_value}}}
    **/
-  @ApiModelProperty(value = "Show the name of the System, Server, Module or Method REST that originated the register of the Attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_nome_sistema_value}}}")
   public String getNomeSistema() {
     return nomeSistema;
   }
@@ -138,9 +138,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the date and time which the attendance was begun. Whe it is used, it serves to measure the performance of the attendances
+   * {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the date and time which the attendance was begun. Whe it is used, it serves to measure the performance of the attendances")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}")
   public String getDataHoraInicioAtendimento() {
     return dataHoraInicioAtendimento;
   }
@@ -150,9 +150,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Show the date and time which the attendance was begun. When it is used, it serves to measure the performance of the attendances
+   * {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the date and time which the attendance was begun. When it is used, it serves to measure the performance of the attendances")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}")
   public String getDataHoraFimAtendimento() {
     return dataHoraFimAtendimento;
   }
@@ -162,9 +162,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * Present the date and time which the attendance was made
+   * {{{atendimento_cliente_response_data_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Present the date and time which the attendance was made")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_data_atendimento_value}}}")
   public String getDataAtendimento() {
     return dataAtendimento;
   }
@@ -174,9 +174,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * When it is used, according to the type of attendance, show the date and time for the processing or the date to return the Attendance
+   * {{{atendimento_cliente_response_data_agendamento_value}}}
    **/
-  @ApiModelProperty(value = "When it is used, according to the type of attendance, show the date and time for the processing or the date to return the Attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_data_agendamento_value}}}")
   public String getDataAgendamento() {
     return dataAgendamento;
   }
@@ -186,9 +186,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * When it is used, show the date and time which the request registered in the attendance
+   * {{{atendimento_cliente_response_data_processamento_value}}}
    **/
-  @ApiModelProperty(value = "When it is used, show the date and time which the request registered in the attendance")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_data_processamento_value}}}")
   public String getDataProcessamento() {
     return dataProcessamento;
   }
@@ -198,9 +198,9 @@ public class AtendimentoClienteResponse  {
 
   
   /**
-   * when applicable, according to the indication if the resquest processing has been made
+   * {{{atendimento_cliente_response_flag_processamento_value}}}
    **/
-  @ApiModelProperty(value = "when applicable, according to the indication if the resquest processing has been made")
+  @ApiModelProperty(value = "{{{atendimento_cliente_response_flag_processamento_value}}}")
   public Integer getFlagProcessamento() {
     return flagProcessamento;
   }

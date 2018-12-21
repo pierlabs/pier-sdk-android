@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Account
+ * {{{conta_response_description}}}
  **/
-@ApiModel(description = "Object Account")
+@ApiModel(description = "{{{conta_response_description}}}")
 public class ContaResponse  {
   
   @SerializedName("id")
@@ -44,9 +44,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification Code of the Account (id)
+   * {{{conta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Account (id)")
+  @ApiModelProperty(value = "{{{conta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -56,9 +56,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification code of the product which the account takes part (id)
+   * {{{conta_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "Identification code of the product which the account takes part (id)")
+  @ApiModelProperty(value = "{{{conta_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -68,9 +68,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification Code of the Commercial Origin (id) which was created the Account
+   * {{{conta_response_id_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Commercial Origin (id) which was created the Account")
+  @ApiModelProperty(value = "{{{conta_response_id_origem_comercial_value}}}")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -80,9 +80,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification Code of the Cardholder of the Account (id)
+   * {{{conta_response_id_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Cardholder of the Account (id)")
+  @ApiModelProperty(value = "{{{conta_response_id_pessoa_value}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -92,9 +92,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification Code of the status attributed to the account
+   * {{{conta_response_id_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the status attributed to the account")
+  @ApiModelProperty(value = "{{{conta_response_id_status_conta_value}}}")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -104,9 +104,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the date of expiration
+   * {{{conta_response_dia_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the date of expiration")
+  @ApiModelProperty(value = "{{{conta_response_dia_vencimento_value}}}")
   public Integer getDiaVencimento() {
     return diaVencimento;
   }
@@ -116,9 +116,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the best day of shop
+   * {{{conta_response_melhor_dia_compra_value}}}
    **/
-  @ApiModelProperty(value = "Show the best day of shop")
+  @ApiModelProperty(value = "{{{conta_response_melhor_dia_compra_value}}}")
   public Integer getMelhorDiaCompra() {
     return melhorDiaCompra;
   }
@@ -128,9 +128,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the date which the current idStatusAccount was attributed for it
+   * {{{conta_response_data_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Show the date which the current idStatusAccount was attributed for it")
+  @ApiModelProperty(value = "{{{conta_response_data_status_conta_value}}}")
   public String getDataStatusConta() {
     return dataStatusConta;
   }
@@ -140,9 +140,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the date which the card was created
+   * {{{conta_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(value = "Show the date which the card was created")
+  @ApiModelProperty(value = "{{{conta_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -152,9 +152,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the date of the last update of the expiration
+   * {{{conta_response_data_ultima_alteracao_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Show the date of the last update of the expiration")
+  @ApiModelProperty(value = "{{{conta_response_data_ultima_alteracao_vencimento_value}}}")
   public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
@@ -164,9 +164,9 @@ public class ContaResponse  {
 
   
   /**
-   * Show the value of the proven income
+   * {{{conta_response_valor_renda_value}}}
    **/
-  @ApiModelProperty(value = "Show the value of the proven income")
+  @ApiModelProperty(value = "{{{conta_response_valor_renda_value}}}")
   public BigDecimal getValorRenda() {
     return valorRenda;
   }
@@ -176,9 +176,9 @@ public class ContaResponse  {
 
   
   /**
-   * Identification code of the proposal
+   * {{{conta_response_id_proposta}}}
    **/
-  @ApiModelProperty(value = "Identification code of the proposal")
+  @ApiModelProperty(value = "{{{conta_response_id_proposta}}}")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -188,9 +188,9 @@ public class ContaResponse  {
 
   
   /**
-   * Active account function
+   * {{{conta_response_funcao_ativa_value}}}
    **/
-  @ApiModelProperty(value = "Active account function")
+  @ApiModelProperty(value = "{{{conta_response_funcao_ativa_value}}}")
   public FuncaoAtivaEnum getFuncaoAtiva() {
     return funcaoAtiva;
   }

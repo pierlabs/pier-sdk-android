@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of the Expiration
+ * {{{page_controle_vencimento_response_description}}}
  **/
-@ApiModel(description = "List of the Expiration")
+@ApiModel(description = "{{{page_controle_vencimento_response_description}}}")
 public class PageControleVencimentoResponse  {
   
   @SerializedName("content")

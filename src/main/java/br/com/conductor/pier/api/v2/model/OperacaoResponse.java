@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the operation resource
+ * {{{operacao_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the operation resource")
+@ApiModel(description = "{{{operacao_response_description}}}")
 public class OperacaoResponse  {
   
   @SerializedName("idOperacao")
@@ -32,9 +32,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Code that identifies the operation
+   * {{{operacao_response_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Code that identifies the operation")
+  @ApiModelProperty(value = "{{{operacao_response_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -44,9 +44,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Processing Code used in transaction with the authorizer
+   * {{{operacao_response_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(value = "Processing Code used in transaction with the authorizer")
+  @ApiModelProperty(value = "{{{operacao_response_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -56,9 +56,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Processing Code used to cancel transactions in the authorizer
+   * {{{operacao_response_codigo_processamento_cancelamento_value}}}
    **/
-  @ApiModelProperty(value = "Processing Code used to cancel transactions in the authorizer")
+  @ApiModelProperty(value = "{{{operacao_response_codigo_processamento_cancelamento_value}}}")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
   }
@@ -68,9 +68,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Operation name
+   * {{{operacao_response_nome_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Operation name")
+  @ApiModelProperty(value = "{{{operacao_response_nome_operacao_value}}}")
   public String getNomeOperacao() {
     return nomeOperacao;
   }
@@ -80,9 +80,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicative for the charge of interest
+   * {{{operacao_response_flag_cobra_juros_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicative for the charge of interest")
+  @ApiModelProperty(value = "{{{operacao_response_flag_cobra_juros_value}}}")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
   }
@@ -92,9 +92,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicative for the charge of taxes
+   * {{{operacao_response_flag_cobra_tarifa_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicative for the charge of taxes")
+  @ApiModelProperty(value = "{{{operacao_response_flag_cobra_tarifa_value}}}")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
   }
@@ -104,9 +104,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Quantity of months for the Lack
+   * {{{operacao_response_carencia_value}}}
    **/
-  @ApiModelProperty(value = "Quantity of months for the Lack")
+  @ApiModelProperty(value = "{{{operacao_response_carencia_value}}}")
   public Integer getCarencia() {
     return carencia;
   }
@@ -116,9 +116,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Allow parceled transactions
+   * {{{operacao_response_flag_permitir_parcelamento_value}}}
    **/
-  @ApiModelProperty(value = "Allow parceled transactions")
+  @ApiModelProperty(value = "{{{operacao_response_flag_permitir_parcelamento_value}}}")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
   }
@@ -128,9 +128,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate
+   * {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
    **/
-  @ApiModelProperty(value = "Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate")
+  @ApiModelProperty(value = "{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;
   }

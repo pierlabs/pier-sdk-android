@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the Integration Document Resource
+ * {{{documento_integracao_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the Integration Document Resource")
+@ApiModel(description = "{{{documento_integracao_response_description}}}")
 public class DocumentoIntegracaoResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class DocumentoIntegracaoResponse  {
 
   
   /**
-   * ID of the Integrated Document
+   * {{{documento_integracao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "ID of the Integrated Document")
+  @ApiModelProperty(value = "{{{documento_integracao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class DocumentoIntegracaoResponse  {
 
   
   /**
-   * ID of the Template of the associated Document
+   * {{{documento_integracao_response_id_template_value}}}
    **/
-  @ApiModelProperty(value = "ID of the Template of the associated Document")
+  @ApiModelProperty(value = "{{{documento_integracao_response_id_template_value}}}")
   public Long getIdTemplate() {
     return idTemplate;
   }
@@ -44,9 +44,9 @@ public class DocumentoIntegracaoResponse  {
 
   
   /**
-   * Name of the Document
+   * {{{documento_integracao_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Document")
+  @ApiModelProperty(value = "{{{documento_integracao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

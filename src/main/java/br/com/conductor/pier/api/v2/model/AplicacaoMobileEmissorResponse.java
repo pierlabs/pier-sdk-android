@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Represents a mobile application response
+ * {{{aplicacao_mobile_emissor_resposta_descricao}}}
  **/
-@ApiModel(description = "Represents a mobile application response")
+@ApiModel(description = "{{{aplicacao_mobile_emissor_resposta_descricao}}}")
 public class AplicacaoMobileEmissorResponse  {
   
   @SerializedName("id")
@@ -16,9 +16,9 @@ public class AplicacaoMobileEmissorResponse  {
 
   
   /**
-   * Mobile application id
+   * {{{aplicacao_mobile_emissor_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "Mobile application id")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_emissor_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }

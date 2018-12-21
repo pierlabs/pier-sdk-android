@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Field Encoded
+ * {{{campo_codificado_descricao_response_description}}}
  **/
-@ApiModel(description = "Object Field Encoded")
+@ApiModel(description = "{{{campo_codificado_descricao_response_description}}}")
 public class CampoCodificadoDescricaoResponse  {
   
   @SerializedName("codigo")
@@ -18,9 +18,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * Identification Code of the description
+   * {{{campo_codificado_descricao_response_codigo_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the description")
+  @ApiModelProperty(value = "{{{campo_codificado_descricao_response_codigo_value}}}")
   public Long getCodigo() {
     return codigo;
   }
@@ -30,9 +30,9 @@ public class CampoCodificadoDescricaoResponse  {
 
   
   /**
-   * Description of the encoded field
+   * {{{campo_codificado_descricao_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the encoded field")
+  @ApiModelProperty(value = "{{{campo_codificado_descricao_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

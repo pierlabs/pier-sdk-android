@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the Printing Status resource
+ * {{{status_impressao_response_description}}}
  **/
-@ApiModel(description = "Representation of the Printing Status resource")
+@ApiModel(description = "{{{status_impressao_response_description}}}")
 public class StatusImpressaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class StatusImpressaoResponse  {
 
   
   /**
-   * Id of the card stage
+   * {{{status_impressao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Id of the card stage")
+  @ApiModelProperty(value = "{{{status_impressao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class StatusImpressaoResponse  {
 
   
   /**
-   * Name of the printing status
+   * {{{status_impressao_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the printing status")
+  @ApiModelProperty(value = "{{{status_impressao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Return of the attempts registration
+ * {{{controle_tentativa_cadastro_resposta_descricao}}}
  **/
-@ApiModel(description = "Return of the attempts registration")
+@ApiModel(description = "{{{controle_tentativa_cadastro_resposta_descricao}}}")
 public class ControleTentativaCadastroResponse  {
   
   @SerializedName("cpf")
@@ -20,9 +20,9 @@ public class ControleTentativaCadastroResponse  {
 
   
   /**
-   * User CPF
+   * {{{controle_tentativa_cadastro_resposta_cpf_descricao}}}
    **/
-  @ApiModelProperty(value = "User CPF")
+  @ApiModelProperty(value = "{{{controle_tentativa_cadastro_resposta_cpf_descricao}}}")
   public String getCpf() {
     return cpf;
   }
@@ -32,9 +32,9 @@ public class ControleTentativaCadastroResponse  {
 
   
   /**
-   * Login
+   * {{{controle_tentativa_cadastro_resposta_login_descricao}}}
    **/
-  @ApiModelProperty(value = "Login")
+  @ApiModelProperty(value = "{{{controle_tentativa_cadastro_resposta_login_descricao}}}")
   public String getLogin() {
     return login;
   }
@@ -44,9 +44,9 @@ public class ControleTentativaCadastroResponse  {
 
   
   /**
-   * Number of attempts
+   * {{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}
    **/
-  @ApiModelProperty(value = "Number of attempts")
+  @ApiModelProperty(value = "{{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}")
   public Integer getTentativas() {
     return tentativas;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object with link-to-cards response
+ * {{{vincular_cartoes_response_description}}}
  **/
-@ApiModel(description = "Object with link-to-cards response")
+@ApiModel(description = "{{{vincular_cartoes_response_description}}}")
 public class VinculoCartoesResponse  {
   
   @SerializedName("idCartaoPrincipal")
@@ -18,9 +18,9 @@ public class VinculoCartoesResponse  {
 
   
   /**
-   * ID code of main card generated
+   * {{{vincular_cartoes_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "ID code of main card generated")
+  @ApiModelProperty(value = "{{{vincular_cartoes_response_id_cartao_value}}}")
   public Long getIdCartaoPrincipal() {
     return idCartaoPrincipal;
   }
@@ -30,9 +30,9 @@ public class VinculoCartoesResponse  {
 
   
   /**
-   * Id of the card attached to the card
+   * {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
    **/
-  @ApiModelProperty(value = "Id of the card attached to the card")
+  @ApiModelProperty(value = "{{{vincular_cartoes_response_id_cartao_vinculado_value}}}")
   public Long getIdCartaoVinculado() {
     return idCartaoVinculado;
   }

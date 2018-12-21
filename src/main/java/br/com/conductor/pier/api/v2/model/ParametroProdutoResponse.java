@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Product Parameter Response
+ * {{{parametro_produto_response_description}}}
  **/
-@ApiModel(description = "Product Parameter Response")
+@ApiModel(description = "{{{parametro_produto_response_description}}}")
 public class ParametroProdutoResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Product parameter identifier
+   * {{{parametro_produto_dto_id_value}}}
    **/
-  @ApiModelProperty(value = "Product parameter identifier")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Product identifier
+   * {{{parametro_produto_dto_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "Product identifier")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -54,9 +54,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Transaction Type (ON_US or OFF_US)
+   * {{{parametro_produto_dto_tipo_origem_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Transaction Type (ON_US or OFF_US)")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_tipo_origem_transacao_value}}}")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
   }
@@ -66,9 +66,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Description of the product parameter
+   * {{{parametro_produto_dto_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the product parameter")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -78,9 +78,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Product parameter value
+   * {{{parametro_produto_dto_valor_parametro_value}}}
    **/
-  @ApiModelProperty(value = "Product parameter value")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_valor_parametro_value}}}")
   public BigDecimal getValorParametro() {
     return valorParametro;
   }
@@ -90,9 +90,9 @@ public class ParametroProdutoResponse  {
 
   
   /**
-   * Product parameter expiration date
+   * {{{parametro_produto_dto_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Product parameter expiration date")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }

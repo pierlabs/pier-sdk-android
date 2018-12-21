@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Bank
+ * {{{banco_response_description}}}
  **/
-@ApiModel(description = "Object Bank")
+@ApiModel(description = "{{{banco_response_description}}}")
 public class BancoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class BancoResponse  {
 
   
   /**
-   * Identification Code of the Bank (id)
+   * {{{banco_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Bank (id)")
+  @ApiModelProperty(value = "{{{banco_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class BancoResponse  {
 
   
   /**
-   * Name of the Bank
+   * {{{banco_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Bank")
+  @ApiModelProperty(value = "{{{banco_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +46,9 @@ public class BancoResponse  {
 
   
   /**
-   * Description of the bank
+   * {{{banco_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the bank")
+  @ApiModelProperty(value = "{{{banco_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +58,9 @@ public class BancoResponse  {
 
   
   /**
-   * Digit of the bank
+   * {{{banco_response_digito_banco_value}}}
    **/
-  @ApiModelProperty(value = "Digit of the bank")
+  @ApiModelProperty(value = "{{{banco_response_digito_banco_value}}}")
   public String getDigitoBanco() {
     return digitoBanco;
   }

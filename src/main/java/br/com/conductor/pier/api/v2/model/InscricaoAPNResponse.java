@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Represents a subscription response
+ * {{{inscricao_apn_resposta_descricao}}}
  **/
-@ApiModel(description = "Represents a subscription response")
+@ApiModel(description = "{{{inscricao_apn_resposta_descricao}}}")
 public class InscricaoAPNResponse  {
   
   @SerializedName("aplicacaoMobile")
@@ -30,9 +30,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * Represents the mobile application associated to the subscription
+   * {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
    **/
-  @ApiModelProperty(value = "Represents the mobile application associated to the subscription")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}")
   public AplicacaoMobileEmissorResponse getAplicacaoMobile() {
     return aplicacaoMobile;
   }
@@ -42,9 +42,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * Indicates is the subscription is active
+   * {{{inscricao_apn_resposta_ativo_descricao}}}
    **/
-  @ApiModelProperty(value = "Indicates is the subscription is active")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_ativo_descricao}}}")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -54,9 +54,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * Represents the card associated to the subscription
+   * {{{inscricao_apn_resposta_cartao_descricao}}}
    **/
-  @ApiModelProperty(value = "Represents the card associated to the subscription")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_cartao_descricao}}}")
   public CartaoEmissorResponse getCartao() {
     return cartao;
   }
@@ -66,9 +66,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * The subscription creation date
+   * {{{inscricao_apn_resposta_data_criacao_descricao}}}
    **/
-  @ApiModelProperty(value = "The subscription creation date")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_data_criacao_descricao}}}")
   public String getDataCriacao() {
     return dataCriacao;
   }
@@ -78,9 +78,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * The subscription deactivation date
+   * {{{inscricao_apn_resposta_data_desativacao_descricao}}}
    **/
-  @ApiModelProperty(value = "The subscription deactivation date")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_data_desativacao_descricao}}}")
   public String getDataDesativacao() {
     return dataDesativacao;
   }
@@ -90,9 +90,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * The device token
+   * {{{inscricao_apn_resposta_device_token_descricao}}}
    **/
-  @ApiModelProperty(value = "The device token")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_device_token_descricao}}}")
   public String getDeviceToken() {
     return deviceToken;
   }
@@ -102,9 +102,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * Subscription id
+   * {{{inscricao_apn_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "Subscription id")
+  @ApiModelProperty(value = "{{{inscricao_apn_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }

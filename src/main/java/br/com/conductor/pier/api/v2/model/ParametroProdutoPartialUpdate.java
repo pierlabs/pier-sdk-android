@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Parameters used in the product parameter partial update
+ * {{{parametro_produto_partial_update_description}}}
  **/
-@ApiModel(description = "Parameters used in the product parameter partial update")
+@ApiModel(description = "{{{parametro_produto_partial_update_description}}}")
 public class ParametroProdutoPartialUpdate  {
   
   @SerializedName("dataValidade")
@@ -20,9 +20,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Product parameter expiration date
+   * {{{parametro_produto_dto_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Product parameter expiration date")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -32,9 +32,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Description of the product parameter
+   * {{{parametro_produto_dto_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the product parameter")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Product parameter value
+   * {{{parametro_produto_dto_valor_parametro_value}}}
    **/
-  @ApiModelProperty(value = "Product parameter value")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_valor_parametro_value}}}")
   public String getValorParametro() {
     return valorParametro;
   }

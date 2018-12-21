@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object with account record response MultiApp
+ * {{{conta_multi_response_description}}}
  **/
-@ApiModel(description = "Object with account record response MultiApp")
+@ApiModel(description = "{{{conta_multi_response_description}}}")
 public class ContaMultiAppResponse  {
   
   @SerializedName("contas")
@@ -18,9 +18,9 @@ public class ContaMultiAppResponse  {
 
   
   /**
-   * generated MultiApp accounts
+   * {{{conta_multi_response_contas_value}}}
    **/
-  @ApiModelProperty(value = "generated MultiApp accounts")
+  @ApiModelProperty(value = "{{{conta_multi_response_contas_value}}}")
   public List<ContaResponse> getContas() {
     return contas;
   }

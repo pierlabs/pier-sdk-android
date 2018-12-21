@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of user linked accounts
+ * {{{page_usuario_conta_resposta_descricao}}}
  **/
-@ApiModel(description = "List of user linked accounts")
+@ApiModel(description = "{{{page_usuario_conta_resposta_descricao}}}")
 public class PageUsuarioContasResponse  {
   
   @SerializedName("content")

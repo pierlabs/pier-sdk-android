@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation Object Response for Payment Benefit
+ * {{{beneficio_pagamento_atraso_response_description}}}
  **/
-@ApiModel(description = "Representation Object Response for Payment Benefit")
+@ApiModel(description = "{{{beneficio_pagamento_atraso_response_description}}}")
 public class BeneficioPagamentoAtrasoResponse  {
   
   @SerializedName("dataBeneficio")
@@ -16,9 +16,9 @@ public class BeneficioPagamentoAtrasoResponse  {
 
   
   /**
-   * Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF
+   * {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
    **/
-  @ApiModelProperty(value = "Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF")
+  @ApiModelProperty(value = "{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}")
   public String getDataBeneficio() {
     return dataBeneficio;
   }

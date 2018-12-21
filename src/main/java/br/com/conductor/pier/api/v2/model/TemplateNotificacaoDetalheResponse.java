@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of details of the Notification Template
+ * {{{template_notificacao_detalhe_response_description}}}
  **/
-@ApiModel(description = "Object of details of the Notification Template")
+@ApiModel(description = "{{{template_notificacao_detalhe_response_description}}}")
 public class TemplateNotificacaoDetalheResponse  {
   
   @SerializedName("id")
@@ -40,9 +40,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Identifier Code
+   * {{{template_notificacao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code")
+  @ApiModelProperty(value = "{{{template_notificacao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -52,9 +52,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Identification Code of the E-mail Configuration
+   * {{{template_notificacao_response_id_configuracao_email_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the E-mail Configuration")
+  @ApiModelProperty(value = "{{{template_notificacao_response_id_configuracao_email_value}}}")
   public Long getIdConfiguracaoEmail() {
     return idConfiguracaoEmail;
   }
@@ -64,9 +64,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Layout type of the e-mail
+   * {{{template_notificacao_response_tipo_layout_value}}}
    **/
-  @ApiModelProperty(value = "Layout type of the e-mail")
+  @ApiModelProperty(value = "{{{template_notificacao_response_tipo_layout_value}}}")
   public TipoLayoutEnum getTipoLayout() {
     return tipoLayout;
   }
@@ -76,9 +76,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Notification type
+   * {{{template_notificacao_response_tipo_notificacao_value}}}
    **/
-  @ApiModelProperty(value = "Notification type")
+  @ApiModelProperty(value = "{{{template_notificacao_response_tipo_notificacao_value}}}")
   public TipoNotificacaoEnum getTipoNotificacao() {
     return tipoNotificacao;
   }
@@ -88,9 +88,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Standard Template
+   * {{{template_notificacao_response_template_padrao_value}}}
    **/
-  @ApiModelProperty(value = "Standard Template")
+  @ApiModelProperty(value = "{{{template_notificacao_response_template_padrao_value}}}")
   public String getTemplatePadrao() {
     return templatePadrao;
   }
@@ -100,9 +100,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Sender
+   * {{{template_notificacao_response_remetente_value}}}
    **/
-  @ApiModelProperty(value = "Sender")
+  @ApiModelProperty(value = "{{{template_notificacao_response_remetente_value}}}")
   public String getRemetente() {
     return remetente;
   }
@@ -112,9 +112,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Email subject
+   * {{{template_notificacao_response_assunto_value}}}
    **/
-  @ApiModelProperty(value = "Email subject")
+  @ApiModelProperty(value = "{{{template_notificacao_response_assunto_value}}}")
   public String getAssunto() {
     return assunto;
   }
@@ -124,9 +124,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Inclusion date
+   * {{{template_notificacao_response_data_inclusao_value}}}
    **/
-  @ApiModelProperty(value = "Inclusion date")
+  @ApiModelProperty(value = "{{{template_notificacao_response_data_inclusao_value}}}")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -136,9 +136,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * Update date
+   * {{{template_notificacao_response_data_alteracao_value}}}
    **/
-  @ApiModelProperty(value = "Update date")
+  @ApiModelProperty(value = "{{{template_notificacao_response_data_alteracao_value}}}")
   public String getDataAlteracao() {
     return dataAlteracao;
   }
@@ -148,9 +148,9 @@ public class TemplateNotificacaoDetalheResponse  {
 
   
   /**
-   * E-mail content
+   * {{{template_notificacao_detalhe_response_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "E-mail content")
+  @ApiModelProperty(value = "{{{template_notificacao_detalhe_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }

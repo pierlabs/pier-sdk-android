@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Represents an adhesion of payment on saturdays
+ * {{{adesao_pagamento_sabado_resposta_descricao}}}
  **/
-@ApiModel(description = "Represents an adhesion of payment on saturdays")
+@ApiModel(description = "{{{adesao_pagamento_sabado_resposta_descricao}}}")
 public class AdesaoPagamentoSabadoResponse  {
   
   @SerializedName("dataCadastro")
@@ -22,9 +22,9 @@ public class AdesaoPagamentoSabadoResponse  {
 
   
   /**
-   * Adhesion register date
+   * {{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}
    **/
-  @ApiModelProperty(value = "Adhesion register date")
+  @ApiModelProperty(value = "{{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -34,9 +34,9 @@ public class AdesaoPagamentoSabadoResponse  {
 
   
   /**
-   * Adhesion due date
+   * {{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}
    **/
-  @ApiModelProperty(value = "Adhesion due date")
+  @ApiModelProperty(value = "{{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -46,9 +46,9 @@ public class AdesaoPagamentoSabadoResponse  {
 
   
   /**
-   * Adhesion id
+   * {{{adesao_pagamento_sabado_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "Adhesion id")
+  @ApiModelProperty(value = "{{{adesao_pagamento_sabado_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }
@@ -58,9 +58,9 @@ public class AdesaoPagamentoSabadoResponse  {
 
   
   /**
-   * Account id
+   * {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}
    **/
-  @ApiModelProperty(value = "Account id")
+  @ApiModelProperty(value = "{{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}")
   public Long getIdConta() {
     return idConta;
   }

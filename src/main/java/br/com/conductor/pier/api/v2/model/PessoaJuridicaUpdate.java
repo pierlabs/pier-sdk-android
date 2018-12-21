@@ -29,9 +29,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Legal person contact
+   * {{{pessoa_juridica_update_contato_value}}}
    **/
-  @ApiModelProperty(value = "Legal person contact")
+  @ApiModelProperty(value = "{{{pessoa_juridica_update_contato_value}}}")
   public String getContato() {
     return contato;
   }
@@ -41,9 +41,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Legal person corporate name
+   * {{{pessoa_juridica_update_razao_social_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Legal person corporate name")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_update_razao_social_value}}}")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -53,9 +53,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * CGC (CNPJ) legal person
+   * {{{pessoa_juridica_update_CGC_value}}}
    **/
-  @ApiModelProperty(required = true, value = "CGC (CNPJ) legal person")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_update_CGC_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -65,9 +65,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Legal person state registration
+   * {{{pessoa_juridica_update_inscricao_estadual_value}}}
    **/
-  @ApiModelProperty(value = "Legal person state registration")
+  @ApiModelProperty(value = "{{{pessoa_juridica_update_inscricao_estadual_value}}}")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -77,9 +77,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Bank of the legal person
+   * {{{pessoa_juridica_update_banco_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Bank of the legal person")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_update_banco_value}}}")
   public Integer getBanco() {
     return banco;
   }
@@ -89,9 +89,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Agency of the legal person
+   * {{{pessoa_juridica_update_agencia_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Agency of the legal person")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_update_agencia_value}}}")
   public Integer getAgencia() {
     return agencia;
   }
@@ -101,9 +101,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Agency's digit
+   * {{{pessoa_juridica_update_digito_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Agency's digit")
+  @ApiModelProperty(value = "{{{pessoa_juridica_update_digito_agencia_value}}}")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -113,9 +113,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Current account legal person
+   * {{{pessoa_juridica_update_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Current account legal person")
+  @ApiModelProperty(value = "{{{pessoa_juridica_update_conta_corrente_value}}}")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -125,9 +125,9 @@ public class PessoaJuridicaUpdate  {
 
   
   /**
-   * Digit current account
+   * {{{pessoa_juridica_update_digito_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Digit current account")
+  @ApiModelProperty(value = "{{{pessoa_juridica_update_digito_conta_corrente_value}}}")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of SMSs
+ * {{{page_sms_envio_response_description}}}
  **/
-@ApiModel(description = "List of SMSs")
+@ApiModel(description = "{{{page_sms_envio_response_description}}}")
 public class PageSMSEnvioResponse  {
   
   @SerializedName("content")

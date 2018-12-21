@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Histotic Card Printing
+ * {{{historico_impressao_cartao_response_description}}}
  **/
-@ApiModel(description = "Histotic Card Printing")
+@ApiModel(description = "{{{historico_impressao_cartao_response_description}}}")
 public class HistoricoImpressaoCartaoResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Identification Code of the Printing Card Historic (id)
+   * {{{historico_impressao_cartao_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Printing Card Historic (id)")
+  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Identification Code of the Card (id)
+   * {{{historico_impressao_cartao_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Card (id)")
+  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -48,9 +48,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Identification Code of the Printing Card Status (id)
+   * {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Printing Card Status (id)")
+  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}")
   public Long getIdStatusImpressaoCartao() {
     return idStatusImpressaoCartao;
   }
@@ -60,9 +60,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Show a message that describes the stage of the printing card process that was made
+   * {{{historico_impressao_cartao_response_mensagem_historico_value}}}
    **/
-  @ApiModelProperty(value = "Show a message that describes the stage of the printing card process that was made")
+  @ApiModelProperty(value = "{{{historico_impressao_cartao_response_mensagem_historico_value}}}")
   public String getMensagemHistorico() {
     return mensagemHistorico;
   }
@@ -72,9 +72,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * Show the date that the historic register of the Printing of a Card was inserted
+   * {{{historico_impressao_cartao_response_data_historico_value}}}
    **/
-  @ApiModelProperty(value = "Show the date that the historic register of the Printing of a Card was inserted")
+  @ApiModelProperty(value = "{{{historico_impressao_cartao_response_data_historico_value}}}")
   public String getDataHistorico() {
     return dataHistorico;
   }

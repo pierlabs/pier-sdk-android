@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object to change accounts. None of the fields are required. Only the fields you want to change must be entered
+ * {{{conta_partial_object_description}}}
  **/
-@ApiModel(description = "Object to change accounts. None of the fields are required. Only the fields you want to change must be entered")
+@ApiModel(description = "{{{conta_partial_object_description}}}")
 public class ContaPartialUpdate  {
   
   @SerializedName("funcaoAtiva")
@@ -18,9 +18,9 @@ public class ContaPartialUpdate  {
 
   
   /**
-   * Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes
+   * {{{conta_partial_funcao_ativa_value}}}
    **/
-  @ApiModelProperty(value = "Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes")
+  @ApiModelProperty(value = "{{{conta_partial_funcao_ativa_value}}}")
   public String getFuncaoAtiva() {
     return funcaoAtiva;
   }
@@ -30,9 +30,9 @@ public class ContaPartialUpdate  {
 
   
   /**
-   * Identifier of the internal control account created by the issuer
+   * {{{conta_partial_id_conta_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the internal control account created by the issuer")
+  @ApiModelProperty(value = "{{{conta_partial_id_conta_emissor_value}}}")
   public Long getIdContaEmissor() {
     return idContaEmissor;
   }

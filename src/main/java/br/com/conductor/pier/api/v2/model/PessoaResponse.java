@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Person
+ * {{{pessoa_response_description}}}
  **/
-@ApiModel(description = "Person")
+@ApiModel(description = "{{{pessoa_response_description}}}")
 public class PessoaResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Identification Code of the Person (id)
+   * {{{pessoa_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Person (id)")
+  @ApiModelProperty(required = true, value = "{{{pessoa_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Show the 'Full name of the PP' or the ' Full name of the social reason (Business name)'
+   * {{{pessoa_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Show the 'Full name of the PP' or the ' Full name of the social reason (Business name)'")
+  @ApiModelProperty(required = true, value = "{{{pessoa_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -60,9 +60,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Identification Code of the Person type, being ('PP': Physical Person), ('PJ': Legal Person)
+   * {{{pessoa_response_tipo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Person type, being ('PP': Physical Person), ('PJ': Legal Person)")
+  @ApiModelProperty(required = true, value = "{{{pessoa_response_tipo_value}}}")
   public String getTipo() {
     return tipo;
   }
@@ -72,9 +72,9 @@ public class PessoaResponse  {
 
   
   /**
-   * CPF number, when it is PP
+   * {{{pessoa_response_cpf_value}}}
    **/
-  @ApiModelProperty(value = "CPF number, when it is PP")
+  @ApiModelProperty(value = "{{{pessoa_response_cpf_value}}}")
   public String getCpf() {
     return cpf;
   }
@@ -84,9 +84,9 @@ public class PessoaResponse  {
 
   
   /**
-   * CNPJ number, when it is LP
+   * {{{pessoa_response_cnpj_value}}}
    **/
-  @ApiModelProperty(value = "CNPJ number, when it is LP")
+  @ApiModelProperty(value = "{{{pessoa_response_cnpj_value}}}")
   public String getCnpj() {
     return cnpj;
   }
@@ -96,9 +96,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Birth date of the person, when it is PP, or the date of the Company Opening, when it is LP
+   * {{{pessoa_response_data_nascimento_value}}}
    **/
-  @ApiModelProperty(value = "Birth date of the person, when it is PP, or the date of the Company Opening, when it is LP")
+  @ApiModelProperty(value = "{{{pessoa_response_data_nascimento_value}}}")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -108,9 +108,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Identity Number
+   * {{{pessoa_response_numero_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Identity Number")
+  @ApiModelProperty(value = "{{{pessoa_response_numero_identidade_value}}}")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -120,9 +120,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Issuer Organ of the ID
+   * {{{pessoa_response_orgao_expedidor_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Issuer Organ of the ID")
+  @ApiModelProperty(value = "{{{pessoa_response_orgao_expedidor_identidade_value}}}")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -132,9 +132,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Identification Code of the Person sex, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)
+   * {{{pessoa_response_sexo_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Person sex, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)")
+  @ApiModelProperty(value = "{{{pessoa_response_sexo_value}}}")
   public String getSexo() {
     return sexo;
   }
@@ -144,9 +144,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Acronym of the Federal Unity where was issued the Identity
+   * {{{pessoa_response_unidade_federativa_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Acronym of the Federal Unity where was issued the Identity")
+  @ApiModelProperty(value = "{{{pessoa_response_unidade_federativa_identidade_value}}}")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -156,9 +156,9 @@ public class PessoaResponse  {
 
   
   /**
-   * Issue date of the identity in the format yyyy-MM-dd
+   * {{{pessoa_response_data_emissao_identidade_value}}}
    **/
-  @ApiModelProperty(value = "Issue date of the identity in the format yyyy-MM-dd")
+  @ApiModelProperty(value = "{{{pessoa_response_data_emissao_identidade_value}}}")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the insntallment plan resource
+ * {{{page_plano_parcelamento_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the insntallment plan resource")
+@ApiModel(description = "{{{page_plano_parcelamento_response_description}}}")
 public class PagePlanoParcelamentoResponse  {
   
   @SerializedName("content")

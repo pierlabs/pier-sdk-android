@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of the Paltforms Mobile
+ * {{{page_plataforma_mobile_response_description}}}
  **/
-@ApiModel(description = "List of the Paltforms Mobile")
+@ApiModel(description = "{{{page_plataforma_mobile_response_description}}}")
 public class PagePlataformaMobileResponse  {
   
   @SerializedName("content")

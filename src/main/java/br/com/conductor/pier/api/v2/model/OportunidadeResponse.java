@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the resource opportunities
+ * {{{oportunidade_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the resource opportunities")
+@ApiModel(description = "{{{oportunidade_response_description}}}")
 public class OportunidadeResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the opportunity
+   * {{{oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the opportunity type
+   * {{{oportunidade_response_id_tipo_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the opportunity type")
+  @ApiModelProperty(value = "{{{oportunidade_response_id_tipo_oportunidade_value}}}")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -60,9 +60,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the opportunity status
+   * {{{oportunidade_response_id_status_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the opportunity status")
+  @ApiModelProperty(value = "{{{oportunidade_response_id_status_oportunidade_value}}}")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
   }
@@ -72,9 +72,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Register date of the opportunity
+   * {{{oportunidade_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(value = "Register date of the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -84,9 +84,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Update date of the opportunity
+   * {{{oportunidade_response_data_atualizacao_value}}}
    **/
-  @ApiModelProperty(value = "Update date of the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_data_atualizacao_value}}}")
   public String getDataAtualizacao() {
     return dataAtualizacao;
   }
@@ -96,9 +96,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * IRs number of the client which it will be offered the opportunity
+   * {{{oportunidade_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "IRs number of the client which it will be offered the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -108,9 +108,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Beginning duration of the opportunity
+   * {{{oportunidade_response_data_inicio_vigencia_value}}}
    **/
-  @ApiModelProperty(value = "Beginning duration of the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_data_inicio_vigencia_value}}}")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
@@ -120,9 +120,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Ending of duration of the opportunity
+   * {{{oportunidade_response_data_fim_vigencia_value}}}
    **/
-  @ApiModelProperty(value = "Ending of duration of the opportunity")
+  @ApiModelProperty(value = "{{{oportunidade_response_data_fim_vigencia_value}}}")
   public String getDataFimVigencia() {
     return dataFimVigencia;
   }
@@ -132,9 +132,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * Flag of verification if the opportunity is active
+   * {{{oportunidade_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag of verification if the opportunity is active")
+  @ApiModelProperty(value = "{{{oportunidade_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -144,9 +144,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * List of details of the opportunitie
+   * {{{oportunidade_response_detalhes_value}}}
    **/
-  @ApiModelProperty(value = "List of details of the opportunitie")
+  @ApiModelProperty(value = "{{{oportunidade_response_detalhes_value}}}")
   public List<DetalheOportunidadeResponse> getDetalhes() {
     return detalhes;
   }

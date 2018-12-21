@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the telephone operator resource
+ * {{{fantasia_basica_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the telephone operator resource")
+@ApiModel(description = "{{{fantasia_basica_response_description}}}")
 public class FantasiaBasicaResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * Identifier of the Basic Fantasy
+   * {{{fantasia_basica_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the Basic Fantasy")
+  @ApiModelProperty(value = "{{{fantasia_basica_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * Name of the Basic fantasy
+   * {{{fantasia_basica_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Basic fantasy")
+  @ApiModelProperty(value = "{{{fantasia_basica_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -44,9 +44,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * Description of the basic fantasy
+   * {{{fantasia_basica_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the basic fantasy")
+  @ApiModelProperty(value = "{{{fantasia_basica_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

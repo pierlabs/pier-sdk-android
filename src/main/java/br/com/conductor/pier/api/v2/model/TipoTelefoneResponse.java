@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjectTypeTelephone
+ * {{{tipo_telefone_response_description}}}
  **/
-@ApiModel(description = "ObjectTypeTelephone")
+@ApiModel(description = "{{{tipo_telefone_response_description}}}")
 public class TipoTelefoneResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoTelefoneResponse  {
 
   
   /**
-   * Identification Code of the telephone type (id)
+   * {{{tipo_telefone_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the telephone type (id)")
+  @ApiModelProperty(value = "{{{tipo_telefone_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoTelefoneResponse  {
 
   
   /**
-   * Name of the telephone Type
+   * {{{tipo_telefone_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the telephone Type")
+  @ApiModelProperty(value = "{{{tipo_telefone_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

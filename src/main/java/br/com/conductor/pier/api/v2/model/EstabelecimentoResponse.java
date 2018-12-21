@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Estabelecimento
+ * {{{estabelecimento_response_description}}}
  **/
-@ApiModel(description = "Objeto Estabelecimento")
+@ApiModel(description = "{{{estabelecimento_response_description}}}")
 public class EstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -102,9 +102,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Identification Code of the Merchant (id)
+   * {{{estabelecimento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Merchant (id)")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -114,9 +114,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Identification Number of the Merchant at Conductor
+   * {{{estabelecimento_response_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Number of the Merchant at Conductor")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_estabelecimento_value}}}")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -126,9 +126,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indicate if it is headquarter or Branch
+   * {{{estabelecimento_response_flag_matriz_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it is headquarter or Branch")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_matriz_value}}}")
   public Integer getFlagMatriz() {
     return flagMatriz;
   }
@@ -138,9 +138,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Show the identification number of the Economic Group
+   * {{{estabelecimento_response_id_grupo_economico_value}}}
    **/
-  @ApiModelProperty(value = "Show the identification number of the Economic Group")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_grupo_economico_value}}}")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -150,9 +150,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Show the number of the indentification number of the merchant in IRs
+   * {{{estabelecimento_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "Show the number of the indentification number of the merchant in IRs")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_receita_federal_value}}}")
   public Long getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -162,9 +162,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Merchant name
+   * {{{estabelecimento_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Merchant name")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -174,9 +174,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Social Reason of the Merchant
+   * {{{estabelecimento_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Social Reason of the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -186,9 +186,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Merchant Commercial Title
+   * {{{estabelecimento_response_nome_fantasia_value}}}
    **/
-  @ApiModelProperty(value = "Merchant Commercial Title")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_fantasia_value}}}")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -198,9 +198,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Mail Code (Zipcode)
+   * {{{estabelecimento_response_cep_value}}}
    **/
-  @ApiModelProperty(value = "Mail Code (Zipcode)")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cep_value}}}")
   public String getCep() {
     return cep;
   }
@@ -210,9 +210,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Name of the Street
+   * {{{estabelecimento_response_nome_logradouro_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Street")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_logradouro_value}}}")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -222,9 +222,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Address number
+   * {{{estabelecimento_response_numero_endereco_value}}}
    **/
-  @ApiModelProperty(value = "Address number")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_endereco_value}}}")
   public String getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -234,9 +234,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Neighborhood name
+   * {{{estabelecimento_response_bairro_value}}}
    **/
-  @ApiModelProperty(value = "Neighborhood name")
+  @ApiModelProperty(value = "{{{estabelecimento_response_bairro_value}}}")
   public String getBairro() {
     return bairro;
   }
@@ -246,9 +246,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Address city name
+   * {{{estabelecimento_response_cidade_value}}}
    **/
-  @ApiModelProperty(value = "Address city name")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cidade_value}}}")
   public String getCidade() {
     return cidade;
   }
@@ -258,9 +258,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Complementary Descriptions referring to the address
+   * {{{estabelecimento_response_complemento_value}}}
    **/
-  @ApiModelProperty(value = "Complementary Descriptions referring to the address")
+  @ApiModelProperty(value = "{{{estabelecimento_response_complemento_value}}}")
   public String getComplemento() {
     return complemento;
   }
@@ -270,9 +270,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Acronym of the Federal Unity identification of the address
+   * {{{estabelecimento_response_uf_value}}}
    **/
-  @ApiModelProperty(value = "Acronym of the Federal Unity identification of the address")
+  @ApiModelProperty(value = "{{{estabelecimento_response_uf_value}}}")
   public String getUf() {
     return uf;
   }
@@ -282,9 +282,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Zip Code
+   * {{{estabelecimento_response_cep2_value}}}
    **/
-  @ApiModelProperty(value = "Zip Code")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cep2_value}}}")
   public String getCep2() {
     return cep2;
   }
@@ -294,9 +294,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Name of the Street
+   * {{{estabelecimento_response_nome_logradouro2_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Street")
+  @ApiModelProperty(value = "{{{estabelecimento_response_nome_logradouro2_value}}}")
   public String getNomeLogradouro2() {
     return nomeLogradouro2;
   }
@@ -306,9 +306,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Address number
+   * {{{estabelecimento_response_numero_endereco2_value}}}
    **/
-  @ApiModelProperty(value = "Address number")
+  @ApiModelProperty(value = "{{{estabelecimento_response_numero_endereco2_value}}}")
   public String getNumeroEndereco2() {
     return numeroEndereco2;
   }
@@ -318,9 +318,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Neighborhood address name
+   * {{{estabelecimento_response_bairro2_value}}}
    **/
-  @ApiModelProperty(value = "Neighborhood address name")
+  @ApiModelProperty(value = "{{{estabelecimento_response_bairro2_value}}}")
   public String getBairro2() {
     return bairro2;
   }
@@ -330,9 +330,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Name of the city
+   * {{{estabelecimento_response_cidade2_value}}}
    **/
-  @ApiModelProperty(value = "Name of the city")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cidade2_value}}}")
   public String getCidade2() {
     return cidade2;
   }
@@ -342,9 +342,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Complementary Descriptions refering to the address
+   * {{{estabelecimento_response_complemento2_value}}}
    **/
-  @ApiModelProperty(value = "Complementary Descriptions refering to the address")
+  @ApiModelProperty(value = "{{{estabelecimento_response_complemento2_value}}}")
   public String getComplemento2() {
     return complemento2;
   }
@@ -354,9 +354,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Acronym of the Federal Unity identification of the address
+   * {{{estabelecimento_response_uf2_value}}}
    **/
-  @ApiModelProperty(value = "Acronym of the Federal Unity identification of the address")
+  @ApiModelProperty(value = "{{{estabelecimento_response_uf2_value}}}")
   public String getUf2() {
     return uf2;
   }
@@ -366,9 +366,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Especific details about the Merchant Register
+   * {{{estabelecimento_response_obs_value}}}
    **/
-  @ApiModelProperty(value = "Especific details about the Merchant Register")
+  @ApiModelProperty(value = "{{{estabelecimento_response_obs_value}}}")
   public String getObs() {
     return obs;
   }
@@ -378,9 +378,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Name of the person for the contact with the Merchant
+   * {{{estabelecimento_response_contato_value}}}
    **/
-  @ApiModelProperty(value = "Name of the person for the contact with the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_contato_value}}}")
   public String getContato() {
     return contato;
   }
@@ -390,9 +390,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * E-mail of the pessoa to contact with the Merchant
+   * {{{estabelecimento_response_email_value}}}
    **/
-  @ApiModelProperty(value = "E-mail of the pessoa to contact with the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -402,9 +402,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury
+   * {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
   }
@@ -414,9 +414,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip
+   * {{{estabelecimento_response_flag_cartao_digitado_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip")
+  @ApiModelProperty(value = "{{{estabelecimento_response_flag_cartao_digitado_value}}}")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
   }
@@ -426,9 +426,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Indicate if the Merchant is inactive
+   * {{{estabelecimento_response_inativo_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if the Merchant is inactive")
+  @ApiModelProperty(value = "{{{estabelecimento_response_inativo_value}}}")
   public Integer getInativo() {
     return inativo;
   }
@@ -438,9 +438,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Identifier Code fo the currency
+   * {{{estabelecimento_response_id_moeda_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code fo the currency")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_moeda_value}}}")
   public Long getIdMoeda() {
     return idMoeda;
   }
@@ -450,9 +450,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Country Identifier
+   * {{{estabelecimento_response_id_pais_value}}}
    **/
-  @ApiModelProperty(value = "Country Identifier")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_pais_value}}}")
   public Long getIdPais() {
     return idPais;
   }
@@ -462,9 +462,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Number associated to the SPCBrazil
+   * {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
    **/
-  @ApiModelProperty(value = "Number associated to the SPCBrazil")
+  @ApiModelProperty(value = "{{{estabelecimento_response_associado_s_p_c_brasil_value}}}")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
   }
@@ -474,9 +474,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Merchant Catergory Code
+   * {{{estabelecimento_response_mcc_value}}}
    **/
-  @ApiModelProperty(value = "Merchant Catergory Code")
+  @ApiModelProperty(value = "{{{estabelecimento_response_mcc_value}}}")
   public Long getMcc() {
     return mcc;
   }
@@ -486,9 +486,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Identification Code of the Merchant
+   * {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_id_tipo_estabelecimento_value}}}")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
   }
@@ -498,9 +498,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Type of Mail (MAIL, MAIL)
+   * {{{estabelecimento_response_correspondencia_value}}}
    **/
-  @ApiModelProperty(value = "Type of Mail (MAIL, MAIL)")
+  @ApiModelProperty(value = "{{{estabelecimento_response_correspondencia_value}}}")
   public Integer getCorrespondencia() {
     return correspondencia;
   }
@@ -510,9 +510,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Position of the Merchant
+   * {{{estabelecimento_response_cargo_contato_value}}}
    **/
-  @ApiModelProperty(value = "Position of the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_cargo_contato_value}}}")
   public String getCargoContato() {
     return cargoContato;
   }
@@ -522,9 +522,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Type of the Merchant Payment Scheme
+   * {{{estabelecimento_response_tipo_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Type of the Merchant Payment Scheme")
+  @ApiModelProperty(value = "{{{estabelecimento_response_tipo_pagamento_value}}}")
   public TipoPagamentoEnum getTipoPagamento() {
     return tipoPagamento;
   }
@@ -534,9 +534,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Retrieve the register number one
+   * {{{estabelecimento_response_consulta_value}}}
    **/
-  @ApiModelProperty(value = "Retrieve the register number one")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
   }
@@ -546,9 +546,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Retrieve of register number two
+   * {{{estabelecimento_response_consulta2_value}}}
    **/
-  @ApiModelProperty(value = "Retrieve of register number two")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta2_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
   }
@@ -558,9 +558,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Retrieve the register number three
+   * {{{estabelecimento_response_consulta3_value}}}
    **/
-  @ApiModelProperty(value = "Retrieve the register number three")
+  @ApiModelProperty(value = "{{{estabelecimento_response_consulta3_value}}}")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
   }
@@ -570,9 +570,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Terminal of the Merchant
+   * {{{estabelecimento_response_terminal_value}}}
    **/
-  @ApiModelProperty(value = "Terminal of the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_terminal_value}}}")
   public String getTerminal() {
     return terminal;
   }
@@ -582,9 +582,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * Resgister date of the Merchant
+   * {{{estabelecimento_response_data_cadastramento_value}}}
    **/
-  @ApiModelProperty(value = "Resgister date of the Merchant")
+  @ApiModelProperty(value = "{{{estabelecimento_response_data_cadastramento_value}}}")
   public String getDataCadastramento() {
     return dataCadastramento;
   }
@@ -594,9 +594,9 @@ public class EstabelecimentoResponse  {
 
   
   /**
-   * User of the application
+   * {{{estabelecimento_response_usuario_value}}}
    **/
-  @ApiModelProperty(value = "User of the application")
+  @ApiModelProperty(value = "{{{estabelecimento_response_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }

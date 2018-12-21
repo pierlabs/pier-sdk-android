@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation Object Response for Emissary Parameter
+ * {{{parametro_emissor_resposta_description}}}
  **/
-@ApiModel(description = "Representation Object Response for Emissary Parameter")
+@ApiModel(description = "{{{parametro_emissor_resposta_description}}}")
 public class ParametroEmissorResponse  {
   
   @SerializedName("codigo")
@@ -24,9 +24,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * CParameter code
+   * {{{parametro_emissor_resposta_codigo_descricao}}}
    **/
-  @ApiModelProperty(value = "CParameter code")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_codigo_descricao}}}")
   public String getCodigo() {
     return codigo;
   }
@@ -36,9 +36,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Parameter expiration date
+   * {{{parametro_emissor_resposta_data_validade_descricao}}}
    **/
-  @ApiModelProperty(value = "Parameter expiration date")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_data_validade_descricao}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -48,9 +48,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Emissary Parameter Description
+   * {{{parametro_emissor_resposta_descricao_description}}}
    **/
-  @ApiModelProperty(value = "Emissary Parameter Description")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_descricao_description}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -60,9 +60,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Parameter type
+   * {{{parametro_emissor_resposta_tipo_descricao}}}
    **/
-  @ApiModelProperty(value = "Parameter type")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_tipo_descricao}}}")
   public String getTipo() {
     return tipo;
   }
@@ -72,9 +72,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Parameter value
+   * {{{parametro_emissor_resposta_valor_parametro_descricao}}}
    **/
-  @ApiModelProperty(value = "Parameter value")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_valor_parametro_descricao}}}")
   public String getValorParametro() {
     return valorParametro;
   }

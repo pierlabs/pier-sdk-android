@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation Object Response for encryption key
+ * {{{chave_criptografia_resposta_descricao}}}
  **/
-@ApiModel(description = "Representation Object Response for encryption key")
+@ApiModel(description = "{{{chave_criptografia_resposta_descricao}}}")
 public class ChaveCriptografiaResponse  {
   
   @SerializedName("conteudo")
@@ -16,9 +16,9 @@ public class ChaveCriptografiaResponse  {
 
   
   /**
-   * text
+   * {{{chave_criptografia_resposta_texto_conteudo}}}
    **/
-  @ApiModelProperty(value = "text")
+  @ApiModelProperty(value = "{{{chave_criptografia_resposta_texto_conteudo}}}")
   public String getConteudo() {
     return conteudo;
   }

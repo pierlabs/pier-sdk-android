@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Product
+ * {{{produto_response_description}}}
  **/
-@ApiModel(description = "Product")
+@ApiModel(description = "{{{produto_response_description}}}")
 public class ProdutoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class ProdutoResponse  {
 
   
   /**
-   * Identification Code of the Product (id)
+   * {{{produto_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Product (id)")
+  @ApiModelProperty(required = true, value = "{{{produto_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class ProdutoResponse  {
 
   
   /**
-   * Name description of the product
+   * {{{produto_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Name description of the product")
+  @ApiModelProperty(required = true, value = "{{{produto_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +46,9 @@ public class ProdutoResponse  {
 
   
   /**
-   * Represent the status of the product, where: ('0': Inactive), ('1': Active
+   * {{{produto_response_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Represent the status of the product, where: ('0': Inactive), ('1': Active")
+  @ApiModelProperty(required = true, value = "{{{produto_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -58,9 +58,9 @@ public class ProdutoResponse  {
 
   
   /**
-   * Identification Code of the Basic Fantasy (id) which the product belongs
+   * {{{produto_response_id_fantasia_basica_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Basic Fantasy (id) which the product belongs")
+  @ApiModelProperty(value = "{{{produto_response_id_fantasia_basica_value}}}")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
   }

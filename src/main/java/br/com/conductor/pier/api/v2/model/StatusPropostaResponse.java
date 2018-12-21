@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the proposal status service response
+ * {{{status_proposta_response_description}}}
  **/
-@ApiModel(description = "Representation of the proposal status service response")
+@ApiModel(description = "{{{status_proposta_response_description}}}")
 public class StatusPropostaResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Proposal Identification Status Code (id)
+   * {{{status_proposta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Proposal Identification Status Code (id)")
+  @ApiModelProperty(value = "{{{status_proposta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Proposal Status
+   * {{{status_proposta_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Proposal Status")
+  @ApiModelProperty(value = "{{{status_proposta_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -46,9 +46,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Description of the proposal
+   * {{{status_proposta_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the proposal")
+  @ApiModelProperty(value = "{{{status_proposta_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +58,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Flag that allows you to change the status of the proposal
+   * {{{status_proposta_response_flag_permite_alteracao_value}}}
    **/
-  @ApiModelProperty(value = "Flag that allows you to change the status of the proposal")
+  @ApiModelProperty(value = "{{{status_proposta_response_flag_permite_alteracao_value}}}")
   public Boolean getFlagPermiteAlteracao() {
     return flagPermiteAlteracao;
   }

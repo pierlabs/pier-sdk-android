@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Batch Prepaid cards
+ * {{{lote_cartoes_pre_pagos_response_description}}}
  **/
-@ApiModel(description = "Batch Prepaid cards")
+@ApiModel(description = "{{{lote_cartoes_pre_pagos_response_description}}}")
 public class LoteCartoesPrePagosResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identifica??o Code of the pre-paid card batch (id)
+   * {{{lote_cartoes_pre_pagos_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifica??o Code of the pre-paid card batch (id)")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identifier code of the Commercial origin
+   * {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier code of the Commercial origin")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -60,9 +60,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identifier Code of the Product
+   * {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier Code of the Product")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -72,9 +72,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identifier Code of the card type
+   * {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier Code of the card type")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -84,9 +84,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identifier code of the card image
+   * {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier code of the card image")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_imagem_value}}}")
   public Long getIdImagem() {
     return idImagem;
   }
@@ -96,9 +96,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Identification Code of the address
+   * {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the address")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_endereco_value}}}")
   public Long getIdEndereco() {
     return idEndereco;
   }
@@ -108,9 +108,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Number of existing cards in the batch
+   * {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of existing cards in the batch")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_quantidade_value}}}")
   public Integer getQuantidade() {
     return quantidade;
   }
@@ -120,9 +120,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Register date of the pre-paid card batch
+   * {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Register date of the pre-paid card batch")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -132,9 +132,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Username that created the batch
+   * {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Username that created the batch")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}")
   public String getUsuarioCadastro() {
     return usuarioCadastro;
   }
@@ -144,9 +144,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Indicate the processin status of the batch
+   * {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Indicate the processin status of the batch")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_status_processamento_value}}}")
   public Integer getStatusProcessamento() {
     return statusProcessamento;
   }
@@ -156,9 +156,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * External identification number (used by the issuer)
+   * {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "External identification number (used by the issuer)")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}")
   public String getIdentificadorExterno() {
     return identificadorExterno;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Status List of the registered files in the system
+ * {{{page_status_arquivo_response_description}}}
  **/
-@ApiModel(description = "Status List of the registered files in the system")
+@ApiModel(description = "{{{page_status_arquivo_response_description}}}")
 public class PageStatusArquivoResponse  {
   
   @SerializedName("content")

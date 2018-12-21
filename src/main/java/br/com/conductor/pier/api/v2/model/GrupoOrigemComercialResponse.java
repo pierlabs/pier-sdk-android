@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of response of the commercial origin group
+ * {{{grupo_origem_comercial_response_description}}}
  **/
-@ApiModel(description = "Object of response of the commercial origin group")
+@ApiModel(description = "{{{grupo_origem_comercial_response_description}}}")
 public class GrupoOrigemComercialResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class GrupoOrigemComercialResponse  {
 
   
   /**
-   * Identification Code of the commercial origin group
+   * {{{grupo_origem_comercial_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the commercial origin group")
+  @ApiModelProperty(value = "{{{grupo_origem_comercial_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class GrupoOrigemComercialResponse  {
 
   
   /**
-   * Commercial Origin Group Date
+   * {{{grupo_origem_comercial_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Commercial Origin Group Date")
+  @ApiModelProperty(value = "{{{grupo_origem_comercial_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

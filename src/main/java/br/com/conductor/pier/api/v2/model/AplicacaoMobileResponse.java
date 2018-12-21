@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Application Mobile
+ * {{{aplicacao_mobile_response_description}}}
  **/
-@ApiModel(description = "Application Mobile")
+@ApiModel(description = "{{{aplicacao_mobile_response_description}}}")
 public class AplicacaoMobileResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the identifier of the application
+   * {{{aplicacao_mobile_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Show the identifier of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * show the identifier of the platform
+   * {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
    **/
-  @ApiModelProperty(value = "show the identifier of the platform")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_id_plataforma_mobile_value}}}")
   public Long getIdPlataformaMobile() {
     return idPlataformaMobile;
   }
@@ -54,9 +54,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the token application
+   * {{{aplicacao_mobile_response_token_value}}}
    **/
-  @ApiModelProperty(value = "Show the token application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_token_value}}}")
   public String getToken() {
     return token;
   }
@@ -66,9 +66,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the message color of the application
+   * {{{aplicacao_mobile_response_cor_value}}}
    **/
-  @ApiModelProperty(value = "Show the message color of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_cor_value}}}")
   public String getCor() {
     return cor;
   }
@@ -78,9 +78,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * show the message sound of the application
+   * {{{aplicacao_mobile_response_som_value}}}
    **/
-  @ApiModelProperty(value = "show the message sound of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_som_value}}}")
   public String getSom() {
     return som;
   }
@@ -90,9 +90,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the message icon of the application
+   * {{{aplicacao_mobile_response_icone_value}}}
    **/
-  @ApiModelProperty(value = "Show the message icon of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_icone_value}}}")
   public String getIcone() {
     return icone;
   }
@@ -102,9 +102,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the certificate of the application
+   * {{{aplicacao_mobile_response_certificado_base64_value}}}
    **/
-  @ApiModelProperty(value = "Show the certificate of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_certificado_base64_value}}}")
   public String getCertificadoBase64() {
     return certificadoBase64;
   }
@@ -114,9 +114,9 @@ public class AplicacaoMobileResponse  {
 
   
   /**
-   * Show the password of the application
+   * {{{aplicacao_mobile_response_senha_value}}}
    **/
-  @ApiModelProperty(value = "Show the password of the application")
+  @ApiModelProperty(value = "{{{aplicacao_mobile_response_senha_value}}}")
   public String getSenha() {
     return senha;
   }

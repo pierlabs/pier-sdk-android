@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the page object for the parcels according
+ * {{{page_acordo_parcela_response_description}}}
  **/
-@ApiModel(description = "Representation of the page object for the parcels according")
+@ApiModel(description = "{{{page_acordo_parcela_response_description}}}")
 public class PageAcordoParcelaResponse  {
   
   @SerializedName("content")

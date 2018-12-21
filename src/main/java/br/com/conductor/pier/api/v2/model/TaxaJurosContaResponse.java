@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the interest rate response
+ * {{{taxa_juros_conta_response_description}}}
  **/
-@ApiModel(description = "Representation of the interest rate response")
+@ApiModel(description = "{{{taxa_juros_conta_response_description}}}")
 public class TaxaJurosContaResponse  {
   
   @SerializedName("idConta")
@@ -22,9 +22,9 @@ public class TaxaJurosContaResponse  {
 
   
   /**
-   * id_conta
+   * {{{taxa_juros_conta_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "id_conta")
+  @ApiModelProperty(value = "{{{taxa_juros_conta_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -34,9 +34,9 @@ public class TaxaJurosContaResponse  {
 
   
   /**
-   * Interest rate identification code
+   * {{{taxa_juros_conta_response_id_tabela_juros_value}}}
    **/
-  @ApiModelProperty(value = "Interest rate identification code")
+  @ApiModelProperty(value = "{{{taxa_juros_conta_response_id_tabela_juros_value}}}")
   public Long getIdTabelaJuros() {
     return idTabelaJuros;
   }
@@ -46,9 +46,9 @@ public class TaxaJurosContaResponse  {
 
   
   /**
-   * Listing of interest rates
+   * {{{taxa_juros_conta_response_taxas_juros_value}}}
    **/
-  @ApiModelProperty(value = "Listing of interest rates")
+  @ApiModelProperty(value = "{{{taxa_juros_conta_response_taxas_juros_value}}}")
   public List<TaxaJurosContaListaResponse> getTaxasJuros() {
     return taxasJuros;
   }

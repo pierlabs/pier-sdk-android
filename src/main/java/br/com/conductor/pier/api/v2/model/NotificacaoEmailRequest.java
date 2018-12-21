@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the resource of sending a notification by email.??o do recurso para envio de uma notifica??o por email
+ * {{{notificacao_email_request_description}}}
  **/
-@ApiModel(description = "Representation of the resource of sending a notification by email.??o do recurso para envio de uma notifica??o por email")
+@ApiModel(description = "{{{notificacao_email_request_description}}}")
 public class NotificacaoEmailRequest  {
   
   @SerializedName("idTemplateNotificacao")
@@ -25,9 +25,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * ID for the template of the notification
+   * {{{notificacao_email_request_id_template_notificacao_value}}}
    **/
-  @ApiModelProperty(value = "ID for the template of the notification")
+  @ApiModelProperty(value = "{{{notificacao_email_request_id_template_notificacao_value}}}")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
   }
@@ -37,9 +37,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * List of email(s) of the addressee
+   * {{{notificacao_email_request_destinatarios_value}}}
    **/
-  @ApiModelProperty(value = "List of email(s) of the addressee")
+  @ApiModelProperty(value = "{{{notificacao_email_request_destinatarios_value}}}")
   public List<String> getDestinatarios() {
     return destinatarios;
   }
@@ -49,9 +49,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * List of ids of the attaches to be sent
+   * {{{notificacao_email_request_anexos_value}}}
    **/
-  @ApiModelProperty(value = "List of ids of the attaches to be sent")
+  @ApiModelProperty(value = "{{{notificacao_email_request_anexos_value}}}")
   public List<AnexoNotificacaoEmailRequest> getAnexos() {
     return anexos;
   }
@@ -61,9 +61,9 @@ public class NotificacaoEmailRequest  {
 
   
   /**
-   * Map of parameter for the montage of the notification
+   * {{{notificacao_email_request_parametros_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Map of parameter for the montage of the notification")
+  @ApiModelProperty(value = "{{{notificacao_email_request_parametros_conteudo_value}}}")
   public Map<String, Object> getParametrosConteudo() {
     return parametrosConteudo;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Response of the file type
+ * {{{tipo_arquivo_response_description}}}
  **/
-@ApiModel(description = "Object Response of the file type")
+@ApiModel(description = "{{{tipo_arquivo_response_description}}}")
 public class TipoArquivoResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * Identification Code of the File Type
+   * {{{tipo_arquivo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the File Type")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * Name of the File Type
+   * {{{tipo_arquivo_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the File Type")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -44,9 +44,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * Description of the File Type
+   * {{{tipo_arquivo_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the File Type")
+  @ApiModelProperty(value = "{{{tipo_arquivo_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

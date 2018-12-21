@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Type of adjustment
+ * {{{tipo_ajuste_response_description}}}
  **/
-@ApiModel(description = "Type of adjustment")
+@ApiModel(description = "{{{tipo_ajuste_response_description}}}")
 public class TipoAjusteResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TipoAjusteResponse  {
 
   
   /**
-   * Identifier Code of the adjustment type
+   * {{{tipo_ajuste_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the adjustment type")
+  @ApiModelProperty(value = "{{{tipo_ajuste_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TipoAjusteResponse  {
 
   
   /**
-   * Description of the adjustment type
+   * {{{tipo_ajuste_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the adjustment type")
+  @ApiModelProperty(value = "{{{tipo_ajuste_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -48,9 +48,9 @@ public class TipoAjusteResponse  {
 
   
   /**
-   * Identifies whether the payment was made in an establishment
+   * {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
    **/
-  @ApiModelProperty(value = "Identifies whether the payment was made in an establishment")
+  @ApiModelProperty(value = "{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}")
   public Boolean getFlagPagamentoLojista() {
     return flagPagamentoLojista;
   }
@@ -60,9 +60,9 @@ public class TipoAjusteResponse  {
 
   
   /**
-   * Transactions by adjusts type
+   * {{{tipo_ajuste_response_transacoes_value}}}
    **/
-  @ApiModelProperty(value = "Transactions by adjusts type")
+  @ApiModelProperty(value = "{{{tipo_ajuste_response_transacoes_value}}}")
   public List<TipoTransacaoAjusteResponse> getTransacoes() {
     return transacoes;
   }

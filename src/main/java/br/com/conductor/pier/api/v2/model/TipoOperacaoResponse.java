@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the TypeOperation Resource
+ * {{{tipo_operacao_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the TypeOperation Resource")
+@ApiModel(description = "{{{tipo_operacao_response_description}}}")
 public class TipoOperacaoResponse  {
   
   @SerializedName("id")
@@ -47,9 +47,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Identifier Code of the OperationType
+   * {{{tipo_operacao_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier Code of the OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * OperationType Code
+   * {{{tipo_operacao_response_tipo_operacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "OperationType Code")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_tipo_operacao_value}}}")
   public String getTipoOperacao() {
     return tipoOperacao;
   }
@@ -71,9 +71,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Name of the Operationtype
+   * {{{tipo_operacao_response_nome_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Name of the Operationtype")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -83,9 +83,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Decri??o of the OperationType
+   * {{{tipo_operacao_response_descricao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Decri??o of the OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -95,9 +95,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Exceed allowed for the TypeOperation
+   * {{{tipo_operacao_response_excedente_permitido_value}}}
    **/
-  @ApiModelProperty(value = "Exceed allowed for the TypeOperation")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_excedente_permitido_value}}}")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
   }
@@ -107,9 +107,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Type of the allowed exceeded for the OperationType
+   * {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
    **/
-  @ApiModelProperty(value = "Type of the allowed exceeded for the OperationType")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_tipo_excedente_permitido_value}}}")
   public String getTipoExcedentePermitido() {
     return tipoExcedentePermitido;
   }
@@ -119,9 +119,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Minimum value for the transaction of OperationType
+   * {{{tipo_operacao_response_valor_minimo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Minimum value for the transaction of OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_valor_minimo_value}}}")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
   }
@@ -131,9 +131,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Maximum valuie for the transaction of the OperationType
+   * {{{tipo_operacao_response_valor_maximo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Maximum valuie for the transaction of the OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_valor_maximo_value}}}")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
   }
@@ -143,9 +143,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * TAC value of the transaction of OperationType
+   * {{{tipo_operacao_response_valor_t_a_c_value}}}
    **/
-  @ApiModelProperty(value = "TAC value of the transaction of OperationType")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_valor_t_a_c_value}}}")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -155,9 +155,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Flag stripe TAC of the OperationType
+   * {{{tipo_operacao_response_flag_tira_tac_value}}}
    **/
-  @ApiModelProperty(value = "Flag stripe TAC of the OperationType")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_flag_tira_tac_value}}}")
   public Integer getFlagTiraTac() {
     return flagTiraTac;
   }
@@ -167,9 +167,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Identifier of the TypeOperation of Product
+   * {{{tipo_operacao_response_id_produto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier of the TypeOperation of Product")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -179,9 +179,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Identifier of the Merchant of OperationType
+   * {{{tipo_operacao_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier of the Merchant of OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -191,9 +191,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * OperationType fee
+   * {{{tipo_operacao_response_tarifa_value}}}
    **/
-  @ApiModelProperty(value = "OperationType fee")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_tarifa_value}}}")
   public BigDecimal getTarifa() {
     return tarifa;
   }
@@ -203,9 +203,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Remunaration of the Issuer for the OperatioType
+   * {{{tipo_operacao_response_remuneracao_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Remunaration of the Issuer for the OperatioType")
+  @ApiModelProperty(value = "{{{tipo_operacao_response_remuneracao_emissor_value}}}")
   public BigDecimal getRemuneracaoEmissor() {
     return remuneracaoEmissor;
   }
@@ -215,9 +215,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Maximum Plan of the OperationType
+   * {{{tipo_operacao_response_plano_maximo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Maximum Plan of the OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_plano_maximo_value}}}")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
@@ -227,9 +227,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * Minimum Plan of the OperationType
+   * {{{tipo_operacao_response_plano_minimo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Minimum Plan of the OperationType")
+  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_plano_minimo_value}}}")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }

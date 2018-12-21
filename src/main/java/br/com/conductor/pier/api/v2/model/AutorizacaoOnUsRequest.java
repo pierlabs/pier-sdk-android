@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Request of Authorization
+ * {{{autorizacao_on_us_request_description}}}
  **/
-@ApiModel(description = "Object Request of Authorization")
+@ApiModel(description = "{{{autorizacao_on_us_request_description}}}")
 public class AutorizacaoOnUsRequest  {
   
   @SerializedName("nsuOrigem")
@@ -37,9 +37,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Unique Sequel Number that identifies the transaction in the system that has originated it
+   * {{{transacao_on_us_request_nsu_origem_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Unique Sequel Number that identifies the transaction in the system that has originated it")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_nsu_origem_value}}}")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -49,9 +49,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Number of Portions
+   * {{{autorizacao_on_us_request_numero_parcelas_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of Portions")
+  @ApiModelProperty(required = true, value = "{{{autorizacao_on_us_request_numero_parcelas_value}}}")
   public Long getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -61,9 +61,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Code of Processing that identifies the Type of Transaction
+   * {{{transacao_on_us_request_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Code of Processing that identifies the Type of Transaction")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -73,9 +73,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Safety Code of the Card
+   * {{{autorizacao_on_us_request_codigo_seguranca_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Safety Code of the Card")
+  @ApiModelProperty(value = "{{{autorizacao_on_us_request_codigo_seguranca_cartao_value}}}")
   public String getCodigoSegurancaCartao() {
     return codigoSegurancaCartao;
   }
@@ -85,9 +85,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Establishment Name
+   * {{{autorizacao_on_us_request_nome_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Establishment Name")
+  @ApiModelProperty(value = "{{{autorizacao_on_us_request_nome_estabelecimento_value}}}")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -97,9 +97,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Value of transaction with two decimal places for the cents
+   * {{{transacao_on_us_request_valor_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of transaction with two decimal places for the cents")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -109,9 +109,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Real number of the card
+   * {{{transacao_on_us_request_numero_real_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Real number of the card")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_numero_real_cartao_value}}}")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
   }
@@ -121,9 +121,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Expiration date of the Card. Ex: YYMM
+   * {{{transacao_on_us_request_data_validade_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Expiration date of the Card. Ex: YYMM")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_data_validade_cartao_value}}}")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -133,9 +133,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Number of the Establishment (Number+DV)
+   * {{{transacao_on_us_request_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of the Establishment (Number+DV)")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_numero_estabelecimento_value}}}")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -145,9 +145,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_request_data_hora_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_data_hora_terminal_value}}}")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
   }
@@ -157,9 +157,9 @@ public class AutorizacaoOnUsRequest  {
 
   
   /**
-   * Show the identification of the terminal applicant
+   * {{{transacao_on_us_request_terminal_requisitante_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Show the identification of the terminal applicant")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_terminal_requisitante_value}}}")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }

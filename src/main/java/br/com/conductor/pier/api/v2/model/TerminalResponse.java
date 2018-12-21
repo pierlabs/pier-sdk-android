@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjectTerminal
+ * {{{terminal_response_description}}}
  **/
-@ApiModel(description = "ObjectTerminal")
+@ApiModel(description = "{{{terminal_response_description}}}")
 public class TerminalResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Identification Code of the Terminal (id)
+   * {{{terminal_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Terminal (id)")
+  @ApiModelProperty(value = "{{{terminal_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Unique number of the terminal
+   * {{{terminal_response_terminal_value}}}
    **/
-  @ApiModelProperty(value = "Unique number of the terminal")
+  @ApiModelProperty(value = "{{{terminal_response_terminal_value}}}")
   public String getTerminal() {
     return terminal;
   }
@@ -50,9 +50,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Merchant Number which the terminal belongs
+   * {{{terminal_response_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Merchant Number which the terminal belongs")
+  @ApiModelProperty(value = "{{{terminal_response_numero_estabelecimento_value}}}")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -62,9 +62,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Identification number of the Merchant which the terminal belongs
+   * {{{terminal_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification number of the Merchant which the terminal belongs")
+  @ApiModelProperty(value = "{{{terminal_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -74,9 +74,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))
+   * {{{terminal_response_flag_consulta_extrato_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))")
+  @ApiModelProperty(value = "{{{terminal_response_flag_consulta_extrato_value}}}")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }
@@ -86,9 +86,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicating if the terminal allows to retrieve the bank statement, being: (true: Yes), (false: No)
+   * {{{terminal_response_flag_terminal_virtual_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicating if the terminal allows to retrieve the bank statement, being: (true: Yes), (false: No)")
+  @ApiModelProperty(value = "{{{terminal_response_flag_terminal_virtual_value}}}")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }

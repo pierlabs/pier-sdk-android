@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Credit Transfer bank account request
+ * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
  **/
-@ApiModel(description = "Credit Transfer bank account request")
+@ApiModel(description = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
   
   @SerializedName("idCartao")
@@ -21,9 +21,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Identification Card of the Card
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Card of the Card")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -33,9 +33,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Value of transaction with two decimal places for the cents
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of transaction with two decimal places for the cents")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -45,9 +45,9 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest  {
 
   
   /**
-   * Represent the number of months given as shortage
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Represent the number of months given as shortage")
+  @ApiModelProperty(required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
   }

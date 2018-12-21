@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Object of the undo transaction
+ * {{{desfazimento_transacao_on_us_request_description}}}
  **/
-@ApiModel(description = "Request Object of the undo transaction")
+@ApiModel(description = "{{{desfazimento_transacao_on_us_request_description}}}")
 public class DesfazimentoTransacaoOnUsRequest  {
   
   @SerializedName("nsuOrigem")
@@ -35,9 +35,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Unique Sequel Number that identifies the transaction in the system that has originated it
+   * {{{transacao_on_us_request_nsu_origem_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Unique Sequel Number that identifies the transaction in the system that has originated it")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_nsu_origem_value}}}")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -47,9 +47,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Unique Sequel Number that identifies the transaction in the system to be canceled
+   * {{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Unique Sequel Number that identifies the transaction in the system to be canceled")
+  @ApiModelProperty(required = true, value = "{{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}")
   public String getNsuOrigemTransacaoCancelada() {
     return nsuOrigemTransacaoCancelada;
   }
@@ -59,9 +59,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Code of Processing that identifies the Type of Transaction
+   * {{{transacao_on_us_request_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Code of Processing that identifies the Type of Transaction")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -71,9 +71,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * List the date and local time of the transactionto be canceled yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}
    **/
-  @ApiModelProperty(required = true, value = "List the date and local time of the transactionto be canceled yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(required = true, value = "{{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}")
   public String getDataHoraTransacaoCancelada() {
     return dataHoraTransacaoCancelada;
   }
@@ -83,9 +83,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Value of transaction with two decimal places for the cents
+   * {{{transacao_on_us_request_valor_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of transaction with two decimal places for the cents")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -95,9 +95,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Real number of the card
+   * {{{transacao_on_us_request_numero_real_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Real number of the card")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_numero_real_cartao_value}}}")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
   }
@@ -107,9 +107,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Expiration date of the Card. Ex: YYMM
+   * {{{transacao_on_us_request_data_validade_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Expiration date of the Card. Ex: YYMM")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_data_validade_cartao_value}}}")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
   }
@@ -119,9 +119,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Number of the Establishment (Number+DV)
+   * {{{transacao_on_us_request_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of the Establishment (Number+DV)")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_numero_estabelecimento_value}}}")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -131,9 +131,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_request_data_hora_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_data_hora_terminal_value}}}")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
   }
@@ -143,9 +143,9 @@ public class DesfazimentoTransacaoOnUsRequest  {
 
   
   /**
-   * Show the identification of the terminal applicant
+   * {{{transacao_on_us_request_terminal_requisitante_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Show the identification of the terminal applicant")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_request_terminal_requisitante_value}}}")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }

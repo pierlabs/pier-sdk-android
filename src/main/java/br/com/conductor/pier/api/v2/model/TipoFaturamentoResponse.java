@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Billing
+ * {{{tipo_faturamento_response_description}}}
  **/
-@ApiModel(description = "Object Billing")
+@ApiModel(description = "{{{tipo_faturamento_response_description}}}")
 public class TipoFaturamentoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Identification Code of the billing type (id)
+   * {{{tipo_faturamento_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the billing type (id)")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Description of theh billing type
+   * {{{tipo_faturamento_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of theh billing type")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -46,9 +46,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Flag that represents that the billing will be only demonstrative
+   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag that represents that the billing will be only demonstrative")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
   }
@@ -58,9 +58,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * Identification Code of the related covenant to the billing type
+   * {{{tipo_faturamento_response_id_convenio_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the related covenant to the billing type")
+  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_convenio_value}}}")
   public Long getIdConvenio() {
     return idConvenio;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * DocumentoProposta response representation
+ * {{{documento_proposta_response_description}}}
  **/
-@ApiModel(description = "DocumentoProposta response representation")
+@ApiModel(description = "{{{documento_proposta_response_description}}}")
 public class DocumentoPropostaResponse  {
   
   @SerializedName("id")
@@ -42,9 +42,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of the document proposal
+   * {{{documento_proposta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of the document proposal")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -54,9 +54,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of the proposal
+   * {{{documento_proposta_response_id_proposta_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of the proposal")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_proposta_value}}}")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -66,9 +66,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of the type of document
+   * {{{documento_proposta_response_id_tipo_documento_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of the type of document")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_tipo_documento_value}}}")
   public Long getIdDocumentosCredito() {
     return idDocumentosCredito;
   }
@@ -78,9 +78,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of credit document status
+   * {{{documento_proposta_response_id_status_documento_credito_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of credit document status")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_status_documento_credito_value}}}")
   public Long getIdStatusDocumentosCredito() {
     return idStatusDocumentosCredito;
   }
@@ -90,9 +90,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of credit credit condition
+   * {{{documento_proposta_response_id_condicao_documento_credito_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of credit credit condition")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_condicao_documento_credito_value}}}")
   public Long getIdCondicoesDocumentosCredito() {
     return idCondicoesDocumentosCredito;
   }
@@ -102,9 +102,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of credit document type
+   * {{{documento_proposta_response_id_tipo_documento_credito_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of credit document type")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_tipo_documento_credito_value}}}")
   public Long getIdTipoDocumentoCredito() {
     return idTipoDocumentoCredito;
   }
@@ -114,9 +114,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of person
+   * {{{documento_proposta_response_id_pessoa_fisica_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of person")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_pessoa_fisica_value}}}")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
   }
@@ -126,9 +126,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Idenfitication code of log
+   * {{{documento_proposta_response_id_log_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "Idenfitication code of log")
+  @ApiModelProperty(value = "{{{documento_proposta_response_id_log_atendimento_value}}}")
   public Long getIdLogAtendimento() {
     return idLogAtendimento;
   }
@@ -138,9 +138,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Responsible
+   * {{{documento_proposta_response_responsavel_value}}}
    **/
-  @ApiModelProperty(value = "Responsible")
+  @ApiModelProperty(value = "{{{documento_proposta_response_responsavel_value}}}")
   public String getResponsavel() {
     return responsavel;
   }
@@ -150,9 +150,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Flag for digitalization of the document
+   * {{{documento_proposta_response_flag_documento_digitalizado_value}}}
    **/
-  @ApiModelProperty(value = "Flag for digitalization of the document")
+  @ApiModelProperty(value = "{{{documento_proposta_response_flag_documento_digitalizado_value}}}")
   public Integer getFlagDocumentoDigitalizado() {
     return flagDocumentoDigitalizado;
   }
@@ -162,9 +162,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Name of the digital document
+   * {{{documento_proposta_response_documento_digitalizado_value}}}
    **/
-  @ApiModelProperty(value = "Name of the digital document")
+  @ApiModelProperty(value = "{{{documento_proposta_response_documento_digitalizado_value}}}")
   public String getDocumentoDigitalizado() {
     return documentoDigitalizado;
   }
@@ -174,9 +174,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Analytical Sequence code
+   * {{{documento_proposta_response_seq_analise_condicao_value}}}
    **/
-  @ApiModelProperty(value = "Analytical Sequence code")
+  @ApiModelProperty(value = "{{{documento_proposta_response_seq_analise_condicao_value}}}")
   public Long getSeqAnaliseCondicao() {
     return seqAnaliseCondicao;
   }
@@ -186,9 +186,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Note
+   * {{{documento_proposta_response_observacao_value}}}
    **/
-  @ApiModelProperty(value = "Note")
+  @ApiModelProperty(value = "{{{documento_proposta_response_observacao_value}}}")
   public String getObservacao() {
     return observacao;
   }
@@ -198,9 +198,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * Status Date
+   * {{{documento_proposta_response_data_status_value}}}
    **/
-  @ApiModelProperty(value = "Status Date")
+  @ApiModelProperty(value = "{{{documento_proposta_response_data_status_value}}}")
   public String getDataStatus() {
     return dataStatus;
   }

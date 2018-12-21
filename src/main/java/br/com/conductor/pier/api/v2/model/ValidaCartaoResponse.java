@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of response for the card validation
+ * {{{valida_cartao_response_description}}}
  **/
-@ApiModel(description = "Object of response for the card validation")
+@ApiModel(description = "{{{valida_cartao_response_description}}}")
 public class ValidaCartaoResponse  {
   
   @SerializedName("idStatusCartao")
@@ -30,9 +30,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Description of the card status
+   * {{{valida_cartao_response_id_status_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the card status")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_status_cartao_value}}}")
   public Long getIdStatusCartao() {
     return idStatusCartao;
   }
@@ -42,9 +42,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Description of the card status
+   * {{{valida_cartao_response_status_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the card status")
+  @ApiModelProperty(value = "{{{valida_cartao_response_status_cartao_value}}}")
   public String getStatusCartao() {
     return statusCartao;
   }
@@ -54,9 +54,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Description of the account status
+   * {{{valida_cartao_response_id_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Description of the account status")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_status_conta_value}}}")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -66,9 +66,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Description of the account status
+   * {{{valida_cartao_response_status_conta_value}}}
    **/
-  @ApiModelProperty(value = "Description of the account status")
+  @ApiModelProperty(value = "{{{valida_cartao_response_status_conta_value}}}")
   public String getStatusConta() {
     return statusConta;
   }
@@ -78,9 +78,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Identiifier Code of the Account
+   * {{{valida_cartao_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identiifier Code of the Account")
+  @ApiModelProperty(value = "{{{valida_cartao_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -90,9 +90,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Number of the Agency
+   * {{{valida_cartao_response_numero_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Number of the Agency")
+  @ApiModelProperty(value = "{{{valida_cartao_response_numero_agencia_value}}}")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -102,9 +102,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Number of the current account
+   * {{{valida_cartao_response_numero_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Number of the current account")
+  @ApiModelProperty(value = "{{{valida_cartao_response_numero_conta_corrente_value}}}")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -114,9 +114,9 @@ public class ValidaCartaoResponse  {
 
   
   /**
-   * Cryptogram of the response
+   * {{{valida_cartao_response_criptograma_resposta_value}}}
    **/
-  @ApiModelProperty(value = "Cryptogram of the response")
+  @ApiModelProperty(value = "{{{valida_cartao_response_criptograma_resposta_value}}}")
   public String getCriptogramaResposta() {
     return criptogramaResposta;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of request
+ * {{{integrar_documento_request_description}}}
  **/
-@ApiModel(description = "Object of request")
+@ApiModel(description = "{{{integrar_documento_request_description}}}")
 public class IntegrarDocumentoRequest  {
   
   @SerializedName("idTemplate")
@@ -24,9 +24,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * Identifier of the template of document
+   * {{{integrar_documento_request_id_template_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the template of document")
+  @ApiModelProperty(value = "{{{integrar_documento_request_id_template_value}}}")
   public Long getIdTemplate() {
     return idTemplate;
   }
@@ -36,9 +36,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * Content of the converted file in Base 64
+   * {{{integrar_documento_request_arquivo_value}}}
    **/
-  @ApiModelProperty(value = "Content of the converted file in Base 64")
+  @ApiModelProperty(value = "{{{integrar_documento_request_arquivo_value}}}")
   public String getArquivo() {
     return arquivo;
   }
@@ -48,9 +48,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * Name of the file
+   * {{{integrar_documento_request_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the file")
+  @ApiModelProperty(value = "{{{integrar_documento_request_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -60,9 +60,9 @@ public class IntegrarDocumentoRequest  {
 
   
   /**
-   * List the parameters for the formation of the document
+   * {{{integrar_documento_request_propriedades_value}}}
    **/
-  @ApiModelProperty(value = "List the parameters for the formation of the document")
+  @ApiModelProperty(value = "{{{integrar_documento_request_propriedades_value}}}")
   public List<PropriedadeDocumentoRequest> getPropriedades() {
     return propriedades;
   }

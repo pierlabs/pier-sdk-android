@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the security code validate resource
+ * {{{codigo_seguranca_s_m_s_request_description}}}
  **/
-@ApiModel(description = "Representation of the security code validate resource")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_request_description}}}")
 public class CodigoSegurancaSMSRequest  {
   
   @SerializedName("ddd")
@@ -20,9 +20,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * DDD code of the telephone (id)
+   * {{{codigo_seguranca_s_m_s_request_ddd_value}}}
    **/
-  @ApiModelProperty(value = "DDD code of the telephone (id)")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -32,9 +32,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * Telephone Number
+   * {{{codigo_seguranca_s_m_s_request_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Telephone Number")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -44,9 +44,9 @@ public class CodigoSegurancaSMSRequest  {
 
   
   /**
-   * Token for validation
+   * {{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}
    **/
-  @ApiModelProperty(value = "Token for validation")
+  @ApiModelProperty(value = "{{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
   }

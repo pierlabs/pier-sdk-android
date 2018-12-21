@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the User Account feature
+ * {{{usuario_conta_resposta_descricao}}}
  **/
-@ApiModel(description = "Representation of the User Account feature")
+@ApiModel(description = "{{{usuario_conta_resposta_descricao}}}")
 public class UsuarioContasResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Account User Id
+   * {{{usuario_conta_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "Account User Id")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * User-linked account id
+   * {{{usuario_conta_resposta_id_conta_descricao}}}
    **/
-  @ApiModelProperty(value = "User-linked account id")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_conta_descricao}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -48,9 +48,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Person ID
+   * {{{usuario_conta_resposta_id_pessoa_descricao}}}
    **/
-  @ApiModelProperty(value = "Person ID")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_pessoa_descricao}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -60,9 +60,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Account Id Linked to Account
+   * {{{usuario_conta_resposta_id_usuario_descricao}}}
    **/
-  @ApiModelProperty(value = "Account Id Linked to Account")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_usuario_descricao}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }
@@ -72,9 +72,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * User Accounts Description
+   * {{{usuario_conta_resposta_nivel_acesso_descricao}}}
    **/
-  @ApiModelProperty(value = "User Accounts Description")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_nivel_acesso_descricao}}}")
   public Integer getNivelAcesso() {
     return nivelAcesso;
   }

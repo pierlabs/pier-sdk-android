@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of transaction resquest On Us per idCard
+ * {{{transacao_on_us_por_id_cartao_request_description}}}
  **/
-@ApiModel(description = "Object of transaction resquest On Us per idCard")
+@ApiModel(description = "{{{transacao_on_us_por_id_cartao_request_description}}}")
 public class TransacaoOnUsPorIdCartaoRequest  {
   
   @SerializedName("nsuOrigem")
@@ -31,9 +31,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Unique Sequel Number that identifies the transaction in the system that originated it
+   * {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Unique Sequel Number that identifies the transaction in the system that originated it")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -43,9 +43,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Code of Processing that identifies the type of transaction
+   * {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Code of Processing that identifies the type of transaction")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -55,9 +55,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Value of the transaction with two decimal places for the cents
+   * {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of the transaction with two decimal places for the cents")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
   }
@@ -67,9 +67,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Number of the Establishment (Number+DV)
+   * {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of the Establishment (Number+DV)")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -79,9 +79,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Establishment Name
+   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Establishment Name")
+  @ApiModelProperty(value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -91,9 +91,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
   }
@@ -103,9 +103,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Show the identification of the terminal applicant
+   * {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Show the identification of the terminal applicant")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }
@@ -115,9 +115,9 @@ public class TransacaoOnUsPorIdCartaoRequest  {
 
   
   /**
-   * Number of Parcels
+   * {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of Parcels")
+  @ApiModelProperty(required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}")
   public Long getNumeroParcelas() {
     return numeroParcelas;
   }

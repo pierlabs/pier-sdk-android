@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List Revolving Configuration
+ * {{{page_configuracao_rotativo_response_description}}}
  **/
-@ApiModel(description = "List Revolving Configuration")
+@ApiModel(description = "{{{page_configuracao_rotativo_response_description}}}")
 public class PageConfiguracaoRotativoResponse  {
   
   @SerializedName("content")

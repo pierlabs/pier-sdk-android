@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the proposal response
+ * {{{proposta_response_description}}}
  **/
-@ApiModel(description = "Representation of the proposal response")
+@ApiModel(description = "{{{proposta_response_description}}}")
 public class PropostaResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class PropostaResponse  {
 
   
   /**
-   * Proposal Identification Code (id)
+   * {{{proposta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Proposal Identification Code (id)")
+  @ApiModelProperty(value = "{{{proposta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class PropostaResponse  {
 
   
   /**
-   * Proposal Status
+   * {{{proposta_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Proposal Status")
+  @ApiModelProperty(value = "{{{proposta_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -46,9 +46,9 @@ public class PropostaResponse  {
 
   
   /**
-   * Date of registration of the proposal
+   * {{{proposta_response_data_cadastramento_value}}}
    **/
-  @ApiModelProperty(value = "Date of registration of the proposal")
+  @ApiModelProperty(value = "{{{proposta_response_data_cadastramento_value}}}")
   public String getDataCadastramento() {
     return dataCadastramento;
   }
@@ -58,9 +58,9 @@ public class PropostaResponse  {
 
   
   /**
-   * Proposal update date
+   * {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
    **/
-  @ApiModelProperty(value = "Proposal update date")
+  @ApiModelProperty(value = "{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}")
   public String getDataAprovacaoNegacaoPendencia() {
     return dataAprovacaoNegacaoPendencia;
   }

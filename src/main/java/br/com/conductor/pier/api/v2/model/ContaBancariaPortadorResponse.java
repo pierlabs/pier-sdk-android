@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation Object Response for Carrier Bank Account
+ * {{{conta_bancaria_portador_response_description}}}
  **/
-@ApiModel(description = "Representation Object Response for Carrier Bank Account")
+@ApiModel(description = "{{{conta_bancaria_portador_response_description}}}")
 public class ContaBancariaPortadorResponse  {
   
   @SerializedName("id")
@@ -44,9 +44,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Identifier Code of the Banking Account
+   * {{{conta_bancaria_portador_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the Banking Account")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -56,9 +56,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Identifier Code of the Account Card
+   * {{{conta_bancaria_portador_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the Account Card")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -68,9 +68,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Description of the Agency
+   * {{{conta_bancaria_portador_response_nome_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Description of the Agency")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_nome_agencia_value}}}")
   public String getNomeAgencia() {
     return nomeAgencia;
   }
@@ -80,9 +80,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * BankCode
+   * {{{conta_bancaria_portador_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "BankCode")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_banco_value}}}")
   public Long getBanco() {
     return banco;
   }
@@ -92,9 +92,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Agency Number
+   * {{{conta_bancaria_portador_response_numero_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Agency Number")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_numero_agencia_value}}}")
   public String getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -104,9 +104,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Agency Digit
+   * {{{conta_bancaria_portador_response_digito_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Agency Digit")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_digito_agencia_value}}}")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -116,9 +116,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Account Number
+   * {{{conta_bancaria_portador_response_numero_conta_value}}}
    **/
-  @ApiModelProperty(value = "Account Number")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_numero_conta_value}}}")
   public String getNumeroConta() {
     return numeroConta;
   }
@@ -128,9 +128,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Account digit
+   * {{{conta_bancaria_portador_response_digito_conta_value}}}
    **/
-  @ApiModelProperty(value = "Account digit")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_digito_conta_value}}}")
   public String getDigitoConta() {
     return digitoConta;
   }
@@ -140,9 +140,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Signal if the account is active or not (1: Active, 0: Inactive)
+   * {{{conta_bancaria_portador_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Signal if the account is active or not (1: Active, 0: Inactive)")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_flag_ativo_value}}}")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
@@ -152,9 +152,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Signal if the origin is DOC (1: DOC, 0: TED)
+   * {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
    **/
-  @ApiModelProperty(value = "Signal if the origin is DOC (1: DOC, 0: TED)")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}")
   public Integer getFlagContaOrigemDoc() {
     return flagContaOrigemDoc;
   }
@@ -164,9 +164,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Person Code
+   * {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
    **/
-  @ApiModelProperty(value = "Person Code")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
   }
@@ -176,9 +176,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Signal if the banking account is a saving account (1: Saving account, 0: Current Account)
+   * {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
    **/
-  @ApiModelProperty(value = "Signal if the banking account is a saving account (1: Saving account, 0: Current Account)")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
   }
@@ -188,9 +188,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Name of the favored
+   * {{{conta_bancaria_portador_response_favorecido_value}}}
    **/
-  @ApiModelProperty(value = "Name of the favored")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_favorecido_value}}}")
   public String getFavorecido() {
     return favorecido;
   }
@@ -200,9 +200,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Document of the favored
+   * {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
    **/
-  @ApiModelProperty(value = "Document of the favored")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_numero_receira_federal_value}}}")
   public String getNumeroReceiraFederal() {
     return numeroReceiraFederal;
   }
@@ -212,9 +212,9 @@ public class ContaBancariaPortadorResponse  {
 
   
   /**
-   * Account Ownership (1:cardholder is the owner, 0: cardholder is not the owner)
+   * {{{conta_bancaria_portador_response_titularidade_value}}}
    **/
-  @ApiModelProperty(value = "Account Ownership (1:cardholder is the owner, 0: cardholder is not the owner)")
+  @ApiModelProperty(value = "{{{conta_bancaria_portador_response_titularidade_value}}}")
   public Integer getTitularidade() {
     return titularidade;
   }

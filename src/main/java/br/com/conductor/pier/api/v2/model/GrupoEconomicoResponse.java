@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the economic group resource
+ * {{{grupo_economico_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the economic group resource")
+@ApiModel(description = "{{{grupo_economico_response_description}}}")
 public class GrupoEconomicoResponse  {
   
   @SerializedName("id")
@@ -78,9 +78,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Identifier code of the economic group
+   * {{{grupo_economico_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier code of the economic group")
+  @ApiModelProperty(value = "{{{grupo_economico_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -90,9 +90,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Social reason of the Legal person
+   * {{{grupo_economico_response_razao_social_value}}}
    **/
-  @ApiModelProperty(value = "Social reason of the Legal person")
+  @ApiModelProperty(value = "{{{grupo_economico_response_razao_social_value}}}")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -102,9 +102,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Name of the Creditor
+   * {{{grupo_economico_response_nome_credor_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Creditor")
+  @ApiModelProperty(value = "{{{grupo_economico_response_nome_credor_value}}}")
   public String getNomeCredor() {
     return nomeCredor;
   }
@@ -114,9 +114,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Number of the IRs
+   * {{{grupo_economico_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "Number of the IRs")
+  @ApiModelProperty(value = "{{{grupo_economico_response_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -126,9 +126,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * State Registration Number
+   * {{{grupo_economico_response_inscricao_estadual_value}}}
    **/
-  @ApiModelProperty(value = "State Registration Number")
+  @ApiModelProperty(value = "{{{grupo_economico_response_inscricao_estadual_value}}}")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -138,9 +138,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Name of the person to keep contact
+   * {{{grupo_economico_response_contato_value}}}
    **/
-  @ApiModelProperty(value = "Name of the person to keep contact")
+  @ApiModelProperty(value = "{{{grupo_economico_response_contato_value}}}")
   public String getContato() {
     return contato;
   }
@@ -150,9 +150,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Bank code
+   * {{{grupo_economico_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "Bank code")
+  @ApiModelProperty(value = "{{{grupo_economico_response_banco_value}}}")
   public Integer getBanco() {
     return banco;
   }
@@ -162,9 +162,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Agency Code
+   * {{{grupo_economico_response_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Agency Code")
+  @ApiModelProperty(value = "{{{grupo_economico_response_agencia_value}}}")
   public Integer getAgencia() {
     return agencia;
   }
@@ -174,9 +174,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Verifier digit of the agency
+   * {{{grupo_economico_response_digito_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Verifier digit of the agency")
+  @ApiModelProperty(value = "{{{grupo_economico_response_digito_agencia_value}}}")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -186,9 +186,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Code of the Current Account
+   * {{{grupo_economico_response_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Code of the Current Account")
+  @ApiModelProperty(value = "{{{grupo_economico_response_conta_corrente_value}}}")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -198,9 +198,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Verifier Digit of the current account
+   * {{{grupo_economico_response_digito_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Verifier Digit of the current account")
+  @ApiModelProperty(value = "{{{grupo_economico_response_digito_conta_corrente_value}}}")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -210,9 +210,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * User login for registering the insertion
+   * {{{grupo_economico_response_usuario_value}}}
    **/
-  @ApiModelProperty(value = "User login for registering the insertion")
+  @ApiModelProperty(value = "{{{grupo_economico_response_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -222,9 +222,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Payment Frequency
+   * {{{grupo_economico_response_periodicidade_value}}}
    **/
-  @ApiModelProperty(value = "Payment Frequency")
+  @ApiModelProperty(value = "{{{grupo_economico_response_periodicidade_value}}}")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -234,9 +234,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Weekly payday
+   * {{{grupo_economico_response_pagamento_semanal_value}}}
    **/
-  @ApiModelProperty(value = "Weekly payday")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_semanal_value}}}")
   public PagamentoSemanalEnum getPagamentoSemanal() {
     return pagamentoSemanal;
   }
@@ -246,9 +246,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Monthly payment date
+   * {{{grupo_economico_response_pagamento_mensal_value}}}
    **/
-  @ApiModelProperty(value = "Monthly payment date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_mensal_value}}}")
   public Integer getPagamentoMensal() {
     return pagamentoMensal;
   }
@@ -258,9 +258,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * First decendial payment date
+   * {{{grupo_economico_response_pagamento_decendial_primeiro_value}}}
    **/
-  @ApiModelProperty(value = "First decendial payment date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_decendial_primeiro_value}}}")
   public Integer getPagamentoDecendialPrimeiro() {
     return pagamentoDecendialPrimeiro;
   }
@@ -270,9 +270,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Second decendial payment date
+   * {{{grupo_economico_response_pagamento_decendial_segundo_value}}}
    **/
-  @ApiModelProperty(value = "Second decendial payment date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_decendial_segundo_value}}}")
   public Integer getPagamentoDecendialSegundo() {
     return pagamentoDecendialSegundo;
   }
@@ -282,9 +282,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Third decendial payment date
+   * {{{grupo_economico_response_pagamento_decendial_terceiro_value}}}
    **/
-  @ApiModelProperty(value = "Third decendial payment date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_decendial_terceiro_value}}}")
   public Integer getPagamentoDecendialTerceiro() {
     return pagamentoDecendialTerceiro;
   }
@@ -294,9 +294,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * First Biweekly Payment Date
+   * {{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}
    **/
-  @ApiModelProperty(value = "First Biweekly Payment Date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}")
   public Integer getPagamentoQuinzenalPrimeiro() {
     return pagamentoQuinzenalPrimeiro;
   }
@@ -306,9 +306,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Second Biweekly payment date
+   * {{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}
    **/
-  @ApiModelProperty(value = "Second Biweekly payment date")
+  @ApiModelProperty(value = "{{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}")
   public Integer getPagamentoQuinzenalSegundo() {
     return pagamentoQuinzenalSegundo;
   }
@@ -318,9 +318,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Identifier of the creditor RAV
+   * {{{grupo_economico_response_id_credor_r_a_v_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the creditor RAV")
+  @ApiModelProperty(value = "{{{grupo_economico_response_id_credor_r_a_v_value}}}")
   public Long getIdCredorRAV() {
     return idCredorRAV;
   }
@@ -330,9 +330,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Percentage Value of the creditor RAV
+   * {{{grupo_economico_response_percentual_r_a_v_value}}}
    **/
-  @ApiModelProperty(value = "Percentage Value of the creditor RAV")
+  @ApiModelProperty(value = "{{{grupo_economico_response_percentual_r_a_v_value}}}")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
   }
@@ -342,9 +342,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Indicate if the creditor recieves RAV and the type
+   * {{{grupo_economico_response_recebe_r_a_v_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if the creditor recieves RAV and the type")
+  @ApiModelProperty(value = "{{{grupo_economico_response_recebe_r_a_v_value}}}")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
   }
@@ -354,9 +354,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Percentage Multiply
+   * {{{grupo_economico_response_percentual_multiplica_value}}}
    **/
-  @ApiModelProperty(value = "Percentage Multiply")
+  @ApiModelProperty(value = "{{{grupo_economico_response_percentual_multiplica_value}}}")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
   }
@@ -366,9 +366,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Administrative Taxe
+   * {{{grupo_economico_response_taxa_adm_value}}}
    **/
-  @ApiModelProperty(value = "Administrative Taxe")
+  @ApiModelProperty(value = "{{{grupo_economico_response_taxa_adm_value}}}")
   public BigDecimal getTaxaAdm() {
     return taxaAdm;
   }
@@ -378,9 +378,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Taxe of the Bank
+   * {{{grupo_economico_response_taxa_banco_value}}}
    **/
-  @ApiModelProperty(value = "Taxe of the Bank")
+  @ApiModelProperty(value = "{{{grupo_economico_response_taxa_banco_value}}}")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
   }
@@ -390,9 +390,9 @@ public class GrupoEconomicoResponse  {
 
   
   /**
-   * Limit value of the RAV
+   * {{{grupo_economico_response_limite_r_a_v_value}}}
    **/
-  @ApiModelProperty(value = "Limit value of the RAV")
+  @ApiModelProperty(value = "{{{grupo_economico_response_limite_r_a_v_value}}}")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
   }

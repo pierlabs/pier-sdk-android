@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List the terminal types
+ * {{{page_tipo_terminal_response_description}}}
  **/
-@ApiModel(description = "List the terminal types")
+@ApiModel(description = "{{{page_tipo_terminal_response_description}}}")
 public class PageTipoTerminalResponse  {
   
   @SerializedName("content")

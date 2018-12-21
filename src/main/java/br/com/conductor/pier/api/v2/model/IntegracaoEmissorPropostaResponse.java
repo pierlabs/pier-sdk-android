@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response of the inclusion of the record of the proposal for integration
+ * {{{integracao_emissor_proposta_resposta_descricao}}}
  **/
-@ApiModel(description = "Response of the inclusion of the record of the proposal for integration")
+@ApiModel(description = "{{{integracao_emissor_proposta_resposta_descricao}}}")
 public class IntegracaoEmissorPropostaResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Identification code
+   * {{{integracao_emissor_proposta_resposta_id}}}
    **/
-  @ApiModelProperty(value = "Identification code")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id}}}")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Account ID code
+   * {{{integracao_emissor_proposta_resposta_id_conta}}}
    **/
-  @ApiModelProperty(value = "Account ID code")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id_conta}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -52,9 +52,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Registration status
+   * {{{integracao_emissor_proposta_resposta_status}}}
    **/
-  @ApiModelProperty(value = "Registration status")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_status}}}")
   public Integer getStatus() {
     return status;
   }
@@ -64,9 +64,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Record notice
+   * {{{integracao_emissor_proposta_resposta_observacao}}}
    **/
-  @ApiModelProperty(value = "Record notice")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_observacao}}}")
   public String getObservacao() {
     return observacao;
   }
@@ -76,9 +76,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Flag selected
+   * {{{integracao_emissor_proposta_resposta_flag_selecionado}}}
    **/
-  @ApiModelProperty(value = "Flag selected")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_flag_selecionado}}}")
   public Boolean getFlagSelecionado() {
     return flagSelecionado;
   }
@@ -88,9 +88,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Identification code of the external proposal
+   * {{{integracao_emissor_proposta_resposta_id_proposta_externa}}}
    **/
-  @ApiModelProperty(value = "Identification code of the external proposal")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_id_proposta_externa}}}")
   public Long getIdPropostaExterna() {
     return idPropostaExterna;
   }
@@ -100,9 +100,9 @@ public class IntegracaoEmissorPropostaResponse  {
 
   
   /**
-   * Date of the event
+   * {{{integracao_emissor_proposta_resposta_data_evento}}}
    **/
-  @ApiModelProperty(value = "Date of the event")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_resposta_data_evento}}}")
   public String getDataEvento() {
     return dataEvento;
   }

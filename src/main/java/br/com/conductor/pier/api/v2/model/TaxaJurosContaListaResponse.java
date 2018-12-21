@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the response of the interest rate listing
+ * {{{taxa_juros_conta_lista_response_description}}}
  **/
-@ApiModel(description = "Representation of the response of the interest rate listing")
+@ApiModel(description = "{{{taxa_juros_conta_lista_response_description}}}")
 public class TaxaJurosContaListaResponse  {
   
   @SerializedName("plano")
@@ -19,9 +19,9 @@ public class TaxaJurosContaListaResponse  {
 
   
   /**
-   * Fee plan tranche number
+   * {{{taxa_juros_conta_lista_response_plano_value}}}
    **/
-  @ApiModelProperty(value = "Fee plan tranche number")
+  @ApiModelProperty(value = "{{{taxa_juros_conta_lista_response_plano_value}}}")
   public Integer getPlano() {
     return plano;
   }
@@ -31,9 +31,9 @@ public class TaxaJurosContaListaResponse  {
 
   
   /**
-   * Interest rate value
+   * {{{taxa_juros_conta_lista_response_taxa_value}}}
    **/
-  @ApiModelProperty(value = "Interest rate value")
+  @ApiModelProperty(value = "{{{taxa_juros_conta_lista_response_taxa_value}}}")
   public BigDecimal getTaxa() {
     return taxa;
   }

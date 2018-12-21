@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Persistence object for services adhesion
+ * {{{adesao_servico_persistencia_descricao}}}
  **/
-@ApiModel(description = "Persistence object for services adhesion")
+@ApiModel(description = "{{{adesao_servico_persistencia_descricao}}}")
 public class AdesaoServicoPersist  {
   
   @SerializedName("canal")
@@ -39,9 +39,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Input channer
+   * {{{adesao_servico_persistencia_canal_descricao}}}
    **/
-  @ApiModelProperty(value = "Input channer")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_canal_descricao}}}")
   public String getCanal() {
     return canal;
   }
@@ -51,9 +51,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Establishment
+   * {{{adesao_servico_persistencia_estabelecimento_descricao}}}
    **/
-  @ApiModelProperty(value = "Establishment")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_estabelecimento_descricao}}}")
   public Integer getEstabelecimento() {
     return estabelecimento;
   }
@@ -63,9 +63,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Invoice submission type
+   * {{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}
    **/
-  @ApiModelProperty(value = "Invoice submission type")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}")
   public Integer getTipoEnvioFatura() {
     return tipoEnvioFatura;
   }
@@ -75,9 +75,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Sms type
+   * {{{adesao_servico_persistencia_tipo_sms_descricao}}}
    **/
-  @ApiModelProperty(value = "Sms type")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_tipo_sms_descricao}}}")
   public TipoSmsEnum getTipoSms() {
     return tipoSms;
   }
@@ -87,9 +87,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Credit limit charge
+   * {{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}
    **/
-  @ApiModelProperty(value = "Credit limit charge")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}")
   public Boolean getCobrancaLimiteCredito() {
     return cobrancaLimiteCredito;
   }
@@ -99,9 +99,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Offer deals
+   * {{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}
    **/
-  @ApiModelProperty(value = "Offer deals")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}")
   public Boolean getFlagPromocoes() {
     return flagPromocoes;
   }
@@ -111,9 +111,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Responsible
+   * {{{adesao_servico_persistencia_responsavel_descricao}}}
    **/
-  @ApiModelProperty(value = "Responsible")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_responsavel_descricao}}}")
   public String getResponsavel() {
     return responsavel;
   }
@@ -123,9 +123,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * offer type of invoice submission
+   * {{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}
    **/
-  @ApiModelProperty(value = "offer type of invoice submission")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}")
   public Boolean getFlagTipoEnvioFatura() {
     return flagTipoEnvioFatura;
   }
@@ -135,9 +135,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Offer SMS type
+   * {{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}
    **/
-  @ApiModelProperty(value = "Offer SMS type")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}")
   public Boolean getFlagTipoSms() {
     return flagTipoSms;
   }
@@ -147,9 +147,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Offer billing at credit limit
+   * {{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}
    **/
-  @ApiModelProperty(value = "Offer billing at credit limit")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}")
   public Boolean getFlagCobrancaLimiteCredito() {
     return flagCobrancaLimiteCredito;
   }
@@ -159,9 +159,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * Offer Avaliable Deals
+   * {{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}
    **/
-  @ApiModelProperty(value = "Offer Avaliable Deals")
+  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}")
   public Boolean getFlagOfertasPromocoes() {
     return flagOfertasPromocoes;
   }

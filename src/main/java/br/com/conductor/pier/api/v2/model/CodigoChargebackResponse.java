@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Response for Chargeback Code
+ * {{{codigo_chargeback_response_description}}}
  **/
-@ApiModel(description = "Object Response for Chargeback Code")
+@ApiModel(description = "{{{codigo_chargeback_response_description}}}")
 public class CodigoChargebackResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class CodigoChargebackResponse  {
 
   
   /**
-   * Chargeback Id Code
+   * {{{codigo_chargeback_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Chargeback Id Code")
+  @ApiModelProperty(value = "{{{codigo_chargeback_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class CodigoChargebackResponse  {
 
   
   /**
-   * Chargeback Code description
+   * {{{codigo_chargeback_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Chargeback Code description")
+  @ApiModelProperty(value = "{{{codigo_chargeback_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

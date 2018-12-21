@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of the Address Type Resource
+ * {{{tipo_endereco_response_description}}}
  **/
-@ApiModel(description = "Representation of the Address Type Resource")
+@ApiModel(description = "{{{tipo_endereco_response_description}}}")
 public class TipoEnderecoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoEnderecoResponse  {
 
   
   /**
-   * Identification Code of the Address Type (id)
+   * {{{tipo_endereco_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Address Type (id)")
+  @ApiModelProperty(value = "{{{tipo_endereco_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoEnderecoResponse  {
 
   
   /**
-   * Name of the Address Type
+   * {{{tipo_endereco_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Address Type")
+  @ApiModelProperty(value = "{{{tipo_endereco_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

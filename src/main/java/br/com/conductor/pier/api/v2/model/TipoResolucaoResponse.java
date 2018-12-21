@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object of the answer of the resolution type
+ * {{{tipo_resolucao_response_description}}}
  **/
-@ApiModel(description = "Object of the answer of the resolution type")
+@ApiModel(description = "{{{tipo_resolucao_response_description}}}")
 public class TipoResolucaoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoResolucaoResponse  {
 
   
   /**
-   * Identification Code of the type of resolution
+   * {{{tipo_resolucao_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the type of resolution")
+  @ApiModelProperty(value = "{{{tipo_resolucao_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoResolucaoResponse  {
 
   
   /**
-   * Description of the type of resolution
+   * {{{tipo_resolucao_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the type of resolution")
+  @ApiModelProperty(value = "{{{tipo_resolucao_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

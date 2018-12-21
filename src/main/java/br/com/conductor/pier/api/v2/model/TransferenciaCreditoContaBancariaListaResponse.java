@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of credit transfer to other banking accounts
+ * {{{transferencia_credito_conta_bancaria_lista_response_description}}}
  **/
-@ApiModel(description = "List of credit transfer to other banking accounts")
+@ApiModel(description = "{{{transferencia_credito_conta_bancaria_lista_response_description}}}")
 public class TransferenciaCreditoContaBancariaListaResponse  {
   
   @SerializedName("idTransferencia")
@@ -31,9 +31,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Identification code of the transfer
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "Identification code of the transfer")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}")
   public Long getIdTransferencia() {
     return idTransferencia;
   }
@@ -43,9 +43,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Identification Code of the Account
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Account")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -55,9 +55,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Identification Code of the Card
+   * {{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Card")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -67,9 +67,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Value of the transfer
+   * {{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}
    **/
-  @ApiModelProperty(value = "Value of the transfer")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}")
   public BigDecimal getValorCompra() {
     return valorCompra;
   }
@@ -79,9 +79,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Transfer value added to the withdrawal rate value if there is withdrawal rate
+   * {{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}
    **/
-  @ApiModelProperty(value = "Transfer value added to the withdrawal rate value if there is withdrawal rate")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}")
   public BigDecimal getValorContrato() {
     return valorContrato;
   }
@@ -91,9 +91,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Date of the transfer
+   * {{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}
    **/
-  @ApiModelProperty(value = "Date of the transfer")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}")
   public String getDataCompra() {
     return dataCompra;
   }
@@ -103,9 +103,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Processing Status Code
+   * {{{transferencia_credito_conta_bancaria_lista_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Processing Status Code")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -115,9 +115,9 @@ public class TransferenciaCreditoContaBancariaListaResponse  {
 
   
   /**
-   * Processing Status
+   * {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}
    **/
-  @ApiModelProperty(value = "Processing Status")
+  @ApiModelProperty(value = "{{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}")
   public String getStatusProcessamento() {
     return statusProcessamento;
   }

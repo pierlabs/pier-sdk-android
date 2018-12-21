@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation with the parameters required to send a Ticket by email
+ * {{{boleto_email_request_description}}}
  **/
-@ApiModel(description = "Representation with the parameters required to send a Ticket by email")
+@ApiModel(description = "{{{boleto_email_request_description}}}")
 public class BoletoEmailRequest  {
   
   @SerializedName("email")
@@ -20,9 +20,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Email to send the ticket
+   * {{{boleto_email_request_value}}}
    **/
-  @ApiModelProperty(value = "Email to send the ticket")
+  @ApiModelProperty(value = "{{{boleto_email_request_value}}}")
   public String getEmail() {
     return email;
   }
@@ -32,9 +32,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Identification of notification template
+   * {{{boleto_email_request_id_template_notificacao_value}}}
    **/
-  @ApiModelProperty(value = "Identification of notification template")
+  @ApiModelProperty(value = "{{{boleto_email_request_id_template_notificacao_value}}}")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
   }
@@ -44,9 +44,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Map of parameters used in creating the email template
+   * {{{boleto_email_request_parametros_value}}}
    **/
-  @ApiModelProperty(value = "Map of parameters used in creating the email template")
+  @ApiModelProperty(value = "{{{boleto_email_request_parametros_value}}}")
   public Object getParametros() {
     return parametros;
   }

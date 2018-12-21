@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Detail representation of the resource answer opportunity
+ * {{{detalhe_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Detail representation of the resource answer opportunity")
+@ApiModel(description = "{{{detalhe_oportunidade_response_description}}}")
 public class DetalheOportunidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * Identifier of the detail
+   * {{{detalhe_oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the detail")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * Name of the Content
+   * {{{detalhe_oportunidade_response_nome_campo_value}}}
    **/
-  @ApiModelProperty(value = "Name of the Content")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_nome_campo_value}}}")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -44,9 +44,9 @@ public class DetalheOportunidadeResponse  {
 
   
   /**
-   * Content of the detail
+   * {{{detalhe_oportunidade_response_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Content of the detail")
+  @ApiModelProperty(value = "{{{detalhe_oportunidade_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }

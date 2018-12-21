@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Parameters for validation of the cardholder dates
+ * {{{dados_portador_request_description}}}
  **/
-@ApiModel(description = "Request Parameters for validation of the cardholder dates")
+@ApiModel(description = "{{{dados_portador_request_description}}}")
 public class DadosPortadorRequest  {
   
   @SerializedName("cartao")
@@ -30,9 +30,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Number of the card
+   * {{{dados_portador_request_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Number of the card")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cartao_value}}}")
   public String getCartao() {
     return cartao;
   }
@@ -42,9 +42,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * CPF number
+   * {{{dados_portador_request_cpf_value}}}
    **/
-  @ApiModelProperty(required = true, value = "CPF number")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cpf_value}}}")
   public String getCpf() {
     return cpf;
   }
@@ -54,9 +54,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Cardholder name
+   * {{{dados_portador_request_nome_value}}}
    **/
-  @ApiModelProperty(value = "Cardholder name")
+  @ApiModelProperty(value = "{{{dados_portador_request_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -66,9 +66,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Birth date of the cardholder
+   * {{{dados_portador_request_data_nascimento_value}}}
    **/
-  @ApiModelProperty(value = "Birth date of the cardholder")
+  @ApiModelProperty(value = "{{{dados_portador_request_data_nascimento_value}}}")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -78,9 +78,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Zip code of the Cardholder residence of the account
+   * {{{dados_portador_request_cep_residencial_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Zip code of the Cardholder residence of the account")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_cep_residencial_value}}}")
   public String getCepResidencial() {
     return cepResidencial;
   }
@@ -90,9 +90,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * E-mail of the cardholder
+   * {{{dados_portador_request_email_value}}}
    **/
-  @ApiModelProperty(required = true, value = "E-mail of the cardholder")
+  @ApiModelProperty(required = true, value = "{{{dados_portador_request_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -102,9 +102,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * DDD of the telephone number of the cardholder
+   * {{{dados_portador_request_ddd_value}}}
    **/
-  @ApiModelProperty(value = "DDD of the telephone number of the cardholder")
+  @ApiModelProperty(value = "{{{dados_portador_request_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -114,9 +114,9 @@ public class DadosPortadorRequest  {
 
   
   /**
-   * Telephone Number of the cardholder
+   * {{{dados_portador_request_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Telephone Number of the cardholder")
+  @ApiModelProperty(value = "{{{dados_portador_request_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }

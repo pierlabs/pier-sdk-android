@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Response of the file parameter
+ * {{{arquivo_parametro_response_description}}}
  **/
-@ApiModel(description = "Object Response of the file parameter")
+@ApiModel(description = "{{{arquivo_parametro_response_description}}}")
 public class ArquivoParametroResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * Identification Code of detail of the file
+   * {{{arquivo_parametro_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of detail of the file")
+  @ApiModelProperty(value = "{{{arquivo_parametro_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * Name that identify the details of the file
+   * {{{arquivo_parametro_response_nome_campo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Name that identify the details of the file")
+  @ApiModelProperty(required = true, value = "{{{arquivo_parametro_response_nome_campo_value}}}")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -44,9 +44,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * Content of nameField
+   * {{{arquivo_parametro_response_conteudo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Content of nameField")
+  @ApiModelProperty(required = true, value = "{{{arquivo_parametro_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }

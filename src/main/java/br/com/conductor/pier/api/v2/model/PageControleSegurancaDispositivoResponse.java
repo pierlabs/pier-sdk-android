@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of user devices
+ * {{{page_controle_seguranca_dispositivo_resposta_descricao}}}
  **/
-@ApiModel(description = "List of user devices")
+@ApiModel(description = "{{{page_controle_seguranca_dispositivo_resposta_descricao}}}")
 public class PageControleSegurancaDispositivoResponse  {
   
   @SerializedName("content")

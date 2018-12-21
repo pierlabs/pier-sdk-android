@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Platform Mobile
+ * {{{plataforma_mobile_response_description}}}
  **/
-@ApiModel(description = "Platform Mobile")
+@ApiModel(description = "{{{plataforma_mobile_response_description}}}")
 public class PlataformaMobileResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class PlataformaMobileResponse  {
 
   
   /**
-   * Identifier of the Platform
+   * {{{plataforma_mobile_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the Platform")
+  @ApiModelProperty(value = "{{{plataforma_mobile_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class PlataformaMobileResponse  {
 
   
   /**
-   * Platform Name
+   * {{{plataforma_mobile_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Platform Name")
+  @ApiModelProperty(value = "{{{plataforma_mobile_response_nome_value}}}")
   public String getNome() {
     return nome;
   }

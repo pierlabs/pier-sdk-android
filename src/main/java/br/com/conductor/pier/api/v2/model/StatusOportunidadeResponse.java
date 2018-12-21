@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the StatusOpportunity Resource
+ * {{{status_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the StatusOpportunity Resource")
+@ApiModel(description = "{{{status_oportunidade_response_description}}}")
 public class StatusOportunidadeResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class StatusOportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the OpportunityStatus
+   * {{{status_oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the OpportunityStatus")
+  @ApiModelProperty(value = "{{{status_oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class StatusOportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the OpportunityType
+   * {{{status_oportunidade_response_id_tipo_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the OpportunityType")
+  @ApiModelProperty(value = "{{{status_oportunidade_response_id_tipo_oportunidade_value}}}")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -48,9 +48,9 @@ public class StatusOportunidadeResponse  {
 
   
   /**
-   * Name of the opportunity status
+   * {{{status_oportunidade_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the opportunity status")
+  @ApiModelProperty(value = "{{{status_oportunidade_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -60,9 +60,9 @@ public class StatusOportunidadeResponse  {
 
   
   /**
-   * Description of the OpportunityType
+   * {{{status_oportunidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the OpportunityType")
+  @ApiModelProperty(value = "{{{status_oportunidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -72,9 +72,9 @@ public class StatusOportunidadeResponse  {
 
   
   /**
-   * Flag that represnts if the type of opportunity is active
+   * {{{status_oportunidade_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag that represnts if the type of opportunity is active")
+  @ApiModelProperty(value = "{{{status_oportunidade_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

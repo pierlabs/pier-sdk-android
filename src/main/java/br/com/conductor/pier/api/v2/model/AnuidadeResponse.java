@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the annuity resource
+ * {{{anuidade_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the annuity resource")
+@ApiModel(description = "{{{anuidade_response_description}}}")
 public class AnuidadeResponse  {
   
   @SerializedName("id")
@@ -23,9 +23,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Identifier of Annuity type of the telephone bonuses
+   * {{{anuidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of Annuity type of the telephone bonuses")
+  @ApiModelProperty(value = "{{{anuidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -35,9 +35,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Description of Annuity type of the telephone bonuses
+   * {{{anuidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of Annuity type of the telephone bonuses")
+  @ApiModelProperty(value = "{{{anuidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -47,9 +47,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * Value of Annuity type of the telephone bonuses
+   * {{{anuidade_response_valor_value}}}
    **/
-  @ApiModelProperty(value = "Value of Annuity type of the telephone bonuses")
+  @ApiModelProperty(value = "{{{anuidade_response_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class AnuidadeResponse  {
 
   
   /**
-   * If the type of annuity of the telephone bonuses is subsidised
+   * {{{anuidade_response_flag_anuidade_bonificada_value}}}
    **/
-  @ApiModelProperty(value = "If the type of annuity of the telephone bonuses is subsidised")
+  @ApiModelProperty(value = "{{{anuidade_response_flag_anuidade_bonificada_value}}}")
   public Boolean getFlagAnuidadeBonificada() {
     return flagAnuidadeBonificada;
   }

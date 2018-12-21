@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of page to report query
+ * {{{page_relatorio_movimentos_controle_processos_response_description}}}
  **/
-@ApiModel(description = "Representation of page to report query")
+@ApiModel(description = "{{{page_relatorio_movimentos_controle_processos_response_description}}}")
 public class PageRelatorioMovimentosControleProcessos  {
   
   @SerializedName("content")

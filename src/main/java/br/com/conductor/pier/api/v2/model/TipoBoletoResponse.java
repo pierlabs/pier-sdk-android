@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Invoice
+ * {{{tipo_boleto_response_description}}}
  **/
-@ApiModel(description = "Invoice")
+@ApiModel(description = "{{{tipo_boleto_response_description}}}")
 public class TipoBoletoResponse  {
   
   @SerializedName("id")
@@ -31,9 +31,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Identifier code of the bank slip type
+   * {{{tipo_boleto_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identifier code of the bank slip type")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Description of the bank slip type
+   * {{{tipo_boleto_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the bank slip type")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -55,9 +55,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Identifier Code of the bank
+   * {{{tipo_boleto_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the bank")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_banco_value}}}")
   public Long getBanco() {
     return banco;
   }
@@ -67,9 +67,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Allowed range for the creation of our number
+   * {{{tipo_boleto_response_faixa_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Allowed range for the creation of our number")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_faixa_nosso_numero_value}}}")
   public Integer getFaixaNossoNumero() {
     return faixaNossoNumero;
   }
@@ -79,9 +79,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Minimum number for our number
+   * {{{tipo_boleto_response_min_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Minimum number for our number")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_min_nosso_numero_value}}}")
   public BigDecimal getMinNossoNumero() {
     return minNossoNumero;
   }
@@ -91,9 +91,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Maximum number for our number
+   * {{{tipo_boleto_response_max_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Maximum number for our number")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_max_nosso_numero_value}}}")
   public BigDecimal getMaxNossoNumero() {
     return maxNossoNumero;
   }
@@ -103,9 +103,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * size of our number
+   * {{{tipo_boleto_response_tam_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "size of our number")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_tam_nosso_numero_value}}}")
   public Integer getTamNossoNumero() {
     return tamNossoNumero;
   }
@@ -115,9 +115,9 @@ public class TipoBoletoResponse  {
 
   
   /**
-   * Last number used
+   * {{{tipo_boleto_response_ultimo_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Last number used")
+  @ApiModelProperty(value = "{{{tipo_boleto_response_ultimo_nosso_numero_value}}}")
   public BigDecimal getUltimoNossoNumero() {
     return ultimoNossoNumero;
   }

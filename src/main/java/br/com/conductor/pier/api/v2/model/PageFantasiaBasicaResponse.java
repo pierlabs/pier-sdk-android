@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the basic fantasy resource
+ * {{{page_fantasia_basica_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the basic fantasy resource")
+@ApiModel(description = "{{{page_fantasia_basica_response_description}}}")
 public class PageFantasiaBasicaResponse  {
   
   @SerializedName("content")

@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object HistoricPaymentResponse
+ * {{{historico_pagamento_response_description}}}
  **/
-@ApiModel(description = "Object HistoricPaymentResponse")
+@ApiModel(description = "{{{historico_pagamento_response_description}}}")
 public class HistoricoPagamentoResponse  {
   
   @SerializedName("idConta")
@@ -33,9 +33,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification Code of the Account
+   * {{{historico_pagamento_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Account")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -45,9 +45,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification Code of the Payment
+   * {{{historico_pagamento_response_id_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Payment")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_id_pagamento_value}}}")
   public Long getIdPagamento() {
     return idPagamento;
   }
@@ -57,9 +57,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification code of the Merchant where the Payment was made, when it is the place of the payment
+   * {{{historico_pagamento_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identification code of the Merchant where the Payment was made, when it is the place of the payment")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -69,9 +69,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification Code of the Banking Institution where the payment was made, when it is the place of the payment
+   * {{{historico_pagamento_response_id_banco_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Banking Institution where the payment was made, when it is the place of the payment")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_id_banco_value}}}")
   public Long getIdBanco() {
     return idBanco;
   }
@@ -81,9 +81,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification Code of the Card
+   * {{{historico_pagamento_response_id_cartao_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Card")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_id_cartao_value}}}")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -93,9 +93,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Value of the Payment
+   * {{{historico_pagamento_response_valor_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Value of the Payment")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_valor_pagamento_value}}}")
   public BigDecimal getValorPagamento() {
     return valorPagamento;
   }
@@ -105,9 +105,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Date and time of the payment. When it is made in a Banking Institution, the payment time is displayed with zero value
+   * {{{historico_pagamento_response_data_hora_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Date and time of the payment. When it is made in a Banking Institution, the payment time is displayed with zero value")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_data_hora_pagamento_value}}}")
   public String getDataHoraPagamento() {
     return dataHoraPagamento;
   }
@@ -117,9 +117,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Date and time which the Payment register was created
+   * {{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Date and time which the Payment register was created")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}")
   public String getDataHoraEntradaPagamento() {
     return dataHoraEntradaPagamento;
   }
@@ -129,9 +129,9 @@ public class HistoricoPagamentoResponse  {
 
   
   /**
-   * Identification Code of the Payment Status
+   * {{{historico_pagamento_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Payment Status")
+  @ApiModelProperty(value = "{{{historico_pagamento_response_status_value}}}")
   public Long getStatus() {
     return status;
   }

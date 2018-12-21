@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Representation of the CVV validation
+ * {{{valida_c_v_v_request_description}}}
  **/
-@ApiModel(description = "Request Representation of the CVV validation")
+@ApiModel(description = "{{{valida_c_v_v_request_description}}}")
 public class ValidaCVVRequest  {
   
   @SerializedName("idChaveCriptografia")
@@ -18,9 +18,9 @@ public class ValidaCVVRequest  {
 
   
   /**
-   * Identification Code of the encrypted key
+   * {{{valida_c_v_v_request_id_chave_criptografia_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the encrypted key")
+  @ApiModelProperty(value = "{{{valida_c_v_v_request_id_chave_criptografia_value}}}")
   public Long getIdChaveCriptografia() {
     return idChaveCriptografia;
   }
@@ -30,9 +30,9 @@ public class ValidaCVVRequest  {
 
   
   /**
-   * Value of the Card Checking (CVV)
+   * {{{valida_c_v_v_request_cvv_value}}}
    **/
-  @ApiModelProperty(value = "Value of the Card Checking (CVV)")
+  @ApiModelProperty(value = "{{{valida_c_v_v_request_cvv_value}}}")
   public String getCvv() {
     return cvv;
   }

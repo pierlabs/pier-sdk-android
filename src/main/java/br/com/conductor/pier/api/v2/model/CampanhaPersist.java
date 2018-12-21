@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Campaign
+ * {{{campanha_persist_description}}}
  **/
-@ApiModel(description = "Campaign")
+@ApiModel(description = "{{{campanha_persist_description}}}")
 public class CampanhaPersist  {
   
   @SerializedName("nome")
@@ -22,9 +22,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * Name of the campaign
+   * {{{campanha_persist_nome_value}}}
    **/
-  @ApiModelProperty(value = "Name of the campaign")
+  @ApiModelProperty(value = "{{{campanha_persist_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -34,9 +34,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * Identification Code of the Campaign type
+   * {{{campanha_persist_id_tipo_campanha_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Campaign type")
+  @ApiModelProperty(value = "{{{campanha_persist_id_tipo_campanha_value}}}")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
   }
@@ -46,9 +46,9 @@ public class CampanhaPersist  {
 
   
   /**
-   * List with the plans of the campaign
+   * {{{campanha_persist_planos_campanhas_value}}}
    **/
-  @ApiModelProperty(value = "List with the plans of the campaign")
+  @ApiModelProperty(value = "{{{campanha_persist_planos_campanhas_value}}}")
   public List<PlanoCampanhaPersist> getPlanosCampanhas() {
     return planosCampanhas;
   }

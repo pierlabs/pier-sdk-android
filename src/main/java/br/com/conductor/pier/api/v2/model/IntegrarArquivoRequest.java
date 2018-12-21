@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Object of file integration
+ * {{{integrar_arquivo_request_description}}}
  **/
-@ApiModel(description = "Request Object of file integration")
+@ApiModel(description = "{{{integrar_arquivo_request_description}}}")
 public class IntegrarArquivoRequest  {
   
   @SerializedName("numeroReceitaFederal")
@@ -16,9 +16,9 @@ public class IntegrarArquivoRequest  {
 
   
   /**
-   * IRs number (CPF) linked to one or more files that will be sent to be integrated
+   * {{{integrar_arquivo_request_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "IRs number (CPF) linked to one or more files that will be sent to be integrated")
+  @ApiModelProperty(value = "{{{integrar_arquivo_request_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }

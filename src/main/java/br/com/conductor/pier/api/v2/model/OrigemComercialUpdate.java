@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Request Parameters to commercial origin update
+ * {{{origem_comercial_update_description}}}
  **/
-@ApiModel(description = "Request Parameters to commercial origin update")
+@ApiModel(description = "{{{origem_comercial_update_description}}}")
 public class OrigemComercialUpdate  {
   
   @SerializedName("nome")
@@ -61,9 +61,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Commercial origin name
+   * {{{origem_comercial_update_nome_value}}}
    **/
-  @ApiModelProperty(value = "Commercial origin name")
+  @ApiModelProperty(value = "{{{origem_comercial_update_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -73,9 +73,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Description of the commecial origin
+   * {{{origem_comercial_update_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the commecial origin")
+  @ApiModelProperty(value = "{{{origem_comercial_update_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -85,9 +85,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Identifier of the Merchant
+   * {{{origem_comercial_update_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the Merchant")
+  @ApiModelProperty(value = "{{{origem_comercial_update_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -97,9 +97,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Identifier of the commercial origin type
+   * {{{origem_comercial_update_id_tipo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Identifier of the commercial origin type")
+  @ApiModelProperty(value = "{{{origem_comercial_update_id_tipo_origem_comercial_value}}}")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
   }
@@ -109,9 +109,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Group identifier of the commercial origin
+   * {{{origem_comercial_update_id_grupo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Group identifier of the commercial origin")
+  @ApiModelProperty(value = "{{{origem_comercial_update_id_grupo_origem_comercial_value}}}")
   public Long getIdGrupoOrigemComercial() {
     return idGrupoOrigemComercial;
   }
@@ -121,9 +121,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate the status of the commercial origin
+   * {{{origem_comercial_update_status_value}}}
    **/
-  @ApiModelProperty(value = "Indicate the status of the commercial origin")
+  @ApiModelProperty(value = "{{{origem_comercial_update_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -133,9 +133,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it allows the pre approvement
+   * {{{origem_comercial_update_flag_pre_aprovado_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it allows the pre approvement")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_pre_aprovado_value}}}")
   public Boolean getFlagPreAprovado() {
     return flagPreAprovado;
   }
@@ -145,9 +145,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it allows immediate approvement
+   * {{{origem_comercial_update_flag_aprovacao_imediata_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it allows immediate approvement")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_aprovacao_imediata_value}}}")
   public Boolean getFlagAprovacaoImediata() {
     return flagAprovacaoImediata;
   }
@@ -157,9 +157,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Fantasy name printed on the plastic
+   * {{{origem_comercial_update_nome_fantasia_plastico_value}}}
    **/
-  @ApiModelProperty(value = "Fantasy name printed on the plastic")
+  @ApiModelProperty(value = "{{{origem_comercial_update_nome_fantasia_plastico_value}}}")
   public String getNomeFantasiaPlastico() {
     return nomeFantasiaPlastico;
   }
@@ -169,9 +169,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it allows the provisory card
+   * {{{origem_comercial_update_flag_cartao_provisorio_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it allows the provisory card")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_cartao_provisorio_value}}}")
   public Boolean getFlagCartaoProvisorio() {
     return flagCartaoProvisorio;
   }
@@ -181,9 +181,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it allows definitive card
+   * {{{origem_comercial_update_flag_cartao_definitivo_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it allows definitive card")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_cartao_definitivo_value}}}")
   public Boolean getFlagCartaoDefinitivo() {
     return flagCartaoDefinitivo;
   }
@@ -193,9 +193,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * User for authentication
+   * {{{origem_comercial_update_usuario_value}}}
    **/
-  @ApiModelProperty(value = "User for authentication")
+  @ApiModelProperty(value = "{{{origem_comercial_update_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -205,9 +205,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Password for the authentication
+   * {{{origem_comercial_update_senha_value}}}
    **/
-  @ApiModelProperty(value = "Password for the authentication")
+  @ApiModelProperty(value = "{{{origem_comercial_update_senha_value}}}")
   public String getSenha() {
     return senha;
   }
@@ -217,9 +217,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it is external origin
+   * {{{origem_comercial_update_flag_origem_externa_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it is external origin")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_origem_externa_value}}}")
   public Boolean getFlagOrigemExterna() {
     return flagOrigemExterna;
   }
@@ -229,9 +229,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if there is update
+   * {{{origem_comercial_update_flag_modificado_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if there is update")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_modificado_value}}}")
   public Boolean getFlagModificado() {
     return flagModificado;
   }
@@ -241,9 +241,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate the invoice sending
+   * {{{origem_comercial_update_flag_envia_fatura_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Indicate the invoice sending")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_envia_fatura_usuario_value}}}")
   public Boolean getFlagEnviaFaturaUsuario() {
     return flagEnviaFaturaUsuario;
   }
@@ -253,9 +253,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it allows the billing credit
+   * {{{origem_comercial_update_flag_credito_faturamento_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it allows the billing credit")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_credito_faturamento_value}}}")
   public Boolean getFlagCreditoFaturamento() {
     return flagCreditoFaturamento;
   }
@@ -265,9 +265,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it gives provisory limit
+   * {{{origem_comercial_update_flag_concede_limite_provisorio_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it gives provisory limit")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_concede_limite_provisorio_value}}}")
   public Boolean getFlagConcedeLimiteProvisorio() {
     return flagConcedeLimiteProvisorio;
   }
@@ -277,9 +277,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if digitize the document
+   * {{{origem_comercial_update_flag_digitalizar_doc_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if digitize the document")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_digitalizar_doc_value}}}")
   public Boolean getFlagDigitalizarDoc() {
     return flagDigitalizarDoc;
   }
@@ -289,9 +289,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it makes embossing in the store
+   * {{{origem_comercial_update_flag_embossing_loja_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it makes embossing in the store")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_embossing_loja_value}}}")
   public Boolean getFlagEmbossingLoja() {
     return flagEmbossingLoja;
   }
@@ -301,9 +301,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Indicate if it is possible to make prior retrieve
+   * {{{origem_comercial_update_flag_consulta_previa_value}}}
    **/
-  @ApiModelProperty(value = "Indicate if it is possible to make prior retrieve")
+  @ApiModelProperty(value = "{{{origem_comercial_update_flag_consulta_previa_value}}}")
   public Boolean getFlagConsultaPrevia() {
     return flagConsultaPrevia;
   }
@@ -313,9 +313,9 @@ public class OrigemComercialUpdate  {
 
   
   /**
-   * Person type
+   * {{{origem_comercial_update_tipo_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "Person type")
+  @ApiModelProperty(value = "{{{origem_comercial_update_tipo_pessoa_value}}}")
   public TipoPessoaEnum getTipoPessoa() {
     return tipoPessoa;
   }

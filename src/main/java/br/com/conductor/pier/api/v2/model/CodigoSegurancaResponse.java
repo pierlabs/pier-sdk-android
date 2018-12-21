@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object security code
+ * {{{codigo_seguranca_response_description}}}
  **/
-@ApiModel(description = "Object security code")
+@ApiModel(description = "{{{codigo_seguranca_response_description}}}")
 public class CodigoSegurancaResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Identification Code of the Safety Code (id)
+   * {{{codigo_seguranca_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Safety Code (id)")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Identification Code of the Issuer. (idIssuer)
+   * {{{codigo_seguranca_response_id_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Issuer. (idIssuer)")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_id_emissor_value}}}")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -50,9 +50,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Show the sending model of the Safety Code
+   * {{{codigo_seguranca_response_modo_envio_value}}}
    **/
-  @ApiModelProperty(value = "Show the sending model of the Safety Code")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_modo_envio_value}}}")
   public String getModoEnvio() {
     return modoEnvio;
   }
@@ -62,9 +62,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Show the contact of the safety code
+   * {{{codigo_seguranca_response_contato_value}}}
    **/
-  @ApiModelProperty(value = "Show the contact of the safety code")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_contato_value}}}")
   public String getContato() {
     return contato;
   }
@@ -74,9 +74,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Show the statys of the Safety Code
+   * {{{codigo_seguranca_response_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Show the statys of the Safety Code")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_ativo_value}}}")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -86,9 +86,9 @@ public class CodigoSegurancaResponse  {
 
   
   /**
-   * Show the expiration date of the safety code created
+   * {{{codigo_seguranca_response_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Show the expiration date of the safety code created")
+  @ApiModelProperty(value = "{{{codigo_seguranca_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }

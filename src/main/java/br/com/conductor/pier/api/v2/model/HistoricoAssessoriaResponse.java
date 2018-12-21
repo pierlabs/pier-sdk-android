@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the {@link HistoricAdvisoryResponse}
+ * {{{historico_assessoria_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the {@link HistoricAdvisoryResponse}")
+@ApiModel(description = "{{{historico_assessoria_response_description}}}")
 public class HistoricoAssessoriaResponse  {
   
   @SerializedName("dataHoraHistorico")
@@ -20,9 +20,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Show the date and time of the historic
+   * {{{historico_assessoria_response_data_hora_historico_value}}}
    **/
-  @ApiModelProperty(value = "Show the date and time of the historic")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_data_hora_historico_value}}}")
   public String getDataHoraHistorico() {
     return dataHoraHistorico;
   }
@@ -32,9 +32,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Show the type of historic can be input or output
+   * {{{historico_assessoria_response_tipo_historico_value}}}
    **/
-  @ApiModelProperty(value = "Show the type of historic can be input or output")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_tipo_historico_value}}}")
   public String getTipoHistorico() {
     return tipoHistorico;
   }
@@ -44,9 +44,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * Show the name of the Collection Advisory related to the historic
+   * {{{historico_assessoria_response_nome_assessoria_value}}}
    **/
-  @ApiModelProperty(value = "Show the name of the Collection Advisory related to the historic")
+  @ApiModelProperty(value = "{{{historico_assessoria_response_nome_assessoria_value}}}")
   public String getNomeAssessoria() {
     return nomeAssessoria;
   }

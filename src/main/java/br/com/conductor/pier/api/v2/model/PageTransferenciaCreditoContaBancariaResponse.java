@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of Bank Account Credit Transfer
+ * {{{page_transferencia_credito_conta_bancaria_response_description}}}
  **/
-@ApiModel(description = "List of Bank Account Credit Transfer")
+@ApiModel(description = "{{{page_transferencia_credito_conta_bancaria_response_description}}}")
 public class PageTransferenciaCreditoContaBancariaResponse  {
   
   @SerializedName("content")

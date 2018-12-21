@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the TypeOpportunity resource
+ * {{{tipo_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the TypeOpportunity resource")
+@ApiModel(description = "{{{tipo_oportunidade_response_description}}}")
 public class TipoOportunidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * Identifier Code of the TypeOpportunity
+   * {{{tipo_oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identifier Code of the TypeOpportunity")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * Description of the TypeOpportunity
+   * {{{tipo_oportunidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Description of the TypeOpportunity")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * Flag that represents if the opportunity type is active
+   * {{{tipo_oportunidade_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Flag that represents if the opportunity type is active")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }

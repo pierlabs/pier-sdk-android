@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Answer Representation of the Template Type Resource
+ * {{{tipo_template_response_description}}}
  **/
-@ApiModel(description = "Answer Representation of the Template Type Resource")
+@ApiModel(description = "{{{tipo_template_response_description}}}")
 public class TipoTemplateResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * ID of the Type of Template
+   * {{{tipo_template_response_id_value}}}
    **/
-  @ApiModelProperty(value = "ID of the Type of Template")
+  @ApiModelProperty(value = "{{{tipo_template_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Nome of the Type of Template
+   * {{{tipo_template_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome of the Type of Template")
+  @ApiModelProperty(value = "{{{tipo_template_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -46,9 +46,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Description of the Tipo of Template
+   * {{{tipo_template_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Description of the Tipo of Template")
+  @ApiModelProperty(value = "{{{tipo_template_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +58,9 @@ public class TipoTemplateResponse  {
 
   
   /**
-   * Acronym of the Type of Template
+   * {{{tipo_template_response_sigla_value}}}
    **/
-  @ApiModelProperty(value = "Acronym of the Type of Template")
+  @ApiModelProperty(value = "{{{tipo_template_response_sigla_value}}}")
   public String getSigla() {
     return sigla;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation of user device response
+ * {{{controle_seguranca_dispositivo_resposta_descricao}}}
  **/
-@ApiModel(description = "Representation of user device response")
+@ApiModel(description = "{{{controle_seguranca_dispositivo_resposta_descricao}}}")
 public class ControleSegurancaDispositivoResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class ControleSegurancaDispositivoResponse  {
 
   
   /**
-   * User device record identifier
+   * {{{controle_seguranca_dispositivo_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "User device record identifier")
+  @ApiModelProperty(value = "{{{controle_seguranca_dispositivo_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class ControleSegurancaDispositivoResponse  {
 
   
   /**
-   * User identifier code
+   * {{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}
    **/
-  @ApiModelProperty(value = "User identifier code")
+  @ApiModelProperty(value = "{{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }
@@ -44,9 +44,9 @@ public class ControleSegurancaDispositivoResponse  {
 
   
   /**
-   * User device identification (phoneId)
+   * {{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}
    **/
-  @ApiModelProperty(value = "User device identification (phoneId)")
+  @ApiModelProperty(value = "{{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}")
   public String getPhoneId() {
     return phoneId;
   }

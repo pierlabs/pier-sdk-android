@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * telephone desktop billing description
+ * {{{telefone_escritorio_cobranca_d_t_o_description}}}
  **/
-@ApiModel(description = "telephone desktop billing description")
+@ApiModel(description = "{{{telefone_escritorio_cobranca_d_t_o_description}}}")
 public class TelefoneEscritorioCobrancaDTO  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telephone office charge id
+   * {{{telefone_escritorio_cobranca_d_t_o_id}}}
    **/
-  @ApiModelProperty(value = "Telephone office charge id")
+  @ApiModelProperty(value = "{{{telefone_escritorio_cobranca_d_t_o_id}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * ddd phone billing desk
+   * {{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}
    **/
-  @ApiModelProperty(required = true, value = "ddd phone billing desk")
+  @ApiModelProperty(required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +46,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * phone billing desk telephone
+   * {{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}
    **/
-  @ApiModelProperty(required = true, value = "phone billing desk telephone")
+  @ApiModelProperty(required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +58,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * telephone bill collection extension
+   * {{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}
    **/
-  @ApiModelProperty(value = "telephone bill collection extension")
+  @ApiModelProperty(value = "{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }

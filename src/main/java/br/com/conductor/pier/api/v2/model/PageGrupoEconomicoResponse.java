@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Response Representation of the economic groups resource
+ * {{{page_grupo_economico_response_description}}}
  **/
-@ApiModel(description = "Response Representation of the economic groups resource")
+@ApiModel(description = "{{{page_grupo_economico_response_description}}}")
 public class PageGrupoEconomicoResponse  {
   
   @SerializedName("content")

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object Telphone
+ * {{{telefone_adicional_update_description}}}
  **/
-@ApiModel(description = "Object Telphone")
+@ApiModel(description = "{{{telefone_adicional_update_description}}}")
 public class TelefoneAdicionalUpdate  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * Identification Code of the Telephone
+   * {{{telefone_adicional_update_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Telephone")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * Identification Code of the Telephone Type
+   * {{{telefone_adicional_update_id_tipo_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Telephone Type")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_id_tipo_telefone_value}}}")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -48,9 +48,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * Phone DDD
+   * {{{telefone_adicional_update_ddd_value}}}
    **/
-  @ApiModelProperty(value = "Phone DDD")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * Phone Number
+   * {{{telefone_adicional_update_telefone_value}}}
    **/
-  @ApiModelProperty(value = "Phone Number")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * Phone Branch
+   * {{{telefone_adicional_update_ramal_value}}}
    **/
-  @ApiModelProperty(value = "Phone Branch")
+  @ApiModelProperty(value = "{{{telefone_adicional_update_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }

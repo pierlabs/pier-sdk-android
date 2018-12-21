@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ObjectAddressApproved;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponseValue;
 import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
@@ -12,9 +12,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * PersonLegalApproedPersist
+ * {{{pessoa_juridica_aprovada_response_description}}}
  **/
-@ApiModel(description = "PersonLegalApproedPersist")
+@ApiModel(description = "{{{pessoa_juridica_aprovada_response_description}}}")
 public class PessoaJuridicaAprovadaResponse  {
   
   @SerializedName("id")
@@ -56,7 +56,7 @@ public class PessoaJuridicaAprovadaResponse  {
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
-  private List<ObjectAddressApproved> enderecos = null;
+  private List<EnderecoAprovadoResponseValue> enderecos = null;
   @SerializedName("socios")
   private List<SocioAprovadoResponse> socios = null;
   @SerializedName("referencias")
@@ -72,9 +72,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Identification Code of the Legal Person (id)
+   * {{{pessoa_juridica_aprovada_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Legal Person (id)")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -84,9 +84,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Show the full name of the social reason (business name)
+   * {{{pessoa_juridica_aprovada_response_razao_social_value}}}
    **/
-  @ApiModelProperty(value = "Show the full name of the social reason (business name)")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_razao_social_value}}}")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -96,9 +96,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Show the fantasy name of the company
+   * {{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}
    **/
-  @ApiModelProperty(value = "Show the fantasy name of the company")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -108,9 +108,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * National Register Number of the Legal Person (CNPJ)
+   * {{{pessoa_juridica_aprovada_response_cnpj_value}}}
    **/
-  @ApiModelProperty(value = "National Register Number of the Legal Person (CNPJ)")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_cnpj_value}}}")
   public String getCnpj() {
     return cnpj;
   }
@@ -120,9 +120,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * State Enrollment Number (SE)
+   * {{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}
    **/
-  @ApiModelProperty(value = "State Enrollment Number (SE)")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -132,9 +132,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Opening date of the company, this date must be informed in the format: yyyy-MM-dd
+   * {{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}
    **/
-  @ApiModelProperty(value = "Opening date of the company, this date must be informed in the format: yyyy-MM-dd")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}")
   public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
@@ -144,9 +144,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Id of the commercial origin
+   * {{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Id of the commercial origin")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -156,9 +156,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Id of the Product
+   * {{{pessoa_juridica_aprovada_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "Id of the Product")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -168,9 +168,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Bank number
+   * {{{pessoa_juridica_aprovada_response_numero_banco_value}}}
    **/
-  @ApiModelProperty(value = "Bank number")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_numero_banco_value}}}")
   public Integer getNumeroBanco() {
     return numeroBanco;
   }
@@ -180,9 +180,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Agency number
+   * {{{pessoa_juridica_aprovada_response_numero_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Agency number")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_numero_agencia_value}}}")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -192,9 +192,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Current Account Number
+   * {{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Current Account Number")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -204,9 +204,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Company name
+   * {{{pessoa_juridica_aprovada_response_email_value}}}
    **/
-  @ApiModelProperty(value = "Company name")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -216,9 +216,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Expiration day
+   * {{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Expiration day")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}")
   public Integer getDiaVencimento() {
     return diaVencimento;
   }
@@ -228,9 +228,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Name that must be printed on the card
+   * {{{pessoa_juridica_aprovada_response_nome_impresso_value}}}
    **/
-  @ApiModelProperty(value = "Name that must be printed on the card")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_nome_impresso_value}}}")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -240,9 +240,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Identification Code of the Registered Account
+   * {{{pessoa_juridica_aprovada_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Registered Account")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -252,9 +252,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Identification Code of the purpose
+   * {{{pessoa_juridica_aprovada_response_id_proposta_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the purpose")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_id_proposta_value}}}")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -264,9 +264,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Indicate the way which the register of the client was created
+   * {{{pessoa_juridica_aprovada_response_canal_entrada_value}}}
    **/
-  @ApiModelProperty(value = "Indicate the way which the register of the client was created")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_canal_entrada_value}}}")
   public String getCanalEntrada() {
     return canalEntrada;
   }
@@ -276,9 +276,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Indicate the value of the score attributed to the client (in case it is not informed it will be attributed the value =0)
+   * {{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}
    **/
-  @ApiModelProperty(value = "Indicate the value of the score attributed to the client (in case it is not informed it will be attributed the value =0)")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}")
   public Integer getValorPontuacao() {
     return valorPontuacao;
   }
@@ -288,9 +288,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Show the telephones of the company
+   * {{{pessoa_juridica_aprovada_response_telefones_value}}}
    **/
-  @ApiModelProperty(value = "Show the telephones of the company")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_telefones_value}}}")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
   }
@@ -300,21 +300,21 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * It may be informed the types of address: Residential, Commercial and Others
+   * {{{pessoa_juridica_aprovada_response_enderecos_value}}}
    **/
-  @ApiModelProperty(value = "It may be informed the types of address: Residential, Commercial and Others")
-  public List<ObjectAddressApproved> getEnderecos() {
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_enderecos_value}}}")
+  public List<EnderecoAprovadoResponseValue> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<ObjectAddressApproved> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
   }
 
   
   /**
-   * Show the dates of the partners in the company, in case that it exists
+   * {{{pessoa_juridica_aprovada_response_socios_value}}}
    **/
-  @ApiModelProperty(value = "Show the dates of the partners in the company, in case that it exists")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_socios_value}}}")
   public List<SocioAprovadoResponse> getSocios() {
     return socios;
   }
@@ -324,9 +324,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Show the dates of the partners of the company, in case that it exists
+   * {{{pessoa_juridica_aprovada_response_referencias_value}}}
    **/
-  @ApiModelProperty(value = "Show the dates of the partners of the company, in case that it exists")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_referencias_value}}}")
   public List<ReferenciaComercialAprovadoResponse> getReferencias() {
     return referencias;
   }
@@ -336,9 +336,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Value of the Global limit
+   * {{{pessoa_juridica_aprovada_response_limite_global_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of the Global limit")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_response_limite_global_value}}}")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -348,9 +348,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Maximum value of limit credit to make trnsactions
+   * {{{pessoa_juridica_aprovada_response_limite_maximo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Maximum value of limit credit to make trnsactions")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_response_limite_maximo_value}}}")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -360,9 +360,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Value of accumulated credit limit of sum of the parcels of the shops
+   * {{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of accumulated credit limit of sum of the parcels of the shops")
+  @ApiModelProperty(required = true, value = "{{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -372,9 +372,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) 
+   * {{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}
    **/
-  @ApiModelProperty(value = "Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) ")
+  @ApiModelProperty(value = "{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
   }

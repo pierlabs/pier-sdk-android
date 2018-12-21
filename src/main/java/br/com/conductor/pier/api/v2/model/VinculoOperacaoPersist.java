@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object LinkOperation
+ * {{{vinculo_operacao_persist_description}}}
  **/
-@ApiModel(description = "Object LinkOperation")
+@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
 public class VinculoOperacaoPersist  {
   
   @SerializedName("idProduto")
@@ -20,9 +20,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * Identification Code of the Product (id)
+   * {{{vinculo_operacao_persist_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Product (id)")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -32,9 +32,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * Identification Code of the Operation (id)
+   * {{{vinculo_operacao_persist_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Operation (id)")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -44,9 +44,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * Code MCC
+   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
    **/
-  @ApiModelProperty(value = "Code MCC")
+  @ApiModelProperty(value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }

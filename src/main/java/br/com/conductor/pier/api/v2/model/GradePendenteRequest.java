@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representation Object Request for grid pending
+ * {{{grade_pendente_request_description}}}
  **/
-@ApiModel(description = "Representation Object Request for grid pending")
+@ApiModel(description = "{{{grade_pendente_request_description}}}")
 public class GradePendenteRequest  {
   
   @SerializedName("idConta")
@@ -18,9 +18,9 @@ public class GradePendenteRequest  {
 
   
   /**
-   * Identifier Code of the Account
+   * {{{grade_pendente_request_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "Identifier Code of the Account")
+  @ApiModelProperty(value = "{{{grade_pendente_request_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -30,9 +30,9 @@ public class GradePendenteRequest  {
 
   
   /**
-   * Date of adjustment in the format yyyy-MM-dd
+   * {{{grade_pendente_request_data_base_value}}}
    **/
-  @ApiModelProperty(value = "Date of adjustment in the format yyyy-MM-dd")
+  @ApiModelProperty(value = "{{{grade_pendente_request_data_base_value}}}")
   public String getDataBase() {
     return dataBase;
   }

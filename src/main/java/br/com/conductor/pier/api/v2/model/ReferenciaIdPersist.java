@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Reference object representation per Id
+ * {{{referencia_id_persist_description}}}
  **/
-@ApiModel(description = "Reference object representation per Id")
+@ApiModel(description = "{{{referencia_id_persist_description}}}")
 public class ReferenciaIdPersist  {
   
   @SerializedName("id")

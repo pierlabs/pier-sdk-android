@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Limit Availability
+ * {{{limite_disponibilidade_response_description}}}
  **/
-@ApiModel(description = "Limit Availability")
+@ApiModel(description = "{{{limite_disponibilidade_response_description}}}")
 public class LimiteDisponibilidadeResponse  {
   
   @SerializedName("id")
@@ -59,9 +59,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Identification Code of the Availability aand Limit (id)
+   * {{{limite_disponibilidade_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identification Code of the Availability aand Limit (id)")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -71,9 +71,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the Credit limit
+   * {{{limite_disponibilidade_response_limite_global_value}}}
    **/
-  @ApiModelProperty(value = "Value of the Credit limit")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_global_value}}}")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -83,9 +83,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit to use in national shops
+   * {{{limite_disponibilidade_response_limite_compra_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit to use in national shops")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_compra_value}}}")
   public BigDecimal getLimiteCompra() {
     return limiteCompra;
   }
@@ -95,9 +95,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of credit limit for transactions of parceled shops
+   * {{{limite_disponibilidade_response_limite_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Value of credit limit for transactions of parceled shops")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_parcelado_value}}}")
   public BigDecimal getLimiteParcelado() {
     return limiteParcelado;
   }
@@ -107,9 +107,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of accumulated credit limit of the sum of parcels that are made in this modality
+   * {{{limite_disponibilidade_response_limite_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Value of accumulated credit limit of the sum of parcels that are made in this modality")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_parcelas_value}}}")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -119,9 +119,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit for transactions of National Withdrawal
+   * {{{limite_disponibilidade_response_limite_saque_global_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit for transactions of National Withdrawal")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_saque_global_value}}}")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -131,9 +131,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit for transactions of National Withdrawal inside of each billing cycle
+   * {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit for transactions of National Withdrawal inside of each billing cycle")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_saque_periodo_value}}}")
   public BigDecimal getLimiteSaquePeriodo() {
     return limiteSaquePeriodo;
   }
@@ -143,9 +143,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit margin for consignations (discount in payroll)
+   * {{{limite_disponibilidade_response_limite_consignado_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit margin for consignations (discount in payroll)")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_consignado_value}}}")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
   }
@@ -155,9 +155,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the Credit limit to use in international shops
+   * {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
    **/
-  @ApiModelProperty(value = "Value of the Credit limit to use in international shops")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_compra_value}}}")
   public BigDecimal getLimiteInternacionalCompra() {
     return limiteInternacionalCompra;
   }
@@ -167,9 +167,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit for international transactions of parceled shops
+   * {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit for international transactions of parceled shops")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}")
   public BigDecimal getLimiteInternacionalParcelado() {
     return limiteInternacionalParcelado;
   }
@@ -179,9 +179,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit accumulated of the sum of international shop parcels that are made in this modality
+   * {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit accumulated of the sum of international shop parcels that are made in this modality")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}")
   public BigDecimal getLimiteInternacionalParcelas() {
     return limiteInternacionalParcelas;
   }
@@ -191,9 +191,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of Credit limit for transactions of international withdrawals
+   * {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
    **/
-  @ApiModelProperty(value = "Value of Credit limit for transactions of international withdrawals")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}")
   public BigDecimal getLimiteInternacionalSaqueGlobal() {
     return limiteInternacionalSaqueGlobal;
   }
@@ -203,9 +203,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit limit for transactions of international Withdrawal inside of each billing cycle
+   * {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit limit for transactions of international Withdrawal inside of each billing cycle")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}")
   public BigDecimal getLimiteInternacionalSaquePeriodo() {
     return limiteInternacionalSaquePeriodo;
   }
@@ -215,9 +215,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Maximum value of the credit limit to make transactions
+   * {{{limite_disponibilidade_response_limite_maximo_value}}}
    **/
-  @ApiModelProperty(value = "Maximum value of the credit limit to make transactions")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_limite_maximo_value}}}")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -227,9 +227,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Credit value available for the transactions
+   * {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
    **/
-  @ApiModelProperty(value = "Credit value available for the transactions")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_global_value}}}")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -239,9 +239,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Credit Value available for transactions of National shop
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
    **/
-  @ApiModelProperty(value = "Credit Value available for transactions of National shop")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}")
   public BigDecimal getSaldoDisponivelCompra() {
     return saldoDisponivelCompra;
   }
@@ -251,9 +251,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the available credit for transactions of Parceled National Shop
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
    **/
-  @ApiModelProperty(value = "Value of the available credit for transactions of Parceled National Shop")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}")
   public BigDecimal getSaldoDisponivelParcelado() {
     return saldoDisponivelParcelado;
   }
@@ -263,9 +263,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Credit value available to use as the National parcel value in a determined billing cycle
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Credit value available to use as the National parcel value in a determined billing cycle")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}")
   public BigDecimal getSaldoDisponivelParcelas() {
     return saldoDisponivelParcelas;
   }
@@ -275,9 +275,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the credit that the cardholder has available to make transactions of National Withdrawal
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
    **/
-  @ApiModelProperty(value = "Value of the credit that the cardholder has available to make transactions of National Withdrawal")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -287,9 +287,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Current Balance of the Fidelity Point Program
+   * {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
    **/
-  @ApiModelProperty(value = "Current Balance of the Fidelity Point Program")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}")
   public BigDecimal getSaldoPontosFidelidade() {
     return saldoPontosFidelidade;
   }
@@ -299,9 +299,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of the available credit for transactions of international shop
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
    **/
-  @ApiModelProperty(value = "Value of the available credit for transactions of international shop")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}")
   public BigDecimal getSaldoDisponivelCompraInternacional() {
     return saldoDisponivelCompraInternacional;
   }
@@ -311,9 +311,9 @@ public class LimiteDisponibilidadeResponse  {
 
   
   /**
-   * Value of available credit for transactions of international Withdrawal
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
    **/
-  @ApiModelProperty(value = "Value of available credit for transactions of international Withdrawal")
+  @ApiModelProperty(value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}")
   public BigDecimal getSaldoDisponivelSaqueInternacional() {
     return saldoDisponivelSaqueInternacional;
   }

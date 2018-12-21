@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Object POS
+ * {{{maquineta_persist_description}}}
  **/
-@ApiModel(description = "Object POS")
+@ApiModel(description = "{{{maquineta_persist_description}}}")
 public class MaquinetaPersist  {
   
   @SerializedName("idTerminal")
@@ -23,9 +23,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Identification Code of the Terminal (id)
+   * {{{maquineta_persist_id_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the Terminal (id)")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_id_terminal_value}}}")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +35,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Identification Code of the POS type (id)
+   * {{{maquineta_persist_id_tipo_maquineta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Identification Code of the POS type (id)")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_id_tipo_maquineta_value}}}")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +47,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Value of the POS maintenance
+   * {{{maquineta_persist_valor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Value of the POS maintenance")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Deploy date of the POS, Insert in the format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+   * {{{maquineta_persist_data_hora_implantacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Deploy date of the POS, Insert in the format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_data_hora_implantacao_value}}}")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * List of transfers
+ * {{{page_transferencia_response_description}}}
  **/
-@ApiModel(description = "List of transfers")
+@ApiModel(description = "{{{page_transferencia_response_description}}}")
 public class PageTransferenciaResponse  {
   
   @SerializedName("content")

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * CardStageUpdate
+ * {{{estagio_cartao_update}}}
  **/
-@ApiModel(description = "CardStageUpdate")
+@ApiModel(description = "{{{estagio_cartao_update}}}")
 public class EstagioCartaoUpdate  {
   
   @SerializedName("id")
@@ -16,9 +16,9 @@ public class EstagioCartaoUpdate  {
 
   
   /**
-   * ID of the Card Stage
+   * {{{estagio_cartao_update_id_value}}}
    **/
-  @ApiModelProperty(value = "ID of the Card Stage")
+  @ApiModelProperty(value = "{{{estagio_cartao_update_id_value}}}")
   public Long getId() {
     return id;
   }
