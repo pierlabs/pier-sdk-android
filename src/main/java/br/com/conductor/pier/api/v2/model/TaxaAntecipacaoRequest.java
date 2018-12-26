@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
+ * {{{taxa_antecipacao_request_description}}}
  **/
-@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o")
+@ApiModel(description = "{{{taxa_antecipacao_request_description}}}")
 public class TaxaAntecipacaoRequest  {
   
   public enum TipoTransacaoEnum {
@@ -22,9 +22,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us
+   * {{{taxa_antecipacao_request_tipo_transacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us")
+  @ApiModelProperty(value = "{{{taxa_antecipacao_request_tipo_transacao_value}}}")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
   }
@@ -34,9 +34,9 @@ public class TaxaAntecipacaoRequest  {
 
   
   /**
-   * Valor da Taxa de Antecipa\u00E7\u00E3o
+   * {{{taxa_antecipacao_request_valor_taxa_value}}}
    **/
-  @ApiModelProperty(value = "Valor da Taxa de Antecipa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{taxa_antecipacao_request_valor_taxa_value}}}")
   public BigDecimal getValorTaxa() {
     return valorTaxa;
   }

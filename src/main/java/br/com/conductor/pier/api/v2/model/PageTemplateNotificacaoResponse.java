@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de Notifica\u00E7\u00F5es (layouts) de E-mail
+ * {{{page_template_notificacao_response_description}}}
  **/
-@ApiModel(description = "Lista de Notifica\u00E7\u00F5es (layouts) de E-mail")
+@ApiModel(description = "{{{page_template_notificacao_response_description}}}")
 public class PageTemplateNotificacaoResponse  {
   
   @SerializedName("content")

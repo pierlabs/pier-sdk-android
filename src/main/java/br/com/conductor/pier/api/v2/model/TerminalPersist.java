@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Terminal
+ * {{{terminal_persist_description}}}
  **/
-@ApiModel(description = "Objeto Terminal")
+@ApiModel(description = "{{{terminal_persist_description}}}")
 public class TerminalPersist  {
   
   @SerializedName("idEstabelecimento")
@@ -20,9 +20,9 @@ public class TerminalPersist  {
 
   
   /**
-   * Apresenta o id do estabelecimento
+   * {{{terminal_persist_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o id do estabelecimento")
+  @ApiModelProperty(required = true, value = "{{{terminal_persist_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -32,9 +32,9 @@ public class TerminalPersist  {
 
   
   /**
-   * Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
+   * {{{terminal_persist_flag_consulta_extrato_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))")
+  @ApiModelProperty(required = true, value = "{{{terminal_persist_flag_consulta_extrato_value}}}")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }
@@ -44,9 +44,9 @@ public class TerminalPersist  {
 
   
   /**
-   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
+   * {{{terminal_persist_flag_terminal_virtual_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))")
+  @ApiModelProperty(required = true, value = "{{{terminal_persist_flag_terminal_virtual_value}}}")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }

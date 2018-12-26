@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista tipos de arquivos cadastrados no sistema
+ * {{{page_tipo_arquivo_response_description}}}
  **/
-@ApiModel(description = "Lista tipos de arquivos cadastrados no sistema")
+@ApiModel(description = "{{{page_tipo_arquivo_response_description}}}")
 public class PageTipoArquivoResponse  {
   
   @SerializedName("content")

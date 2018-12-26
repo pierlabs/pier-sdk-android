@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto transacao processada e N\u00E3o Processada
+ * {{{transacao_processada_nao_processada_response_description}}}
  **/
-@ApiModel(description = "Objeto transacao processada e N\u00E3o Processada")
+@ApiModel(description = "{{{transacao_processada_nao_processada_response_description}}}")
 public class TransacaoProcessadaNaoProcessadaResponse  {
   
   @SerializedName("cartaoMascarado")
@@ -85,9 +85,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000
+   * {{{transacao_nao_processada_response_cartao_mascarado_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_cartao_mascarado_value}}}")
   public String getCartaoMascarado() {
     return cartaoMascarado;
   }
@@ -97,9 +97,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_autorizacao_value}}}")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -109,9 +109,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento
+   * {{{transacao_nao_processada_response_codigo_mcc_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_mcc_value}}}")
   public Long getCodigoMCC() {
     return codigoMCC;
   }
@@ -121,9 +121,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217
+   * {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_moeda_destino_value}}}")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
   }
@@ -133,9 +133,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217
+   * {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_moeda_origem_value}}}")
   public String getCodigoMoedaOrigem() {
     return codigoMoedaOrigem;
   }
@@ -145,9 +145,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado
+   * {{{transacao_nao_processada_response_codigo_referencia_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_referencia_value}}}")
   public String getCodigoReferencia() {
     return codigoReferencia;
   }
@@ -157,9 +157,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_codigo_terminal_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_codigo_terminal_value}}}")
   public String getCodigoTerminal() {
     return codigoTerminal;
   }
@@ -169,9 +169,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)
+   * {{{transacao_nao_processada_response_cotacao_usd_value}}}
    **/
-  @ApiModelProperty(value = "Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_cotacao_usd_value}}}")
   public BigDecimal getCotacaoUSD() {
     return cotacaoUSD;
   }
@@ -181,9 +181,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)
+   * {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
    **/
-  @ApiModelProperty(value = "Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_cotacao_usd_value}}}")
   public String getDataCotacaoUSD() {
     return dataCotacaoUSD;
   }
@@ -193,9 +193,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Data de Faturamento da Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_data_faturamento_value}}}
    **/
-  @ApiModelProperty(value = "Data de Faturamento da Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_faturamento_value}}}")
   public String getDataFaturamento() {
     return dataFaturamento;
   }
@@ -205,9 +205,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Data em que a Transa\u00E7\u00E3o foi realizada
+   * {{{transacao_nao_processada_response_data_origem_value}}}
    **/
-  @ApiModelProperty(value = "Data em que a Transa\u00E7\u00E3o foi realizada")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_origem_value}}}")
   public String getDataOrigem() {
     return dataOrigem;
   }
@@ -217,9 +217,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Data de Vencimento da Fatura
+   * {{{transacao_nao_processada_response_data_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Data de Vencimento da Fatura")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_data_vencimento_value}}}")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
@@ -229,9 +229,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_descricao_abreviada_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_descricao_abreviada_value}}}")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;
   }
@@ -241,9 +241,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada
+   * {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}")
   public String getDescricaoTipoTransacaoNaoProcessada() {
     return descricaoTipoTransacaoNaoProcessada;
   }
@@ -253,9 +253,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'
+   * {{{transacao_nao_processada_response_flag_credito_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_flag_credito_value}}}")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -265,9 +265,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura
+   * {{{transacao_nao_processada_response_flag_faturado_value}}}
    **/
-  @ApiModelProperty(value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_flag_faturado_value}}}")
   public Integer getFlagFaturado() {
     return flagFaturado;
   }
@@ -277,9 +277,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do grupo do Estabelecimento
+   * {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}")
   public String getGrupoDescricaoMCC() {
     return grupoDescricaoMCC;
   }
@@ -289,9 +289,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento
+   * {{{transacao_nao_processada_response_grupo_mcc_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_grupo_mcc_value}}}")
   public Long getGrupoMCC() {
     return grupoMCC;
   }
@@ -301,9 +301,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+   * {{{transacao_nao_processada_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -313,9 +313,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
+   * {{{transacao_nao_processada_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -325,9 +325,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Evento Ajuste
+   * {{{transacao_nao_processada_response_id_evento_ajuste_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Evento Ajuste")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_evento_ajuste_value}}}")
   public Long getIdEventoAjuste() {
     return idEventoAjuste;
   }
@@ -337,9 +337,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}")
   public Long getIdTipoTransacaoNaoProcessada() {
     return idTipoTransacaoNaoProcessada;
   }
@@ -349,9 +349,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno
+   * {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_id_transacao_estorno_value}}}")
   public Long getIdTransacaoEstorno() {
     return idTransacaoEstorno;
   }
@@ -361,9 +361,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Localidade do Estabelecimento
+   * {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Localidade do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}")
   public String getLocalidadeEstabelecimento() {
     return localidadeEstabelecimento;
   }
@@ -373,9 +373,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_modo_entrada_transacao_value}}}")
   public String getModoEntradaTransacao() {
     return modoEntradaTransacao;
   }
@@ -385,9 +385,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Nome do Estabelecimento
+   * {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_estabelecimento_value}}}")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
   }
@@ -397,9 +397,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Nome Fantasia do Estabelecimento
+   * {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "Nome Fantasia do Estabelecimento")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}")
   public String getNomeFantasiaEstabelecimento() {
     return nomeFantasiaEstabelecimento;
   }
@@ -409,9 +409,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Nome completo do Portador do Cart\u00E3o
+   * {{{transacao_nao_processada_response_nome_portador_value}}}
    **/
-  @ApiModelProperty(value = "Nome completo do Portador do Cart\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_nome_portador_value}}}")
   public String getNomePortador() {
     return nomePortador;
   }
@@ -421,9 +421,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela
+   * {{{transacao_nao_processada_response_numero_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_numero_parcela_value}}}")
   public Long getParcela() {
     return parcela;
   }
@@ -433,9 +433,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas
+   * {{{transacao_nao_processada_response_plano_parcelamento_value}}}
    **/
-  @ApiModelProperty(value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_plano_parcelamento_value}}}")
   public Long getPlano() {
     return plano;
   }
@@ -445,9 +445,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o
+   * {{{transacao_nao_processada_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -457,9 +457,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas
+   * {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
    **/
-  @ApiModelProperty(value = "Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_taxa_embarque_value}}}")
   public BigDecimal getTaxaEmbarque() {
     return taxaEmbarque;
   }
@@ -469,9 +469,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Transa\u00E7\u00E3o em Real (BRL)
+   * {{{transacao_nao_processada_response_valor_brl_value}}}
    **/
-  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em Real (BRL)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_brl_value}}}")
   public BigDecimal getValorBRL() {
     return valorBRL;
   }
@@ -481,9 +481,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
+   * {{{transacao_nao_processada_response_valor_entrada_value}}}
    **/
-  @ApiModelProperty(value = "Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_entrada_value}}}")
   public BigDecimal getValorEntrada() {
     return valorEntrada;
   }
@@ -493,9 +493,9 @@ public class TransacaoProcessadaNaoProcessadaResponse  {
 
   
   /**
-   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)
+   * {{{transacao_nao_processada_response_valor_usd_value}}}
    **/
-  @ApiModelProperty(value = "Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)")
+  @ApiModelProperty(value = "{{{transacao_nao_processada_response_valor_usd_value}}}")
   public BigDecimal getValorUSD() {
     return valorUSD;
   }

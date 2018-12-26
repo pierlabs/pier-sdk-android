@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso do Template de Documento
+ * {{{documento_template_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do Template de Documento")
+@ApiModel(description = "{{{documento_template_response_description}}}")
 public class DocumentoTemplateResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class DocumentoTemplateResponse  {
 
   
   /**
-   * ID do Template do Documento
+   * {{{documento_template_response_id_value}}}
    **/
-  @ApiModelProperty(value = "ID do Template do Documento")
+  @ApiModelProperty(value = "{{{documento_template_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class DocumentoTemplateResponse  {
 
   
   /**
-   * ID do Tipo de Template
+   * {{{documento_template_response_id_tipo_template_value}}}
    **/
-  @ApiModelProperty(value = "ID do Tipo de Template")
+  @ApiModelProperty(value = "{{{documento_template_response_id_tipo_template_value}}}")
   public Long getIdTipoTemplate() {
     return idTipoTemplate;
   }

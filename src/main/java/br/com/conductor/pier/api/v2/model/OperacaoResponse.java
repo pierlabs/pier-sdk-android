@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso Operacao
+ * {{{operacao_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
+@ApiModel(description = "{{{operacao_response_description}}}")
 public class OperacaoResponse  {
   
   @SerializedName("idOperacao")
@@ -32,9 +32,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00F3digo que identifica a opera\u00E7\u00E3o
+   * {{{operacao_response_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{operacao_response_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -44,9 +44,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
+   * {{{operacao_response_codigo_processamento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
+  @ApiModelProperty(value = "{{{operacao_response_codigo_processamento_value}}}")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -56,9 +56,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
+   * {{{operacao_response_codigo_processamento_cancelamento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
+  @ApiModelProperty(value = "{{{operacao_response_codigo_processamento_cancelamento_value}}}")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
   }
@@ -68,9 +68,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Nome da opera\u00E7\u00E3o
+   * {{{operacao_response_nome_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Nome da opera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{operacao_response_nome_operacao_value}}}")
   public String getNomeOperacao() {
     return nomeOperacao;
   }
@@ -80,9 +80,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00E7a de juros
+   * {{{operacao_response_flag_cobra_juros_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de juros")
+  @ApiModelProperty(value = "{{{operacao_response_flag_cobra_juros_value}}}")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
   }
@@ -92,9 +92,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag indicativa para crobran\u00E7a de tarifas
+   * {{{operacao_response_flag_cobra_tarifa_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de tarifas")
+  @ApiModelProperty(value = "{{{operacao_response_flag_cobra_tarifa_value}}}")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
   }
@@ -104,9 +104,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Quantidade de meses para car\u00EAncia
+   * {{{operacao_response_carencia_value}}}
    **/
-  @ApiModelProperty(value = "Quantidade de meses para car\u00EAncia")
+  @ApiModelProperty(value = "{{{operacao_response_carencia_value}}}")
   public Integer getCarencia() {
     return carencia;
   }
@@ -116,9 +116,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Permitir transa\u00E7\u00F5es parceladas
+   * {{{operacao_response_flag_permitir_parcelamento_value}}}
    **/
-  @ApiModelProperty(value = "Permitir transa\u00E7\u00F5es parceladas")
+  @ApiModelProperty(value = "{{{operacao_response_flag_permitir_parcelamento_value}}}")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
   }
@@ -128,9 +128,9 @@ public class OperacaoResponse  {
 
   
   /**
-   * Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
+   * {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;
   }

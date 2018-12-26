@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Par\u00E2metros utilizados na altera\u00E7\u00E3o parcial de par\u00E2metros de produto 
+ * {{{parametro_produto_partial_update_description}}}
  **/
-@ApiModel(description = "Par\u00E2metros utilizados na altera\u00E7\u00E3o parcial de par\u00E2metros de produto ")
+@ApiModel(description = "{{{parametro_produto_partial_update_description}}}")
 public class ParametroProdutoPartialUpdate  {
   
   @SerializedName("dataValidade")
@@ -20,9 +20,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Data de validade do par\u00E2metro de produto
+   * {{{parametro_produto_dto_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "Data de validade do par\u00E2metro de produto")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -32,9 +32,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Descri\u00E7\u00E3o do par\u00E2metro de produto
+   * {{{parametro_produto_dto_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do par\u00E2metro de produto")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class ParametroProdutoPartialUpdate  {
 
   
   /**
-   * Valor do par\u00E2metro do produto
+   * {{{parametro_produto_dto_valor_parametro_value}}}
    **/
-  @ApiModelProperty(value = "Valor do par\u00E2metro do produto")
+  @ApiModelProperty(value = "{{{parametro_produto_dto_valor_parametro_value}}}")
   public String getValorParametro() {
     return valorParametro;
   }

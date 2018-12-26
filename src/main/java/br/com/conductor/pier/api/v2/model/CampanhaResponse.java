@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de campanha
+ * {{{campanha_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de campanha")
+@ApiModel(description = "{{{campanha_response_description}}}")
 public class CampanhaResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class CampanhaResponse  {
 
   
   /**
-   * Identificador da campanha
+   * {{{campanha_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador da campanha")
+  @ApiModelProperty(value = "{{{campanha_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class CampanhaResponse  {
 
   
   /**
-   * Nome da campanha
+   * {{{campanha_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome da campanha")
+  @ApiModelProperty(value = "{{{campanha_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -48,9 +48,9 @@ public class CampanhaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
+   * {{{campanha_response_id_tipo_campanha_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence")
+  @ApiModelProperty(value = "{{{campanha_response_id_tipo_campanha_value}}}")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
   }
@@ -60,9 +60,9 @@ public class CampanhaResponse  {
 
   
   /**
-   * Lista de planos associados a Campanha
+   * {{{campanha_response_planos_campanhas_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Lista de planos associados a Campanha")
+  @ApiModelProperty(required = true, value = "{{{campanha_response_planos_campanhas_value}}}")
   public List<PlanoCampanhaResponse> getPlanosCampanhas() {
     return planosCampanhas;
   }

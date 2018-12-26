@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista historicos atraso pagamento
+ * {{{page_historico_atraso_fatura_response_description}}}
  **/
-@ApiModel(description = "Lista historicos atraso pagamento")
+@ApiModel(description = "{{{page_historico_atraso_fatura_response_description}}}")
 public class PageHistoricoAtrasoFaturaResponse  {
   
   @SerializedName("content")

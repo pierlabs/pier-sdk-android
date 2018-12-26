@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Dispositivo Mobile
+ * {{{dispositivo_response_description}}}
  **/
-@ApiModel(description = "Dispositivo Mobile")
+@ApiModel(description = "{{{dispositivo_response_description}}}")
 public class DispositivoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Identificador do dispositivo
+   * {{{dispositivo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do dispositivo")
+  @ApiModelProperty(value = "{{{dispositivo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Token do dispositivo
+   * {{{dispositivo_response_token_value}}}
    **/
-  @ApiModelProperty(value = "Token do dispositivo")
+  @ApiModelProperty(value = "{{{dispositivo_response_token_value}}}")
   public String getToken() {
     return token;
   }
@@ -46,9 +46,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Identificador da Aplica\u00E7\u00E3o
+   * {{{dispositivo_response_id_aplicacao_mobile_value}}}
    **/
-  @ApiModelProperty(value = "Identificador da Aplica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{dispositivo_response_id_aplicacao_mobile_value}}}")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
   }
@@ -58,9 +58,9 @@ public class DispositivoResponse  {
 
   
   /**
-   * Identificador do usu\u00E1rio
+   * {{{dispositivo_response_id_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do usu\u00E1rio")
+  @ApiModelProperty(value = "{{{dispositivo_response_id_usuario_value}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }

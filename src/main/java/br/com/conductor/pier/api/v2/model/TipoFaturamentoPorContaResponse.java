@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Faturamento
+ * {{{tipo_faturamento_por_conta_response_description}}}
  **/
-@ApiModel(description = "Objeto Faturamento")
+@ApiModel(description = "{{{tipo_faturamento_por_conta_response_description}}}")
 public class TipoFaturamentoPorContaResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)
+   * {{{tipo_faturamento_por_conta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento
+   * {{{tipo_faturamento_por_conta_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -52,9 +52,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado
+   * {{{tipo_faturamento_por_conta_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_status_value}}}")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -64,9 +64,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado
+   * {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
   }
@@ -76,9 +76,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta
+   * {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
    **/
-  @ApiModelProperty(value = "Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -88,9 +88,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta
+   * {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
    **/
-  @ApiModelProperty(value = "Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
   }
@@ -100,9 +100,9 @@ public class TipoFaturamentoPorContaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o
+   * {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{tipo_faturamento_por_conta_response_modificado_por_value}}}")
   public String getModificadoPor() {
     return modificadoPor;
   }

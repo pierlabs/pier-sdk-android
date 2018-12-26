@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta para o detalhamento do documento
+ * {{{documento_detalhe_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o detalhamento do documento")
+@ApiModel(description = "{{{documento_detalhe_response_description}}}")
 public class DocumentoDetalheResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class DocumentoDetalheResponse  {
 
   
   /**
-   * ID de identifica\u00E7\u00E3o do detalhamento do documento
+   * {{{documento_detalhe_response_id_value}}}
    **/
-  @ApiModelProperty(value = "ID de identifica\u00E7\u00E3o do detalhamento do documento")
+  @ApiModelProperty(value = "{{{documento_detalhe_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class DocumentoDetalheResponse  {
 
   
   /**
-   * Propriedade do detalhamento do documento
+   * {{{documento_detalhe_response_propriedade_value}}}
    **/
-  @ApiModelProperty(value = "Propriedade do detalhamento do documento")
+  @ApiModelProperty(value = "{{{documento_detalhe_response_propriedade_value}}}")
   public String getPropriedade() {
     return propriedade;
   }
@@ -44,9 +44,9 @@ public class DocumentoDetalheResponse  {
 
   
   /**
-   * Conte\u00FAdo do detalhamento do documento
+   * {{{documento_detalhe_response_conteudo_value}}}
    **/
-  @ApiModelProperty(value = "Conte\u00FAdo do detalhamento do documento")
+  @ApiModelProperty(value = "{{{documento_detalhe_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }

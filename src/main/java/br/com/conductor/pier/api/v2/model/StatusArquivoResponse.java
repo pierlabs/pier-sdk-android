@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Response do status arquivo
+ * {{{status_arquivo_response_description}}}
  **/
-@ApiModel(description = "Objeto Response do status arquivo")
+@ApiModel(description = "{{{status_arquivo_response_description}}}")
 public class StatusArquivoResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class StatusArquivoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo")
+  @ApiModelProperty(value = "{{{status_arquivo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class StatusArquivoResponse  {
 
   
   /**
-   * Nome do status do arquivo
+   * {{{status_arquivo_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do status do arquivo")
+  @ApiModelProperty(value = "{{{status_arquivo_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -44,9 +44,9 @@ public class StatusArquivoResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do arquivo")
+  @ApiModelProperty(value = "{{{status_arquivo_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

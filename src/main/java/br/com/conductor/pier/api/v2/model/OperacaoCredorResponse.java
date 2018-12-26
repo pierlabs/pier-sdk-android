@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjetoOperacaoCredor
+ * {{{operacao_credor_response_description}}}
  **/
-@ApiModel(description = "ObjetoOperacaoCredor")
+@ApiModel(description = "{{{operacao_credor_response_description}}}")
 public class OperacaoCredorResponse  {
   
   @SerializedName("id")
@@ -47,9 +47,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Apresenta o id da OperacaoCredor
+   * {{{operacao_credor_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id da OperacaoCredor")
+  @ApiModelProperty(value = "{{{operacao_credor_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Apresenta o id da Opera\u00E7\u00E3o
+   * {{{operacao_credor_response_id_operacao_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id da Opera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{operacao_credor_response_id_operacao_value}}}")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -71,9 +71,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Apresenta o id do Grupo Econ\u00F4mico
+   * {{{operacao_credor_response_id_grupo_economico_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id do Grupo Econ\u00F4mico")
+  @ApiModelProperty(value = "{{{operacao_credor_response_id_grupo_economico_value}}}")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -83,9 +83,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Apresenta o id do produto
+   * {{{operacao_credor_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "Apresenta o id do produto")
+  @ApiModelProperty(value = "{{{operacao_credor_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -95,9 +95,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Remunera\u00E7\u00E3o Percentual
+   * {{{operacao_credor_response_remuneracao_percentual_value}}}
    **/
-  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Percentual")
+  @ApiModelProperty(value = "{{{operacao_credor_response_remuneracao_percentual_value}}}")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
   }
@@ -107,9 +107,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Remunera\u00E7\u00E3o Fixa
+   * {{{operacao_credor_response_remuneracao_fixa_value}}}
    **/
-  @ApiModelProperty(value = "Remunera\u00E7\u00E3o Fixa")
+  @ApiModelProperty(value = "{{{operacao_credor_response_remuneracao_fixa_value}}}")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
   }
@@ -119,9 +119,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))
+   * {{{operacao_credor_response_periodicidade_value}}}
    **/
-  @ApiModelProperty(value = "Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))")
+  @ApiModelProperty(value = "{{{operacao_credor_response_periodicidade_value}}}")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -131,9 +131,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Vencimento da primeira parcela
+   * {{{operacao_credor_response_vencimento_primeira_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Vencimento da primeira parcela")
+  @ApiModelProperty(value = "{{{operacao_credor_response_vencimento_primeira_parcela_value}}}")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
   }
@@ -143,9 +143,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Dias afastamento
+   * {{{operacao_credor_response_dias_afastamento_value}}}
    **/
-  @ApiModelProperty(value = "Dias afastamento")
+  @ApiModelProperty(value = "{{{operacao_credor_response_dias_afastamento_value}}}")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
   }
@@ -155,9 +155,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Fator multiplicador (FORA_AGENDA(0), AGENDA(1))
+   * {{{operacao_credor_response_fator_multiplicador_value}}}
    **/
-  @ApiModelProperty(value = "Fator multiplicador (FORA_AGENDA(0), AGENDA(1))")
+  @ApiModelProperty(value = "{{{operacao_credor_response_fator_multiplicador_value}}}")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
   }
@@ -167,9 +167,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Flag taxa fixada
+   * {{{operacao_credor_response_flag_taxa_fixada_value}}}
    **/
-  @ApiModelProperty(value = "Flag taxa fixada")
+  @ApiModelProperty(value = "{{{operacao_credor_response_flag_taxa_fixada_value}}}")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
   }
@@ -179,9 +179,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Plano m\u00EDnimo da regra
+   * {{{operacao_credor_response_plano_minimo_value}}}
    **/
-  @ApiModelProperty(value = "Plano m\u00EDnimo da regra")
+  @ApiModelProperty(value = "{{{operacao_credor_response_plano_minimo_value}}}")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -191,9 +191,9 @@ public class OperacaoCredorResponse  {
 
   
   /**
-   * Plano m\u00E1ximo da regra
+   * {{{operacao_credor_response_plano_maximo_value}}}
    **/
-  @ApiModelProperty(value = "Plano m\u00E1ximo da regra")
+  @ApiModelProperty(value = "{{{operacao_credor_response_plano_maximo_value}}}")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }

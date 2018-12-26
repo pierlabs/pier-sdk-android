@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Classe de retorno das parcelas de acordo
+ * {{{parcela_acordo_response_description}}}
  **/
-@ApiModel(description = "Classe de retorno das parcelas de acordo")
+@ApiModel(description = "{{{parcela_acordo_response_description}}}")
 public class ParcelaAcordoResponse  {
   
   @SerializedName("id")
@@ -31,9 +31,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * C\u00F3digo identificador da parcela do acordo
+   * {{{parcela_acordo_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da parcela do acordo")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)
+   * {{{parcela_acordo_response_id_acordo_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_id_acordo_value}}}")
   public Long getIdAcordo() {
     return idAcordo;
   }
@@ -55,9 +55,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * N\u00FAmero da parcela
+   * {{{parcela_acordo_response_numero_parcela_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da parcela")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_numero_parcela_value}}}")
   public Integer getNumeroParcela() {
     return numeroParcela;
   }
@@ -67,9 +67,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * Valor da parcela
+   * {{{parcela_acordo_response_valor_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Valor da parcela")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_valor_parcela_value}}}")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -79,9 +79,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * Data de vencimento da parcela
+   * {{{parcela_acordo_response_vencimento_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Data de vencimento da parcela")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_vencimento_parcela_value}}}")
   public String getVencimentoParcela() {
     return vencimentoParcela;
   }
@@ -91,9 +91,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * Saldo da parcela
+   * {{{parcela_acordo_response_saldo_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Saldo da parcela")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_saldo_parcela_value}}}")
   public BigDecimal getSaldoParcela() {
     return saldoParcela;
   }
@@ -103,9 +103,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * Nosso n\u00FAmero gerado por parcela
+   * {{{parcela_acordo_response_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Nosso n\u00FAmero gerado por parcela")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_nosso_numero_value}}}")
   public String getNossoNumero() {
     return nossoNumero;
   }
@@ -115,9 +115,9 @@ public class ParcelaAcordoResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do boleto
+   * {{{parcela_acordo_response_id_boleto_parcela_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto")
+  @ApiModelProperty(value = "{{{parcela_acordo_response_id_boleto_parcela_value}}}")
   public Long getIdBoletoParcela() {
     return idBoletoParcela;
   }

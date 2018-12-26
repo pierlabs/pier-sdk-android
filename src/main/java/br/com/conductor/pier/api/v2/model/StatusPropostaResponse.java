@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do servi\u00E7o de status da proposta
+ * {{{status_proposta_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do servi\u00E7o de status da proposta")
+@ApiModel(description = "{{{status_proposta_response_description}}}")
 public class StatusPropostaResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do status da proposta (id)
+   * {{{status_proposta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do status da proposta (id)")
+  @ApiModelProperty(value = "{{{status_proposta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Status da proposta
+   * {{{status_proposta_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status da proposta")
+  @ApiModelProperty(value = "{{{status_proposta_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -46,9 +46,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o da proposta
+   * {{{status_proposta_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o da proposta")
+  @ApiModelProperty(value = "{{{status_proposta_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -58,9 +58,9 @@ public class StatusPropostaResponse  {
 
   
   /**
-   * Flag que permite a altera\u00E7\u00E3o do status da proposta
+   * {{{status_proposta_response_flag_permite_alteracao_value}}}
    **/
-  @ApiModelProperty(value = "Flag que permite a altera\u00E7\u00E3o do status da proposta")
+  @ApiModelProperty(value = "{{{status_proposta_response_flag_permite_alteracao_value}}}")
   public Boolean getFlagPermiteAlteracao() {
     return flagPermiteAlteracao;
   }

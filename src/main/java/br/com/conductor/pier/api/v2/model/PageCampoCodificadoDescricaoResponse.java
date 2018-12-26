@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de Campos Codificados
+ * {{{page_campo_codificado_descricao_response_description}}}
  **/
-@ApiModel(description = "Lista de Campos Codificados")
+@ApiModel(description = "{{{page_campo_codificado_descricao_response_description}}}")
 public class PageCampoCodificadoDescricaoResponse  {
   
   @SerializedName("content")

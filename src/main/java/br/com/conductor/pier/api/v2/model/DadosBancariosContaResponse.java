@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Dados banc\u00E1rios
+ * {{{dados_bancarios_conta_response_description}}}
  **/
-@ApiModel(description = "Dados banc\u00E1rios")
+@ApiModel(description = "{{{dados_bancarios_conta_response_description}}}")
 public class DadosBancariosContaResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)
+   * {{{dados_bancarios_conta_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
+   * {{{dados_bancarios_conta_response_idConta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_idConta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -54,9 +54,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * Banco
+   * {{{dados_bancarios_conta_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "Banco")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_banco_value}}}")
   public Long getCodigoBanco() {
     return codigoBanco;
   }
@@ -66,9 +66,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * Ag\u00EAncia
+   * {{{dados_bancarios_conta_response_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Ag\u00EAncia")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_agencia_value}}}")
   public Long getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -78,9 +78,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * Conta Corrente
+   * {{{dados_bancarios_conta_response_contaCorrente_value}}}
    **/
-  @ApiModelProperty(value = "Conta Corrente")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_contaCorrente_value}}}")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -90,9 +90,9 @@ public class DadosBancariosContaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)
+   * {{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)")
+  @ApiModelProperty(value = "{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}")
   public Long getIdTipoContaBancaria() {
     return idTipoContaBancaria;
   }

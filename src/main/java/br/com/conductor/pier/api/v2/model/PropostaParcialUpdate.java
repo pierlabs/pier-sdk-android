@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto que representa a proposta
+ * {{{proposta_parcial_update_description}}}
  **/
-@ApiModel(description = "Objeto que representa a proposta")
+@ApiModel(description = "{{{proposta_parcial_update_description}}}")
 public class PropostaParcialUpdate  {
   
   @SerializedName("correspondencia")
@@ -16,9 +16,9 @@ public class PropostaParcialUpdate  {
 
   
   /**
-   * C\u00F3digo identificador do endere\u00E7o de correspond\u00EAncia da proposta
+   * {{{proposta_parcial_update_correspondencia_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do endere\u00E7o de correspond\u00EAncia da proposta")
+  @ApiModelProperty(value = "{{{proposta_parcial_update_correspondencia_value}}}")
   public Integer getCorrespondencia() {
     return correspondencia;
   }

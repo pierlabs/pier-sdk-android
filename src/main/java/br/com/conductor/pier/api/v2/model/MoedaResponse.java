@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Tipo de moeda
+ * {{{moeda_response_description}}}
  **/
-@ApiModel(description = "Tipo de moeda")
+@ApiModel(description = "{{{moeda_response_description}}}")
 public class MoedaResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class MoedaResponse  {
 
   
   /**
-   * Identificador do tipo de moeda
+   * {{{moeda_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do tipo de moeda")
+  @ApiModelProperty(value = "{{{moeda_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class MoedaResponse  {
 
   
   /**
-   * C\u00F3digo identificador do tipo de moeda
+   * {{{moeda_response_codigo_moeda_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do tipo de moeda")
+  @ApiModelProperty(value = "{{{moeda_response_codigo_moeda_value}}}")
   public String getCodigoMoeda() {
     return codigoMoeda;
   }
@@ -46,9 +46,9 @@ public class MoedaResponse  {
 
   
   /**
-   * S\u00EDmbolo da Moeda
+   * {{{moeda_response_simbolo_value}}}
    **/
-  @ApiModelProperty(value = "S\u00EDmbolo da Moeda")
+  @ApiModelProperty(value = "{{{moeda_response_simbolo_value}}}")
   public String getSimbolo() {
     return simbolo;
   }
@@ -58,9 +58,9 @@ public class MoedaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo da moeda
+   * {{{moeda_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo da moeda")
+  @ApiModelProperty(value = "{{{moeda_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
+ * {{{configuracao_registro_cobranca_persist_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online")
+@ApiModel(description = "{{{configuracao_registro_cobranca_persist_description}}}")
 public class ConfiguracaoRegistroCobrancaPersist  {
   
   @SerializedName("codigoBanco")
@@ -49,9 +49,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * C\u00F3digo do Banco
+   * {{{configuracao_registro_cobranca_persist_codigo_banco_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo do Banco")
+  @ApiModelProperty(required = true, value = "{{{configuracao_registro_cobranca_persist_codigo_banco_value}}}")
   public Long getCodigoBanco() {
     return codigoBanco;
   }
@@ -61,9 +61,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * URL de acesso ao banco
+   * {{{configuracao_registro_cobranca_persist_uri_value}}}
    **/
-  @ApiModelProperty(value = "URL de acesso ao banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_uri_value}}}")
   public String getUri() {
     return uri;
   }
@@ -73,9 +73,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Caminho do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_persist_key_store_name_value}}}
    **/
-  @ApiModelProperty(value = "Caminho do certificado digital do emissor")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_key_store_name_value}}}")
   public String getKeyStoreName() {
     return keyStoreName;
   }
@@ -85,9 +85,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Senha do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_persist_key_store_password_value}}}
    **/
-  @ApiModelProperty(value = "Senha do certificado digital do emissor")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_key_store_password_value}}}")
   public String getKeyStorePassword() {
     return keyStorePassword;
   }
@@ -97,9 +97,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Alias do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_persist_keystore_alias_value}}}
    **/
-  @ApiModelProperty(value = "Alias do certificado digital do emissor")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_keystore_alias_value}}}")
   public String getKeystoreAlias() {
     return keystoreAlias;
   }
@@ -109,9 +109,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Senha da chave privada do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}}
    **/
-  @ApiModelProperty(value = "Senha da chave privada do certificado digital do emissor")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_key_store_private_key_password_value}}}")
   public String getKeyStorePrivateKeyPassword() {
     return keyStorePrivateKeyPassword;
   }
@@ -121,9 +121,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Tipo do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_persist_type_keystore_value}}}
    **/
-  @ApiModelProperty(value = "Tipo do certificado digital do emissor")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_type_keystore_value}}}")
   public String getTypeKeystore() {
     return typeKeystore;
   }
@@ -133,9 +133,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Caminho do certificado digital do banco
+   * {{{configuracao_registro_cobranca_persist_trust_store_name_value}}}
    **/
-  @ApiModelProperty(value = "Caminho do certificado digital do banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_trust_store_name_value}}}")
   public String getTrustStoreName() {
     return trustStoreName;
   }
@@ -145,9 +145,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Senha do certificado digital do banco
+   * {{{configuracao_registro_cobranca_persist_trust_store_password_value}}}
    **/
-  @ApiModelProperty(value = "Senha do certificado digital do banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_trust_store_password_value}}}")
   public String getTrustStorePassword() {
     return trustStorePassword;
   }
@@ -157,9 +157,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Alias do certificado digital do banco
+   * {{{configuracao_registro_cobranca_persist_truststore_alias_value}}}
    **/
-  @ApiModelProperty(value = "Alias do certificado digital do banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_truststore_alias_value}}}")
   public String getTruststoreAlias() {
     return truststoreAlias;
   }
@@ -169,9 +169,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Tipo do certificado digital do banco
+   * {{{configuracao_registro_cobranca_persist_type_truststore_value}}}
    **/
-  @ApiModelProperty(value = "Tipo do certificado digital do banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_type_truststore_value}}}")
   public String getTypeTruststore() {
     return typeTruststore;
   }
@@ -181,9 +181,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * URL adicional de acesso ao banco
+   * {{{configuracao_registro_cobranca_persist_uri_adicional_value}}}
    **/
-  @ApiModelProperty(value = "URL adicional de acesso ao banco")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_uri_adicional_value}}}")
   public String getUriAdicional() {
     return uriAdicional;
   }
@@ -193,9 +193,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o
+   * {{{configuracao_registro_cobranca_persist_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{configuracao_registro_cobranca_persist_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -205,9 +205,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Secret utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_secret_value}}}
    **/
-  @ApiModelProperty(value = "Secret utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_secret_value}}}")
   public String getSecret() {
     return secret;
   }
@@ -217,9 +217,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * ClientID utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_client_id_value}}}
    **/
-  @ApiModelProperty(value = "ClientID utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_client_id_value}}}")
   public String getClientID() {
     return clientID;
   }
@@ -229,9 +229,9 @@ public class ConfiguracaoRegistroCobrancaPersist  {
 
   
   /**
-   * Chave utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_chave_value}}}
    **/
-  @ApiModelProperty(value = "Chave utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(value = "{{{configuracao_registro_cobranca_persist_chave_value}}}")
   public String getChave() {
     return chave;
   }

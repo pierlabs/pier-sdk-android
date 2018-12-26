@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Maquineta
+ * {{{maquineta_persist_description}}}
  **/
-@ApiModel(description = "Objeto Maquineta")
+@ApiModel(description = "{{{maquineta_persist_description}}}")
 public class MaquinetaPersist  {
   
   @SerializedName("idTerminal")
@@ -23,9 +23,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)
+   * {{{maquineta_persist_id_terminal_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_id_terminal_value}}}")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +35,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id)
+   * {{{maquineta_persist_id_tipo_maquineta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id)")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_id_tipo_maquineta_value}}}")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +47,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Valor de Manuten\u00E7\u00E3o da Maquineta
+   * {{{maquineta_persist_valor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor de Manuten\u00E7\u00E3o da Maquineta")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class MaquinetaPersist  {
 
   
   /**
-   * Data da implanta\u00E7\u00E3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+   * {{{maquineta_persist_data_hora_implantacao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data da implanta\u00E7\u00E3o da Maquineta, inserir no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+  @ApiModelProperty(required = true, value = "{{{maquineta_persist_data_hora_implantacao_value}}}")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }

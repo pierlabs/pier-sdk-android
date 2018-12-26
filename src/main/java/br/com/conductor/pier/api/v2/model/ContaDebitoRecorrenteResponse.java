@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o de resposta do recurso de Conta Debito Recorrente
+ * {{{conta_debito_recorrente_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o de resposta do recurso de Conta Debito Recorrente")
+@ApiModel(description = "{{{conta_debito_recorrente_response_description}}}")
 public class ContaDebitoRecorrenteResponse  {
   
   @SerializedName("ativo")
@@ -38,9 +38,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Identifica se o d\u00E9bito recorrente est\u00E1 ativo
+   * {{{conta_debito_recorrente_response_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Identifica se o d\u00E9bito recorrente est\u00E1 ativo")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_ativo_value}}}")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -50,9 +50,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Data fim do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_data_hora_fim_value}}}
    **/
-  @ApiModelProperty(value = "Data fim do d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_data_hora_fim_value}}}")
   public String getDataHoraFim() {
     return dataHoraFim;
   }
@@ -62,9 +62,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Data inicio do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_data_hora_inicio_value}}}
    **/
-  @ApiModelProperty(value = "Data inicio do d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_data_hora_inicio_value}}}")
   public String getDataHoraInicio() {
     return dataHoraInicio;
   }
@@ -74,9 +74,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Data do \u00FAltimo pagamento efetuado
+   * {{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}
    **/
-  @ApiModelProperty(value = "Data do \u00FAltimo pagamento efetuado")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}")
   public String getDataHoraUltimoPagamento() {
     return dataHoraUltimoPagamento;
   }
@@ -86,9 +86,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -98,9 +98,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta (id)
+   * {{{conta_debito_recorrente_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta (id)")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -110,9 +110,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da ContaDebitoRecorrente (id)
+   * {{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da ContaDebitoRecorrente (id)")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}")
   public Long getIdContaDebitoRecorrente() {
     return idContaDebitoRecorrente;
   }
@@ -122,9 +122,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)
+   * {{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}")
   public Long getIdTipoDebitoRecorrente() {
     return idTipoDebitoRecorrente;
   }
@@ -134,9 +134,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do usu\u00E1rio logado no sistema (id)
+   * {{{conta_debito_recorrente_response_id_usuario_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do usu\u00E1rio logado no sistema (id)")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_id_usuario_value}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }
@@ -146,9 +146,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Login do usu\u00E1rio logado do sistema
+   * {{{conta_debito_recorrente_response_id_login_value}}}
    **/
-  @ApiModelProperty(value = "Login do usu\u00E1rio logado do sistema")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_id_login_value}}}")
   public String getLogin() {
     return login;
   }
@@ -158,9 +158,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Numero de parcelas do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_num_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Numero de parcelas do d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_num_parcelas_value}}}")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -170,9 +170,9 @@ public class ContaDebitoRecorrenteResponse  {
 
   
   /**
-   * Origem de onde foi feita a modifica\u00E7\u00E3o do registro
+   * {{{conta_debito_recorrente_response_origem_value}}}
    **/
-  @ApiModelProperty(value = "Origem de onde foi feita a modifica\u00E7\u00E3o do registro")
+  @ApiModelProperty(value = "{{{conta_debito_recorrente_response_origem_value}}}")
   public String getOrigem() {
     return origem;
   }

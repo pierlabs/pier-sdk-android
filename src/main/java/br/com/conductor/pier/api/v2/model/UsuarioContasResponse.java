@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o do recurso Usuario Conta
+ * {{{usuario_conta_resposta_descricao}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario Conta")
+@ApiModel(description = "{{{usuario_conta_resposta_descricao}}}")
 public class UsuarioContasResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Id do usu\u00E1rio conta
+   * {{{usuario_conta_resposta_id_descricao}}}
    **/
-  @ApiModelProperty(value = "Id do usu\u00E1rio conta")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_descricao}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Id da conta vinculada ao usu\u00E1rio
+   * {{{usuario_conta_resposta_id_conta_descricao}}}
    **/
-  @ApiModelProperty(value = "Id da conta vinculada ao usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_conta_descricao}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -48,9 +48,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Id da pessoa
+   * {{{usuario_conta_resposta_id_pessoa_descricao}}}
    **/
-  @ApiModelProperty(value = "Id da pessoa")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_pessoa_descricao}}}")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -60,9 +60,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * Id do usu\u00E1rio vinculado a conta
+   * {{{usuario_conta_resposta_id_usuario_descricao}}}
    **/
-  @ApiModelProperty(value = "Id do usu\u00E1rio vinculado a conta")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_id_usuario_descricao}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }
@@ -72,9 +72,9 @@ public class UsuarioContasResponse  {
 
   
   /**
-   * N\u00EDvel de ACesso
+   * {{{usuario_conta_resposta_nivel_acesso_descricao}}}
    **/
-  @ApiModelProperty(value = "N\u00EDvel de ACesso")
+  @ApiModelProperty(value = "{{{usuario_conta_resposta_nivel_acesso_descricao}}}")
   public Integer getNivelAcesso() {
     return nivelAcesso;
   }

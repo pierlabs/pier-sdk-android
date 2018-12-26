@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto tipo opera\u00E7\u00E3o com campos pass\u00EDveis de altera\u00E7\u00E3o
+ * {{{tipo_operacao_persist_description}}}
  **/
-@ApiModel(description = "Objeto tipo opera\u00E7\u00E3o com campos pass\u00EDveis de altera\u00E7\u00E3o")
+@ApiModel(description = "{{{tipo_operacao_persist_description}}}")
 public class TipoOperacaoParcialUpdate  {
   
   @SerializedName("flagManterTaxaJurosNoRotativo")
@@ -16,9 +16,9 @@ public class TipoOperacaoParcialUpdate  {
 
   
   /**
-   * Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
+   * {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;
   }

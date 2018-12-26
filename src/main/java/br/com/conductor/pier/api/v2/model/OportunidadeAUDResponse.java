@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso Oportunidades
+ * {{{oportunidade_a_u_d_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Oportunidades")
+@ApiModel(description = "{{{oportunidade_a_u_d_response_description}}}")
 public class OportunidadeAUDResponse  {
   
   @SerializedName("id")
@@ -42,9 +42,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador da oportunidade
+   * {{{oportunidade_a_u_d_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -54,9 +54,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador do tipo oportunidade
+   * {{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do tipo oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -66,9 +66,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * C\u00F3digo identificador do status oportunidade
+   * {{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do status oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_id_status_oportunidade_value}}}")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
   }
@@ -78,9 +78,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Data cadastro da oportunidade
+   * {{{oportunidade_a_u_d_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(value = "Data cadastro da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -90,9 +90,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Data atualiza\u00E7\u00E3o da oportunidade
+   * {{{oportunidade_a_u_d_response_data_atualizacao_value}}}
    **/
-  @ApiModelProperty(value = "Data atualiza\u00E7\u00E3o da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_data_atualizacao_value}}}")
   public String getDataAtualizacao() {
     return dataAtualizacao;
   }
@@ -102,9 +102,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+   * {{{oportunidade_a_u_d_response_numero_receita_federal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_numero_receita_federal_value}}}")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -114,9 +114,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * In\u00EDcio da vig\u00EAncia da oportunidade
+   * {{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}
    **/
-  @ApiModelProperty(value = "In\u00EDcio da vig\u00EAncia da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_data_inicio_vigencia_value}}}")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
@@ -126,9 +126,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * fim da vig\u00EAncia da oportunidade
+   * {{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}
    **/
-  @ApiModelProperty(value = "fim da vig\u00EAncia da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_data_fim_vigencia_value}}}")
   public String getDataFimVigencia() {
     return dataFimVigencia;
   }
@@ -138,9 +138,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
+   * {{{oportunidade_a_u_d_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -150,9 +150,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Lista de detalhes da oportunidade
+   * {{{oportunidade_a_u_d_response_detalhes_value}}}
    **/
-  @ApiModelProperty(value = "Lista de detalhes da oportunidade")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_detalhes_value}}}")
   public List<CdtDetalheOportunidadeAUD> getDetalhes() {
     return detalhes;
   }
@@ -162,9 +162,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Data da auditoria
+   * {{{oportunidade_a_u_d_response_rev_date_value}}}
    **/
-  @ApiModelProperty(value = "Data da auditoria")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_rev_date_value}}}")
   public String getRevDate() {
     return revDate;
   }
@@ -174,9 +174,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Tipo da auditoria
+   * {{{oportunidade_a_u_d_response_rev_type_value}}}
    **/
-  @ApiModelProperty(value = "Tipo da auditoria")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_rev_type_value}}}")
   public Long getRevType() {
     return revType;
   }
@@ -186,9 +186,9 @@ public class OportunidadeAUDResponse  {
 
   
   /**
-   * Identificador da auditoria
+   * {{{oportunidade_a_u_d_response_rev_value}}}
    **/
-  @ApiModelProperty(value = "Identificador da auditoria")
+  @ApiModelProperty(value = "{{{oportunidade_a_u_d_response_rev_value}}}")
   public Long getRev() {
     return rev;
   }

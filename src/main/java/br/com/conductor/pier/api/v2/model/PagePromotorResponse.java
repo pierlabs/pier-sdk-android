@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de Promotores
+ * {{{page_promotor_response_description}}}
  **/
-@ApiModel(description = "Lista de Promotores")
+@ApiModel(description = "{{{page_promotor_response_description}}}")
 public class PagePromotorResponse  {
   
   @SerializedName("content")

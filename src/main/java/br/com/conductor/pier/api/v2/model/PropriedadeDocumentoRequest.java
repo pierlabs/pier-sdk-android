@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto que encapsula as propriedades do detalhamento do documento
+ * {{{propriedade_documento_request_description}}}
  **/
-@ApiModel(description = "Objeto que encapsula as propriedades do detalhamento do documento")
+@ApiModel(description = "{{{propriedade_documento_request_description}}}")
 public class PropriedadeDocumentoRequest  {
   
   @SerializedName("chave")
@@ -25,9 +25,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * Valor da propriedade do Documento
+   * {{{propriedade_documento_request_chave_value}}}
    **/
-  @ApiModelProperty(value = "Valor da propriedade do Documento")
+  @ApiModelProperty(value = "{{{propriedade_documento_request_chave_value}}}")
   public String getChave() {
     return chave;
   }
@@ -37,9 +37,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * Valor da propriedade do Documento
+   * {{{propriedade_documento_request_valor_value}}}
    **/
-  @ApiModelProperty(value = "Valor da propriedade do Documento")
+  @ApiModelProperty(value = "{{{propriedade_documento_request_valor_value}}}")
   public String getValor() {
     return valor;
   }
@@ -49,9 +49,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * Tipo da propriedade do Documento
+   * {{{propriedade_documento_request_detalhes_tipo_value}}}
    **/
-  @ApiModelProperty(value = "Tipo da propriedade do Documento")
+  @ApiModelProperty(value = "{{{propriedade_documento_request_detalhes_tipo_value}}}")
   public DetalhesTipoEnum getDetalhesTipo() {
     return detalhesTipo;
   }
@@ -61,9 +61,9 @@ public class PropriedadeDocumentoRequest  {
 
   
   /**
-   * Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default =false)
+   * {{{propriedade_documento_request_flag_indice_value}}}
    **/
-  @ApiModelProperty(value = "Atributo que indica se o par\u00E2metro \u00E9 um \u00EDndice (default =false)")
+  @ApiModelProperty(value = "{{{propriedade_documento_request_flag_indice_value}}}")
   public Boolean getFlagIndice() {
     return flagIndice;
   }

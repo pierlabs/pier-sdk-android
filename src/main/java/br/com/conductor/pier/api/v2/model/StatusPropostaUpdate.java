@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Par\u00E2metros de atualiza\u00E7\u00E3o de um Status de Proposta
+ * {{{status_proposta_update_request_description}}}
  **/
-@ApiModel(description = "Par\u00E2metros de atualiza\u00E7\u00E3o de um Status de Proposta")
+@ApiModel(description = "{{{status_proposta_update_request_description}}}")
 public class StatusPropostaUpdate  {
   
   @SerializedName("status")
@@ -16,9 +16,9 @@ public class StatusPropostaUpdate  {
 
   
   /**
-   * Status da proposta
+   * {{{status_proposta_update_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Status da proposta")
+  @ApiModelProperty(required = true, value = "{{{status_proposta_update_status_value}}}")
   public Integer getStatus() {
     return status;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Classe de representa\u00E7\u00E3o dos par\u00E2metros utilizados por um persist
+ * {{{documento_proposta_persist_description}}}
  **/
-@ApiModel(description = "Classe de representa\u00E7\u00E3o dos par\u00E2metros utilizados por um persist")
+@ApiModel(description = "{{{documento_proposta_persist_description}}}")
 public class DocumentoPropostaPersist  {
   
   @SerializedName("idProposta")
@@ -40,9 +40,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)
+   * {{{documento_proposta_persist_id_proposta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_id_proposta_value}}}")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -52,9 +52,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento
+   * {{{documento_proposta_persist_id_tipo_documento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_id_tipo_documento_value}}}")
   public Long getIdDocumentosCredito() {
     return idDocumentosCredito;
   }
@@ -64,9 +64,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito
+   * {{{documento_proposta_persist_id_status_documento_credito_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_id_status_documento_credito_value}}}")
   public Long getIdStatusDocumentosCredito() {
     return idStatusDocumentosCredito;
   }
@@ -76,9 +76,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito
+   * {{{documento_proposta_persist_id_condicao_documento_credito_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_id_condicao_documento_credito_value}}}")
   public Long getIdCondicoesDocumentosCredito() {
     return idCondicoesDocumentosCredito;
   }
@@ -88,9 +88,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito
+   * {{{documento_proposta_persist_id_tipo_documento_credito_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_id_tipo_documento_credito_value}}}")
   public Long getIdTipoDocumentoCredito() {
     return idTipoDocumentoCredito;
   }
@@ -100,9 +100,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica
+   * {{{documento_proposta_persist_id_pessoa_fisica_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_id_pessoa_fisica_value}}}")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
   }
@@ -112,9 +112,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento
+   * {{{documento_proposta_persist_id_log_atendimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_id_log_atendimento_value}}}")
   public Long getIdLogAtendimento() {
     return idLogAtendimento;
   }
@@ -124,9 +124,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * Respons\u00E1vel
+   * {{{documento_proposta_persist_responsavel_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Respons\u00E1vel")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_responsavel_value}}}")
   public String getResponsavel() {
     return responsavel;
   }
@@ -136,9 +136,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * Indica se o documento ser\u00E1 digitalizado
+   * {{{documento_proposta_persist_flag_documento_digitalizado_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Indica se o documento ser\u00E1 digitalizado")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_flag_documento_digitalizado_value}}}")
   public Integer getFlagDocumentoDigitalizado() {
     return flagDocumentoDigitalizado;
   }
@@ -148,9 +148,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * Nome do documento digitalizado
+   * {{{documento_proposta_persist_documento_digitalizado_value}}}
    **/
-  @ApiModelProperty(value = "Nome do documento digitalizado")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_documento_digitalizado_value}}}")
   public String getDocumentoDigitalizado() {
     return documentoDigitalizado;
   }
@@ -160,9 +160,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o
+   * {{{documento_proposta_persist_seq_analise_condicao_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_seq_analise_condicao_value}}}")
   public Long getSeqAnaliseCondicao() {
     return seqAnaliseCondicao;
   }
@@ -172,9 +172,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * Observa\u00E7\u00E3o
+   * {{{documento_proposta_persist_observacao_value}}}
    **/
-  @ApiModelProperty(value = "Observa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{documento_proposta_persist_observacao_value}}}")
   public String getObservacao() {
     return observacao;
   }
@@ -184,9 +184,9 @@ public class DocumentoPropostaPersist  {
 
   
   /**
-   * Data de status
+   * {{{documento_proposta_persist_data_status_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data de status")
+  @ApiModelProperty(required = true, value = "{{{documento_proposta_persist_data_status_value}}}")
   public String getDataStatus() {
     return dataStatus;
   }

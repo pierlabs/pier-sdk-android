@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Response de par\u00E2metros do arquivo
+ * {{{arquivo_parametro_response_description}}}
  **/
-@ApiModel(description = "Objeto Response de par\u00E2metros do arquivo")
+@ApiModel(description = "{{{arquivo_parametro_response_description}}}")
 public class ArquivoParametroResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo
+   * {{{arquivo_parametro_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo")
+  @ApiModelProperty(value = "{{{arquivo_parametro_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * Nome que identifica o detalhe do arquivo
+   * {{{arquivo_parametro_response_nome_campo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome que identifica o detalhe do arquivo")
+  @ApiModelProperty(required = true, value = "{{{arquivo_parametro_response_nome_campo_value}}}")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -44,9 +44,9 @@ public class ArquivoParametroResponse  {
 
   
   /**
-   * Conte\u00FAdo do nomeCampo
+   * {{{arquivo_parametro_response_conteudo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Conte\u00FAdo do nomeCampo")
+  @ApiModelProperty(required = true, value = "{{{arquivo_parametro_response_conteudo_value}}}")
   public String getConteudo() {
     return conteudo;
   }

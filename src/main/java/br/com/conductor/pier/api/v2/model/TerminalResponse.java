@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjetoTerminal
+ * {{{terminal_response_description}}}
  **/
-@ApiModel(description = "ObjetoTerminal")
+@ApiModel(description = "{{{terminal_response_description}}}")
 public class TerminalResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class TerminalResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)
+   * {{{terminal_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)")
+  @ApiModelProperty(value = "{{{terminal_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00FAmero \u00FAnico do terminal
+   * {{{terminal_response_terminal_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero \u00FAnico do terminal")
+  @ApiModelProperty(value = "{{{terminal_response_terminal_value}}}")
   public String getTerminal() {
     return terminal;
   }
@@ -50,9 +50,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00FAmero do estabelecimento a qual o terminal pertence
+   * {{{terminal_response_numero_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero do estabelecimento a qual o terminal pertence")
+  @ApiModelProperty(value = "{{{terminal_response_numero_estabelecimento_value}}}")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
@@ -62,9 +62,9 @@ public class TerminalResponse  {
 
   
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence
+   * {{{terminal_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence")
+  @ApiModelProperty(value = "{{{terminal_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -74,9 +74,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
+   * {{{terminal_response_flag_consulta_extrato_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))")
+  @ApiModelProperty(value = "{{{terminal_response_flag_consulta_extrato_value}}}")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }
@@ -86,9 +86,9 @@ public class TerminalResponse  {
 
   
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
+   * {{{terminal_response_flag_terminal_virtual_value}}}
    **/
-  @ApiModelProperty(value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))")
+  @ApiModelProperty(value = "{{{terminal_response_flag_terminal_virtual_value}}}")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }

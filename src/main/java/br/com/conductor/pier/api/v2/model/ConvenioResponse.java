@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o de um objeto de respota para convenio
+ * {{{convenio_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o de um objeto de respota para convenio")
+@ApiModel(description = "{{{convenio_response_description}}}")
 public class ConvenioResponse  {
   
   @SerializedName("id")
@@ -55,9 +55,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Id do Convenio
+   * {{{convenio_response_id_convenio}}}
    **/
-  @ApiModelProperty(value = "Id do Convenio")
+  @ApiModelProperty(value = "{{{convenio_response_id_convenio}}}")
   public Long getId() {
     return id;
   }
@@ -67,9 +67,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Identifica\u00E7\u00E3o do banco
+   * {{{convenio_response_banco_value}}}
    **/
-  @ApiModelProperty(value = "Identifica\u00E7\u00E3o do banco")
+  @ApiModelProperty(value = "{{{convenio_response_banco_value}}}")
   public Long getBanco() {
     return banco;
   }
@@ -79,9 +79,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia
+   * {{{convenio_response_agencia_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia")
+  @ApiModelProperty(value = "{{{convenio_response_agencia_value}}}")
   public Long getAgencia() {
     return agencia;
   }
@@ -91,9 +91,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Conta corrente
+   * {{{convenio_response_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Conta corrente")
+  @ApiModelProperty(value = "{{{convenio_response_conta_corrente_value}}}")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -103,9 +103,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * C\u00F3digo do tipo de esp\u00E9cie do documento
+   * {{{convenio_response_especie_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do tipo de esp\u00E9cie do documento")
+  @ApiModelProperty(value = "{{{convenio_response_especie_value}}}")
   public String getEspecie() {
     return especie;
   }
@@ -115,9 +115,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio
+   * {{{convenio_response_numero_convenio_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio")
+  @ApiModelProperty(value = "{{{convenio_response_numero_convenio_value}}}")
   public BigDecimal getNumeroConvenio() {
     return numeroConvenio;
   }
@@ -127,9 +127,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * C\u00F3digo da carteira de cobran\u00E7a
+   * {{{convenio_response_carteira_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo da carteira de cobran\u00E7a")
+  @ApiModelProperty(value = "{{{convenio_response_carteira_value}}}")
   public Long getCarteira() {
     return carteira;
   }
@@ -139,9 +139,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * C\u00F3digo do cedente
+   * {{{convenio_response_codigo_cedente_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do cedente")
+  @ApiModelProperty(value = "{{{convenio_response_codigo_cedente_value}}}")
   public String getCodigoCedente() {
     return codigoCedente;
   }
@@ -151,9 +151,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito
+   * {{{convenio_response_especie_tipo_value}}}
    **/
-  @ApiModelProperty(value = "Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito")
+  @ApiModelProperty(value = "{{{convenio_response_especie_tipo_value}}}")
   public String getEspecieTipo() {
     return especieTipo;
   }
@@ -163,9 +163,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Tipo de esp\u00E9cie de documento
+   * {{{convenio_response_especie_documento_value}}}
    **/
-  @ApiModelProperty(value = "Tipo de esp\u00E9cie de documento")
+  @ApiModelProperty(value = "{{{convenio_response_especie_documento_value}}}")
   public String getEspecieDocumento() {
     return especieDocumento;
   }
@@ -175,9 +175,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar N
+   * {{{convenio_response_aceite_value}}}
    **/
-  @ApiModelProperty(value = "Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar N")
+  @ApiModelProperty(value = "{{{convenio_response_aceite_value}}}")
   public String getAceite() {
     return aceite;
   }
@@ -187,9 +187,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Instru\u00E7\u00F5es para pagamento
+   * {{{convenio_response_instrucoes_value}}}
    **/
-  @ApiModelProperty(value = "Instru\u00E7\u00F5es para pagamento")
+  @ApiModelProperty(value = "{{{convenio_response_instrucoes_value}}}")
   public String getInstrucoes() {
     return instrucoes;
   }
@@ -199,9 +199,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Local preferencial onde pode ser efetuado o pagamento
+   * {{{convenio_response_local_pagamento1_value}}}
    **/
-  @ApiModelProperty(value = "Local preferencial onde pode ser efetuado o pagamento")
+  @ApiModelProperty(value = "{{{convenio_response_local_pagamento1_value}}}")
   public String getLocalPagamento1() {
     return localPagamento1;
   }
@@ -211,9 +211,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Local para pagamento (campo adicional)
+   * {{{convenio_response_local_pagamento2_value}}}
    **/
-  @ApiModelProperty(value = "Local para pagamento (campo adicional)")
+  @ApiModelProperty(value = "{{{convenio_response_local_pagamento2_value}}}")
   public String getLocalPagamento2() {
     return localPagamento2;
   }
@@ -223,9 +223,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Endere\u00E7o de cobran\u00E7a do emissor
+   * {{{convenio_response_endereco_cobranca_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Endere\u00E7o de cobran\u00E7a do emissor")
+  @ApiModelProperty(value = "{{{convenio_response_endereco_cobranca_emissor_value}}}")
   public String getEnderecoCobrancaEmissor() {
     return enderecoCobrancaEmissor;
   }
@@ -235,9 +235,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Nome do benefici\u00E1rio/cedente da cobran\u00E7a
+   * {{{convenio_response_nome_beneficiario_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Nome do benefici\u00E1rio/cedente da cobran\u00E7a")
+  @ApiModelProperty(value = "{{{convenio_response_nome_beneficiario_emissor_value}}}")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
   }
@@ -247,9 +247,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a
+   * {{{convenio_response_cnpj_beneficiario_emissor_value}}}
    **/
-  @ApiModelProperty(value = "CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a")
+  @ApiModelProperty(value = "{{{convenio_response_cnpj_beneficiario_emissor_value}}}")
   public String getCnpjBeneficiario() {
     return cnpjBeneficiario;
   }
@@ -259,9 +259,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio
+   * {{{convenio_response_operador_value}}}
    **/
-  @ApiModelProperty(value = "Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio")
+  @ApiModelProperty(value = "{{{convenio_response_operador_value}}}")
   public String getOperador() {
     return operador;
   }
@@ -271,9 +271,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio
+   * {{{convenio_response_data_value}}}
    **/
-  @ApiModelProperty(value = "Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio")
+  @ApiModelProperty(value = "{{{convenio_response_data_value}}}")
   public String getData() {
     return data;
   }
@@ -283,9 +283,9 @@ public class ConvenioResponse  {
 
   
   /**
-   * M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o
+   * {{{convenio_response_maquina_value}}}
    **/
-  @ApiModelProperty(value = "M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{convenio_response_maquina_value}}}")
   public String getMaquina() {
     return maquina;
   }

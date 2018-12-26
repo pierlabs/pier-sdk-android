@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de origem comercial
+ * {{{origem_comercial_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de origem comercial")
+@ApiModel(description = "{{{origem_comercial_response_description}}}")
 public class OrigemComercialResponse  {
   
   @SerializedName("id")
@@ -71,9 +71,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00F3digo identificador do OrigemComercial
+   * {{{origem_comercial_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo identificador do OrigemComercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -83,9 +83,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome da origem comercial
+   * {{{origem_comercial_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome da origem comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -95,9 +95,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o completa do nome da Origem Comercial
+   * {{{origem_comercial_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o completa do nome da Origem Comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -107,9 +107,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Produtos da origem comercial
+   * {{{origem_comercial_response_produtos_origem_value}}}
    **/
-  @ApiModelProperty(value = "Produtos da origem comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_produtos_origem_value}}}")
   public List<ProdutoOrigemResponse> getProdutosOrigem() {
     return produtosOrigem;
   }
@@ -119,9 +119,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Estabelecimento
+   * {{{origem_comercial_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Estabelecimento")
+  @ApiModelProperty(value = "{{{origem_comercial_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -131,9 +131,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo da Origem Comercial
+   * {{{origem_comercial_response_id_tipo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Tipo da Origem Comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_id_tipo_origem_comercial_value}}}")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
   }
@@ -143,9 +143,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome do Tipo da Origem Comercial
+   * {{{origem_comercial_response_nome_tipo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Tipo da Origem Comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_nome_tipo_origem_comercial_value}}}")
   public String getNomeTipoOrigemComercial() {
     return nomeTipoOrigemComercial;
   }
@@ -155,9 +155,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Identificador do grupo da origem comercial
+   * {{{origem_comercial_response_id_grupo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do grupo da origem comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_id_grupo_origem_comercial_value}}}")
   public Long getIdGrupoOrigemComercial() {
     return idGrupoOrigemComercial;
   }
@@ -167,9 +167,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome do grupo da origem comercial
+   * {{{origem_comercial_response_nome_grupo_origem_comercial_value}}}
    **/
-  @ApiModelProperty(value = "Nome do grupo da origem comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_nome_grupo_origem_comercial_value}}}")
   public String getNomeGrupoOrigemComercial() {
     return nomeGrupoOrigemComercial;
   }
@@ -179,9 +179,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica o status da origem comercial
+   * {{{origem_comercial_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Indica o status da origem comercial")
+  @ApiModelProperty(value = "{{{origem_comercial_response_status_value}}}")
   public Integer getStatus() {
     return status;
   }
@@ -191,9 +191,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+   * {{{origem_comercial_response_flag_pre_aprovado_value}}}
    **/
-  @ApiModelProperty(value = "Indica se permite pr\u00E9 aprova\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_pre_aprovado_value}}}")
   public Boolean getFlagPreAprovado() {
     return flagPreAprovado;
   }
@@ -203,9 +203,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite aprova\u00E7\u00E3o imediata
+   * {{{origem_comercial_response_flag_aprovacao_imediata_value}}}
    **/
-  @ApiModelProperty(value = "Indica se permite aprova\u00E7\u00E3o imediata")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_aprovacao_imediata_value}}}")
   public Boolean getFlagAprovacaoImediata() {
     return flagAprovacaoImediata;
   }
@@ -215,9 +215,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Nome fantasia impresso no pl\u00E1stico
+   * {{{origem_comercial_response_nome_fantasia_plastico_value}}}
    **/
-  @ApiModelProperty(value = "Nome fantasia impresso no pl\u00E1stico")
+  @ApiModelProperty(value = "{{{origem_comercial_response_nome_fantasia_plastico_value}}}")
   public String getNomeFantasiaPlastico() {
     return nomeFantasiaPlastico;
   }
@@ -227,9 +227,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cart\u00E3o provis\u00F3rio
+   * {{{origem_comercial_response_flag_cartao_provisorio_value}}}
    **/
-  @ApiModelProperty(value = "Indica se permite cart\u00E3o provis\u00F3rio")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_cartao_provisorio_value}}}")
   public Boolean getFlagCartaoProvisorio() {
     return flagCartaoProvisorio;
   }
@@ -239,9 +239,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cart\u00E3o definitivo
+   * {{{origem_comercial_response_flag_cartao_definitivo_value}}}
    **/
-  @ApiModelProperty(value = "Indica se permite cart\u00E3o definitivo")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_cartao_definitivo_value}}}")
   public Boolean getFlagCartaoDefinitivo() {
     return flagCartaoDefinitivo;
   }
@@ -251,9 +251,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Usu\u00E1rio para autentica\u00E7\u00E3o
+   * {{{origem_comercial_response_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Usu\u00E1rio para autentica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{origem_comercial_response_usuario_value}}}")
   public String getUsuario() {
     return usuario;
   }
@@ -263,9 +263,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Senha para autentica\u00E7\u00E3o
+   * {{{origem_comercial_response_senha_value}}}
    **/
-  @ApiModelProperty(value = "Senha para autentica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{origem_comercial_response_senha_value}}}")
   public String getSenha() {
     return senha;
   }
@@ -275,9 +275,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se \u00E9 origem externa
+   * {{{origem_comercial_response_flag_origem_externa_value}}}
    **/
-  @ApiModelProperty(value = "Indica se \u00E9 origem externa")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_origem_externa_value}}}")
   public Boolean getFlagOrigemExterna() {
     return flagOrigemExterna;
   }
@@ -287,9 +287,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se h\u00E1 modifica\u00E7\u00E3o
+   * {{{origem_comercial_response_flag_modificado_value}}}
    **/
-  @ApiModelProperty(value = "Indica se h\u00E1 modifica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_modificado_value}}}")
   public Boolean getFlagModificado() {
     return flagModificado;
   }
@@ -299,9 +299,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se envia fatura
+   * {{{origem_comercial_response_flag_envia_fatura_usuario_value}}}
    **/
-  @ApiModelProperty(value = "Indica se envia fatura")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_envia_fatura_usuario_value}}}")
   public Boolean getFlagEnviaFaturaUsuario() {
     return flagEnviaFaturaUsuario;
   }
@@ -311,9 +311,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se permite cr\u00E9dito de faturamento
+   * {{{origem_comercial_response_flag_credito_faturamento_value}}}
    **/
-  @ApiModelProperty(value = "Indica se permite cr\u00E9dito de faturamento")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_credito_faturamento_value}}}")
   public Boolean getFlagCreditoFaturamento() {
     return flagCreditoFaturamento;
   }
@@ -323,9 +323,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se concede limite provis\u00F3rio
+   * {{{origem_comercial_response_flag_concede_limite_provisorio_value}}}
    **/
-  @ApiModelProperty(value = "Indica se concede limite provis\u00F3rio")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_concede_limite_provisorio_value}}}")
   public Boolean getFlagConcedeLimiteProvisorio() {
     return flagConcedeLimiteProvisorio;
   }
@@ -335,9 +335,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se digitaliza documento
+   * {{{origem_comercial_response_flag_digitalizar_doc_value}}}
    **/
-  @ApiModelProperty(value = "Indica se digitaliza documento")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_digitalizar_doc_value}}}")
   public Boolean getFlagDigitalizarDoc() {
     return flagDigitalizarDoc;
   }
@@ -347,9 +347,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se realiza embossing em loja
+   * {{{origem_comercial_response_flag_embossing_loja_value}}}
    **/
-  @ApiModelProperty(value = "Indica se realiza embossing em loja")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_embossing_loja_value}}}")
   public Boolean getFlagEmbossingLoja() {
     return flagEmbossingLoja;
   }
@@ -359,9 +359,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Indica se realiza consulta pr\u00E9via
+   * {{{origem_comercial_response_flag_consulta_previa_value}}}
    **/
-  @ApiModelProperty(value = "Indica se realiza consulta pr\u00E9via")
+  @ApiModelProperty(value = "{{{origem_comercial_response_flag_consulta_previa_value}}}")
   public Boolean getFlagConsultaPrevia() {
     return flagConsultaPrevia;
   }
@@ -371,9 +371,9 @@ public class OrigemComercialResponse  {
 
   
   /**
-   * Tipo de pessoa
+   * {{{origem_comercial_response_tipo_pessoa_value}}}
    **/
-  @ApiModelProperty(value = "Tipo de pessoa")
+  @ApiModelProperty(value = "{{{origem_comercial_response_tipo_pessoa_value}}}")
   public TipoPessoaEnum getTipoPessoa() {
     return tipoPessoa;
   }

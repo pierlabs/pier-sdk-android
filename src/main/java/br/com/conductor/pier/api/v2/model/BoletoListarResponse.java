@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do boleto de fatura
+ * {{{boleto_listar_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
+@ApiModel(description = "{{{boleto_listar_response_description}}}")
 public class BoletoListarResponse  {
   
   @SerializedName("id")
@@ -27,9 +27,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * id
+   * {{{boleto_response_id_value}}}
    **/
-  @ApiModelProperty(value = "id")
+  @ApiModelProperty(value = "{{{boleto_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -39,9 +39,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * id_conta
+   * {{{boleto_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "id_conta")
+  @ApiModelProperty(value = "{{{boleto_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -51,9 +51,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
+   * {{{boleto_response_nosso_numero_value}}}
    **/
-  @ApiModelProperty(value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
+  @ApiModelProperty(value = "{{{boleto_response_nosso_numero_value}}}")
   public String getNossoNumero() {
     return nossoNumero;
   }
@@ -63,9 +63,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * Data do vencimento
+   * {{{boleto_response_data_vencimento_value}}}
    **/
-  @ApiModelProperty(value = "Data do vencimento")
+  @ApiModelProperty(value = "{{{boleto_response_data_vencimento_value}}}")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -75,9 +75,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * Valor do Boleto
+   * {{{boleto_response_valor_boleto_value}}}
    **/
-  @ApiModelProperty(value = "Valor do Boleto")
+  @ApiModelProperty(value = "{{{boleto_response_valor_boleto_value}}}")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
   }
@@ -87,9 +87,9 @@ public class BoletoListarResponse  {
 
   
   /**
-   * Id do tipo de Boleto
+   * {{{boleto_response_id_tipo_boleto_value}}}
    **/
-  @ApiModelProperty(value = "Id do tipo de Boleto")
+  @ApiModelProperty(value = "{{{boleto_response_id_tipo_boleto_value}}}")
   public Long getIdTipoBoleto() {
     return idTipoBoleto;
   }

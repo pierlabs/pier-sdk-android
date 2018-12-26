@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
+ * {{{integracao_emissor_proposta_persist_descricao}}}
  **/
-@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor")
+@ApiModel(description = "{{{integracao_emissor_proposta_persist_descricao}}}")
 public class IntegracaoEmissorPropostaPersist  {
   
   @SerializedName("observacao")
@@ -18,9 +18,9 @@ public class IntegracaoEmissorPropostaPersist  {
 
   
   /**
-   * Observa\u00E7\u00E3o do registro
+   * {{{integracao_emissor_proposta_persist_observacao}}}
    **/
-  @ApiModelProperty(value = "Observa\u00E7\u00E3o do registro")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_persist_observacao}}}")
   public String getObservacao() {
     return observacao;
   }
@@ -30,9 +30,9 @@ public class IntegracaoEmissorPropostaPersist  {
 
   
   /**
-   * Identification code of the external proposal
+   * {{{integracao_emissor_proposta_persist_id_proposta}}}
    **/
-  @ApiModelProperty(value = "Identification code of the external proposal")
+  @ApiModelProperty(value = "{{{integracao_emissor_proposta_persist_id_proposta}}}")
   public Long getIdProposta() {
     return idProposta;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista dos MCCs
+ * {{{page_m_c_c_response_description}}}
  **/
-@ApiModel(description = "Lista dos MCCs")
+@ApiModel(description = "{{{page_m_c_c_response_description}}}")
 public class PageMCCResponse  {
   
   @SerializedName("content")

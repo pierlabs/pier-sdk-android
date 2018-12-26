@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto transferencia
+ * {{{transferencia_response_description}}}
  **/
-@ApiModel(description = "Objeto transferencia")
+@ApiModel(description = "{{{transferencia_response_description}}}")
 public class TransferenciaResponse  {
   
   @SerializedName("id")
@@ -25,9 +25,9 @@ public class TransferenciaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)
+   * {{{transferencia_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)")
+  @ApiModelProperty(value = "{{{transferencia_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -37,9 +37,9 @@ public class TransferenciaResponse  {
 
   
   /**
-   * Data estabelecida para ocorrer a transfer\u00EAncia
+   * {{{transferencia_response_data_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "Data estabelecida para ocorrer a transfer\u00EAncia")
+  @ApiModelProperty(value = "{{{transferencia_response_data_transferencia_value}}}")
   public String getDataTransferencia() {
     return dataTransferencia;
   }
@@ -49,9 +49,9 @@ public class TransferenciaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id)
+   * {{{transferencia_response_id_conta_origem_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id)")
+  @ApiModelProperty(value = "{{{transferencia_response_id_conta_origem_value}}}")
   public Long getIdContaOrigem() {
     return idContaOrigem;
   }
@@ -61,9 +61,9 @@ public class TransferenciaResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id)
+   * {{{transferencia_response_id_conta_destino_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id)")
+  @ApiModelProperty(value = "{{{transferencia_response_id_conta_destino_value}}}")
   public Long getIdContaDestino() {
     return idContaDestino;
   }
@@ -73,9 +73,9 @@ public class TransferenciaResponse  {
 
   
   /**
-   * Valor estabelecido para ser transferido
+   * {{{transferencia_response_valor_transferencia_value}}}
    **/
-  @ApiModelProperty(value = "Valor estabelecido para ser transferido")
+  @ApiModelProperty(value = "{{{transferencia_response_valor_transferencia_value}}}")
   public BigDecimal getValorTransferencia() {
     return valorTransferencia;
   }

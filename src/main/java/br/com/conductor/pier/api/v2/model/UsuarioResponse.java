@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o do recurso Usuario
+ * {{{usuario_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario")
+@ApiModel(description = "{{{usuario_response_description}}}")
 public class UsuarioResponse  {
   
   @SerializedName("id")
@@ -43,9 +43,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Id do Usu\u00E1rio
+   * {{{usuario_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Id do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -55,9 +55,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Nome do Usu\u00E1rio
+   * {{{usuario_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -67,9 +67,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Login do Usu\u00E1rio
+   * {{{usuario_response_login_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Login do Usu\u00E1rio")
+  @ApiModelProperty(required = true, value = "{{{usuario_response_login_value}}}")
   public String getLogin() {
     return login;
   }
@@ -79,9 +79,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Id do emissor do usu\u00E1rio
+   * {{{usuario_response_id_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Id do emissor do usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_id_emissor_value}}}")
   public Long getIdEmissor() {
     return idEmissor;
   }
@@ -91,9 +91,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * CPF do Usu\u00E1rio
+   * {{{usuario_response_cpf_value}}}
    **/
-  @ApiModelProperty(value = "CPF do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_cpf_value}}}")
   public String getCpf() {
     return cpf;
   }
@@ -103,9 +103,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Email do Usu\u00E1rio
+   * {{{usuario_response_email_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Email do Usu\u00E1rio")
+  @ApiModelProperty(required = true, value = "{{{usuario_response_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -115,9 +115,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Status do Usu\u00E1rio
+   * {{{usuario_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }
@@ -127,9 +127,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Data de cria\u00E7\u00E3o do Usu\u00E1rio
+   * {{{usuario_response_data_criacao_value}}}
    **/
-  @ApiModelProperty(value = "Data de cria\u00E7\u00E3o do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_data_criacao_value}}}")
   public String getDataCriacao() {
     return dataCriacao;
   }
@@ -139,9 +139,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Data de modifica\u00E7\u00E3o do Usu\u00E1rio
+   * {{{usuario_response_data_modificacao_value}}}
    **/
-  @ApiModelProperty(value = "Data de modifica\u00E7\u00E3o do Usu\u00E1rio")
+  @ApiModelProperty(value = "{{{usuario_response_data_modificacao_value}}}")
   public String getDataModificacao() {
     return dataModificacao;
   }
@@ -151,9 +151,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
+   * {{{usuario_response_tentativas_incorretas_value}}}
    **/
-  @ApiModelProperty(value = "N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas")
+  @ApiModelProperty(value = "{{{usuario_response_tentativas_incorretas_value}}}")
   public Long getTentativasIncorretas() {
     return tentativasIncorretas;
   }
@@ -163,9 +163,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * Indica se o acesso ao aplicativo do usu\u00E1rio est\u00E1 bloqueado
+   * {{{usuario_response_bloquear_acesso_descricao}}}
    **/
-  @ApiModelProperty(value = "Indica se o acesso ao aplicativo do usu\u00E1rio est\u00E1 bloqueado")
+  @ApiModelProperty(value = "{{{usuario_response_bloquear_acesso_descricao}}}")
   public Boolean getBloquearAcesso() {
     return bloquearAcesso;
   }
@@ -175,9 +175,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * dataValidade
+   * {{{usuario_response_data_validade_value}}}
    **/
-  @ApiModelProperty(value = "dataValidade")
+  @ApiModelProperty(value = "{{{usuario_response_data_validade_value}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -187,9 +187,9 @@ public class UsuarioResponse  {
 
   
   /**
-   * idPlataforma
+   * {{{usuario_response_id_plataforma_value}}}
    **/
-  @ApiModelProperty(value = "idPlataforma")
+  @ApiModelProperty(value = "{{{usuario_response_id_plataforma_value}}}")
   public Integer getIdPlataforma() {
     return idPlataforma;
   }

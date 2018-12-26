@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de WebHooks
+ * {{{page_web_hook_response_description}}}
  **/
-@ApiModel(description = "Lista de WebHooks")
+@ApiModel(description = "{{{page_web_hook_response_description}}}")
 public class PageWebHookResponse  {
   
   @SerializedName("content")

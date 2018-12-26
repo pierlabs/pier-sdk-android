@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o com os par\u00E2mentros necess\u00E1rios para envio de Boleto por email
+ * {{{boleto_email_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o com os par\u00E2mentros necess\u00E1rios para envio de Boleto por email")
+@ApiModel(description = "{{{boleto_email_request_description}}}")
 public class BoletoEmailRequest  {
   
   @SerializedName("email")
@@ -20,9 +20,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Email para envio do boleto
+   * {{{boleto_email_request_value}}}
    **/
-  @ApiModelProperty(value = "Email para envio do boleto")
+  @ApiModelProperty(value = "{{{boleto_email_request_value}}}")
   public String getEmail() {
     return email;
   }
@@ -32,9 +32,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Identifica\u00E7\u00E3o do template de notifica\u00E7\u00E3o
+   * {{{boleto_email_request_id_template_notificacao_value}}}
    **/
-  @ApiModelProperty(value = "Identifica\u00E7\u00E3o do template de notifica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{boleto_email_request_id_template_notificacao_value}}}")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
   }
@@ -44,9 +44,9 @@ public class BoletoEmailRequest  {
 
   
   /**
-   * Mapa de par\u00E2metros utilizados na cria\u00E7\u00E3o do template do email
+   * {{{boleto_email_request_parametros_value}}}
    **/
-  @ApiModelProperty(value = "Mapa de par\u00E2metros utilizados na cria\u00E7\u00E3o do template do email")
+  @ApiModelProperty(value = "{{{boleto_email_request_parametros_value}}}")
   public Object getParametros() {
     return parametros;
   }

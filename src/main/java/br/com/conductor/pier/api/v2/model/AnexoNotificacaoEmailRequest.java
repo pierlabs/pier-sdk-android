@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o
+ * {{{anexo_notificacao_email_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o")
+@ApiModel(description = "{{{anexo_notificacao_email_request_description}}}")
 public class AnexoNotificacaoEmailRequest  {
   
   @SerializedName("idDocumento")
@@ -16,9 +16,9 @@ public class AnexoNotificacaoEmailRequest  {
 
   
   /**
-   * ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o
+   * {{{anexo_notificacao_email_request_id_documento_value}}}
    **/
-  @ApiModelProperty(value = "ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{anexo_notificacao_email_request_id_documento_value}}}")
   public Long getIdDocumento() {
     return idDocumento;
   }

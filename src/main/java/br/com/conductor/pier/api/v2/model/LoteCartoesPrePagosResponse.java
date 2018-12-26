@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lote Cart\u00F5es Pr\u00E9-Pagos
+ * {{{lote_cartoes_pre_pagos_response_description}}}
  **/
-@ApiModel(description = "Lote Cart\u00F5es Pr\u00E9-Pagos")
+@ApiModel(description = "{{{lote_cartoes_pre_pagos_response_description}}}")
 public class LoteCartoesPrePagosResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)
+   * {{{lote_cartoes_pre_pagos_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo identificador da origem comercial
+   * {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da origem comercial")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -60,9 +60,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo identificador do Produto
+   * {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do Produto")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -72,9 +72,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo identificador do tipo do cart\u00E3o
+   * {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do tipo do cart\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -84,9 +84,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo identificador da Imagem do cart\u00E3o
+   * {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador da Imagem do cart\u00E3o")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_imagem_value}}}")
   public Long getIdImagem() {
     return idImagem;
   }
@@ -96,9 +96,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
+   * {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_id_endereco_value}}}")
   public Long getIdEndereco() {
     return idEndereco;
   }
@@ -108,9 +108,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * N\u00FAmero de cart\u00F5es existentes no Lote
+   * {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero de cart\u00F5es existentes no Lote")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_quantidade_value}}}")
   public Integer getQuantidade() {
     return quantidade;
   }
@@ -120,9 +120,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos
+   * {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -132,9 +132,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Nome do usu\u00E1rio que criou o lote
+   * {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Nome do usu\u00E1rio que criou o lote")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}")
   public String getUsuarioCadastro() {
     return usuarioCadastro;
   }
@@ -144,9 +144,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * Indica o status de processamento do lote
+   * {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Indica o status de processamento do lote")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_status_processamento_value}}}")
   public Integer getStatusProcessamento() {
     return statusProcessamento;
   }
@@ -156,9 +156,9 @@ public class LoteCartoesPrePagosResponse  {
 
   
   /**
-   * N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)
+   * {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)")
+  @ApiModelProperty(required = true, value = "{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}")
   public String getIdentificadorExterno() {
     return identificadorExterno;
   }

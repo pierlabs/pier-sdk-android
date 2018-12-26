@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta do grupo de chargeback
+ * {{{grupo_chargeback_response_description}}}
  **/
-@ApiModel(description = "Objeto de resposta do grupo de chargeback")
+@ApiModel(description = "{{{grupo_chargeback_response_description}}}")
 public class GrupoChargebackResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class GrupoChargebackResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do grupo de chargeback
+   * {{{grupo_chargeback_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do grupo de chargeback")
+  @ApiModelProperty(value = "{{{grupo_chargeback_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class GrupoChargebackResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do grupo de chargeback
+   * {{{grupo_chargeback_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo de chargeback")
+  @ApiModelProperty(value = "{{{grupo_chargeback_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

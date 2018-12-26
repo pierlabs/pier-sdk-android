@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto para altera\u00E7\u00E3o de contas. Nenhum dos campos s\u00E3o obrigat\u00F3rios. Devem ser informados apenas os campos que deseja modificar
+ * {{{conta_partial_object_description}}}
  **/
-@ApiModel(description = "Objeto para altera\u00E7\u00E3o de contas. Nenhum dos campos s\u00E3o obrigat\u00F3rios. Devem ser informados apenas os campos que deseja modificar")
+@ApiModel(description = "{{{conta_partial_object_description}}}")
 public class ContaPartialUpdate  {
   
   @SerializedName("funcaoAtiva")
@@ -18,9 +18,9 @@ public class ContaPartialUpdate  {
 
   
   /**
-   * Fun\u00E7\u00E3o ativa da conta. Representa a fun\u00E7\u00E3o na qual a conta encontra-se habilitada. Propriedade s\u00F3 deve ser informada caso o emissor fa\u00E7a uso de fun\u00E7\u00F5es para contas. As fun\u00E7\u00F5es dispon\u00EDveis para contas podem ser visualizadas em api/contas/tipos-funcoes
+   * {{{conta_partial_funcao_ativa_value}}}
    **/
-  @ApiModelProperty(value = "Fun\u00E7\u00E3o ativa da conta. Representa a fun\u00E7\u00E3o na qual a conta encontra-se habilitada. Propriedade s\u00F3 deve ser informada caso o emissor fa\u00E7a uso de fun\u00E7\u00F5es para contas. As fun\u00E7\u00F5es dispon\u00EDveis para contas podem ser visualizadas em api/contas/tipos-funcoes")
+  @ApiModelProperty(value = "{{{conta_partial_funcao_ativa_value}}}")
   public String getFuncaoAtiva() {
     return funcaoAtiva;
   }
@@ -30,9 +30,9 @@ public class ContaPartialUpdate  {
 
   
   /**
-   * Identificador da conta de controle interno criado pelo emissor
+   * {{{conta_partial_id_conta_emissor_value}}}
    **/
-  @ApiModelProperty(value = "Identificador da conta de controle interno criado pelo emissor")
+  @ApiModelProperty(value = "{{{conta_partial_id_conta_emissor_value}}}")
   public Long getIdContaEmissor() {
     return idContaEmissor;
   }

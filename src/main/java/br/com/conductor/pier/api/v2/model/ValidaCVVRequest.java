@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o de valida\u00E7\u00E3o do CVV
+ * {{{valida_c_v_v_request_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o de valida\u00E7\u00E3o do CVV")
+@ApiModel(description = "{{{valida_c_v_v_request_description}}}")
 public class ValidaCVVRequest  {
   
   @SerializedName("idChaveCriptografia")
@@ -18,9 +18,9 @@ public class ValidaCVVRequest  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia
+   * {{{valida_c_v_v_request_id_chave_criptografia_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do chave de criptografia")
+  @ApiModelProperty(value = "{{{valida_c_v_v_request_id_chave_criptografia_value}}}")
   public Long getIdChaveCriptografia() {
     return idChaveCriptografia;
   }
@@ -30,9 +30,9 @@ public class ValidaCVVRequest  {
 
   
   /**
-   * Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV)
+   * {{{valida_c_v_v_request_cvv_value}}}
    **/
-  @ApiModelProperty(value = "Valor de Verifica\u00E7\u00E3o do Cart\u00E3o (CVV)")
+  @ApiModelProperty(value = "{{{valida_c_v_v_request_cvv_value}}}")
   public String getCvv() {
     return cvv;
   }

@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de conta banc\u00E1ria portador
+ * {{{page_conta_bancaria_portador_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de conta banc\u00E1ria portador")
+@ApiModel(description = "{{{page_conta_bancaria_portador_response_description}}}")
 public class PageContaBancariaPortadorResponse  {
   
   @SerializedName("content")

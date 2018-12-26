@@ -100,9 +100,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update telefones escritorio cobranca
+   * {{{credor_update_telefones_escritorio_cobranca_value}}}
    **/
-  @ApiModelProperty(value = "Credor update telefones escritorio cobranca")
+  @ApiModelProperty(value = "{{{credor_update_telefones_escritorio_cobranca_value}}}")
   public List<TelefoneEscritorioCobrancaDTO> getTelefonesEscritoriosCobranca() {
     return telefonesEscritoriosCobranca;
   }
@@ -112,9 +112,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update nome credor
+   * {{{credor_update_nome_credor_value}}}
    **/
-  @ApiModelProperty(value = "Credor update nome credor")
+  @ApiModelProperty(value = "{{{credor_update_nome_credor_value}}}")
   public String getNomeCredor() {
     return nomeCredor;
   }
@@ -124,9 +124,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update pagamento semanal
+   * {{{credor_update_pagamento_semanal_value}}}
    **/
-  @ApiModelProperty(value = "Credor update pagamento semanal")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_semanal_value}}}")
   public Integer getDiaPagamentoSemanal() {
     return diaPagamentoSemanal;
   }
@@ -136,9 +136,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update pagamento mensal
+   * {{{credor_update_pagamento_mensal_value}}}
    **/
-  @ApiModelProperty(value = "Credor update pagamento mensal")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_mensal_value}}}")
   public Integer getDiaPagamentoMensal() {
     return diaPagamentoMensal;
   }
@@ -148,9 +148,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial primeiro
+   * {{{credor_update_pagamento_decendial_primeiro_value}}}
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial primeiro")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_decendial_primeiro_value}}}")
   public Integer getDiaPagamentoDecendialPrimeiro() {
     return diaPagamentoDecendialPrimeiro;
   }
@@ -160,9 +160,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial segundo
+   * {{{credor_update_pagamento_decendial_segundo_value}}}
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial segundo")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_decendial_segundo_value}}}")
   public Integer getDiaPagamentoDecendialSegundo() {
     return diaPagamentoDecendialSegundo;
   }
@@ -172,9 +172,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial terceiro
+   * {{{credor_update_pagamento_decendial_terceiro_value}}}
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial terceiro")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_decendial_terceiro_value}}}")
   public Integer getDiaPagamentoDecendialTerceiro() {
     return diaPagamentoDecendialTerceiro;
   }
@@ -184,9 +184,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento quinzenal primeiro
+   * {{{credor_update_pagamento_quinzenal_primeiro_value}}}
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal primeiro")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_quinzenal_primeiro_value}}}")
   public Integer getDiaPagamentoQuinzenalPrimeiro() {
     return diaPagamentoQuinzenalPrimeiro;
   }
@@ -196,9 +196,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento quinzenal segundo
+   * {{{credor_update_pagamento_quinzenal_segundo_value}}}
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal segundo")
+  @ApiModelProperty(value = "{{{credor_update_pagamento_quinzenal_segundo_value}}}")
   public Integer getDiaPagamentoQuinzenalSegundo() {
     return diaPagamentoQuinzenalSegundo;
   }
@@ -208,9 +208,9 @@ public class CredorUpdate  {
 
   
   /**
-   * credor update banco
+   * {{{credor_update_banco_value}}}
    **/
-  @ApiModelProperty(value = "credor update banco")
+  @ApiModelProperty(value = "{{{credor_update_banco_value}}}")
   public Integer getBanco() {
     return banco;
   }
@@ -220,9 +220,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update ag\u00EAncia
+   * {{{credor_update_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Credor update ag\u00EAncia")
+  @ApiModelProperty(value = "{{{credor_update_agencia_value}}}")
   public Integer getAgencia() {
     return agencia;
   }
@@ -232,9 +232,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update d\u00EDgito ag\u00EAncia
+   * {{{credor_update_digito_agencia_value}}}
    **/
-  @ApiModelProperty(value = "Credor update d\u00EDgito ag\u00EAncia")
+  @ApiModelProperty(value = "{{{credor_update_digito_agencia_value}}}")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -244,9 +244,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update conta corrente
+   * {{{credor_update_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Credor update conta corrente")
+  @ApiModelProperty(value = "{{{credor_update_conta_corrente_value}}}")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -256,9 +256,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update d\u00EDgito conta corrente
+   * {{{credor_update_digito_conta_corrente_value}}}
    **/
-  @ApiModelProperty(value = "Credor update d\u00EDgito conta corrente")
+  @ApiModelProperty(value = "{{{credor_update_digito_conta_corrente_value}}}")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -268,9 +268,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update credor banco
+   * {{{credor_update_credor_banco_value}}}
    **/
-  @ApiModelProperty(value = "Credor update credor banco")
+  @ApiModelProperty(value = "{{{credor_update_credor_banco_value}}}")
   public Boolean getCredorBanco() {
     return credorBanco;
   }
@@ -280,9 +280,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update percentual rav
+   * {{{credor_update_percentual_rav_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Credor update percentual rav")
+  @ApiModelProperty(required = true, value = "{{{credor_update_percentual_rav_value}}}")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
   }
@@ -292,9 +292,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update recebe rav
+   * {{{credor_update_recebe_rav_value}}}
    **/
-  @ApiModelProperty(value = "Credor update recebe rav")
+  @ApiModelProperty(value = "{{{credor_update_recebe_rav_value}}}")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
   }
@@ -304,9 +304,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update percentual multiplica
+   * {{{credor_update_percentual_multiplica_value}}}
    **/
-  @ApiModelProperty(value = "Credor update percentual multiplica")
+  @ApiModelProperty(value = "{{{credor_update_percentual_multiplica_value}}}")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
   }
@@ -316,9 +316,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update taxa adm
+   * {{{credor_update_taxa_adm_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Credor update taxa adm")
+  @ApiModelProperty(required = true, value = "{{{credor_update_taxa_adm_value}}}")
   public BigDecimal getTaxaAdministrativa() {
     return taxaAdministrativa;
   }
@@ -328,9 +328,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update taxa banco
+   * {{{credor_update_taxa_banco_value}}}
    **/
-  @ApiModelProperty(value = "Credor update taxa banco")
+  @ApiModelProperty(value = "{{{credor_update_taxa_banco_value}}}")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
   }
@@ -340,9 +340,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update limite rav
+   * {{{credor_update_limite_rav_value}}}
    **/
-  @ApiModelProperty(value = "Credor update limite rav")
+  @ApiModelProperty(value = "{{{credor_update_limite_rav_value}}}")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
   }
@@ -352,9 +352,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update id credor rav
+   * {{{credor_update_id_credor_rav_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Credor update id credor rav")
+  @ApiModelProperty(required = true, value = "{{{credor_update_id_credor_rav_value}}}")
   public Long getIdCredorRAV() {
     return idCredorRAV;
   }
@@ -364,9 +364,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update periodicidade
+   * {{{credor_update_periodicidade_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Credor update periodicidade")
+  @ApiModelProperty(required = true, value = "{{{credor_update_periodicidade_value}}}")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -376,9 +376,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update id pessoa juridica
+   * {{{credor_update_id_pessoa_juridica_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Credor update id pessoa juridica")
+  @ApiModelProperty(required = true, value = "{{{credor_update_id_pessoa_juridica_value}}}")
   public Long getIdPessoaJuridica() {
     return idPessoaJuridica;
   }
@@ -388,9 +388,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag escritorio cobranca
+   * {{{credor_update_flag_escritorio_cobranca_value}}}
    **/
-  @ApiModelProperty(value = "Credor update flag escritorio cobranca")
+  @ApiModelProperty(value = "{{{credor_update_flag_escritorio_cobranca_value}}}")
   public Boolean getFlagEscritorioCobranca() {
     return flagEscritorioCobranca;
   }
@@ -400,9 +400,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update prefixo
+   * {{{credor_update_prefixo_value}}}
    **/
-  @ApiModelProperty(value = "Credor update prefixo")
+  @ApiModelProperty(value = "{{{credor_update_prefixo_value}}}")
   public String getPrefixo() {
     return prefixo;
   }
@@ -412,9 +412,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag ativo
+   * {{{credor_update_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Credor update flag ativo")
+  @ApiModelProperty(value = "{{{credor_update_ativo_value}}}")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -424,9 +424,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update contato
+   * {{{credor_update_nome_contato_value}}}
    **/
-  @ApiModelProperty(value = "Credor update contato")
+  @ApiModelProperty(value = "{{{credor_update_nome_contato_value}}}")
   public String getNomeContato() {
     return nomeContato;
   }
@@ -436,9 +436,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update email
+   * {{{credor_update_email_value}}}
    **/
-  @ApiModelProperty(value = "Credor update email")
+  @ApiModelProperty(value = "{{{credor_update_email_value}}}")
   public String getEmail() {
     return email;
   }
@@ -448,9 +448,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update logradouro
+   * {{{credor_update_nome_logradouro_value}}}
    **/
-  @ApiModelProperty(value = "Credor update logradouro")
+  @ApiModelProperty(value = "{{{credor_update_nome_logradouro_value}}}")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -460,9 +460,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update numero endereco
+   * {{{credor_update_numero_endereco_value}}}
    **/
-  @ApiModelProperty(value = "Credor update numero endereco")
+  @ApiModelProperty(value = "{{{credor_update_numero_endereco_value}}}")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -472,9 +472,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update complemento endereco
+   * {{{credor_update_complemento_endereco_value}}}
    **/
-  @ApiModelProperty(value = "Credor update complemento endereco")
+  @ApiModelProperty(value = "{{{credor_update_complemento_endereco_value}}}")
   public String getComplementoEndereco() {
     return complementoEndereco;
   }
@@ -484,9 +484,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update bairro
+   * {{{credor_update_bairro_value}}}
    **/
-  @ApiModelProperty(value = "Credor update bairro")
+  @ApiModelProperty(value = "{{{credor_update_bairro_value}}}")
   public String getBairro() {
     return bairro;
   }
@@ -496,9 +496,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update cidade
+   * {{{credor_update_cidade_value}}}
    **/
-  @ApiModelProperty(value = "Credor update cidade")
+  @ApiModelProperty(value = "{{{credor_update_cidade_value}}}")
   public String getCidade() {
     return cidade;
   }
@@ -508,9 +508,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update cep
+   * {{{credor_update_cep_value}}}
    **/
-  @ApiModelProperty(value = "Credor update cep")
+  @ApiModelProperty(value = "{{{credor_update_cep_value}}}")
   public String getCep() {
     return cep;
   }
@@ -520,9 +520,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update uf
+   * {{{credor_update_uf_value}}}
    **/
-  @ApiModelProperty(value = "Credor update uf")
+  @ApiModelProperty(value = "{{{credor_update_uf_value}}}")
   public String getUf() {
     return uf;
   }
@@ -532,9 +532,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update responsavel
+   * {{{credor_update_responsavel_value}}}
    **/
-  @ApiModelProperty(value = "Credor update responsavel")
+  @ApiModelProperty(value = "{{{credor_update_responsavel_value}}}")
   public String getResponsavel() {
     return responsavel;
   }
@@ -544,9 +544,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag segunda via acordo
+   * {{{credor_update_flag_segunda_via_acordo_value}}}
    **/
-  @ApiModelProperty(value = "Credor update flag segunda via acordo")
+  @ApiModelProperty(value = "{{{credor_update_flag_segunda_via_acordo_value}}}")
   public Integer getFlagSegundaViaAcordo() {
     return flagSegundaViaAcordo;
   }
@@ -556,9 +556,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update valor minimo parcela
+   * {{{credor_update_valor_minimo_parcela_value}}}
    **/
-  @ApiModelProperty(value = "Credor update valor minimo parcela")
+  @ApiModelProperty(value = "{{{credor_update_valor_minimo_parcela_value}}}")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -568,9 +568,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update desconto maximo
+   * {{{credor_update_desconto_maximo_value}}}
    **/
-  @ApiModelProperty(value = "Credor update desconto maximo")
+  @ApiModelProperty(value = "{{{credor_update_desconto_maximo_value}}}")
   public BigDecimal getDescontoMaximo() {
     return descontoMaximo;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o do recurso Par\u00E2metro Emissor
+ * {{{parametro_emissor_resposta_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Par\u00E2metro Emissor")
+@ApiModel(description = "{{{parametro_emissor_resposta_description}}}")
 public class ParametroEmissorResponse  {
   
   @SerializedName("codigo")
@@ -24,9 +24,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * C\u00F3digo do par\u00E2metro
+   * {{{parametro_emissor_resposta_codigo_descricao}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo do par\u00E2metro")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_codigo_descricao}}}")
   public String getCodigo() {
     return codigo;
   }
@@ -36,9 +36,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Data da validade do par\u00E2metro
+   * {{{parametro_emissor_resposta_data_validade_descricao}}}
    **/
-  @ApiModelProperty(value = "Data da validade do par\u00E2metro")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_data_validade_descricao}}}")
   public String getDataValidade() {
     return dataValidade;
   }
@@ -48,9 +48,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do par\u00E2metro
+   * {{{parametro_emissor_resposta_descricao_description}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do par\u00E2metro")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_descricao_description}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -60,9 +60,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Tipo do par\u00E2metro
+   * {{{parametro_emissor_resposta_tipo_descricao}}}
    **/
-  @ApiModelProperty(value = "Tipo do par\u00E2metro")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_tipo_descricao}}}")
   public String getTipo() {
     return tipo;
   }
@@ -72,9 +72,9 @@ public class ParametroEmissorResponse  {
 
   
   /**
-   * Valor do par\u00E2metro
+   * {{{parametro_emissor_resposta_valor_parametro_descricao}}}
    **/
-  @ApiModelProperty(value = "Valor do par\u00E2metro")
+  @ApiModelProperty(value = "{{{parametro_emissor_resposta_valor_parametro_descricao}}}")
   public String getValorParametro() {
     return valorParametro;
   }

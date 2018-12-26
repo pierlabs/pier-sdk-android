@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto de resposta para tipos de contas banc\u00E1rias
+ * {{{tipo_conta_bancaria_response_description}}}
  **/
-@ApiModel(description = "Objeto de resposta para tipos de contas banc\u00E1rias")
+@ApiModel(description = "{{{tipo_conta_bancaria_response_description}}}")
 public class TipoContaBancariaResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoContaBancariaResponse  {
 
   
   /**
-   * Identificador do tipo de conta banc\u00E1ria
+   * {{{tipo_conta_bancaria_response_id_value}}}
    **/
-  @ApiModelProperty(value = "Identificador do tipo de conta banc\u00E1ria")
+  @ApiModelProperty(value = "{{{tipo_conta_bancaria_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoContaBancariaResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria
+   * {{{tipo_conta_bancaria_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria")
+  @ApiModelProperty(value = "{{{tipo_conta_bancaria_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

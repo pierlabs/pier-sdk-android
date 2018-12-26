@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Telefone de escritorio para cobran\u00E7a
+ * {{{telefone_escritorio_cobranca_d_t_o_description}}}
  **/
-@ApiModel(description = "Telefone de escritorio para cobran\u00E7a")
+@ApiModel(description = "{{{telefone_escritorio_cobranca_d_t_o_description}}}")
 public class TelefoneEscritorioCobrancaDTO  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca id
+   * {{{telefone_escritorio_cobranca_d_t_o_id}}}
    **/
-  @ApiModelProperty(value = "Telefone escrit\u00F3rio cobranca id")
+  @ApiModelProperty(value = "{{{telefone_escritorio_cobranca_d_t_o_id}}}")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca ddd
+   * {{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Telefone escrit\u00F3rio cobranca ddd")
+  @ApiModelProperty(required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +46,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca telefone
+   * {{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Telefone escrit\u00F3rio cobranca telefone")
+  @ApiModelProperty(required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +58,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca ramal
+   * {{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}
    **/
-  @ApiModelProperty(value = "Telefone escrit\u00F3rio cobranca ramal")
+  @ApiModelProperty(value = "{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}")
   public String getRamal() {
     return ramal;
   }

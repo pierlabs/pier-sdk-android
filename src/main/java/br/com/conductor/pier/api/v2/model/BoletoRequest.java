@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto
+ * {{{boleto_request_description}}}
  **/
-@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto")
+@ApiModel(description = "{{{boleto_request_description}}}")
 public class BoletoRequest  {
   
   @SerializedName("idConta")
@@ -25,9 +25,9 @@ public class BoletoRequest  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)
+   * {{{boleto_request_id_conta_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -37,9 +37,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Tipo de Boleto a ser gerado
+   * {{{boleto_request_tipo_boleto_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Tipo de Boleto a ser gerado")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_tipo_boleto_value}}}")
   public Long getTipoBoleto() {
     return tipoBoleto;
   }
@@ -49,9 +49,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Valor da cobran\u00E7a gerada
+   * {{{boleto_request_valor_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Valor da cobran\u00E7a gerada")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -61,9 +61,9 @@ public class BoletoRequest  {
 
   
   /**
-   * Data de vencimento da cobran\u00E7a
+   * {{{boleto_request_data_vencimento_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(required = true, value = "{{{boleto_request_data_vencimento_value}}}")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -73,9 +73,9 @@ public class BoletoRequest  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado
+   * {{{boleto_request_id_convenio_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado")
+  @ApiModelProperty(value = "{{{boleto_request_id_convenio_value}}}")
   public Long getIdConvenio() {
     return idConvenio;
   }

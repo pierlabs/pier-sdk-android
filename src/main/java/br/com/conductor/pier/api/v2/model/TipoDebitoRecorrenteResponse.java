@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
+ * {{{tipo_debito_recorrente_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente")
+@ApiModel(description = "{{{tipo_debito_recorrente_response_description}}}")
 public class TipoDebitoRecorrenteResponse  {
   
   @SerializedName("flagAnuidadeBonificada")
@@ -82,9 +82,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)
+   * {{{tipo_debito_recorrente_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -94,9 +94,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente
+   * {{{tipo_debito_recorrente_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_descricao_value}}}")
   public String getNome() {
     return nome;
   }
@@ -106,9 +106,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Valor do tipo de d\u00E9bito recorrente
+   * {{{tipo_debito_recorrente_response_valor_value}}}
    **/
-  @ApiModelProperty(value = "Valor do tipo de d\u00E9bito recorrente")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -118,9 +118,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo
+   * {{{tipo_debito_recorrente_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(value = "Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -130,9 +130,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Valor do bonus referente ao plano
+   * {{{tipo_debito_recorrente_response_valor_bonus_value}}}
    **/
-  @ApiModelProperty(value = "Valor do bonus referente ao plano")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_valor_bonus_value}}}")
   public BigDecimal getValorBonus() {
     return valorBonus;
   }
@@ -142,9 +142,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Numero de parcelas referente ao plano
+   * {{{tipo_debito_recorrente_response_numero_parcelas_value}}}
    **/
-  @ApiModelProperty(value = "Numero de parcelas referente ao plano")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_numero_parcelas_value}}}")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -154,9 +154,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que indica se a renova\u00E7\u00E3o vai ser autom\u00E1tica
+   * {{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se a renova\u00E7\u00E3o vai ser autom\u00E1tica")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}")
   public Boolean getFlagAdereAutomatico() {
     return flagAdereAutomatico;
   }
@@ -166,9 +166,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que indica se a renova\u00E7\u00E3o vai ser autom\u00E1tica
+   * {{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se a renova\u00E7\u00E3o vai ser autom\u00E1tica")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}")
   public Boolean getFlagGeraNumeroSorte() {
     return flagGeraNumeroSorte;
   }
@@ -178,9 +178,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Indica a faixa et\u00E1ria para aderir ao plano
+   * {{{tipo_debito_recorrente_response_faixa_etaria_value}}}
    **/
-  @ApiModelProperty(value = "Indica a faixa et\u00E1ria para aderir ao plano")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_faixa_etaria_value}}}")
   public String getFaixaEtaria() {
     return faixaEtaria;
   }
@@ -190,9 +190,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag indica se o plano \u00E9 um seguro
+   * {{{tipo_debito_recorrente_response_flag_seguro_value}}}
    **/
-  @ApiModelProperty(value = "Flag indica se o plano \u00E9 um seguro")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_seguro_value}}}")
   public Boolean getFlagSeguro() {
     return flagSeguro;
   }
@@ -202,9 +202,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Indica qual premia\u00E7\u00E3o referente ao m\u00EAs
+   * {{{tipo_debito_recorrente_response_sorteios_mensais_value}}}
    **/
-  @ApiModelProperty(value = "Indica qual premia\u00E7\u00E3o referente ao m\u00EAs")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_sorteios_mensais_value}}}")
   public String getSorteiosMensais() {
     return sorteiosMensais;
   }
@@ -214,9 +214,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que indica se a ades\u00E3o do plano ser\u00E1 autom\u00E1tica
+   * {{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se a ades\u00E3o do plano ser\u00E1 autom\u00E1tica")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}")
   public Boolean getFlagAdesaoAutomatica() {
     return flagAdesaoAutomatica;
   }
@@ -226,9 +226,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag indica se o plano cobre dependente
+   * {{{tipo_debito_recorrente_response_flag_dependente_value}}}
    **/
-  @ApiModelProperty(value = "Flag indica se o plano cobre dependente")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_dependente_value}}}")
   public Boolean getFlagDependente() {
     return flagDependente;
   }
@@ -238,9 +238,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Indica numeros de dependentes
+   * {{{tipo_debito_recorrente_response_quantidade_dependente_value}}}
    **/
-  @ApiModelProperty(value = "Indica numeros de dependentes")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_quantidade_dependente_value}}}")
   public Integer getQuantidadeDependente() {
     return quantidadeDependente;
   }
@@ -250,9 +250,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do termo seguro servi\u00E7o (id)
+   * {{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do termo seguro servi\u00E7o (id)")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}")
   public Long getIdTermoSeguroServico() {
     return idTermoSeguroServico;
   }
@@ -262,9 +262,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Idade minima para aderir ao plano
+   * {{{tipo_debito_recorrente_response_idade_minima_value}}}
    **/
-  @ApiModelProperty(value = "Idade minima para aderir ao plano")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_idade_minima_value}}}")
   public Integer getIdadeMinima() {
     return idadeMinima;
   }
@@ -274,9 +274,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Idade m\u00E1xima para aderir ao plano
+   * {{{tipo_debito_recorrente_response_idade_maxima_value}}}
    **/
-  @ApiModelProperty(value = "Idade m\u00E1xima para aderir ao plano")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_idade_maxima_value}}}")
   public Integer getIdadeMaxima() {
     return idadeMaxima;
   }
@@ -286,9 +286,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag indica se o plano ter\u00E1 um debito incondicional
+   * {{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}
    **/
-  @ApiModelProperty(value = "Flag indica se o plano ter\u00E1 um debito incondicional")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}")
   public Boolean getFlagDebitoIncondicional() {
     return flagDebitoIncondicional;
   }
@@ -298,9 +298,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag indica se o plano ter\u00E1 extrato incondicional
+   * {{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}
    **/
-  @ApiModelProperty(value = "Flag indica se o plano ter\u00E1 extrato incondicional")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}")
   public Boolean getFlagExtratoIncondicional() {
     return flagExtratoIncondicional;
   }
@@ -310,9 +310,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag indica se o plano ter\u00E1 algum estorno autom\u00E1tico
+   * {{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}
    **/
-  @ApiModelProperty(value = "Flag indica se o plano ter\u00E1 algum estorno autom\u00E1tico")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}")
   public Boolean getFlagEstornoAutomatico() {
     return flagEstornoAutomatico;
   }
@@ -322,9 +322,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Valor repassado a seguradora
+   * {{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}
    **/
-  @ApiModelProperty(value = "Valor repassado a seguradora")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}")
   public BigDecimal getValorRepassadoSeguradora() {
     return valorRepassadoSeguradora;
   }
@@ -334,9 +334,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que indica se vai ser lan\u00E7ado uma transa\u00E7\u00E3o
+   * {{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se vai ser lan\u00E7ado uma transa\u00E7\u00E3o")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}")
   public Boolean getFlagLancaTransacao() {
     return flagLancaTransacao;
   }
@@ -346,9 +346,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Flag que indica se vai ser feito transfer\u00EAncia autom\u00E1tica
+   * {{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}
    **/
-  @ApiModelProperty(value = "Flag que indica se vai ser feito transfer\u00EAncia autom\u00E1tica")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}")
   public Boolean getFlagTransferenciaAutomatica() {
     return flagTransferenciaAutomatica;
   }
@@ -358,9 +358,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de produtos (id)
+   * {{{tipo_debito_recorrente_response_id_produto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o de produtos (id)")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_id_produto_value}}}")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -370,9 +370,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do grupo de d\u00E9bito recorrente (id)
+   * {{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do grupo de d\u00E9bito recorrente (id)")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}")
   public Long getIdGrupoDebitoRecorrente() {
     return idGrupoDebitoRecorrente;
   }
@@ -382,9 +382,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * Qauntidade de tentativas para conbran\u00E7a
+   * {{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}
    **/
-  @ApiModelProperty(value = "Qauntidade de tentativas para conbran\u00E7a")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}")
   public Integer getQuantidadeTentativasCobranca() {
     return quantidadeTentativasCobranca;
   }
@@ -394,9 +394,9 @@ public class TipoDebitoRecorrenteResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de tipos de ajuste (id)
+   * {{{tipo_debito_recorrente_response_id_ajuste_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o de tipos de ajuste (id)")
+  @ApiModelProperty(value = "{{{tipo_debito_recorrente_response_id_ajuste_value}}}")
   public Long getIdAjuste() {
     return idAjuste;
   }

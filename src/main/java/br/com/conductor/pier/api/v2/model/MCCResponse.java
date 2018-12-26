@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * ObjetoMCC
+ * {{{m_c_c_response_description}}}
  **/
-@ApiModel(description = "ObjetoMCC")
+@ApiModel(description = "{{{m_c_c_response_description}}}")
 public class MCCResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class MCCResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id)
+   * {{{m_c_c_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id)")
+  @ApiModelProperty(value = "{{{m_c_c_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class MCCResponse  {
 
   
   /**
-   * descricao do MCC
+   * {{{m_c_c_response_descricao_value}}}
    **/
-  @ApiModelProperty(value = "descricao do MCC")
+  @ApiModelProperty(value = "{{{m_c_c_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }

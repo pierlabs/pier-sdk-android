@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Detalhes da fatura
+ * {{{fatura_detalhe_response_description}}}
  **/
-@ApiModel(description = "Detalhes da fatura")
+@ApiModel(description = "{{{fatura_detalhe_response_description}}}")
 public class FaturaDetalheResponse  {
   
   @SerializedName("idConta")
@@ -42,9 +42,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta
+   * {{{fatura_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta")
+  @ApiModelProperty(value = "{{{fatura_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -54,9 +54,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Situa\u00E7\u00E3o de Processamento da fatura
+   * {{{fatura_response_situacao_processamento_value}}}
    **/
-  @ApiModelProperty(value = "Situa\u00E7\u00E3o de Processamento da fatura")
+  @ApiModelProperty(value = "{{{fatura_response_situacao_processamento_value}}}")
   public SituacaoProcessamentoEnum getSituacaoProcessamento() {
     return situacaoProcessamento;
   }
@@ -66,9 +66,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Status de pagamento efetuado
+   * {{{fatura_response_pagamento_efetuado_value}}}
    **/
-  @ApiModelProperty(value = "Status de pagamento efetuado")
+  @ApiModelProperty(value = "{{{fatura_response_pagamento_efetuado_value}}}")
   public Boolean getPagamentoEfetuado() {
     return pagamentoEfetuado;
   }
@@ -78,9 +78,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Data de vencimento da fatura
+   * {{{fatura_response_data_vencimento_fatura_value}}}
    **/
-  @ApiModelProperty(value = "Data de vencimento da fatura")
+  @ApiModelProperty(value = "{{{fatura_response_data_vencimento_fatura_value}}}")
   public String getDataVencimentoFatura() {
     return dataVencimentoFatura;
   }
@@ -90,9 +90,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Data de vencimento real da fatura
+   * {{{fatura_response_data_vencimento_real_value}}}
    **/
-  @ApiModelProperty(value = "Data de vencimento real da fatura")
+  @ApiModelProperty(value = "{{{fatura_response_data_vencimento_real_value}}}")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
@@ -102,9 +102,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Data de fechamento da fatura
+   * {{{fatura_response_data_fechamento_value}}}
    **/
-  @ApiModelProperty(value = "Data de fechamento da fatura")
+  @ApiModelProperty(value = "{{{fatura_response_data_fechamento_value}}}")
   public String getDataFechamento() {
     return dataFechamento;
   }
@@ -114,9 +114,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Valor total da fatura
+   * {{{fatura_response_valor_total_value}}}
    **/
-  @ApiModelProperty(value = "Valor total da fatura")
+  @ApiModelProperty(value = "{{{fatura_response_valor_total_value}}}")
   public BigDecimal getValorTotal() {
     return valorTotal;
   }
@@ -126,9 +126,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Valor do pagamento m\u00EDnimo
+   * {{{fatura_response_valor_pagamento_minimo_value}}}
    **/
-  @ApiModelProperty(value = "Valor do pagamento m\u00EDnimo")
+  @ApiModelProperty(value = "{{{fatura_response_valor_pagamento_minimo_value}}}")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
   }
@@ -138,9 +138,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Lista de lan\u00E7amentos da fatura
+   * {{{fatura_detalhe_response_lancamentos_fatura_response_value}}}
    **/
-  @ApiModelProperty(value = "Lista de lan\u00E7amentos da fatura")
+  @ApiModelProperty(value = "{{{fatura_detalhe_response_lancamentos_fatura_response_value}}}")
   public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
     return lancamentosFaturaResponse;
   }
@@ -150,9 +150,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * Valor do saldo anterior
+   * {{{fatura_response_saldo_anterior_value}}}
    **/
-  @ApiModelProperty(value = "Valor do saldo anterior")
+  @ApiModelProperty(value = "{{{fatura_response_saldo_anterior_value}}}")
   public BigDecimal getSaldoAnterior() {
     return saldoAnterior;
   }
@@ -162,9 +162,9 @@ public class FaturaDetalheResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do boleto
+   * {{{fatura_response_id_boleto_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto")
+  @ApiModelProperty(value = "{{{fatura_response_id_boleto_value}}}")
   public Long getIdBoleto() {
     return idBoleto;
   }

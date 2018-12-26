@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto FAQ
+ * {{{faq_response_description}}}
  **/
-@ApiModel(description = "Objeto FAQ")
+@ApiModel(description = "{{{faq_response_description}}}")
 public class FaqResponse  {
   
   @SerializedName("id")
@@ -31,9 +31,9 @@ public class FaqResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id)
+   * {{{faq_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id)")
+  @ApiModelProperty(value = "{{{faq_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class FaqResponse  {
 
   
   /**
-   * Conte\u00FAdo da pergunta
+   * {{{faq_response_pergunta_value}}}
    **/
-  @ApiModelProperty(value = "Conte\u00FAdo da pergunta")
+  @ApiModelProperty(value = "{{{faq_response_pergunta_value}}}")
   public String getPergunta() {
     return pergunta;
   }
@@ -55,9 +55,9 @@ public class FaqResponse  {
 
   
   /**
-   * Conte\u00FAdo da resposta
+   * {{{faq_response_resposta_value}}}
    **/
-  @ApiModelProperty(value = "Conte\u00FAdo da resposta")
+  @ApiModelProperty(value = "{{{faq_response_resposta_value}}}")
   public String getResposta() {
     return resposta;
   }
@@ -67,9 +67,9 @@ public class FaqResponse  {
 
   
   /**
-   * N\u00EDvel de relev\u00E2ncia da pergunta
+   * {{{faq_response_relevancia_value}}}
    **/
-  @ApiModelProperty(value = "N\u00EDvel de relev\u00E2ncia da pergunta")
+  @ApiModelProperty(value = "{{{faq_response_relevancia_value}}}")
   public Integer getRelevancia() {
     return relevancia;
   }
@@ -79,9 +79,9 @@ public class FaqResponse  {
 
   
   /**
-   * Plataforma em que a FAQ se encaixa
+   * {{{faq_response_plataforma_value}}}
    **/
-  @ApiModelProperty(value = "Plataforma em que a FAQ se encaixa")
+  @ApiModelProperty(value = "{{{faq_response_plataforma_value}}}")
   public String getPlataforma() {
     return plataforma;
   }
@@ -91,9 +91,9 @@ public class FaqResponse  {
 
   
   /**
-   * Categoria de assunto do qual a FAQ se trata
+   * {{{faq_response_categoria_value}}}
    **/
-  @ApiModelProperty(value = "Categoria de assunto do qual a FAQ se trata")
+  @ApiModelProperty(value = "{{{faq_response_categoria_value}}}")
   public String getCategoria() {
     return categoria;
   }
@@ -103,9 +103,9 @@ public class FaqResponse  {
 
   
   /**
-   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ
+   * {{{faq_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status descrevendo a situa\u00E7\u00E3o atual da FAQ")
+  @ApiModelProperty(value = "{{{faq_response_status_value}}}")
   public StatusEnum getStatus() {
     return status;
   }

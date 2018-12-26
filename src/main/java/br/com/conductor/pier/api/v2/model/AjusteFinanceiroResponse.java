@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o de Objeto de Resposta para Ajuste financeiro
+ * {{{ajuste_financeiro_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o de Objeto de Resposta para Ajuste financeiro")
+@ApiModel(description = "{{{ajuste_financeiro_response_description}}}")
 public class AjusteFinanceiroResponse  {
   
   @SerializedName("id")
@@ -29,9 +29,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
+   * {{{ajuste_financeiro_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -41,9 +41,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
+   * {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_id_tipo_ajuste_value}}}")
   public Long getIdTipoAjuste() {
     return idTipoAjuste;
   }
@@ -53,9 +53,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
+   * {{{ajuste_financeiro_response_id_conta_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_id_conta_value}}}")
   public Long getIdConta() {
     return idConta;
   }
@@ -65,9 +65,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * Data do ajuste
+   * {{{ajuste_financeiro_response_data_ajuste_value}}}
    **/
-  @ApiModelProperty(value = "Data do ajuste")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_data_ajuste_value}}}")
   public String getDataAjuste() {
     return dataAjuste;
   }
@@ -77,9 +77,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * Valor do ajuste
+   * {{{ajuste_financeiro_response_valor_value}}}
    **/
-  @ApiModelProperty(value = "Valor do ajuste")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_valor_value}}}")
   public BigDecimal getValor() {
     return valor;
   }
@@ -89,9 +89,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra
+   * {{{ajuste_financeiro_response_identificador_externo_value}}}
    **/
-  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_identificador_externo_value}}}")
   public String getIdentificadorExterno() {
     return identificadorExterno;
   }
@@ -101,9 +101,9 @@ public class AjusteFinanceiroResponse  {
 
   
   /**
-   * Status do ajuste
+   * {{{ajuste_financeiro_response_status_value}}}
    **/
-  @ApiModelProperty(value = "Status do ajuste")
+  @ApiModelProperty(value = "{{{ajuste_financeiro_response_status_value}}}")
   public Long getStatus() {
     return status;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Promotor
+ * {{{promotor_response_description}}}
  **/
-@ApiModel(description = "Objeto Promotor")
+@ApiModel(description = "{{{promotor_response_description}}}")
 public class PromotorResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class PromotorResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
+   * {{{promotor_response_id_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)")
+  @ApiModelProperty(value = "{{{promotor_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class PromotorResponse  {
 
   
   /**
-   * Nome do Promotor
+   * {{{promotor_response_nome_value}}}
    **/
-  @ApiModelProperty(value = "Nome do Promotor")
+  @ApiModelProperty(value = "{{{promotor_response_nome_value}}}")
   public String getNome() {
     return nome;
   }
@@ -48,9 +48,9 @@ public class PromotorResponse  {
 
   
   /**
-   * Data da Inclus\u00E3o
+   * {{{promotor_response_data_cadastro_value}}}
    **/
-  @ApiModelProperty(value = "Data da Inclus\u00E3o")
+  @ApiModelProperty(value = "{{{promotor_response_data_cadastro_value}}}")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -60,9 +60,9 @@ public class PromotorResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
+   * {{{promotor_response_id_estabelecimento_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento")
+  @ApiModelProperty(value = "{{{promotor_response_id_estabelecimento_value}}}")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -72,9 +72,9 @@ public class PromotorResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
+   * {{{promotor_response_id_usuario_value}}}
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio")
+  @ApiModelProperty(value = "{{{promotor_response_id_usuario_value}}}")
   public Long getIdUsuario() {
     return idUsuario;
   }

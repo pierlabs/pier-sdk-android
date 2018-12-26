@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
+ * {{{tipo_oportunidade_response_description}}}
  **/
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade")
+@ApiModel(description = "{{{tipo_oportunidade_response_description}}}")
 public class TipoOportunidadeResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * C\u00F3digo identificador do TipoOportunidade
+   * {{{tipo_oportunidade_response_id_value}}}
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do TipoOportunidade")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_id_value}}}")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * Descricao do TipoOportunidade
+   * {{{tipo_oportunidade_response_descricao_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Descricao do TipoOportunidade")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_descricao_value}}}")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class TipoOportunidadeResponse  {
 
   
   /**
-   * Flag que representa se o tipo oportunidade est\u00E1 ativo
+   * {{{tipo_oportunidade_response_flag_ativo_value}}}
    **/
-  @ApiModelProperty(required = true, value = "Flag que representa se o tipo oportunidade est\u00E1 ativo")
+  @ApiModelProperty(required = true, value = "{{{tipo_oportunidade_response_flag_ativo_value}}}")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
