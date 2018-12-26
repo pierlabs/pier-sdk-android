@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_operacao_response_description}}}
+ * Lista de Opera\u00E7\u00F5es
  **/
-@ApiModel(description = "{{{page_operacao_response_description}}}")
+@ApiModel(description = "Lista de Opera\u00E7\u00F5es")
 public class PageOperacaoResponse  {
   
   @SerializedName("content")

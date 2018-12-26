@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{atribuir_assinatura_cliente_persist_description}}}
+ * Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
  **/
-@ApiModel(description = "{{{atribuir_assinatura_cliente_persist_description}}}")
+@ApiModel(description = "Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente")
 public class AtribuirAssinaturaClientePersist  {
   
   @SerializedName("idArquivo")
@@ -16,9 +16,9 @@ public class AtribuirAssinaturaClientePersist  {
 
   
   /**
-   * {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
    **/
-  @ApiModelProperty(value = "{{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Arquivo")
   public Long getIdArquivo() {
     return idArquivo;
   }

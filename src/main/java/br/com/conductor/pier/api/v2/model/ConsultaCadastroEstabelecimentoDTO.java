@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
+ * Representa\u00E7\u00E3o da Requisi\u00E7\u00E3o do Recurso Cadastrar Estabelicimento
  **/
-@ApiModel(description = "{{{consulta_cadastro_estabelecimento_d_t_o_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da Requisi\u00E7\u00E3o do Recurso Cadastrar Estabelicimento")
 public class ConsultaCadastroEstabelecimentoDTO  {
   
   @SerializedName("dataHoraConsulta")
@@ -26,9 +26,9 @@ public class ConsultaCadastroEstabelecimentoDTO  {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
+   * Data hora de cadastro
    **/
-  @ApiModelProperty(value = "{{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}")
+  @ApiModelProperty(value = "Data hora de cadastro")
   public String getDataHoraConsulta() {
     return dataHoraConsulta;
   }
@@ -38,9 +38,9 @@ public class ConsultaCadastroEstabelecimentoDTO  {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
+   * Status da consulta (1 - OK, 2 - NOK)
    **/
-  @ApiModelProperty(value = "{{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}")
+  @ApiModelProperty(value = "Status da consulta (1 - OK, 2 - NOK)")
   public StatusEnum getStatus() {
     return status;
   }
@@ -50,9 +50,9 @@ public class ConsultaCadastroEstabelecimentoDTO  {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
+   * Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO)
    **/
-  @ApiModelProperty(value = "{{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}")
+  @ApiModelProperty(value = "Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO)")
   public TipoEntidadeEnum getTipoEntidade() {
     return tipoEntidade;
   }

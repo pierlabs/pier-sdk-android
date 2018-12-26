@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_a_u_d_response_description}}}
+ * Objeto Response da auditoria do arquivo
  **/
-@ApiModel(description = "{{{arquivo_a_u_d_response_description}}}")
+@ApiModel(description = "Objeto Response da auditoria do arquivo")
 public class ArquivoAUDResponse  {
   
   @SerializedName("rev")
@@ -42,9 +42,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_rev_value}}}
+   * Identificador da auditoria arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_rev_value}}}")
+  @ApiModelProperty(value = "Identificador da auditoria arquivo")
   public Long getRev() {
     return rev;
   }
@@ -54,9 +54,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_rev_type_value}}}
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_rev_type_value}}}")
+  @ApiModelProperty(value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)")
   public Integer getRevType() {
     return revType;
   }
@@ -66,9 +66,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_value}}}
+   * Identificador do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_id_value}}}")
+  @ApiModelProperty(value = "Identificador do arquivo auditado")
   public Long getId() {
     return id;
   }
@@ -78,9 +78,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_nome_value}}}
+   * Nome do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do arquivo auditado")
   public String getNome() {
     return nome;
   }
@@ -90,9 +90,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
+   * Identificador da resposta da Acesso Digital
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}")
+  @ApiModelProperty(value = "Identificador da resposta da Acesso Digital")
   public String getIdRespostaAcessoDigital() {
     return idRespostaAcessoDigital;
   }
@@ -102,9 +102,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
+   * Data de resposta da Acesso Digital
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}")
+  @ApiModelProperty(value = "Data de resposta da Acesso Digital")
   public String getDataHoraRespostaAcessoDigital() {
     return dataHoraRespostaAcessoDigital;
   }
@@ -114,9 +114,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
+   * Identificador da resposta da Neurotech
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}")
+  @ApiModelProperty(value = "Identificador da resposta da Neurotech")
   public String getIdRespostaNeurotech() {
     return idRespostaNeurotech;
   }
@@ -126,9 +126,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
+   * Data de resposta da Neurotech
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}")
+  @ApiModelProperty(value = "Data de resposta da Neurotech")
   public String getDataHoraRespostaNeurotech() {
     return dataHoraRespostaNeurotech;
   }
@@ -138,9 +138,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_uri_value}}}
+   * Uri de acesso
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_uri_value}}}")
+  @ApiModelProperty(value = "Uri de acesso")
   public String getUri() {
     return uri;
   }
@@ -150,9 +150,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
+   * Data de inclus\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do arquivo auditado")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -162,9 +162,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
+   * Data de altera\u00E7\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_data_hora_alteracao_value}}}")
+  @ApiModelProperty(value = "Data de altera\u00E7\u00E3o do arquivo auditado")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;
   }
@@ -174,9 +174,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_extensao_value}}}
+   * Extens\u00E3o do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_extensao_value}}}")
+  @ApiModelProperty(value = "Extens\u00E3o do arquivo auditado")
   public String getExtensao() {
     return extensao;
   }
@@ -186,9 +186,9 @@ public class ArquivoAUDResponse  {
 
   
   /**
-   * {{{arquivo_a_u_d_response_parametros_value}}}
+   * Lista  de par\u00E2metros do arquivo auditado
    **/
-  @ApiModelProperty(value = "{{{arquivo_a_u_d_response_parametros_value}}}")
+  @ApiModelProperty(value = "Lista  de par\u00E2metros do arquivo auditado")
   public List<ArquivoParametroAUDResponse> getParametros() {
     return parametros;
   }

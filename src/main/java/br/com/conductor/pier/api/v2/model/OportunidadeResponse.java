@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{oportunidade_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso Oportunidades
  **/
-@ApiModel(description = "{{{oportunidade_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Oportunidades")
 public class OportunidadeResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_id_value}}}
+   * C\u00F3digo identificador da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador da oportunidade")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_id_tipo_oportunidade_value}}}
+   * C\u00F3digo identificador do tipo oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_id_tipo_oportunidade_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador do tipo oportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
   }
@@ -60,9 +60,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_id_status_oportunidade_value}}}
+   * C\u00F3digo identificador do status oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_id_status_oportunidade_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador do status oportunidade")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
   }
@@ -72,9 +72,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_data_cadastro_value}}}
+   * Data cadastro da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_data_cadastro_value}}}")
+  @ApiModelProperty(value = "Data cadastro da oportunidade")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -84,9 +84,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_data_atualizacao_value}}}
+   * Data atualiza\u00E7\u00E3o da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_data_atualizacao_value}}}")
+  @ApiModelProperty(value = "Data atualiza\u00E7\u00E3o da oportunidade")
   public String getDataAtualizacao() {
     return dataAtualizacao;
   }
@@ -96,9 +96,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_numero_receita_federal_value}}}
+   * N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_numero_receita_federal_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -108,9 +108,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_data_inicio_vigencia_value}}}
+   * In\u00EDcio da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_data_inicio_vigencia_value}}}")
+  @ApiModelProperty(value = "In\u00EDcio da vig\u00EAncia da oportunidade")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
@@ -120,9 +120,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_data_fim_vigencia_value}}}
+   * Fim da vig\u00EAncia da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_data_fim_vigencia_value}}}")
+  @ApiModelProperty(value = "Fim da vig\u00EAncia da oportunidade")
   public String getDataFimVigencia() {
     return dataFimVigencia;
   }
@@ -132,9 +132,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_flag_ativo_value}}}
+   * Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa")
   public Boolean getFlagAtivo() {
     return flagAtivo;
   }
@@ -144,9 +144,9 @@ public class OportunidadeResponse  {
 
   
   /**
-   * {{{oportunidade_response_detalhes_value}}}
+   * Lista de detalhes da oportunidade
    **/
-  @ApiModelProperty(value = "{{{oportunidade_response_detalhes_value}}}")
+  @ApiModelProperty(value = "Lista de detalhes da oportunidade")
   public List<DetalheOportunidadeResponse> getDetalhes() {
     return detalhes;
   }

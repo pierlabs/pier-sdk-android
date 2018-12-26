@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vinculo_operacao_persist_description}}}
+ * Objeto VinculoOperacao
  **/
-@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
+@ApiModel(description = "Objeto VinculoOperacao")
 public class VinculoOperacaoPersist  {
   
   @SerializedName("idProduto")
@@ -20,9 +20,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_produto_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_produto_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -32,9 +32,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_operacao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -44,9 +44,9 @@ public class VinculoOperacaoPersist  {
 
   
   /**
-   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
+   * C\u00F3digo MCC
    **/
-  @ApiModelProperty(value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo MCC")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }

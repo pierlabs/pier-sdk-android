@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{emprestimo_pessoal_response_description}}}
+ * Resposta do recurso de simular empr\u00E9stimos/financiamentos
  **/
-@ApiModel(description = "{{{emprestimo_pessoal_response_description}}}")
+@ApiModel(description = "Resposta do recurso de simular empr\u00E9stimos/financiamentos")
 public class EmprestimoPessoalResponse  {
   
   @SerializedName("planosParcelamentos")
@@ -46,9 +46,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_solicitado_value}}}
+   * Valor solicitado do empr\u00E9stimo/financiamento
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_valor_solicitado_value}}}")
+  @ApiModelProperty(value = "Valor solicitado do empr\u00E9stimo/financiamento")
   public BigDecimal getValorSolicitado() {
     return valorSolicitado;
   }
@@ -58,9 +58,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
+   * Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}")
+  @ApiModelProperty(value = "Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela")
   public BigDecimal getValorMaximoSolicitacao() {
     return valorMaximoSolicitacao;
   }
@@ -70,9 +70,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_numero_parcelas_value}}}
+   * N\u00FAmero de parcelas solicitado
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_numero_parcelas_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero de parcelas solicitado")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -82,9 +82,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
+   * Limite m\u00E1ximo de parcela permitido
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}")
+  @ApiModelProperty(value = "Limite m\u00E1ximo de parcela permitido")
   public BigDecimal getValorMaximoParcela() {
     return valorMaximoParcela;
   }
@@ -94,9 +94,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
+   * Data do desconto da primeira parcela
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_data_primeira_parcela_value}}}")
+  @ApiModelProperty(value = "Data do desconto da primeira parcela")
   public String getDataPrimeiraParcela() {
     return dataPrimeiraParcela;
   }
@@ -106,9 +106,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_periodo_taxa_value}}}
+   * Per\u00EDodo de aplica da taxa de juros
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_periodo_taxa_value}}}")
+  @ApiModelProperty(value = "Per\u00EDodo de aplica da taxa de juros")
   public String getPeriodoTaxa() {
     return periodoTaxa;
   }
@@ -118,9 +118,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
+   * Sistema para amortiza\u00E7\u00E3o do valor das parcelas
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_sistema_amortizacao_value}}}")
+  @ApiModelProperty(value = "Sistema para amortiza\u00E7\u00E3o do valor das parcelas")
   public String getSistemaAmortizacao() {
     return sistemaAmortizacao;
   }
@@ -130,9 +130,9 @@ public class EmprestimoPessoalResponse  {
 
   
   /**
-   * {{{emprestimo_pessoal_response_taxa_juros_value}}}
+   * Valor percentual da taxa de juros a ser aplicada
    **/
-  @ApiModelProperty(value = "{{{emprestimo_pessoal_response_taxa_juros_value}}}")
+  @ApiModelProperty(value = "Valor percentual da taxa de juros a ser aplicada")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }

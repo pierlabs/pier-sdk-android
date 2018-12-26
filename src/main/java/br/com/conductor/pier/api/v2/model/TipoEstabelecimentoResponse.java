@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_estabelecimento_response_description}}}
+ * Resposta do recurso de tipo de estabelecimento
  **/
-@ApiModel(description = "{{{tipo_estabelecimento_response_description}}}")
+@ApiModel(description = "Resposta do recurso de tipo de estabelecimento")
 public class TipoEstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * {{{tipo_estabelecimento_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id)
    **/
-  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id)")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoEstabelecimentoResponse  {
 
   
   /**
-   * {{{tipo_estabelecimento_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de estabelecimento
    **/
-  @ApiModelProperty(value = "{{{tipo_estabelecimento_response_descricao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de estabelecimento")
   public String getDescricao() {
     return descricao;
   }

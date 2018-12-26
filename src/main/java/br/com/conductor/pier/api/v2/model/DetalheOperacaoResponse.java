@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{detalhe_operacao_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso Operacao
  **/
-@ApiModel(description = "{{{detalhe_operacao_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
 public class DetalheOperacaoResponse  {
   
   @SerializedName("idOperacao")
@@ -55,9 +55,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_id_operacao_value}}}
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_id_operacao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
   public Long getIdOperacao() {
     return idOperacao;
   }
@@ -67,9 +67,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_codigo_processamento_value}}}
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_codigo_processamento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
   }
@@ -79,9 +79,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
   }
@@ -91,9 +91,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_nome_operacao_value}}}
+   * Nome da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_nome_operacao_value}}}")
+  @ApiModelProperty(value = "Nome da opera\u00E7\u00E3o")
   public String getNomeOperacao() {
     return nomeOperacao;
   }
@@ -103,9 +103,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_descricao_operacao_value}}}
+   * Descri\u00E7\u00E3o da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_descricao_operacao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da opera\u00E7\u00E3o")
   public String getDescricaoOperacao() {
     return descricaoOperacao;
   }
@@ -115,9 +115,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_plano_minimo_value}}}
+   * Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_plano_minimo_value}}}")
+  @ApiModelProperty(value = "Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
@@ -127,9 +127,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_plano_maximo_value}}}
+   * Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_plano_maximo_value}}}")
+  @ApiModelProperty(value = "Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
@@ -139,9 +139,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_minimo_value}}}
+   * Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_valor_minimo_value}}}")
+  @ApiModelProperty(value = "Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
   }
@@ -151,9 +151,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_maximo_value}}}
+   * Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_valor_maximo_value}}}")
+  @ApiModelProperty(value = "Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
   }
@@ -163,9 +163,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_cobra_juros_value}}}
+   * Flag indicativa para crobran\u00E7a de juros
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_flag_cobra_juros_value}}}")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de juros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
   }
@@ -175,9 +175,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_taxa_juros_value}}}
+   * Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_taxa_juros_value}}}")
+  @ApiModelProperty(value = "Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -187,9 +187,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
+   * Flag indicativa para crobran\u00E7a de tarifas
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_flag_cobra_tarifa_value}}}")
+  @ApiModelProperty(value = "Flag indicativa para crobran\u00E7a de tarifas")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
   }
@@ -199,9 +199,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_taxa_tarifa_value}}}
+   * Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_taxa_tarifa_value}}}")
+  @ApiModelProperty(value = "Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas")
   public BigDecimal getTaxaTarifa() {
     return taxaTarifa;
   }
@@ -211,9 +211,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_tac_value}}}
+   * Valor da taxa de abertura de conta
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_valor_tac_value}}}")
+  @ApiModelProperty(value = "Valor da taxa de abertura de conta")
   public BigDecimal getValorTac() {
     return valorTac;
   }
@@ -223,9 +223,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_percentual_tac_value}}}
+   * Percentual da taxa de abertura de conta
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_percentual_tac_value}}}")
+  @ApiModelProperty(value = "Percentual da taxa de abertura de conta")
   public BigDecimal getPercentualTac() {
     return percentualTac;
   }
@@ -235,9 +235,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_operacao_value}}}
+   * Valor da opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_valor_operacao_value}}}")
+  @ApiModelProperty(value = "Valor da opera\u00E7\u00E3o")
   public BigDecimal getValorOperacao() {
     return valorOperacao;
   }
@@ -247,9 +247,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_carencia_value}}}
+   * Quantidade de meses para car\u00EAncia
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_carencia_value}}}")
+  @ApiModelProperty(value = "Quantidade de meses para car\u00EAncia")
   public Integer getCarencia() {
     return carencia;
   }
@@ -259,9 +259,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_excedente_permitido_value}}}
+   * Valor excedente permitido para opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_excedente_permitido_value}}}")
+  @ApiModelProperty(value = "Valor excedente permitido para opera\u00E7\u00E3o")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
   }
@@ -271,9 +271,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
+   * Permitir transa\u00E7\u00F5es parceladas
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}")
+  @ApiModelProperty(value = "Permitir transa\u00E7\u00F5es parceladas")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
   }
@@ -283,9 +283,9 @@ public class DetalheOperacaoResponse  {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+   * Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
+  @ApiModelProperty(value = "Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;
   }

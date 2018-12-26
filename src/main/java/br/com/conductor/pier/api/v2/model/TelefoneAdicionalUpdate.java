@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{telefone_adicional_update_description}}}
+ * Objeto Telefone
  **/
-@ApiModel(description = "{{{telefone_adicional_update_description}}}")
+@ApiModel(description = "Objeto Telefone")
 public class TelefoneAdicionalUpdate  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * {{{telefone_adicional_update_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_adicional_update_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * {{{telefone_adicional_update_id_tipo_telefone_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_adicional_update_id_tipo_telefone_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -48,9 +48,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * {{{telefone_adicional_update_ddd_value}}}
+   * DDD
    **/
-  @ApiModelProperty(value = "{{{telefone_adicional_update_ddd_value}}}")
+  @ApiModelProperty(value = "DDD")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * {{{telefone_adicional_update_telefone_value}}}
+   * N\u00FAmero do Telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_adicional_update_telefone_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do Telefone")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class TelefoneAdicionalUpdate  {
 
   
   /**
-   * {{{telefone_adicional_update_ramal_value}}}
+   * Ramal do Telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_adicional_update_ramal_value}}}")
+  @ApiModelProperty(value = "Ramal do Telefone")
   public String getRamal() {
     return ramal;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{integracao_emissor_response_description}}}
+ * Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
  **/
-@ApiModel(description = "{{{integracao_emissor_response_description}}}")
+@ApiModel(description = "Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o")
 public class IntegracaoEmissorResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -50,9 +50,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_id_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_id_arquivo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo")
   public Long getIdArquivo() {
     return idArquivo;
   }
@@ -62,9 +62,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_status_value}}}
+   * Status do registro
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_status_value}}}")
+  @ApiModelProperty(value = "Status do registro")
   public String getStatus() {
     return status;
   }
@@ -74,9 +74,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_data_inclusao_value}}}
+   * Data de inclus\u00E3o do registro
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do registro")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -86,9 +86,9 @@ public class IntegracaoEmissorResponse  {
 
   
   /**
-   * {{{integracao_emissor_response_data_alteracao_value}}}
+   * Data da ultima altera\u00E7\u00E3o do registro
    **/
-  @ApiModelProperty(value = "{{{integracao_emissor_response_data_alteracao_value}}}")
+  @ApiModelProperty(value = "Data da ultima altera\u00E7\u00E3o do registro")
   public String getDataAlteracao() {
     return dataAlteracao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{dados_bancarios_conta_persist_description}}}
+ * Representa a requisi\u00E7\u00E3o do recurso de cadastro de dados bancarios para uma conta
  **/
-@ApiModel(description = "{{{dados_bancarios_conta_persist_description}}}")
+@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de cadastro de dados bancarios para uma conta")
 public class DadosBancariosContaPersist  {
   
   @SerializedName("idConta")
@@ -28,9 +28,9 @@ public class DadosBancariosContaPersist  {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
-  @ApiModelProperty(value = "{{{dados_bancarios_conta_persist_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   public Long getIdConta() {
     return idConta;
   }
@@ -40,9 +40,9 @@ public class DadosBancariosContaPersist  {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_numero_agencia_value}}}
+   * N\u00FAmero da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "{{{dados_bancarios_conta_persist_numero_agencia_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia")
   public Long getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -52,9 +52,9 @@ public class DadosBancariosContaPersist  {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}
+   * N\u00FAmero da conta corrente
    **/
-  @ApiModelProperty(value = "{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero da conta corrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -64,9 +64,9 @@ public class DadosBancariosContaPersist  {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_codigo_banco_value}}}
+   * C\u00F3digo do banco
    **/
-  @ApiModelProperty(value = "{{{dados_bancarios_conta_persist_codigo_banco_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo do banco")
   public Long getCodigoBanco() {
     return codigoBanco;
   }
@@ -76,9 +76,9 @@ public class DadosBancariosContaPersist  {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)
    **/
-  @ApiModelProperty(value = "{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)")
   public Long getIdTipoContaBancaria() {
     return idTipoContaBancaria;
   }

@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{detalhes_fatura_consignada_response_description}}}
+ * Objeto contendo os detalhes de uma fatura consignada
  **/
-@ApiModel(description = "{{{detalhes_fatura_consignada_response_description}}}")
+@ApiModel(description = "Objeto contendo os detalhes de uma fatura consignada")
 public class DetalhesFaturaConsignadaResponse  {
   
   @SerializedName("faturaConsignadaResponse")
@@ -21,9 +21,9 @@ public class DetalhesFaturaConsignadaResponse  {
 
   
   /**
-   * {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
+   * Apresenta os detalhes da fatura
    **/
-  @ApiModelProperty(value = "{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}")
+  @ApiModelProperty(value = "Apresenta os detalhes da fatura")
   public FaturaConsignadaResponse getFaturaConsignadaResponse() {
     return faturaConsignadaResponse;
   }
@@ -33,9 +33,9 @@ public class DetalhesFaturaConsignadaResponse  {
 
   
   /**
-   * {{{detalhes_fatura_consignada_response_transacoes_value}}}
+   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura
    **/
-  @ApiModelProperty(value = "{{{detalhes_fatura_consignada_response_transacoes_value}}}")
+  @ApiModelProperty(value = "Apresenta as transa\u00E7\u00F5es relacionadas a fatura")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{fantasia_basica_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
  **/
-@ApiModel(description = "{{{fantasia_basica_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica")
 public class FantasiaBasicaResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * {{{fantasia_basica_response_id_value}}}
+   * Identificador da fantasia b\u00E1sica
    **/
-  @ApiModelProperty(value = "{{{fantasia_basica_response_id_value}}}")
+  @ApiModelProperty(value = "Identificador da fantasia b\u00E1sica")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * {{{fantasia_basica_response_nome_value}}}
+   * Nome da fantasia b\u00E1sica
    **/
-  @ApiModelProperty(value = "{{{fantasia_basica_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome da fantasia b\u00E1sica")
   public String getNome() {
     return nome;
   }
@@ -44,9 +44,9 @@ public class FantasiaBasicaResponse  {
 
   
   /**
-   * {{{fantasia_basica_response_descricao_value}}}
+   * Descri\u00E7\u00E3o da fantasia b\u00E1sica
    **/
-  @ApiModelProperty(value = "{{{fantasia_basica_response_descricao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da fantasia b\u00E1sica")
   public String getDescricao() {
     return descricao;
   }

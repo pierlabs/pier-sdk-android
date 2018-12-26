@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{promotor_response_description}}}
+ * Objeto Promotor
  **/
-@ApiModel(description = "{{{promotor_response_description}}}")
+@ApiModel(description = "Objeto Promotor")
 public class PromotorResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_nome_value}}}
+   * Nome do Promotor
    **/
-  @ApiModelProperty(value = "{{{promotor_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do Promotor")
   public String getNome() {
     return nome;
   }
@@ -48,9 +48,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_data_cadastro_value}}}
+   * Data da Inclus\u00E3o
    **/
-  @ApiModelProperty(value = "{{{promotor_response_data_cadastro_value}}}")
+  @ApiModelProperty(value = "Data da Inclus\u00E3o")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -60,9 +60,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_estabelecimento_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -72,9 +72,9 @@ public class PromotorResponse  {
 
   
   /**
-   * {{{promotor_response_id_usuario_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{promotor_response_id_usuario_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio")
   public Long getIdUsuario() {
     return idUsuario;
   }

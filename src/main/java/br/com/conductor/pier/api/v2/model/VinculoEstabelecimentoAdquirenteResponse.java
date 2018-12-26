@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vinculo_estabelecimento_adquirente_response_description}}}
+ * Objeto de resposta do VinculoEstabelecimentoAdquirente
  **/
-@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_response_description}}}")
+@ApiModel(description = "Objeto de resposta do VinculoEstabelecimentoAdquirente")
 public class VinculoEstabelecimentoAdquirenteResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id)")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -52,9 +52,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id)
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id)")
   public Long getIdAdquirente() {
     return idAdquirente;
   }
@@ -64,9 +64,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
+   * C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
   }
@@ -76,9 +76,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
+   * Data de cadastro do v\u00EDnculo
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo")
   public String getDataHoraCadastro() {
     return dataHoraCadastro;
   }
@@ -88,9 +88,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
+   * Data de cadastro do v\u00EDnculo
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo")
   public String getMensagem() {
     return mensagem;
   }
@@ -100,9 +100,9 @@ public class VinculoEstabelecimentoAdquirenteResponse  {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_status_value}}}
+   * Data de cadastro do v\u00EDnculo
    **/
-  @ApiModelProperty(value = "{{{vinculo_estabelecimento_adquirente_response_status_value}}}")
+  @ApiModelProperty(value = "Data de cadastro do v\u00EDnculo")
   public Integer getStatus() {
     return status;
   }

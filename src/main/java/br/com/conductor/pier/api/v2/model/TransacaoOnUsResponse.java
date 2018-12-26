@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{transacao_on_us_response_description}}}
+ * Objeto de Resposta de Autoriza\u00E7\u00E3o
  **/
-@ApiModel(description = "{{{transacao_on_us_response_description}}}")
+@ApiModel(description = "Objeto de Resposta de Autoriza\u00E7\u00E3o")
 public class TransacaoOnUsResponse  {
   
   @SerializedName("nsuOrigem")
@@ -30,9 +30,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_nsu_origem_value}}}
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_nsu_origem_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou")
   public String getNsuOrigem() {
     return nsuOrigem;
   }
@@ -42,9 +42,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_nsu_autorizacao_value}}}
+   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_nsu_autorizacao_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o")
   public String getNsuAutorizacao() {
     return nsuAutorizacao;
   }
@@ -54,9 +54,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_plano_de_parcelamento_value}}}
+   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_plano_de_parcelamento_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o")
   public List<MapOfstringAndstring> getPlanoDeParcelamento() {
     return planoDeParcelamento;
   }
@@ -66,9 +66,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_codigo_autorizacao_value}}}
+   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_codigo_autorizacao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
   }
@@ -78,9 +78,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_numero_mascarado_cartao_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
   }
@@ -90,9 +90,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_nome_portador_cartao_value}}}
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_on_us_response_nome_portador_cartao_value}}}")
+  @ApiModelProperty(value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
   }
@@ -102,9 +102,9 @@ public class TransacaoOnUsResponse  {
 
   
   /**
-   * {{{transacao_on_us_response_terminal_requisitante_value}}}
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
-  @ApiModelProperty(required = true, value = "{{{transacao_on_us_response_terminal_requisitante_value}}}")
+  @ApiModelProperty(required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
   }

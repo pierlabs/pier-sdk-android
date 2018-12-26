@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{validar_senha_login_request_description}}}
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de validar senha pelo login
  **/
-@ApiModel(description = "{{{validar_senha_login_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de validar senha pelo login")
 public class ValidarSenhaLoginRequest  {
   
   @SerializedName("idPlataforma")
@@ -16,9 +16,9 @@ public class ValidarSenhaLoginRequest  {
 
   
   /**
-   * {{{validar_senha_login_request_id_plataforma_value}}}
+   * idPlataforma
    **/
-  @ApiModelProperty(value = "{{{validar_senha_login_request_id_plataforma_value}}}")
+  @ApiModelProperty(value = "idPlataforma")
   public Integer getIdPlataforma() {
     return idPlataforma;
   }

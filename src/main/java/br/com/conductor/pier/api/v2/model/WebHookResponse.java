@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{web_hook_response_description}}}
+ * Representa\u00E7\u00E3o do recurso WebHook
  **/
-@ApiModel(description = "{{{web_hook_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso WebHook")
 public class WebHookResponse  {
   
   @SerializedName("id")
@@ -33,9 +33,9 @@ public class WebHookResponse  {
 
   
   /**
-   * {{{web_hook_response_id_value}}}
+   * Id do WebHook
    **/
-  @ApiModelProperty(required = true, value = "{{{web_hook_response_id_value}}}")
+  @ApiModelProperty(required = true, value = "Id do WebHook")
   public Long getId() {
     return id;
   }
@@ -45,9 +45,9 @@ public class WebHookResponse  {
 
   
   /**
-   * {{{web_hook_response_tipo_evento_value}}}
+   * TipoEvento a ser chamado pelo WebHook
    **/
-  @ApiModelProperty(required = true, value = "{{{web_hook_response_tipo_evento_value}}}")
+  @ApiModelProperty(required = true, value = "TipoEvento a ser chamado pelo WebHook")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
   }
@@ -57,9 +57,9 @@ public class WebHookResponse  {
 
   
   /**
-   * {{{web_hook_response_metodo_value}}}
+   * M\u00E9todo que a ser chamado pelo WebHook
    **/
-  @ApiModelProperty(required = true, value = "{{{web_hook_response_metodo_value}}}")
+  @ApiModelProperty(required = true, value = "M\u00E9todo que a ser chamado pelo WebHook")
   public MetodoEnum getMetodo() {
     return metodo;
   }
@@ -69,9 +69,9 @@ public class WebHookResponse  {
 
   
   /**
-   * {{{web_hook_response_url_value}}}
+   * URL que a ser consumida pelo WebHook
    **/
-  @ApiModelProperty(required = true, value = "{{{web_hook_response_url_value}}}")
+  @ApiModelProperty(required = true, value = "URL que a ser consumida pelo WebHook")
   public String getUrl() {
     return url;
   }
@@ -81,9 +81,9 @@ public class WebHookResponse  {
 
   
   /**
-   * {{{web_hook_response_status_value}}}
+   * Status do WebHook
    **/
-  @ApiModelProperty(required = true, value = "{{{web_hook_response_status_value}}}")
+  @ApiModelProperty(required = true, value = "Status do WebHook")
   public StatusEnum getStatus() {
     return status;
   }

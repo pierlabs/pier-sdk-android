@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_response_description}}}
+ * Objeto Response do arquivo
  **/
-@ApiModel(description = "{{{arquivo_response_description}}}")
+@ApiModel(description = "Objeto Response do arquivo")
 public class ArquivoResponse  {
   
   @SerializedName("id")
@@ -36,9 +36,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo")
   public Long getId() {
     return id;
   }
@@ -48,9 +48,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_tipo_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_tipo_arquivo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
   }
@@ -60,9 +60,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_tipo_arquivo_value}}}
+   * Descri\u00E7\u00E3o do tipo do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_tipo_arquivo_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo do arquivo")
   public String getNomeTipoArquivo() {
     return nomeTipoArquivo;
   }
@@ -72,9 +72,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_id_status_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_id_status_arquivo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo")
   public Long getIdStatusArquivo() {
     return idStatusArquivo;
   }
@@ -84,9 +84,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_status_arquivo_value}}}
+   * Desci\u00E7\u00E3o do status do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_status_arquivo_value}}}")
+  @ApiModelProperty(value = "Desci\u00E7\u00E3o do status do arquivo")
   public String getNomeStatusArquivo() {
     return nomeStatusArquivo;
   }
@@ -96,9 +96,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_nome_value}}}
+   * Nome do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do arquivo")
   public String getNome() {
     return nome;
   }
@@ -108,9 +108,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_extensao_value}}}
+   * Formato/Extens\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_extensao_value}}}")
+  @ApiModelProperty(value = "Formato/Extens\u00E3o do arquivo")
   public String getExtensao() {
     return extensao;
   }
@@ -120,9 +120,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_data_inclusao_value}}}
+   * Data de inclus\u00E3o do arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do arquivo")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -132,9 +132,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_data_alteracao_value}}}
+   * Data da \u00FAltima altera\u00E7\u00E3o do aquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_data_alteracao_value}}}")
+  @ApiModelProperty(value = "Data da \u00FAltima altera\u00E7\u00E3o do aquivo")
   public String getDataAlteracao() {
     return dataAlteracao;
   }
@@ -144,9 +144,9 @@ public class ArquivoResponse  {
 
   
   /**
-   * {{{arquivo_response_detalhes_value}}}
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_response_detalhes_value}}}")
+  @ApiModelProperty(value = "Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo")
   public List<ArquivoParametroResponse> getDetalhes() {
     return detalhes;
   }

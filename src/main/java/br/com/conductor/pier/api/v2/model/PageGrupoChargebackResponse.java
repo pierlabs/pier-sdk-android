@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_grupo_chargeback_response_description}}}
+ * Listar grupos de chargeback
  **/
-@ApiModel(description = "{{{page_grupo_chargeback_response_description}}}")
+@ApiModel(description = "Listar grupos de chargeback")
 public class PageGrupoChargebackResponse  {
   
   @SerializedName("content")

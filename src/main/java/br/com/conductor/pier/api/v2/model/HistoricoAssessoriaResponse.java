@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{historico_assessoria_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
  **/
-@ApiModel(description = "{{{historico_assessoria_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}")
 public class HistoricoAssessoriaResponse  {
   
   @SerializedName("dataHoraHistorico")
@@ -20,9 +20,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * {{{historico_assessoria_response_data_hora_historico_value}}}
+   * Apresenta a data e hora do hist\u00F3rico
    **/
-  @ApiModelProperty(value = "{{{historico_assessoria_response_data_hora_historico_value}}}")
+  @ApiModelProperty(value = "Apresenta a data e hora do hist\u00F3rico")
   public String getDataHoraHistorico() {
     return dataHoraHistorico;
   }
@@ -32,9 +32,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * {{{historico_assessoria_response_tipo_historico_value}}}
+   * Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
    **/
-  @ApiModelProperty(value = "{{{historico_assessoria_response_tipo_historico_value}}}")
+  @ApiModelProperty(value = "Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA")
   public String getTipoHistorico() {
     return tipoHistorico;
   }
@@ -44,9 +44,9 @@ public class HistoricoAssessoriaResponse  {
 
   
   /**
-   * {{{historico_assessoria_response_nome_assessoria_value}}}
+   * Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
    **/
-  @ApiModelProperty(value = "{{{historico_assessoria_response_nome_assessoria_value}}}")
+  @ApiModelProperty(value = "Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico")
   public String getNomeAssessoria() {
     return nomeAssessoria;
   }

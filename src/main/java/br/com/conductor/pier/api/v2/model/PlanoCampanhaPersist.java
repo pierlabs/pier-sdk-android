@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{plano_campanha_persist_description}}}
+ * PlanoCampanha
  **/
-@ApiModel(description = "{{{plano_campanha_persist_description}}}")
+@ApiModel(description = "PlanoCampanha")
 public class PlanoCampanhaPersist  {
   
   @SerializedName("parcelas")

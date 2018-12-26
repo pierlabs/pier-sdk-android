@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{plano_parcelamento_emprestimo_response_description}}}
+ * Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
  **/
-@ApiModel(description = "{{{plano_parcelamento_emprestimo_response_description}}}")
+@ApiModel(description = "Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos")
 public class PlanoParcelamentoEmprestimoResponse  {
   
   @SerializedName("numeroParcelas")
@@ -25,9 +25,9 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}
+   * N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}")
+  @ApiModelProperty(value = "N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
   }
@@ -37,9 +37,9 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}
+   * Valor da parcela
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}")
+  @ApiModelProperty(value = "Valor da parcela")
   public BigDecimal getValorParcelas() {
     return valorParcelas;
   }
@@ -49,9 +49,9 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}
+   * Taxa de juros aplicado no empr\u00E9stimo/financiamento
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}")
+  @ApiModelProperty(value = "Taxa de juros aplicado no empr\u00E9stimo/financiamento")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
   }
@@ -61,9 +61,9 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}
+   * valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}")
+  @ApiModelProperty(value = "valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras")
   public BigDecimal getValorTributosIOF() {
     return valorTributosIOF;
   }
@@ -73,9 +73,9 @@ public class PlanoParcelamentoEmprestimoResponse  {
 
   
   /**
-   * {{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}
+   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
    **/
-  @ApiModelProperty(value = "{{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}")
+  @ApiModelProperty(value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento")
   public BigDecimal getValorPercentualCET() {
     return valorPercentualCET;
   }

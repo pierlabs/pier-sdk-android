@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{portador_response_description}}}
+ * Portador
  **/
-@ApiModel(description = "{{{portador_response_description}}}")
+@ApiModel(description = "Portador")
 public class PortadorResponse  {
   
   @SerializedName("idConta")
@@ -34,9 +34,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_conta_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)")
   public Long getIdConta() {
     return idConta;
   }
@@ -46,9 +46,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_produto_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_produto_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -58,9 +58,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_pessoa_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -70,9 +70,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_parentesco_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_parentesco_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -82,9 +82,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_tipo_portador_value}}}
+   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)
    **/
-  @ApiModelProperty(value = "{{{portador_response_tipo_portador_value}}}")
+  @ApiModelProperty(value = "Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)")
   public String getTipoPortador() {
     return tipoPortador;
   }
@@ -94,9 +94,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_nome_impresso_value}}}
+   * Apresenta o nome a ser impresso no cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{portador_response_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Apresenta o nome a ser impresso no cart\u00E3o")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -106,9 +106,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_id_tipo_cartao_value}}}
+   * Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta
    **/
-  @ApiModelProperty(value = "{{{portador_response_id_tipo_cartao_value}}}")
+  @ApiModelProperty(value = "Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta")
   public Long getIdTipoCartao() {
     return idTipoCartao;
   }
@@ -118,9 +118,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_flag_ativo_value}}}
+   * Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o
    **/
-  @ApiModelProperty(value = "{{{portador_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
@@ -130,9 +130,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_data_cadastro_portador_value}}}
+   * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{portador_response_data_cadastro_portador_value}}}")
+  @ApiModelProperty(value = "Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }
@@ -142,9 +142,9 @@ public class PortadorResponse  {
 
   
   /**
-   * {{{portador_response_data_cancelamento_portador_value}}}
+   * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{portador_response_data_cancelamento_portador_value}}}")
+  @ApiModelProperty(value = "Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o")
   public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;
   }

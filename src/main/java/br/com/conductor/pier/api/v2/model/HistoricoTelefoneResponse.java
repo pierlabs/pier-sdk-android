@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{historico_telefone_response_description}}}
+ * Objeto de resposta para historico de telefones
  **/
-@ApiModel(description = "{{{historico_telefone_response_description}}}")
+@ApiModel(description = "Objeto de resposta para historico de telefones")
 public class HistoricoTelefoneResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * {{{historico_telefone_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)
    **/
-  @ApiModelProperty(value = "{{{historico_telefone_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * {{{historico_telefone_response_telefone_value}}}
+   * Apresenta o N\u00FAmero do telefone
    **/
-  @ApiModelProperty(value = "{{{historico_telefone_response_telefone_value}}}")
+  @ApiModelProperty(value = "Apresenta o N\u00FAmero do telefone")
   public String getTelefone() {
     return telefone;
   }
@@ -48,9 +48,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * {{{historico_telefone_response_id_tipo_telefone_value}}}
+   * Apresenta o id do tipo do telefone
    **/
-  @ApiModelProperty(value = "{{{historico_telefone_response_id_tipo_telefone_value}}}")
+  @ApiModelProperty(value = "Apresenta o id do tipo do telefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -60,9 +60,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * {{{historico_telefone_response_tipo_telefone_value}}}
+   * Apresenta a descri\u00E7\u00E3o do tipo do telefone
    **/
-  @ApiModelProperty(value = "{{{historico_telefone_response_tipo_telefone_value}}}")
+  @ApiModelProperty(value = "Apresenta a descri\u00E7\u00E3o do tipo do telefone")
   public String getTipoTelefone() {
     return tipoTelefone;
   }
@@ -72,9 +72,9 @@ public class HistoricoTelefoneResponse  {
 
   
   /**
-   * {{{historico_telefone_response_data_modificacao_value}}}
+   * Apresenta a data que o telefone fora alterado
    **/
-  @ApiModelProperty(value = "{{{historico_telefone_response_data_modificacao_value}}}")
+  @ApiModelProperty(value = "Apresenta a data que o telefone fora alterado")
   public String getDataModificacao() {
     return dataModificacao;
   }

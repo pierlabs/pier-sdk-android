@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{usuario_token_resposta_descricao}}}
+ * Representa\u00E7\u00E3o do recurso Usuario Token
  **/
-@ApiModel(description = "{{{usuario_token_resposta_descricao}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario Token")
 public class UsuarioTokenResponse  {
   
   @SerializedName("ativo")
@@ -32,9 +32,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_ativo_descricao}}}
+   * Se o token est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_ativo_descricao}}}")
+  @ApiModelProperty(value = "Se o token est\u00E1 ativo")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -44,9 +44,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_cpf_descricao}}}
+   * CPF do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_cpf_descricao}}}")
+  @ApiModelProperty(value = "CPF do usu\u00E1rio")
   public String getCpf() {
     return cpf;
   }
@@ -56,9 +56,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_data_inclusao_descricao}}}
+   * Data da inclusao do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_data_inclusao_descricao}}}")
+  @ApiModelProperty(value = "Data da inclusao do usu\u00E1rio")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -68,9 +68,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_data_nascimento_descricao}}}
+   * Data de nascimento do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_data_nascimento_descricao}}}")
+  @ApiModelProperty(value = "Data de nascimento do usu\u00E1rio")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -80,9 +80,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_ddd_descricao}}}
+   * DDD do telefone do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_ddd_descricao}}}")
+  @ApiModelProperty(value = "DDD do telefone do usu\u00E1rio")
   public String getDdd() {
     return ddd;
   }
@@ -92,9 +92,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_email_descricao}}}
+   * Email do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_email_descricao}}}")
+  @ApiModelProperty(value = "Email do usu\u00E1rio")
   public String getEmail() {
     return email;
   }
@@ -104,9 +104,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_telefone_descricao}}}
+   * N\u00FAmero do telefone do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_telefone_descricao}}}")
+  @ApiModelProperty(value = "N\u00FAmero do telefone do usu\u00E1rio")
   public String getTelefone() {
     return telefone;
   }
@@ -116,9 +116,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_token_descricao}}}
+   * Token do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_token_descricao}}}")
+  @ApiModelProperty(value = "Token do usu\u00E1rio")
   public String getToken() {
     return token;
   }
@@ -128,9 +128,9 @@ public class UsuarioTokenResponse  {
 
   
   /**
-   * {{{usuario_token_resposta_validade_descricao}}}
+   * Validade do token
    **/
-  @ApiModelProperty(value = "{{{usuario_token_resposta_validade_descricao}}}")
+  @ApiModelProperty(value = "Validade do token")
   public String getValidade() {
     return validade;
   }

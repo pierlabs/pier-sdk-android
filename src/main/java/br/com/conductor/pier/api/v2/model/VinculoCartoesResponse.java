@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{vincular_cartoes_response_description}}}
+ * Objeto com response do v\u00EDnculo entre cart\u00F5es
  **/
-@ApiModel(description = "{{{vincular_cartoes_response_description}}}")
+@ApiModel(description = "Objeto com response do v\u00EDnculo entre cart\u00F5es")
 public class VinculoCartoesResponse  {
   
   @SerializedName("idCartaoPrincipal")
@@ -18,9 +18,9 @@ public class VinculoCartoesResponse  {
 
   
   /**
-   * {{{vincular_cartoes_response_id_cartao_value}}}
+   * C\u00F3digo identificador do cart\u00E3o principal gerado
    **/
-  @ApiModelProperty(value = "{{{vincular_cartoes_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador do cart\u00E3o principal gerado")
   public Long getIdCartaoPrincipal() {
     return idCartaoPrincipal;
   }
@@ -30,9 +30,9 @@ public class VinculoCartoesResponse  {
 
   
   /**
-   * {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
+   * C\u00F3digo identificador do cart\u00E3o vinculado gerado
    **/
-  @ApiModelProperty(value = "{{{vincular_cartoes_response_id_cartao_vinculado_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador do cart\u00E3o vinculado gerado")
   public Long getIdCartaoVinculado() {
     return idCartaoVinculado;
   }

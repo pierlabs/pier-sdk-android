@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{documento_proposta_response_description}}}
+ * Classe de representa\u00E7\u00E3o da response de documentosProposta
  **/
-@ApiModel(description = "{{{documento_proposta_response_description}}}")
+@ApiModel(description = "Classe de representa\u00E7\u00E3o da response de documentosProposta")
 public class DocumentoPropostaResponse  {
   
   @SerializedName("id")
@@ -42,9 +42,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do documento proposta(id)
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do documento proposta(id)")
   public Long getId() {
     return id;
   }
@@ -54,9 +54,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_proposta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_proposta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -66,9 +66,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_tipo_documento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_tipo_documento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento")
   public Long getIdDocumentosCredito() {
     return idDocumentosCredito;
   }
@@ -78,9 +78,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_status_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_status_documento_credito_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito")
   public Long getIdStatusDocumentosCredito() {
     return idStatusDocumentosCredito;
   }
@@ -90,9 +90,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_condicao_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_condicao_documento_credito_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito")
   public Long getIdCondicoesDocumentosCredito() {
     return idCondicoesDocumentosCredito;
   }
@@ -102,9 +102,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_tipo_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_tipo_documento_credito_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito")
   public Long getIdTipoDocumentoCredito() {
     return idTipoDocumentoCredito;
   }
@@ -114,9 +114,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_pessoa_fisica_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_pessoa_fisica_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
   }
@@ -126,9 +126,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_id_log_atendimento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_id_log_atendimento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento")
   public Long getIdLogAtendimento() {
     return idLogAtendimento;
   }
@@ -138,9 +138,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_responsavel_value}}}
+   * Respons\u00E1vel
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_responsavel_value}}}")
+  @ApiModelProperty(value = "Respons\u00E1vel")
   public String getResponsavel() {
     return responsavel;
   }
@@ -150,9 +150,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_flag_documento_digitalizado_value}}}
+   * Indica se o documento ser\u00E1 digitalizado
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_flag_documento_digitalizado_value}}}")
+  @ApiModelProperty(value = "Indica se o documento ser\u00E1 digitalizado")
   public Integer getFlagDocumentoDigitalizado() {
     return flagDocumentoDigitalizado;
   }
@@ -162,9 +162,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_documento_digitalizado_value}}}
+   * Nome do documento digitalizado
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_documento_digitalizado_value}}}")
+  @ApiModelProperty(value = "Nome do documento digitalizado")
   public String getDocumentoDigitalizado() {
     return documentoDigitalizado;
   }
@@ -174,9 +174,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_seq_analise_condicao_value}}}
+   * C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_seq_analise_condicao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o")
   public Long getSeqAnaliseCondicao() {
     return seqAnaliseCondicao;
   }
@@ -186,9 +186,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_observacao_value}}}
+   * Observa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_observacao_value}}}")
+  @ApiModelProperty(value = "Observa\u00E7\u00E3o")
   public String getObservacao() {
     return observacao;
   }
@@ -198,9 +198,9 @@ public class DocumentoPropostaResponse  {
 
   
   /**
-   * {{{documento_proposta_response_data_status_value}}}
+   * Data de status
    **/
-  @ApiModelProperty(value = "{{{documento_proposta_response_data_status_value}}}")
+  @ApiModelProperty(value = "Data de status")
   public String getDataStatus() {
     return dataStatus;
   }

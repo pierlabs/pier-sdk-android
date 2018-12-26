@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{documento_parametros_request_description}}}
+ * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
  **/
-@ApiModel(description = "{{{documento_parametros_request_description}}}")
+@ApiModel(description = "Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento")
 public class DocumentoParametrosRequest  {
   
   @SerializedName("idTemplateDocumento")
@@ -22,9 +22,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * {{{documento_parametros_request_id_template_documento_value}}}
+   * ID para o template do documento
    **/
-  @ApiModelProperty(value = "{{{documento_parametros_request_id_template_documento_value}}}")
+  @ApiModelProperty(value = "ID para o template do documento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
   }
@@ -34,9 +34,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * {{{documento_parametros_request_nome_value}}}
+   * Nome para o arquivo
    **/
-  @ApiModelProperty(value = "{{{documento_parametros_request_nome_value}}}")
+  @ApiModelProperty(value = "Nome para o arquivo")
   public String getNome() {
     return nome;
   }
@@ -46,9 +46,9 @@ public class DocumentoParametrosRequest  {
 
   
   /**
-   * {{{documento_parametros_request_parametros_conteudo_value}}}
+   * Lista de par\u00E2metros para montagem do documento
    **/
-  @ApiModelProperty(value = "{{{documento_parametros_request_parametros_conteudo_value}}}")
+  @ApiModelProperty(value = "Lista de par\u00E2metros para montagem do documento")
   public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }

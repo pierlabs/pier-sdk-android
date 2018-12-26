@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adicional_conta_response_description}}}
+ * Representa\u00E7\u00E3o da sa\u00EDda do recurso de cadastrar adicionais
  **/
-@ApiModel(description = "{{{adicional_conta_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da sa\u00EDda do recurso de cadastrar adicionais")
 public class AdicionalContaResponse  {
   
   @SerializedName("idConta")
@@ -36,9 +36,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta para cadastro do Adicional")
   public Long getIdConta() {
     return idConta;
   }
@@ -48,9 +48,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_pessoa_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Pessoa Adicional")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -60,9 +60,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_nome_value}}}
+   * Nome completo do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome completo do Adicional")
   public String getNome() {
     return nome;
   }
@@ -72,9 +72,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_nome_impresso_value}}}
+   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -84,9 +84,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_numero_receita_federal_value}}}
+   * N\u00FAmero do CPF ou CNPJ do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_numero_receita_federal_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do CPF ou CNPJ do Adicional")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -96,9 +96,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_estado_civil_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do estado civil do adicional do adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_estado_civil_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do estado civil do adicional do adicional")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
   }
@@ -108,9 +108,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_profissao_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da Profiss\u00E3o do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_profissao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Profiss\u00E3o do Adicional")
   public Long getIdProfissao() {
     return idProfissao;
   }
@@ -120,9 +120,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_nacionalidade_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_nacionalidade_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional")
   public Long getIdNacionalidade() {
     return idNacionalidade;
   }
@@ -132,9 +132,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_id_parentesco_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_id_parentesco_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -144,9 +144,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_email_value}}}
+   * Email do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_email_value}}}")
+  @ApiModelProperty(value = "Email do Adicional")
   public String getEmail() {
     return email;
   }
@@ -156,9 +156,9 @@ public class AdicionalContaResponse  {
 
   
   /**
-   * {{{adicional_conta_response_data_cadastro_portador_value}}}
+   * Indica a data de cadastro do adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_conta_response_data_cadastro_portador_value}}}")
+  @ApiModelProperty(value = "Indica a data de cadastro do adicional")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }

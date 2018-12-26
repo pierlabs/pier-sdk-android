@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{boleto_parcela_acordo_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do boleto de fatura
  **/
-@ApiModel(description = "{{{boleto_parcela_acordo_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
 public class BoletoParcelaAcordoResponse  {
   
   @SerializedName("numeroDocumento")
@@ -86,9 +86,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_numero_documento_value}}}
+   * N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_numero_documento_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente")
   public String getNumeroDocumento() {
     return numeroDocumento;
   }
@@ -98,9 +98,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_data_processamento_value}}}
+   * Data do processamento (emiss\u00E3o ou faturamento) do boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_data_processamento_value}}}")
+  @ApiModelProperty(value = "Data do processamento (emiss\u00E3o ou faturamento) do boleto")
   public String getDataProcessamento() {
     return dataProcessamento;
   }
@@ -110,9 +110,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_data_documento_value}}}
+   * Data do documento (impress\u00E3o)
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_data_documento_value}}}")
+  @ApiModelProperty(value = "Data do documento (impress\u00E3o)")
   public String getDataDocumento() {
     return dataDocumento;
   }
@@ -122,9 +122,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_data_vencimento_value}}}
+   * Data do vencimento da cobra\u00E7a
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_data_vencimento_value}}}")
+  @ApiModelProperty(value = "Data do vencimento da cobra\u00E7a")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -134,9 +134,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_data_fechamento_value}}}
+   * Data do fechamento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_data_fechamento_value}}}")
+  @ApiModelProperty(value = "Data do fechamento da cobran\u00E7a")
   public String getDataFechamento() {
     return dataFechamento;
   }
@@ -146,9 +146,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_valor_boleto_value}}}
+   * Valor do Boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_valor_boleto_value}}}")
+  @ApiModelProperty(value = "Valor do Boleto")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
   }
@@ -158,9 +158,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_nome_beneficiario_value}}}
+   * Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_nome_beneficiario_value}}}")
+  @ApiModelProperty(value = "Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
   }
@@ -170,9 +170,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_documento_beneficiario_value}}}
+   * Documento do Beneficiario
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_documento_beneficiario_value}}}")
+  @ApiModelProperty(value = "Documento do Beneficiario")
   public String getDocumentoBeneficiario() {
     return documentoBeneficiario;
   }
@@ -182,9 +182,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_agencia_value}}}
+   * Ag\u00EAncia Banc\u00E1ria
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_agencia_value}}}")
+  @ApiModelProperty(value = "Ag\u00EAncia Banc\u00E1ria")
   public String getAgencia() {
     return agencia;
   }
@@ -194,9 +194,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_codigo_beneficiario_value}}}
+   * C\u00F3digo do benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_codigo_beneficiario_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo do benefici\u00E1rio")
   public String getCodigoBeneficiario() {
     return codigoBeneficiario;
   }
@@ -206,9 +206,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_numero_convenio_value}}}
+   * N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_numero_convenio_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos")
   public String getNumeroConvenio() {
     return numeroConvenio;
   }
@@ -218,9 +218,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_digito_codigo_beneficiario_value}}}
+   * D\u00EDgito do c\u00F3digo do benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_digito_codigo_beneficiario_value}}}")
+  @ApiModelProperty(value = "D\u00EDgito do c\u00F3digo do benefici\u00E1rio")
   public String getDigitoCodigoBeneficiario() {
     return digitoCodigoBeneficiario;
   }
@@ -230,9 +230,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_carteira_value}}}
+   * Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_carteira_value}}}")
+  @ApiModelProperty(value = "Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto")
   public String getCarteira() {
     return carteira;
   }
@@ -242,9 +242,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_nosso_numero_value}}}
+   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_nosso_numero_value}}}")
+  @ApiModelProperty(value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
   public String getNossoNumero() {
     return nossoNumero;
   }
@@ -254,9 +254,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_digito_nosso_numero_value}}}
+   * D\u00EDgito do nosso n\u00FAmero
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_digito_nosso_numero_value}}}")
+  @ApiModelProperty(value = "D\u00EDgito do nosso n\u00FAmero")
   public String getDigitoNossoNumero() {
     return digitoNossoNumero;
   }
@@ -266,9 +266,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_banco_value}}}
+   * Banco
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_banco_value}}}")
+  @ApiModelProperty(value = "Banco")
   public String getBanco() {
     return banco;
   }
@@ -278,9 +278,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_aceite_value}}}
+   * Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: 'N')
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_aceite_value}}}")
+  @ApiModelProperty(value = "Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: 'N')")
   public Boolean getAceite() {
     return aceite;
   }
@@ -290,9 +290,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_especie_documento_value}}}
+   * Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: 'DV')
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_especie_documento_value}}}")
+  @ApiModelProperty(value = "Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: 'DV')")
   public String getEspecieDocumento() {
     return especieDocumento;
   }
@@ -302,9 +302,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_especie_value}}}
+   * Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: 'R$')
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_especie_value}}}")
+  @ApiModelProperty(value = "Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: 'R$')")
   public String getEspecie() {
     return especie;
   }
@@ -314,9 +314,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_instrucoes_value}}}
+   * Instru\u00E7\u00F5es para o benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_instrucoes_value}}}")
+  @ApiModelProperty(value = "Instru\u00E7\u00F5es para o benefici\u00E1rio")
   public List<String> getInstrucoes() {
     return instrucoes;
   }
@@ -326,9 +326,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_locais_de_pagamento_value}}}
+   * Locais de pagamento
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_locais_de_pagamento_value}}}")
+  @ApiModelProperty(value = "Locais de pagamento")
   public List<String> getLocaisDePagamento() {
     return locaisDePagamento;
   }
@@ -338,9 +338,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_nome_pagador_value}}}
+   * Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_nome_pagador_value}}}")
+  @ApiModelProperty(value = "Pagador \u00E9 a pessoa/empresa que deve pagar o boleto")
   public String getNomePagador() {
     return nomePagador;
   }
@@ -350,9 +350,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_documento_pagador_value}}}
+   * Documento do pagador (CPF ou CNPJ)
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_documento_pagador_value}}}")
+  @ApiModelProperty(value = "Documento do pagador (CPF ou CNPJ)")
   public String getDocumentoPagador() {
     return documentoPagador;
   }
@@ -362,9 +362,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_logradouro_pagador_value}}}
+   * Logradouro do pagador
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_logradouro_pagador_value}}}")
+  @ApiModelProperty(value = "Logradouro do pagador")
   public String getLogradouroPagador() {
     return logradouroPagador;
   }
@@ -374,9 +374,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_bairro_pagador_value}}}
+   * Bairro do pagador
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_bairro_pagador_value}}}")
+  @ApiModelProperty(value = "Bairro do pagador")
   public String getBairroPagador() {
     return bairroPagador;
   }
@@ -386,9 +386,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_cep_pagador_value}}}
+   * CEP do pagador
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_cep_pagador_value}}}")
+  @ApiModelProperty(value = "CEP do pagador")
   public String getCepPagador() {
     return cepPagador;
   }
@@ -398,9 +398,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_cidade_pagador_value}}}
+   * Cidade do pagador
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_cidade_pagador_value}}}")
+  @ApiModelProperty(value = "Cidade do pagador")
   public String getCidadePagador() {
     return cidadePagador;
   }
@@ -410,9 +410,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_uf_pagador_value}}}
+   * Unidade federativa do pagador
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_uf_pagador_value}}}")
+  @ApiModelProperty(value = "Unidade federativa do pagador")
   public String getUfPagador() {
     return ufPagador;
   }
@@ -422,9 +422,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_codigo_de_barras_value}}}
+   * Valor num\u00E9rico do c\u00F3digo de barras
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_codigo_de_barras_value}}}")
+  @ApiModelProperty(value = "Valor num\u00E9rico do c\u00F3digo de barras")
   public String getCodigoDeBarras() {
     return codigoDeBarras;
   }
@@ -434,9 +434,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_linha_digitavel_value}}}
+   * Linha digit\u00E1vel formatada
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_linha_digitavel_value}}}")
+  @ApiModelProperty(value = "Linha digit\u00E1vel formatada")
   public String getLinhaDigitavel() {
     return linhaDigitavel;
   }
@@ -446,9 +446,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do boleto
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto")
   public Long getId() {
     return id;
   }
@@ -458,9 +458,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -470,9 +470,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_endereco_cobranca_beneficiario_value}}}
+   * Endere\u00E7o de cobran\u00E7a do benefici\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_endereco_cobranca_beneficiario_value}}}")
+  @ApiModelProperty(value = "Endere\u00E7o de cobran\u00E7a do benefici\u00E1rio")
   public String getEnderecoCobrancaBeneficiario() {
     return enderecoCobrancaBeneficiario;
   }
@@ -482,9 +482,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_status_value}}}
+   * Status
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_status_value}}}")
+  @ApiModelProperty(value = "Status")
   public Long getStatus() {
     return status;
   }
@@ -494,9 +494,9 @@ public class BoletoParcelaAcordoResponse  {
 
   
   /**
-   * {{{boleto_parcela_acordo_response_registrado_value}}}
+   * Boleto Registrado
    **/
-  @ApiModelProperty(value = "{{{boleto_parcela_acordo_response_registrado_value}}}")
+  @ApiModelProperty(value = "Boleto Registrado")
   public Boolean getBoletoRegistrado() {
     return boletoRegistrado;
   }

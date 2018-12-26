@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_emissor_resposta_descricao}}}
+ * Representa a resposta de um cart\u00E3o
  **/
-@ApiModel(description = "{{{cartao_emissor_resposta_descricao}}}")
+@ApiModel(description = "Representa a resposta de um cart\u00E3o")
 public class CartaoEmissorResponse  {
   
   @SerializedName("id")
@@ -16,9 +16,9 @@ public class CartaoEmissorResponse  {
 
   
   /**
-   * {{{cartao_emissor_resposta_id_descricao}}}
+   * Id do cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{cartao_emissor_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Id do cart\u00E3o")
   public Long getId() {
     return id;
   }

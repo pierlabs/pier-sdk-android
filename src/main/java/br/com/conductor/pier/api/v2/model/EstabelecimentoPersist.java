@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{estabelecimento_persist_description}}}
+ * Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento
  **/
-@ApiModel(description = "{{{estabelecimento_persist_description}}}")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um estabelecimento")
 public class EstabelecimentoPersist  {
   
   @SerializedName("flagMatriz")
@@ -96,9 +96,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_flag_matriz_value}}}
+   * Indica se \u00E9 matriz ou filial
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_flag_matriz_value}}}")
+  @ApiModelProperty(value = "Indica se \u00E9 matriz ou filial")
   public Integer getFlagMatriz() {
     return flagMatriz;
   }
@@ -108,9 +108,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_id_grupo_economico_value}}}
+   * Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_id_grupo_economico_value}}}")
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
   }
@@ -120,9 +120,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_numero_receita_federal_value}}}
+   * N\u00FAmero Receita Federal
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_numero_receita_federal_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero Receita Federal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -132,9 +132,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_nome_value}}}
+   * Nome do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_nome_value}}}")
+  @ApiModelProperty(value = "Nome do Estabelecimento")
   public String getNome() {
     return nome;
   }
@@ -144,9 +144,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_descricao_value}}}
+   * Raz\u00E3o Social do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_descricao_value}}}")
+  @ApiModelProperty(value = "Raz\u00E3o Social do Estabelecimento")
   public String getDescricao() {
     return descricao;
   }
@@ -156,9 +156,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_nome_fantasia_value}}}
+   * T\u00EDtulo Comercial do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_nome_fantasia_value}}}")
+  @ApiModelProperty(value = "T\u00EDtulo Comercial do Estabelecimento")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -168,9 +168,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_cep_value}}}
+   * CEP do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_cep_value}}}")
+  @ApiModelProperty(value = "CEP do Estabelecimento")
   public String getCep() {
     return cep;
   }
@@ -180,9 +180,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_nome_logradouro_value}}}
+   * Nome do Logradouro
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_nome_logradouro_value}}}")
+  @ApiModelProperty(value = "Nome do Logradouro")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -192,9 +192,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_numero_endereco_value}}}
+   * N\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_numero_endereco_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -204,9 +204,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_bairro_value}}}
+   * Nome do bairro do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_bairro_value}}}")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o")
   public String getBairro() {
     return bairro;
   }
@@ -216,9 +216,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_cidade_value}}}
+   * Nome da cidade do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_cidade_value}}}")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o")
   public String getCidade() {
     return cidade;
   }
@@ -228,9 +228,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_complemento_value}}}
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_complemento_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o")
   public String getComplemento() {
     return complemento;
   }
@@ -240,9 +240,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_uf_value}}}
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_uf_value}}}")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o")
   public String getUf() {
     return uf;
   }
@@ -252,9 +252,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_cep2_value}}}
+   * Segundo CEP do estabelimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_cep2_value}}}")
+  @ApiModelProperty(value = "Segundo CEP do estabelimento")
   public String getCep2() {
     return cep2;
   }
@@ -264,9 +264,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_nome_logradouro2_value}}}
+   * Nome do Logradouro 
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_nome_logradouro2_value}}}")
+  @ApiModelProperty(value = "Nome do Logradouro ")
   public String getNomeLogradouro2() {
     return nomeLogradouro2;
   }
@@ -276,9 +276,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_numero_endereco2_value}}}
+   * N\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_numero_endereco2_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o")
   public Integer getNumeroEndereco2() {
     return numeroEndereco2;
   }
@@ -288,9 +288,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_bairro2_value}}}
+   * Nome do bairro do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_bairro2_value}}}")
+  @ApiModelProperty(value = "Nome do bairro do endere\u00E7o")
   public String getBairro2() {
     return bairro2;
   }
@@ -300,9 +300,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_cidade2_value}}}
+   * Nome da cidade do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_cidade2_value}}}")
+  @ApiModelProperty(value = "Nome da cidade do endere\u00E7o")
   public String getCidade2() {
     return cidade2;
   }
@@ -312,9 +312,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_complemento2_value}}}
+   * Descri\u00E7\u00F5es complementares referente ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_complemento2_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referente ao endere\u00E7o")
   public String getComplemento2() {
     return complemento2;
   }
@@ -324,9 +324,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_uf2_value}}}
+   * Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_uf2_value}}}")
+  @ApiModelProperty(value = "Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o")
   public String getUf2() {
     return uf2;
   }
@@ -336,9 +336,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_obs_value}}}
+   * Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_obs_value}}}")
+  @ApiModelProperty(value = "Detalhes espec\u00EDficos quanto ao Cadastro do Estabelecimento")
   public String getObs() {
     return obs;
   }
@@ -348,9 +348,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_contato_value}}}
+   * Nome da pessoa para contato com o Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_contato_value}}}")
+  @ApiModelProperty(value = "Nome da pessoa para contato com o Estabelecimento")
   public String getContato() {
     return contato;
   }
@@ -360,9 +360,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_email_value}}}
+   * E-mail da pessoa para contato com o Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_email_value}}}")
+  @ApiModelProperty(value = "E-mail da pessoa para contato com o Estabelecimento")
   public String getEmail() {
     return email;
   }
@@ -372,9 +372,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_flag_arquivo_secr_fazenda_value}}}
+   * Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_flag_arquivo_secr_fazenda_value}}}")
+  @ApiModelProperty(value = "Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
   }
@@ -384,9 +384,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_flag_cartao_digitado_value}}}
+   * Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_flag_cartao_digitado_value}}}")
+  @ApiModelProperty(value = "Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
   }
@@ -396,9 +396,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_inativo_value}}}
+   * Indica se o estabelecimento est\u00E1 inativo
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_inativo_value}}}")
+  @ApiModelProperty(value = "Indica se o estabelecimento est\u00E1 inativo")
   public Integer getInativo() {
     return inativo;
   }
@@ -408,9 +408,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_id_moeda_value}}}
+   * C\u00F3digo identificador da moeda
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_id_moeda_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador da moeda")
   public Long getIdMoeda() {
     return idMoeda;
   }
@@ -420,9 +420,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_id_pais_value}}}
+   * Identificador de Pa\u00EDs
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_id_pais_value}}}")
+  @ApiModelProperty(value = "Identificador de Pa\u00EDs")
   public Long getIdPais() {
     return idPais;
   }
@@ -432,9 +432,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_associado_s_p_c_brasil_value}}}
+   * N\u00FAmero do associado ao SPCBrasil
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_associado_s_p_c_brasil_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do associado ao SPCBrasil")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
   }
@@ -444,9 +444,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_mcc_value}}}
+   * C\u00F3digo de Categoria de Mercado
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_mcc_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Categoria de Mercado")
   public Long getMcc() {
     return mcc;
   }
@@ -456,9 +456,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_id_tipo_estabelecimento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_id_tipo_estabelecimento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
   }
@@ -468,9 +468,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_correspondencia_value}}}
+   * Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_correspondencia_value}}}")
+  @ApiModelProperty(value = "Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA")
   public Integer getCorrespondencia() {
     return correspondencia;
   }
@@ -480,9 +480,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_cargo_contato_value}}}
+   * Cargo do contato do estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_cargo_contato_value}}}")
+  @ApiModelProperty(value = "Cargo do contato do estabelecimento")
   public String getCargoContato() {
     return cargoContato;
   }
@@ -492,9 +492,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_tipo_pagamento_value}}}
+   * Tipo do regime de pagamento do estabelecimento
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_tipo_pagamento_value}}}")
+  @ApiModelProperty(value = "Tipo do regime de pagamento do estabelecimento")
   public TipoPagamentoEnum getTipoPagamento() {
     return tipoPagamento;
   }
@@ -504,9 +504,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_consulta_value}}}
+   * Consulta de cadastro n\u00FAmero um
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_consulta_value}}}")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero um")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
   }
@@ -516,9 +516,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_consulta2_value}}}
+   * Consulta de cadastro n\u00FAmero dois
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_consulta2_value}}}")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero dois")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
   }
@@ -528,9 +528,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_consulta3_value}}}
+   * Consulta de cadastro n\u00FAmero tr\u00EAs
    **/
-  @ApiModelProperty(value = "{{{estabelecimento_persist_consulta3_value}}}")
+  @ApiModelProperty(value = "Consulta de cadastro n\u00FAmero tr\u00EAs")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
   }
@@ -540,9 +540,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_flag_terminal_virtual_value}}}
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
    **/
-  @ApiModelProperty(required = true, value = "{{{estabelecimento_persist_flag_terminal_virtual_value}}}")
+  @ApiModelProperty(required = true, value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
   }
@@ -552,9 +552,9 @@ public class EstabelecimentoPersist  {
 
   
   /**
-   * {{{estabelecimento_persist_flag_consulta_extrato_value}}}
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
    **/
-  @ApiModelProperty(required = true, value = "{{{estabelecimento_persist_flag_consulta_extrato_value}}}")
+  @ApiModelProperty(required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
   }

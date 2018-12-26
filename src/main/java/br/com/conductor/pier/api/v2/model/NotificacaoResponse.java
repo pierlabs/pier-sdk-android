@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{notificacao_response_description}}}
+ * Objeto Notifica\u00E7\u00E3o SMS
  **/
-@ApiModel(description = "{{{notificacao_response_description}}}")
+@ApiModel(description = "Objeto Notifica\u00E7\u00E3o SMS")
 public class NotificacaoResponse  {
   
   @SerializedName("protocolo")
@@ -18,9 +18,9 @@ public class NotificacaoResponse  {
 
   
   /**
-   * {{{notificacao_response_protocolo_value}}}
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "{{{notificacao_response_protocolo_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
   public String getProtocolo() {
     return protocolo;
   }
@@ -30,9 +30,9 @@ public class NotificacaoResponse  {
 
   
   /**
-   * {{{notificacao_response_mensagem_value}}}
+   * Mensagem de resposta da solicita\u00E7\u00F5es de envio
    **/
-  @ApiModelProperty(value = "{{{notificacao_response_mensagem_value}}}")
+  @ApiModelProperty(value = "Mensagem de resposta da solicita\u00E7\u00F5es de envio")
   public String getMensagem() {
     return mensagem;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{telefone_pessoa_aprovada_response_description}}}
+ * Objeto Telefone Pessoa Aprovada
  **/
-@ApiModel(description = "{{{telefone_pessoa_aprovada_response_description}}}")
+@ApiModel(description = "Objeto Telefone Pessoa Aprovada")
 public class TelefonePessoaAprovadaResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_id_tipo_telefone_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -48,9 +48,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_ddd_value}}}
+   * DDD
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_ddd_value}}}")
+  @ApiModelProperty(value = "DDD")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_telefone_value}}}
+   * Telefone n\u00FAmero
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_telefone_value}}}")
+  @ApiModelProperty(value = "Telefone n\u00FAmero")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * {{{telefone_pessoa_aprovada_response_ramal_value}}}
+   * N\u00FAmero de ramal
    **/
-  @ApiModelProperty(value = "{{{telefone_pessoa_aprovada_response_ramal_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero de ramal")
   public String getRamal() {
     return ramal;
   }

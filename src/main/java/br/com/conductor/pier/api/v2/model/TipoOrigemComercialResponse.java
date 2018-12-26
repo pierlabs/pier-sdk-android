@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_origem_comercial_response_description}}}
+ * Objeto de resposta do recurso de tipos de origens comerciais
  **/
-@ApiModel(description = "{{{tipo_origem_comercial_response_description}}}")
+@ApiModel(description = "Objeto de resposta do recurso de tipos de origens comerciais")
 public class TipoOrigemComercialResponse  {
   
   @SerializedName("id")
@@ -18,9 +18,9 @@ public class TipoOrigemComercialResponse  {
 
   
   /**
-   * {{{tipo_origem_comercial_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial
    **/
-  @ApiModelProperty(value = "{{{tipo_origem_comercial_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial")
   public Long getId() {
     return id;
   }
@@ -30,9 +30,9 @@ public class TipoOrigemComercialResponse  {
 
   
   /**
-   * {{{tipo_origem_comercial_response_nome_value}}}
+   * Nome do tipo de origem comercial
    **/
-  @ApiModelProperty(value = "{{{tipo_origem_comercial_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do tipo de origem comercial")
   public String getNome() {
     return nome;
   }

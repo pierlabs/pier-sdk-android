@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{cartao_embossing_request_description}}}
+ * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
  **/
-@ApiModel(description = "{{{cartao_embossing_request_description}}}")
+@ApiModel(description = "Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing")
 public class CartaoEmbossingRequest  {
   
   @SerializedName("id_pessoa")
@@ -18,9 +18,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * {{{cartao_embossing_request_id_pessoa_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_request_id_pessoa_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -30,9 +30,9 @@ public class CartaoEmbossingRequest  {
 
   
   /**
-   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)
    **/
-  @ApiModelProperty(value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
   }
