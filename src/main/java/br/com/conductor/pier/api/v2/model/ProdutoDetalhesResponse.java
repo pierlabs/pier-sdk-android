@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{produto_detalhes_response_description}}}
+ * ProdutoDetalhes
  **/
-@ApiModel(description = "{{{produto_detalhes_response_description}}}")
+@ApiModel(description = "ProdutoDetalhes")
 public class ProdutoDetalhesResponse  {
   
   @SerializedName("id")
@@ -26,9 +26,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{produto_response_id_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)")
   public Long getId() {
     return id;
   }
@@ -38,9 +38,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_response_nome_value}}}
+   * Descri\u00E7\u00E3o do Nome do Produto
    **/
-  @ApiModelProperty(required = true, value = "{{{produto_response_nome_value}}}")
+  @ApiModelProperty(required = true, value = "Descri\u00E7\u00E3o do Nome do Produto")
   public String getNome() {
     return nome;
   }
@@ -50,9 +50,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_response_status_value}}}
+   * Representa o Status do Produto, onde: ('0': Inativo), ('1': Ativo)
    **/
-  @ApiModelProperty(required = true, value = "{{{produto_response_status_value}}}")
+  @ApiModelProperty(required = true, value = "Representa o Status do Produto, onde: ('0': Inativo), ('1': Ativo)")
   public Integer getStatus() {
     return status;
   }
@@ -62,9 +62,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_response_id_fantasia_basica_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence
    **/
-  @ApiModelProperty(value = "{{{produto_response_id_fantasia_basica_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
   }
@@ -74,9 +74,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_detalhes_response_fantasia_basica_value}}}
+   * Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence
    **/
-  @ApiModelProperty(value = "{{{produto_detalhes_response_fantasia_basica_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence")
   public String getFantasiaBasica() {
     return fantasiaBasica;
   }
@@ -86,9 +86,9 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
-   * {{{produto_detalhes_response_uso_exterior_value}}}
+   * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior
    **/
-  @ApiModelProperty(value = "{{{produto_detalhes_response_uso_exterior_value}}}")
+  @ApiModelProperty(value = "Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior")
   public Boolean getUsoExterior() {
     return usoExterior;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{aviso_viagem_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso aviso viagens
  **/
-@ApiModel(description = "{{{aviso_viagem_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso aviso viagens")
 public class AvisoViagemResponse  {
   
   @SerializedName("id")
@@ -23,12 +23,14 @@ public class AvisoViagemResponse  {
   private String dataFim = null;
   @SerializedName("flagAtivo")
   private Integer flagAtivo = null;
+  @SerializedName("paisDescricao")
+  private String paisDescricao = null;
 
   
   /**
-   * {{{aviso_viagem_response_id_value}}}
+   * C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)")
   public Long getId() {
     return id;
   }
@@ -38,9 +40,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * {{{aviso_viagem_response_id_cartao_value}}}
+   * C\u00F3digo identificador do cart\u00E3o na base (id)
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_id_cartao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador do cart\u00E3o na base (id)")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -50,9 +52,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * {{{aviso_viagem_response_codigo_pais_value}}}
+   * Codigo identificador do pa\u00EDs na base (id)
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_codigo_pais_value}}}")
+  @ApiModelProperty(value = "Codigo identificador do pa\u00EDs na base (id)")
   public String getCodigoPais() {
     return codigoPais;
   }
@@ -62,9 +64,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * {{{aviso_viagem_response_data_inicio_value}}}
+   * Data inicio do aviso viagem
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_data_inicio_value}}}")
+  @ApiModelProperty(value = "Data inicio do aviso viagem")
   public String getDataInicio() {
     return dataInicio;
   }
@@ -74,9 +76,9 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * {{{aviso_viagem_response_data_fim_value}}}
+   * Data fim do aviso viagem
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_data_fim_value}}}")
+  @ApiModelProperty(value = "Data fim do aviso viagem")
   public String getDataFim() {
     return dataFim;
   }
@@ -86,14 +88,26 @@ public class AvisoViagemResponse  {
 
   
   /**
-   * {{{aviso_viagem_response_flag_ativo_value}}}
+   * Identifica se o aviso viagem esta ativo ou n\u00E3o
    **/
-  @ApiModelProperty(value = "{{{aviso_viagem_response_flag_ativo_value}}}")
+  @ApiModelProperty(value = "Identifica se o aviso viagem esta ativo ou n\u00E3o")
   public Integer getFlagAtivo() {
     return flagAtivo;
   }
   public void setFlagAtivo(Integer flagAtivo) {
     this.flagAtivo = flagAtivo;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o do pa\u00EDs
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do pa\u00EDs")
+  public String getPaisDescricao() {
+    return paisDescricao;
+  }
+  public void setPaisDescricao(String paisDescricao) {
+    this.paisDescricao = paisDescricao;
   }
 
   
@@ -109,6 +123,7 @@ public class AvisoViagemResponse  {
     sb.append("  dataInicio: ").append(dataInicio).append("\n");
     sb.append("  dataFim: ").append(dataFim).append("\n");
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
+    sb.append("  paisDescricao: ").append(paisDescricao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

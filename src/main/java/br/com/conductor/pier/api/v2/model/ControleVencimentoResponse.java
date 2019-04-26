@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{controle_vencimento_response_description}}}
+ * Objeto de Resposta dos Vencimentos
  **/
-@ApiModel(description = "{{{controle_vencimento_response_description}}}")
+@ApiModel(description = "Objeto de Resposta dos Vencimentos")
 public class ControleVencimentoResponse  {
   
   @SerializedName("dataVencimento")
@@ -26,9 +26,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_vencimento_value}}}
+   * Indica a data de vencimento das faturas
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_vencimento_value}}}")
+  @ApiModelProperty(value = "Indica a data de vencimento das faturas")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -38,9 +38,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_prevista_corte_value}}}
+   * Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_prevista_corte_value}}}")
+  @ApiModelProperty(value = "Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas")
   public String getDataPrevistaCorte() {
     return dataPrevistaCorte;
   }
@@ -50,9 +50,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
+   * Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_hora_realizacao_corte_value}}}")
+  @ApiModelProperty(value = "Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas")
   public String getDataHoraRealizacaoCorte() {
     return dataHoraRealizacaoCorte;
   }
@@ -62,9 +62,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_prevista_faturamento_value}}}
+   * Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_prevista_faturamento_value}}}")
+  @ApiModelProperty(value = "Indica a data prevista para a realiza\u00E7\u00E3o do faturamento")
   public String getDataPrevistaFaturamento() {
     return dataPrevistaFaturamento;
   }
@@ -74,9 +74,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
+   * Indica a data e a hora que fora realizado o faturamento
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}")
+  @ApiModelProperty(value = "Indica a data e a hora que fora realizado o faturamento")
   public String getDataHoraRealizacaoFaturamento() {
     return dataHoraRealizacaoFaturamento;
   }
@@ -86,9 +86,9 @@ public class ControleVencimentoResponse  {
 
   
   /**
-   * {{{controle_vencimento_response_data_real_vencimento_value}}}
+   * Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
    **/
-  @ApiModelProperty(value = "{{{controle_vencimento_response_data_real_vencimento_value}}}")
+  @ApiModelProperty(value = "Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento")
   public String getDataRealVencimento() {
     return dataRealVencimento;
   }

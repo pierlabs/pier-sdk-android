@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{divida_cliente_response_description}}}
+ * D\u00EDvida do cliente
  **/
-@ApiModel(description = "{{{divida_cliente_response_description}}}")
+@ApiModel(description = "D\u00EDvida do cliente")
 public class DividaClienteResponse  {
   
   @SerializedName("id")
@@ -49,9 +49,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   public Long getId() {
     return id;
   }
@@ -61,9 +61,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
+   * Data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}")
+  @ApiModelProperty(value = "Data de vencimento da cobran\u00E7a")
   public String getDataVencimentoFaturaAtraso() {
     return dataVencimentoFaturaAtraso;
   }
@@ -73,9 +73,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_quantidade_dias_atraso_value}}}
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_quantidade_dias_atraso_value}}}")
+  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a")
   public Long getQuantidadeDiasAtraso() {
     return quantidadeDiasAtraso;
   }
@@ -85,9 +85,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_data_vencimento_acordo_value}}}
+   * Data de vencimento do acordo
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_data_vencimento_acordo_value}}}")
+  @ApiModelProperty(value = "Data de vencimento do acordo")
   public String getDataVencimentoAcordo() {
     return dataVencimentoAcordo;
   }
@@ -97,9 +97,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
+   * Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}")
+  @ApiModelProperty(value = "Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo")
   public Long getQuantidadeDiasAtrasoCorrigido() {
     return quantidadeDiasAtrasoCorrigido;
   }
@@ -109,9 +109,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_valor_saldo_devedor_value}}}
+   * Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_valor_saldo_devedor_value}}}")
+  @ApiModelProperty(value = "Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a")
   public BigDecimal getValorSaldoDevedor() {
     return valorSaldoDevedor;
   }
@@ -121,9 +121,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_taxa_correcao_value}}}
+   * Percentual de corre\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_taxa_correcao_value}}}")
+  @ApiModelProperty(value = "Percentual de corre\u00E7\u00E3o")
   public BigDecimal getTaxaCorrecao() {
     return taxaCorrecao;
   }
@@ -133,9 +133,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_valor_correcao_value}}}
+   * Valor da corre\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_valor_correcao_value}}}")
+  @ApiModelProperty(value = "Valor da corre\u00E7\u00E3o")
   public BigDecimal getValorCorrecao() {
     return valorCorrecao;
   }
@@ -145,9 +145,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_valor_i_o_f_value}}}
+   * Valor do IOF devido
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_valor_i_o_f_value}}}")
+  @ApiModelProperty(value = "Valor do IOF devido")
   public BigDecimal getValorIOF() {
     return valorIOF;
   }
@@ -157,9 +157,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_valor_saldo_corrigido_value}}}
+   * Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_valor_saldo_corrigido_value}}}")
+  @ApiModelProperty(value = "Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo")
   public BigDecimal getValorSaldoCorrigido() {
     return valorSaldoCorrigido;
   }
@@ -169,9 +169,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_id_status_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_id_status_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -181,9 +181,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_descricao_status_conta_value}}}
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_descricao_status_conta_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public String getDescricaoStatusConta() {
     return descricaoStatusConta;
   }
@@ -193,9 +193,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_id_status_acordo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_id_status_acordo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)")
   public Long getIdStatusAcordo() {
     return idStatusAcordo;
   }
@@ -205,9 +205,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_descricao_status_acordo_value}}}
+   * Descri\u00E7\u00E3o do status do acordo
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_descricao_status_acordo_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status do acordo")
   public String getDescricaoStatusAcordo() {
     return descricaoStatusAcordo;
   }
@@ -217,9 +217,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_id_escritorio_cobranca_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_id_escritorio_cobranca_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a")
   public Long getIdEscritorioCobranca() {
     return idEscritorioCobranca;
   }
@@ -229,9 +229,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
+   * Nome do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_nome_escritorio_cobranca_value}}}")
+  @ApiModelProperty(value = "Nome do escrit\u00F3rio de cobran\u00E7a")
   public String getNomeEscritorioCobranca() {
     return nomeEscritorioCobranca;
   }
@@ -241,9 +241,9 @@ public class DividaClienteResponse  {
 
   
   /**
-   * {{{divida_cliente_response_email_pessoa_conta_value}}}
+   * Email do devedor
    **/
-  @ApiModelProperty(value = "{{{divida_cliente_response_email_pessoa_conta_value}}}")
+  @ApiModelProperty(value = "Email do devedor")
   public String getEmailPessoaConta() {
     return emailPessoaConta;
   }

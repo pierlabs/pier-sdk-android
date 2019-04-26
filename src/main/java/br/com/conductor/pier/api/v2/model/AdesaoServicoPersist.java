@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adesao_servico_persistencia_descricao}}}
+ * Objeto de persist\u00EAncia para ades\u00E3o servi\u00E7os
  **/
-@ApiModel(description = "{{{adesao_servico_persistencia_descricao}}}")
+@ApiModel(description = "Objeto de persist\u00EAncia para ades\u00E3o servi\u00E7os")
 public class AdesaoServicoPersist  {
   
   @SerializedName("canal")
@@ -36,12 +36,16 @@ public class AdesaoServicoPersist  {
   private Boolean flagCobrancaLimiteCredito = null;
   @SerializedName("flagOfertasPromocoes")
   private Boolean flagOfertasPromocoes = null;
+  @SerializedName("flagAdesaoInvestimento")
+  private Boolean flagAdesaoInvestimento = null;
+  @SerializedName("flagAdesaoCompraProgramada")
+  private Boolean flagAdesaoCompraProgramada = null;
 
   
   /**
-   * {{{adesao_servico_persistencia_canal_descricao}}}
+   * Canal de entrada
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_canal_descricao}}}")
+  @ApiModelProperty(value = "Canal de entrada")
   public String getCanal() {
     return canal;
   }
@@ -51,9 +55,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_estabelecimento_descricao}}}
+   * Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_estabelecimento_descricao}}}")
+  @ApiModelProperty(value = "Estabelecimento")
   public Integer getEstabelecimento() {
     return estabelecimento;
   }
@@ -63,9 +67,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}
+   * Tipo do envio da fatura
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "Tipo do envio da fatura")
   public Integer getTipoEnvioFatura() {
     return tipoEnvioFatura;
   }
@@ -75,9 +79,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_tipo_sms_descricao}}}
+   * Tipo do sms
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Tipo do sms")
   public TipoSmsEnum getTipoSms() {
     return tipoSms;
   }
@@ -87,9 +91,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}
+   * Cobranca do Limite de cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Cobranca do Limite de cr\u00E9dito")
   public Boolean getCobrancaLimiteCredito() {
     return cobrancaLimiteCredito;
   }
@@ -99,9 +103,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}
+   * Ofertar promo\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Ofertar promo\u00E7\u00F5es")
   public Boolean getFlagPromocoes() {
     return flagPromocoes;
   }
@@ -111,9 +115,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_responsavel_descricao}}}
+   * Respons\u00E1vel
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_responsavel_descricao}}}")
+  @ApiModelProperty(value = "Respons\u00E1vel")
   public String getResponsavel() {
     return responsavel;
   }
@@ -123,9 +127,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}
+   * Oferece tipo de envio da fatura
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "Oferece tipo de envio da fatura")
   public Boolean getFlagTipoEnvioFatura() {
     return flagTipoEnvioFatura;
   }
@@ -135,9 +139,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}
+   * Oferece tipo do sms
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Oferece tipo do sms")
   public Boolean getFlagTipoSms() {
     return flagTipoSms;
   }
@@ -147,9 +151,9 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}
+   * Oferece cobran\u00E7a no limite de cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Oferece cobran\u00E7a no limite de cr\u00E9dito")
   public Boolean getFlagCobrancaLimiteCredito() {
     return flagCobrancaLimiteCredito;
   }
@@ -159,14 +163,38 @@ public class AdesaoServicoPersist  {
 
   
   /**
-   * {{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}
+   * Oferece promo\u00E7\u00F5es dispon\u00EDveis
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Oferece promo\u00E7\u00F5es dispon\u00EDveis")
   public Boolean getFlagOfertasPromocoes() {
     return flagOfertasPromocoes;
   }
   public void setFlagOfertasPromocoes(Boolean flagOfertasPromocoes) {
     this.flagOfertasPromocoes = flagOfertasPromocoes;
+  }
+
+  
+  /**
+   * Oferece ades\u00E3o de investimentos
+   **/
+  @ApiModelProperty(value = "Oferece ades\u00E3o de investimentos")
+  public Boolean getFlagAdesaoInvestimento() {
+    return flagAdesaoInvestimento;
+  }
+  public void setFlagAdesaoInvestimento(Boolean flagAdesaoInvestimento) {
+    this.flagAdesaoInvestimento = flagAdesaoInvestimento;
+  }
+
+  
+  /**
+   * Oferece ades\u00E3o da compra programada
+   **/
+  @ApiModelProperty(value = "Oferece ades\u00E3o da compra programada")
+  public Boolean getFlagAdesaoCompraProgramada() {
+    return flagAdesaoCompraProgramada;
+  }
+  public void setFlagAdesaoCompraProgramada(Boolean flagAdesaoCompraProgramada) {
+    this.flagAdesaoCompraProgramada = flagAdesaoCompraProgramada;
   }
 
   
@@ -187,6 +215,8 @@ public class AdesaoServicoPersist  {
     sb.append("  flagTipoSms: ").append(flagTipoSms).append("\n");
     sb.append("  flagCobrancaLimiteCredito: ").append(flagCobrancaLimiteCredito).append("\n");
     sb.append("  flagOfertasPromocoes: ").append(flagOfertasPromocoes).append("\n");
+    sb.append("  flagAdesaoInvestimento: ").append(flagAdesaoInvestimento).append("\n");
+    sb.append("  flagAdesaoCompraProgramada: ").append(flagAdesaoCompraProgramada).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

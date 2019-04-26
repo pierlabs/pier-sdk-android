@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.WebHookResponse;
+import br.com.conductor.pier.api.v2.model.WebhookResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_web_hook_response_description}}}
+ * Lista de WebHooks
  **/
-@ApiModel(description = "{{{page_web_hook_response_description}}}")
+@ApiModel(description = "Lista de WebHooks")
 public class PageWebHookResponse  {
   
   @SerializedName("content")
-  private List<WebHookResponse> content = null;
+  private List<WebhookResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageWebHookResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<WebHookResponse> getContent() {
+  public List<WebhookResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebHookResponse> content) {
+  public void setContent(List<WebhookResponse> content) {
     this.content = content;
   }
 

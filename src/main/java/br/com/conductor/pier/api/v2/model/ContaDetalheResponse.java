@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{conta_detalhe_response_description}}}
+ * Objeto conta
  **/
-@ApiModel(description = "{{{conta_detalhe_response_description}}}")
+@ApiModel(description = "Objeto conta")
 public class ContaDetalheResponse  {
   
   @SerializedName("id")
@@ -87,16 +87,16 @@ public class ContaDetalheResponse  {
   @SerializedName("aceitaNovaContaPorGrupoProduto")
   private Boolean aceitaNovaContaPorGrupoProduto = null;
   public enum FuncaoAtivaEnum {
-     DEBITO_CREDITO,  CREDITO, 
+     DEBITO_CREDITO,  CREDITO,  DEBITO, 
   };
   @SerializedName("funcaoAtiva")
   private FuncaoAtivaEnum funcaoAtiva = null;
 
   
   /**
-   * {{{conta_detalhe_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id)
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o de conta (id)")
   public Long getId() {
     return id;
   }
@@ -106,9 +106,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_pessoa_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_pessoa_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)")
   public Long getIdPessoa() {
     return idPessoa;
   }
@@ -118,9 +118,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_nome_value}}}
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_nome_value}}}")
+  @ApiModelProperty(value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'")
   public String getNome() {
     return nome;
   }
@@ -130,9 +130,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_produto_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_produto_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -142,9 +142,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_origem_comercial_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_origem_comercial_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -154,9 +154,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_nome_origem_comercial_value}}}
+   * Nome da origem comercial
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_nome_origem_comercial_value}}}")
+  @ApiModelProperty(value = "Nome da origem comercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
   }
@@ -166,9 +166,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_fantasia_basica_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_fantasia_basica_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
   }
@@ -178,9 +178,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_nome_fantasia_basica_value}}}
+   * Nome da Fantasia Basica
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_nome_fantasia_basica_value}}}")
+  @ApiModelProperty(value = "Nome da Fantasia Basica")
   public String getNomeFantasiaBasica() {
     return nomeFantasiaBasica;
   }
@@ -190,9 +190,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_status_conta_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_status_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta")
   public Long getIdStatusConta() {
     return idStatusConta;
   }
@@ -202,9 +202,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_status_conta_value}}}
+   * Descri\u00E7\u00E3o do status da conta
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_status_conta_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do status da conta")
   public String getStatusConta() {
     return statusConta;
   }
@@ -214,9 +214,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_dia_vencimento_value}}}
+   * Apresenta o dia de vencimento
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_dia_vencimento_value}}}")
+  @ApiModelProperty(value = "Apresenta o dia de vencimento")
   public Integer getDiaVencimento() {
     return diaVencimento;
   }
@@ -226,9 +226,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_melhor_dia_compra_value}}}
+   * Apresenta o melhor dia de compra
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_melhor_dia_compra_value}}}")
+  @ApiModelProperty(value = "Apresenta o melhor dia de compra")
   public Integer getMelhorDiaCompra() {
     return melhorDiaCompra;
   }
@@ -238,9 +238,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_data_status_conta_value}}}
+   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_data_status_conta_value}}}")
+  @ApiModelProperty(value = "Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela")
   public String getDataStatusConta() {
     return dataStatusConta;
   }
@@ -250,9 +250,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_data_cadastro_value}}}
+   * Apresenta a data em que o cart\u00E3o foi gerado
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_data_cadastro_value}}}")
+  @ApiModelProperty(value = "Apresenta a data em que o cart\u00E3o foi gerado")
   public String getDataCadastro() {
     return dataCadastro;
   }
@@ -262,9 +262,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
+   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}")
+  @ApiModelProperty(value = "Apresenta a data da ultima altera\u00E7\u00E3o de vencimento")
   public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
@@ -274,9 +274,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
+   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_data_hora_ultima_compra_value}}}")
+  @ApiModelProperty(value = "Apresenta a data da ultima altera\u00E7\u00E3o de vencimento")
   public String getDataHoraUltimaCompra() {
     return dataHoraUltimaCompra;
   }
@@ -286,9 +286,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_numero_agencia_value}}}
+   * N\u00FAmero da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_numero_agencia_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero da ag\u00EAncia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
   }
@@ -298,9 +298,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_numero_conta_corrente_value}}}
+   * N\u00FAmero da conta corrente
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_numero_conta_corrente_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero da conta corrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
   }
@@ -310,9 +310,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_valor_renda_value}}}
+   * Valor da renda comprovada
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_valor_renda_value}}}")
+  @ApiModelProperty(value = "Valor da renda comprovada")
   public BigDecimal getValorRenda() {
     return valorRenda;
   }
@@ -322,9 +322,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_forma_envio_fatura_value}}}
+   * Forma de envio da fatura
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_forma_envio_fatura_value}}}")
+  @ApiModelProperty(value = "Forma de envio da fatura")
   public String getFormaEnvioFatura() {
     return formaEnvioFatura;
   }
@@ -334,9 +334,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_titular_value}}}
+   * Apresenta se a pessoa \u00E9 titular da conta
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_titular_value}}}")
+  @ApiModelProperty(value = "Apresenta se a pessoa \u00E9 titular da conta")
   public Boolean getTitular() {
     return titular;
   }
@@ -346,9 +346,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_limite_global_value}}}
+   * Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_limite_global_value}}}")
+  @ApiModelProperty(value = "Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -358,9 +358,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_limite_saque_global_value}}}
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_limite_saque_global_value}}}")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
   }
@@ -370,9 +370,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_saldo_disponivel_global_value}}}
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_saldo_disponivel_global_value}}}")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
   }
@@ -382,9 +382,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
+   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_saldo_disponivel_saque_value}}}")
+  @ApiModelProperty(value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
   }
@@ -394,9 +394,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_impedido_de_financiamento_value}}}
+   * Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_impedido_de_financiamento_value}}}")
+  @ApiModelProperty(value = "Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
   }
@@ -406,9 +406,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_dias_atraso_value}}}
+   * Apresenta a quantidade de dias que a conta esta em atraso
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_dias_atraso_value}}}")
+  @ApiModelProperty(value = "Apresenta a quantidade de dias que a conta esta em atraso")
   public Long getDiasAtraso() {
     return diasAtraso;
   }
@@ -418,9 +418,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_response_proximo_vencimento_padrao_value}}}
+   * Pr\u00F3ximo Vencimento Padr\u00E3o
    **/
-  @ApiModelProperty(value = "{{{conta_response_proximo_vencimento_padrao_value}}}")
+  @ApiModelProperty(value = "Pr\u00F3ximo Vencimento Padr\u00E3o")
   public String getProximoVencimentoPadrao() {
     return proximoVencimentoPadrao;
   }
@@ -430,9 +430,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_id_proposta_value}}}
+   * Identificador da proposta
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_id_proposta_value}}}")
+  @ApiModelProperty(value = "Identificador da proposta")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -442,9 +442,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_quantidade_pagamentos_value}}}
+   * Quantidade de pagamentos
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_quantidade_pagamentos_value}}}")
+  @ApiModelProperty(value = "Quantidade de pagamentos")
   public Integer getQuantidadePagamentos() {
     return quantidadePagamentos;
   }
@@ -454,9 +454,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_correspondencia_value}}}
+   * correspond\u00EAncia
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_correspondencia_value}}}")
+  @ApiModelProperty(value = "correspond\u00EAncia")
   public Long getCorrespondencia() {
     return correspondencia;
   }
@@ -466,9 +466,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_data_inicio_atraso_value}}}
+   * Data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_data_inicio_atraso_value}}}")
+  @ApiModelProperty(value = "Data de vencimento da cobran\u00E7a")
   public String getDataInicioAtraso() {
     return dataInicioAtraso;
   }
@@ -478,9 +478,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{estado_conta_response_rotativo_paga_juros_value}}}
+   * Apresenta valor rotativo de juros da conta
    **/
-  @ApiModelProperty(value = "{{{estado_conta_response_rotativo_paga_juros_value}}}")
+  @ApiModelProperty(value = "Apresenta valor rotativo de juros da conta")
   public BigDecimal getRotativoPagaJuros() {
     return rotativoPagaJuros;
   }
@@ -490,9 +490,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{estado_conta_response_total_pos_proximo_value}}}
+   * Apresenta valor da fatura ap\u00F3s a pr\u00F3xima
    **/
-  @ApiModelProperty(value = "{{{estado_conta_response_total_pos_proximo_value}}}")
+  @ApiModelProperty(value = "Apresenta valor da fatura ap\u00F3s a pr\u00F3xima")
   public BigDecimal getTotalPosProx() {
     return totalPosProx;
   }
@@ -502,9 +502,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{estado_conta_response_saldo_atual_final_value}}}
+   * Apresenta valor do saldo atual final
    **/
-  @ApiModelProperty(value = "{{{estado_conta_response_saldo_atual_final_value}}}")
+  @ApiModelProperty(value = "Apresenta valor do saldo atual final")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
   }
@@ -514,9 +514,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{estado_conta_response_saldo_extrato_anterior_value}}}
+   * Apresenta o saldo do extrato anterior da conta
    **/
-  @ApiModelProperty(value = "{{{estado_conta_response_saldo_extrato_anterior_value}}}")
+  @ApiModelProperty(value = "Apresenta o saldo do extrato anterior da conta")
   public BigDecimal getSaldoExtratoAnterior() {
     return saldoExtratoAnterior;
   }
@@ -526,9 +526,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
+   * Flag que indica a aceita\u00E7\u00E3o de abertura de nova conta por grupo de produtos
    **/
-  @ApiModelProperty(value = "{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}")
+  @ApiModelProperty(value = "Flag que indica a aceita\u00E7\u00E3o de abertura de nova conta por grupo de produtos")
   public Boolean getAceitaNovaContaPorGrupoProduto() {
     return aceitaNovaContaPorGrupoProduto;
   }
@@ -538,9 +538,9 @@ public class ContaDetalheResponse  {
 
   
   /**
-   * {{{conta_response_funcao_ativa_value}}}
+   * Fun\u00E7\u00E3o ativa da conta
    **/
-  @ApiModelProperty(value = "{{{conta_response_funcao_ativa_value}}}")
+  @ApiModelProperty(value = "Fun\u00E7\u00E3o ativa da conta")
   public FuncaoAtivaEnum getFuncaoAtiva() {
     return funcaoAtiva;
   }

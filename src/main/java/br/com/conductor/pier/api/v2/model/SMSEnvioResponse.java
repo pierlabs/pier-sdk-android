@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{sms_envio_response_description}}}
+ * Objeto SMS
  **/
-@ApiModel(description = "{{{sms_envio_response_description}}}")
+@ApiModel(description = "Objeto SMS")
 public class SMSEnvioResponse  {
   
   @SerializedName("id")
@@ -30,9 +30,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_id_value}}}
+   * C\u00F3digo identificador
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo identificador")
   public Long getId() {
     return id;
   }
@@ -42,9 +42,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_status_value}}}
+   * Status do SMS
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_status_value}}}")
+  @ApiModelProperty(value = "Status do SMS")
   public String getStatus() {
     return status;
   }
@@ -54,9 +54,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_id_conta_value}}}
+   * identificador da conta
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_id_conta_value}}}")
+  @ApiModelProperty(value = "identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -66,9 +66,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_celular_value}}}
+   * N\u00FAmero do celular
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_celular_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do celular")
   public String getCelular() {
     return celular;
   }
@@ -78,9 +78,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_conteudo_value}}}
+   * Conte\u00FAdo da mensagem
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_conteudo_value}}}")
+  @ApiModelProperty(value = "Conte\u00FAdo da mensagem")
   public String getConteudo() {
     return conteudo;
   }
@@ -90,9 +90,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_quantidade_tentativas_envio_value}}}
+   * N\u00FAmero de tentativas de envio
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_quantidade_tentativas_envio_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero de tentativas de envio")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
   }
@@ -102,9 +102,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{s_m_s_envio_response_data_inclusao_value}}}
+   * Data de Inclus\u00E3o
    **/
-  @ApiModelProperty(value = "{{{s_m_s_envio_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Data de Inclus\u00E3o")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -114,9 +114,9 @@ public class SMSEnvioResponse  {
 
   
   /**
-   * {{{sms_envio_response_cpf_value}}}
+   * CPF do cliente referente ao SMS enviado
    **/
-  @ApiModelProperty(value = "{{{sms_envio_response_cpf_value}}}")
+  @ApiModelProperty(value = "CPF do cliente referente ao SMS enviado")
   public String getCpf() {
     return cpf;
   }

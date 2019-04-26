@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_faturamento_response_description}}}
+ * Objeto Faturamento
  **/
-@ApiModel(description = "{{{tipo_faturamento_response_description}}}")
+@ApiModel(description = "Objeto Faturamento")
 public class TipoFaturamentoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * {{{tipo_faturamento_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id)
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id)")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * {{{tipo_faturamento_response_descricao_value}}}
+   * Desci\u00E7\u00E3o do tipo de faturamento
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_response_descricao_value}}}")
+  @ApiModelProperty(value = "Desci\u00E7\u00E3o do tipo de faturamento")
   public String getDescricao() {
     return descricao;
   }
@@ -46,9 +46,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
+   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}")
+  @ApiModelProperty(value = "Flag que representa que o faturamento ser\u00E1 apenas demonstrativo")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
   }
@@ -58,9 +58,9 @@ public class TipoFaturamentoResponse  {
 
   
   /**
-   * {{{tipo_faturamento_response_id_convenio_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento
    **/
-  @ApiModelProperty(value = "{{{tipo_faturamento_response_id_convenio_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento")
   public Long getIdConvenio() {
     return idConvenio;
   }

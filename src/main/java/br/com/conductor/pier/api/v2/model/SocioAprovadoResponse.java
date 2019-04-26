@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{socio_aprovado_response_description}}}
+ * PessoaPersist
  **/
-@ApiModel(description = "{{{socio_aprovado_response_description}}}")
+@ApiModel(description = "PessoaPersist")
 public class SocioAprovadoResponse  {
   
   @SerializedName("id")
@@ -44,9 +44,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)")
   public Long getId() {
     return id;
   }
@@ -56,9 +56,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_nome_value}}}
+   * Apresenta o Nome do Socio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_nome_value}}}")
+  @ApiModelProperty(value = "Apresenta o Nome do Socio")
   public String getNome() {
     return nome;
   }
@@ -68,9 +68,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_cpf_value}}}
+   * CPF
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_cpf_value}}}")
+  @ApiModelProperty(value = "CPF")
   public String getCpf() {
     return cpf;
   }
@@ -80,9 +80,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_data_nascimento_value}}}
+   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_data_nascimento_value}}}")
+  @ApiModelProperty(value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -92,9 +92,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_sexo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: ('M': Masculino), ('F': F\u00EAmea), ('O': Outros), ('N': N\u00E3o Especificado)
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_sexo_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: ('M': Masculino), ('F': F\u00EAmea), ('O': Outros), ('N': N\u00E3o Especificado)")
   public String getSexo() {
     return sexo;
   }
@@ -104,9 +104,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_numero_identidade_value}}}
+   * N\u00FAmero da Identidade
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_numero_identidade_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero da Identidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -116,9 +116,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
+   * Org\u00E3o expedidor do RG
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(value = "Org\u00E3o expedidor do RG")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -128,9 +128,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -140,9 +140,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_data_emissao_identidade_value}}}
+   * Data emiss\u00E3o da Identidade
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_data_emissao_identidade_value}}}")
+  @ApiModelProperty(value = "Data emiss\u00E3o da Identidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -152,9 +152,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_estado_civil_value}}}
+   * Estado civil do s\u00F3cio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_estado_civil_value}}}")
+  @ApiModelProperty(value = "Estado civil do s\u00F3cio")
   public String getEstadoCivil() {
     return estadoCivil;
   }
@@ -164,9 +164,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_profissao_value}}}
+   * Profiss\u00E3o do s\u00F3cio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_profissao_value}}}")
+  @ApiModelProperty(value = "Profiss\u00E3o do s\u00F3cio")
   public String getProfissao() {
     return profissao;
   }
@@ -176,9 +176,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_nacionalidade_value}}}
+   * Nacionalidade do s\u00F3cio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_nacionalidade_value}}}")
+  @ApiModelProperty(value = "Nacionalidade do s\u00F3cio")
   public String getNacionalidade() {
     return nacionalidade;
   }
@@ -188,9 +188,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_email_value}}}
+   * Email do s\u00F3cio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_email_value}}}")
+  @ApiModelProperty(value = "Email do s\u00F3cio")
   public String getEmail() {
     return email;
   }
@@ -200,9 +200,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * {{{socio_aprovado_response_telefones_value}}}
+   * Informa os telefones do s\u00F3cio
    **/
-  @ApiModelProperty(value = "{{{socio_aprovado_response_telefones_value}}}")
+  @ApiModelProperty(value = "Informa os telefones do s\u00F3cio")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
   }

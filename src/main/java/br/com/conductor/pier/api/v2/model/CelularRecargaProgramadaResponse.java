@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{celular_recarga_programada_resposta_descricao}}}
+ * Celular recarga programada resposta
  **/
-@ApiModel(description = "{{{celular_recarga_programada_resposta_descricao}}}")
+@ApiModel(description = "Celular recarga programada resposta")
 public class CelularRecargaProgramadaResponse  {
   
   @SerializedName("codigoOperadora")
@@ -43,9 +43,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}
+   * C\u00F3digo da operadora
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}")
+  @ApiModelProperty(value = "C\u00F3digo da operadora")
   public Long getCodigoOperadora() {
     return codigoOperadora;
   }
@@ -55,9 +55,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_codigo_produto_descricao}}}
+   * C\u00F3digo do produto
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_codigo_produto_descricao}}}")
+  @ApiModelProperty(value = "C\u00F3digo do produto")
   public Long getCodigoProduto() {
     return codigoProduto;
   }
@@ -67,9 +67,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}
+   * inaliza\u00E7\u00E3o da tarifa
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}")
+  @ApiModelProperty(value = "inaliza\u00E7\u00E3o da tarifa")
   public Boolean getFlagGeraTarifa() {
     return flagGeraTarifa;
   }
@@ -79,9 +79,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}
+   * dentificador do cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}")
+  @ApiModelProperty(value = "dentificador do cart\u00E3o")
   public Long getId() {
     return id;
   }
@@ -91,9 +91,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_cartao_descricao}}}
+   * dentificador do cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_cartao_descricao}}}")
+  @ApiModelProperty(value = "dentificador do cart\u00E3o")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -103,9 +103,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}
+   * N\u00FAmero do celular
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}")
+  @ApiModelProperty(value = "N\u00FAmero do celular")
   public Long getIdCelularRecarga() {
     return idCelularRecarga;
   }
@@ -115,9 +115,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_conta_descricao}}}
+   * Identificador da conta
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_conta_descricao}}}")
+  @ApiModelProperty(value = "Identificador da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -127,9 +127,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}
+   * Identificador do tipo da recarga programada
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}")
+  @ApiModelProperty(value = "Identificador do tipo da recarga programada")
   public Long getIdDescricaoTipoRecargaProgramada() {
     return idDescricaoTipoRecargaProgramada;
   }
@@ -139,9 +139,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}
+   * Identificador da origem comercial
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}")
+  @ApiModelProperty(value = "Identificador da origem comercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -151,9 +151,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_proposta_descricao}}}
+   * Identificador da proposta
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_proposta_descricao}}}")
+  @ApiModelProperty(value = "Identificador da proposta")
   public Long getIdProposta() {
     return idProposta;
   }
@@ -163,9 +163,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}
+   * Identificador do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}")
+  @ApiModelProperty(value = "Identificador do usu\u00E1rio")
   public Long getIdUsuarioRecarga() {
     return idUsuarioRecarga;
   }
@@ -175,9 +175,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_plataforma_descricao}}}
+   * Identificador da proposta
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_id_plataforma_descricao}}}")
+  @ApiModelProperty(value = "Identificador da proposta")
   public Long getIdiPlataforma() {
     return idiPlataforma;
   }
@@ -187,9 +187,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}
+   * Motivo do cancelamento
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}")
+  @ApiModelProperty(value = "Motivo do cancelamento")
   public Long getMotivoCancelamento() {
     return motivoCancelamento;
   }
@@ -199,9 +199,9 @@ public class CelularRecargaProgramadaResponse  {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_valor_descricao}}}
+   * Valor da recarga
    **/
-  @ApiModelProperty(value = "{{{celular_recarga_programada_resposta_valor_descricao}}}")
+  @ApiModelProperty(value = "Valor da recarga")
   public BigDecimal getValor() {
     return valor;
   }

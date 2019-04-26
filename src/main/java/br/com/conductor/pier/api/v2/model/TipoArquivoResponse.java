@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_arquivo_response_description}}}
+ * Objeto Response do tipo arquivo
  **/
-@ApiModel(description = "{{{tipo_arquivo_response_description}}}")
+@ApiModel(description = "Objeto Response do tipo arquivo")
 public class TipoArquivoResponse  {
   
   @SerializedName("id")
@@ -20,9 +20,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * {{{tipo_arquivo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo
    **/
-  @ApiModelProperty(value = "{{{tipo_arquivo_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo")
   public Long getId() {
     return id;
   }
@@ -32,9 +32,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * {{{tipo_arquivo_response_nome_value}}}
+   * Nome do tipo do arquivo
    **/
-  @ApiModelProperty(value = "{{{tipo_arquivo_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do tipo do arquivo")
   public String getNome() {
     return nome;
   }
@@ -44,9 +44,9 @@ public class TipoArquivoResponse  {
 
   
   /**
-   * {{{tipo_arquivo_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo do arquivo
    **/
-  @ApiModelProperty(value = "{{{tipo_arquivo_response_descricao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo do arquivo")
   public String getDescricao() {
     return descricao;
   }

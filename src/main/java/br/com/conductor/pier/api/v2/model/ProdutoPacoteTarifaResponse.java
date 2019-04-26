@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{produto_pacote_tarifa_response_descricao}}}
+ * Objeto de Resposta  de um  Pacote de Tarifa
  **/
-@ApiModel(description = "{{{produto_pacote_tarifa_response_descricao}}}")
+@ApiModel(description = "Objeto de Resposta  de um  Pacote de Tarifa")
 public class ProdutoPacoteTarifaResponse  {
   
   @SerializedName("flagDefault")
@@ -22,9 +22,9 @@ public class ProdutoPacoteTarifaResponse  {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_flag_default_descricao}}}
+   * Sinaliza se \u00E9 Padr\u00E3o
    **/
-  @ApiModelProperty(value = "{{{produto_pacote_tarifa_response_flag_default_descricao}}}")
+  @ApiModelProperty(value = "Sinaliza se \u00E9 Padr\u00E3o")
   public Boolean getFlagDefault() {
     return flagDefault;
   }
@@ -34,9 +34,9 @@ public class ProdutoPacoteTarifaResponse  {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_descricao}}}
+   * Identificador do Produto de Pacote de  Tarifa
    **/
-  @ApiModelProperty(value = "{{{produto_pacote_tarifa_response_id_descricao}}}")
+  @ApiModelProperty(value = "Identificador do Produto de Pacote de  Tarifa")
   public Long getId() {
     return id;
   }
@@ -46,9 +46,9 @@ public class ProdutoPacoteTarifaResponse  {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}
+   * Identificador do Pacote de Tarfica
    **/
-  @ApiModelProperty(value = "{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}")
+  @ApiModelProperty(value = "Identificador do Pacote de Tarfica")
   public Long getIdPacoteTarifa() {
     return idPacoteTarifa;
   }
@@ -58,9 +58,9 @@ public class ProdutoPacoteTarifaResponse  {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_produto_descricao}}}
+   * Identificador do Produto
    **/
-  @ApiModelProperty(value = "{{{produto_pacote_tarifa_response_id_produto_descricao}}}")
+  @ApiModelProperty(value = "Identificador do Produto")
   public Long getIdProduto() {
     return idProduto;
   }

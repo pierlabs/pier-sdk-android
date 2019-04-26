@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{taxas_refinanciamento_response_description}}}
+ * Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento
  **/
-@ApiModel(description = "{{{taxas_refinanciamento_response_description}}}")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o das Taxas de Refinanciamento")
 public class TaxasRefinanciamentoResponse  {
   
   @SerializedName("id")
@@ -59,9 +59,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_value}}}
+   * ID das taxas
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_value}}}")
+  @ApiModelProperty(value = "ID das taxas")
   public Long getId() {
     return id;
   }
@@ -71,9 +71,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_conta_value}}}
+   * ID da conta
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_conta_value}}}")
+  @ApiModelProperty(value = "ID da conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -83,9 +83,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_produto_value}}}
+   * ID do produto
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_produto_value}}}")
+  @ApiModelProperty(value = "ID do produto")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -95,9 +95,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_conta_value}}}
+   * ID do plano de contas
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_plano_conta_value}}}")
+  @ApiModelProperty(value = "ID do plano de contas")
   public Long getIdPlanoConta() {
     return idPlanoConta;
   }
@@ -107,9 +107,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_pct_value}}}
+   * ID do plano PCT
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_plano_pct_value}}}")
+  @ApiModelProperty(value = "ID do plano PCT")
   public Long getIdPlanoPct() {
     return idPlanoPct;
   }
@@ -119,9 +119,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
+   * ID do plano credito taxa
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}")
+  @ApiModelProperty(value = "ID do plano credito taxa")
   public Long getIdPlanoCreditoTaxa() {
     return idPlanoCreditoTaxa;
   }
@@ -131,9 +131,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_data_entrada_value}}}
+   * Data de entrada
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_data_entrada_value}}}")
+  @ApiModelProperty(value = "Data de entrada")
   public String getDataEntrada() {
     return dataEntrada;
   }
@@ -143,9 +143,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_vencimento_value}}}
+   * Vencimento das taxas
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_vencimento_value}}}")
+  @ApiModelProperty(value = "Vencimento das taxas")
   public String getVencimento() {
     return vencimento;
   }
@@ -155,9 +155,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
+   * Recupera\u00E7\u00E3o de encargos financeiro
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}")
+  @ApiModelProperty(value = "Recupera\u00E7\u00E3o de encargos financeiro")
   public BigDecimal getRecuperacaoEncargosFinanceiros() {
     return recuperacaoEncargosFinanceiros;
   }
@@ -167,9 +167,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_comissao_garantia_value}}}
+   * Descri\u00E7\u00E3o da comiss\u00E3o de garantia
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_comissao_garantia_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da comiss\u00E3o de garantia")
   public BigDecimal getComissaoGarantia() {
     return comissaoGarantia;
   }
@@ -179,9 +179,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_agenciamento_value}}}
+   * Descri\u00E7\u00E3o do agenciamento
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_agenciamento_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do agenciamento")
   public BigDecimal getAgenciamento() {
     return agenciamento;
   }
@@ -191,9 +191,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
+   * Taxa m\u00E1xima do proximo per\u00EDodo
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}")
+  @ApiModelProperty(value = "Taxa m\u00E1xima do proximo per\u00EDodo")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
   }
@@ -203,9 +203,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
+   * Taxa de encargos do financiamento
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}")
+  @ApiModelProperty(value = "Taxa de encargos do financiamento")
   public BigDecimal getTaxaEncargosFinanciamento() {
     return taxaEncargosFinanciamento;
   }
@@ -215,9 +215,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
+   * Taxa m\u00E1xima de saque
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}")
+  @ApiModelProperty(value = "Taxa m\u00E1xima de saque")
   public BigDecimal getTaxaMaximaSaque() {
     return taxaMaximaSaque;
   }
@@ -227,9 +227,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_saque_value}}}
+   * Taxa de saque
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_saque_value}}}")
+  @ApiModelProperty(value = "Taxa de saque")
   public BigDecimal getTaxaSaque() {
     return taxaSaque;
   }
@@ -239,9 +239,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
+   * Taxa m\u00E1xima de compras juros
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}")
+  @ApiModelProperty(value = "Taxa m\u00E1xima de compras juros")
   public BigDecimal getTaxaMaximaCompraJuros() {
     return taxaMaximaCompraJuros;
   }
@@ -251,9 +251,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
+   * Taxa de juros compra
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_compra_juros_value}}}")
+  @ApiModelProperty(value = "Taxa de juros compra")
   public BigDecimal getTaxaCompraJuros() {
     return taxaCompraJuros;
   }
@@ -263,9 +263,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
+   * Taxa de permanencia
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_permanencia_value}}}")
+  @ApiModelProperty(value = "Taxa de permanencia")
   public BigDecimal getTaxaPermanencia() {
     return taxaPermanencia;
   }
@@ -275,9 +275,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
+   * Taxa de permanencia
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}")
+  @ApiModelProperty(value = "Taxa de permanencia")
   public BigDecimal getTaxaRefinanciamento() {
     return taxaRefinanciamento;
   }
@@ -287,9 +287,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
+   * Taxa de permanencia
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}")
+  @ApiModelProperty(value = "Taxa de permanencia")
   public BigDecimal getTaxaRecuperacaoRefinanciamento() {
     return taxaRecuperacaoRefinanciamento;
   }
@@ -299,9 +299,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
+   * Taxa Percelamento pagamento minimo
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}")
+  @ApiModelProperty(value = "Taxa Percelamento pagamento minimo")
   public BigDecimal getTaxaPercCalcPagamentoMinimo() {
     return taxaPercCalcPagamentoMinimo;
   }
@@ -311,9 +311,9 @@ public class TaxasRefinanciamentoResponse  {
 
   
   /**
-   * {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
+   * Plano de taxa padr\u00E3o
    **/
-  @ApiModelProperty(value = "{{{taxas_refinanciamento_response_plano_taxa_default_value}}}")
+  @ApiModelProperty(value = "Plano de taxa padr\u00E3o")
   public Integer getPlanoTaxaDefault() {
     return planoTaxaDefault;
   }

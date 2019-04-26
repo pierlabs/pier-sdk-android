@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_tipo_origem_comercial_response_description}}}
+ * Listar tipos de origens comerciais
  **/
-@ApiModel(description = "{{{page_tipo_origem_comercial_response_description}}}")
+@ApiModel(description = "Listar tipos de origens comerciais")
 public class PageTipoOrigemComercialResponse  {
   
   @SerializedName("content")

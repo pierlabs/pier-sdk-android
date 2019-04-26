@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{transacao_corrente_response_description}}}
+ * Representa\u00E7\u00E3o do recurso transacao
  **/
-@ApiModel(description = "{{{transacao_corrente_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso transacao")
 public class TransacaoCorrenteResponse  {
   
   @SerializedName("ultimaParcelaLancada")
@@ -50,6 +50,8 @@ public class TransacaoCorrenteResponse  {
   private Integer flagSolicitouContestacao = null;
   @SerializedName("tipoTransacao")
   private Integer tipoTransacao = null;
+  @SerializedName("idEventoAjuste")
+  private Integer idEventoAjuste = null;
 
   
   /**
@@ -64,9 +66,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   public Long getIdConta() {
     return idConta;
   }
@@ -76,9 +78,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_tipo_registro_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_tipo_registro_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id)")
   public Long getIdTipoRegistro() {
     return idTipoRegistro;
   }
@@ -88,9 +90,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_ordem_value}}}
+   * Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_ordem_value}}}")
+  @ApiModelProperty(value = "Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id)")
   public Integer getOrdem() {
     return ordem;
   }
@@ -100,9 +102,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_transacao_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da transacao (id)
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_transacao_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da transacao (id)")
   public Long getIdTransacao() {
     return idTransacao;
   }
@@ -112,9 +114,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_descricao_value}}}
+   * Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_descricao_value}}}")
+  @ApiModelProperty(value = "Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o")
   public String getDescricao() {
     return descricao;
   }
@@ -124,9 +126,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_status_value}}}
+   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_status_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o")
   public Integer getStatus() {
     return status;
   }
@@ -136,9 +138,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_descricao_status_value}}}
+   * Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_descricao_status_value}}}")
+  @ApiModelProperty(value = "Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o")
   public String getDescricaoStatus() {
     return descricaoStatus;
   }
@@ -148,9 +150,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_value}}}
+   * Atributo que representa o valor da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o valor da transa\u00E7\u00E3o")
   public BigDecimal getValor() {
     return valor;
   }
@@ -160,9 +162,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_dolar_value}}}
+   * Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_dolar_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o")
   public BigDecimal getValorDolar() {
     return valorDolar;
   }
@@ -172,9 +174,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_quantidade_parcelas_value}}}
+   * Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_quantidade_parcelas_value}}}")
+  @ApiModelProperty(value = "Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
   }
@@ -184,9 +186,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_valor_parcela_value}}}
+   * Atributo que representa o valor da parcela da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_valor_parcela_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o valor da parcela da transa\u00E7\u00E3o")
   public BigDecimal getValorParcela() {
     return valorParcela;
   }
@@ -196,9 +198,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_data_evento_value}}}
+   * Atributo que representa a data de envio da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_data_evento_value}}}")
+  @ApiModelProperty(value = "Atributo que representa a data de envio da transa\u00E7\u00E3o")
   public String getDataEvento() {
     return dataEvento;
   }
@@ -208,9 +210,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_estabelecimento_value}}}
+   * Atributo que representa o estabelecimento da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o estabelecimento da transa\u00E7\u00E3o")
   public String getEstabelecimento() {
     return estabelecimento;
   }
@@ -220,9 +222,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_flag_credito_value}}}
+   * Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_flag_credito_value}}}")
+  @ApiModelProperty(value = "Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito")
   public Integer getFlagCredito() {
     return flagCredito;
   }
@@ -232,9 +234,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_tipo_estabelecimento_value}}}
+   * Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_tipo_estabelecimento_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o")
   public String getTipoEstabelecimento() {
     return tipoEstabelecimento;
   }
@@ -244,9 +246,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
+   * Atributo que representa o grupo MCC da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_id_grupo_m_c_c_value}}}")
+  @ApiModelProperty(value = "Atributo que representa o grupo MCC da transa\u00E7\u00E3o")
   public Integer getIdGrupoMCC() {
     return idGrupoMCC;
   }
@@ -256,9 +258,9 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
+   * Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}")
+  @ApiModelProperty(value = "Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o")
   public Integer getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
   }
@@ -268,14 +270,26 @@ public class TransacaoCorrenteResponse  {
 
   
   /**
-   * {{{transacao_corrente_response_tipo_transacao_value}}}
+   * Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito
    **/
-  @ApiModelProperty(value = "{{{transacao_corrente_response_tipo_transacao_value}}}")
+  @ApiModelProperty(value = "Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito")
   public Integer getTipoTransacao() {
     return tipoTransacao;
   }
   public void setTipoTransacao(Integer tipoTransacao) {
     this.tipoTransacao = tipoTransacao;
+  }
+
+  
+  /**
+   * Atributo que representa o evento de ajuste
+   **/
+  @ApiModelProperty(value = "Atributo que representa o evento de ajuste")
+  public Integer getIdEventoAjuste() {
+    return idEventoAjuste;
+  }
+  public void setIdEventoAjuste(Integer idEventoAjuste) {
+    this.idEventoAjuste = idEventoAjuste;
   }
 
   
@@ -304,6 +318,7 @@ public class TransacaoCorrenteResponse  {
     sb.append("  idGrupoMCC: ").append(idGrupoMCC).append("\n");
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
     sb.append("  tipoTransacao: ").append(tipoTransacao).append("\n");
+    sb.append("  idEventoAjuste: ").append(idEventoAjuste).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

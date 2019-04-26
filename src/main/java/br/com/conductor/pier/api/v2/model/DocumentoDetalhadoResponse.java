@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{documento_detalhado_response_description}}}
+ * Representa\u00E7\u00E3o da resposta para o recurso de Documento
  **/
-@ApiModel(description = "{{{documento_detalhado_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o recurso de Documento")
 public class DocumentoDetalhadoResponse  {
   
   @SerializedName("id")
@@ -28,9 +28,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_id_value}}}
+   * ID do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_id_value}}}")
+  @ApiModelProperty(value = "ID do Documento")
   public Long getId() {
     return id;
   }
@@ -40,9 +40,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_id_template_documento_value}}}
+   * ID do Template de Documento associado
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_id_template_documento_value}}}")
+  @ApiModelProperty(value = "ID do Template de Documento associado")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
   }
@@ -52,9 +52,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_nome_value}}}
+   * Nome do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do Documento")
   public String getNome() {
     return nome;
   }
@@ -64,9 +64,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_documento_value}}}
+   * Representa\u00E7\u00E3o do documento em Base64
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_documento_value}}}")
+  @ApiModelProperty(value = "Representa\u00E7\u00E3o do documento em Base64")
   public String getDocumento() {
     return documento;
   }
@@ -76,9 +76,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_extensao_value}}}
+   * Extens\u00E3o do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_extensao_value}}}")
+  @ApiModelProperty(value = "Extens\u00E3o do Documento")
   public String getExtensao() {
     return extensao;
   }
@@ -88,9 +88,9 @@ public class DocumentoDetalhadoResponse  {
 
   
   /**
-   * {{{documento_detalhado_response_documento_detalhes_value}}}
+   * Detalhamento do documento
    **/
-  @ApiModelProperty(value = "{{{documento_detalhado_response_documento_detalhes_value}}}")
+  @ApiModelProperty(value = "Detalhamento do documento")
   public List<DocumentoDetalheResponse> getDocumentoDetalhes() {
     return documentoDetalhes;
   }

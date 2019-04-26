@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{documento_template_persist_description}}}
+ * Representa\u00E7\u00E3o do template do documento
  **/
-@ApiModel(description = "{{{documento_template_persist_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do template do documento")
 public class DocumentoTemplatePersist  {
   
   @SerializedName("idTipoTemplate")
@@ -22,9 +22,9 @@ public class DocumentoTemplatePersist  {
 
   
   /**
-   * {{{documento_template_persist_id_tipo_template_value}}}
+   * ID para o Tipo de Template vinculado ao template
    **/
-  @ApiModelProperty(value = "{{{documento_template_persist_id_tipo_template_value}}}")
+  @ApiModelProperty(value = "ID para o Tipo de Template vinculado ao template")
   public Long getIdTipoTemplate() {
     return idTipoTemplate;
   }
@@ -34,9 +34,9 @@ public class DocumentoTemplatePersist  {
 
   
   /**
-   * {{{documento_template_persist_template_value}}}
+   * Template para o conte\u00FAdo do documento
    **/
-  @ApiModelProperty(value = "{{{documento_template_persist_template_value}}}")
+  @ApiModelProperty(value = "Template para o conte\u00FAdo do documento")
   public String getTemplate() {
     return template;
   }
@@ -46,9 +46,9 @@ public class DocumentoTemplatePersist  {
 
   
   /**
-   * {{{documento_template_persist_integracoes_value}}}
+   * Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{documento_template_persist_integracoes_value}}}")
+  @ApiModelProperty(value = "Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o")
   public List<ReferenciaIdPersist> getIntegracoes() {
     return integracoes;
   }

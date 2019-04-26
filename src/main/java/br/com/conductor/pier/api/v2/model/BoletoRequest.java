@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{boleto_request_description}}}
+ * Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto
  **/
-@ApiModel(description = "{{{boleto_request_description}}}")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto")
 public class BoletoRequest  {
   
   @SerializedName("idConta")
@@ -22,12 +22,14 @@ public class BoletoRequest  {
   private String dataVencimento = null;
   @SerializedName("idConvenio")
   private Long idConvenio = null;
+  @SerializedName("idPessoafontePagadora")
+  private Long idPessoafontePagadora = null;
 
   
   /**
-   * {{{boleto_request_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)
    **/
-  @ApiModelProperty(required = true, value = "{{{boleto_request_id_conta_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)")
   public Long getIdConta() {
     return idConta;
   }
@@ -37,9 +39,9 @@ public class BoletoRequest  {
 
   
   /**
-   * {{{boleto_request_tipo_boleto_value}}}
+   * Tipo de Boleto a ser gerado
    **/
-  @ApiModelProperty(required = true, value = "{{{boleto_request_tipo_boleto_value}}}")
+  @ApiModelProperty(required = true, value = "Tipo de Boleto a ser gerado")
   public Long getTipoBoleto() {
     return tipoBoleto;
   }
@@ -49,9 +51,9 @@ public class BoletoRequest  {
 
   
   /**
-   * {{{boleto_request_valor_value}}}
+   * Valor da cobran\u00E7a gerada
    **/
-  @ApiModelProperty(required = true, value = "{{{boleto_request_valor_value}}}")
+  @ApiModelProperty(required = true, value = "Valor da cobran\u00E7a gerada")
   public BigDecimal getValor() {
     return valor;
   }
@@ -61,9 +63,9 @@ public class BoletoRequest  {
 
   
   /**
-   * {{{boleto_request_data_vencimento_value}}}
+   * Data de vencimento da cobran\u00E7a
    **/
-  @ApiModelProperty(required = true, value = "{{{boleto_request_data_vencimento_value}}}")
+  @ApiModelProperty(required = true, value = "Data de vencimento da cobran\u00E7a")
   public String getDataVencimento() {
     return dataVencimento;
   }
@@ -73,14 +75,26 @@ public class BoletoRequest  {
 
   
   /**
-   * {{{boleto_request_id_convenio_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado
    **/
-  @ApiModelProperty(value = "{{{boleto_request_id_convenio_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado")
   public Long getIdConvenio() {
     return idConvenio;
   }
   public void setIdConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
+  }
+
+  
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto")
+  public Long getIdPessoafontePagadora() {
+    return idPessoafontePagadora;
+  }
+  public void setIdPessoafontePagadora(Long idPessoafontePagadora) {
+    this.idPessoafontePagadora = idPessoafontePagadora;
   }
 
   
@@ -95,6 +109,7 @@ public class BoletoRequest  {
     sb.append("  valor: ").append(valor).append("\n");
     sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
     sb.append("  idConvenio: ").append(idConvenio).append("\n");
+    sb.append("  idPessoafontePagadora: ").append(idPessoafontePagadora).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{telefone_estabelecimento_response_description}}}
+ * Objeto de Resposta de Telefone Estabelecimento
  **/
-@ApiModel(description = "{{{telefone_estabelecimento_response_description}}}")
+@ApiModel(description = "Objeto de Resposta de Telefone Estabelecimento")
 public class TelefoneEstabelecimentoResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * {{{telefone_estabelecimento_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -48,9 +48,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * {{{telefone_estabelecimento_response_ddd_value}}}
+   * C\u00F3digo DDD do telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_ddd_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo DDD do telefone")
   public String getDdd() {
     return ddd;
   }
@@ -60,9 +60,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * {{{telefone_estabelecimento_response_telefone_value}}}
+   * N\u00FAmero do telefone
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_telefone_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do telefone")
   public String getTelefone() {
     return telefone;
   }
@@ -72,9 +72,9 @@ public class TelefoneEstabelecimentoResponse  {
 
   
   /**
-   * {{{telefone_estabelecimento_response_ramal_value}}}
+   * N\u00FAmero do ramal
    **/
-  @ApiModelProperty(value = "{{{telefone_estabelecimento_response_ramal_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do ramal")
   public String getRamal() {
     return ramal;
   }

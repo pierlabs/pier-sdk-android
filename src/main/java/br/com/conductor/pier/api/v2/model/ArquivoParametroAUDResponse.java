@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_parametro_a_u_d_response_description}}}
+ * Objeto Response da auditoria dos par\u00E2metros do arquivo
  **/
-@ApiModel(description = "{{{arquivo_parametro_a_u_d_response_description}}}")
+@ApiModel(description = "Objeto Response da auditoria dos par\u00E2metros do arquivo")
 public class ArquivoParametroAUDResponse  {
   
   @SerializedName("rev")
@@ -28,9 +28,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_rev_value}}}
+   * Identificador da auditoria arquivo
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_rev_value}}}")
+  @ApiModelProperty(value = "Identificador da auditoria arquivo")
   public Long getRev() {
     return rev;
   }
@@ -40,9 +40,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_rev_type_value}}}")
+  @ApiModelProperty(value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)")
   public Integer getRevType() {
     return revType;
   }
@@ -52,9 +52,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_id_value}}}
+   * Identificador do par\u00E2metro
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_id_value}}}")
+  @ApiModelProperty(value = "Identificador do par\u00E2metro")
   public String getId() {
     return id;
   }
@@ -64,9 +64,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_parametro_value}}}
+   * Nome do par\u00E2metro
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_parametro_value}}}")
+  @ApiModelProperty(value = "Nome do par\u00E2metro")
   public String getParametro() {
     return parametro;
   }
@@ -76,9 +76,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
+   * Conte\u00FAdo do par\u00E2metro
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_conteudo_value}}}")
+  @ApiModelProperty(value = "Conte\u00FAdo do par\u00E2metro")
   public String getConteudo() {
     return conteudo;
   }
@@ -88,9 +88,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
+   * Data de inclus\u00E3o do par\u00E2metro
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(value = "Data de inclus\u00E3o do par\u00E2metro")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
   }
@@ -100,9 +100,9 @@ public class ArquivoParametroAUDResponse  {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
+   * Data de altera\u00E7\u00E3o do par\u00E2metro
    **/
-  @ApiModelProperty(value = "{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}")
+  @ApiModelProperty(value = "Data de altera\u00E7\u00E3o do par\u00E2metro")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{secure_3d_request_description}}}
+ * Requisi\u00E7\u00E3o Solicita\u00E7\u00E3o Envio de OTP
  **/
-@ApiModel(description = "{{{secure_3d_request_description}}}")
+@ApiModel(description = "Requisi\u00E7\u00E3o Solicita\u00E7\u00E3o Envio de OTP")
 public class Secure3dRequest  {
   
   @SerializedName("idCartao")
@@ -18,9 +18,9 @@ public class Secure3dRequest  {
 
   
   /**
-   * {{{secure_3d_request_id_cartao}}}
+   * Identificador da conta
    **/
-  @ApiModelProperty(value = "{{{secure_3d_request_id_cartao}}}")
+  @ApiModelProperty(value = "Identificador da conta")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -30,9 +30,9 @@ public class Secure3dRequest  {
 
   
   /**
-   * {{{secure_3d_request_otp_3d_secure}}}
+   * OTP que ser\u00E1 enviado para cliente
    **/
-  @ApiModelProperty(value = "{{{secure_3d_request_otp_3d_secure}}}")
+  @ApiModelProperty(value = "OTP que ser\u00E1 enviado para cliente")
   public String getOtp() {
     return otp;
   }

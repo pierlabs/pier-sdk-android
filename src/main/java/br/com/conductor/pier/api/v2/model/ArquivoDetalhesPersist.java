@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{arquivo_detalhes_persist_description}}}
+ * Objeto ArquivoParametros para persist\u00EAncia de dados
  **/
-@ApiModel(description = "{{{arquivo_detalhes_persist_description}}}")
+@ApiModel(description = "Objeto ArquivoParametros para persist\u00EAncia de dados")
 public class ArquivoDetalhesPersist  {
   
   @SerializedName("nomeCampo")
@@ -18,9 +18,9 @@ public class ArquivoDetalhesPersist  {
 
   
   /**
-   * {{{arquivo_detalhes_persist_nome_campo_value}}}
+   * Nome que identifica o detalhe do arquivo
    **/
-  @ApiModelProperty(required = true, value = "{{{arquivo_detalhes_persist_nome_campo_value}}}")
+  @ApiModelProperty(required = true, value = "Nome que identifica o detalhe do arquivo")
   public String getNomeCampo() {
     return nomeCampo;
   }
@@ -30,9 +30,9 @@ public class ArquivoDetalhesPersist  {
 
   
   /**
-   * {{{arquivo_detalhes_persist_conteudo_value}}}
+   * Conte\u00FAdo do nomeCampo
    **/
-  @ApiModelProperty(required = true, value = "{{{arquivo_detalhes_persist_conteudo_value}}}")
+  @ApiModelProperty(required = true, value = "Conte\u00FAdo do nomeCampo")
   public String getConteudo() {
     return conteudo;
   }

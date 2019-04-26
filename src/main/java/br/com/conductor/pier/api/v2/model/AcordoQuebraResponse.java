@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{acordo_quebra_response_description}}}
+ * Resposta da quebra do Acordo
  **/
-@ApiModel(description = "{{{acordo_quebra_response_description}}}")
+@ApiModel(description = "Resposta da quebra do Acordo")
 public class AcordoQuebraResponse  {
   
   @SerializedName("id")
@@ -25,9 +25,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)")
   public Long getId() {
     return id;
   }
@@ -37,9 +37,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_id_conta_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da conta (idConta)
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_id_conta_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta (idConta)")
   public Long getIdConta() {
     return idConta;
   }
@@ -49,9 +49,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_status_conta_value}}}
+   * Status da conta do acordo
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_status_conta_value}}}")
+  @ApiModelProperty(value = "Status da conta do acordo")
   public Long getStatusConta() {
     return statusConta;
   }
@@ -61,9 +61,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_saldo_atual_final_value}}}
+   * Saldo atual final da conta
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_saldo_atual_final_value}}}")
+  @ApiModelProperty(value = "Saldo atual final da conta")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
   }
@@ -73,9 +73,9 @@ public class AcordoQuebraResponse  {
 
   
   /**
-   * {{{acordo_quebra_response_data_quebra_acordo_value}}}
+   * Data de quebra do acordo
    **/
-  @ApiModelProperty(value = "{{{acordo_quebra_response_data_quebra_acordo_value}}}")
+  @ApiModelProperty(value = "Data de quebra do acordo")
   public String getDataQuebraAcordo() {
     return dataQuebraAcordo;
   }

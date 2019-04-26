@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_operacao_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
  **/
-@ApiModel(description = "{{{tipo_operacao_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso TipoOperacao")
 public class TipoOperacaoResponse  {
   
   @SerializedName("id")
@@ -44,12 +44,30 @@ public class TipoOperacaoResponse  {
   private Integer planoMaximo = null;
   @SerializedName("planoMinimo")
   private Integer planoMinimo = null;
+  @SerializedName("idEmissor")
+  private Integer idEmissor = null;
+  @SerializedName("idTabela")
+  private Integer idTabela = null;
+  @SerializedName("valorParcela")
+  private Integer valorParcela = null;
+  @SerializedName("flagCobraProRata")
+  private Integer flagCobraProRata = null;
+  @SerializedName("flagCobraJuros")
+  private Integer flagCobraJuros = null;
+  @SerializedName("flagPosProximoVencimento")
+  private Integer flagPosProximoVencimento = null;
+  @SerializedName("percentualTAC")
+  private Integer percentualTAC = null;
+  @SerializedName("idTabelaJuros")
+  private Integer idTabelaJuros = null;
+  @SerializedName("codigoProcessamento")
+  private String codigoProcessamento = null;
 
   
   /**
-   * {{{tipo_operacao_response_id_value}}}
+   * C\u00F3digo identificador do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo identificador do TipoOperacao")
   public Long getId() {
     return id;
   }
@@ -59,9 +77,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_tipo_operacao_value}}}
+   * C\u00F3digo do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_tipo_operacao_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo do TipoOperacao")
   public String getTipoOperacao() {
     return tipoOperacao;
   }
@@ -71,9 +89,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_nome_value}}}
+   * Nome do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_nome_value}}}")
+  @ApiModelProperty(required = true, value = "Nome do TipoOperacao")
   public String getNome() {
     return nome;
   }
@@ -83,9 +101,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_descricao_value}}}
+   * Decri\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_descricao_value}}}")
+  @ApiModelProperty(required = true, value = "Decri\u00E7\u00E3o do TipoOperacao")
   public String getDescricao() {
     return descricao;
   }
@@ -95,9 +113,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_excedente_permitido_value}}}
+   * Excedente permitido para o TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_excedente_permitido_value}}}")
+  @ApiModelProperty(value = "Excedente permitido para o TipoOperacao")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
   }
@@ -107,9 +125,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
+   * Tipo do Excedente permitido para o TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_tipo_excedente_permitido_value}}}")
+  @ApiModelProperty(value = "Tipo do Excedente permitido para o TipoOperacao")
   public String getTipoExcedentePermitido() {
     return tipoExcedentePermitido;
   }
@@ -119,9 +137,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_valor_minimo_value}}}
+   * Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_valor_minimo_value}}}")
+  @ApiModelProperty(required = true, value = "Valor minimo para a transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
   }
@@ -131,9 +149,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_valor_maximo_value}}}
+   * Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_valor_maximo_value}}}")
+  @ApiModelProperty(required = true, value = "Valor maximo para a transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
   }
@@ -143,9 +161,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_valor_t_a_c_value}}}
+   * Valor TAC da transa\u00E7\u00E3o do TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_valor_t_a_c_value}}}")
+  @ApiModelProperty(value = "Valor TAC da transa\u00E7\u00E3o do TipoOperacao")
   public BigDecimal getValorTAC() {
     return valorTAC;
   }
@@ -155,9 +173,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_flag_tira_tac_value}}}
+   * Flag Tira TAC do TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_flag_tira_tac_value}}}")
+  @ApiModelProperty(value = "Flag Tira TAC do TipoOperacao")
   public Integer getFlagTiraTac() {
     return flagTiraTac;
   }
@@ -167,9 +185,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_id_produto_value}}}
+   * Identificador do Produto do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_produto_value}}}")
+  @ApiModelProperty(required = true, value = "Identificador do Produto do TipoOperacao")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -179,9 +197,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_id_estabelecimento_value}}}
+   * Identificador do Estabelecimento do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(required = true, value = "Identificador do Estabelecimento do TipoOperacao")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
   }
@@ -191,9 +209,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_tarifa_value}}}
+   * Tarifa do TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_tarifa_value}}}")
+  @ApiModelProperty(value = "Tarifa do TipoOperacao")
   public BigDecimal getTarifa() {
     return tarifa;
   }
@@ -203,9 +221,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_remuneracao_emissor_value}}}
+   * Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
    **/
-  @ApiModelProperty(value = "{{{tipo_operacao_response_remuneracao_emissor_value}}}")
+  @ApiModelProperty(value = "Remunera\u00E7\u00E3o do Emissor para o TipoOperacao")
   public BigDecimal getRemuneracaoEmissor() {
     return remuneracaoEmissor;
   }
@@ -215,9 +233,9 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_plano_maximo_value}}}
+   * Plano m\u00E1ximo do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_plano_maximo_value}}}")
+  @ApiModelProperty(required = true, value = "Plano m\u00E1ximo do TipoOperacao")
   public Integer getPlanoMaximo() {
     return planoMaximo;
   }
@@ -227,14 +245,122 @@ public class TipoOperacaoResponse  {
 
   
   /**
-   * {{{tipo_operacao_response_plano_minimo_value}}}
+   * Plano minimo do TipoOperacao
    **/
-  @ApiModelProperty(required = true, value = "{{{tipo_operacao_response_plano_minimo_value}}}")
+  @ApiModelProperty(value = "Plano minimo do TipoOperacao")
   public Integer getPlanoMinimo() {
     return planoMinimo;
   }
   public void setPlanoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador do emissor
+   **/
+  @ApiModelProperty(value = "C\u00F3digo identificador do emissor")
+  public Integer getIdEmissor() {
+    return idEmissor;
+  }
+  public void setIdEmissor(Integer idEmissor) {
+    this.idEmissor = idEmissor;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador da tabela
+   **/
+  @ApiModelProperty(value = "C\u00F3digo identificador da tabela")
+  public Integer getIdTabela() {
+    return idTabela;
+  }
+  public void setIdTabela(Integer idTabela) {
+    this.idTabela = idTabela;
+  }
+
+  
+  /**
+   * Valor da parcela
+   **/
+  @ApiModelProperty(value = "Valor da parcela")
+  public Integer getValorParcela() {
+    return valorParcela;
+  }
+  public void setValorParcela(Integer valorParcela) {
+    this.valorParcela = valorParcela;
+  }
+
+  
+  /**
+   * Flag cobra pr\u00F3-rata
+   **/
+  @ApiModelProperty(value = "Flag cobra pr\u00F3-rata")
+  public Integer getFlagCobraProRata() {
+    return flagCobraProRata;
+  }
+  public void setFlagCobraProRata(Integer flagCobraProRata) {
+    this.flagCobraProRata = flagCobraProRata;
+  }
+
+  
+  /**
+   * Flag cobra juros
+   **/
+  @ApiModelProperty(value = "Flag cobra juros")
+  public Integer getFlagCobraJuros() {
+    return flagCobraJuros;
+  }
+  public void setFlagCobraJuros(Integer flagCobraJuros) {
+    this.flagCobraJuros = flagCobraJuros;
+  }
+
+  
+  /**
+   * Flag p\u00F3s-pr\u00F3ximo vencimento
+   **/
+  @ApiModelProperty(value = "Flag p\u00F3s-pr\u00F3ximo vencimento")
+  public Integer getFlagPosProximoVencimento() {
+    return flagPosProximoVencimento;
+  }
+  public void setFlagPosProximoVencimento(Integer flagPosProximoVencimento) {
+    this.flagPosProximoVencimento = flagPosProximoVencimento;
+  }
+
+  
+  /**
+   * Valor TAC
+   **/
+  @ApiModelProperty(value = "Valor TAC")
+  public Integer getPercentualTAC() {
+    return percentualTAC;
+  }
+  public void setPercentualTAC(Integer percentualTAC) {
+    this.percentualTAC = percentualTAC;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador da tabela de juros
+   **/
+  @ApiModelProperty(value = "C\u00F3digo identificador da tabela de juros")
+  public Integer getIdTabelaJuros() {
+    return idTabelaJuros;
+  }
+  public void setIdTabelaJuros(Integer idTabelaJuros) {
+    this.idTabelaJuros = idTabelaJuros;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador de opera\u00E7\u00E3o
+   **/
+  @ApiModelProperty(value = "C\u00F3digo identificador de opera\u00E7\u00E3o")
+  public String getCodigoProcessamento() {
+    return codigoProcessamento;
+  }
+  public void setCodigoProcessamento(String codigoProcessamento) {
+    this.codigoProcessamento = codigoProcessamento;
   }
 
   
@@ -260,6 +386,15 @@ public class TipoOperacaoResponse  {
     sb.append("  remuneracaoEmissor: ").append(remuneracaoEmissor).append("\n");
     sb.append("  planoMaximo: ").append(planoMaximo).append("\n");
     sb.append("  planoMinimo: ").append(planoMinimo).append("\n");
+    sb.append("  idEmissor: ").append(idEmissor).append("\n");
+    sb.append("  idTabela: ").append(idTabela).append("\n");
+    sb.append("  valorParcela: ").append(valorParcela).append("\n");
+    sb.append("  flagCobraProRata: ").append(flagCobraProRata).append("\n");
+    sb.append("  flagCobraJuros: ").append(flagCobraJuros).append("\n");
+    sb.append("  flagPosProximoVencimento: ").append(flagPosProximoVencimento).append("\n");
+    sb.append("  percentualTAC: ").append(percentualTAC).append("\n");
+    sb.append("  idTabelaJuros: ").append(idTabelaJuros).append("\n");
+    sb.append("  codigoProcessamento: ").append(codigoProcessamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{status_contestacao_response_description}}}
+ * Retorno da lista de status de contestacao
  **/
-@ApiModel(description = "{{{status_contestacao_response_description}}}")
+@ApiModel(description = "Retorno da lista de status de contestacao")
 public class StatusContestacaoResponse  {
   
   @SerializedName("idStatusContestacao")
@@ -18,9 +18,9 @@ public class StatusContestacaoResponse  {
 
   
   /**
-   * {{{status_contestacao_request_idstatuscontestacao_value}}}
+   * Identificador do status contesta\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{status_contestacao_request_idstatuscontestacao_value}}}")
+  @ApiModelProperty(value = "Identificador do status contesta\u00E7\u00E3o")
   public Long getIdStatusContestacao() {
     return idStatusContestacao;
   }
@@ -30,9 +30,9 @@ public class StatusContestacaoResponse  {
 
   
   /**
-   * {{{status_contestacao_response_descricao_value}}}
+   * Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{status_contestacao_response_descricao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o")
   public String getDescricao() {
     return descricao;
   }

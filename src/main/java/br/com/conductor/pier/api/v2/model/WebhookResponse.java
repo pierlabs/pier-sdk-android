@@ -1,0 +1,126 @@
+package br.com.conductor.pier.api.v2.model;
+
+import br.com.conductor.pier.api.v2.model.WebhookHeaderResponse;
+import java.util.*;
+
+import io.swagger.annotations.*;
+import com.google.gson.annotations.SerializedName;
+
+
+/**
+ * Representa\u00E7\u00E3o do recurso WebHook
+ **/
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso WebHook")
+public class WebhookResponse  {
+  
+  @SerializedName("id")
+  private Long id = null;
+  public enum TipoEventoEnum {
+     RISCO_FRAUDE,  CODIGO_SEGURANCA,  OUTROS,  OTP_3D_SECURE,  PAGAMENTO,  TRANSACAO_COMPRA_AUTORIZADO,  TRANSACAO_COMPRA_NAO_AUTORIZADO,  TRANSACAO_SAQUE_AUTORIZADO,  TRANSACAO_SAQUE_NAO_AUTORIZADO,  TRANSACAO_PAGAMENTO_AUTORIZADO,  TRANSACAO_PAGAMENTO_NAO_AUTORIZADO,  TRANSACAO_ADVICE,  TRANSACAO_ERRO,  TRANSACAO_SIMULACAO,  TRANSACAO_SENHA_CHIP,  TRANSACAO_CONSULTA_SALDO,  TRANSACAO_CONSULTA_STATUS_CONTA,  TRANSACAO_DESFAZIMENTO,  TRANSACAO_CANCELAMENTO,  TRANSACAO_RESPOSTA_SONDA,  TRANSACAO_TOKEN, 
+  };
+  @SerializedName("tipoEvento")
+  private TipoEventoEnum tipoEvento = null;
+  public enum MetodoEnum {
+     GET,  POST,  PUT,  PATCH,  DELETE, 
+  };
+  @SerializedName("metodo")
+  private MetodoEnum metodo = null;
+  @SerializedName("url")
+  private String url = null;
+  public enum StatusEnum {
+     INATIVO,  ATIVO, 
+  };
+  @SerializedName("status")
+  private StatusEnum status = null;
+  @SerializedName("headers")
+  private List<WebhookHeaderResponse> headers = null;
+
+  
+  /**
+   * Id do WebHook
+   **/
+  @ApiModelProperty(value = "Id do WebHook")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  
+  /**
+   * TipoEvento a ser chamado pelo WebHook
+   **/
+  @ApiModelProperty(value = "TipoEvento a ser chamado pelo WebHook")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
+  }
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
+  }
+
+  
+  /**
+   * M\u00E9todo que a ser chamado pelo WebHook
+   **/
+  @ApiModelProperty(value = "M\u00E9todo que a ser chamado pelo WebHook")
+  public MetodoEnum getMetodo() {
+    return metodo;
+  }
+  public void setMetodo(MetodoEnum metodo) {
+    this.metodo = metodo;
+  }
+
+  
+  /**
+   * URL que a ser consumida pelo WebHook
+   **/
+  @ApiModelProperty(value = "URL que a ser consumida pelo WebHook")
+  public String getUrl() {
+    return url;
+  }
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  
+  /**
+   * Status do WebHook
+   **/
+  @ApiModelProperty(value = "Status do WebHook")
+  public StatusEnum getStatus() {
+    return status;
+  }
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
+  
+  /**
+   * Headers do Webhook
+   **/
+  @ApiModelProperty(value = "Headers do Webhook")
+  public List<WebhookHeaderResponse> getHeaders() {
+    return headers;
+  }
+  public void setHeaders(List<WebhookHeaderResponse> headers) {
+    this.headers = headers;
+  }
+
+  
+
+  @Override
+  public String toString()  {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class WebhookResponse {\n");
+    
+    sb.append("  id: ").append(id).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
+    sb.append("  metodo: ").append(metodo).append("\n");
+    sb.append("  url: ").append(url).append("\n");
+    sb.append("  status: ").append(status).append("\n");
+    sb.append("  headers: ").append(headers).append("\n");
+    sb.append("}\n");
+    return sb.toString();
+  }
+}

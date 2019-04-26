@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{page_tipo_endereco_response_description}}}
+ * Lista de Tipos Endere\u00E7o
  **/
-@ApiModel(description = "{{{page_tipo_endereco_response_description}}}")
+@ApiModel(description = "Lista de Tipos Endere\u00E7o")
 public class PageTipoEnderecoResponse  {
   
   @SerializedName("content")

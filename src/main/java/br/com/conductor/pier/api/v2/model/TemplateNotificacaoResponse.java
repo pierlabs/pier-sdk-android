@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{template_notificacao_response_description}}}
+ * Objeto de Notifica\u00E7\u00E3o EMAIL
  **/
-@ApiModel(description = "{{{template_notificacao_response_description}}}")
+@ApiModel(description = "Objeto de Notifica\u00E7\u00E3o EMAIL")
 public class TemplateNotificacaoResponse  {
   
   @SerializedName("id")
@@ -38,9 +38,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_id_value}}}
+   * C\u00F3digo Identificador
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo Identificador")
   public Long getId() {
     return id;
   }
@@ -50,9 +50,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_id_configuracao_email_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_id_configuracao_email_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail")
   public Long getIdConfiguracaoEmail() {
     return idConfiguracaoEmail;
   }
@@ -62,9 +62,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_tipo_layout_value}}}
+   * Tipo do layout de e-mail
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_tipo_layout_value}}}")
+  @ApiModelProperty(value = "Tipo do layout de e-mail")
   public TipoLayoutEnum getTipoLayout() {
     return tipoLayout;
   }
@@ -74,9 +74,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_tipo_notificacao_value}}}
+   * Tipo da notifica\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_tipo_notificacao_value}}}")
+  @ApiModelProperty(value = "Tipo da notifica\u00E7\u00E3o")
   public TipoNotificacaoEnum getTipoNotificacao() {
     return tipoNotificacao;
   }
@@ -86,9 +86,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_template_padrao_value}}}
+   * Template padr\u00E3o
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_template_padrao_value}}}")
+  @ApiModelProperty(value = "Template padr\u00E3o")
   public String getTemplatePadrao() {
     return templatePadrao;
   }
@@ -98,9 +98,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_remetente_value}}}
+   * Remetente
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_remetente_value}}}")
+  @ApiModelProperty(value = "Remetente")
   public String getRemetente() {
     return remetente;
   }
@@ -110,9 +110,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_assunto_value}}}
+   * Assunto do e-mail
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_assunto_value}}}")
+  @ApiModelProperty(value = "Assunto do e-mail")
   public String getAssunto() {
     return assunto;
   }
@@ -122,9 +122,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_data_inclusao_value}}}
+   * Data da inclus\u00E3o
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_data_inclusao_value}}}")
+  @ApiModelProperty(value = "Data da inclus\u00E3o")
   public String getDataInclusao() {
     return dataInclusao;
   }
@@ -134,9 +134,9 @@ public class TemplateNotificacaoResponse  {
 
   
   /**
-   * {{{template_notificacao_response_data_alteracao_value}}}
+   * Data altera\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{template_notificacao_response_data_alteracao_value}}}")
+  @ApiModelProperty(value = "Data altera\u00E7\u00E3o")
   public String getDataAlteracao() {
     return dataAlteracao;
   }

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{servico_conta_response_description}}}
+ * Objeto Response do Servi\u00E7o Conta
  **/
-@ApiModel(description = "{{{servico_conta_response_description}}}")
+@ApiModel(description = "Objeto Response do Servi\u00E7o Conta")
 public class ServicoContaResponse  {
   
   @SerializedName("id")
@@ -32,9 +32,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_value}}}
+   * Identificador do Servi\u00E7o Conta
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_value}}}")
+  @ApiModelProperty(value = "Identificador do Servi\u00E7o Conta")
   public Long getId() {
     return id;
   }
@@ -44,9 +44,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_conta_value}}}
+   * Identificador da Conta
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_conta_value}}}")
+  @ApiModelProperty(value = "Identificador da Conta")
   public Long getIdConta() {
     return idConta;
   }
@@ -56,9 +56,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_tipo_servico_value}}}
+   * Identificador do Tipo de Servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_tipo_servico_value}}}")
+  @ApiModelProperty(value = "Identificador do Tipo de Servi\u00E7o")
   public Long getIdTipoServico() {
     return idTipoServico;
   }
@@ -68,9 +68,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_data_ativacao_value}}}
+   * Data ativa\u00E7\u00E3o do servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_data_ativacao_value}}}")
+  @ApiModelProperty(value = "Data ativa\u00E7\u00E3o do servi\u00E7o")
   public String getDataAtivacao() {
     return dataAtivacao;
   }
@@ -80,9 +80,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_usuario_ativou_value}}}
+   * Usu\u00E1rio ativou o servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_usuario_ativou_value}}}")
+  @ApiModelProperty(value = "Usu\u00E1rio ativou o servi\u00E7o")
   public Long getIdUsuarioAtivacao() {
     return idUsuarioAtivacao;
   }
@@ -92,9 +92,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_plataforma_ativou_value}}}
+   * Plataforma que ativou o servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_plataforma_ativou_value}}}")
+  @ApiModelProperty(value = "Plataforma que ativou o servi\u00E7o")
   public Long getIdPlataformaAtivacao() {
     return idPlataformaAtivacao;
   }
@@ -104,9 +104,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_data_cancelou_value}}}
+   * Data de cancelamento do servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_data_cancelou_value}}}")
+  @ApiModelProperty(value = "Data de cancelamento do servi\u00E7o")
   public String getDataCancelamento() {
     return dataCancelamento;
   }
@@ -116,9 +116,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_usuario_cancelou_value}}}
+   * Usu\u00E1rio que cancelou o servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_usuario_cancelou_value}}}")
+  @ApiModelProperty(value = "Usu\u00E1rio que cancelou o servi\u00E7o")
   public Long getIdUsuarioCancelamento() {
     return idUsuarioCancelamento;
   }
@@ -128,9 +128,9 @@ public class ServicoContaResponse  {
 
   
   /**
-   * {{{servico_conta_response_id_plataforma_cancelou_value}}}
+   * Plataforma que cancelou o servi\u00E7o
    **/
-  @ApiModelProperty(value = "{{{servico_conta_response_id_plataforma_cancelou_value}}}")
+  @ApiModelProperty(value = "Plataforma que cancelou o servi\u00E7o")
   public Long getIdPlataformaCancelamento() {
     return idPlataformaCancelamento;
   }

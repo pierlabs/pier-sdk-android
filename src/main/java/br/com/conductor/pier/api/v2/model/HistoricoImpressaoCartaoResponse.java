@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{historico_impressao_cartao_response_description}}}
+ * Hist\u00F3rico Impress\u00E3o Cart\u00E3o
  **/
-@ApiModel(description = "{{{historico_impressao_cartao_response_description}}}")
+@ApiModel(description = "Hist\u00F3rico Impress\u00E3o Cart\u00E3o")
 public class HistoricoImpressaoCartaoResponse  {
   
   @SerializedName("id")
@@ -24,9 +24,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)")
   public Long getId() {
     return id;
   }
@@ -36,9 +36,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_cartao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_cartao_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)")
   public Long getIdCartao() {
     return idCartao;
   }
@@ -48,9 +48,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)")
   public Long getIdStatusImpressaoCartao() {
     return idStatusImpressaoCartao;
   }
@@ -60,9 +60,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * {{{historico_impressao_cartao_response_mensagem_historico_value}}}
+   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado
    **/
-  @ApiModelProperty(value = "{{{historico_impressao_cartao_response_mensagem_historico_value}}}")
+  @ApiModelProperty(value = "Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado")
   public String getMensagemHistorico() {
     return mensagemHistorico;
   }
@@ -72,9 +72,9 @@ public class HistoricoImpressaoCartaoResponse  {
 
   
   /**
-   * {{{historico_impressao_cartao_response_data_historico_value}}}
+   * Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido
    **/
-  @ApiModelProperty(value = "{{{historico_impressao_cartao_response_data_historico_value}}}")
+  @ApiModelProperty(value = "Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido")
   public String getDataHistorico() {
     return dataHistorico;
   }

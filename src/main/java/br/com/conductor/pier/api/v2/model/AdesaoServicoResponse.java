@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adesao_servico_resposta_descricao}}}
+ * Objeto de resposta para ades\u00E3o servi\u00E7os
  **/
-@ApiModel(description = "{{{adesao_servico_resposta_descricao}}}")
+@ApiModel(description = "Objeto de resposta para ades\u00E3o servi\u00E7os")
 public class AdesaoServicoResponse  {
   
   @SerializedName("canal")
@@ -17,6 +17,10 @@ public class AdesaoServicoResponse  {
   private Boolean cobrancaLimiteCredito = null;
   @SerializedName("estabelecimento")
   private Integer estabelecimento = null;
+  @SerializedName("flagAdesaoCompraProgramada")
+  private Boolean flagAdesaoCompraProgramada = null;
+  @SerializedName("flagAdesaoInvestimento")
+  private Boolean flagAdesaoInvestimento = null;
   @SerializedName("flagCobrancaLimiteCredito")
   private Boolean flagCobrancaLimiteCredito = null;
   @SerializedName("flagOfertasPromocoes")
@@ -41,9 +45,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_canal_descricao}}}
+   * Canal de entrada
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_canal_descricao}}}")
+  @ApiModelProperty(value = "Canal de entrada")
   public String getCanal() {
     return canal;
   }
@@ -53,9 +57,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}
+   * Cobranca do Limite de cr\u00E9dito
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Cobranca do Limite de cr\u00E9dito")
   public Boolean getCobrancaLimiteCredito() {
     return cobrancaLimiteCredito;
   }
@@ -65,9 +69,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_estabelecimento_descricao}}}
+   * Estabelecimento
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_estabelecimento_descricao}}}")
+  @ApiModelProperty(value = "Estabelecimento")
   public Integer getEstabelecimento() {
     return estabelecimento;
   }
@@ -77,9 +81,33 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}
+   * Permite ades\u00E3o da compra programada
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}")
+  @ApiModelProperty(value = "Permite ades\u00E3o da compra programada")
+  public Boolean getFlagAdesaoCompraProgramada() {
+    return flagAdesaoCompraProgramada;
+  }
+  public void setFlagAdesaoCompraProgramada(Boolean flagAdesaoCompraProgramada) {
+    this.flagAdesaoCompraProgramada = flagAdesaoCompraProgramada;
+  }
+
+  
+  /**
+   * Permite adesao do investimentos
+   **/
+  @ApiModelProperty(value = "Permite adesao do investimentos")
+  public Boolean getFlagAdesaoInvestimento() {
+    return flagAdesaoInvestimento;
+  }
+  public void setFlagAdesaoInvestimento(Boolean flagAdesaoInvestimento) {
+    this.flagAdesaoInvestimento = flagAdesaoInvestimento;
+  }
+
+  
+  /**
+   * Oferecer cobran\u00E7a no limite de cr\u00E9dito
+   **/
+  @ApiModelProperty(value = "Oferecer cobran\u00E7a no limite de cr\u00E9dito")
   public Boolean getFlagCobrancaLimiteCredito() {
     return flagCobrancaLimiteCredito;
   }
@@ -89,9 +117,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}
+   * Oferecer promo\u00E7\u00F5es disponiveis
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Oferecer promo\u00E7\u00F5es disponiveis")
   public Boolean getFlagOfertasPromocoes() {
     return flagOfertasPromocoes;
   }
@@ -101,9 +129,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertas_promocoes_descricao}}}
+   * Ofertar promo\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertas_promocoes_descricao}}}")
+  @ApiModelProperty(value = "Ofertar promo\u00E7\u00F5es")
   public Boolean getFlagPromocoes() {
     return flagPromocoes;
   }
@@ -113,9 +141,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}
+   * Oferecer tipo de envio da fatura
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "Oferecer tipo de envio da fatura")
   public Boolean getFlagTipoEnvioFatura() {
     return flagTipoEnvioFatura;
   }
@@ -125,9 +153,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}
+   * Oferecer tipo do sms
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Oferecer tipo do sms")
   public Boolean getFlagTipoSms() {
     return flagTipoSms;
   }
@@ -137,9 +165,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_id_descricao}}}
+   * Identificador da conta
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Identificador da conta")
   public Long getId() {
     return id;
   }
@@ -149,9 +177,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_responsavel_descricao}}}
+   * Respons\u00E1vel
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_responsavel_descricao}}}")
+  @ApiModelProperty(value = "Respons\u00E1vel")
   public String getResponsavel() {
     return responsavel;
   }
@@ -161,9 +189,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}
+   * Tipo do envio da fatura
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}")
+  @ApiModelProperty(value = "Tipo do envio da fatura")
   public Integer getTipoEnvioFatura() {
     return tipoEnvioFatura;
   }
@@ -173,9 +201,9 @@ public class AdesaoServicoResponse  {
 
   
   /**
-   * {{{adesao_servico_resposta_tipo_sms_descricao}}}
+   * Tipo do sms
    **/
-  @ApiModelProperty(value = "{{{adesao_servico_resposta_tipo_sms_descricao}}}")
+  @ApiModelProperty(value = "Tipo do sms")
   public TipoSmsEnum getTipoSms() {
     return tipoSms;
   }
@@ -193,6 +221,8 @@ public class AdesaoServicoResponse  {
     sb.append("  canal: ").append(canal).append("\n");
     sb.append("  cobrancaLimiteCredito: ").append(cobrancaLimiteCredito).append("\n");
     sb.append("  estabelecimento: ").append(estabelecimento).append("\n");
+    sb.append("  flagAdesaoCompraProgramada: ").append(flagAdesaoCompraProgramada).append("\n");
+    sb.append("  flagAdesaoInvestimento: ").append(flagAdesaoInvestimento).append("\n");
     sb.append("  flagCobrancaLimiteCredito: ").append(flagCobrancaLimiteCredito).append("\n");
     sb.append("  flagOfertasPromocoes: ").append(flagOfertasPromocoes).append("\n");
     sb.append("  flagPromocoes: ").append(flagPromocoes).append("\n");

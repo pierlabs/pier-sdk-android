@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{inscricao_apn_resposta_descricao}}}
+ * Representa a resposta de uma inscricao APN
  **/
-@ApiModel(description = "{{{inscricao_apn_resposta_descricao}}}")
+@ApiModel(description = "Representa a resposta de uma inscricao APN")
 public class InscricaoAPNResponse  {
   
   @SerializedName("aplicacaoMobile")
@@ -30,9 +30,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
+   * Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}")
+  @ApiModelProperty(value = "Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o")
   public AplicacaoMobileEmissorResponse getAplicacaoMobile() {
     return aplicacaoMobile;
   }
@@ -42,9 +42,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_ativo_descricao}}}
+   * Indica se a inscri\u00E7\u00E3o est\u00E1 ativa
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_ativo_descricao}}}")
+  @ApiModelProperty(value = "Indica se a inscri\u00E7\u00E3o est\u00E1 ativa")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -54,9 +54,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_cartao_descricao}}}
+   * Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_cartao_descricao}}}")
+  @ApiModelProperty(value = "Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o")
   public CartaoEmissorResponse getCartao() {
     return cartao;
   }
@@ -66,9 +66,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_data_criacao_descricao}}}
+   * Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_data_criacao_descricao}}}")
+  @ApiModelProperty(value = "Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o")
   public String getDataCriacao() {
     return dataCriacao;
   }
@@ -78,9 +78,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_data_desativacao_descricao}}}
+   * Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_data_desativacao_descricao}}}")
+  @ApiModelProperty(value = "Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o")
   public String getDataDesativacao() {
     return dataDesativacao;
   }
@@ -90,9 +90,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_device_token_descricao}}}
+   * Token do dispositivo
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_device_token_descricao}}}")
+  @ApiModelProperty(value = "Token do dispositivo")
   public String getDeviceToken() {
     return deviceToken;
   }
@@ -102,9 +102,9 @@ public class InscricaoAPNResponse  {
 
   
   /**
-   * {{{inscricao_apn_resposta_id_descricao}}}
+   * Id da inscri\u00E7\u00E3o
    **/
-  @ApiModelProperty(value = "{{{inscricao_apn_resposta_id_descricao}}}")
+  @ApiModelProperty(value = "Id da inscri\u00E7\u00E3o")
   public Long getId() {
     return id;
   }

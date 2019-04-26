@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{maquineta_update_description}}}
+ * Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta
  **/
-@ApiModel(description = "{{{maquineta_update_description}}}")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o para alterar Maquineta")
 public class MaquinetaUpdate  {
   
   @SerializedName("idTerminal")
@@ -23,9 +23,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_id_terminal_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_terminal_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)")
   public Long getIdTerminal() {
     return idTerminal;
   }
@@ -35,9 +35,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_id_tipo_maquineta_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id)
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_id_tipo_maquineta_value}}}")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta (id)")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
   }
@@ -47,9 +47,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_valor_value}}}
+   * Valor de Manuten\u00E7\u00E3o da Maquineta
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_valor_value}}}")
+  @ApiModelProperty(required = true, value = "Valor de Manuten\u00E7\u00E3o da Maquineta")
   public BigDecimal getValor() {
     return valor;
   }
@@ -59,9 +59,9 @@ public class MaquinetaUpdate  {
 
   
   /**
-   * {{{maquineta_update_data_hora_implantacao_value}}}
+   * Data da implanta\u00E7\u00E3o da Maquineta
    **/
-  @ApiModelProperty(required = true, value = "{{{maquineta_update_data_hora_implantacao_value}}}")
+  @ApiModelProperty(required = true, value = "Data da implanta\u00E7\u00E3o da Maquineta")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
   }

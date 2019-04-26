@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{tipo_template_request_description}}}
+ * Representa\u00E7\u00E3o do tipo de template
  **/
-@ApiModel(description = "{{{tipo_template_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do tipo de template")
 public class TipoTemplateRequest  {
   
   @SerializedName("nome")
@@ -20,9 +20,9 @@ public class TipoTemplateRequest  {
 
   
   /**
-   * {{{tipo_template_request_nome_value}}}
+   * Nome do tipo de template
    **/
-  @ApiModelProperty(value = "{{{tipo_template_request_nome_value}}}")
+  @ApiModelProperty(value = "Nome do tipo de template")
   public String getNome() {
     return nome;
   }
@@ -32,9 +32,9 @@ public class TipoTemplateRequest  {
 
   
   /**
-   * {{{tipo_template_request_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de template
    **/
-  @ApiModelProperty(value = "{{{tipo_template_request_descricao_value}}}")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do tipo de template")
   public String getDescricao() {
     return descricao;
   }
@@ -44,9 +44,9 @@ public class TipoTemplateRequest  {
 
   
   /**
-   * {{{tipo_template_request_sigla_value}}}
+   * Sigla do tipo de template
    **/
-  @ApiModelProperty(value = "{{{tipo_template_request_sigla_value}}}")
+  @ApiModelProperty(value = "Sigla do tipo de template")
   public String getSigla() {
     return sigla;
   }

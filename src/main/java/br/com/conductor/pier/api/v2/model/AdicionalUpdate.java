@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{adicional_update_description}}}
+ * Objeto Adicional
  **/
-@ApiModel(description = "{{{adicional_update_description}}}")
+@ApiModel(description = "Objeto Adicional")
 public class AdicionalUpdate  {
   
   @SerializedName("nome")
@@ -38,9 +38,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_nome_value}}}
+   * Nome completo do Adicional
    **/
-  @ApiModelProperty(required = true, value = "{{{adicional_update_nome_value}}}")
+  @ApiModelProperty(required = true, value = "Nome completo do Adicional")
   public String getNome() {
     return nome;
   }
@@ -50,9 +50,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_nome_impresso_value}}}
+   * Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
    **/
-  @ApiModelProperty(value = "{{{adicional_update_nome_impresso_value}}}")
+  @ApiModelProperty(value = "Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -62,9 +62,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_numero_receita_federal_value}}}
+   * N\u00FAmero da Receita Federal
    **/
-  @ApiModelProperty(required = true, value = "{{{adicional_update_numero_receita_federal_value}}}")
+  @ApiModelProperty(required = true, value = "N\u00FAmero da Receita Federal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -74,9 +74,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_data_nascimento_value}}}
+   * Data de Nascimento do Adicional em formato yyyy-MM-dd
    **/
-  @ApiModelProperty(value = "{{{adicional_update_data_nascimento_value}}}")
+  @ApiModelProperty(value = "Data de Nascimento do Adicional em formato yyyy-MM-dd")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -86,9 +86,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_sexo_value}}}
+   * Sexo do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_update_sexo_value}}}")
+  @ApiModelProperty(value = "Sexo do Adicional")
   public String getSexo() {
     return sexo;
   }
@@ -98,9 +98,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_numero_identidade_value}}}
+   * N\u00FAmero do Documento de Identidade do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_update_numero_identidade_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero do Documento de Identidade do Adicional")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
   }
@@ -110,9 +110,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_orgao_expedidor_identidade_value}}}
+   * Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_update_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(value = "Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
   }
@@ -122,9 +122,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_unidade_federativa_identidade_value}}}
+   * Unidade Federativa da identidade
    **/
-  @ApiModelProperty(value = "{{{adicional_update_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(value = "Unidade Federativa da identidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
   }
@@ -134,9 +134,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_data_emissao_identidade_value}}}
+   * Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd
    **/
-  @ApiModelProperty(value = "{{{adicional_update_data_emissao_identidade_value}}}")
+  @ApiModelProperty(value = "Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
@@ -146,9 +146,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_id_parentesco_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
    **/
-  @ApiModelProperty(value = "{{{adicional_update_id_parentesco_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular")
   public Long getIdParentesco() {
     return idParentesco;
   }
@@ -158,9 +158,9 @@ public class AdicionalUpdate  {
 
   
   /**
-   * {{{adicional_update_telefones_value}}}
+   * Lista de telefones do adicional
    **/
-  @ApiModelProperty(value = "{{{adicional_update_telefones_value}}}")
+  @ApiModelProperty(value = "Lista de telefones do adicional")
   public List<TelefoneAdicionalUpdate> getTelefones() {
     return telefones;
   }

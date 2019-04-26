@@ -7,9 +7,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{configuracao_rotativo_detalhe_response_description}}}
+ * Objeto conta
  **/
-@ApiModel(description = "{{{configuracao_rotativo_detalhe_response_description}}}")
+@ApiModel(description = "Objeto conta")
 public class ConfiguracaoRotativoDetalheResponse  {
   
   @SerializedName("id")
@@ -47,9 +47,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o de ConfiguracaoRotativo (id)
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_id_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o de ConfiguracaoRotativo (id)")
   public Long getId() {
     return id;
   }
@@ -59,9 +59,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_id_produto_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto)
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_id_produto_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto)")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -71,9 +71,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}
+   * Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento")
   public Boolean getCompoeOfertaValorRotativo() {
     return compoeOfertaValorRotativo;
   }
@@ -83,9 +83,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}
+   * Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
   }
@@ -95,9 +95,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}
+   * Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
   }
@@ -107,9 +107,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}
+   * Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado")
   public Boolean getRecalculaParcelamentoParaEntradaMaior() {
     return recalculaParcelamentoParaEntradaMaior;
   }
@@ -119,9 +119,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}
+   * Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}")
+  @ApiModelProperty(value = "Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
   }
@@ -131,9 +131,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}
+   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
   }
@@ -143,9 +143,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}
+   * N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}")
+  @ApiModelProperty(value = "N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
   }
@@ -155,9 +155,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}
+   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
   }
@@ -167,9 +167,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}
+   * Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto")
   public Boolean getAntecipaParcelamentosAbertos() {
     return antecipaParcelamentosAbertos;
   }
@@ -179,9 +179,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}
+   * Valor m\u00EDnimo da parcela que deve ser aceito na oferta
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}")
+  @ApiModelProperty(value = "Valor m\u00EDnimo da parcela que deve ser aceito na oferta")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -191,9 +191,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}
+   * Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}")
+  @ApiModelProperty(value = "Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela")
   public BigDecimal getPercentualLimitarValorMinimoParcela() {
     return percentualLimitarValorMinimoParcela;
   }
@@ -203,9 +203,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
   }
@@ -215,9 +215,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}
+   * Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}")
+  @ApiModelProperty(value = "Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
   }
@@ -227,9 +227,9 @@ public class ConfiguracaoRotativoDetalheResponse  {
 
   
   /**
-   * {{{configuracao_rotativo_detalhe_response_usuario_value}}}
+   * Nome do usu\u00E1rio
    **/
-  @ApiModelProperty(value = "{{{configuracao_rotativo_detalhe_response_usuario_value}}}")
+  @ApiModelProperty(value = "Nome do usu\u00E1rio")
   public String getUsuario() {
     return usuario;
   }

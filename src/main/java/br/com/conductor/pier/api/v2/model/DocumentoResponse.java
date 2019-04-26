@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * {{{documento_response_description}}}
+ * Representa\u00E7\u00E3o da resposta o upload de um base64
  **/
-@ApiModel(description = "{{{documento_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta o upload de um base64")
 public class DocumentoResponse  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class DocumentoResponse  {
 
   
   /**
-   * {{{documento_response_id_value}}}
+   * ID do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_response_id_value}}}")
+  @ApiModelProperty(value = "ID do Documento")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class DocumentoResponse  {
 
   
   /**
-   * {{{documento_response_id_template_documento_value}}}
+   * ID do Template de Documento associado
    **/
-  @ApiModelProperty(value = "{{{documento_response_id_template_documento_value}}}")
+  @ApiModelProperty(value = "ID do Template de Documento associado")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
   }
@@ -46,9 +46,9 @@ public class DocumentoResponse  {
 
   
   /**
-   * {{{documento_response_nome_value}}}
+   * Nome do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_response_nome_value}}}")
+  @ApiModelProperty(value = "Nome do Documento")
   public String getNome() {
     return nome;
   }
@@ -58,9 +58,9 @@ public class DocumentoResponse  {
 
   
   /**
-   * {{{documento_response_extensao_value}}}
+   * Extens\u00E3o do Documento
    **/
-  @ApiModelProperty(value = "{{{documento_response_extensao_value}}}")
+  @ApiModelProperty(value = "Extens\u00E3o do Documento")
   public String getExtensao() {
     return extensao;
   }
