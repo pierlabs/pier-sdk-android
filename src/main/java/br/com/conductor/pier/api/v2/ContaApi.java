@@ -10,6 +10,8 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.ControleSubcontaResponse;
+import br.com.conductor.pier.api.v2.model.ControleSubcontaUpdate;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.ContaAtribuirCartaoPrePagoRequest;
@@ -26,7 +28,9 @@ import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageParcelaAgendamentoResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
+import br.com.conductor.pier.api.v2.model.QuitacaoAnualResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
+import br.com.conductor.pier.api.v2.model.TipoVinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageExtratoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
@@ -37,12 +41,15 @@ import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
+import br.com.conductor.pier.api.v2.model.PageControleSubcontaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageSegurancaMobileResponse;
+import br.com.conductor.pier.api.v2.model.PageVinculoContaResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoVinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.PageProjecaoCompraNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoProcessadaNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
@@ -50,6 +57,10 @@ import br.com.conductor.pier.api.v2.model.ContaPersist;
 import br.com.conductor.pier.api.v2.model.AdesaoServicoPersist;
 import br.com.conductor.pier.api.v2.model.AgendamentoPersist;
 import br.com.conductor.pier.api.v2.model.AgendamentoResponse;
+import br.com.conductor.pier.api.v2.model.ControleSubcontaPersist;
+import br.com.conductor.pier.api.v2.model.TipoVinculoContaPersist;
+import br.com.conductor.pier.api.v2.model.VinculoContaPersist;
+import br.com.conductor.pier.api.v2.model.VinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
@@ -176,6 +187,71 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (AjusteFinanceiroResponse) ApiInvoker.deserialize(response, "", AjusteFinanceiroResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Altera parcialmente um controle de uma subconta
+   * Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+   * @param id C\u00F3digo identificador do controle de subconta (id)
+   * @param controleSubcontaUpdate controleSubcontaUpdate
+   * @return ControleSubcontaResponse
+   */
+  public ControleSubcontaResponse  alterarParcialControlesSubcontas (Long id, ControleSubcontaUpdate controleSubcontaUpdate) throws ApiException {
+    Object postBody = controleSubcontaUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcialControlesSubcontas");
+    }
+    
+    // verify the required parameter 'controleSubcontaUpdate' is set
+    if (controleSubcontaUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'controleSubcontaUpdate' when calling alterarParcialControlesSubcontas");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/controles-subcontas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleSubcontaResponse) ApiInvoker.deserialize(response, "", ControleSubcontaResponse.class);
       }
       else {
         return null;
@@ -396,9 +472,10 @@ public class ContaApi {
    * @param celular N\u00FAmero do celular
    * @param idOperadora Identificador da operadora do celular
    * @param idOrigemComercial Identificador da origem comercial
+   * @param colaborador Matr\u00EDcula do colaborador
    * @return Object
    */
-  public Object  ativarAnuidade (Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object  ativarAnuidade (Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial, String colaborador) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -438,6 +515,8 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idOperadora", idOperadora));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "colaborador", colaborador));
     
 
     
@@ -1446,6 +1525,65 @@ public class ContaApi {
   }
   
   /**
+   * Apresenta o controle de uma subconta
+   * Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+   * @param id C\u00F3digo identificador do controle de subconta (id)
+   * @return ControleSubcontaResponse
+   */
+  public ControleSubcontaResponse  consultarControlesSubcontas (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarControlesSubcontas");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/controles-subcontas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleSubcontaResponse) ApiInvoker.deserialize(response, "", ControleSubcontaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Consulta a d\u00EDvida atualizada do cliente
    * Este recurso consulta a d\u00EDvida atualizada do cliente
    * @param id Id Conta
@@ -1659,6 +1797,71 @@ public class ContaApi {
   }
   
   /**
+   * Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+   * Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+   * @param id Identificador da conta
+   * @param ano Ano de refer\u00EAncia
+   * @return QuitacaoAnualResponse
+   */
+  public QuitacaoAnualResponse  consultarQuitacaoAnual (Long id, String ano) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarQuitacaoAnual");
+    }
+    
+    // verify the required parameter 'ano' is set
+    if (ano == null) {
+       throw new ApiException(400, "Missing the required parameter 'ano' when calling consultarQuitacaoAnual");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/quitacoes-anuais/{ano}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "ano" + "\\}", apiInvoker.escapeString(ano.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (QuitacaoAnualResponse) ApiInvoker.deserialize(response, "", QuitacaoAnualResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Permite consultar a partir do ID da conta as taxas e tarifas
    * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
    * @param id ID da conta a ser consultada
@@ -1717,6 +1920,65 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTaxasRefinanciamentoResponse) ApiInvoker.deserialize(response, "", PageTaxasRefinanciamentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consulta um tipo de v\u00EDnculo
+   * Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo identificador do tipo de v\u00EDnculo (id)
+   * @return TipoVinculoContaResponse
+   */
+  public TipoVinculoContaResponse  consultarTipoVinculoConta (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTipoVinculoConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/tipos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoVinculoContaResponse) ApiInvoker.deserialize(response, "", TipoVinculoContaResponse.class);
       }
       else {
         return null;
@@ -2042,6 +2304,124 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ContaMultiAppResponse) ApiInvoker.deserialize(response, "", ContaMultiAppResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Exclui um controle de uma subconta
+   * Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+   * @param id C\u00F3digo identificador do controle de subconta (id)
+   * @return Object
+   */
+  public Object  deletarControlesSubcontas (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarControlesSubcontas");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/controles-subcontas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Deleta um v\u00EDnculo entre duas contas
+   * Este recurso permite deletar um v\u00EDnculo entre duas contas
+   * @param id id
+   * @return Object
+   */
+  public Object  deletarVinculoConta (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarVinculoConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;
@@ -2537,6 +2917,83 @@ public class ContaApi {
   }
   
   /**
+   * Lista os controles de subcontas
+   * Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idVinculoConta Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas
+   * @param idConta C\u00F3digo identificador da subconta (id)
+   * @param nome Nome/apelido dado para a subconta
+   * @param finalidade Finalidade da cria\u00E7\u00E3o da subconta
+   * @param autoGerenciavel Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir
+   * @return PageControleSubcontaResponse
+   */
+  public PageControleSubcontaResponse  listarControlesSubcontas (List<String> sort, Integer page, Integer limit, Long idVinculoConta, Long idConta, String nome, String finalidade, Boolean autoGerenciavel) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/controles-subcontas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idVinculoConta", idVinculoConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "finalidade", finalidade));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "autoGerenciavel", autoGerenciavel));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageControleSubcontaResponse) ApiInvoker.deserialize(response, "", PageControleSubcontaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
    * Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
@@ -3008,6 +3465,145 @@ public class ContaApi {
   }
   
   /**
+   * Lista contas v\u00EDnculadas a uma conta pai
+   * Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+   * @param id id
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idConta Id da subconta
+   * @param idTipoVinculo Id do tipo de v\u00EDnculo entre as duas contas
+   * @return PageVinculoContaResponse
+   */
+  public PageVinculoContaResponse  listarSubcontasVinculadas (Long id, List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoVinculo) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarSubcontasVinculadas");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoVinculo", idTipoVinculo));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageVinculoContaResponse) ApiInvoker.deserialize(response, "", PageVinculoContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os tipos de v\u00EDnculos
+   * Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param descricao Descri\u00E7\u00E3o do tipo de v\u00EDnculo
+   * @return PageTipoVinculoContaResponse
+   */
+  public PageTipoVinculoContaResponse  listarTipoVinculo (List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/tipos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoVinculoContaResponse) ApiInvoker.deserialize(response, "", PageTipoVinculoContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
    * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta
@@ -3066,6 +3662,74 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageProjecaoCompraNaoProcessadaResponse) ApiInvoker.deserialize(response, "", PageProjecaoCompraNaoProcessadaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista v\u00EDnculos de contas
+   * Este recurso permite listar os v\u00EDnculos de contas existentes na base
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idConta Id da subconta
+   * @param idTipoVinculo Id do tipo de v\u00EDnculo entre as duas contas
+   * @return PageVinculoContaResponse
+   */
+  public PageVinculoContaResponse  listarVinculoConta (List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoVinculo) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoVinculo", idTipoVinculo));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageVinculoContaResponse) ApiInvoker.deserialize(response, "", PageVinculoContaResponse.class);
       }
       else {
         return null;
@@ -3694,6 +4358,201 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (AgendamentoResponse) ApiInvoker.deserialize(response, "", AgendamentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastra um controle para uma subconta
+   * Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+   * @param id C\u00F3digo identificador da conta (id)
+   * @param idVinculoConta Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas
+   * @param controleSubcontaPersist controleSubcontaPersist
+   * @return ControleSubcontaResponse
+   */
+  public ControleSubcontaResponse  salvarControlesSubcontas (Long id, Long idVinculoConta, ControleSubcontaPersist controleSubcontaPersist) throws ApiException {
+    Object postBody = controleSubcontaPersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarControlesSubcontas");
+    }
+    
+    // verify the required parameter 'idVinculoConta' is set
+    if (idVinculoConta == null) {
+       throw new ApiException(400, "Missing the required parameter 'idVinculoConta' when calling salvarControlesSubcontas");
+    }
+    
+    // verify the required parameter 'controleSubcontaPersist' is set
+    if (controleSubcontaPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'controleSubcontaPersist' when calling salvarControlesSubcontas");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/vinculos/{idVinculoConta}/controles-subcontas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idVinculoConta" + "\\}", apiInvoker.escapeString(idVinculoConta.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleSubcontaResponse) ApiInvoker.deserialize(response, "", ControleSubcontaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Salva um tipo de v\u00EDnculo
+   * Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+   * @param tipoVinculoContaPersist tipoVinculoContaPersist
+   * @return TipoVinculoContaResponse
+   */
+  public TipoVinculoContaResponse  salvarTipoVinculoConta (TipoVinculoContaPersist tipoVinculoContaPersist) throws ApiException {
+    Object postBody = tipoVinculoContaPersist;
+    
+    // verify the required parameter 'tipoVinculoContaPersist' is set
+    if (tipoVinculoContaPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipoVinculoContaPersist' when calling salvarTipoVinculoConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/vinculos/tipos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoVinculoContaResponse) ApiInvoker.deserialize(response, "", TipoVinculoContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastra um v\u00EDnculo entre duas contas
+   * Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+   * @param id id
+   * @param vinculoContaPersist vinculoContaPersist
+   * @return VinculoContaResponse
+   */
+  public VinculoContaResponse  salvarVinculoConta (Long id, VinculoContaPersist vinculoContaPersist) throws ApiException {
+    Object postBody = vinculoContaPersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarVinculoConta");
+    }
+    
+    // verify the required parameter 'vinculoContaPersist' is set
+    if (vinculoContaPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'vinculoContaPersist' when calling salvarVinculoConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (VinculoContaResponse) ApiInvoker.deserialize(response, "", VinculoContaResponse.class);
       }
       else {
         return null;

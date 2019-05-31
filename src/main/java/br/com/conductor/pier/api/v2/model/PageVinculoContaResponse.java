@@ -1,17 +1,20 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.WebhookHeaderResponse;
+import br.com.conductor.pier.api.v2.model.VinculoContaResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-@ApiModel(description = "")
-public class PageWebhookHeaderResponse  {
+/**
+ * Lista de V\u00EDnculos entre Contas
+ **/
+@ApiModel(description = "Lista de V\u00EDnculos entre Contas")
+public class PageVinculoContaResponse  {
   
   @SerializedName("content")
-  private List<WebhookHeaderResponse> content = null;
+  private List<VinculoContaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -43,10 +46,10 @@ public class PageWebhookHeaderResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<WebhookHeaderResponse> getContent() {
+  public List<VinculoContaResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebhookHeaderResponse> content) {
+  public void setContent(List<VinculoContaResponse> content) {
     this.content = content;
   }
 
@@ -198,7 +201,7 @@ public class PageWebhookHeaderResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageWebhookHeaderResponse {\n");
+    sb.append("class PageVinculoContaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

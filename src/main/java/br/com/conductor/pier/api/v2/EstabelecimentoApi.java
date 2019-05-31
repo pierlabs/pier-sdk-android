@@ -37,6 +37,7 @@ import br.com.conductor.pier.api.v2.model.PageTipoEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoTerminalTransacoesResponse;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoEconomicoResponse;
@@ -2154,6 +2155,92 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTipoTerminalResponse) ApiInvoker.deserialize(response, "", PageTipoTerminalResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+   * Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataTransacao Data inicial
+   * @param codigoProcessamento C\u00F3digo de processamento da transa\u00E7\u00E3o
+   * @param nsuEmissor NSU Emissor
+   * @param nsuOrigem NSU Origem
+   * @param statusConta Status da conta
+   * @param valorTransacao Valor da transa\u00E7\u00E3o
+   * @return PageTipoTerminalTransacoesResponse
+   */
+  public PageTipoTerminalTransacoesResponse  listarTransacoes (Long id, List<String> sort, Integer page, Integer limit, String dataTransacao, String codigoProcessamento, Integer nsuEmissor, Integer nsuOrigem, Integer statusConta, BigDecimal valorTransacao) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoes");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-terminais-estabelecimento/{id}/transacoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataTransacao", dataTransacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nsuEmissor", nsuEmissor));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nsuOrigem", nsuOrigem));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "statusConta", statusConta));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "valorTransacao", valorTransacao));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTipoTerminalTransacoesResponse) ApiInvoker.deserialize(response, "", PageTipoTerminalTransacoesResponse.class);
       }
       else {
         return null;

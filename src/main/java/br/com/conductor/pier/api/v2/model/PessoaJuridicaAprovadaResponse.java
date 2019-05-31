@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ObjetoEndereoAprovado;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
@@ -56,7 +56,7 @@ public class PessoaJuridicaAprovadaResponse  {
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaResponse> telefones = null;
   @SerializedName("enderecos")
-  private List<ObjetoEndereoAprovado> enderecos = null;
+  private List<EnderecoAprovadoResponse> enderecos = null;
   @SerializedName("socios")
   private List<SocioAprovadoResponse> socios = null;
   @SerializedName("referencias")
@@ -69,12 +69,16 @@ public class PessoaJuridicaAprovadaResponse  {
   private BigDecimal limiteParcelas = null;
   @SerializedName("impedidoFinanciamento")
   private Boolean impedidoFinanciamento = null;
+  @SerializedName("cnae")
+  private String cnae = null;
+  @SerializedName("formaConstituicao")
+  private String formaConstituicao = null;
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da pessoa jur\u00EDdica")
   public Long getId() {
     return id;
   }
@@ -84,9 +88,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'
+   * Nome completo da raz\u00E3o social. \u00C9 o nome empresarial
    **/
-  @ApiModelProperty(value = "Apresenta o nome completo da raz\u00E3o social (nome empresarial)'")
+  @ApiModelProperty(value = "Nome completo da raz\u00E3o social. \u00C9 o nome empresarial")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -96,9 +100,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Apresenta o nome fantasia da empresa
+   * Nome fantasia da empresa
    **/
-  @ApiModelProperty(value = "Apresenta o nome fantasia da empresa")
+  @ApiModelProperty(value = "Nome fantasia da empresa")
   public String getNomeFantasia() {
     return nomeFantasia;
   }
@@ -108,9 +112,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Cadastro Nacional da Pessoa Jur\u00EDdica
+   * N\u00FAmero do Cadastro Nacional da Pessoa Jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Cadastro Nacional da Pessoa Jur\u00EDdica")
+  @ApiModelProperty(value = "N\u00FAmero do Cadastro Nacional da Pessoa Jur\u00EDdica")
   public String getCnpj() {
     return cnpj;
   }
@@ -120,9 +124,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE)
+   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual
    **/
-  @ApiModelProperty(value = "N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE)")
+  @ApiModelProperty(value = "N\u00FAmero da Inscri\u00E7\u00E3o Estadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -132,9 +136,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd
+   * Data de abertura da empresa
    **/
-  @ApiModelProperty(value = "Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd")
+  @ApiModelProperty(value = "Data de abertura da empresa")
   public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
@@ -144,9 +148,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Id da origem comercial
+   * C\u00F3digo identificador da origem comercial
    **/
-  @ApiModelProperty(value = "Id da origem comercial")
+  @ApiModelProperty(value = "C\u00F3digo identificador da origem comercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
   }
@@ -156,9 +160,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Id do produto
+   * C\u00F3digo identificador do produto
    **/
-  @ApiModelProperty(value = "Id do produto")
+  @ApiModelProperty(value = "C\u00F3digo identificador do produto")
   public Long getIdProduto() {
     return idProduto;
   }
@@ -228,9 +232,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * Nome impresso no cart\u00E3o
    **/
-  @ApiModelProperty(value = "Nome que deve ser impresso no cart\u00E3o")
+  @ApiModelProperty(value = "Nome impresso no cart\u00E3o")
   public String getNomeImpresso() {
     return nomeImpresso;
   }
@@ -264,9 +268,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * Canal pelo qual o cadastro do cliente foi realizado
    **/
-  @ApiModelProperty(value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @ApiModelProperty(value = "Canal pelo qual o cadastro do cliente foi realizado")
   public String getCanalEntrada() {
     return canalEntrada;
   }
@@ -276,9 +280,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor =0)
+   * Valor da pontua\u00E7\u00E3o atribu\u00EDdo ao cliente
    **/
-  @ApiModelProperty(value = "Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor =0)")
+  @ApiModelProperty(value = "Valor da pontua\u00E7\u00E3o atribu\u00EDdo ao cliente")
   public Integer getValorPontuacao() {
     return valorPontuacao;
   }
@@ -288,9 +292,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Apresenta os telefones da empresa
+   * Telefones da empresa
    **/
-  @ApiModelProperty(value = "Apresenta os telefones da empresa")
+  @ApiModelProperty(value = "Telefones da empresa")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
   }
@@ -300,21 +304,21 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+   * Enderecos da empresa
    **/
-  @ApiModelProperty(value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
-  public List<ObjetoEndereoAprovado> getEnderecos() {
+  @ApiModelProperty(value = "Enderecos da empresa")
+  public List<EnderecoAprovadoResponse> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<ObjetoEndereoAprovado> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponse> enderecos) {
     this.enderecos = enderecos;
   }
 
   
   /**
-   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
+   * S\u00F3cios da empresa
    **/
-  @ApiModelProperty(value = "Apresenta os dados dos s\u00F3cios da empresa, caso exista")
+  @ApiModelProperty(value = "S\u00F3cios da empresa")
   public List<SocioAprovadoResponse> getSocios() {
     return socios;
   }
@@ -324,9 +328,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
+   * Refer\u00EAncias comerciais da Empresa
    **/
-  @ApiModelProperty(value = "Apresenta os dados dos s\u00F3cios da empresa, caso exista")
+  @ApiModelProperty(value = "Refer\u00EAncias comerciais da Empresa")
   public List<ReferenciaComercialAprovadoResponse> getReferencias() {
     return referencias;
   }
@@ -336,9 +340,9 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Valor do Limite Global
+   * Valor do Limite Global para a conta
    **/
-  @ApiModelProperty(required = true, value = "Valor do Limite Global")
+  @ApiModelProperty(value = "Valor do Limite Global para a conta")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
   }
@@ -350,7 +354,7 @@ public class PessoaJuridicaAprovadaResponse  {
   /**
    * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
    **/
-  @ApiModelProperty(required = true, value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
+  @ApiModelProperty(value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
   }
@@ -362,7 +366,7 @@ public class PessoaJuridicaAprovadaResponse  {
   /**
    * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
    **/
-  @ApiModelProperty(required = true, value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras")
+  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
   }
@@ -372,14 +376,38 @@ public class PessoaJuridicaAprovadaResponse  {
 
   
   /**
-   * Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
+   * Indicativo para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito (Lei n. 4.595/64)
    **/
-  @ApiModelProperty(value = "Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)")
+  @ApiModelProperty(value = "Indicativo para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito (Lei n. 4.595/64)")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
   }
   public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
     this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
+   * C\u00F3digo de Classifica\u00E7\u00E3o Nacional de Atividades Econ\u00F4micas
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de Classifica\u00E7\u00E3o Nacional de Atividades Econ\u00F4micas")
+  public String getCnae() {
+    return cnae;
+  }
+  public void setCnae(String cnae) {
+    this.cnae = cnae;
+  }
+
+  
+  /**
+   * Forma de atos constitutivos de uma atividade empresarial
+   **/
+  @ApiModelProperty(value = "Forma de atos constitutivos de uma atividade empresarial")
+  public String getFormaConstituicao() {
+    return formaConstituicao;
+  }
+  public void setFormaConstituicao(String formaConstituicao) {
+    this.formaConstituicao = formaConstituicao;
   }
 
   
@@ -415,6 +443,8 @@ public class PessoaJuridicaAprovadaResponse  {
     sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParcelas: ").append(limiteParcelas).append("\n");
     sb.append("  impedidoFinanciamento: ").append(impedidoFinanciamento).append("\n");
+    sb.append("  cnae: ").append(cnae).append("\n");
+    sb.append("  formaConstituicao: ").append(formaConstituicao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

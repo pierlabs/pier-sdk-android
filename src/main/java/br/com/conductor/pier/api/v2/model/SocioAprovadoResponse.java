@@ -44,9 +44,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio")
   public Long getId() {
     return id;
   }
@@ -56,9 +56,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * Apresenta o Nome do Socio
+   * Nome do Socio
    **/
-  @ApiModelProperty(value = "Apresenta o Nome do Socio")
+  @ApiModelProperty(value = "Nome do Socio")
   public String getNome() {
     return nome;
   }
@@ -68,9 +68,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * CPF
+   * CPF do s\u00F3cio
    **/
-  @ApiModelProperty(value = "CPF")
+  @ApiModelProperty(value = "CPF do s\u00F3cio")
   public String getCpf() {
     return cpf;
   }
@@ -80,9 +80,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
+   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
    **/
-  @ApiModelProperty(value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
+  @ApiModelProperty(value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -200,9 +200,9 @@ public class SocioAprovadoResponse  {
 
   
   /**
-   * Informa os telefones do s\u00F3cio
+   * Telefones do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Informa os telefones do s\u00F3cio")
+  @ApiModelProperty(value = "Telefones do s\u00F3cio")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
   }

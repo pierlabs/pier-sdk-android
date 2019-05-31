@@ -12,10 +12,13 @@ import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoUpdate;
+import br.com.conductor.pier.api.v2.model.ControleCartaoGrupoMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoControleCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageControleCartaoGrupoMCCResponse;
 import br.com.conductor.pier.api.v2.model.ControleLimitesCartaoPersist;
-import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartao;
+import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoPersist;
+import br.com.conductor.pier.api.v2.model.ControleCartaoGrupoMCCPersist;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -383,6 +386,71 @@ public class ControleCartaoApi {
   }
   
   /**
+   * Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
+   * Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de controle de grupo MCC do cart\u00E3o.
+   * @param idControleCartaoGrupoMCC idControleCartaoGrupoMCC
+   * @return ControleCartaoGrupoMCCResponse
+   */
+  public ControleCartaoGrupoMCCResponse  consultarControleGrupoMccCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarControleGrupoMccCartao");
+    }
+    
+    // verify the required parameter 'idControleCartaoGrupoMCC' is set
+    if (idControleCartaoGrupoMCC == null) {
+       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling consultarControleGrupoMccCartao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleCartaoGrupoMCC" + "\\}", apiInvoker.escapeString(idControleCartaoGrupoMCC.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleCartaoGrupoMCCResponse) ApiInvoker.deserialize(response, "", ControleCartaoGrupoMCCResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Deletar uma configura\u00E7\u00E3o de um cart\u00E3o.
    * O metodo Deleta a configura\u00E7\u00E3o que est\u00E1 vinculada ao cart\u00E3o e deixar sem bloqueio nas transa\u00E7\u00F5es relacionadas ao mesmo.
    * @param idConfiguracaoCartao C\u00F3digo da configura\u00E7\u00E3o controle cart\u00E3o
@@ -438,6 +506,71 @@ public class ControleCartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ConfiguracaoControleCartaoResponse) ApiInvoker.deserialize(response, "", ConfiguracaoControleCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Deletar o vinculo do mcc com um cart\u00E3o.
+   * O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+   * @param id C\u00F3digo de controle de grupo MCC do cart\u00E3o.
+   * @param idControleCartaoGrupoMCC idControleCartaoGrupoMCC
+   * @return ControleCartaoGrupoMCCResponse
+   */
+  public ControleCartaoGrupoMCCResponse  deletarControleGrupoMccCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarControleGrupoMccCartao");
+    }
+    
+    // verify the required parameter 'idControleCartaoGrupoMCC' is set
+    if (idControleCartaoGrupoMCC == null) {
+       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling deletarControleGrupoMccCartao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleCartaoGrupoMCC" + "\\}", apiInvoker.escapeString(idControleCartaoGrupoMCC.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleCartaoGrupoMCCResponse) ApiInvoker.deserialize(response, "", ControleCartaoGrupoMCCResponse.class);
       }
       else {
         return null;
@@ -587,9 +720,10 @@ public class ControleCartaoApi {
    * @param permiteEcommerce Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce
    * @param permiteSaque Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque
    * @param permiteWallet Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet
+   * @param permiteControleMCC Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
    * @return PageConfiguracaoControleCartaoResponse
    */
-  public PageConfiguracaoControleCartaoResponse  listarConfiguracaoControleCartao (List<String> sort, Integer page, Integer limit, Long idCartao, Integer permiteEcommerce, Integer permiteSaque, Integer permiteWallet) throws ApiException {
+  public PageConfiguracaoControleCartaoResponse  listarConfiguracaoControleCartao (List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC) throws ApiException {
     Object postBody = null;
     
 
@@ -618,6 +752,8 @@ public class ControleCartaoApi {
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "permiteWallet", permiteWallet));
     
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "permiteControleMCC", permiteControleMCC));
+    
 
     
 
@@ -642,6 +778,74 @@ public class ControleCartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageConfiguracaoControleCartaoResponse) ApiInvoker.deserialize(response, "", PageConfiguracaoControleCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os cart\u00F5es vinculados aos estabelecimentos.
+   * Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idCartao C\u00F3digo Identificador do cartao na base (id)
+   * @param idGrupoMCC C\u00F3digo Identificador do grupo mcc na base.
+   * @return PageControleCartaoGrupoMCCResponse
+   */
+  public PageControleCartaoGrupoMCCResponse  listarControleGrupoMccCartao (List<String> sort, Integer page, Integer limit, Long idCartao, Long idGrupoMCC) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/controles-grupomcc".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idGrupoMCC", idGrupoMCC));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageControleCartaoGrupoMCCResponse) ApiInvoker.deserialize(response, "", PageControleCartaoGrupoMCCResponse.class);
       }
       else {
         return null;
@@ -723,7 +927,7 @@ public class ControleCartaoApi {
    * @param configuracaoControleCartaoPersist configuracaoControleCartaoPersist
    * @return ConfiguracaoControleCartaoResponse
    */
-  public ConfiguracaoControleCartaoResponse  salvarConfiguracaoControleCartao (Long id, ConfiguracaoControleCartao configuracaoControleCartaoPersist) throws ApiException {
+  public ConfiguracaoControleCartaoResponse  salvarConfiguracaoControleCartao (Long id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist) throws ApiException {
     Object postBody = configuracaoControleCartaoPersist;
     
     // verify the required parameter 'id' is set
@@ -772,6 +976,71 @@ public class ControleCartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ConfiguracaoControleCartaoResponse) ApiInvoker.deserialize(response, "", ConfiguracaoControleCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Registra o grupo mcc ao cart\u00E3o.
+   * Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+   * @param id id
+   * @param controleCartaoMCCPersist controleCartaoMCCPersist
+   * @return ControleCartaoGrupoMCCResponse
+   */
+  public ControleCartaoGrupoMCCResponse  salvarControleGrupoMccCartao (Long id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist) throws ApiException {
+    Object postBody = controleCartaoMCCPersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarControleGrupoMccCartao");
+    }
+    
+    // verify the required parameter 'controleCartaoMCCPersist' is set
+    if (controleCartaoMCCPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'controleCartaoMCCPersist' when calling salvarControleGrupoMccCartao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-grupomcc".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleCartaoGrupoMCCResponse) ApiInvoker.deserialize(response, "", ControleCartaoGrupoMCCResponse.class);
       }
       else {
         return null;

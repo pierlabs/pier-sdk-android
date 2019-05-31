@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Objeto Telefone Pessoa Aprovada
+ * Objeto de persist\u00EAncia do telefone da pessoa aprovada
  **/
-@ApiModel(description = "Objeto Telefone Pessoa Aprovada")
+@ApiModel(description = "Objeto de persist\u00EAncia do telefone da pessoa aprovada")
 public class TelefonePessoaAprovadaPersist  {
   
   @SerializedName("idTipoTelefone")
@@ -22,9 +22,9 @@ public class TelefonePessoaAprovadaPersist  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
   }
@@ -34,9 +34,9 @@ public class TelefonePessoaAprovadaPersist  {
 
   
   /**
-   * C\u00F3digo DDD do telefone
+   * C\u00F3digo de Discagem Direta \u00E0 Dist\u00E2ncia do telefone
    **/
-  @ApiModelProperty(required = true, value = "C\u00F3digo DDD do telefone")
+  @ApiModelProperty(required = true, value = "C\u00F3digo de Discagem Direta \u00E0 Dist\u00E2ncia do telefone")
   public String getDdd() {
     return ddd;
   }

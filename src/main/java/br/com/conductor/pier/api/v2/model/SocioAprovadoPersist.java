@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * PessoaPersist
+ * Objeto de persist\u00EAncia do s\u00F3cio da pessoa aprovada
  **/
-@ApiModel(description = "PessoaPersist")
-public class PessoaPersist  {
+@ApiModel(description = "Objeto de persist\u00EAncia do s\u00F3cio da pessoa aprovada")
+public class SocioAprovadoPersist  {
   
   @SerializedName("nome")
   private String nome = null;
@@ -42,9 +42,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Apresenta o Nome do Socio
+   * Nome do s\u00F3cio
    **/
-  @ApiModelProperty(required = true, value = "Apresenta o Nome do Socio")
+  @ApiModelProperty(required = true, value = "Nome do s\u00F3cio")
   public String getNome() {
     return nome;
   }
@@ -54,9 +54,9 @@ public class PessoaPersist  {
 
   
   /**
-   * CPF do S\u00F3cio
+   * CPF do s\u00F3cio
    **/
-  @ApiModelProperty(value = "CPF do S\u00F3cio")
+  @ApiModelProperty(value = "CPF do s\u00F3cio")
   public String getCpf() {
     return cpf;
   }
@@ -68,7 +68,7 @@ public class PessoaPersist  {
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
    **/
-  @ApiModelProperty(value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
+  @ApiModelProperty(required = true, value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
   public String getDataNascimento() {
     return dataNascimento;
   }
@@ -78,9 +78,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Sexo do S\u00F3cio
+   * Sexo do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Sexo do S\u00F3cio")
+  @ApiModelProperty(value = "Sexo do s\u00F3cio")
   public String getSexo() {
     return sexo;
   }
@@ -186,9 +186,9 @@ public class PessoaPersist  {
 
   
   /**
-   * Informa os telefones do s\u00F3cio
+   * Telefones do s\u00F3cio
    **/
-  @ApiModelProperty(value = "Informa os telefones do s\u00F3cio")
+  @ApiModelProperty(value = "Telefones do s\u00F3cio")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;
   }
@@ -201,7 +201,7 @@ public class PessoaPersist  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PessoaPersist {\n");
+    sb.append("class SocioAprovadoPersist {\n");
     
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  cpf: ").append(cpf).append("\n");

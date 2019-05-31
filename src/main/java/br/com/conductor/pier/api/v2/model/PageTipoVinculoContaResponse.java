@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.PagamentosInvalidosResponse;
+import br.com.conductor.pier.api.v2.model.TipoVinculoContaResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de pagamentos inv\u00E1lidos
+ * Lista de tipos de v\u00EDnculos
  **/
-@ApiModel(description = "Lista de pagamentos inv\u00E1lidos")
-public class PagePagamentosInvalidosResponse  {
+@ApiModel(description = "Lista de tipos de v\u00EDnculos")
+public class PageTipoVinculoContaResponse  {
   
   @SerializedName("content")
-  private List<PagamentosInvalidosResponse> content = null;
+  private List<TipoVinculoContaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PagePagamentosInvalidosResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<PagamentosInvalidosResponse> getContent() {
+  public List<TipoVinculoContaResponse> getContent() {
     return content;
   }
-  public void setContent(List<PagamentosInvalidosResponse> content) {
+  public void setContent(List<TipoVinculoContaResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PagePagamentosInvalidosResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PagePagamentosInvalidosResponse {\n");
+    sb.append("class PageTipoVinculoContaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

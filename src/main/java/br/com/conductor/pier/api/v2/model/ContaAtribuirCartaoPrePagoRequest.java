@@ -13,6 +13,8 @@ public class ContaAtribuirCartaoPrePagoRequest  {
   
   @SerializedName("idCartao")
   private Long idCartao = null;
+  @SerializedName("idPessoaFisica")
+  private Long idPessoaFisica = null;
 
   
   /**
@@ -27,6 +29,18 @@ public class ContaAtribuirCartaoPrePagoRequest  {
   }
 
   
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).")
+  public Long getIdPessoaFisica() {
+    return idPessoaFisica;
+  }
+  public void setIdPessoaFisica(Long idPessoaFisica) {
+    this.idPessoaFisica = idPessoaFisica;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -34,6 +48,7 @@ public class ContaAtribuirCartaoPrePagoRequest  {
     sb.append("class ContaAtribuirCartaoPrePagoRequest {\n");
     
     sb.append("  idCartao: ").append(idCartao).append("\n");
+    sb.append("  idPessoaFisica: ").append(idPessoaFisica).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

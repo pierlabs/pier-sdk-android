@@ -5,8 +5,11 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-@ApiModel(description = "")
-public class ObjetoEndereoAprovado  {
+/**
+ * Objeto Endere\u00E7o Aprovado
+ **/
+@ApiModel(description = "Objeto Endere\u00E7o Aprovado")
+public class EnderecoAprovadoResponse  {
   
   @SerializedName("id")
   private Long id = null;
@@ -39,9 +42,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o")
   public Long getId() {
     return id;
   }
@@ -51,9 +54,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
   }
@@ -63,9 +66,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Retorna o CEP no formato '58800000'
+   * C\u00F3digo de Endere\u00E7amento Postal
    **/
-  @ApiModelProperty(value = "Retorna o CEP no formato '58800000'")
+  @ApiModelProperty(value = "C\u00F3digo de Endere\u00E7amento Postal")
   public String getCep() {
     return cep;
   }
@@ -75,9 +78,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta o nome do Logradouro
+   * Nome do logradouro
    **/
-  @ApiModelProperty(value = "Apresenta o nome do Logradouro")
+  @ApiModelProperty(value = "Nome do logradouro")
   public String getLogradouro() {
     return logradouro;
   }
@@ -87,9 +90,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta o n\u00FAmero do endere\u00E7o
+   * N\u00FAmero do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero do endere\u00E7o")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o")
   public Integer getNumero() {
     return numero;
   }
@@ -99,9 +102,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta descri\u00E7oes complementares referente ao endere\u00E7o")
+  @ApiModelProperty(value = "Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o")
   public String getComplemento() {
     return complemento;
   }
@@ -111,9 +114,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+   * Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    **/
-  @ApiModelProperty(value = "Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
   public String getPontoReferencia() {
     return pontoReferencia;
   }
@@ -123,9 +126,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta nome do bairro
+   * Nome do bairro
    **/
-  @ApiModelProperty(value = "Apresenta nome do bairro")
+  @ApiModelProperty(value = "Nome do bairro")
   public String getBairro() {
     return bairro;
   }
@@ -135,9 +138,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta nome da cidade
+   * Nome da cidade
    **/
-  @ApiModelProperty(value = "Apresenta nome da cidade")
+  @ApiModelProperty(value = "Nome da cidade")
   public String getCidade() {
     return cidade;
   }
@@ -147,9 +150,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta sigla da Unidade Federativa
+   * Sigla da Unidade Federativa
    **/
-  @ApiModelProperty(value = "Apresenta sigla da Unidade Federativa")
+  @ApiModelProperty(value = "Sigla da Unidade Federativa")
   public String getUf() {
     return uf;
   }
@@ -159,9 +162,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta nome do Pa\u00EDs
+   * Nome do Pa\u00EDs
    **/
-  @ApiModelProperty(value = "Apresenta nome do Pa\u00EDs")
+  @ApiModelProperty(value = "Nome do Pa\u00EDs")
   public String getPais() {
     return pais;
   }
@@ -183,9 +186,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta o tempo de resid\u00EAncia em anos
+   * Tempo de resid\u00EAncia em anos
    **/
-  @ApiModelProperty(value = "Apresenta o tempo de resid\u00EAncia em anos")
+  @ApiModelProperty(value = "Tempo de resid\u00EAncia em anos")
   public Integer getTempoResidenciaAnos() {
     return tempoResidenciaAnos;
   }
@@ -195,9 +198,9 @@ public class ObjetoEndereoAprovado  {
 
   
   /**
-   * Apresenta o tempo de resid\u00EAncia em meses
+   * Tempo de resid\u00EAncia em meses
    **/
-  @ApiModelProperty(value = "Apresenta o tempo de resid\u00EAncia em meses")
+  @ApiModelProperty(value = "Tempo de resid\u00EAncia em meses")
   public Integer getTempoResidenciaMeses() {
     return tempoResidenciaMeses;
   }
@@ -210,7 +213,7 @@ public class ObjetoEndereoAprovado  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjetoEndereoAprovado {\n");
+    sb.append("class EnderecoAprovadoResponse {\n");
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idTipoEndereco: ").append(idTipoEndereco).append("\n");

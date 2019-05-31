@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.WebhookResponse;
+import br.com.conductor.pier.api.v2.model.ControleSubcontaResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista de WebHooks
+ * Lista de Controles de subcontas
  **/
-@ApiModel(description = "Lista de WebHooks")
-public class PageWebHookResponse  {
+@ApiModel(description = "Lista de Controles de subcontas")
+public class PageControleSubcontaResponse  {
   
   @SerializedName("content")
-  private List<WebhookResponse> content = null;
+  private List<ControleSubcontaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageWebHookResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<WebhookResponse> getContent() {
+  public List<ControleSubcontaResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebhookResponse> content) {
+  public void setContent(List<ControleSubcontaResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PageWebHookResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageWebHookResponse {\n");
+    sb.append("class PageControleSubcontaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

@@ -12,21 +12,23 @@ import com.google.gson.annotations.SerializedName;
 public class ConfiguracaoControleCartaoUpdate  {
   
   @SerializedName("permiteEcommerce")
-  private Integer permiteEcommerce = null;
+  private Boolean permiteEcommerce = null;
   @SerializedName("permiteSaque")
-  private Integer permiteSaque = null;
+  private Boolean permiteSaque = null;
   @SerializedName("permiteWallet")
-  private Integer permiteWallet = null;
+  private Boolean permiteWallet = null;
+  @SerializedName("permiteControleMCC")
+  private Boolean permiteControleMCC = null;
 
   
   /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce
    **/
   @ApiModelProperty(value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce")
-  public Integer getPermiteEcommerce() {
+  public Boolean getPermiteEcommerce() {
     return permiteEcommerce;
   }
-  public void setPermiteEcommerce(Integer permiteEcommerce) {
+  public void setPermiteEcommerce(Boolean permiteEcommerce) {
     this.permiteEcommerce = permiteEcommerce;
   }
 
@@ -35,10 +37,10 @@ public class ConfiguracaoControleCartaoUpdate  {
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque
    **/
   @ApiModelProperty(value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque")
-  public Integer getPermiteSaque() {
+  public Boolean getPermiteSaque() {
     return permiteSaque;
   }
-  public void setPermiteSaque(Integer permiteSaque) {
+  public void setPermiteSaque(Boolean permiteSaque) {
     this.permiteSaque = permiteSaque;
   }
 
@@ -47,11 +49,23 @@ public class ConfiguracaoControleCartaoUpdate  {
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet
    **/
   @ApiModelProperty(value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet")
-  public Integer getPermiteWallet() {
+  public Boolean getPermiteWallet() {
     return permiteWallet;
   }
-  public void setPermiteWallet(Integer permiteWallet) {
+  public void setPermiteWallet(Boolean permiteWallet) {
     this.permiteWallet = permiteWallet;
+  }
+
+  
+  /**
+   * Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
+   **/
+  @ApiModelProperty(value = "Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs")
+  public Boolean getPermiteControleMCC() {
+    return permiteControleMCC;
+  }
+  public void setPermiteControleMCC(Boolean permiteControleMCC) {
+    this.permiteControleMCC = permiteControleMCC;
   }
 
   
@@ -64,6 +78,7 @@ public class ConfiguracaoControleCartaoUpdate  {
     sb.append("  permiteEcommerce: ").append(permiteEcommerce).append("\n");
     sb.append("  permiteSaque: ").append(permiteSaque).append("\n");
     sb.append("  permiteWallet: ").append(permiteWallet).append("\n");
+    sb.append("  permiteControleMCC: ").append(permiteControleMCC).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

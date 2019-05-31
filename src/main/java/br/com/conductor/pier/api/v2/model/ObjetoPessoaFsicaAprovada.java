@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ObjetoEndereoAprovadoPersist;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import java.math.BigDecimal;
 import java.util.*;
@@ -63,7 +63,7 @@ public class ObjetoPessoaFsicaAprovada  {
   @SerializedName("telefones")
   private List<TelefonePessoaAprovadaPersist> telefones = null;
   @SerializedName("enderecos")
-  private List<ObjetoEndereoAprovadoPersist> enderecos = null;
+  private List<EnderecoAprovadoPersist> enderecos = null;
   @SerializedName("limiteGlobal")
   private BigDecimal limiteGlobal = null;
   @SerializedName("limiteMaximo")
@@ -410,10 +410,10 @@ public class ObjetoPessoaFsicaAprovada  {
    * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
    **/
   @ApiModelProperty(required = true, value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
-  public List<ObjetoEndereoAprovadoPersist> getEnderecos() {
+  public List<EnderecoAprovadoPersist> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<ObjetoEndereoAprovadoPersist> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoPersist> enderecos) {
     this.enderecos = enderecos;
   }
 

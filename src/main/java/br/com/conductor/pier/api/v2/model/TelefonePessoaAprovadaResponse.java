@@ -24,9 +24,9 @@ public class TelefonePessoaAprovadaResponse  {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
    **/
-  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)")
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o")
   public Long getId() {
     return id;
   }
