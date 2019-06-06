@@ -10,9 +10,13 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.ContaDebitoRecorrente;
 import br.com.conductor.pier.api.v2.model.ContaDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrenteUpdate;
 import br.com.conductor.pier.api.v2.model.PageContaDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PagePortadorDebitoRecorrenteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoDebitoRecorrenteResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrentePersist;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -92,6 +96,77 @@ public class DebitoRecorrenteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ContaDebitoRecorrenteResponse) ApiInvoker.deserialize(response, "", ContaDebitoRecorrenteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+   * Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param idRegistro C\u00F3digo identificador do registro
+   * @param portadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate
+   * @return PortadorDebitoRecorrenteResponse
+   */
+  public PortadorDebitoRecorrenteResponse  atualizarParcialPortadorDebitoRecorrente (Long id, Long idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate) throws ApiException {
+    Object postBody = portadorDebitoRecorrenteUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialPortadorDebitoRecorrente");
+    }
+    
+    // verify the required parameter 'idRegistro' is set
+    if (idRegistro == null) {
+       throw new ApiException(400, "Missing the required parameter 'idRegistro' when calling atualizarParcialPortadorDebitoRecorrente");
+    }
+    
+    // verify the required parameter 'portadorDebitoRecorrenteUpdate' is set
+    if (portadorDebitoRecorrenteUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'portadorDebitoRecorrenteUpdate' when calling atualizarParcialPortadorDebitoRecorrente");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes/{idRegistro}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idRegistro" + "\\}", apiInvoker.escapeString(idRegistro.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PortadorDebitoRecorrenteResponse) ApiInvoker.deserialize(response, "", PortadorDebitoRecorrenteResponse.class);
       }
       else {
         return null;
@@ -247,6 +322,74 @@ public class DebitoRecorrenteApi {
   }
   
   /**
+   * Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PagePortadorDebitoRecorrenteResponse
+   */
+  public PagePortadorDebitoRecorrenteResponse  listarPortadorDebitoRecorrente (Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarPortadorDebitoRecorrente");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PagePortadorDebitoRecorrenteResponse) ApiInvoker.deserialize(response, "", PagePortadorDebitoRecorrenteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Listar Tipos Debitos Recorrentes
    * Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00E3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00E9bitos Recorrentes que est\u00E3o cadastrados para um determinado Emissor, independente do status dele
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -311,6 +454,71 @@ public class DebitoRecorrenteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTipoDebitoRecorrenteResponse) ApiInvoker.deserialize(response, "", PageTipoDebitoRecorrenteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param portadorDebitoRecorrentePersist portadorDebitoRecorrentePersist
+   * @return PortadorDebitoRecorrenteResponse
+   */
+  public PortadorDebitoRecorrenteResponse  salvarPortadorDebitoRecorrente (Long id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist) throws ApiException {
+    Object postBody = portadorDebitoRecorrentePersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarPortadorDebitoRecorrente");
+    }
+    
+    // verify the required parameter 'portadorDebitoRecorrentePersist' is set
+    if (portadorDebitoRecorrentePersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'portadorDebitoRecorrentePersist' when calling salvarPortadorDebitoRecorrente");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PortadorDebitoRecorrenteResponse) ApiInvoker.deserialize(response, "", PortadorDebitoRecorrenteResponse.class);
       }
       else {
         return null;
