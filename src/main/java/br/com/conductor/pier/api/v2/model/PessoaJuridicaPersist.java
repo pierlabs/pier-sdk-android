@@ -29,9 +29,9 @@ public class PessoaJuridicaPersist  {
 
   
   /**
-   * Pessoa jur\u00EDdica contato
+   * Contato da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Pessoa jur\u00EDdica contato")
+  @ApiModelProperty(value = "Contato da pessoa jur\u00EDdica")
   public String getContato() {
     return contato;
   }
@@ -41,9 +41,9 @@ public class PessoaJuridicaPersist  {
 
   
   /**
-   * Raz\u00E3o social pessoa jur\u00EDdica
+   * Raz\u00E3o social
    **/
-  @ApiModelProperty(required = true, value = "Raz\u00E3o social pessoa jur\u00EDdica")
+  @ApiModelProperty(required = true, value = "Raz\u00E3o social")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -53,9 +53,9 @@ public class PessoaJuridicaPersist  {
 
   
   /**
-   * CGC(CNPJ) pessoa jur\u00EDdica
+   * CGC(CNPJ) da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(required = true, value = "CGC(CNPJ) pessoa jur\u00EDdica")
+  @ApiModelProperty(required = true, value = "CGC(CNPJ) da pessoa jur\u00EDdica")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -65,9 +65,9 @@ public class PessoaJuridicaPersist  {
 
   
   /**
-   * Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica
+   * Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -113,9 +113,9 @@ public class PessoaJuridicaPersist  {
 
   
   /**
-   * Conta corrente pessoa jur\u00EDdica
+   * Conta corrente da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Conta corrente pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Conta corrente da pessoa jur\u00EDdica")
   public String getContaCorrente() {
     return contaCorrente;
   }

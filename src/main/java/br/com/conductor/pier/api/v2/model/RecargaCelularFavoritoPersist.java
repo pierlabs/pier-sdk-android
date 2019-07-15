@@ -19,6 +19,8 @@ public class RecargaCelularFavoritoPersist  {
   private Boolean ativo = null;
   @SerializedName("nome")
   private String nome = null;
+  @SerializedName("descricaoOperadora")
+  private String descricaoOperadora = null;
 
   
   /**
@@ -69,6 +71,18 @@ public class RecargaCelularFavoritoPersist  {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da operadora")
+  public String getDescricaoOperadora() {
+    return descricaoOperadora;
+  }
+  public void setDescricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -79,6 +93,7 @@ public class RecargaCelularFavoritoPersist  {
     sb.append("  numeroCelular: ").append(numeroCelular).append("\n");
     sb.append("  ativo: ").append(ativo).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
+    sb.append("  descricaoOperadora: ").append(descricaoOperadora).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -60,6 +60,12 @@ public class PessoaDetalheResponse  {
   private Integer chequeEspecial = null;
   @SerializedName("numeroCnh")
   private String numeroCnh = null;
+  @SerializedName("pessoaPoliticamenteExposta")
+  private Boolean pessoaPoliticamenteExposta = null;
+  @SerializedName("patrimonioTotal")
+  private BigDecimal patrimonioTotal = null;
+  @SerializedName("nomeConjuge")
+  private String nomeConjuge = null;
 
   
   /**
@@ -350,6 +356,42 @@ public class PessoaDetalheResponse  {
   }
 
   
+  /**
+   * Flag para identificar se a pessoa \u00E9 politicamente exposta
+   **/
+  @ApiModelProperty(value = "Flag para identificar se a pessoa \u00E9 politicamente exposta")
+  public Boolean getPessoaPoliticamenteExposta() {
+    return pessoaPoliticamenteExposta;
+  }
+  public void setPessoaPoliticamenteExposta(Boolean pessoaPoliticamenteExposta) {
+    this.pessoaPoliticamenteExposta = pessoaPoliticamenteExposta;
+  }
+
+  
+  /**
+   * Patrim\u00F4nio total da pessoa
+   **/
+  @ApiModelProperty(value = "Patrim\u00F4nio total da pessoa")
+  public BigDecimal getPatrimonioTotal() {
+    return patrimonioTotal;
+  }
+  public void setPatrimonioTotal(BigDecimal patrimonioTotal) {
+    this.patrimonioTotal = patrimonioTotal;
+  }
+
+  
+  /**
+   * Nome do c\u00F4njuge da pessoa
+   **/
+  @ApiModelProperty(value = "Nome do c\u00F4njuge da pessoa")
+  public String getNomeConjuge() {
+    return nomeConjuge;
+  }
+  public void setNomeConjuge(String nomeConjuge) {
+    this.nomeConjuge = nomeConjuge;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -380,6 +422,9 @@ public class PessoaDetalheResponse  {
     sb.append("  nomePai: ").append(nomePai).append("\n");
     sb.append("  chequeEspecial: ").append(chequeEspecial).append("\n");
     sb.append("  numeroCnh: ").append(numeroCnh).append("\n");
+    sb.append("  pessoaPoliticamenteExposta: ").append(pessoaPoliticamenteExposta).append("\n");
+    sb.append("  patrimonioTotal: ").append(patrimonioTotal).append("\n");
+    sb.append("  nomeConjuge: ").append(nomeConjuge).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
+import java.math.BigDecimal;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -62,6 +63,18 @@ public class OperacaoBancariaParcialUpdate  {
   private String contaBeneficiario = null;
   @SerializedName("dvContaBeneficiario")
   private String dvContaBeneficiario = null;
+  @SerializedName("operadora")
+  private String operadora = null;
+  @SerializedName("celular")
+  private String celular = null;
+  @SerializedName("ddd")
+  private String ddd = null;
+  @SerializedName("dataRealizacao")
+  private String dataRealizacao = null;
+  @SerializedName("dataAgendamento")
+  private String dataAgendamento = null;
+  @SerializedName("valorOperacao")
+  private BigDecimal valorOperacao = null;
 
   
   /**
@@ -352,6 +365,78 @@ public class OperacaoBancariaParcialUpdate  {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da operadora do celular")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  @ApiModelProperty(value = "N\u00FAmero da operadora")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  @ApiModelProperty(value = "DDD do celular")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
+  /**
+   * Data e hora referente a realiza\u00E7\u00E3o da opera\u00E7\u00E3o
+   **/
+  @ApiModelProperty(value = "Data e hora referente a realiza\u00E7\u00E3o da opera\u00E7\u00E3o")
+  public String getDataRealizacao() {
+    return dataRealizacao;
+  }
+  public void setDataRealizacao(String dataRealizacao) {
+    this.dataRealizacao = dataRealizacao;
+  }
+
+  
+  /**
+   * Data e hora referente ao agendamento da opera\u00E7\u00E3o
+   **/
+  @ApiModelProperty(value = "Data e hora referente ao agendamento da opera\u00E7\u00E3o")
+  public String getDataAgendamento() {
+    return dataAgendamento;
+  }
+  public void setDataAgendamento(String dataAgendamento) {
+    this.dataAgendamento = dataAgendamento;
+  }
+
+  
+  /**
+   * Valor movimentado na opera\u00E7\u00E3o banc\u00E1ria
+   **/
+  @ApiModelProperty(value = "Valor movimentado na opera\u00E7\u00E3o banc\u00E1ria")
+  public BigDecimal getValorOperacao() {
+    return valorOperacao;
+  }
+  public void setValorOperacao(BigDecimal valorOperacao) {
+    this.valorOperacao = valorOperacao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -382,6 +467,12 @@ public class OperacaoBancariaParcialUpdate  {
     sb.append("  agenciaBeneficiario: ").append(agenciaBeneficiario).append("\n");
     sb.append("  contaBeneficiario: ").append(contaBeneficiario).append("\n");
     sb.append("  dvContaBeneficiario: ").append(dvContaBeneficiario).append("\n");
+    sb.append("  operadora: ").append(operadora).append("\n");
+    sb.append("  celular: ").append(celular).append("\n");
+    sb.append("  ddd: ").append(ddd).append("\n");
+    sb.append("  dataRealizacao: ").append(dataRealizacao).append("\n");
+    sb.append("  dataAgendamento: ").append(dataAgendamento).append("\n");
+    sb.append("  valorOperacao: ").append(valorOperacao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

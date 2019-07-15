@@ -15,6 +15,8 @@ public class RecargaCelularFavoritoResponse  {
   private Boolean ativo = null;
   @SerializedName("dddCelular")
   private String dddCelular = null;
+  @SerializedName("descricaoOperadora")
+  private String descricaoOperadora = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("idConta")
@@ -46,6 +48,18 @@ public class RecargaCelularFavoritoResponse  {
   }
   public void setDddCelular(String dddCelular) {
     this.dddCelular = dddCelular;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o da operadora
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da operadora")
+  public String getDescricaoOperadora() {
+    return descricaoOperadora;
+  }
+  public void setDescricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
   }
 
   
@@ -105,6 +119,7 @@ public class RecargaCelularFavoritoResponse  {
     
     sb.append("  ativo: ").append(ativo).append("\n");
     sb.append("  dddCelular: ").append(dddCelular).append("\n");
+    sb.append("  descricaoOperadora: ").append(descricaoOperadora).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
     sb.append("  nome: ").append(nome).append("\n");

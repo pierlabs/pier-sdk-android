@@ -12,6 +12,8 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Representa\u00E7\u00E3o de resposta do d\u00E9bito recorrente do portador")
 public class PortadorDebitoRecorrenteResponse  {
   
+  @SerializedName("dataFimDescontoAnuidade")
+  private String dataFimDescontoAnuidade = null;
   @SerializedName("dataHoraFim")
   private String dataHoraFim = null;
   @SerializedName("dataHoraInicio")
@@ -40,6 +42,18 @@ public class PortadorDebitoRecorrenteResponse  {
   private BigDecimal valorOriginal = null;
   @SerializedName("valorParcela")
   private BigDecimal valorParcela = null;
+
+  
+  /**
+   * Data referente ao final do desconto da anuidade
+   **/
+  @ApiModelProperty(value = "Data referente ao final do desconto da anuidade")
+  public String getDataFimDescontoAnuidade() {
+    return dataFimDescontoAnuidade;
+  }
+  public void setDataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+  }
 
   
   /**
@@ -216,6 +230,7 @@ public class PortadorDebitoRecorrenteResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class PortadorDebitoRecorrenteResponse {\n");
     
+    sb.append("  dataFimDescontoAnuidade: ").append(dataFimDescontoAnuidade).append("\n");
     sb.append("  dataHoraFim: ").append(dataHoraFim).append("\n");
     sb.append("  dataHoraInicio: ").append(dataHoraInicio).append("\n");
     sb.append("  flagCartaoDesbloqueado: ").append(flagCartaoDesbloqueado).append("\n");

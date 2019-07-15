@@ -100,9 +100,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update telefones escritorio cobranca
+   * Telefones de contato do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update telefones escritorio cobranca")
+  @ApiModelProperty(value = "Telefones de contato do escrit\u00F3rio de cobran\u00E7a")
   public List<TelefoneEscritorioCobrancaDTO> getTelefonesEscritoriosCobranca() {
     return telefonesEscritoriosCobranca;
   }
@@ -112,9 +112,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update nome credor
+   * Nome do credor
    **/
-  @ApiModelProperty(value = "Credor update nome credor")
+  @ApiModelProperty(value = "Nome do credor")
   public String getNomeCredor() {
     return nomeCredor;
   }
@@ -124,9 +124,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update pagamento semanal
+   * Dia do pagamento caso seja semanal
    **/
-  @ApiModelProperty(value = "Credor update pagamento semanal")
+  @ApiModelProperty(value = "Dia do pagamento caso seja semanal")
   public Integer getDiaPagamentoSemanal() {
     return diaPagamentoSemanal;
   }
@@ -136,9 +136,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update pagamento mensal
+   * Dia do pagamento caso seja mensal
    **/
-  @ApiModelProperty(value = "Credor update pagamento mensal")
+  @ApiModelProperty(value = "Dia do pagamento caso seja mensal")
   public Integer getDiaPagamentoMensal() {
     return diaPagamentoMensal;
   }
@@ -148,9 +148,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial primeiro
+   * Dia do primeiro pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial primeiro")
+  @ApiModelProperty(value = "Dia do primeiro pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialPrimeiro() {
     return diaPagamentoDecendialPrimeiro;
   }
@@ -160,9 +160,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial segundo
+   * Dia do segundo pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial segundo")
+  @ApiModelProperty(value = "Dia do segundo pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialSegundo() {
     return diaPagamentoDecendialSegundo;
   }
@@ -172,9 +172,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento decendial terceiro
+   * Dia do terceiro pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial terceiro")
+  @ApiModelProperty(value = "Dia do terceiro pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialTerceiro() {
     return diaPagamentoDecendialTerceiro;
   }
@@ -184,9 +184,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento quinzenal primeiro
+   * Dia do primeiro pagamento caso seja quinzenal
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal primeiro")
+  @ApiModelProperty(value = "Dia do primeiro pagamento caso seja quinzenal")
   public Integer getDiaPagamentoQuinzenalPrimeiro() {
     return diaPagamentoQuinzenalPrimeiro;
   }
@@ -196,9 +196,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor respone pagamento quinzenal segundo
+   * Dia do segundo pagamento caso seja quinzenal
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal segundo")
+  @ApiModelProperty(value = "Dia do segundo pagamento caso seja quinzenal")
   public Integer getDiaPagamentoQuinzenalSegundo() {
     return diaPagamentoQuinzenalSegundo;
   }
@@ -208,9 +208,9 @@ public class CredorUpdate  {
 
   
   /**
-   * credor update banco
+   * Banco do credor
    **/
-  @ApiModelProperty(value = "credor update banco")
+  @ApiModelProperty(value = "Banco do credor")
   public Integer getBanco() {
     return banco;
   }
@@ -220,9 +220,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update ag\u00EAncia
+   * Ag\u00EAncia do credor
    **/
-  @ApiModelProperty(value = "Credor update ag\u00EAncia")
+  @ApiModelProperty(value = "Ag\u00EAncia do credor")
   public Integer getAgencia() {
     return agencia;
   }
@@ -232,9 +232,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update d\u00EDgito ag\u00EAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "Credor update d\u00EDgito ag\u00EAncia")
+  @ApiModelProperty(value = "D\u00EDgito da ag\u00EAncia")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -244,9 +244,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update conta corrente
+   * Conta corrente do credor
    **/
-  @ApiModelProperty(value = "Credor update conta corrente")
+  @ApiModelProperty(value = "Conta corrente do credor")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -256,9 +256,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update d\u00EDgito conta corrente
+   * D\u00EDgito da conta corrente
    **/
-  @ApiModelProperty(value = "Credor update d\u00EDgito conta corrente")
+  @ApiModelProperty(value = "D\u00EDgito da conta corrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -268,9 +268,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update credor banco
+   * Banco credor
    **/
-  @ApiModelProperty(value = "Credor update credor banco")
+  @ApiModelProperty(value = "Banco credor")
   public Boolean getCredorBanco() {
     return credorBanco;
   }
@@ -280,9 +280,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update percentual rav
+   * Percentual RAV
    **/
-  @ApiModelProperty(required = true, value = "Credor update percentual rav")
+  @ApiModelProperty(required = true, value = "Percentual RAV")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
   }
@@ -292,9 +292,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update recebe rav
+   * Identifica se o credor tem um RAV associado, e seu tipo
    **/
-  @ApiModelProperty(value = "Credor update recebe rav")
+  @ApiModelProperty(value = "Identifica se o credor tem um RAV associado, e seu tipo")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
   }
@@ -304,9 +304,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update percentual multiplica
+   * Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV
    **/
-  @ApiModelProperty(value = "Credor update percentual multiplica")
+  @ApiModelProperty(value = "Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
   }
@@ -316,9 +316,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update taxa adm
+   * Taxa administrativa usada para gerar o valor do RAV
    **/
-  @ApiModelProperty(required = true, value = "Credor update taxa adm")
+  @ApiModelProperty(required = true, value = "Taxa administrativa usada para gerar o valor do RAV")
   public BigDecimal getTaxaAdministrativa() {
     return taxaAdministrativa;
   }
@@ -328,9 +328,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update taxa banco
+   * Taxa do banco RAV
    **/
-  @ApiModelProperty(value = "Credor update taxa banco")
+  @ApiModelProperty(value = "Taxa do banco RAV")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
   }
@@ -340,9 +340,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update limite rav
+   * Valor limite do RAV
    **/
-  @ApiModelProperty(value = "Credor update limite rav")
+  @ApiModelProperty(value = "Valor limite do RAV")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
   }
@@ -352,9 +352,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update id credor rav
+   * Identificador da RAV do credor
    **/
-  @ApiModelProperty(required = true, value = "Credor update id credor rav")
+  @ApiModelProperty(required = true, value = "Identificador da RAV do credor")
   public Long getIdCredorRAV() {
     return idCredorRAV;
   }
@@ -364,9 +364,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update periodicidade
+   * Periodicidade do pagamento
    **/
-  @ApiModelProperty(required = true, value = "Credor update periodicidade")
+  @ApiModelProperty(required = true, value = "Periodicidade do pagamento")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -376,9 +376,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update id pessoa juridica
+   * Identificador da pessoa jur\u00EDdica associada ao credor
    **/
-  @ApiModelProperty(required = true, value = "Credor update id pessoa juridica")
+  @ApiModelProperty(required = true, value = "Identificador da pessoa jur\u00EDdica associada ao credor")
   public Long getIdPessoaJuridica() {
     return idPessoaJuridica;
   }
@@ -388,9 +388,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag escritorio cobranca
+   * Flag para controle interno
    **/
-  @ApiModelProperty(value = "Credor update flag escritorio cobranca")
+  @ApiModelProperty(value = "Flag para controle interno")
   public Boolean getFlagEscritorioCobranca() {
     return flagEscritorioCobranca;
   }
@@ -400,9 +400,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update prefixo
+   * Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update prefixo")
+  @ApiModelProperty(value = "Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a")
   public String getPrefixo() {
     return prefixo;
   }
@@ -412,9 +412,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag ativo
+   * Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "Credor update flag ativo")
+  @ApiModelProperty(value = "Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -424,9 +424,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update contato
+   * Nome para contato no escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update contato")
+  @ApiModelProperty(value = "Nome para contato no escrit\u00F3rio de cobran\u00E7a")
   public String getNomeContato() {
     return nomeContato;
   }
@@ -436,9 +436,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update email
+   * Email do contato no escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update email")
+  @ApiModelProperty(value = "Email do contato no escrit\u00F3rio de cobran\u00E7a")
   public String getEmail() {
     return email;
   }
@@ -448,9 +448,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update logradouro
+   * Logradouro do credor
    **/
-  @ApiModelProperty(value = "Credor update logradouro")
+  @ApiModelProperty(value = "Logradouro do credor")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -460,9 +460,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update numero endereco
+   * N\u00FAmero do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update numero endereco")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o do credor")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -472,9 +472,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update complemento endereco
+   * Complemento do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update complemento endereco")
+  @ApiModelProperty(value = "Complemento do endere\u00E7o do credor")
   public String getComplementoEndereco() {
     return complementoEndereco;
   }
@@ -484,9 +484,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update bairro
+   * Bairro do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update bairro")
+  @ApiModelProperty(value = "Bairro do endere\u00E7o do credor")
   public String getBairro() {
     return bairro;
   }
@@ -496,9 +496,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update cidade
+   * Cidade do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update cidade")
+  @ApiModelProperty(value = "Cidade do endere\u00E7o do credor")
   public String getCidade() {
     return cidade;
   }
@@ -508,9 +508,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update cep
+   * CEP do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update cep")
+  @ApiModelProperty(value = "CEP do endere\u00E7o do credor")
   public String getCep() {
     return cep;
   }
@@ -520,9 +520,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update uf
+   * UF do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor update uf")
+  @ApiModelProperty(value = "UF do endere\u00E7o do credor")
   public String getUf() {
     return uf;
   }
@@ -532,9 +532,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update responsavel
+   * Respons\u00E1vel pelo credor
    **/
-  @ApiModelProperty(value = "Credor update responsavel")
+  @ApiModelProperty(value = "Respons\u00E1vel pelo credor")
   public String getResponsavel() {
     return responsavel;
   }
@@ -544,9 +544,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update flag segunda via acordo
+   * Identifica se h\u00E1 uma segunda via do acordo firmado
    **/
-  @ApiModelProperty(value = "Credor update flag segunda via acordo")
+  @ApiModelProperty(value = "Identifica se h\u00E1 uma segunda via do acordo firmado")
   public Integer getFlagSegundaViaAcordo() {
     return flagSegundaViaAcordo;
   }
@@ -556,9 +556,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update valor minimo parcela
+   * Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update valor minimo parcela")
+  @ApiModelProperty(value = "Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -568,9 +568,9 @@ public class CredorUpdate  {
 
   
   /**
-   * Credor update desconto maximo
+   * Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor update desconto maximo")
+  @ApiModelProperty(value = "Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a")
   public BigDecimal getDescontoMaximo() {
     return descontoMaximo;
   }

@@ -10,6 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.CredorResponse;
 import br.com.conductor.pier.api.v2.model.CredorUpdate;
+import br.com.conductor.pier.api.v2.model.PageCredorResponse;
 import br.com.conductor.pier.api.v2.model.CredorPersist;
 
 import org.apache.http.HttpEntity;
@@ -41,24 +42,24 @@ public class CredorApi {
 
   
   /**
-   * Credor resource alterar
-   * Credor resource alterar notes
+   * Alterar credor
+   * Permite a altera\u00E7\u00E3o de dados de um credor
    * @param id id
    * @param request request
    * @param login login
    * @return CredorResponse
    */
-  public CredorResponse  alterar (Long id, CredorUpdate request, String login) throws ApiException {
+  public CredorResponse  alterarCredor (Long id, CredorUpdate request, String login) throws ApiException {
     Object postBody = request;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarCredor");
     }
     
     // verify the required parameter 'request' is set
     if (request == null) {
-       throw new ApiException(400, "Missing the required parameter 'request' when calling alterar");
+       throw new ApiException(400, "Missing the required parameter 'request' when calling alterarCredor");
     }
     
 
@@ -109,17 +110,17 @@ public class CredorApi {
   }
   
   /**
-   * Credor resource consultar
-   * Credor resource consultar notes
+   * Consultar credor
+   * Permite a consulta de um credor a partir de seu identificador
    * @param id id
    * @return CredorResponse
    */
-  public CredorResponse  consultar (Long id) throws ApiException {
+  public CredorResponse  consultarCredor (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarCredor");
     }
     
 
@@ -168,23 +169,23 @@ public class CredorApi {
   }
   
   /**
-   * Credor resource listar
-   * Credor resource listar notes
+   * Listar credores
+   * Permite listar, filtrar ou ordenar credores
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
    * @param page P\u00E1gina
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param id credor request id
-   * @param nomeCredor Credor request nome credor
-   * @param banco credor request banco
-   * @param agencia Credor request ag\u00EAncia
-   * @param digitoAgencia Credor request d\u00EDgito ag\u00EAncia
-   * @param contaCorrente Credor request conta corrente
-   * @param digitoContaCorrente Credor request d\u00EDgito conta corrente
-   * @param credorBanco Credor request credor banco
-   * @param idPessoaJuridica Credor request id pessoa juridica
-   * @return CredorResponse
+   * @param id Identificador do credor
+   * @param nomeCredor Nome do redor
+   * @param banco Banco do credor
+   * @param agencia Ag\u00EAncia do credor
+   * @param digitoAgencia Digito da ag\u00EAncia
+   * @param contaCorrente Conta corrente do credor
+   * @param digitoContaCorrente Digito da conta corrente
+   * @param credorBanco Flag de controle interno
+   * @param idPessoaJuridica Identificador da pessoa jur\u00EDdica associada ao credor
+   * @return PageCredorResponse
    */
-  public CredorResponse  listarCredor (List<String> sort, Integer page, Integer limit, Long id, String nomeCredor, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, Boolean credorBanco, Long idPessoaJuridica) throws ApiException {
+  public PageCredorResponse  listarCredores (List<String> sort, Integer page, Integer limit, Long id, String nomeCredor, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, Boolean credorBanco, Long idPessoaJuridica) throws ApiException {
     Object postBody = null;
     
 
@@ -246,7 +247,7 @@ public class CredorApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (CredorResponse) ApiInvoker.deserialize(response, "", CredorResponse.class);
+        return (PageCredorResponse) ApiInvoker.deserialize(response, "", PageCredorResponse.class);
       }
       else {
         return null;
@@ -257,18 +258,18 @@ public class CredorApi {
   }
   
   /**
-   * Credor resource salvar
-   * Credor resource salvar notes
+   * Salvar credor
+   * Permite a persist\u00EAncias de um novo credor
    * @param credorPersist credorPersist
    * @param login login
    * @return CredorResponse
    */
-  public CredorResponse  salvar (CredorPersist credorPersist, String login) throws ApiException {
+  public CredorResponse  salvarCredor (CredorPersist credorPersist, String login) throws ApiException {
     Object postBody = credorPersist;
     
     // verify the required parameter 'credorPersist' is set
     if (credorPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'credorPersist' when calling salvar");
+       throw new ApiException(400, "Missing the required parameter 'credorPersist' when calling salvarCredor");
     }
     
 

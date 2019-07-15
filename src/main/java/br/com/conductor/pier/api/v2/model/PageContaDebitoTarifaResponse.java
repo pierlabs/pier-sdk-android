@@ -1,17 +1,20 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.ClasseParcelaAgendamentoResponse;
+import br.com.conductor.pier.api.v2.model.ContaDebitoTarifaResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-@ApiModel(description = "")
-public class PageParcelaAgendamentoResponse  {
+/**
+ * Lista de tarifas de d\u00E9bito da conta
+ **/
+@ApiModel(description = "Lista de tarifas de d\u00E9bito da conta")
+public class PageContaDebitoTarifaResponse  {
   
   @SerializedName("content")
-  private List<ClasseParcelaAgendamentoResponse> content = null;
+  private List<ContaDebitoTarifaResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -43,10 +46,10 @@ public class PageParcelaAgendamentoResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<ClasseParcelaAgendamentoResponse> getContent() {
+  public List<ContaDebitoTarifaResponse> getContent() {
     return content;
   }
-  public void setContent(List<ClasseParcelaAgendamentoResponse> content) {
+  public void setContent(List<ContaDebitoTarifaResponse> content) {
     this.content = content;
   }
 
@@ -198,7 +201,7 @@ public class PageParcelaAgendamentoResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageParcelaAgendamentoResponse {\n");
+    sb.append("class PageContaDebitoTarifaResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

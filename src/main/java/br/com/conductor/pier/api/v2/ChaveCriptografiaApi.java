@@ -98,12 +98,12 @@ public class ChaveCriptografiaApi {
    * @param chaveCriptografiaRequest chaveCriptografiaRequest
    * @return ChaveCriptografiaResponse
    */
-  public ChaveCriptografiaResponse  descriptografar (ChaveCriptografiaRequest chaveCriptografiaRequest) throws ApiException {
+  public ChaveCriptografiaResponse  descriptografarChave (ChaveCriptografiaRequest chaveCriptografiaRequest) throws ApiException {
     Object postBody = chaveCriptografiaRequest;
     
     // verify the required parameter 'chaveCriptografiaRequest' is set
     if (chaveCriptografiaRequest == null) {
-       throw new ApiException(400, "Missing the required parameter 'chaveCriptografiaRequest' when calling descriptografar");
+       throw new ApiException(400, "Missing the required parameter 'chaveCriptografiaRequest' when calling descriptografarChave");
     }
     
 

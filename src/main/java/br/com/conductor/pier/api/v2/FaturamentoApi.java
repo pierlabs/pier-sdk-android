@@ -10,10 +10,10 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoPersist;
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoResponse;
-import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaPersist;
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoFaturamentoPorContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoFaturamentoResponse;
+import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaPersist;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -97,124 +97,6 @@ public class FaturamentoApi {
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TipoFaturamentoResponse) ApiInvoker.deserialize(response, "", TipoFaturamentoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
-   * Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica
-   * @param tipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist
-   * @return TipoFaturamentoPorContaResponse
-   */
-  public TipoFaturamentoPorContaResponse  cadastrarFaturamentoPorConta (TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist) throws ApiException {
-    Object postBody = tipoFaturamentoPorContaPersist;
-    
-    // verify the required parameter 'tipoFaturamentoPorContaPersist' is set
-    if (tipoFaturamentoPorContaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPorContaPersist' when calling cadastrarFaturamentoPorConta");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/tipos-faturamento-conta".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TipoFaturamentoPorContaResponse) ApiInvoker.deserialize(response, "", TipoFaturamentoPorContaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Adiciona um novo faturamento
-   * Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
-   * @param tipoFaturamentoPersist tipoFaturamentoPersist
-   * @return TipoFaturamentoResponse
-   */
-  public TipoFaturamentoResponse  cadastrarTipoFaturamento (TipoFaturamentoPersist tipoFaturamentoPersist) throws ApiException {
-    Object postBody = tipoFaturamentoPersist;
-    
-    // verify the required parameter 'tipoFaturamentoPersist' is set
-    if (tipoFaturamentoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPersist' when calling cadastrarTipoFaturamento");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/tipos-faturamento".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TipoFaturamentoResponse) ApiInvoker.deserialize(response, "", TipoFaturamentoResponse.class);
       }
@@ -418,7 +300,7 @@ public class FaturamentoApi {
    * @param modificadoPor Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro
    * @return PageTipoFaturamentoPorContaResponse
    */
-  public PageTipoFaturamentoPorContaResponse  listarFaturamentoPorConta (List<String> sort, Integer page, Integer limit, Long idTipoFaturamentoPorConta, Boolean ativo, Long idConta, Long idTipoFaturamento, String dataHoraInclusao, String dataHoraCancelamento, String modificadoPor) throws ApiException {
+  public PageTipoFaturamentoPorContaResponse  listarFaturamentosPorConta (List<String> sort, Integer page, Integer limit, Long idTipoFaturamentoPorConta, Boolean ativo, Long idConta, Long idTipoFaturamento, String dataHoraInclusao, String dataHoraCancelamento, String modificadoPor) throws ApiException {
     Object postBody = null;
     
 
@@ -498,7 +380,7 @@ public class FaturamentoApi {
    * @param idConvenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento
    * @return PageTipoFaturamentoResponse
    */
-  public PageTipoFaturamentoResponse  listarTipoFaturamento (List<String> sort, Integer page, Integer limit, Long idTipoFaturamento, String descricao, Boolean flagApenasDemonstrativo, Long idConvenio) throws ApiException {
+  public PageTipoFaturamentoResponse  listarTiposFaturamentos (List<String> sort, Integer page, Integer limit, Long idTipoFaturamento, String descricao, Boolean flagApenasDemonstrativo, Long idConvenio) throws ApiException {
     Object postBody = null;
     
 
@@ -551,6 +433,124 @@ public class FaturamentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageTipoFaturamentoResponse) ApiInvoker.deserialize(response, "", PageTipoFaturamentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
+   * Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica
+   * @param tipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist
+   * @return TipoFaturamentoPorContaResponse
+   */
+  public TipoFaturamentoPorContaResponse  salvarFaturamentoPorConta (TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist) throws ApiException {
+    Object postBody = tipoFaturamentoPorContaPersist;
+    
+    // verify the required parameter 'tipoFaturamentoPorContaPersist' is set
+    if (tipoFaturamentoPorContaPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPorContaPersist' when calling salvarFaturamentoPorConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-faturamento-conta".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoFaturamentoPorContaResponse) ApiInvoker.deserialize(response, "", TipoFaturamentoPorContaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Adiciona um novo faturamento
+   * Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
+   * @param tipoFaturamentoPersist tipoFaturamentoPersist
+   * @return TipoFaturamentoResponse
+   */
+  public TipoFaturamentoResponse  salvarTipoFaturamento (TipoFaturamentoPersist tipoFaturamentoPersist) throws ApiException {
+    Object postBody = tipoFaturamentoPersist;
+    
+    // verify the required parameter 'tipoFaturamentoPersist' is set
+    if (tipoFaturamentoPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPersist' when calling salvarTipoFaturamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/tipos-faturamento".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TipoFaturamentoResponse) ApiInvoker.deserialize(response, "", TipoFaturamentoResponse.class);
       }
       else {
         return null;

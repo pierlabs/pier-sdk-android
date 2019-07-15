@@ -50,12 +50,12 @@ public class ArquivoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse  consultar (Long id) throws ApiException {
+  public ArquivoDetalheResponse  consultarArquivo (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarArquivo");
     }
     
 
@@ -109,12 +109,12 @@ public class ArquivoApi {
    * @param integrarArquivoRequest integrarArquivoRequest
    * @return Object
    */
-  public Object  integrar (IntegrarArquivoRequest integrarArquivoRequest) throws ApiException {
+  public Object  integrarArquivos (IntegrarArquivoRequest integrarArquivoRequest) throws ApiException {
     Object postBody = integrarArquivoRequest;
     
     // verify the required parameter 'integrarArquivoRequest' is set
     if (integrarArquivoRequest == null) {
-       throw new ApiException(400, "Missing the required parameter 'integrarArquivoRequest' when calling integrar");
+       throw new ApiException(400, "Missing the required parameter 'integrarArquivoRequest' when calling integrarArquivos");
     }
     
 
@@ -174,7 +174,7 @@ public class ArquivoApi {
    * @param extensao Extens\u00E3o do arquivo
    * @return PageArquivoResponse
    */
-  public PageArquivoResponse  listar (List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageArquivoResponse  listarArquivos (List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
     Object postBody = null;
     
 
@@ -244,12 +244,12 @@ public class ArquivoApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageArquivoAUDResponse
    */
-  public PageArquivoAUDResponse  listarPorNumeroReceitaFederal (String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
+  public PageArquivoAUDResponse  listarAuditorias (String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'numeroReceitaFederal' is set
     if (numeroReceitaFederal == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarPorNumeroReceitaFederal");
+       throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarAuditorias");
     }
     
 
@@ -265,6 +265,71 @@ public class ArquivoApi {
 
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageArquivoAUDResponse) ApiInvoker.deserialize(response, "", PageArquivoAUDResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista as auditorias do arquivo
+   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
+   * @param page P\u00E1gina solicitada (Default =0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @return PageArquivoAUDResponse
+   */
+  public PageArquivoAUDResponse  listarAuditoriasDeArquivo (Long id, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarAuditoriasDeArquivo");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
     
@@ -440,82 +505,17 @@ public class ArquivoApi {
   }
   
   /**
-   * Lista as auditorias do arquivo
-   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
-   * @param page P\u00E1gina solicitada (Default =0)
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
-   * @return PageArquivoAUDResponse
-   */
-  public PageArquivoAUDResponse  listar_1 (Long id, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listar_1");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageArquivoAUDResponse) ApiInvoker.deserialize(response, "", PageArquivoAUDResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Permite armazenar arquivos no PIER Cloud
    * Este recurso permite o armazenamento de arquivos no PIER Cloud
    * @param arquivoPersist arquivoPersist
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse  salvar (ArquivoPersist arquivoPersist) throws ApiException {
+  public ArquivoDetalheResponse  salvarArquivo (ArquivoPersist arquivoPersist) throws ApiException {
     Object postBody = arquivoPersist;
     
     // verify the required parameter 'arquivoPersist' is set
     if (arquivoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'arquivoPersist' when calling salvar");
+       throw new ApiException(400, "Missing the required parameter 'arquivoPersist' when calling salvarArquivo");
     }
     
 

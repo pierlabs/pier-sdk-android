@@ -8,16 +8,16 @@ import br.com.conductor.pier.api.v2.model.*;
 
 import java.util.*;
 
-import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoResponse;
-import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoUpdate;
+import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoResponse;
+import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.ControleCartaoGrupoMCCResponse;
-import br.com.conductor.pier.api.v2.model.PageControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoControleCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageControleCartaoGrupoMCCResponse;
-import br.com.conductor.pier.api.v2.model.ControleLimitesCartaoPersist;
+import br.com.conductor.pier.api.v2.model.PageControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoPersist;
+import br.com.conductor.pier.api.v2.model.ControleLimitesCartaoPersist;
 import br.com.conductor.pier.api.v2.model.ControleCartaoGrupoMCCPersist;
 
 import org.apache.http.HttpEntity;
@@ -47,77 +47,6 @@ public class ControleCartaoApi {
     return basePath;
   }
 
-  
-  /**
-   * Altera um controle de limites de um cart\u00E3o
-   * Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
-   * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
-   * @param controleLimitesCartaoUpdate controleLimitesCartaoUpdate
-   * @return ControleLimiteCartaoResponse
-   */
-  public ControleLimiteCartaoResponse  alterar (Long id, Long idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate) throws ApiException {
-    Object postBody = controleLimitesCartaoUpdate;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
-    }
-    
-    // verify the required parameter 'idControleLimite' is set
-    if (idControleLimite == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling alterar");
-    }
-    
-    // verify the required parameter 'controleLimitesCartaoUpdate' is set
-    if (controleLimitesCartaoUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'controleLimitesCartaoUpdate' when calling alterar");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/{id}/controles-limites/{idControleLimite}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleLimite" + "\\}", apiInvoker.escapeString(idControleLimite.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
   
   /**
    * Altera qualquer parte do log de configura\u00E7\u00E3o
@@ -191,23 +120,94 @@ public class ControleCartaoApi {
   }
   
   /**
+   * Altera um controle de limites de um cart\u00E3o
+   * Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
+   * @param controleLimitesCartaoUpdate controleLimitesCartaoUpdate
+   * @return ControleLimiteCartaoResponse
+   */
+  public ControleLimiteCartaoResponse  alterarControleDeLimite (Long id, Long idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate) throws ApiException {
+    Object postBody = controleLimitesCartaoUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarControleDeLimite");
+    }
+    
+    // verify the required parameter 'idControleLimite' is set
+    if (idControleLimite == null) {
+       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling alterarControleDeLimite");
+    }
+    
+    // verify the required parameter 'controleLimitesCartaoUpdate' is set
+    if (controleLimitesCartaoUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'controleLimitesCartaoUpdate' when calling alterarControleDeLimite");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-limites/{idControleLimite}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleLimite" + "\\}", apiInvoker.escapeString(idControleLimite.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PATCH", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Ativa um controle de limites de um cart\u00E3o
    * Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
    * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
    * @return ControleLimiteCartaoResponse
    */
-  public ControleLimiteCartaoResponse  ativarControleLimiteCartao (Long id, Long idControleLimite) throws ApiException {
+  public ControleLimiteCartaoResponse  ativarControleDeLimite (Long id, Long idControleLimite) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling ativarControleLimiteCartao");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling ativarControleDeLimite");
     }
     
     // verify the required parameter 'idControleLimite' is set
     if (idControleLimite == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling ativarControleLimiteCartao");
+       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling ativarControleDeLimite");
     }
     
 
@@ -244,71 +244,6 @@ public class ControleCartaoApi {
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Apresenta o controle de limites do cart\u00E3o
-   * Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
-   * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
-   * @return ControleLimiteCartaoResponse
-   */
-  public ControleLimiteCartaoResponse  consultar (Long id, Long idControleLimite) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
-    }
-    
-    // verify the required parameter 'idControleLimite' is set
-    if (idControleLimite == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling consultar");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/{id}/controles-limites/{idControleLimite}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleLimite" + "\\}", apiInvoker.escapeString(idControleLimite.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
       }
@@ -386,23 +321,88 @@ public class ControleCartaoApi {
   }
   
   /**
+   * Apresenta o controle de limites do cart\u00E3o
+   * Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
+   * @return ControleLimiteCartaoResponse
+   */
+  public ControleLimiteCartaoResponse  consultarControleDeLimite (Long id, Long idControleLimite) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarControleDeLimite");
+    }
+    
+    // verify the required parameter 'idControleLimite' is set
+    if (idControleLimite == null) {
+       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling consultarControleDeLimite");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-limites/{idControleLimite}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idControleLimite" + "\\}", apiInvoker.escapeString(idControleLimite.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
    * Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
    * @param id C\u00F3digo de controle de grupo MCC do cart\u00E3o.
    * @param idControleCartaoGrupoMCC idControleCartaoGrupoMCC
    * @return ControleCartaoGrupoMCCResponse
    */
-  public ControleCartaoGrupoMCCResponse  consultarControleGrupoMccCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
+  public ControleCartaoGrupoMCCResponse  consultarControleGrupoMCCPorCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarControleGrupoMCCPorCartao");
     }
     
     // verify the required parameter 'idControleCartaoGrupoMCC' is set
     if (idControleCartaoGrupoMCC == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling consultarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling consultarControleGrupoMCCPorCartao");
     }
     
 
@@ -522,17 +522,17 @@ public class ControleCartaoApi {
    * @param idControleCartaoGrupoMCC idControleCartaoGrupoMCC
    * @return ControleCartaoGrupoMCCResponse
    */
-  public ControleCartaoGrupoMCCResponse  deletarControleGrupoMccCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
+  public ControleCartaoGrupoMCCResponse  deletarControleGrupoMCCPorCartao (Long id, Long idControleCartaoGrupoMCC) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarControleGrupoMCCPorCartao");
     }
     
     // verify the required parameter 'idControleCartaoGrupoMCC' is set
     if (idControleCartaoGrupoMCC == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling deletarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'idControleCartaoGrupoMCC' when calling deletarControleGrupoMCCPorCartao");
     }
     
 
@@ -587,17 +587,17 @@ public class ControleCartaoApi {
    * @param idControleLimite C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)
    * @return ControleLimiteCartaoResponse
    */
-  public ControleLimiteCartaoResponse  desativarControleLimiteCartao (Long id, Long idControleLimite) throws ApiException {
+  public ControleLimiteCartaoResponse  desativarControleDeLimite (Long id, Long idControleLimite) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling desativarControleLimiteCartao");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling desativarControleDeLimite");
     }
     
     // verify the required parameter 'idControleLimite' is set
     if (idControleLimite == null) {
-       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling desativarControleLimiteCartao");
+       throw new ApiException(400, "Missing the required parameter 'idControleLimite' when calling desativarControleDeLimite");
     }
     
 
@@ -636,71 +636,6 @@ public class ControleCartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Lista o controle de limites dos cart\u00F5es
-   * Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param idCartao Id do cart\u00E3o
-   * @return PageControleLimiteCartaoResponse
-   */
-  public PageControleLimiteCartaoResponse  listar (List<String> sort, Integer page, Integer limit, Long idCartao) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/cartoes/controles-limites".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", PageControleLimiteCartaoResponse.class);
       }
       else {
         return null;
@@ -797,7 +732,7 @@ public class ControleCartaoApi {
    * @param idGrupoMCC C\u00F3digo Identificador do grupo mcc na base.
    * @return PageControleCartaoGrupoMCCResponse
    */
-  public PageControleCartaoGrupoMCCResponse  listarControleGrupoMccCartao (List<String> sort, Integer page, Integer limit, Long idCartao, Long idGrupoMCC) throws ApiException {
+  public PageControleCartaoGrupoMCCResponse  listarControleGrupoMCCPorCartao (List<String> sort, Integer page, Integer limit, Long idCartao, Long idGrupoMCC) throws ApiException {
     Object postBody = null;
     
 
@@ -856,28 +791,20 @@ public class ControleCartaoApi {
   }
   
   /**
-   * Cadastra um controle de limites para um cart\u00E3o
-   * Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
-   * @param controleLimitesCartaoPersist controleLimitesCartaoPersist
-   * @return ControleLimiteCartaoResponse
+   * Lista o controle de limites dos cart\u00F5es
+   * Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idCartao Id do cart\u00E3o
+   * @return PageControleLimiteCartaoResponse
    */
-  public ControleLimiteCartaoResponse  salvar (Long id, ControleLimitesCartaoPersist controleLimitesCartaoPersist) throws ApiException {
-    Object postBody = controleLimitesCartaoPersist;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling salvar");
-    }
-    
-    // verify the required parameter 'controleLimitesCartaoPersist' is set
-    if (controleLimitesCartaoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'controleLimitesCartaoPersist' when calling salvar");
-    }
+  public PageControleLimiteCartaoResponse  listarControlesDeLimites (List<String> sort, Integer page, Integer limit, Long idCartao) throws ApiException {
+    Object postBody = null;
     
 
     // create path and map variables
-    String path = "/api/cartoes/{id}/controles-limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/cartoes/controles-limites".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -886,6 +813,14 @@ public class ControleCartaoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
     
 
     
@@ -908,9 +843,9 @@ public class ControleCartaoApi {
     }
 
     try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
+        return (PageControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", PageControleLimiteCartaoResponse.class);
       }
       else {
         return null;
@@ -986,23 +921,88 @@ public class ControleCartaoApi {
   }
   
   /**
+   * Cadastra um controle de limites para um cart\u00E3o
+   * Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * @param controleLimitesCartaoPersist controleLimitesCartaoPersist
+   * @return ControleLimiteCartaoResponse
+   */
+  public ControleLimiteCartaoResponse  salvarControleDeLimite (Long id, ControleLimitesCartaoPersist controleLimitesCartaoPersist) throws ApiException {
+    Object postBody = controleLimitesCartaoPersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarControleDeLimite");
+    }
+    
+    // verify the required parameter 'controleLimitesCartaoPersist' is set
+    if (controleLimitesCartaoPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'controleLimitesCartaoPersist' when calling salvarControleDeLimite");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/controles-limites".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ControleLimiteCartaoResponse) ApiInvoker.deserialize(response, "", ControleLimiteCartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Registra o grupo mcc ao cart\u00E3o.
    * Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
    * @param id id
    * @param controleCartaoMCCPersist controleCartaoMCCPersist
    * @return ControleCartaoGrupoMCCResponse
    */
-  public ControleCartaoGrupoMCCResponse  salvarControleGrupoMccCartao (Long id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist) throws ApiException {
+  public ControleCartaoGrupoMCCResponse  salvarControleGrupoMCCPorCartao (Long id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist) throws ApiException {
     Object postBody = controleCartaoMCCPersist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarControleGrupoMCCPorCartao");
     }
     
     // verify the required parameter 'controleCartaoMCCPersist' is set
     if (controleCartaoMCCPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'controleCartaoMCCPersist' when calling salvarControleGrupoMccCartao");
+       throw new ApiException(400, "Missing the required parameter 'controleCartaoMCCPersist' when calling salvarControleGrupoMCCPorCartao");
     }
     
 

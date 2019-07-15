@@ -12,17 +12,17 @@ import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorUpdate;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorResponse;
 import br.com.conductor.pier.api.v2.model.TaxaJurosContaUpdate;
 import br.com.conductor.pier.api.v2.model.TaxaJurosContaResponse;
-import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
+import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaBancariaPortadorResponse;
-import br.com.conductor.pier.api.v2.model.PageTransferenciaCreditoContaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransferenciaCreditoContaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorPersist;
 import br.com.conductor.pier.api.v2.model.TaxaTaxaJurosConta;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentoTransferenciaCreditoContaBancariaRequest;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentoTransferenciaCreditoContaBancariaResponse;
-import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaPersist;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
+import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaPersist;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -59,17 +59,17 @@ public class TransferenciaBancariaApi {
    * @param update update
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse  atualizar (Long id, ContaBancariaPortadorUpdate update) throws ApiException {
+  public ContaBancariaPortadorResponse  atualizarContaBancariaPortador (Long id, ContaBancariaPortadorUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarContaBancariaPortador");
     }
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarContaBancariaPortador");
     }
     
 
@@ -124,17 +124,17 @@ public class TransferenciaBancariaApi {
    * @param update update
    * @return TaxaJurosContaResponse
    */
-  public TaxaJurosContaResponse  atualizarTaxasJurosContas (Long id, TaxaJurosContaUpdate update) throws ApiException {
+  public TaxaJurosContaResponse  atualizarTaxasTransferencias (Long id, TaxaJurosContaUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarTaxasTransferencias");
     }
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarTaxasTransferencias");
     }
     
 
@@ -247,12 +247,12 @@ public class TransferenciaBancariaApi {
    * @param idTransferencia Id Transfer\u00EAncia
    * @return String
    */
-  public String  confirmarTransferenciaCreditoContaBancaria (Long idTransferencia) throws ApiException {
+  public String  confirmarTransferenciaCreditoEntreContasBancarias (Long idTransferencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling confirmarTransferenciaCreditoContaBancaria");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling confirmarTransferenciaCreditoEntreContasBancarias");
     }
     
 
@@ -306,12 +306,12 @@ public class TransferenciaBancariaApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id)
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse  consultar (Long id) throws ApiException {
+  public ContaBancariaPortadorResponse  consultarContaBancariaPortador (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarContaBancariaPortador");
     }
     
 
@@ -366,17 +366,17 @@ public class TransferenciaBancariaApi {
    * @param numeroMesesCarencia numeroMesesCarencia
    * @return TaxaJurosContaResponse
    */
-  public TaxaJurosContaResponse  consultarTaxasJurosContas (Long id, Integer numeroMesesCarencia) throws ApiException {
+  public TaxaJurosContaResponse  consultarTaxaTransferencia (Long id, Integer numeroMesesCarencia) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxaTransferencia");
     }
     
     // verify the required parameter 'numeroMesesCarencia' is set
     if (numeroMesesCarencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'numeroMesesCarencia' when calling consultarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'numeroMesesCarencia' when calling consultarTaxaTransferencia");
     }
     
 
@@ -427,65 +427,6 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
-   * Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta
-   * @param idTransferencia Id Transfer\u00EAncia
-   * @return TransferenciaCreditoContaBancariaResponse
-   */
-  public TransferenciaCreditoContaBancariaResponse  consultarTransferenciaBancaria (Long idTransferencia) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idTransferencia' is set
-    if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarTransferenciaBancaria");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idTransferencia" + "\\}", apiInvoker.escapeString(idTransferencia.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TransferenciaCreditoContaBancariaResponse) ApiInvoker.deserialize(response, "", TransferenciaCreditoContaBancariaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
    * Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas
    * @param id Id Conta
@@ -493,17 +434,17 @@ public class TransferenciaBancariaApi {
    * @param idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse  consultar_1 (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse  consultarTransferenciaCreditoContasBancarias (Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_1");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTransferenciaCreditoContasBancarias");
     }
     
     // verify the required parameter 'idTransferencia' is set
     if (idTransferencia == null) {
-       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultar_1");
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarTransferenciaCreditoContasBancarias");
     }
     
 
@@ -554,6 +495,65 @@ public class TransferenciaBancariaApi {
   }
   
   /**
+   * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+   * Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta
+   * @param idTransferencia Id Transfer\u00EAncia
+   * @return TransferenciaCreditoContaBancariaResponse
+   */
+  public TransferenciaCreditoContaBancariaResponse  consultarTransferenciaCreditoEntreContasBancarias (Long idTransferencia) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idTransferencia' is set
+    if (idTransferencia == null) {
+       throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarTransferenciaCreditoEntreContasBancarias");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idTransferencia" + "\\}", apiInvoker.escapeString(idTransferencia.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransferenciaCreditoContaBancariaResponse) ApiInvoker.deserialize(response, "", TransferenciaCreditoContaBancariaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista contas banc\u00E1rias portador
    * Esse recurso permite listar contas banc\u00E1rias do portador
    * @param idConta C\u00F3digo identificador da conta cart\u00E3o
@@ -571,7 +571,7 @@ public class TransferenciaBancariaApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
    * @return PageContaBancariaPortadorResponse
    */
-  public PageContaBancariaPortadorResponse  listar (Long idConta, String nomeAgencia, Long banco, String numeroAgencia, String numeroConta, Integer flagAtivo, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageContaBancariaPortadorResponse  listarContasBancariasPortadores (Long idConta, String nomeAgencia, Long banco, String numeroAgencia, String numeroConta, Integer flagAtivo, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
 
@@ -646,6 +646,77 @@ public class TransferenciaBancariaApi {
   }
   
   /**
+   * Listar as transfer\u00EAncias banc\u00E1rias realizadas
+   * Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados
+   * @param id Id Conta
+   * @param idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PageTransferenciaBancariaResponse
+   */
+  public PageTransferenciaBancariaResponse  listarTransferenciasCreditoContasBancarias (Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransferenciasCreditoContasBancarias");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_conta_bancaria_destino", idContaBancariaDestino));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageTransferenciaBancariaResponse) ApiInvoker.deserialize(response, "", PageTransferenciaBancariaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
    * Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -657,7 +728,7 @@ public class TransferenciaBancariaApi {
    * @param status C\u00F3digo do status do processamento
    * @return PageTransferenciaCreditoContaBancariaResponse
    */
-  public PageTransferenciaCreditoContaBancariaResponse  listarTransferenciaBancaria (List<String> sort, Integer page, Integer limit, Long idConta, String dataSolicitacaoInicial, String dataSolicitacaoFinal, Integer status) throws ApiException {
+  public PageTransferenciaCreditoContaBancariaResponse  listarTransferenciasCreditoEntreContasBancarias (List<String> sort, Integer page, Integer limit, Long idConta, String dataSolicitacaoInicial, String dataSolicitacaoFinal, Integer status) throws ApiException {
     Object postBody = null;
     
 
@@ -720,88 +791,17 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Listar as transfer\u00EAncias banc\u00E1rias realizadas
-   * Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados
-   * @param id Id Conta
-   * @param idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageTransferenciaBancariaResponse
-   */
-  public PageTransferenciaBancariaResponse  listar_2 (Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listar_2");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "id_conta_bancaria_destino", idContaBancariaDestino));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageTransferenciaBancariaResponse) ApiInvoker.deserialize(response, "", PageTransferenciaBancariaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Cadastra uma conta banc\u00E1ria do portador
    * Esse recurso permite cadastrar contas banc\u00E1rias do portador
    * @param persist persist
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse  salvar (ContaBancariaPortadorPersist persist) throws ApiException {
+  public ContaBancariaPortadorResponse  salvarContaBancariaPortador (ContaBancariaPortadorPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvar");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarContaBancariaPortador");
     }
     
 
@@ -856,17 +856,17 @@ public class TransferenciaBancariaApi {
    * @param persist persist
    * @return TaxaJurosContaResponse
    */
-  public TaxaJurosContaResponse  salvarTaxasJurosContas (Long id, TaxaTaxaJurosConta persist) throws ApiException {
+  public TaxaJurosContaResponse  salvarTaxasTransferencias (Long id, TaxaTaxaJurosConta persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling salvarTaxasTransferencias");
     }
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarTaxasJurosContas");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarTaxasTransferencias");
     }
     
 
@@ -920,12 +920,12 @@ public class TransferenciaBancariaApi {
    * @param request request
    * @return PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
    */
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  simularTransferenciaBancaria (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request) throws ApiException {
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse  simularTransferenciaCreditoEntreContasBancarias (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest request) throws ApiException {
     Object postBody = request;
     
     // verify the required parameter 'request' is set
     if (request == null) {
-       throw new ApiException(400, "Missing the required parameter 'request' when calling simularTransferenciaBancaria");
+       throw new ApiException(400, "Missing the required parameter 'request' when calling simularTransferenciaCreditoEntreContasBancarias");
     }
     
 
@@ -976,80 +976,21 @@ public class TransferenciaBancariaApi {
   /**
    * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
    * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino
-   * @param persist persist
-   * @return TransferenciaCreditoContaBancariaResponse
-   */
-  public TransferenciaCreditoContaBancariaResponse  transferenciaCreditoContaBancaria (TransferenciaCreditoContaBancariaPersist persist) throws ApiException {
-    Object postBody = persist;
-    
-    // verify the required parameter 'persist' is set
-    if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling transferenciaCreditoContaBancaria");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (TransferenciaCreditoContaBancariaResponse) ApiInvoker.deserialize(response, "", TransferenciaCreditoContaBancariaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
-   * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino
    * @param id Id Conta
    * @param transferenciaBancariaPersist transferenciaBancariaPersist
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse  transferir (Long id, TransferenciaBancariaPersist transferenciaBancariaPersist) throws ApiException {
+  public TransferenciaBancariaResponse  transferirCreditoEntreContasBancarias (Long id, TransferenciaBancariaPersist transferenciaBancariaPersist) throws ApiException {
     Object postBody = transferenciaBancariaPersist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling transferir");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling transferirCreditoEntreContasBancarias");
     }
     
     // verify the required parameter 'transferenciaBancariaPersist' is set
     if (transferenciaBancariaPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'transferenciaBancariaPersist' when calling transferir");
+       throw new ApiException(400, "Missing the required parameter 'transferenciaBancariaPersist' when calling transferirCreditoEntreContasBancarias");
     }
     
 
@@ -1088,6 +1029,65 @@ public class TransferenciaBancariaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TransferenciaBancariaResponse) ApiInvoker.deserialize(response, "", TransferenciaBancariaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+   * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino
+   * @param persist persist
+   * @return TransferenciaCreditoContaBancariaResponse
+   */
+  public TransferenciaCreditoContaBancariaResponse  transferirParaContaBancaria (TransferenciaCreditoContaBancariaPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling transferirParaContaBancaria");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransferenciaCreditoContaBancariaResponse) ApiInvoker.deserialize(response, "", TransferenciaCreditoContaBancariaResponse.class);
       }
       else {
         return null;

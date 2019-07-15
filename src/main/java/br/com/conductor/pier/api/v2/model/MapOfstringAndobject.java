@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 @ApiModel(description = "")
-public class MapOfstringAndstring extends HashMap<String, String> {
+public class MapOfstringAndobject extends HashMap<String, Object> {
   
 
   
@@ -16,7 +16,7 @@ public class MapOfstringAndstring extends HashMap<String, String> {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MapOfstringAndstring {\n");
+    sb.append("class MapOfstringAndobject {\n");
     sb.append("  " + super.toString()).append("\n");
     sb.append("}\n");
     return sb.toString();

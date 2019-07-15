@@ -77,6 +77,12 @@ public class OperacaoBancariaPersist  {
   private String contaBeneficiario = null;
   @SerializedName("dvContaBeneficiario")
   private String dvContaBeneficiario = null;
+  @SerializedName("operadora")
+  private String operadora = null;
+  @SerializedName("celular")
+  private String celular = null;
+  @SerializedName("ddd")
+  private String ddd = null;
 
   
   /**
@@ -451,6 +457,42 @@ public class OperacaoBancariaPersist  {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da operadora do celular")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  @ApiModelProperty(value = "N\u00FAmero da operadora")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  @ApiModelProperty(value = "DDD do celular")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -488,6 +530,9 @@ public class OperacaoBancariaPersist  {
     sb.append("  agenciaBeneficiario: ").append(agenciaBeneficiario).append("\n");
     sb.append("  contaBeneficiario: ").append(contaBeneficiario).append("\n");
     sb.append("  dvContaBeneficiario: ").append(dvContaBeneficiario).append("\n");
+    sb.append("  operadora: ").append(operadora).append("\n");
+    sb.append("  celular: ").append(celular).append("\n");
+    sb.append("  ddd: ").append(ddd).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

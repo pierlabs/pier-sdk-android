@@ -31,9 +31,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * Id pessoa jur\u00EDdica
+   * Identificador da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Id pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Identificador da pessoa jur\u00EDdica")
   public Long getId() {
     return id;
   }
@@ -43,9 +43,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * Pessoa jur\u00EDdica contato
+   * Contato da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Pessoa jur\u00EDdica contato")
+  @ApiModelProperty(value = "Contato da pessoa jur\u00EDdica")
   public String getContato() {
     return contato;
   }
@@ -55,9 +55,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * Raz\u00E3o social pessoa jur\u00EDdica
+   * Raz\u00E3o social da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Raz\u00E3o social pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Raz\u00E3o social da pessoa jur\u00EDdica")
   public String getRazaoSocial() {
     return razaoSocial;
   }
@@ -67,9 +67,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * CGC(CNPJ) pessoa jur\u00EDdica
+   * CGC(CNPJ) da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "CGC(CNPJ) pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "CGC(CNPJ) da pessoa jur\u00EDdica")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
   }
@@ -79,9 +79,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica
+   * Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
   }
@@ -127,9 +127,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * Conta corrente pessoa jur\u00EDdica
+   * Conta corrente da pessoa jur\u00EDdica
    **/
-  @ApiModelProperty(value = "Conta corrente pessoa jur\u00EDdica")
+  @ApiModelProperty(value = "Conta corrente da pessoa jur\u00EDdica")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -139,9 +139,9 @@ public class PessoaJuridicaResponse  {
 
   
   /**
-   * D\u00EDgito conta corrente
+   * D\u00EDgito da conta corrente
    **/
-  @ApiModelProperty(value = "D\u00EDgito conta corrente")
+  @ApiModelProperty(value = "D\u00EDgito da conta corrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }

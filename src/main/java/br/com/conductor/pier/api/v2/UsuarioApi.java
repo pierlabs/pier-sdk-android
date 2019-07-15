@@ -12,8 +12,8 @@ import br.com.conductor.pier.api.v2.model.UsuarioUpdate;
 import br.com.conductor.pier.api.v2.model.UsuarioResponse;
 import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioDispositivoUpdate;
-import br.com.conductor.pier.api.v2.model.PageControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioContasResponse;
+import br.com.conductor.pier.api.v2.model.PageControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioDispositivoPersist;
 import br.com.conductor.pier.api.v2.model.UsuarioPersist;
@@ -49,71 +49,6 @@ public class UsuarioApi {
 
   
   /**
-   * Altera os usu\u00E1rios cadastrados na base
-   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id)
-   * @param update update
-   * @return UsuarioResponse
-   */
-  public UsuarioResponse  alterar (Long id, UsuarioUpdate update) throws ApiException {
-    Object postBody = update;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
-    }
-    
-    // verify the required parameter 'update' is set
-    if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling alterar");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/usuarios/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Alterar senha do usu\u00E1rio na base do PIER ou WS
    * Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id)
@@ -121,22 +56,22 @@ public class UsuarioApi {
    * @param senhaNova Senha Nova
    * @return String
    */
-  public String  alterarSenha (Long id, String senhaAtual, String senhaNova) throws ApiException {
+  public String  alterarSenha1 (Long id, String senhaAtual, String senhaNova) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha1");
     }
     
     // verify the required parameter 'senhaAtual' is set
     if (senhaAtual == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaAtual' when calling alterarSenha");
+       throw new ApiException(400, "Missing the required parameter 'senhaAtual' when calling alterarSenha1");
     }
     
     // verify the required parameter 'senhaNova' is set
     if (senhaNova == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenha");
+       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenha1");
     }
     
 
@@ -195,17 +130,17 @@ public class UsuarioApi {
    * @param senhaNova Senha Nova
    * @return String
    */
-  public String  alterarSenhaLogin (String login, String senhaNova) throws ApiException {
+  public String  alterarSenhaPorLogin (String login, String senhaNova) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'login' is set
     if (login == null) {
-       throw new ApiException(400, "Missing the required parameter 'login' when calling alterarSenhaLogin");
+       throw new ApiException(400, "Missing the required parameter 'login' when calling alterarSenhaPorLogin");
     }
     
     // verify the required parameter 'senhaNova' is set
     if (senhaNova == null) {
-       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaLogin");
+       throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaPorLogin");
     }
     
 
@@ -246,6 +181,71 @@ public class UsuarioApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Altera os usu\u00E1rios cadastrados na base
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id)
+   * @param update update
+   * @return UsuarioResponse
+   */
+  public UsuarioResponse  alterarUsuario (Long id, UsuarioUpdate update) throws ApiException {
+    Object postBody = update;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsuario");
+    }
+    
+    // verify the required parameter 'update' is set
+    if (update == null) {
+       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsuario");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/usuarios/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (UsuarioResponse) ApiInvoker.deserialize(response, "", UsuarioResponse.class);
       }
       else {
         return null;
@@ -321,17 +321,17 @@ public class UsuarioApi {
    * @param update update
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse  atualizar (Long id, UsuarioDispositivoUpdate update) throws ApiException {
+  public ControleSegurancaDispositivoResponse  atualizarControleSegurancaDispositivo (Long id, UsuarioDispositivoUpdate update) throws ApiException {
     Object postBody = update;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarControleSegurancaDispositivo");
     }
     
     // verify the required parameter 'update' is set
     if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar");
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarControleSegurancaDispositivo");
     }
     
 
@@ -370,76 +370,6 @@ public class UsuarioApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ControleSegurancaDispositivoResponse) ApiInvoker.deserialize(response, "", ControleSegurancaDispositivoResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Consulta dispositivo do usu\u00E1rio
-   * Este m\u00E9todo permite consultar o dispositivo do usu\u00E1rio
-   * @param idUsuario idUsuario
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageControleSegurancaDispositivoResponse
-   */
-  public PageControleSegurancaDispositivoResponse  consultar (Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idUsuario' is set
-    if (idUsuario == null) {
-       throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultar");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/controles-seguranca-dispositivos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idUsuario", idUsuario));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageControleSegurancaDispositivoResponse) ApiInvoker.deserialize(response, "", PageControleSegurancaDispositivoResponse.class);
       }
       else {
         return null;
@@ -518,17 +448,87 @@ public class UsuarioApi {
   }
   
   /**
+   * Consulta dispositivo do usu\u00E1rio
+   * Este m\u00E9todo permite consultar o dispositivo do usu\u00E1rio
+   * @param idUsuario idUsuario
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PageControleSegurancaDispositivoResponse
+   */
+  public PageControleSegurancaDispositivoResponse  consultarControleSegurancaDispositivo (Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idUsuario' is set
+    if (idUsuario == null) {
+       throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarControleSegurancaDispositivo");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/controles-seguranca-dispositivos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idUsuario", idUsuario));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageControleSegurancaDispositivoResponse) ApiInvoker.deserialize(response, "", PageControleSegurancaDispositivoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS
    * Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id Id do us\u00E1rio para consultar
    * @return UsuarioResponse
    */
-  public UsuarioResponse  consultar_1 (Long id) throws ApiException {
+  public UsuarioResponse  consultarUsuario (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_1");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsuario");
     }
     
 
@@ -582,12 +582,12 @@ public class UsuarioApi {
    * @param id Identificador do controle de acesso
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse  deletar (Long id) throws ApiException {
+  public ControleSegurancaDispositivoResponse  deletarControleSeguranca (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling deletar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarControleSeguranca");
     }
     
 
@@ -706,7 +706,7 @@ public class UsuarioApi {
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse  listar (List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse  listarUsuarios (List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
 
@@ -833,12 +833,12 @@ public class UsuarioApi {
    * @param persist persist
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse  salvar (UsuarioDispositivoPersist persist) throws ApiException {
+  public ControleSegurancaDispositivoResponse  salvarControleSegurancaDispositivo (UsuarioDispositivoPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvar");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarControleSegurancaDispositivo");
     }
     
 
@@ -892,12 +892,12 @@ public class UsuarioApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse  salvar_2 (UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse  salvarUsuario (UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvar_2");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsuario");
     }
     
 
@@ -952,17 +952,17 @@ public class UsuarioApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id)
    * @return String
    */
-  public String  validarSenha (String senha, Long id) throws ApiException {
+  public String  validarSenha1 (String senha, Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'senha' is set
     if (senha == null) {
-       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenha");
+       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenha1");
     }
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling validarSenha");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling validarSenha1");
     }
     
 
@@ -1087,17 +1087,17 @@ public class UsuarioApi {
    * @param request request
    * @return Object
    */
-  public Object  validarSenhaLogin (String login, String senha, ValidarSenhaLoginRequest request) throws ApiException {
+  public Object  validarSenhaPorLogin (String login, String senha, ValidarSenhaLoginRequest request) throws ApiException {
     Object postBody = request;
     
     // verify the required parameter 'login' is set
     if (login == null) {
-       throw new ApiException(400, "Missing the required parameter 'login' when calling validarSenhaLogin");
+       throw new ApiException(400, "Missing the required parameter 'login' when calling validarSenhaPorLogin");
     }
     
     // verify the required parameter 'senha' is set
     if (senha == null) {
-       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaLogin");
+       throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaPorLogin");
     }
     
 

@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Telefone de escritorio para cobran\u00E7a
+ * Telefone do escritorio de cobran\u00E7a
  **/
-@ApiModel(description = "Telefone de escritorio para cobran\u00E7a")
+@ApiModel(description = "Telefone do escritorio de cobran\u00E7a")
 public class TelefoneEscritorioCobrancaDTO  {
   
   @SerializedName("id")
@@ -22,9 +22,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca id
+   * Identificador do telefone do escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Telefone escrit\u00F3rio cobranca id")
+  @ApiModelProperty(value = "Identificador do telefone do escrit\u00F3rio de cobran\u00E7a")
   public Long getId() {
     return id;
   }
@@ -34,9 +34,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca ddd
+   * DDD do telefone
    **/
-  @ApiModelProperty(required = true, value = "Telefone escrit\u00F3rio cobranca ddd")
+  @ApiModelProperty(required = true, value = "DDD do telefone")
   public String getDdd() {
     return ddd;
   }
@@ -46,9 +46,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca telefone
+   * N\u00FAmero do telefone
    **/
-  @ApiModelProperty(required = true, value = "Telefone escrit\u00F3rio cobranca telefone")
+  @ApiModelProperty(required = true, value = "N\u00FAmero do telefone")
   public String getTelefone() {
     return telefone;
   }
@@ -58,9 +58,9 @@ public class TelefoneEscritorioCobrancaDTO  {
 
   
   /**
-   * Telefone escrit\u00F3rio cobranca ramal
+   * Ramal do telefone
    **/
-  @ApiModelProperty(value = "Telefone escrit\u00F3rio cobranca ramal")
+  @ApiModelProperty(value = "Ramal do telefone")
   public String getRamal() {
     return ramal;
   }

@@ -9,13 +9,13 @@ import br.com.conductor.pier.api.v2.model.*;
 import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.PropostaResponse;
-import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
 import br.com.conductor.pier.api.v2.model.PropostaParcialUpdate;
+import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
 import br.com.conductor.pier.api.v2.model.DocumentoPropostaResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoPropostaPersist;
-import br.com.conductor.pier.api.v2.model.PagePropostaResponse;
 import br.com.conductor.pier.api.v2.model.PageDocumentoCreditoResponse;
 import br.com.conductor.pier.api.v2.model.PageDocumentoPropostaResponse;
+import br.com.conductor.pier.api.v2.model.PagePropostaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusPropostaResponse;
 
 import org.apache.http.HttpEntity;
@@ -47,88 +47,23 @@ public class PropostaApi {
 
   
   /**
-   * Altera o status de uma proposta
-   * Este servi\u00E7o altera o status de uma proposta
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)
-   * @param update update
-   * @return PropostaResponse
-   */
-  public PropostaResponse  alterar (Long id, StatusPropostaUpdate update) throws ApiException {
-    Object postBody = update;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
-    }
-    
-    // verify the required parameter 'update' is set
-    if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling alterar");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/propostas/{id}/alterar-status".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PropostaResponse) ApiInvoker.deserialize(response, "", PropostaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Altera parcialmente a proposta.
    * Este recurso permite alterar os campos de uma proposta.
    * @param id Indentificador da proposta.
    * @param propostaParcialUpdate propostaParcialUpdate
    * @return PropostaResponse
    */
-  public PropostaResponse  alterarParcial (Long id, PropostaParcialUpdate propostaParcialUpdate) throws ApiException {
+  public PropostaResponse  alterarPropostaParcialmente (Long id, PropostaParcialUpdate propostaParcialUpdate) throws ApiException {
     Object postBody = propostaParcialUpdate;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcial");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarPropostaParcialmente");
     }
     
     // verify the required parameter 'propostaParcialUpdate' is set
     if (propostaParcialUpdate == null) {
-       throw new ApiException(400, "Missing the required parameter 'propostaParcialUpdate' when calling alterarParcial");
+       throw new ApiException(400, "Missing the required parameter 'propostaParcialUpdate' when calling alterarPropostaParcialmente");
     }
     
 
@@ -177,17 +112,82 @@ public class PropostaApi {
   }
   
   /**
+   * Altera o status de uma proposta
+   * Este servi\u00E7o altera o status de uma proposta
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)
+   * @param update update
+   * @return PropostaResponse
+   */
+  public PropostaResponse  alterarStatusProposta (Long id, StatusPropostaUpdate update) throws ApiException {
+    Object postBody = update;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarStatusProposta");
+    }
+    
+    // verify the required parameter 'update' is set
+    if (update == null) {
+       throw new ApiException(400, "Missing the required parameter 'update' when calling alterarStatusProposta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/propostas/{id}/alterar-status".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PropostaResponse) ApiInvoker.deserialize(response, "", PropostaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Busca uma proposta pelo seu identificador
    * Este servi\u00E7o busca uma proposta pelo seu identificador
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)
    * @return PropostaResponse
    */
-  public PropostaResponse  consultar (Long id) throws ApiException {
+  public PropostaResponse  consultarProposta (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarProposta");
     }
     
 
@@ -241,12 +241,12 @@ public class PropostaApi {
    * @param persist persist
    * @return DocumentoPropostaResponse
    */
-  public DocumentoPropostaResponse  enviarDocumentoProposta (DocumentoPropostaPersist persist) throws ApiException {
+  public DocumentoPropostaResponse  enviarDocumentoDeProposta (DocumentoPropostaPersist persist) throws ApiException {
     Object postBody = persist;
     
     // verify the required parameter 'persist' is set
     if (persist == null) {
-       throw new ApiException(400, "Missing the required parameter 'persist' when calling enviarDocumentoProposta");
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling enviarDocumentoDeProposta");
     }
     
 
@@ -295,74 +295,6 @@ public class PropostaApi {
   }
   
   /**
-   * Lista todas as propostas
-   * Este servi\u00E7o lista todas as propostas
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param status Status da proposta
-   * @param idPessoaFisica Identificador da Pessoa Fisica
-   * @return PagePropostaResponse
-   */
-  public PagePropostaResponse  listar (List<String> sort, Integer page, Integer limit, Integer status, Long idPessoaFisica) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/propostas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PagePropostaResponse) ApiInvoker.deserialize(response, "", PagePropostaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista Documento Cr\u00E9dito
    * Lista os documentos cr\u00E9dito que s\u00E3o os tipos de documentos proposta
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -376,7 +308,7 @@ public class PropostaApi {
    * @param obrigatorio Sinaliza a flag obrigaroio
    * @return PageDocumentoCreditoResponse
    */
-  public PageDocumentoCreditoResponse  listarDocumentosCredito (List<String> sort, Integer page, Integer limit, Long id, String descricao, Integer tela, Integer doc, Long idAtividadeDeCredito, Integer obrigatorio) throws ApiException {
+  public PageDocumentoCreditoResponse  listarDocumentosDeCredito (List<String> sort, Integer page, Integer limit, Long id, String descricao, Integer tela, Integer doc, Long idAtividadeDeCredito, Integer obrigatorio) throws ApiException {
     Object postBody = null;
     
 
@@ -464,7 +396,7 @@ public class PropostaApi {
    * @param dataStatus Data de status
    * @return PageDocumentoPropostaResponse
    */
-  public PageDocumentoPropostaResponse  listarDocumentosProposta (List<String> sort, Integer page, Integer limit, Long id, Long idProposta, Long idDocumentosCredito, Long idStatusDocumentosCredito, Long idCondicoesDocumentosCredito, Long idTipoDocumentoCredito, Long idPessoaFisica, Long idLogAtendimento, String responsavel, Integer flagDocumentoDigitalizado, String documentoDigitalizado, Long seqAnaliseCondicao, String observacao, String dataStatus) throws ApiException {
+  public PageDocumentoPropostaResponse  listarDocumentosDeProposta (List<String> sort, Integer page, Integer limit, Long id, Long idProposta, Long idDocumentosCredito, Long idStatusDocumentosCredito, Long idCondicoesDocumentosCredito, Long idTipoDocumentoCredito, Long idPessoaFisica, Long idLogAtendimento, String responsavel, Integer flagDocumentoDigitalizado, String documentoDigitalizado, Long seqAnaliseCondicao, String observacao, String dataStatus) throws ApiException {
     Object postBody = null;
     
 
@@ -547,6 +479,74 @@ public class PropostaApi {
   }
   
   /**
+   * Lista todas as propostas
+   * Este servi\u00E7o lista todas as propostas
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param status Status da proposta
+   * @param idPessoaFisica Identificador da Pessoa Fisica
+   * @return PagePropostaResponse
+   */
+  public PagePropostaResponse  listarPropostas (List<String> sort, Integer page, Integer limit, Integer status, Long idPessoaFisica) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/propostas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "status", status));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PagePropostaResponse) ApiInvoker.deserialize(response, "", PagePropostaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista todos os status poss\u00EDveis nas propostas existentes
    * Este servi\u00E7o lista todos os status poss\u00EDveis nas propostas existentes
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -556,7 +556,7 @@ public class PropostaApi {
    * @param flagPermiteAlteracao Flag que permite a altera\u00E7\u00E3o do status da proposta
    * @return PageStatusPropostaResponse
    */
-  public PageStatusPropostaResponse  listarStatusProposta (List<String> sort, Integer page, Integer limit, Integer status, Boolean flagPermiteAlteracao) throws ApiException {
+  public PageStatusPropostaResponse  listarStatusPropostas (List<String> sort, Integer page, Integer limit, Integer status, Boolean flagPermiteAlteracao) throws ApiException {
     Object postBody = null;
     
 

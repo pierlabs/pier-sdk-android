@@ -36,6 +36,8 @@ public class PortadorDebitoRecorrentePersist  {
   private Boolean flagCartaoDesbloqueado = null;
   @SerializedName("flagLancatarifa")
   private Boolean flagLancatarifa = null;
+  @SerializedName("dataFimDescontoAnuidade")
+  private String dataFimDescontoAnuidade = null;
 
   
   /**
@@ -182,6 +184,18 @@ public class PortadorDebitoRecorrentePersist  {
   }
 
   
+  /**
+   * Data referente ao final do desconto da anuidade
+   **/
+  @ApiModelProperty(value = "Data referente ao final do desconto da anuidade")
+  public String getDataFimDescontoAnuidade() {
+    return dataFimDescontoAnuidade;
+  }
+  public void setDataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -200,6 +214,7 @@ public class PortadorDebitoRecorrentePersist  {
     sb.append("  percentualDesconto: ").append(percentualDesconto).append("\n");
     sb.append("  flagCartaoDesbloqueado: ").append(flagCartaoDesbloqueado).append("\n");
     sb.append("  flagLancatarifa: ").append(flagLancatarifa).append("\n");
+    sb.append("  dataFimDescontoAnuidade: ").append(dataFimDescontoAnuidade).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

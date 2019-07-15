@@ -1,6 +1,8 @@
 package br.com.conductor.pier.api.v2.model;
 
+import br.com.conductor.pier.api.v2.model.ParcelaAcordoResponse;
 import java.math.BigDecimal;
+import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -42,10 +44,16 @@ public class AcordoDetalheResponse  {
   private BigDecimal valorParcela1 = null;
   @SerializedName("valorParcelaN")
   private BigDecimal valorParcelaN = null;
+  @SerializedName("valorEntrada")
+  private BigDecimal valorEntrada = null;
   @SerializedName("parcelaPedida")
   private Integer parcelaPedida = null;
   @SerializedName("vencimentoParcelaPedida")
   private String vencimentoParcelaPedida = null;
+  @SerializedName("idBoletoEntrada")
+  private Long idBoletoEntrada = null;
+  @SerializedName("parcelas")
+  private List<ParcelaAcordoResponse> parcelas = null;
 
   
   /**
@@ -229,6 +237,18 @@ public class AcordoDetalheResponse  {
 
   
   /**
+   * Valor da entrada do acordo
+   **/
+  @ApiModelProperty(value = "Valor da entrada do acordo")
+  public BigDecimal getValorEntrada() {
+    return valorEntrada;
+  }
+  public void setValorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+  }
+
+  
+  /**
    * Parcela pedida
    **/
   @ApiModelProperty(value = "Parcela pedida")
@@ -249,6 +269,30 @@ public class AcordoDetalheResponse  {
   }
   public void setVencimentoParcelaPedida(String vencimentoParcelaPedida) {
     this.vencimentoParcelaPedida = vencimentoParcelaPedida;
+  }
+
+  
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.")
+  public Long getIdBoletoEntrada() {
+    return idBoletoEntrada;
+  }
+  public void setIdBoletoEntrada(Long idBoletoEntrada) {
+    this.idBoletoEntrada = idBoletoEntrada;
+  }
+
+  
+  /**
+   * Listagem das parcelas do acordo.
+   **/
+  @ApiModelProperty(value = "Listagem das parcelas do acordo.")
+  public List<ParcelaAcordoResponse> getParcelas() {
+    return parcelas;
+  }
+  public void setParcelas(List<ParcelaAcordoResponse> parcelas) {
+    this.parcelas = parcelas;
   }
 
   
@@ -273,8 +317,11 @@ public class AcordoDetalheResponse  {
     sb.append("  dataQuebraAcordo: ").append(dataQuebraAcordo).append("\n");
     sb.append("  valorParcela1: ").append(valorParcela1).append("\n");
     sb.append("  valorParcelaN: ").append(valorParcelaN).append("\n");
+    sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
     sb.append("  parcelaPedida: ").append(parcelaPedida).append("\n");
     sb.append("  vencimentoParcelaPedida: ").append(vencimentoParcelaPedida).append("\n");
+    sb.append("  idBoletoEntrada: ").append(idBoletoEntrada).append("\n");
+    sb.append("  parcelas: ").append(parcelas).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

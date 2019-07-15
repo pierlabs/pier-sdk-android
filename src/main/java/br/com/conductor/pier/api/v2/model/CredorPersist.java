@@ -112,9 +112,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist nome credor
+   * Nome do credor
    **/
-  @ApiModelProperty(value = "Credor persist nome credor")
+  @ApiModelProperty(value = "Nome do credor")
   public String getNomeCredor() {
     return nomeCredor;
   }
@@ -124,9 +124,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist pagamento semanal
+   * Dia do pagamento caso seja semanal
    **/
-  @ApiModelProperty(value = "Credor persist pagamento semanal")
+  @ApiModelProperty(value = "Dia do pagamento caso seja semanal")
   public Integer getDiaPagamentoSemanal() {
     return diaPagamentoSemanal;
   }
@@ -136,9 +136,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist pagamento mensal
+   * Dia do pagamento caso seja mensal
    **/
-  @ApiModelProperty(value = "Credor persist pagamento mensal")
+  @ApiModelProperty(value = "Dia do pagamento caso seja mensal")
   public Integer getDiaPagamentoMensal() {
     return diaPagamentoMensal;
   }
@@ -148,9 +148,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor respone pagamento decendial primeiro
+   * Dia do primeiro pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial primeiro")
+  @ApiModelProperty(value = "Dia do primeiro pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialPrimeiro() {
     return diaPagamentoDecendialPrimeiro;
   }
@@ -160,9 +160,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor respone pagamento decendial segundo
+   * Dia do segundo pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial segundo")
+  @ApiModelProperty(value = "Dia do segundo pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialSegundo() {
     return diaPagamentoDecendialSegundo;
   }
@@ -172,9 +172,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor respone pagamento decendial terceiro
+   * Dia do terceiro pagamento caso seja decendial
    **/
-  @ApiModelProperty(value = "Credor respone pagamento decendial terceiro")
+  @ApiModelProperty(value = "Dia do terceiro pagamento caso seja decendial")
   public Integer getDiaPagamentoDecendialTerceiro() {
     return diaPagamentoDecendialTerceiro;
   }
@@ -184,9 +184,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor respone pagamento quinzenal primeiro
+   * Dia do primeiro pagamento caso seja quinzenal
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal primeiro")
+  @ApiModelProperty(value = "Dia do primeiro pagamento caso seja quinzenal")
   public Integer getDiaPagamentoQuinzenalPrimeiro() {
     return diaPagamentoQuinzenalPrimeiro;
   }
@@ -196,9 +196,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor respone pagamento quinzenal segundo
+   * Dia do segundo pagamento caso seja quinzenal
    **/
-  @ApiModelProperty(value = "Credor respone pagamento quinzenal segundo")
+  @ApiModelProperty(value = "Dia do segundo pagamento caso seja quinzenal")
   public Integer getDiaPagamentoQuinzenalSegundo() {
     return diaPagamentoQuinzenalSegundo;
   }
@@ -208,9 +208,9 @@ public class CredorPersist  {
 
   
   /**
-   * credor persist banco
+   * Banco do credor
    **/
-  @ApiModelProperty(value = "credor persist banco")
+  @ApiModelProperty(value = "Banco do credor")
   public Integer getBanco() {
     return banco;
   }
@@ -220,9 +220,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist ag\u00EAncia
+   * Ag\u00EAncia do credor
    **/
-  @ApiModelProperty(value = "Credor persist ag\u00EAncia")
+  @ApiModelProperty(value = "Ag\u00EAncia do credor")
   public Integer getAgencia() {
     return agencia;
   }
@@ -232,9 +232,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist d\u00EDgito ag\u00EAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
-  @ApiModelProperty(value = "Credor persist d\u00EDgito ag\u00EAncia")
+  @ApiModelProperty(value = "D\u00EDgito da ag\u00EAncia")
   public String getDigitoAgencia() {
     return digitoAgencia;
   }
@@ -244,9 +244,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist conta corrente
+   * Conta corrente do credor
    **/
-  @ApiModelProperty(value = "Credor persist conta corrente")
+  @ApiModelProperty(value = "Conta corrente do credor")
   public String getContaCorrente() {
     return contaCorrente;
   }
@@ -256,9 +256,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist d\u00EDgito conta corrente
+   * D\u00EDgito da conta corrente
    **/
-  @ApiModelProperty(value = "Credor persist d\u00EDgito conta corrente")
+  @ApiModelProperty(value = "D\u00EDgito da conta corrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
   }
@@ -268,9 +268,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist credor banco
+   * Banco credor
    **/
-  @ApiModelProperty(value = "Credor persist credor banco")
+  @ApiModelProperty(value = "Banco credor")
   public Boolean getCredorBanco() {
     return credorBanco;
   }
@@ -280,9 +280,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist percentual rav
+   * Percentual RAV
    **/
-  @ApiModelProperty(required = true, value = "Credor persist percentual rav")
+  @ApiModelProperty(required = true, value = "Percentual RAV")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
   }
@@ -292,9 +292,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist recebe rav
+   * Identifica se o credor tem um RAV associado, e seu tipo
    **/
-  @ApiModelProperty(value = "Credor persist recebe rav")
+  @ApiModelProperty(value = "Identifica se o credor tem um RAV associado, e seu tipo")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
   }
@@ -304,9 +304,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist percentual multiplica
+   * Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV
    **/
-  @ApiModelProperty(value = "Credor persist percentual multiplica")
+  @ApiModelProperty(value = "Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
   }
@@ -316,9 +316,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist taxa adm
+   * Taxa administrativa usada para gerar o valor do RAV
    **/
-  @ApiModelProperty(value = "Credor persist taxa adm")
+  @ApiModelProperty(value = "Taxa administrativa usada para gerar o valor do RAV")
   public BigDecimal getTaxaAdministrativa() {
     return taxaAdministrativa;
   }
@@ -328,9 +328,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist taxa banco
+   * Taxa do banco RAV
    **/
-  @ApiModelProperty(value = "Credor persist taxa banco")
+  @ApiModelProperty(value = "Taxa do banco RAV")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
   }
@@ -340,9 +340,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist limite rav
+   * Valor limite do RAV
    **/
-  @ApiModelProperty(value = "Credor persist limite rav")
+  @ApiModelProperty(value = "Valor limite do RAV")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
   }
@@ -352,9 +352,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist id credor rav
+   * Identificador da RAV do credor
    **/
-  @ApiModelProperty(required = true, value = "Credor persist id credor rav")
+  @ApiModelProperty(required = true, value = "Identificador da RAV do credor")
   public Long getIdCredorRAV() {
     return idCredorRAV;
   }
@@ -364,9 +364,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist periodicidade
+   * Periodicidade do pagamento
    **/
-  @ApiModelProperty(required = true, value = "Credor persist periodicidade")
+  @ApiModelProperty(required = true, value = "Periodicidade do pagamento")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
   }
@@ -376,9 +376,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist id pessoa juridica
+   * Identificador da pessoa jur\u00EDdica associada ao credor
    **/
-  @ApiModelProperty(required = true, value = "Credor persist id pessoa juridica")
+  @ApiModelProperty(required = true, value = "Identificador da pessoa jur\u00EDdica associada ao credor")
   public Long getIdPessoaJuridica() {
     return idPessoaJuridica;
   }
@@ -388,9 +388,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist flag escritorio cobranca
+   * Flag para controle interno
    **/
-  @ApiModelProperty(value = "Credor persist flag escritorio cobranca")
+  @ApiModelProperty(value = "Flag para controle interno")
   public Boolean getFlagEscritorioCobranca() {
     return flagEscritorioCobranca;
   }
@@ -400,9 +400,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist prefixo
+   * Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor persist prefixo")
+  @ApiModelProperty(value = "Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a")
   public String getPrefixo() {
     return prefixo;
   }
@@ -412,9 +412,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist flag ativo
+   * Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "Credor persist flag ativo")
+  @ApiModelProperty(value = "Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo")
   public Boolean getAtivo() {
     return ativo;
   }
@@ -424,9 +424,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist contato
+   * Nome para contato no escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor persist contato")
+  @ApiModelProperty(value = "Nome para contato no escrit\u00F3rio de cobran\u00E7a")
   public String getNomeContato() {
     return nomeContato;
   }
@@ -436,9 +436,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist email
+   * Email do contato no escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor persist email")
+  @ApiModelProperty(value = "Email do contato no escrit\u00F3rio de cobran\u00E7a")
   public String getEmail() {
     return email;
   }
@@ -448,9 +448,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist logradouro
+   * Logradouro do credor
    **/
-  @ApiModelProperty(value = "Credor persist logradouro")
+  @ApiModelProperty(value = "Logradouro do credor")
   public String getNomeLogradouro() {
     return nomeLogradouro;
   }
@@ -460,9 +460,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist numero endereco
+   * N\u00FAmero do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist numero endereco")
+  @ApiModelProperty(value = "N\u00FAmero do endere\u00E7o do credor")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
@@ -472,9 +472,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist complemento endereco
+   * Complemento do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist complemento endereco")
+  @ApiModelProperty(value = "Complemento do endere\u00E7o do credor")
   public String getComplementoEndereco() {
     return complementoEndereco;
   }
@@ -484,9 +484,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist bairro
+   * Bairro do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist bairro")
+  @ApiModelProperty(value = "Bairro do endere\u00E7o do credor")
   public String getBairro() {
     return bairro;
   }
@@ -496,9 +496,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist cidade
+   * Cidade do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist cidade")
+  @ApiModelProperty(value = "Cidade do endere\u00E7o do credor")
   public String getCidade() {
     return cidade;
   }
@@ -508,9 +508,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist cep
+   * CEP do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist cep")
+  @ApiModelProperty(value = "CEP do endere\u00E7o do credor")
   public String getCep() {
     return cep;
   }
@@ -520,9 +520,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist uf
+   * UF do endere\u00E7o do credor
    **/
-  @ApiModelProperty(value = "Credor persist uf")
+  @ApiModelProperty(value = "UF do endere\u00E7o do credor")
   public String getUf() {
     return uf;
   }
@@ -532,9 +532,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist responsavel
+   * Respons\u00E1vel pelo credor
    **/
-  @ApiModelProperty(value = "Credor persist responsavel")
+  @ApiModelProperty(value = "Respons\u00E1vel pelo credor")
   public String getResponsavel() {
     return responsavel;
   }
@@ -544,9 +544,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist flag segunda via acordo
+   * Identifica se h\u00E1 uma segunda via do acordo firmado
    **/
-  @ApiModelProperty(value = "Credor persist flag segunda via acordo")
+  @ApiModelProperty(value = "Identifica se h\u00E1 uma segunda via do acordo firmado")
   public Integer getFlagSegundaViaAcordo() {
     return flagSegundaViaAcordo;
   }
@@ -556,9 +556,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist valor minimo parcela
+   * Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor persist valor minimo parcela")
+  @ApiModelProperty(value = "Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
   }
@@ -568,9 +568,9 @@ public class CredorPersist  {
 
   
   /**
-   * Credor persist desconto maximo
+   * Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a
    **/
-  @ApiModelProperty(value = "Credor persist desconto maximo")
+  @ApiModelProperty(value = "Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a")
   public BigDecimal getDescontoMaximo() {
     return descontoMaximo;
   }

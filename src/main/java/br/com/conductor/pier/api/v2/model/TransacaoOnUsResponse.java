@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.MapOfstringAndstring;
+import br.com.conductor.pier.api.v2.model.MapOfstringAndobject;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -18,7 +18,7 @@ public class TransacaoOnUsResponse  {
   @SerializedName("nsuAutorizacao")
   private String nsuAutorizacao = null;
   @SerializedName("planoDeParcelamento")
-  private List<MapOfstringAndstring> planoDeParcelamento = null;
+  private List<MapOfstringAndobject> planoDeParcelamento = null;
   @SerializedName("codigoAutorizacao")
   private String codigoAutorizacao = null;
   @SerializedName("numeroMascaradoCartao")
@@ -57,10 +57,10 @@ public class TransacaoOnUsResponse  {
    * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o
    **/
   @ApiModelProperty(value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o")
-  public List<MapOfstringAndstring> getPlanoDeParcelamento() {
+  public List<MapOfstringAndobject> getPlanoDeParcelamento() {
     return planoDeParcelamento;
   }
-  public void setPlanoDeParcelamento(List<MapOfstringAndstring> planoDeParcelamento) {
+  public void setPlanoDeParcelamento(List<MapOfstringAndobject> planoDeParcelamento) {
     this.planoDeParcelamento = planoDeParcelamento;
   }
 

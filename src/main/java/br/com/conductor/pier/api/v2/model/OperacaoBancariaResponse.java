@@ -20,6 +20,8 @@ public class OperacaoBancariaResponse  {
   private String bancoBeneficiario = null;
   @SerializedName("bancoPagador")
   private String bancoPagador = null;
+  @SerializedName("celular")
+  private String celular = null;
   @SerializedName("codigoIspb")
   private String codigoIspb = null;
   @SerializedName("contaBeneficiario")
@@ -34,6 +36,8 @@ public class OperacaoBancariaResponse  {
   private String dataHoraOperacao = null;
   @SerializedName("dataRealizacao")
   private String dataRealizacao = null;
+  @SerializedName("ddd")
+  private String ddd = null;
   @SerializedName("dvContaBeneficiario")
   private String dvContaBeneficiario = null;
   @SerializedName("dvContaPagadora")
@@ -72,6 +76,8 @@ public class OperacaoBancariaResponse  {
   private Long numeroBilheteUnico = null;
   @SerializedName("observacao")
   private String observacao = null;
+  @SerializedName("operadora")
+  private String operadora = null;
   public enum StatusEnum {
      NORMAL,  CANCELADA,  PROCESSADA,  PENDENTE,  DESFEITA,  ESTORNADA,  AGENDADA,  CANCELADA_SEM_SALDO,  ESTORNO_INFOS_INCORRETAS,  ESTORNO_TED, 
   };
@@ -128,6 +134,18 @@ public class OperacaoBancariaResponse  {
   }
   public void setBancoPagador(String bancoPagador) {
     this.bancoPagador = bancoPagador;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  @ApiModelProperty(value = "N\u00FAmero da operadora")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
   }
 
   
@@ -212,6 +230,18 @@ public class OperacaoBancariaResponse  {
   }
   public void setDataRealizacao(String dataRealizacao) {
     this.dataRealizacao = dataRealizacao;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  @ApiModelProperty(value = "DDD do celular")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
   }
 
   
@@ -444,6 +474,18 @@ public class OperacaoBancariaResponse  {
 
   
   /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o da operadora do celular")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
    * Status da opera\u00E7\u00E3o
    **/
   @ApiModelProperty(value = "Status da opera\u00E7\u00E3o")
@@ -489,6 +531,7 @@ public class OperacaoBancariaResponse  {
     sb.append("  agenciaPagadora: ").append(agenciaPagadora).append("\n");
     sb.append("  bancoBeneficiario: ").append(bancoBeneficiario).append("\n");
     sb.append("  bancoPagador: ").append(bancoPagador).append("\n");
+    sb.append("  celular: ").append(celular).append("\n");
     sb.append("  codigoIspb: ").append(codigoIspb).append("\n");
     sb.append("  contaBeneficiario: ").append(contaBeneficiario).append("\n");
     sb.append("  contaPagadora: ").append(contaPagadora).append("\n");
@@ -496,6 +539,7 @@ public class OperacaoBancariaResponse  {
     sb.append("  dataAgendamento: ").append(dataAgendamento).append("\n");
     sb.append("  dataHoraOperacao: ").append(dataHoraOperacao).append("\n");
     sb.append("  dataRealizacao: ").append(dataRealizacao).append("\n");
+    sb.append("  ddd: ").append(ddd).append("\n");
     sb.append("  dvContaBeneficiario: ").append(dvContaBeneficiario).append("\n");
     sb.append("  dvContaPagadora: ").append(dvContaPagadora).append("\n");
     sb.append("  id: ").append(id).append("\n");
@@ -515,6 +559,7 @@ public class OperacaoBancariaResponse  {
     sb.append("  nomePagador: ").append(nomePagador).append("\n");
     sb.append("  numeroBilheteUnico: ").append(numeroBilheteUnico).append("\n");
     sb.append("  observacao: ").append(observacao).append("\n");
+    sb.append("  operadora: ").append(operadora).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  valorOperacao: ").append(valorOperacao).append("\n");
     sb.append("  valorTarifa: ").append(valorTarifa).append("\n");

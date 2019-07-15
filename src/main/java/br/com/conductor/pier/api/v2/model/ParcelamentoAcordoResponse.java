@@ -26,6 +26,8 @@ public class ParcelamentoAcordoResponse  {
   private BigDecimal valorParcela = null;
   @SerializedName("valorPrimeiraParcela")
   private BigDecimal valorPrimeiraParcela = null;
+  @SerializedName("numeroParcelas")
+  private Integer numeroParcelas = null;
 
   
   /**
@@ -112,6 +114,18 @@ public class ParcelamentoAcordoResponse  {
   }
 
   
+  /**
+   * N\u00FAmero de parcelas do acordo
+   **/
+  @ApiModelProperty(value = "N\u00FAmero de parcelas do acordo")
+  public Integer getNumeroParcelas() {
+    return numeroParcelas;
+  }
+  public void setNumeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -125,6 +139,7 @@ public class ParcelamentoAcordoResponse  {
     sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
     sb.append("  valorParcela: ").append(valorParcela).append("\n");
     sb.append("  valorPrimeiraParcela: ").append(valorPrimeiraParcela).append("\n");
+    sb.append("  numeroParcelas: ").append(numeroParcelas).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
