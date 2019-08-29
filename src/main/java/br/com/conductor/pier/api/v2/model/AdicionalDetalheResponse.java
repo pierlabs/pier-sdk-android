@@ -51,6 +51,8 @@ public class AdicionalDetalheResponse  {
   private String dataCadastroPortador = null;
   @SerializedName("dataCancelamentoPortador")
   private String dataCancelamentoPortador = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
   @SerializedName("telefones")
   private List<TelefoneResponse> telefones = null;
 
@@ -284,6 +286,18 @@ public class AdicionalDetalheResponse  {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista dos telefones do adicional
    **/
   @ApiModelProperty(value = "Lista dos telefones do adicional")
@@ -320,6 +334,7 @@ public class AdicionalDetalheResponse  {
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("  dataCadastroPortador: ").append(dataCadastroPortador).append("\n");
     sb.append("  dataCancelamentoPortador: ").append(dataCancelamentoPortador).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();

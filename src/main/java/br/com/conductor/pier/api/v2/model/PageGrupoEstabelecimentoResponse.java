@@ -1,20 +1,17 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.TransacaoProcessadaNaoProcessadaResponse;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 
-/**
- * Lista de Transa\u00E7\u00F5es processadas e nao Processadas
- **/
-@ApiModel(description = "Lista de Transa\u00E7\u00F5es processadas e nao Processadas")
-public class PageTransacaoProcessadaNaoProcessadaResponse  {
+@ApiModel(description = "")
+public class PageGrupoEstabelecimentoResponse  {
   
   @SerializedName("content")
-  private List<TransacaoProcessadaNaoProcessadaResponse> content = null;
+  private List<GrupoEstabelecimentoResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +43,10 @@ public class PageTransacaoProcessadaNaoProcessadaResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<TransacaoProcessadaNaoProcessadaResponse> getContent() {
+  public List<GrupoEstabelecimentoResponse> getContent() {
     return content;
   }
-  public void setContent(List<TransacaoProcessadaNaoProcessadaResponse> content) {
+  public void setContent(List<GrupoEstabelecimentoResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +198,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageTransacaoProcessadaNaoProcessadaResponse {\n");
+    sb.append("class PageGrupoEstabelecimentoResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

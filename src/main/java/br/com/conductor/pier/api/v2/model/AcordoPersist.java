@@ -46,6 +46,8 @@ public class AcordoPersist  {
   private Boolean isComIOF = null;
   @SerializedName("nossoNumero")
   private String nossoNumero = null;
+  @SerializedName("valorIOF")
+  private BigDecimal valorIOF = null;
 
   
   /**
@@ -252,6 +254,18 @@ public class AcordoPersist  {
   }
 
   
+  /**
+   * Valor do IOF
+   **/
+  @ApiModelProperty(value = "Valor do IOF")
+  public BigDecimal getValorIOF() {
+    return valorIOF;
+  }
+  public void setValorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -275,6 +289,7 @@ public class AcordoPersist  {
     sb.append("  responsavel: ").append(responsavel).append("\n");
     sb.append("  isComIOF: ").append(isComIOF).append("\n");
     sb.append("  nossoNumero: ").append(nossoNumero).append("\n");
+    sb.append("  valorIOF: ").append(valorIOF).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

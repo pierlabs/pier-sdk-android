@@ -41,6 +41,8 @@ public class AdicionalResponse  {
   private String dataCadastroPortador = null;
   @SerializedName("dataCancelamentoPortador")
   private String dataCancelamentoPortador = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
 
   
   /**
@@ -223,6 +225,18 @@ public class AdicionalResponse  {
   }
 
   
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -244,6 +258,7 @@ public class AdicionalResponse  {
     sb.append("  flagAtivo: ").append(flagAtivo).append("\n");
     sb.append("  dataCadastroPortador: ").append(dataCadastroPortador).append("\n");
     sb.append("  dataCancelamentoPortador: ").append(dataCancelamentoPortador).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

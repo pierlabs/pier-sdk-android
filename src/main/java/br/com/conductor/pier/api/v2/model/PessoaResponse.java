@@ -33,6 +33,8 @@ public class PessoaResponse  {
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
   private String dataEmissaoIdentidade = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
 
   
   /**
@@ -167,6 +169,18 @@ public class PessoaResponse  {
   }
 
   
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -184,6 +198,7 @@ public class PessoaResponse  {
     sb.append("  sexo: ").append(sexo).append("\n");
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

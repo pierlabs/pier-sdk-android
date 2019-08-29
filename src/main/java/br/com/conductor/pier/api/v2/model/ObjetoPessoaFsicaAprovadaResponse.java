@@ -32,6 +32,8 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
   private String unidadeFederativaIdentidade = null;
   @SerializedName("dataEmissaoIdentidade")
   private String dataEmissaoIdentidade = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
   @SerializedName("idEstadoCivil")
   private Long idEstadoCivil = null;
   @SerializedName("idProfissao")
@@ -230,6 +232,18 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
   }
   public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
+  }
+
+  
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
   }
 
   
@@ -705,6 +719,7 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
     sb.append("  orgaoExpedidorIdentidade: ").append(orgaoExpedidorIdentidade).append("\n");
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("  idEstadoCivil: ").append(idEstadoCivil).append("\n");
     sb.append("  idProfissao: ").append(idProfissao).append("\n");
     sb.append("  idNaturezaOcupacao: ").append(idNaturezaOcupacao).append("\n");

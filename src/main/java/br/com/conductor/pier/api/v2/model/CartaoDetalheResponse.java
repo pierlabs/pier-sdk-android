@@ -11,8 +11,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto Cart\u00E3o com mais informa\u00E7\u00F5es")
 public class CartaoDetalheResponse  {
   
-  @SerializedName("portador")
-  private Integer portador = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("flagTitular")
@@ -51,28 +49,26 @@ public class CartaoDetalheResponse  {
   private String dataImpressao = null;
   @SerializedName("nomeArquivoImpressao")
   private String nomeArquivoImpressao = null;
-  @SerializedName("descricaoTipoCartao")
-  private String descricaoTipoCartao = null;
   @SerializedName("idProduto")
   private Long idProduto = null;
   @SerializedName("nomeImpresso")
   private String nomeImpresso = null;
-  @SerializedName("tipoCartao")
-  private Long tipoCartao = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
-
-  
-  /**
-   * Apresenta o n\u00FAmero do portador do cart\u00E3o
-   **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
-  public Integer getPortador() {
-    return portador;
-  }
-  public void setPortador(Integer portador) {
-    this.portador = portador;
-  }
+  @SerializedName("portador")
+  private Integer portador = null;
+  @SerializedName("flagCartaoMifare")
+  private Boolean flagCartaoMifare = null;
+  @SerializedName("idImagem")
+  private Long idImagem = null;
+  @SerializedName("descricaoTipoCartao")
+  private String descricaoTipoCartao = null;
+  @SerializedName("tipoCartao")
+  private Long tipoCartao = null;
+  @SerializedName("idMifare")
+  private Long idMifare = null;
+  @SerializedName("matriculaMifare")
+  private String matriculaMifare = null;
 
   
   /**
@@ -304,18 +300,6 @@ public class CartaoDetalheResponse  {
 
   
   /**
-   * Descreve o tipo do cart\u00E3o
-   **/
-  @ApiModelProperty(value = "Descreve o tipo do cart\u00E3o")
-  public String getDescricaoTipoCartao() {
-    return descricaoTipoCartao;
-  }
-  public void setDescricaoTipoCartao(String descricaoTipoCartao) {
-    this.descricaoTipoCartao = descricaoTipoCartao;
-  }
-
-  
-  /**
    * C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence
    **/
   @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence")
@@ -340,6 +324,66 @@ public class CartaoDetalheResponse  {
 
   
   /**
+   * Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade
+   **/
+  @ApiModelProperty(value = "Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade")
+  public String getCodigoDesbloqueio() {
+    return codigoDesbloqueio;
+  }
+  public void setCodigoDesbloqueio(String codigoDesbloqueio) {
+    this.codigoDesbloqueio = codigoDesbloqueio;
+  }
+
+  
+  /**
+   * Apresenta o n\u00FAmero do portador do cart\u00E3o
+   **/
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
+  public Integer getPortador() {
+    return portador;
+  }
+  public void setPortador(Integer portador) {
+    this.portador = portador;
+  }
+
+  
+  /**
+   * Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare
+   **/
+  @ApiModelProperty(value = "Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare")
+  public Boolean getFlagCartaoMifare() {
+    return flagCartaoMifare;
+  }
+  public void setFlagCartaoMifare(Boolean flagCartaoMifare) {
+    this.flagCartaoMifare = flagCartaoMifare;
+  }
+
+  
+  /**
+   * Apresenta o identificador da cor do cart\u00E3o
+   **/
+  @ApiModelProperty(value = "Apresenta o identificador da cor do cart\u00E3o")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
+  }
+
+  
+  /**
+   * Descreve o tipo do cart\u00E3o
+   **/
+  @ApiModelProperty(value = "Descreve o tipo do cart\u00E3o")
+  public String getDescricaoTipoCartao() {
+    return descricaoTipoCartao;
+  }
+  public void setDescricaoTipoCartao(String descricaoTipoCartao) {
+    this.descricaoTipoCartao = descricaoTipoCartao;
+  }
+
+  
+  /**
    * Indica o identificador do tipo do cart\u00E3o
    **/
   @ApiModelProperty(value = "Indica o identificador do tipo do cart\u00E3o")
@@ -352,14 +396,26 @@ public class CartaoDetalheResponse  {
 
   
   /**
-   * Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade
+   * C\u00F3digo identificador da tecnologia MIFARE
    **/
-  @ApiModelProperty(value = "Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade")
-  public String getCodigoDesbloqueio() {
-    return codigoDesbloqueio;
+  @ApiModelProperty(value = "C\u00F3digo identificador da tecnologia MIFARE")
+  public Long getIdMifare() {
+    return idMifare;
   }
-  public void setCodigoDesbloqueio(String codigoDesbloqueio) {
-    this.codigoDesbloqueio = codigoDesbloqueio;
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  @ApiModelProperty(value = "N\u00FAmero da matricula do portador")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
   }
 
   
@@ -369,7 +425,6 @@ public class CartaoDetalheResponse  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoDetalheResponse {\n");
     
-    sb.append("  portador: ").append(portador).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  flagTitular: ").append(flagTitular).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
@@ -389,11 +444,16 @@ public class CartaoDetalheResponse  {
     sb.append("  impressaoAvulsa: ").append(impressaoAvulsa).append("\n");
     sb.append("  dataImpressao: ").append(dataImpressao).append("\n");
     sb.append("  nomeArquivoImpressao: ").append(nomeArquivoImpressao).append("\n");
-    sb.append("  descricaoTipoCartao: ").append(descricaoTipoCartao).append("\n");
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
-    sb.append("  tipoCartao: ").append(tipoCartao).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
+    sb.append("  portador: ").append(portador).append("\n");
+    sb.append("  flagCartaoMifare: ").append(flagCartaoMifare).append("\n");
+    sb.append("  idImagem: ").append(idImagem).append("\n");
+    sb.append("  descricaoTipoCartao: ").append(descricaoTipoCartao).append("\n");
+    sb.append("  tipoCartao: ").append(tipoCartao).append("\n");
+    sb.append("  idMifare: ").append(idMifare).append("\n");
+    sb.append("  matriculaMifare: ").append(matriculaMifare).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

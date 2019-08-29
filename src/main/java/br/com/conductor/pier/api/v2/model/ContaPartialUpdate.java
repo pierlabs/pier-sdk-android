@@ -20,6 +20,10 @@ public class ContaPartialUpdate  {
   private String dataCadastro = null;
   @SerializedName("valorRenda")
   private BigDecimal valorRenda = null;
+  @SerializedName("possuiOverLimit")
+  private Boolean possuiOverLimit = null;
+  @SerializedName("usuarioModificacao")
+  private String usuarioModificacao = null;
 
   
   /**
@@ -70,6 +74,30 @@ public class ContaPartialUpdate  {
   }
 
   
+  /**
+   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   **/
+  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  public Boolean getPossuiOverLimit() {
+    return possuiOverLimit;
+  }
+  public void setPossuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
+  /**
+   * usuarioModificacao
+   **/
+  @ApiModelProperty(value = "usuarioModificacao")
+  public String getUsuarioModificacao() {
+    return usuarioModificacao;
+  }
+  public void setUsuarioModificacao(String usuarioModificacao) {
+    this.usuarioModificacao = usuarioModificacao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -80,6 +108,8 @@ public class ContaPartialUpdate  {
     sb.append("  idContaEmissor: ").append(idContaEmissor).append("\n");
     sb.append("  dataCadastro: ").append(dataCadastro).append("\n");
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
+    sb.append("  possuiOverLimit: ").append(possuiOverLimit).append("\n");
+    sb.append("  usuarioModificacao: ").append(usuarioModificacao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

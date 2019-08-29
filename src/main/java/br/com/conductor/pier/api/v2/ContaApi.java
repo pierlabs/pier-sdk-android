@@ -41,6 +41,7 @@ import br.com.conductor.pier.api.v2.model.ContaMultiAppResponse;
 import br.com.conductor.pier.api.v2.model.ContaMultiAppPersist;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
+import br.com.conductor.pier.api.v2.model.CartaoMifareRequest;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
@@ -54,7 +55,6 @@ import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageSegurancaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoVinculoContaResponse;
-import br.com.conductor.pier.api.v2.model.PageTransacaoProcessadaNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoNegadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
@@ -2541,10 +2541,11 @@ public class ContaApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    * @param idPessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)
    * @param idTipoPlastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)
+   * @param cartaoMifareRequest cartaoMifareRequest
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse  gerarCartaoDaPessoa (Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
-    Object postBody = null;
+  public CartaoImpressaoResponse  gerarCartaoDaPessoa (Long id, Long idPessoa, Long idTipoPlastico, CartaoMifareRequest cartaoMifareRequest) throws ApiException {
+    Object postBody = cartaoMifareRequest;
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -2672,10 +2673,11 @@ public class ContaApi {
    * Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
    * Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id)
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * @param cartaoMifareRequest cartaoMifareRequest
    * @return CartaoImpressaoProvisorioResponse
    */
-  public CartaoImpressaoProvisorioResponse  gerarCartaoProvisorio (Long id) throws ApiException {
-    Object postBody = null;
+  public CartaoImpressaoProvisorioResponse  gerarCartaoProvisorio (Long id, CartaoMifareRequest cartaoMifareRequest) throws ApiException {
+    Object postBody = cartaoMifareRequest;
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -3621,107 +3623,6 @@ public class ContaApi {
   }
   
   /**
-   * Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param status Status da transa\u00E7\u00E3o
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd
-   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
-   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
-   * @param idTipoTransacao transacoes_processadas_nao_processadas_request_tipo_transacao
-   * @param flagCredito Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito
-   * @param flagFaturado Flag que indica se a transa\u00E7\u00E3o foi faturada
-   * @param flagProcessada Flag que indica se a transa\u00E7\u00E3o foi processada
-   * @param plano Plano da transa\u00E7\u00E3o
-   * @param codigoMCC C\u00F3digo MCC da transa\u00E7\u00E3o
-   * @param grupoMCC Grupo MCC da transa\u00E7\u00E3o
-   * @return PageTransacaoProcessadaNaoProcessadaResponse
-   */
-  public PageTransacaoProcessadaNaoProcessadaResponse  listarTransacoesConta (Long id, List<String> sort, List<Integer> status, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesConta");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/{id}/transacoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "status", status));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataVencimento", dataVencimento));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "idTipoTransacao", idTipoTransacao));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagCredito", flagCredito));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagFaturado", flagFaturado));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagProcessada", flagProcessada));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "plano", plano));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoMCC", codigoMCC));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "grupoMCC", grupoMCC));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageTransacaoProcessadaNaoProcessadaResponse) ApiInvoker.deserialize(response, "", PageTransacaoProcessadaNaoProcessadaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
    * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
@@ -4172,15 +4073,20 @@ public class ContaApi {
    * Realiza a normaliza\u00E7\u00E3o de uma conta
    * Este m\u00E9todo permite que uma conta seja normalizada, ajustando assim o seu status e lan\u00E7ando os ajustes necess\u00E1rios
    * @param id C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)
-   * @param login login
+   * @param login Login do respons\u00E1vel pela normaliza\u00E7\u00E3o
    * @return Object
    */
   public Object  normalizarConta (Long id, String login) throws ApiException {
-    Object postBody = login;
+    Object postBody = null;
     
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling normalizarConta");
+    }
+    
+    // verify the required parameter 'login' is set
+    if (login == null) {
+       throw new ApiException(400, "Missing the required parameter 'login' when calling normalizarConta");
     }
     
 
@@ -4196,6 +4102,8 @@ public class ContaApi {
 
     
 
+    
+    headerParams.put("login", ApiInvoker.parameterToString(login));
     
 
     String[] contentTypes = {

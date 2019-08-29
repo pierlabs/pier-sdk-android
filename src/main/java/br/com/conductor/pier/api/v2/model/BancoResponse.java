@@ -21,6 +21,10 @@ public class BancoResponse  {
   private String digitoBanco = null;
   @SerializedName("ispb")
   private String ispb = null;
+  @SerializedName("cnpj")
+  private String cnpj = null;
+  @SerializedName("flagAtivoBacen")
+  private Boolean flagAtivoBacen = null;
 
   
   /**
@@ -83,6 +87,30 @@ public class BancoResponse  {
   }
 
   
+  /**
+   * N\u00FAmero do CNPJ do banco
+   **/
+  @ApiModelProperty(value = "N\u00FAmero do CNPJ do banco")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
+  /**
+   * Indica se o banco est\u00E1 ativo no BACEN
+   **/
+  @ApiModelProperty(value = "Indica se o banco est\u00E1 ativo no BACEN")
+  public Boolean getFlagAtivoBacen() {
+    return flagAtivoBacen;
+  }
+  public void setFlagAtivoBacen(Boolean flagAtivoBacen) {
+    this.flagAtivoBacen = flagAtivoBacen;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -94,6 +122,8 @@ public class BancoResponse  {
     sb.append("  descricao: ").append(descricao).append("\n");
     sb.append("  digitoBanco: ").append(digitoBanco).append("\n");
     sb.append("  ispb: ").append(ispb).append("\n");
+    sb.append("  cnpj: ").append(cnpj).append("\n");
+    sb.append("  flagAtivoBacen: ").append(flagAtivoBacen).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

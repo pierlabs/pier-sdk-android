@@ -41,6 +41,8 @@ public class AdicionalPersist  {
   private Long idParentesco = null;
   @SerializedName("email")
   private String email = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
   @SerializedName("telefones")
   private List<TelefoneAdicionalPersist> telefones = null;
 
@@ -214,6 +216,18 @@ public class AdicionalPersist  {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista de telefones do adicional
    **/
   @ApiModelProperty(value = "Lista de telefones do adicional")
@@ -245,6 +259,7 @@ public class AdicionalPersist  {
     sb.append("  idNacionalidade: ").append(idNacionalidade).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
     sb.append("  email: ").append(email).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();

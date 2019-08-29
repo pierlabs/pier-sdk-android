@@ -52,6 +52,12 @@ public class TransacaoCorrenteResponse  {
   private Integer tipoTransacao = null;
   @SerializedName("idEventoAjuste")
   private Integer idEventoAjuste = null;
+  @SerializedName("numeroCartao")
+  private String numeroCartao = null;
+  @SerializedName("latitude")
+  private String latitude = null;
+  @SerializedName("longitude")
+  private String longitude = null;
 
   
   /**
@@ -293,6 +299,42 @@ public class TransacaoCorrenteResponse  {
   }
 
   
+  /**
+   * Atributo que representa o numero do cart\u00E3o mascarado
+   **/
+  @ApiModelProperty(value = "Atributo que representa o numero do cart\u00E3o mascarado")
+  public String getNumeroCartao() {
+    return numeroCartao;
+  }
+  public void setNumeroCartao(String numeroCartao) {
+    this.numeroCartao = numeroCartao;
+  }
+
+  
+  /**
+   * Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu
+   **/
+  @ApiModelProperty(value = "Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu")
+  public String getLatitude() {
+    return latitude;
+  }
+  public void setLatitude(String latitude) {
+    this.latitude = latitude;
+  }
+
+  
+  /**
+   * Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu
+   **/
+  @ApiModelProperty(value = "Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu")
+  public String getLongitude() {
+    return longitude;
+  }
+  public void setLongitude(String longitude) {
+    this.longitude = longitude;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -319,6 +361,9 @@ public class TransacaoCorrenteResponse  {
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
     sb.append("  tipoTransacao: ").append(tipoTransacao).append("\n");
     sb.append("  idEventoAjuste: ").append(idEventoAjuste).append("\n");
+    sb.append("  numeroCartao: ").append(numeroCartao).append("\n");
+    sb.append("  latitude: ").append(latitude).append("\n");
+    sb.append("  longitude: ").append(longitude).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

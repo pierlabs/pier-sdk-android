@@ -41,6 +41,8 @@ public class ContaResponse  {
   };
   @SerializedName("funcaoAtiva")
   private FuncaoAtivaEnum funcaoAtiva = null;
+  @SerializedName("possuiOverLimit")
+  private Boolean possuiOverLimit = null;
 
   
   /**
@@ -199,6 +201,18 @@ public class ContaResponse  {
   }
 
   
+  /**
+   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   **/
+  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  public Boolean getPossuiOverLimit() {
+    return possuiOverLimit;
+  }
+  public void setPossuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -218,6 +232,7 @@ public class ContaResponse  {
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  idProposta: ").append(idProposta).append("\n");
     sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
+    sb.append("  possuiOverLimit: ").append(possuiOverLimit).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

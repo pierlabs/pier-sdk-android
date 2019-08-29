@@ -19,6 +19,8 @@ public class ConfiguracaoControleCartaoUpdate  {
   private Boolean permiteWallet = null;
   @SerializedName("permiteControleMCC")
   private Boolean permiteControleMCC = null;
+  @SerializedName("permiteCompraInternacional")
+  private Boolean permiteCompraInternacional = null;
 
   
   /**
@@ -69,6 +71,18 @@ public class ConfiguracaoControleCartaoUpdate  {
   }
 
   
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
+   **/
+  @ApiModelProperty(value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais")
+  public Boolean getPermiteCompraInternacional() {
+    return permiteCompraInternacional;
+  }
+  public void setPermiteCompraInternacional(Boolean permiteCompraInternacional) {
+    this.permiteCompraInternacional = permiteCompraInternacional;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -79,6 +93,7 @@ public class ConfiguracaoControleCartaoUpdate  {
     sb.append("  permiteSaque: ").append(permiteSaque).append("\n");
     sb.append("  permiteWallet: ").append(permiteWallet).append("\n");
     sb.append("  permiteControleMCC: ").append(permiteControleMCC).append("\n");
+    sb.append("  permiteCompraInternacional: ").append(permiteCompraInternacional).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

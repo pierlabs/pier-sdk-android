@@ -33,6 +33,8 @@ public class AdicionalUpdate  {
   private String dataEmissaoIdentidade = null;
   @SerializedName("idParentesco")
   private Long idParentesco = null;
+  @SerializedName("flagDeficienteVisual")
+  private Boolean flagDeficienteVisual = null;
   @SerializedName("telefones")
   private List<TelefoneAdicionalUpdate> telefones = null;
 
@@ -158,6 +160,18 @@ public class AdicionalUpdate  {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  @ApiModelProperty(value = "Flag que identifica uma pessoa como deficiente visual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista de telefones do adicional
    **/
   @ApiModelProperty(value = "Lista de telefones do adicional")
@@ -185,6 +199,7 @@ public class AdicionalUpdate  {
     sb.append("  unidadeFederativaIdentidade: ").append(unidadeFederativaIdentidade).append("\n");
     sb.append("  dataEmissaoIdentidade: ").append(dataEmissaoIdentidade).append("\n");
     sb.append("  idParentesco: ").append(idParentesco).append("\n");
+    sb.append("  flagDeficienteVisual: ").append(flagDeficienteVisual).append("\n");
     sb.append("  telefones: ").append(telefones).append("\n");
     sb.append("}\n");
     return sb.toString();

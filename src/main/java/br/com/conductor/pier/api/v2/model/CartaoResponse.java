@@ -11,8 +11,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Objeto Cart\u00E3o")
 public class CartaoResponse  {
   
-  @SerializedName("portador")
-  private Integer portador = null;
   @SerializedName("id")
   private Long id = null;
   @SerializedName("flagTitular")
@@ -57,18 +55,12 @@ public class CartaoResponse  {
   private String nomeImpresso = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
-
-  
-  /**
-   * Apresenta o n\u00FAmero do portador do cart\u00E3o
-   **/
-  @ApiModelProperty(value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
-  public Integer getPortador() {
-    return portador;
-  }
-  public void setPortador(Integer portador) {
-    this.portador = portador;
-  }
+  @SerializedName("portador")
+  private Integer portador = null;
+  @SerializedName("flagCartaoMifare")
+  private Boolean flagCartaoMifare = null;
+  @SerializedName("idImagem")
+  private Long idImagem = null;
 
   
   /**
@@ -335,13 +327,48 @@ public class CartaoResponse  {
   }
 
   
+  /**
+   * Apresenta o n\u00FAmero do portador do cart\u00E3o
+   **/
+  @ApiModelProperty(value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
+  public Integer getPortador() {
+    return portador;
+  }
+  public void setPortador(Integer portador) {
+    this.portador = portador;
+  }
+
+  
+  /**
+   * Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare
+   **/
+  @ApiModelProperty(value = "Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare")
+  public Boolean getFlagCartaoMifare() {
+    return flagCartaoMifare;
+  }
+  public void setFlagCartaoMifare(Boolean flagCartaoMifare) {
+    this.flagCartaoMifare = flagCartaoMifare;
+  }
+
+  
+  /**
+   * Apresenta o identificador da cor do cart\u00E3o
+   **/
+  @ApiModelProperty(value = "Apresenta o identificador da cor do cart\u00E3o")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
+  }
+
+  
 
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoResponse {\n");
     
-    sb.append("  portador: ").append(portador).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  flagTitular: ").append(flagTitular).append("\n");
     sb.append("  idPessoa: ").append(idPessoa).append("\n");
@@ -364,6 +391,9 @@ public class CartaoResponse  {
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
+    sb.append("  portador: ").append(portador).append("\n");
+    sb.append("  flagCartaoMifare: ").append(flagCartaoMifare).append("\n");
+    sb.append("  idImagem: ").append(idImagem).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

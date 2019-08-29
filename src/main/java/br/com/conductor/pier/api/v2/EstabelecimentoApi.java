@@ -12,6 +12,8 @@ import br.com.conductor.pier.api.v2.model.EstabelecimentoUpdate;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoDTO;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoResponse;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoUpdate;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorUpdate;
@@ -47,6 +49,7 @@ import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalTransacoesResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoEstabelecimentoAdquirenteResponse;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoPersist;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.MaquinetaPersist;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorPersist;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoPersist;
@@ -202,6 +205,71 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEconomicoResponse) ApiInvoker.deserialize(response, "", GrupoEconomicoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Alterar Grupo Estabelecimento
+   * Altera um grupo de estabelecimento
+   * @param id id
+   * @param grupoEstabelecimentoUpdate grupoEstabelecimentoUpdate
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse  alterarGrupoEstabelecimentos (Long id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate) throws ApiException {
+    Object postBody = grupoEstabelecimentoUpdate;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarGrupoEstabelecimentos");
+    }
+    
+    // verify the required parameter 'grupoEstabelecimentoUpdate' is set
+    if (grupoEstabelecimentoUpdate == null) {
+       throw new ApiException(400, "Missing the required parameter 'grupoEstabelecimentoUpdate' when calling alterarGrupoEstabelecimentos");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
       }
       else {
         return null;
@@ -704,6 +772,65 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEconomicoResponse) ApiInvoker.deserialize(response, "", GrupoEconomicoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consultar grupo de estabelecimento
+   * Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+   * @param id id
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse  consultarGrupoEstabelecimentos (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarGrupoEstabelecimentos");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
       }
       else {
         return null;
@@ -1612,6 +1739,74 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageMCCResponse) ApiInvoker.deserialize(response, "", PageMCCResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os grupos de estabelecimento na base
+   * Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param descricao Descri\u00E7\u00E3o do grupo de estabelecimento
+   * @param idLayout idLayout
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse  listarGrupoEstabelecimentos (List<String> sort, Integer page, Integer limit, String descricao, Long idLayout) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idLayout", idLayout));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
       }
       else {
         return null;
@@ -3033,6 +3228,65 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEconomicoResponse) ApiInvoker.deserialize(response, "", GrupoEconomicoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Cadastrar Grupo Estabelecimento
+   * Cadastra um grupo de estabelecimento
+   * @param grupoEstabelecimentoPersist grupoEstabelecimentoPersist
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse  salvarGrupoEstabelecimentos (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist) throws ApiException {
+    Object postBody = grupoEstabelecimentoPersist;
+    
+    // verify the required parameter 'grupoEstabelecimentoPersist' is set
+    if (grupoEstabelecimentoPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'grupoEstabelecimentoPersist' when calling salvarGrupoEstabelecimentos");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
       }
       else {
         return null;

@@ -40,6 +40,8 @@ public class LimiteDisponibilidadeLogResponse  {
   private BigDecimal limiteCompraNacional = null;
   @SerializedName("limiteGlobalCredito")
   private BigDecimal limiteGlobalCredito = null;
+  @SerializedName("limiteMaximo")
+  private BigDecimal limiteMaximo = null;
   @SerializedName("limiteParceladoInternacional")
   private BigDecimal limiteParceladoInternacional = null;
   @SerializedName("limiteParceladoNacional")
@@ -237,6 +239,18 @@ public class LimiteDisponibilidadeLogResponse  {
 
   
   /**
+   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   **/
+  @ApiModelProperty(value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
    * Limite parcelado internacional
    **/
   @ApiModelProperty(value = "Limite parcelado internacional")
@@ -412,6 +426,7 @@ public class LimiteDisponibilidadeLogResponse  {
     sb.append("  limiteCompraInternacional: ").append(limiteCompraInternacional).append("\n");
     sb.append("  limiteCompraNacional: ").append(limiteCompraNacional).append("\n");
     sb.append("  limiteGlobalCredito: ").append(limiteGlobalCredito).append("\n");
+    sb.append("  limiteMaximo: ").append(limiteMaximo).append("\n");
     sb.append("  limiteParceladoInternacional: ").append(limiteParceladoInternacional).append("\n");
     sb.append("  limiteParceladoNacional: ").append(limiteParceladoNacional).append("\n");
     sb.append("  limiteParcelasInternacional: ").append(limiteParcelasInternacional).append("\n");
