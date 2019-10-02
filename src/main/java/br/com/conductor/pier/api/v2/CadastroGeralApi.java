@@ -18,12 +18,14 @@ import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioResponse;
-import br.com.conductor.pier.api.v2.model.PacoteTarifaUpdate;
-import br.com.conductor.pier.api.v2.model.PacoteTarifaResponse;
+import br.com.conductor.pier.api.v2.model.FantasiaBasicaPersist;
+import br.com.conductor.pier.api.v2.model.FantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import br.com.conductor.pier.api.v2.model.PortadorParcialUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOperacaoParcialUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
+import br.com.conductor.pier.api.v2.model.PacoteTarifaUpdate;
+import br.com.conductor.pier.api.v2.model.PacoteTarifaResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
@@ -34,6 +36,7 @@ import br.com.conductor.pier.api.v2.model.TipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
@@ -42,8 +45,8 @@ import br.com.conductor.pier.api.v2.model.PageConvenioResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
-import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoMCCResponse;
+import br.com.conductor.pier.api.v2.model.GrupoTransacaoLojistaResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
@@ -411,28 +414,28 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Atualizar um pacote de tarifas
-   * Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
-   * @param id C\u00F3digo identificador do pacote de tarifa
-   * @param update update
-   * @return PacoteTarifaResponse
+   * atualizar
+   * 
+   * @param id id
+   * @param persist persist
+   * @return FantasiaBasicaResponse
    */
-  public PacoteTarifaResponse  atualizar (Long id, PacoteTarifaUpdate update) throws ApiException {
-    Object postBody = update;
+  public FantasiaBasicaResponse  atualizar (Long id, FantasiaBasicaPersist persist) throws ApiException {
+    Object postBody = persist;
     
     // verify the required parameter 'id' is set
     if (id == null) {
        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar");
     }
     
-    // verify the required parameter 'update' is set
-    if (update == null) {
-       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar");
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizar");
     }
     
 
     // create path and map variables
-    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -465,7 +468,7 @@ public class CadastroGeralApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PacoteTarifaResponse) ApiInvoker.deserialize(response, "", PacoteTarifaResponse.class);
+        return (FantasiaBasicaResponse) ApiInvoker.deserialize(response, "", FantasiaBasicaResponse.class);
       }
       else {
         return null;
@@ -612,6 +615,130 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Atualizar um pacote de tarifas
+   * Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+   * @param id C\u00F3digo identificador do pacote de tarifa
+   * @param update update
+   * @return PacoteTarifaResponse
+   */
+  public PacoteTarifaResponse  atualizar_1 (Long id, PacoteTarifaUpdate update) throws ApiException {
+    Object postBody = update;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar_1");
+    }
+    
+    // verify the required parameter 'update' is set
+    if (update == null) {
+       throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar_1");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PacoteTarifaResponse) ApiInvoker.deserialize(response, "", PacoteTarifaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * cadastrar
+   * 
+   * @param persist persist
+   * @return FantasiaBasicaResponse
+   */
+  public FantasiaBasicaResponse  cadastrar (FantasiaBasicaPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrar");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (FantasiaBasicaResponse) ApiInvoker.deserialize(response, "", FantasiaBasicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
    * Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id Id Produto
@@ -677,12 +804,12 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Consultar um pacote de tarifa
-   * Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
-   * @param id C\u00F3digo identificador do pacote de tarifa
-   * @return PacoteTarifaResponse
+   * consultar
+   * 
+   * @param id id
+   * @return FantasiaBasicaResponse
    */
-  public PacoteTarifaResponse  consultar (Long id) throws ApiException {
+  public FantasiaBasicaResponse  consultar (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -692,7 +819,7 @@ public class CadastroGeralApi {
     
 
     // create path and map variables
-    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -725,7 +852,7 @@ public class CadastroGeralApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (PacoteTarifaResponse) ApiInvoker.deserialize(response, "", PacoteTarifaResponse.class);
+        return (FantasiaBasicaResponse) ApiInvoker.deserialize(response, "", FantasiaBasicaResponse.class);
       }
       else {
         return null;
@@ -1733,6 +1860,139 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Consultar um pacote de tarifa
+   * Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+   * @param id C\u00F3digo identificador do pacote de tarifa
+   * @return PacoteTarifaResponse
+   */
+  public PacoteTarifaResponse  consultar_2 (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_2");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PacoteTarifaResponse) ApiInvoker.deserialize(response, "", PacoteTarifaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Listar Fantasias B\u00E1sicas
+   * Lista as fantasia b\u00E1sicas
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param nome Nome da fantasia b\u00E1sica
+   * @param descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
+   * @param descricaoArquivo Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica
+   * @param quantidadeMaxProposta Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica
+   * @return PageFantasiaBasicaResponse
+   */
+  public PageFantasiaBasicaResponse  listar (List<String> sort, Integer page, Integer limit, String nome, String descricao, String descricaoArquivo, Integer quantidadeMaxProposta) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricaoArquivo", descricaoArquivo));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "quantidadeMaxProposta", quantidadeMaxProposta));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageFantasiaBasicaResponse) ApiInvoker.deserialize(response, "", PageFantasiaBasicaResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista todos os atendimentos
    * Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -2298,68 +2558,6 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Listar Fantasias B\u00E1sicas
-   * Lista as fantasia b\u00E1sicas
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageFantasiaBasicaResponse
-   */
-  public PageFantasiaBasicaResponse  listarFantasiasBasicas (List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (PageFantasiaBasicaResponse) ApiInvoker.deserialize(response, "", PageFantasiaBasicaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista os Grupos MCCs
    * Este m\u00E9todo permite que sejam listados os grupos MCCs existentes na base de dados do Emissor
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -2421,6 +2619,95 @@ public class CadastroGeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageGrupoMCCResponse) ApiInvoker.deserialize(response, "", PageGrupoMCCResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os grupos de transa\u00E7\u00F5es lojistas
+   * Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param id C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista
+   * @param descricao Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista
+   * @param flagCompra Indica se permite compra
+   * @param flagSaque Indica se permite saque
+   * @param flagComissao Indica se recebe comiss\u00E3o
+   * @param flagChargeBack Indica se permite chargeback
+   * @param flagOutrosDebitos Indica se recebe outros d\u00E9bitos
+   * @param flagPagamento Indica pagamento
+   * @param flagOutrosCreditos Indica se recebe outros cr\u00E9ditos
+   * @return GrupoTransacaoLojistaResponse
+   */
+  public GrupoTransacaoLojistaResponse  listarGruposTransacoesLojistas (List<String> sort, Integer page, Integer limit, Long id, String descricao, Boolean flagCompra, Boolean flagSaque, Boolean flagComissao, Boolean flagChargeBack, Boolean flagOutrosDebitos, Boolean flagPagamento, Boolean flagOutrosCreditos) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/grupos-transacoes-lojistas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagCompra", flagCompra));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagSaque", flagSaque));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagComissao", flagComissao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagChargeBack", flagChargeBack));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagOutrosDebitos", flagOutrosDebitos));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagPagamento", flagPagamento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "flagOutrosCreditos", flagOutrosCreditos));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (GrupoTransacaoLojistaResponse) ApiInvoker.deserialize(response, "", GrupoTransacaoLojistaResponse.class);
       }
       else {
         return null;
@@ -3252,6 +3539,65 @@ public class CadastroGeralApi {
       }
       else {
         return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * remover
+   * 
+   * @param id id
+   * @return void
+   */
+  public void  remover (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling remover");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return ;
+      }
+      else {
+        return ;
       }
     } catch (ApiException ex) {
       throw ex;

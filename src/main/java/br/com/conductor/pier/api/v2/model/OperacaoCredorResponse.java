@@ -25,7 +25,7 @@ public class OperacaoCredorResponse  {
   @SerializedName("remuneracaoFixa")
   private BigDecimal remuneracaoFixa = null;
   public enum PeriodicidadeEnum {
-     DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
+     NENHUM,  DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
   };
   @SerializedName("periodicidade")
   private PeriodicidadeEnum periodicidade = null;

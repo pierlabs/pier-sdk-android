@@ -48,6 +48,8 @@ public class ContaPersist  {
   private Integer idPromotorVenda = null;
   @SerializedName("idStatusConta")
   private Long idStatusConta = null;
+  @SerializedName("behaviorScore")
+  private Integer behaviorScore = null;
 
   
   /**
@@ -266,6 +268,18 @@ public class ContaPersist  {
   }
 
   
+  /**
+   * Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  @ApiModelProperty(value = "Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -290,6 +304,7 @@ public class ContaPersist  {
     sb.append("  responsavelDigitacao: ").append(responsavelDigitacao).append("\n");
     sb.append("  idPromotorVenda: ").append(idPromotorVenda).append("\n");
     sb.append("  idStatusConta: ").append(idStatusConta).append("\n");
+    sb.append("  behaviorScore: ").append(behaviorScore).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

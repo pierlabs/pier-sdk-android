@@ -440,12 +440,13 @@ public class BoletoApi {
   }
   
   /**
-   * Gera um pdf do boleto
-   * Este servi\u00E7o gera um pdf do boleto
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)
+   * Gerar boleto de pagamento
+   * Gera um boleto de pagamento em formato PDF
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do boleto
+   * @param zeraValorCodigoBarras Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel
    * @return Object
    */
-  public Object  visualizarBoleto (Long id) throws ApiException {
+  public Object  visualizarBoleto (Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -464,6 +465,8 @@ public class BoletoApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
 
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "zeraValorCodigoBarras", zeraValorCodigoBarras));
     
 
     

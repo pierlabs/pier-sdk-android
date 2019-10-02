@@ -11,6 +11,8 @@ import java.util.*;
 import br.com.conductor.pier.api.v2.model.CartaoResponse;
 import br.com.conductor.pier.api.v2.model.EstagioCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartaoResponse;
+import br.com.conductor.pier.api.v2.model.CvvDinamicoResponse;
+import br.com.conductor.pier.api.v2.model.CvvDinamicoPersist;
 import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DadosCartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
@@ -262,9 +264,10 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o
    * @param observacao Texto informando uma observa\u00E7\u00E3o sobre o bloqueio
+   * @param usuario Usu\u00E1rio que realizou a requisi\u00E7\u00E3o
    * @return CartaoResponse
    */
-  public CartaoResponse  bloquearCartao (Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse  bloquearCartao (Long id, Long idStatus, String observacao, String usuario) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -297,6 +300,8 @@ public class CartaoApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "id_status", idStatus));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "observacao", observacao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "usuario", usuario));
     
 
     
@@ -397,6 +402,189 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CartaoResponse) ApiInvoker.deserialize(response, "", CartaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consultar CVV2 din\u00E2mico ativo
+   * Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @return CvvDinamicoResponse
+   */
+  public CvvDinamicoResponse  cartaoConsultarCvvDinamico (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoConsultarCvvDinamico");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CvvDinamicoResponse) ApiInvoker.deserialize(response, "", CvvDinamicoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Expirar um CVV2 din\u00E2mico que estiver ativo
+   * Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @return Object
+   */
+  public Object  cartaoExpirarCvvDinamico (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoExpirarCvvDinamico");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+   * Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @param cvvDinamicoPersist Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico
+   * @return CvvDinamicoResponse
+   */
+  public CvvDinamicoResponse  cartaoGerarCvvDinamico (Long id, CvvDinamicoPersist cvvDinamicoPersist) throws ApiException {
+    Object postBody = cvvDinamicoPersist;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoGerarCvvDinamico");
+    }
+    
+    // verify the required parameter 'cvvDinamicoPersist' is set
+    if (cvvDinamicoPersist == null) {
+       throw new ApiException(400, "Missing the required parameter 'cvvDinamicoPersist' when calling cartaoGerarCvvDinamico");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (CvvDinamicoResponse) ApiInvoker.deserialize(response, "", CvvDinamicoResponse.class);
       }
       else {
         return null;

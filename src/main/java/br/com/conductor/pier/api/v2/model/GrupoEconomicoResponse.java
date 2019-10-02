@@ -37,7 +37,7 @@ public class GrupoEconomicoResponse  {
   @SerializedName("usuario")
   private String usuario = null;
   public enum PeriodicidadeEnum {
-     DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
+     NENHUM,  DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
   };
   @SerializedName("periodicidade")
   private PeriodicidadeEnum periodicidade = null;

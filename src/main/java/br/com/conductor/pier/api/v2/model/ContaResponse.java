@@ -43,6 +43,8 @@ public class ContaResponse  {
   private FuncaoAtivaEnum funcaoAtiva = null;
   @SerializedName("possuiOverLimit")
   private Boolean possuiOverLimit = null;
+  @SerializedName("behaviorScore")
+  private Integer behaviorScore = null;
 
   
   /**
@@ -202,14 +204,26 @@ public class ContaResponse  {
 
   
   /**
-   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   * Sinaliza se o OverLimit da conta est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\u00E1 ativo")
   public Boolean getPossuiOverLimit() {
     return possuiOverLimit;
   }
   public void setPossuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
+  /**
+   * Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  @ApiModelProperty(value = "Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
   }
 
   
@@ -233,6 +247,7 @@ public class ContaResponse  {
     sb.append("  idProposta: ").append(idProposta).append("\n");
     sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
     sb.append("  possuiOverLimit: ").append(possuiOverLimit).append("\n");
+    sb.append("  behaviorScore: ").append(behaviorScore).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

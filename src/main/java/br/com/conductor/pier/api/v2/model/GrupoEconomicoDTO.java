@@ -33,7 +33,7 @@ public class GrupoEconomicoDTO  {
   @SerializedName("digitoContaCorrente")
   private String digitoContaCorrente = null;
   public enum PeriodicidadeEnum {
-     DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
+     NENHUM,  DIARIO,  SEMANAL,  MENSAL,  DECENDIAL,  QUINZENAL, 
   };
   @SerializedName("periodicidade")
   private PeriodicidadeEnum periodicidade = null;

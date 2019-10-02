@@ -24,6 +24,8 @@ public class ContaPartialUpdate  {
   private Boolean possuiOverLimit = null;
   @SerializedName("usuarioModificacao")
   private String usuarioModificacao = null;
+  @SerializedName("behaviorScore")
+  private Integer behaviorScore = null;
 
   
   /**
@@ -75,9 +77,9 @@ public class ContaPartialUpdate  {
 
   
   /**
-   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   * Sinaliza se o OverLimit da conta est\u00E1 ativo
    **/
-  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @ApiModelProperty(value = "Sinaliza se o OverLimit da conta est\u00E1 ativo")
   public Boolean getPossuiOverLimit() {
     return possuiOverLimit;
   }
@@ -98,6 +100,18 @@ public class ContaPartialUpdate  {
   }
 
   
+  /**
+   * Valor da pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  @ApiModelProperty(value = "Valor da pontua\u00E7\u00E3o de comportamento (behavior score).")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -110,6 +124,7 @@ public class ContaPartialUpdate  {
     sb.append("  valorRenda: ").append(valorRenda).append("\n");
     sb.append("  possuiOverLimit: ").append(possuiOverLimit).append("\n");
     sb.append("  usuarioModificacao: ").append(usuarioModificacao).append("\n");
+    sb.append("  behaviorScore: ").append(behaviorScore).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

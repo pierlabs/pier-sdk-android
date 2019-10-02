@@ -17,6 +17,10 @@ public class FantasiaBasicaResponse  {
   private String nome = null;
   @SerializedName("descricao")
   private String descricao = null;
+  @SerializedName("descricaoArquivo")
+  private String descricaoArquivo = null;
+  @SerializedName("quantidadeMaxProposta")
+  private Integer quantidadeMaxProposta = null;
 
   
   /**
@@ -55,6 +59,30 @@ public class FantasiaBasicaResponse  {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica")
+  public String getDescricaoArquivo() {
+    return descricaoArquivo;
+  }
+  public void setDescricaoArquivo(String descricaoArquivo) {
+    this.descricaoArquivo = descricaoArquivo;
+  }
+
+  
+  /**
+   * Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica
+   **/
+  @ApiModelProperty(value = "Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica")
+  public Integer getQuantidadeMaxProposta() {
+    return quantidadeMaxProposta;
+  }
+  public void setQuantidadeMaxProposta(Integer quantidadeMaxProposta) {
+    this.quantidadeMaxProposta = quantidadeMaxProposta;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -64,6 +92,8 @@ public class FantasiaBasicaResponse  {
     sb.append("  id: ").append(id).append("\n");
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
+    sb.append("  descricaoArquivo: ").append(descricaoArquivo).append("\n");
+    sb.append("  quantidadeMaxProposta: ").append(quantidadeMaxProposta).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
