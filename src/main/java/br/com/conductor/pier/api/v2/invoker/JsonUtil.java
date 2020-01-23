@@ -1587,10 +1587,6 @@ public class JsonUtil {
       return new TypeToken<List<PageTipoPlasticoResponse>>(){}.getType();
     }
     
-    if ("PageTipoProdutoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PageTipoProdutoResponse>>(){}.getType();
-    }
-    
     if ("PageTipoResolucaoContestacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<PageTipoResolucaoContestacaoResponse>>(){}.getType();
     }
@@ -2189,14 +2185,6 @@ public class JsonUtil {
     
     if ("TipoPlasticoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<TipoPlasticoResponse>>(){}.getType();
-    }
-    
-    if ("TipoProdutoPersist".equalsIgnoreCase(className)) {
-      return new TypeToken<List<TipoProdutoPersist>>(){}.getType();
-    }
-    
-    if ("TipoProdutoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<TipoProdutoResponse>>(){}.getType();
     }
     
     if ("TipoServicoResponse".equalsIgnoreCase(className)) {
@@ -3957,10 +3945,6 @@ public class JsonUtil {
       return new TypeToken<PageTipoPlasticoResponse>(){}.getType();
     }
     
-    if ("PageTipoProdutoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<PageTipoProdutoResponse>(){}.getType();
-    }
-    
     if ("PageTipoResolucaoContestacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<PageTipoResolucaoContestacaoResponse>(){}.getType();
     }
@@ -4559,14 +4543,6 @@ public class JsonUtil {
     
     if ("TipoPlasticoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<TipoPlasticoResponse>(){}.getType();
-    }
-    
-    if ("TipoProdutoPersist".equalsIgnoreCase(className)) {
-      return new TypeToken<TipoProdutoPersist>(){}.getType();
-    }
-    
-    if ("TipoProdutoResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<TipoProdutoResponse>(){}.getType();
     }
     
     if ("TipoServicoResponse".equalsIgnoreCase(className)) {
