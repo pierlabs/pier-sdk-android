@@ -21,6 +21,8 @@ public class ProdutoDetalhesResponse  {
   private Long idFantasiaBasica = null;
   @SerializedName("fantasiaBasica")
   private String fantasiaBasica = null;
+  @SerializedName("idBandeira")
+  private Long idBandeira = null;
   @SerializedName("usoExterior")
   private Boolean usoExterior = null;
 
@@ -86,6 +88,18 @@ public class ProdutoDetalhesResponse  {
 
   
   /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da bandeira")
+  public Long getIdBandeira() {
+    return idBandeira;
+  }
+  public void setIdBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+  }
+
+  
+  /**
    * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior
    **/
   @ApiModelProperty(value = "Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior")
@@ -108,6 +122,7 @@ public class ProdutoDetalhesResponse  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  idFantasiaBasica: ").append(idFantasiaBasica).append("\n");
     sb.append("  fantasiaBasica: ").append(fantasiaBasica).append("\n");
+    sb.append("  idBandeira: ").append(idBandeira).append("\n");
     sb.append("  usoExterior: ").append(usoExterior).append("\n");
     sb.append("}\n");
     return sb.toString();

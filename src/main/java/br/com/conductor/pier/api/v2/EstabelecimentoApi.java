@@ -47,6 +47,7 @@ import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalTransacoesResponse;
+import br.com.conductor.pier.api.v2.model.VinculoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoEstabelecimentoAdquirenteResponse;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoPersist;
@@ -55,6 +56,8 @@ import br.com.conductor.pier.api.v2.model.OperacaoCredorPersist;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.TerminalPersist;
 import br.com.conductor.pier.api.v2.model.VinculoEstabelecimentoAdquirentePersist;
+import br.com.conductor.pier.api.v2.model.ResponseEntity;
+import java.util.*;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -2084,6 +2087,77 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento
+   * Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
+   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)
+   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
+   * @return Object
+   */
+  public Object  listarMccVinculoProdutoOperacao (Long idEstabelecimento, Long idOperacao, Long idProduto) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling listarMccVinculoProdutoOperacao");
+    }
+    
+    // verify the required parameter 'idOperacao' is set
+    if (idOperacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idOperacao' when calling listarMccVinculoProdutoOperacao");
+    }
+    
+    // verify the required parameter 'idProduto' is set
+    if (idProduto == null) {
+       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling listarMccVinculoProdutoOperacao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/codigosMCC".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idOperacao" + "\\}", apiInvoker.escapeString(idOperacao.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os tipos de moedas do emissor
    * Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -3049,6 +3123,71 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+   * Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
+   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
+   * @return VinculoOperacaoResponse
+   */
+  public VinculoOperacaoResponse  listarVinculoOperacoesProdutoEstabelecimento (Long idEstabelecimento, Long idProduto) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling listarVinculoOperacoesProdutoEstabelecimento");
+    }
+    
+    // verify the required parameter 'idProduto' is set
+    if (idProduto == null) {
+       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling listarVinculoOperacoesProdutoEstabelecimento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (VinculoOperacaoResponse) ApiInvoker.deserialize(response, "", VinculoOperacaoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
    * Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -3582,6 +3721,154 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (VinculoEstabelecimentoAdquirenteResponse) ApiInvoker.deserialize(response, "", VinculoEstabelecimentoAdquirenteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
+   * Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
+   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)
+   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
+   * @param mcc C\u00F3digo de Identifica\u00E7\u00E3o do mcc
+   * @return ResponseEntity
+   */
+  public ResponseEntity  vinculoOperacoesProdutoEstabelecimento (Long idEstabelecimento, Long idOperacao, Long idProduto, List<Integer> mcc) throws ApiException {
+    Object postBody = mcc;
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling vinculoOperacoesProdutoEstabelecimento");
+    }
+    
+    // verify the required parameter 'idOperacao' is set
+    if (idOperacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idOperacao' when calling vinculoOperacoesProdutoEstabelecimento");
+    }
+    
+    // verify the required parameter 'idProduto' is set
+    if (idProduto == null) {
+       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling vinculoOperacoesProdutoEstabelecimento");
+    }
+    
+    // verify the required parameter 'mcc' is set
+    if (mcc == null) {
+       throw new ApiException(400, "Missing the required parameter 'mcc' when calling vinculoOperacoesProdutoEstabelecimento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idOperacao" + "\\}", apiInvoker.escapeString(idOperacao.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ResponseEntity) ApiInvoker.deserialize(response, "", ResponseEntity.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+   * Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
+   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)
+   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
+   * @return ResponseEntity
+   */
+  public ResponseEntity  vinculoOperacoesProdutoEstabelecimentoRemove (Long idEstabelecimento, Long idOperacao, Long idProduto) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idEstabelecimento' is set
+    if (idEstabelecimento == null) {
+       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
+    }
+    
+    // verify the required parameter 'idOperacao' is set
+    if (idOperacao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idOperacao' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
+    }
+    
+    // verify the required parameter 'idProduto' is set
+    if (idProduto == null) {
+       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idOperacao" + "\\}", apiInvoker.escapeString(idOperacao.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ResponseEntity) ApiInvoker.deserialize(response, "", ResponseEntity.class);
       }
       else {
         return null;

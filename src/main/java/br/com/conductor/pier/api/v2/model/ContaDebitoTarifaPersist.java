@@ -22,6 +22,12 @@ public class ContaDebitoTarifaPersist  {
   private String dataHoraFimCobranca = null;
   @SerializedName("dataHoraExpiracao")
   private String dataHoraExpiracao = null;
+  @SerializedName("idAjuste")
+  private Long idAjuste = null;
+  @SerializedName("idTarifaExtrato")
+  private Long idTarifaExtrato = null;
+  @SerializedName("dataHoraInclusaoDebito")
+  private String dataHoraInclusaoDebito = null;
 
   
   /**
@@ -84,6 +90,42 @@ public class ContaDebitoTarifaPersist  {
   }
 
   
+  /**
+   * Valor do c\u00F3digo identificador do ajuste 
+   **/
+  @ApiModelProperty(value = "Valor do c\u00F3digo identificador do ajuste ")
+  public Long getIdAjuste() {
+    return idAjuste;
+  }
+  public void setIdAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+  }
+
+  
+  /**
+   * Valor do identificador do extrato da tarifa
+   **/
+  @ApiModelProperty(value = "Valor do identificador do extrato da tarifa")
+  public Long getIdTarifaExtrato() {
+    return idTarifaExtrato;
+  }
+  public void setIdTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
+  }
+
+  
+  /**
+   * Data e hota da inclus\u00E3o do d\u00E9bito
+   **/
+  @ApiModelProperty(value = "Data e hota da inclus\u00E3o do d\u00E9bito")
+  public String getDataHoraInclusaoDebito() {
+    return dataHoraInclusaoDebito;
+  }
+  public void setDataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -95,6 +137,9 @@ public class ContaDebitoTarifaPersist  {
     sb.append("  percentualDesconto: ").append(percentualDesconto).append("\n");
     sb.append("  dataHoraFimCobranca: ").append(dataHoraFimCobranca).append("\n");
     sb.append("  dataHoraExpiracao: ").append(dataHoraExpiracao).append("\n");
+    sb.append("  idAjuste: ").append(idAjuste).append("\n");
+    sb.append("  idTarifaExtrato: ").append(idTarifaExtrato).append("\n");
+    sb.append("  dataHoraInclusaoDebito: ").append(dataHoraInclusaoDebito).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

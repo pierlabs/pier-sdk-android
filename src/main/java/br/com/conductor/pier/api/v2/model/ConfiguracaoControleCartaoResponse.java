@@ -25,6 +25,10 @@ public class ConfiguracaoControleCartaoResponse  {
   private Boolean permiteControleMCC = null;
   @SerializedName("permiteCompraInternacional")
   private Boolean permiteCompraInternacional = null;
+  @SerializedName("permiteTarjaMagnetica")
+  private Boolean permiteTarjaMagnetica = null;
+  @SerializedName("permiteContactless")
+  private Boolean permiteContactless = null;
 
   
   /**
@@ -111,6 +115,30 @@ public class ConfiguracaoControleCartaoResponse  {
   }
 
   
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
+   **/
+  @ApiModelProperty(value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica")
+  public Boolean getPermiteTarjaMagnetica() {
+    return permiteTarjaMagnetica;
+  }
+  public void setPermiteTarjaMagnetica(Boolean permiteTarjaMagnetica) {
+    this.permiteTarjaMagnetica = permiteTarjaMagnetica;
+  }
+
+  
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
+   **/
+  @ApiModelProperty(value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless")
+  public Boolean getPermiteContactless() {
+    return permiteContactless;
+  }
+  public void setPermiteContactless(Boolean permiteContactless) {
+    this.permiteContactless = permiteContactless;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -124,6 +152,8 @@ public class ConfiguracaoControleCartaoResponse  {
     sb.append("  permiteWallet: ").append(permiteWallet).append("\n");
     sb.append("  permiteControleMCC: ").append(permiteControleMCC).append("\n");
     sb.append("  permiteCompraInternacional: ").append(permiteCompraInternacional).append("\n");
+    sb.append("  permiteTarjaMagnetica: ").append(permiteTarjaMagnetica).append("\n");
+    sb.append("  permiteContactless: ").append(permiteContactless).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

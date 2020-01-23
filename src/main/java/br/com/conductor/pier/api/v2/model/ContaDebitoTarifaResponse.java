@@ -16,10 +16,16 @@ public class ContaDebitoTarifaResponse  {
   private String dataHoraExpiracao = null;
   @SerializedName("dataHoraFimCobranca")
   private String dataHoraFimCobranca = null;
+  @SerializedName("dataHoraInclusaoDebito")
+  private String dataHoraInclusaoDebito = null;
   @SerializedName("id")
   private Long id = null;
+  @SerializedName("idAjuste")
+  private Long idAjuste = null;
   @SerializedName("idConta")
   private Long idConta = null;
+  @SerializedName("idTarifaExtrato")
+  private Long idTarifaExtrato = null;
   @SerializedName("percentualDesconto")
   private BigDecimal percentualDesconto = null;
   @SerializedName("valor")
@@ -53,6 +59,18 @@ public class ContaDebitoTarifaResponse  {
 
   
   /**
+   * Data e hota da inclus\u00E3o do d\u00E9bito
+   **/
+  @ApiModelProperty(value = "Data e hota da inclus\u00E3o do d\u00E9bito")
+  public String getDataHoraInclusaoDebito() {
+    return dataHoraInclusaoDebito;
+  }
+  public void setDataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+  }
+
+  
+  /**
    * Identificador do registro
    **/
   @ApiModelProperty(value = "Identificador do registro")
@@ -65,6 +83,18 @@ public class ContaDebitoTarifaResponse  {
 
   
   /**
+   * C\u00F3digo identificador do ajuste 
+   **/
+  @ApiModelProperty(value = "C\u00F3digo identificador do ajuste ")
+  public Long getIdAjuste() {
+    return idAjuste;
+  }
+  public void setIdAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+  }
+
+  
+  /**
    * Identificador da conta
    **/
   @ApiModelProperty(value = "Identificador da conta")
@@ -73,6 +103,18 @@ public class ContaDebitoTarifaResponse  {
   }
   public void setIdConta(Long idConta) {
     this.idConta = idConta;
+  }
+
+  
+  /**
+   * Identificador do extrato da tarifa
+   **/
+  @ApiModelProperty(value = "Identificador do extrato da tarifa")
+  public Long getIdTarifaExtrato() {
+    return idTarifaExtrato;
+  }
+  public void setIdTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
   }
 
   
@@ -120,8 +162,11 @@ public class ContaDebitoTarifaResponse  {
     
     sb.append("  dataHoraExpiracao: ").append(dataHoraExpiracao).append("\n");
     sb.append("  dataHoraFimCobranca: ").append(dataHoraFimCobranca).append("\n");
+    sb.append("  dataHoraInclusaoDebito: ").append(dataHoraInclusaoDebito).append("\n");
     sb.append("  id: ").append(id).append("\n");
+    sb.append("  idAjuste: ").append(idAjuste).append("\n");
     sb.append("  idConta: ").append(idConta).append("\n");
+    sb.append("  idTarifaExtrato: ").append(idTarifaExtrato).append("\n");
     sb.append("  percentualDesconto: ").append(percentualDesconto).append("\n");
     sb.append("  valor: ").append(valor).append("\n");
     sb.append("  valorOriginal: ").append(valorOriginal).append("\n");

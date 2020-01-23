@@ -19,6 +19,8 @@ public class ProdutoResponse  {
   private Integer status = null;
   @SerializedName("idFantasiaBasica")
   private Long idFantasiaBasica = null;
+  @SerializedName("idBandeira")
+  private Long idBandeira = null;
 
   
   /**
@@ -69,6 +71,18 @@ public class ProdutoResponse  {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da bandeira")
+  public Long getIdBandeira() {
+    return idBandeira;
+  }
+  public void setIdBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -79,6 +93,7 @@ public class ProdutoResponse  {
     sb.append("  nome: ").append(nome).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  idFantasiaBasica: ").append(idFantasiaBasica).append("\n");
+    sb.append("  idBandeira: ").append(idBandeira).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

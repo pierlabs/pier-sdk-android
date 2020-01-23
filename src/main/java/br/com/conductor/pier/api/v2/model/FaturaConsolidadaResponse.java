@@ -30,6 +30,8 @@ public class FaturaConsolidadaResponse  {
   private BigDecimal saldoAnterior = null;
   @SerializedName("idBoleto")
   private Long idBoleto = null;
+  @SerializedName("linhaDigitavel")
+  private String linhaDigitavel = null;
 
   
   /**
@@ -140,6 +142,18 @@ public class FaturaConsolidadaResponse  {
   }
 
   
+  /**
+   * Linha digit\u00E1vel da fatura
+   **/
+  @ApiModelProperty(value = "Linha digit\u00E1vel da fatura")
+  public String getLinhaDigitavel() {
+    return linhaDigitavel;
+  }
+  public void setLinhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -155,6 +169,7 @@ public class FaturaConsolidadaResponse  {
     sb.append("  valorPagamentoMinimo: ").append(valorPagamentoMinimo).append("\n");
     sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
     sb.append("  idBoleto: ").append(idBoleto).append("\n");
+    sb.append("  linhaDigitavel: ").append(linhaDigitavel).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

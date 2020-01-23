@@ -1,6 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
-import br.com.conductor.pier.api.v2.model.RiscoFraudeResponse;
+import br.com.conductor.pier.api.v2.model.TipoBeneficioResponse;
 import java.util.*;
 
 import io.swagger.annotations.*;
@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 
 /**
- * Lista dos riscos de fraudes
+ * Lista paginada da resposta do tipo de benef\u00EDcio
  **/
-@ApiModel(description = "Lista dos riscos de fraudes")
-public class PageRiscoFraudeResponse  {
+@ApiModel(description = "Lista paginada da resposta do tipo de benef\u00EDcio")
+public class PageTipoBeneficioResponse  {
   
   @SerializedName("content")
-  private List<RiscoFraudeResponse> content = null;
+  private List<TipoBeneficioResponse> content = null;
   @SerializedName("first")
   private Boolean first = null;
   @SerializedName("firstPage")
@@ -46,10 +46,10 @@ public class PageRiscoFraudeResponse  {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<RiscoFraudeResponse> getContent() {
+  public List<TipoBeneficioResponse> getContent() {
     return content;
   }
-  public void setContent(List<RiscoFraudeResponse> content) {
+  public void setContent(List<TipoBeneficioResponse> content) {
     this.content = content;
   }
 
@@ -201,7 +201,7 @@ public class PageRiscoFraudeResponse  {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageRiscoFraudeResponse {\n");
+    sb.append("class PageTipoBeneficioResponse {\n");
     
     sb.append("  content: ").append(content).append("\n");
     sb.append("  first: ").append(first).append("\n");

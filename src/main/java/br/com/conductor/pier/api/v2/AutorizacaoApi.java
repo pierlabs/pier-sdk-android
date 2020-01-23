@@ -586,4 +586,134 @@ public class AutorizacaoApi {
     }
   }
   
+  /**
+   * Simula planos de transa\u00E7\u00F5es a partir do idCartao
+   * Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+   * @param id id
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse  simularTransacaoPorCartao (Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling simularTransacaoPorCartao");
+    }
+    
+    // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+    if (transacaoOnUsPorIdCartaoRequest == null) {
+       throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling simularTransacaoPorCartao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/simular-transacao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransacaoOnUsResponse) ApiInvoker.deserialize(response, "", TransacaoOnUsResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Simula planos de transa\u00E7\u00F5es a partir do idConta
+   * Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+   * @param id id
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse  simularTransacaoPorConta (Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling simularTransacaoPorConta");
+    }
+    
+    // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+    if (transacaoOnUsPorIdCartaoRequest == null) {
+       throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling simularTransacaoPorConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/simular-transacao".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (TransacaoOnUsResponse) ApiInvoker.deserialize(response, "", TransacaoOnUsResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
 }

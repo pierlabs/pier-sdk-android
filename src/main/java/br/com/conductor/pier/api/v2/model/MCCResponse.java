@@ -15,6 +15,10 @@ public class MCCResponse  {
   private Long id = null;
   @SerializedName("descricao")
   private String descricao = null;
+  @SerializedName("grupoMCCId")
+  private Long grupoMCCId = null;
+  @SerializedName("grupoMCCDescricao")
+  private String grupoMCCDescricao = null;
 
   
   /**
@@ -41,6 +45,30 @@ public class MCCResponse  {
   }
 
   
+  /**
+   * C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC")
+  public Long getGrupoMCCId() {
+    return grupoMCCId;
+  }
+  public void setGrupoMCCId(Long grupoMCCId) {
+    this.grupoMCCId = grupoMCCId;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o do grupo MCC
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o do grupo MCC")
+  public String getGrupoMCCDescricao() {
+    return grupoMCCDescricao;
+  }
+  public void setGrupoMCCDescricao(String grupoMCCDescricao) {
+    this.grupoMCCDescricao = grupoMCCDescricao;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -49,6 +77,8 @@ public class MCCResponse  {
     
     sb.append("  id: ").append(id).append("\n");
     sb.append("  descricao: ").append(descricao).append("\n");
+    sb.append("  grupoMCCId: ").append(grupoMCCId).append("\n");
+    sb.append("  grupoMCCDescricao: ").append(grupoMCCDescricao).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

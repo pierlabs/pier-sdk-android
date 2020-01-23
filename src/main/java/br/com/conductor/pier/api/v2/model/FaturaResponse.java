@@ -37,6 +37,8 @@ public class FaturaResponse  {
   private Long idBoleto = null;
   @SerializedName("flagEmiteExtrato")
   private Boolean flagEmiteExtrato = null;
+  @SerializedName("linhaDigitavel")
+  private String linhaDigitavel = null;
 
   
   /**
@@ -171,6 +173,18 @@ public class FaturaResponse  {
   }
 
   
+  /**
+   * Linha digit\u00E1vel da fatura
+   **/
+  @ApiModelProperty(value = "Linha digit\u00E1vel da fatura")
+  public String getLinhaDigitavel() {
+    return linhaDigitavel;
+  }
+  public void setLinhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -188,6 +202,7 @@ public class FaturaResponse  {
     sb.append("  saldoAnterior: ").append(saldoAnterior).append("\n");
     sb.append("  idBoleto: ").append(idBoleto).append("\n");
     sb.append("  flagEmiteExtrato: ").append(flagEmiteExtrato).append("\n");
+    sb.append("  linhaDigitavel: ").append(linhaDigitavel).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

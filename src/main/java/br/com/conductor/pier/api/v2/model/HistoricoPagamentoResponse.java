@@ -30,6 +30,8 @@ public class HistoricoPagamentoResponse  {
   private String dataHoraEntradaPagamento = null;
   @SerializedName("status")
   private Long status = null;
+  @SerializedName("nossoNumero")
+  private Long nossoNumero = null;
 
   
   /**
@@ -140,6 +142,18 @@ public class HistoricoPagamentoResponse  {
   }
 
   
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero")
+  public Long getNossoNumero() {
+    return nossoNumero;
+  }
+  public void setNossoNumero(Long nossoNumero) {
+    this.nossoNumero = nossoNumero;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -155,6 +169,7 @@ public class HistoricoPagamentoResponse  {
     sb.append("  dataHoraPagamento: ").append(dataHoraPagamento).append("\n");
     sb.append("  dataHoraEntradaPagamento: ").append(dataHoraEntradaPagamento).append("\n");
     sb.append("  status: ").append(status).append("\n");
+    sb.append("  nossoNumero: ").append(nossoNumero).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
