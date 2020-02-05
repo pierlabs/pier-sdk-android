@@ -88,6 +88,10 @@ public class TransacoesCorrentesResponse  {
   private Integer flagEstorno = null;
   @SerializedName("idTransacaoEstorno")
   private Long idTransacaoEstorno = null;
+  @SerializedName("valorCompraMoedaEstrangeira")
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  @SerializedName("moedaEstrangeira")
+  private String moedaEstrangeira = null;
 
   
   /**
@@ -546,6 +550,30 @@ public class TransacoesCorrentesResponse  {
   }
 
   
+  /**
+   * Valor da compra em moeda estrangeira
+   **/
+  @ApiModelProperty(value = "Valor da compra em moeda estrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * S\u00EDmbolo da moeda estrangeira
+   **/
+  @ApiModelProperty(value = "S\u00EDmbolo da moeda estrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -590,6 +618,8 @@ public class TransacoesCorrentesResponse  {
     sb.append("  flagFaturado: ").append(flagFaturado).append("\n");
     sb.append("  flagEstorno: ").append(flagEstorno).append("\n");
     sb.append("  idTransacaoEstorno: ").append(idTransacaoEstorno).append("\n");
+    sb.append("  valorCompraMoedaEstrangeira: ").append(valorCompraMoedaEstrangeira).append("\n");
+    sb.append("  moedaEstrangeira: ").append(moedaEstrangeira).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -55,6 +55,24 @@ public class CartaoDetalheResponse  {
   private String nomeImpresso = null;
   @SerializedName("codigoDesbloqueio")
   private String codigoDesbloqueio = null;
+  @SerializedName("tipoPortador")
+  private String tipoPortador = null;
+  @SerializedName("idStatusCartao")
+  private Long idStatusCartao = null;
+  @SerializedName("dataStatusCartao")
+  private String dataStatusCartao = null;
+  @SerializedName("idEstagioCartao")
+  private Long idEstagioCartao = null;
+  @SerializedName("dataEstagioCartao")
+  private String dataEstagioCartao = null;
+  @SerializedName("dataGeracao")
+  private String dataGeracao = null;
+  @SerializedName("flagVirtual")
+  private Integer flagVirtual = null;
+  @SerializedName("flagImpressaoOrigemComercial")
+  private Integer flagImpressaoOrigemComercial = null;
+  @SerializedName("arquivoImpressao")
+  private String arquivoImpressao = null;
   @SerializedName("portador")
   private Integer portador = null;
   @SerializedName("flagCartaoMifare")
@@ -336,6 +354,114 @@ public class CartaoDetalheResponse  {
 
   
   /**
+   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)
+   **/
+  @ApiModelProperty(value = "Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)")
+  public String getTipoPortador() {
+    return tipoPortador;
+  }
+  public void setTipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
+  }
+
+  
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
+  }
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver
+   **/
+  @ApiModelProperty(value = "Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver")
+  public String getDataStatusCartao() {
+    return dataStatusCartao;
+  }
+  public void setDataStatusCartao(String dataStatusCartao) {
+    this.dataStatusCartao = dataStatusCartao;
+  }
+
+  
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o")
+  public Long getIdEstagioCartao() {
+    return idEstagioCartao;
+  }
+  public void setIdEstagioCartao(Long idEstagioCartao) {
+    this.idEstagioCartao = idEstagioCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver
+   **/
+  @ApiModelProperty(value = "Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver")
+  public String getDataEstagioCartao() {
+    return dataEstagioCartao;
+  }
+  public void setDataEstagioCartao(String dataEstagioCartao) {
+    this.dataEstagioCartao = dataEstagioCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o cart\u00E3o foi gerado
+   **/
+  @ApiModelProperty(value = "Apresenta a data em que o cart\u00E3o foi gerado")
+  public String getDataGeracao() {
+    return dataGeracao;
+  }
+  public void setDataGeracao(String dataGeracao) {
+    this.dataGeracao = dataGeracao;
+  }
+
+  
+  /**
+   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual
+   **/
+  @ApiModelProperty(value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
+
+  
+  /**
+   * Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial
+   **/
+  @ApiModelProperty(value = "Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial")
+  public Integer getFlagImpressaoOrigemComercial() {
+    return flagImpressaoOrigemComercial;
+  }
+  public void setFlagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+    this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
+  }
+
+  
+  /**
+   * Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver
+   **/
+  @ApiModelProperty(value = "Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver")
+  public String getArquivoImpressao() {
+    return arquivoImpressao;
+  }
+  public void setArquivoImpressao(String arquivoImpressao) {
+    this.arquivoImpressao = arquivoImpressao;
+  }
+
+  
+  /**
    * Apresenta o n\u00FAmero do portador do cart\u00E3o
    **/
   @ApiModelProperty(value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
@@ -447,6 +573,15 @@ public class CartaoDetalheResponse  {
     sb.append("  idProduto: ").append(idProduto).append("\n");
     sb.append("  nomeImpresso: ").append(nomeImpresso).append("\n");
     sb.append("  codigoDesbloqueio: ").append(codigoDesbloqueio).append("\n");
+    sb.append("  tipoPortador: ").append(tipoPortador).append("\n");
+    sb.append("  idStatusCartao: ").append(idStatusCartao).append("\n");
+    sb.append("  dataStatusCartao: ").append(dataStatusCartao).append("\n");
+    sb.append("  idEstagioCartao: ").append(idEstagioCartao).append("\n");
+    sb.append("  dataEstagioCartao: ").append(dataEstagioCartao).append("\n");
+    sb.append("  dataGeracao: ").append(dataGeracao).append("\n");
+    sb.append("  flagVirtual: ").append(flagVirtual).append("\n");
+    sb.append("  flagImpressaoOrigemComercial: ").append(flagImpressaoOrigemComercial).append("\n");
+    sb.append("  arquivoImpressao: ").append(arquivoImpressao).append("\n");
     sb.append("  portador: ").append(portador).append("\n");
     sb.append("  flagCartaoMifare: ").append(flagCartaoMifare).append("\n");
     sb.append("  idImagem: ").append(idImagem).append("\n");

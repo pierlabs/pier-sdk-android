@@ -355,9 +355,9 @@ public class AcordoApi {
    * Gerar arquivo do termo de acordo
    * Este recurso permite a gera\u00E7\u00E3o e download do termo de um acordo ativo a partir de seu identificador.
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).
-   * @return Object
+   * @return List<byte[]>
    */
-  public Object  gerarTermoAcordo (Long id) throws ApiException {
+  public List<byte[]>  gerarTermoAcordo (Long id) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -400,7 +400,7 @@ public class AcordoApi {
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
-        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+        return (List<byte[]>) ApiInvoker.deserialize(response, "array", byte[].class);
       }
       else {
         return null;

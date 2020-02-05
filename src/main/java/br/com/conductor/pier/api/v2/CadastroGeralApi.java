@@ -43,6 +43,7 @@ import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoRotativoResponse;
 import br.com.conductor.pier.api.v2.model.PageConvenioResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.PageCotacaoDolarResponse;
 import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoMCCResponse;
@@ -2406,6 +2407,74 @@ public class CadastroGeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageConvenioResponse) ApiInvoker.deserialize(response, "", PageConvenioResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+   * Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataInicio Filtro data inicial do fechamento
+   * @param dataFim Filtro data final do fechamento
+   * @return PageCotacaoDolarResponse
+   */
+  public PageCotacaoDolarResponse  listarCotacaoDolar (List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/cotacoes/dolar".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "dataFim", dataFim));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageCotacaoDolarResponse) ApiInvoker.deserialize(response, "", PageCotacaoDolarResponse.class);
       }
       else {
         return null;

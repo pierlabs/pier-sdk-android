@@ -62,6 +62,8 @@ public class TransacaoNaoProcessadaResponse  {
   private String localidadeEstabelecimento = null;
   @SerializedName("modoEntradaTransacao")
   private String modoEntradaTransacao = null;
+  @SerializedName("moedaEstrangeira")
+  private String moedaEstrangeira = null;
   @SerializedName("nomeEstabelecimento")
   private String nomeEstabelecimento = null;
   @SerializedName("nomeFantasiaEstabelecimento")
@@ -78,6 +80,8 @@ public class TransacaoNaoProcessadaResponse  {
   private BigDecimal taxaEmbarque = null;
   @SerializedName("valorBRL")
   private BigDecimal valorBRL = null;
+  @SerializedName("valorCompraMoedaEstrangeira")
+  private BigDecimal valorCompraMoedaEstrangeira = null;
   @SerializedName("valorEntrada")
   private BigDecimal valorEntrada = null;
   @SerializedName("valorIOF")
@@ -389,6 +393,18 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
+   * S\u00EDmbolo da moeda estrangeira
+   **/
+  @ApiModelProperty(value = "S\u00EDmbolo da moeda estrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
    * Nome do Estabelecimento
    **/
   @ApiModelProperty(value = "Nome do Estabelecimento")
@@ -485,6 +501,18 @@ public class TransacaoNaoProcessadaResponse  {
 
   
   /**
+   * Valor da compra em moeda estrangeira
+   **/
+  @ApiModelProperty(value = "Valor da compra em moeda estrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
    * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
    **/
   @ApiModelProperty(value = "Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada")
@@ -563,6 +591,7 @@ public class TransacaoNaoProcessadaResponse  {
     sb.append("  idTransacaoEstorno: ").append(idTransacaoEstorno).append("\n");
     sb.append("  localidadeEstabelecimento: ").append(localidadeEstabelecimento).append("\n");
     sb.append("  modoEntradaTransacao: ").append(modoEntradaTransacao).append("\n");
+    sb.append("  moedaEstrangeira: ").append(moedaEstrangeira).append("\n");
     sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");
     sb.append("  nomeFantasiaEstabelecimento: ").append(nomeFantasiaEstabelecimento).append("\n");
     sb.append("  nomePortador: ").append(nomePortador).append("\n");
@@ -571,6 +600,7 @@ public class TransacaoNaoProcessadaResponse  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  taxaEmbarque: ").append(taxaEmbarque).append("\n");
     sb.append("  valorBRL: ").append(valorBRL).append("\n");
+    sb.append("  valorCompraMoedaEstrangeira: ").append(valorCompraMoedaEstrangeira).append("\n");
     sb.append("  valorEntrada: ").append(valorEntrada).append("\n");
     sb.append("  valorIOF: ").append(valorIOF).append("\n");
     sb.append("  valorTAC: ").append(valorTAC).append("\n");

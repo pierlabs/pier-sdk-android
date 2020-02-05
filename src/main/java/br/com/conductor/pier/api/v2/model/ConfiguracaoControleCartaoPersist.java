@@ -1,5 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
+import java.math.BigDecimal;
 
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -25,6 +26,8 @@ public class ConfiguracaoControleCartaoPersist  {
   private Boolean permiteTarjaMagnetica = null;
   @SerializedName("permiteContactless")
   private Boolean permiteContactless = null;
+  @SerializedName("limiteContactlessSemSenha")
+  private BigDecimal limiteContactlessSemSenha = null;
 
   
   /**
@@ -111,6 +114,18 @@ public class ConfiguracaoControleCartaoPersist  {
   }
 
   
+  /**
+   * Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.
+   **/
+  @ApiModelProperty(value = "Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.")
+  public BigDecimal getLimiteContactlessSemSenha() {
+    return limiteContactlessSemSenha;
+  }
+  public void setLimiteContactlessSemSenha(BigDecimal limiteContactlessSemSenha) {
+    this.limiteContactlessSemSenha = limiteContactlessSemSenha;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -124,6 +139,7 @@ public class ConfiguracaoControleCartaoPersist  {
     sb.append("  permiteCompraInternacional: ").append(permiteCompraInternacional).append("\n");
     sb.append("  permiteTarjaMagnetica: ").append(permiteTarjaMagnetica).append("\n");
     sb.append("  permiteContactless: ").append(permiteContactless).append("\n");
+    sb.append("  limiteContactlessSemSenha: ").append(limiteContactlessSemSenha).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -62,6 +62,12 @@ public class LancamentoFaturaResponse  {
   private BigDecimal valorTaxaEmbarque = null;
   @SerializedName("descricaoAbreviada")
   private String descricaoAbreviada = null;
+  @SerializedName("moedaEstrangeira")
+  private String moedaEstrangeira = null;
+  @SerializedName("valorCompraMoedaEstrangeira")
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  @SerializedName("cotacaoDolarCompra")
+  private BigDecimal cotacaoDolarCompra = null;
 
   
   /**
@@ -364,6 +370,42 @@ public class LancamentoFaturaResponse  {
   }
 
   
+  /**
+   * S\u00EDmbolo da moeda estrangeira da compra
+   **/
+  @ApiModelProperty(value = "S\u00EDmbolo da moeda estrangeira da compra")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
+   * Valor da compra em moeda estrangeira
+   **/
+  @ApiModelProperty(value = "Valor da compra em moeda estrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra
+   **/
+  @ApiModelProperty(value = "Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra")
+  public BigDecimal getCotacaoDolarCompra() {
+    return cotacaoDolarCompra;
+  }
+  public void setCotacaoDolarCompra(BigDecimal cotacaoDolarCompra) {
+    this.cotacaoDolarCompra = cotacaoDolarCompra;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -395,6 +437,9 @@ public class LancamentoFaturaResponse  {
     sb.append("  flagSolicitouContestacao: ").append(flagSolicitouContestacao).append("\n");
     sb.append("  valorTaxaEmbarque: ").append(valorTaxaEmbarque).append("\n");
     sb.append("  descricaoAbreviada: ").append(descricaoAbreviada).append("\n");
+    sb.append("  moedaEstrangeira: ").append(moedaEstrangeira).append("\n");
+    sb.append("  valorCompraMoedaEstrangeira: ").append(valorCompraMoedaEstrangeira).append("\n");
+    sb.append("  cotacaoDolarCompra: ").append(cotacaoDolarCompra).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -14,6 +14,8 @@ import br.com.conductor.pier.api.v2.model.GrupoEconomicoDTO;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoResponse;
 import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoUpdate;
 import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.InstituicaoPagamentoResponse;
+import br.com.conductor.pier.api.v2.model.InstituicaoPagamentoPersist;
 import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorUpdate;
@@ -33,6 +35,7 @@ import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageGrupoEconomicoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoOrigemComercialResponse;
+import br.com.conductor.pier.api.v2.model.PageInstituicoesPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageMaquinetaResponse;
 import br.com.conductor.pier.api.v2.model.PageMoedaResponse;
 import br.com.conductor.pier.api.v2.model.PageOperacaoResponse;
@@ -56,8 +59,6 @@ import br.com.conductor.pier.api.v2.model.OperacaoCredorPersist;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.TerminalPersist;
 import br.com.conductor.pier.api.v2.model.VinculoEstabelecimentoAdquirentePersist;
-import br.com.conductor.pier.api.v2.model.ResponseEntity;
-import java.util.*;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -273,6 +274,71 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * alterarInstituicaoPagamento
+   * 
+   * @param id id
+   * @param request request
+   * @return InstituicaoPagamentoResponse
+   */
+  public InstituicaoPagamentoResponse  alterarInstituicaoPagamento (Long id, InstituicaoPagamentoPersist request) throws ApiException {
+    Object postBody = request;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarInstituicaoPagamento");
+    }
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling alterarInstituicaoPagamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/instituicoes/pagamentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (InstituicaoPagamentoResponse) ApiInvoker.deserialize(response, "", InstituicaoPagamentoResponse.class);
       }
       else {
         return null;
@@ -608,6 +674,65 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * cadastrarInstituicaoPagamento
+   * 
+   * @param request request
+   * @return InstituicaoPagamentoResponse
+   */
+  public InstituicaoPagamentoResponse  cadastrarInstituicaoPagamento (InstituicaoPagamentoPersist request) throws ApiException {
+    Object postBody = request;
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling cadastrarInstituicaoPagamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/instituicoes/pagamentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (InstituicaoPagamentoResponse) ApiInvoker.deserialize(response, "", InstituicaoPagamentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Cadastrar Origem Comercial
    * Cadastra uma origem comercial
    * @param origemComercialPersist origemComercialPersist
@@ -834,6 +959,65 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (GrupoEstabelecimentoResponse) ApiInvoker.deserialize(response, "", GrupoEstabelecimentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * consultarInstituicaoPagamento
+   * 
+   * @param id id
+   * @return InstituicaoPagamentoResponse
+   */
+  public InstituicaoPagamentoResponse  consultarInstituicaoPagamento (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarInstituicaoPagamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/instituicoes/pagamentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (InstituicaoPagamentoResponse) ApiInvoker.deserialize(response, "", InstituicaoPagamentoResponse.class);
       }
       else {
         return null;
@@ -1247,6 +1431,65 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (VinculoEstabelecimentoAdquirenteResponse) ApiInvoker.deserialize(response, "", VinculoEstabelecimentoAdquirenteResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * deletarInstituicaoPagamento
+   * 
+   * @param id id
+   * @return Object
+   */
+  public Object  deletarInstituicaoPagamento (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling deletarInstituicaoPagamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/instituicoes/pagamentos/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;
@@ -2012,6 +2255,104 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PageGrupoOrigemComercialResponse) ApiInvoker.deserialize(response, "", PageGrupoOrigemComercialResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * listarInstituicoesPagamento
+   * 
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param id 
+   * @param ufFisco 
+   * @param cnpj 
+   * @param nome 
+   * @param nomeFantasia 
+   * @param endereco 
+   * @param cep 
+   * @param codigoMunicipio 
+   * @param uf 
+   * @param nomeResponsavel 
+   * @param fone 
+   * @param email 
+   * @return PageInstituicoesPagamentoResponse
+   */
+  public PageInstituicoesPagamentoResponse  listarInstituicoesPagamento (List<String> sort, Integer page, Integer limit, Long id, String ufFisco, String cnpj, String nome, String nomeFantasia, String endereco, String cep, String codigoMunicipio, String uf, String nomeResponsavel, String fone, String email) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/instituicoes/pagamentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "ufFisco", ufFisco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeFantasia", nomeFantasia));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endereco", endereco));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "cep", cep));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "codigoMunicipio", codigoMunicipio));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "uf", uf));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "nomeResponsavel", nomeResponsavel));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "fone", fone));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "email", email));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageInstituicoesPagamentoResponse) ApiInvoker.deserialize(response, "", PageInstituicoesPagamentoResponse.class);
       }
       else {
         return null;
@@ -3721,154 +4062,6 @@ public class EstabelecimentoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (VinculoEstabelecimentoAdquirenteResponse) ApiInvoker.deserialize(response, "", VinculoEstabelecimentoAdquirenteResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
-   * Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
-   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)
-   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
-   * @param mcc C\u00F3digo de Identifica\u00E7\u00E3o do mcc
-   * @return ResponseEntity
-   */
-  public ResponseEntity  vinculoOperacoesProdutoEstabelecimento (Long idEstabelecimento, Long idOperacao, Long idProduto, List<Integer> mcc) throws ApiException {
-    Object postBody = mcc;
-    
-    // verify the required parameter 'idEstabelecimento' is set
-    if (idEstabelecimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling vinculoOperacoesProdutoEstabelecimento");
-    }
-    
-    // verify the required parameter 'idOperacao' is set
-    if (idOperacao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idOperacao' when calling vinculoOperacoesProdutoEstabelecimento");
-    }
-    
-    // verify the required parameter 'idProduto' is set
-    if (idProduto == null) {
-       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling vinculoOperacoesProdutoEstabelecimento");
-    }
-    
-    // verify the required parameter 'mcc' is set
-    if (mcc == null) {
-       throw new ApiException(400, "Missing the required parameter 'mcc' when calling vinculoOperacoesProdutoEstabelecimento");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idOperacao" + "\\}", apiInvoker.escapeString(idOperacao.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ResponseEntity) ApiInvoker.deserialize(response, "", ResponseEntity.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-   * Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)
-   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)
-   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)
-   * @return ResponseEntity
-   */
-  public ResponseEntity  vinculoOperacoesProdutoEstabelecimentoRemove (Long idEstabelecimento, Long idOperacao, Long idProduto) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'idEstabelecimento' is set
-    if (idEstabelecimento == null) {
-       throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
-    }
-    
-    // verify the required parameter 'idOperacao' is set
-    if (idOperacao == null) {
-       throw new ApiException(400, "Missing the required parameter 'idOperacao' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
-    }
-    
-    // verify the required parameter 'idProduto' is set
-    if (idProduto == null) {
-       throw new ApiException(400, "Missing the required parameter 'idProduto' when calling vinculoOperacoesProdutoEstabelecimentoRemove");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idEstabelecimento" + "\\}", apiInvoker.escapeString(idEstabelecimento.toString())).replaceAll("\\{" + "idOperacao" + "\\}", apiInvoker.escapeString(idOperacao.toString())).replaceAll("\\{" + "idProduto" + "\\}", apiInvoker.escapeString(idProduto.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ResponseEntity) ApiInvoker.deserialize(response, "", ResponseEntity.class);
       }
       else {
         return null;
