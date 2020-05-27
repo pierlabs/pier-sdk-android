@@ -20,6 +20,8 @@ public class AntecipacaoSimuladaDetalhesResponse  {
   private BigDecimal valorDesconto = null;
   @SerializedName("valorParcelasDesconto")
   private BigDecimal valorParcelasDesconto = null;
+  @SerializedName("valorAbatimentoJuros")
+  private BigDecimal valorAbatimentoJuros = null;
 
   
   /**
@@ -70,6 +72,18 @@ public class AntecipacaoSimuladaDetalhesResponse  {
   }
 
   
+  /**
+   * Valor do abatimento de juros
+   **/
+  @ApiModelProperty(value = "Valor do abatimento de juros")
+  public BigDecimal getValorAbatimentoJuros() {
+    return valorAbatimentoJuros;
+  }
+  public void setValorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -80,6 +94,7 @@ public class AntecipacaoSimuladaDetalhesResponse  {
     sb.append("  valorParcelas: ").append(valorParcelas).append("\n");
     sb.append("  valorDesconto: ").append(valorDesconto).append("\n");
     sb.append("  valorParcelasDesconto: ").append(valorParcelasDesconto).append("\n");
+    sb.append("  valorAbatimentoJuros: ").append(valorAbatimentoJuros).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

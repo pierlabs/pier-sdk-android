@@ -12,6 +12,7 @@ import br.com.conductor.pier.api.v2.model.ControleSubcontaResponse;
 import br.com.conductor.pier.api.v2.model.ControleSubcontaUpdate;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.AtribuirCartaoPessoaRequest;
 import br.com.conductor.pier.api.v2.model.ContaAtribuirCartaoPrePagoRequest;
 import br.com.conductor.pier.api.v2.model.AdesaoServicoPartialUpdate;
 import br.com.conductor.pier.api.v2.model.AdesaoServicoResponse;
@@ -516,6 +517,77 @@ public class ContaApi {
   }
   
   /**
+   * Atribuir um cart\u00E3o a uma conta
+   * Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+   * @param id Identificador da conta
+   * @param idCartao Identificador do cart\u00E3o
+   * @param request request
+   * @return String
+   */
+  public String  atribuirCartaoConta (Long id, Long idCartao, AtribuirCartaoPessoaRequest request) throws ApiException {
+    Object postBody = request;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atribuirCartaoConta");
+    }
+    
+    // verify the required parameter 'idCartao' is set
+    if (idCartao == null) {
+       throw new ApiException(400, "Missing the required parameter 'idCartao' when calling atribuirCartaoConta");
+    }
+    
+    // verify the required parameter 'request' is set
+    if (request == null) {
+       throw new ApiException(400, "Missing the required parameter 'request' when calling atribuirCartaoConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/cartoes/{idCartao}/atribuir".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idCartao" + "\\}", apiInvoker.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta
    * Este m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma conta, tornando-a portadora dele.
    * @param id C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id).
@@ -538,6 +610,71 @@ public class ContaApi {
 
     // create path and map variables
     String path = "/api/contas/{id}/atribuir-cartao-prepago".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (String) ApiInvoker.deserialize(response, "", String.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Atribuir uma pessoa a uma conta
+   * Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+   * @param id Identificador da conta a ser atribu\u00EDda
+   * @param idPessoa Identificador da pessoa a ser atribu\u00EDda
+   * @return String
+   */
+  public String  atribuirPessoaConta (Long id, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling atribuirPessoaConta");
+    }
+    
+    // verify the required parameter 'idPessoa' is set
+    if (idPessoa == null) {
+       throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling atribuirPessoaConta");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{id}/pessoas/{idPessoa}/atribuir".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString())).replaceAll("\\{" + "idPessoa" + "\\}", apiInvoker.escapeString(idPessoa.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1766,65 +1903,6 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (ExtratoTarifasResponse) ApiInvoker.deserialize(response, "", ExtratoTarifasResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-   * Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)
-   * @return String
-   */
-  public String  consultarFuncaoConta (Integer id) throws ApiException {
-    Object postBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFuncaoConta");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/contas/tipos-funcoes/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
       }
       else {
         return null;
@@ -3126,59 +3204,6 @@ public class ContaApi {
   }
   
   /**
-   * Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-   * Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-   * @return String
-   */
-  public String  listarFuncoesContas () throws ApiException {
-    Object postBody = null;
-    
-
-    // create path and map variables
-    String path = "/api/contas/tipos-funcoes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (String) ApiInvoker.deserialize(response, "", String.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
    * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
    * Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
@@ -4282,9 +4307,10 @@ public class ContaApi {
    * @param idEstabelecimento Identificador do estabelecimento quando o pagamento for efetuado em loja
    * @param flagAtendimento Flag para lan\u00E7ar o atendimento
    * @param mensagemAtendimento Mensagem enviada no atendimento
+   * @param descricaoEstabelecimentoExterno Descri\u00E7\u00E3o externa do estabelecimento
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse  salvarAjusteFinanceiroConta1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
+  public AjusteFinanceiroResponse  salvarAjusteFinanceiroConta1 (Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento, String descricaoEstabelecimentoExterno) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'id' is set
@@ -4334,6 +4360,8 @@ public class ContaApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAtendimento", flagAtendimento));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "mensagemAtendimento", mensagemAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricaoEstabelecimentoExterno", descricaoEstabelecimentoExterno));
     
 
     

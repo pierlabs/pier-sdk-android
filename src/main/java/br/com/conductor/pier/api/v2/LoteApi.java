@@ -10,6 +10,7 @@ import java.util.*;
 
 import br.com.conductor.pier.api.v2.model.LoteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.LoteCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageCartaoLoteResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartaoPersist;
 
@@ -215,6 +216,77 @@ public class LoteApi {
       String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Lista os identificadores de lotes e cart\u00F5es
+   * Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idCartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+   * @param idLote C\u00F3digo de identifica\u00E7\u00E3o do lote
+   * @param idCartaoPai C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai
+   * @return PageCartaoLoteResponse
+   */
+  public PageCartaoLoteResponse  listarIdentificadoresCartoesLotes (List<String> sort, Integer page, Integer limit, Long idCartao, Long idLote, Long idCartaoPai) throws ApiException {
+    Object postBody = null;
+    
+
+    // create path and map variables
+    String path = "/api/lotes/cartoes/identificadores".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idLote", idLote));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "idCartaoPai", idCartaoPai));
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PageCartaoLoteResponse) ApiInvoker.deserialize(response, "", PageCartaoLoteResponse.class);
       }
       else {
         return null;

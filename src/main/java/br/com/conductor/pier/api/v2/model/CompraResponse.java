@@ -58,6 +58,8 @@ public class CompraResponse  {
   private String cartao = null;
   @SerializedName("nomePortadorCartao")
   private String nomePortadorCartao = null;
+  @SerializedName("tipoEvento")
+  private String tipoEvento = null;
 
   
   /**
@@ -334,6 +336,18 @@ public class CompraResponse  {
   }
 
   
+  /**
+   * Tipo do evento
+   **/
+  @ApiModelProperty(value = "Tipo do evento")
+  public String getTipoEvento() {
+    return tipoEvento;
+  }
+  public void setTipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -363,6 +377,7 @@ public class CompraResponse  {
     sb.append("  descricaoProduto: ").append(descricaoProduto).append("\n");
     sb.append("  cartao: ").append(cartao).append("\n");
     sb.append("  nomePortadorCartao: ").append(nomePortadorCartao).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

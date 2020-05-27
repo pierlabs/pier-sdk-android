@@ -44,6 +44,8 @@ public class ConvenioPersist  {
   private String nomeBeneficiario = null;
   @SerializedName("cnpjBeneficiario")
   private String cnpjBeneficiario = null;
+  @SerializedName("complementoCarteira")
+  private BigDecimal complementoCarteira = null;
 
   
   /**
@@ -238,6 +240,18 @@ public class ConvenioPersist  {
   }
 
   
+  /**
+   * Complemento registro de boleto
+   **/
+  @ApiModelProperty(value = "Complemento registro de boleto")
+  public BigDecimal getComplementoCarteira() {
+    return complementoCarteira;
+  }
+  public void setComplementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -260,6 +274,7 @@ public class ConvenioPersist  {
     sb.append("  enderecoCobrancaEmissor: ").append(enderecoCobrancaEmissor).append("\n");
     sb.append("  nomeBeneficiario: ").append(nomeBeneficiario).append("\n");
     sb.append("  cnpjBeneficiario: ").append(cnpjBeneficiario).append("\n");
+    sb.append("  complementoCarteira: ").append(complementoCarteira).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

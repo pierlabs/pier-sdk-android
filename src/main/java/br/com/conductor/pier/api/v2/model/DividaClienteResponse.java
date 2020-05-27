@@ -46,6 +46,8 @@ public class DividaClienteResponse  {
   private String nomeEscritorioCobranca = null;
   @SerializedName("emailPessoaConta")
   private String emailPessoaConta = null;
+  @SerializedName("dataEntradaCreliq")
+  private String dataEntradaCreliq = null;
 
   
   /**
@@ -252,6 +254,18 @@ public class DividaClienteResponse  {
   }
 
   
+  /**
+   * Data de entrada em creliq
+   **/
+  @ApiModelProperty(value = "Data de entrada em creliq")
+  public String getDataEntradaCreliq() {
+    return dataEntradaCreliq;
+  }
+  public void setDataEntradaCreliq(String dataEntradaCreliq) {
+    this.dataEntradaCreliq = dataEntradaCreliq;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -275,6 +289,7 @@ public class DividaClienteResponse  {
     sb.append("  idEscritorioCobranca: ").append(idEscritorioCobranca).append("\n");
     sb.append("  nomeEscritorioCobranca: ").append(nomeEscritorioCobranca).append("\n");
     sb.append("  emailPessoaConta: ").append(emailPessoaConta).append("\n");
+    sb.append("  dataEntradaCreliq: ").append(dataEntradaCreliq).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

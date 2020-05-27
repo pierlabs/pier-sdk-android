@@ -24,6 +24,8 @@ public class BoletoRequest  {
   private Long idConvenio = null;
   @SerializedName("idPessoafontePagadora")
   private Long idPessoafontePagadora = null;
+  @SerializedName("tipoPagamento")
+  private Integer tipoPagamento = null;
 
   
   /**
@@ -98,6 +100,18 @@ public class BoletoRequest  {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento")
+  public Integer getTipoPagamento() {
+    return tipoPagamento;
+  }
+  public void setTipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -110,6 +124,7 @@ public class BoletoRequest  {
     sb.append("  dataVencimento: ").append(dataVencimento).append("\n");
     sb.append("  idConvenio: ").append(idConvenio).append("\n");
     sb.append("  idPessoafontePagadora: ").append(idPessoafontePagadora).append("\n");
+    sb.append("  tipoPagamento: ").append(tipoPagamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -34,6 +34,8 @@ public class AntecipacaoResponse  {
   private BigDecimal valorTotalComDesconto = null;
   @SerializedName("taxaDesconto")
   private BigDecimal taxaDesconto = null;
+  @SerializedName("valorAbatimentoJuros")
+  private BigDecimal valorAbatimentoJuros = null;
   @SerializedName("dataCompra")
   private String dataCompra = null;
   @SerializedName("status")
@@ -191,6 +193,18 @@ public class AntecipacaoResponse  {
   }
   public void setTaxaDesconto(BigDecimal taxaDesconto) {
     this.taxaDesconto = taxaDesconto;
+  }
+
+  
+  /**
+   * Apresenta o valor de abatimento de juros
+   **/
+  @ApiModelProperty(value = "Apresenta o valor de abatimento de juros")
+  public BigDecimal getValorAbatimentoJuros() {
+    return valorAbatimentoJuros;
+  }
+  public void setValorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
   }
 
   
@@ -379,6 +393,7 @@ public class AntecipacaoResponse  {
     sb.append("  valorDescontoTotal: ").append(valorDescontoTotal).append("\n");
     sb.append("  valorTotalComDesconto: ").append(valorTotalComDesconto).append("\n");
     sb.append("  taxaDesconto: ").append(taxaDesconto).append("\n");
+    sb.append("  valorAbatimentoJuros: ").append(valorAbatimentoJuros).append("\n");
     sb.append("  dataCompra: ").append(dataCompra).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  nomeEstabelecimento: ").append(nomeEstabelecimento).append("\n");

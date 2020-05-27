@@ -28,6 +28,8 @@ public class AjustePersist  {
   private Boolean flagAtendimento = null;
   @SerializedName("mensagemAtendimento")
   private String mensagemAtendimento = null;
+  @SerializedName("descricaoEstabelecimentoExterno")
+  private String descricaoEstabelecimentoExterno = null;
 
   
   /**
@@ -126,6 +128,18 @@ public class AjustePersist  {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o externa do estabelecimento
+   **/
+  @ApiModelProperty(value = "Descri\u00E7\u00E3o externa do estabelecimento")
+  public String getDescricaoEstabelecimentoExterno() {
+    return descricaoEstabelecimentoExterno;
+  }
+  public void setDescricaoEstabelecimentoExterno(String descricaoEstabelecimentoExterno) {
+    this.descricaoEstabelecimentoExterno = descricaoEstabelecimentoExterno;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -140,6 +154,7 @@ public class AjustePersist  {
     sb.append("  idEstabelecimento: ").append(idEstabelecimento).append("\n");
     sb.append("  flagAtendimento: ").append(flagAtendimento).append("\n");
     sb.append("  mensagemAtendimento: ").append(mensagemAtendimento).append("\n");
+    sb.append("  descricaoEstabelecimentoExterno: ").append(descricaoEstabelecimentoExterno).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

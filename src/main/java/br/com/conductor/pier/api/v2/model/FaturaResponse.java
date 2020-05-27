@@ -39,6 +39,10 @@ public class FaturaResponse  {
   private Boolean flagEmiteExtrato = null;
   @SerializedName("linhaDigitavel")
   private String linhaDigitavel = null;
+  @SerializedName("cetMensal")
+  private BigDecimal cetMensal = null;
+  @SerializedName("cetAnual")
+  private BigDecimal cetAnual = null;
 
   
   /**
@@ -185,6 +189,30 @@ public class FaturaResponse  {
   }
 
   
+  /**
+   * Valor do CET (Custo efetivo total) mensal.
+   **/
+  @ApiModelProperty(value = "Valor do CET (Custo efetivo total) mensal.")
+  public BigDecimal getCetMensal() {
+    return cetMensal;
+  }
+  public void setCetMensal(BigDecimal cetMensal) {
+    this.cetMensal = cetMensal;
+  }
+
+  
+  /**
+   * Valor do CET (Custo efetivo total) anual.
+   **/
+  @ApiModelProperty(value = "Valor do CET (Custo efetivo total) anual.")
+  public BigDecimal getCetAnual() {
+    return cetAnual;
+  }
+  public void setCetAnual(BigDecimal cetAnual) {
+    this.cetAnual = cetAnual;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -203,6 +231,8 @@ public class FaturaResponse  {
     sb.append("  idBoleto: ").append(idBoleto).append("\n");
     sb.append("  flagEmiteExtrato: ").append(flagEmiteExtrato).append("\n");
     sb.append("  linhaDigitavel: ").append(linhaDigitavel).append("\n");
+    sb.append("  cetMensal: ").append(cetMensal).append("\n");
+    sb.append("  cetAnual: ").append(cetAnual).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

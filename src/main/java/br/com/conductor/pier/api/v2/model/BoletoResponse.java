@@ -85,6 +85,8 @@ public class BoletoResponse  {
   private Boolean boletoRegistrado = null;
   @SerializedName("fontePagadora")
   private String fontePagadora = null;
+  @SerializedName("tipoPagamento")
+  private Integer tipoPagamento = null;
 
   
   /**
@@ -519,6 +521,18 @@ public class BoletoResponse  {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento")
+  public Integer getTipoPagamento() {
+    return tipoPagamento;
+  }
+  public void setTipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -561,6 +575,7 @@ public class BoletoResponse  {
     sb.append("  status: ").append(status).append("\n");
     sb.append("  boletoRegistrado: ").append(boletoRegistrado).append("\n");
     sb.append("  fontePagadora: ").append(fontePagadora).append("\n");
+    sb.append("  tipoPagamento: ").append(tipoPagamento).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -52,6 +52,8 @@ public class ConvenioResponse  {
   private String data = null;
   @SerializedName("maquina")
   private String maquina = null;
+  @SerializedName("complementoCarteira")
+  private BigDecimal complementoCarteira = null;
 
   
   /**
@@ -294,6 +296,18 @@ public class ConvenioResponse  {
   }
 
   
+  /**
+   * Complemento registro de boleto
+   **/
+  @ApiModelProperty(value = "Complemento registro de boleto")
+  public BigDecimal getComplementoCarteira() {
+    return complementoCarteira;
+  }
+  public void setComplementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -320,6 +334,7 @@ public class ConvenioResponse  {
     sb.append("  operador: ").append(operador).append("\n");
     sb.append("  data: ").append(data).append("\n");
     sb.append("  maquina: ").append(maquina).append("\n");
+    sb.append("  complementoCarteira: ").append(complementoCarteira).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -26,6 +26,10 @@ public class ContaPartialUpdate  {
   private String usuarioModificacao = null;
   @SerializedName("behaviorScore")
   private Integer behaviorScore = null;
+  @SerializedName("banco")
+  private Long banco = null;
+  @SerializedName("agencia")
+  private Long agencia = null;
 
   
   /**
@@ -112,6 +116,30 @@ public class ContaPartialUpdate  {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do banco
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o do banco")
+  public Long getBanco() {
+    return banco;
+  }
+  public void setBanco(Long banco) {
+    this.banco = banco;
+  }
+
+  
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da ag\u00EAncia
+   **/
+  @ApiModelProperty(value = "C\u00F3digo de identifica\u00E7\u00E3o da ag\u00EAncia")
+  public Long getAgencia() {
+    return agencia;
+  }
+  public void setAgencia(Long agencia) {
+    this.agencia = agencia;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -125,6 +153,8 @@ public class ContaPartialUpdate  {
     sb.append("  possuiOverLimit: ").append(possuiOverLimit).append("\n");
     sb.append("  usuarioModificacao: ").append(usuarioModificacao).append("\n");
     sb.append("  behaviorScore: ").append(behaviorScore).append("\n");
+    sb.append("  banco: ").append(banco).append("\n");
+    sb.append("  agencia: ").append(agencia).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -62,6 +62,8 @@ public class TipoOperacaoResponse  {
   private Integer idTabelaJuros = null;
   @SerializedName("codigoProcessamento")
   private String codigoProcessamento = null;
+  @SerializedName("flagIOFApartado")
+  private Integer flagIOFApartado = null;
 
   
   /**
@@ -364,6 +366,18 @@ public class TipoOperacaoResponse  {
   }
 
   
+  /**
+   * Flag IOF Apartado
+   **/
+  @ApiModelProperty(value = "Flag IOF Apartado")
+  public Integer getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Integer flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -395,6 +409,7 @@ public class TipoOperacaoResponse  {
     sb.append("  percentualTAC: ").append(percentualTAC).append("\n");
     sb.append("  idTabelaJuros: ").append(idTabelaJuros).append("\n");
     sb.append("  codigoProcessamento: ").append(codigoProcessamento).append("\n");
+    sb.append("  flagIOFApartado: ").append(flagIOFApartado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

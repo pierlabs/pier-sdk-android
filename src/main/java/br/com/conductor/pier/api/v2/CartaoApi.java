@@ -19,6 +19,7 @@ import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
+import br.com.conductor.pier.api.v2.model.ConsultarSenhaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.VinculoCartoesResponse;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppPersist;
 import br.com.conductor.pier.api.v2.model.SenhaDTO;
@@ -939,6 +940,65 @@ public class CartaoApi {
       String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (PortadorResponse) ApiInvoker.deserialize(response, "", PortadorResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Consulta a senha real de um cart\u00E3o
+   * Esse recurso permite consultar a senha real de um cart\u00E3o
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+   * @return ConsultarSenhaCartaoResponse
+   */
+  public ConsultarSenhaCartaoResponse  consultarSenhaCartao (Long id) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+       throw new ApiException(400, "Missing the required parameter 'id' when calling consultarSenhaCartao");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/cartoes/{id}/senhas".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (ConsultarSenhaCartaoResponse) ApiInvoker.deserialize(response, "", ConsultarSenhaCartaoResponse.class);
       }
       else {
         return null;

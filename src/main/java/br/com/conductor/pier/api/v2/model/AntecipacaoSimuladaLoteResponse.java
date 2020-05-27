@@ -20,6 +20,8 @@ public class AntecipacaoSimuladaLoteResponse  {
   private BigDecimal valorTotalDesconto = null;
   @SerializedName("valorTotalComDesconto")
   private BigDecimal valorTotalComDesconto = null;
+  @SerializedName("valorTotalAbatimentoJuros")
+  private BigDecimal valorTotalAbatimentoJuros = null;
   @SerializedName("antecipacoesSimuladas")
   private List<AntecipacaoSimuladaResponse> antecipacoesSimuladas = null;
 
@@ -61,6 +63,18 @@ public class AntecipacaoSimuladaLoteResponse  {
 
   
   /**
+   * Valor total do abatimento de juros
+   **/
+  @ApiModelProperty(value = "Valor total do abatimento de juros")
+  public BigDecimal getValorTotalAbatimentoJuros() {
+    return valorTotalAbatimentoJuros;
+  }
+  public void setValorTotalAbatimentoJuros(BigDecimal valorTotalAbatimentoJuros) {
+    this.valorTotalAbatimentoJuros = valorTotalAbatimentoJuros;
+  }
+
+  
+  /**
    * Antecipa\u00E7\u00F5es Simuladas
    **/
   @ApiModelProperty(value = "Antecipa\u00E7\u00F5es Simuladas")
@@ -81,6 +95,7 @@ public class AntecipacaoSimuladaLoteResponse  {
     sb.append("  valorTotalAntecipado: ").append(valorTotalAntecipado).append("\n");
     sb.append("  valorTotalDesconto: ").append(valorTotalDesconto).append("\n");
     sb.append("  valorTotalComDesconto: ").append(valorTotalComDesconto).append("\n");
+    sb.append("  valorTotalAbatimentoJuros: ").append(valorTotalAbatimentoJuros).append("\n");
     sb.append("  antecipacoesSimuladas: ").append(antecipacoesSimuladas).append("\n");
     sb.append("}\n");
     return sb.toString();

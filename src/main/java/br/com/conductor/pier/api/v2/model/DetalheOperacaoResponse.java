@@ -64,6 +64,8 @@ public class DetalheOperacaoResponse  {
   private Long idTabelaJuros = null;
   @SerializedName("tipoExcedentePermitido")
   private String tipoExcedentePermitido = null;
+  @SerializedName("flagIOFApartado")
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -378,6 +380,18 @@ public class DetalheOperacaoResponse  {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  @ApiModelProperty(value = "Flag que indica se o IOF \u00E9 apartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -410,6 +424,7 @@ public class DetalheOperacaoResponse  {
     sb.append("  flagCobraProRata: ").append(flagCobraProRata).append("\n");
     sb.append("  idTabelaJuros: ").append(idTabelaJuros).append("\n");
     sb.append("  tipoExcedentePermitido: ").append(tipoExcedentePermitido).append("\n");
+    sb.append("  flagIOFApartado: ").append(flagIOFApartado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

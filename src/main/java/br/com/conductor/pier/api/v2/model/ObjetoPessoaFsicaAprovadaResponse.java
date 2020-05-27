@@ -113,6 +113,8 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
   private Integer chequeEspecial = null;
   @SerializedName("numeroBanco")
   private Integer numeroBanco = null;
+  @SerializedName("limiteParcelado")
+  private BigDecimal limiteParcelado = null;
 
   
   /**
@@ -703,6 +705,18 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
   }
 
   
+  /**
+   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas
+   **/
+  @ApiModelProperty(value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas")
+  public BigDecimal getLimiteParcelado() {
+    return limiteParcelado;
+  }
+  public void setLimiteParcelado(BigDecimal limiteParcelado) {
+    this.limiteParcelado = limiteParcelado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -758,6 +772,7 @@ public class ObjetoPessoaFsicaAprovadaResponse  {
     sb.append("  nomePai: ").append(nomePai).append("\n");
     sb.append("  chequeEspecial: ").append(chequeEspecial).append("\n");
     sb.append("  numeroBanco: ").append(numeroBanco).append("\n");
+    sb.append("  limiteParcelado: ").append(limiteParcelado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

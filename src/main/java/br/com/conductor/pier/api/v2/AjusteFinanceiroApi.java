@@ -190,9 +190,10 @@ public class AjusteFinanceiroApi {
    * @param idEstabelecimento Identificador do estabelecimento quando o pagamento for efetuado em loja
    * @param flagAtendimento Flag para lan\u00E7ar o atendimento
    * @param mensagemAtendimento Mensagem enviada no atendimento
+   * @param descricaoEstabelecimentoExterno Descri\u00E7\u00E3o externa do estabelecimento
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse  salvarAjusteFinanceiro (Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, Long idConta, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
+  public AjusteFinanceiroResponse  salvarAjusteFinanceiro (Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, Long idConta, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento, String descricaoEstabelecimentoExterno) throws ApiException {
     Object postBody = null;
     
     // verify the required parameter 'idTipoAjuste' is set
@@ -242,6 +243,8 @@ public class AjusteFinanceiroApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "flagAtendimento", flagAtendimento));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "mensagemAtendimento", mensagemAtendimento));
+    
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "descricaoEstabelecimentoExterno", descricaoEstabelecimentoExterno));
     
     queryParams.addAll(ApiInvoker.parameterToPairs("", "idConta", idConta));
     

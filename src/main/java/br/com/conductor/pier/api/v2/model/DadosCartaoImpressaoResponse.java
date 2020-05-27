@@ -115,6 +115,8 @@ public class DadosCartaoImpressaoResponse  {
   private Long idMifare = null;
   @SerializedName("matriculaMifare")
   private String matriculaMifare = null;
+  @SerializedName("cnpj")
+  private String cnpj = null;
 
   
   /**
@@ -741,6 +743,18 @@ public class DadosCartaoImpressaoResponse  {
   }
 
   
+  /**
+   * O CNPJ do Portador do Cart\u00E3o
+   **/
+  @ApiModelProperty(value = "O CNPJ do Portador do Cart\u00E3o")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -799,6 +813,7 @@ public class DadosCartaoImpressaoResponse  {
     sb.append("  idStatusImpressao: ").append(idStatusImpressao).append("\n");
     sb.append("  idMifare: ").append(idMifare).append("\n");
     sb.append("  matriculaMifare: ").append(matriculaMifare).append("\n");
+    sb.append("  cnpj: ").append(cnpj).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

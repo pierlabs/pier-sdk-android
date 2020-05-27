@@ -32,6 +32,8 @@ public class ConfiguracaoControleCartaoResponse  {
   private Boolean permiteContactless = null;
   @SerializedName("limiteContactlessSemSenha")
   private BigDecimal limiteContactlessSemSenha = null;
+  @SerializedName("funcaoAtiva")
+  private String funcaoAtiva = null;
 
   
   /**
@@ -154,6 +156,18 @@ public class ConfiguracaoControleCartaoResponse  {
   }
 
   
+  /**
+   * Indica o tipo de fun\u00E7\u00E3o ativa.
+   **/
+  @ApiModelProperty(value = "Indica o tipo de fun\u00E7\u00E3o ativa.")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -170,6 +184,7 @@ public class ConfiguracaoControleCartaoResponse  {
     sb.append("  permiteTarjaMagnetica: ").append(permiteTarjaMagnetica).append("\n");
     sb.append("  permiteContactless: ").append(permiteContactless).append("\n");
     sb.append("  limiteContactlessSemSenha: ").append(limiteContactlessSemSenha).append("\n");
+    sb.append("  funcaoAtiva: ").append(funcaoAtiva).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

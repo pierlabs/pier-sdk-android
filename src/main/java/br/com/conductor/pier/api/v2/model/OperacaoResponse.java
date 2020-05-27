@@ -29,6 +29,8 @@ public class OperacaoResponse  {
   private Boolean flagPermitirParcelamento = null;
   @SerializedName("flagManterTaxaJurosNoRotativo")
   private Boolean flagManterTaxaJurosNoRotativo = null;
+  @SerializedName("flagIOFApartado")
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -139,6 +141,18 @@ public class OperacaoResponse  {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  @ApiModelProperty(value = "Flag que indica se o IOF \u00E9 apartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -154,6 +168,7 @@ public class OperacaoResponse  {
     sb.append("  carencia: ").append(carencia).append("\n");
     sb.append("  flagPermitirParcelamento: ").append(flagPermitirParcelamento).append("\n");
     sb.append("  flagManterTaxaJurosNoRotativo: ").append(flagManterTaxaJurosNoRotativo).append("\n");
+    sb.append("  flagIOFApartado: ").append(flagIOFApartado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

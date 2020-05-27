@@ -62,6 +62,8 @@ public class AntecipacaoSimuladaResponse  {
   private String descricaoEstabelecimento = null;
   @SerializedName("nomeFantasiaEstabelecimento")
   private String nomeFantasiaEstabelecimento = null;
+  @SerializedName("tipoEvento")
+  private String tipoEvento = null;
   @SerializedName("detalhes")
   private List<AntecipacaoSimuladaDetalhesResponse> detalhes = null;
 
@@ -353,6 +355,18 @@ public class AntecipacaoSimuladaResponse  {
 
   
   /**
+   * Tipo do evento
+   **/
+  @ApiModelProperty(value = "Tipo do evento")
+  public String getTipoEvento() {
+    return tipoEvento;
+  }
+  public void setTipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+  }
+
+  
+  /**
    * Detalhes da simula\u00E7\u00E3o
    **/
   @ApiModelProperty(value = "Detalhes da simula\u00E7\u00E3o")
@@ -394,6 +408,7 @@ public class AntecipacaoSimuladaResponse  {
     sb.append("  descricaoProduto: ").append(descricaoProduto).append("\n");
     sb.append("  descricaoEstabelecimento: ").append(descricaoEstabelecimento).append("\n");
     sb.append("  nomeFantasiaEstabelecimento: ").append(nomeFantasiaEstabelecimento).append("\n");
+    sb.append("  tipoEvento: ").append(tipoEvento).append("\n");
     sb.append("  detalhes: ").append(detalhes).append("\n");
     sb.append("}\n");
     return sb.toString();

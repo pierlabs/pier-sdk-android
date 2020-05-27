@@ -48,6 +48,8 @@ public class TipoOperacaoParcialUpdate  {
   private BigDecimal valorTAC = null;
   @SerializedName("percentualTac")
   private BigDecimal percentualTac = null;
+  @SerializedName("flagIOFApartado")
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -266,6 +268,18 @@ public class TipoOperacaoParcialUpdate  {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  @ApiModelProperty(value = "Flag que indica se o IOF \u00E9 apartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public String toString()  {
@@ -290,6 +304,7 @@ public class TipoOperacaoParcialUpdate  {
     sb.append("  tipoExcedentePermitido: ").append(tipoExcedentePermitido).append("\n");
     sb.append("  valorTAC: ").append(valorTAC).append("\n");
     sb.append("  percentualTac: ").append(percentualTac).append("\n");
+    sb.append("  flagIOFApartado: ").append(flagIOFApartado).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
