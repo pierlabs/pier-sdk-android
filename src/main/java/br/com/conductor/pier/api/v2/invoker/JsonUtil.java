@@ -1827,6 +1827,10 @@ public class JsonUtil {
       return new TypeToken<List<ParcelamentoTransferenciaResponse>>(){}.getType();
     }
     
+    if ("PersonalizacaoParcelamentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<PersonalizacaoParcelamentoResponse>>(){}.getType();
+    }
+    
     if ("PessoaDetalhePartialUpdate".equalsIgnoreCase(className)) {
       return new TypeToken<List<PessoaDetalhePartialUpdate>>(){}.getType();
     }
@@ -2493,6 +2497,10 @@ public class JsonUtil {
     
     if ("VinculoOperacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<VinculoOperacaoResponse>>(){}.getType();
+    }
+    
+    if ("VinculoPersonalizacaoParcelamentoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<List<VinculoPersonalizacaoParcelamentoPersist>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -4293,6 +4301,10 @@ public class JsonUtil {
       return new TypeToken<ParcelamentoTransferenciaResponse>(){}.getType();
     }
     
+    if ("PersonalizacaoParcelamentoResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<PersonalizacaoParcelamentoResponse>(){}.getType();
+    }
+    
     if ("PessoaDetalhePartialUpdate".equalsIgnoreCase(className)) {
       return new TypeToken<PessoaDetalhePartialUpdate>(){}.getType();
     }
@@ -4959,6 +4971,10 @@ public class JsonUtil {
     
     if ("VinculoOperacaoResponse".equalsIgnoreCase(className)) {
       return new TypeToken<VinculoOperacaoResponse>(){}.getType();
+    }
+    
+    if ("VinculoPersonalizacaoParcelamentoPersist".equalsIgnoreCase(className)) {
+      return new TypeToken<VinculoPersonalizacaoParcelamentoPersist>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

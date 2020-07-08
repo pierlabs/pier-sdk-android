@@ -38,6 +38,7 @@ import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoVinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
+import br.com.conductor.pier.api.v2.model.PersonalizacaoParcelamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaMultiAppResponse;
 import br.com.conductor.pier.api.v2.model.ContaMultiAppPersist;
 import java.math.BigDecimal;
@@ -73,6 +74,7 @@ import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaPortadoresResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaPortadoresPersist;
+import br.com.conductor.pier.api.v2.model.VinculoPersonalizacaoParcelamentoPersist;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -2303,6 +2305,65 @@ public class ContaApi {
   }
   
   /**
+   * Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta
+   * Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+   * @param idConta idConta
+   * @return PersonalizacaoParcelamentoResponse
+   */
+  public PersonalizacaoParcelamentoResponse  consultarVinculoPersonalizacaoDeParcelamento (Long idConta) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idConta' is set
+    if (idConta == null) {
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarVinculoPersonalizacaoDeParcelamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (PersonalizacaoParcelamentoResponse) ApiInvoker.deserialize(response, "", PersonalizacaoParcelamentoResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
    * Cadastrar contas MultiApp
    * Este recurso permite o cadastro de contas MultiApp
    * @param contaMultiAppPersist contaMultiAppPersist
@@ -2527,6 +2588,65 @@ public class ContaApi {
 
     try {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta
+   * Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o da conta
+   * @return Object
+   */
+  public Object  excluirVinculoPersonalizacaoParcelamento (Long idConta) throws ApiException {
+    Object postBody = null;
+    
+    // verify the required parameter 'idConta' is set
+    if (idConta == null) {
+       throw new ApiException(400, "Missing the required parameter 'idConta' when calling excluirVinculoPersonalizacaoParcelamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos".replaceAll("\\{format\\}","json").replaceAll("\\{" + "idConta" + "\\}", apiInvoker.escapeString(idConta.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
@@ -4913,6 +5033,65 @@ public class ContaApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (TransferenciaPortadoresResponse) ApiInvoker.deserialize(response, "", TransferenciaPortadoresResponse.class);
+      }
+      else {
+        return null;
+      }
+    } catch (ApiException ex) {
+      throw ex;
+    }
+  }
+  
+  /**
+   * Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento
+   * Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+   * @param persist Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado
+   * @return Object
+   */
+  public Object  vincularPersonalizacaoDeParcelamento (VinculoPersonalizacaoParcelamentoPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+    // verify the required parameter 'persist' is set
+    if (persist == null) {
+       throw new ApiException(400, "Missing the required parameter 'persist' when calling vincularPersonalizacaoDeParcelamento");
+    }
+    
+
+    // create path and map variables
+    String path = "/api/contas/personalizacoes-parcelamento/vinculos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    
+
+    
+
+    String[] contentTypes = {
+      "application/json"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = builder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+      
+    }
+
+    try {
+      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
+      if(response != null){
+        return (Object) ApiInvoker.deserialize(response, "", Object.class);
       }
       else {
         return null;

@@ -12,8 +12,6 @@ import br.com.conductor.pier.api.v2.model.BancoUpdate;
 import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaUpdate;
-import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaPersist;
-import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioPersist;
@@ -29,6 +27,7 @@ import br.com.conductor.pier.api.v2.model.PacoteTarifaResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaResponse;
 import br.com.conductor.pier.api.v2.model.LimitePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoPacoteTarifaResponse;
 import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
@@ -211,71 +210,6 @@ public class CadastroGeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CampanhaResponse) ApiInvoker.deserialize(response, "", CampanhaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Atualizar configura\u00E7\u00E3o para registro de cobran\u00E7a
-   * Este m\u00E9todo permite atualizar uma configura\u00E7\u00E3o, para registro de cobran\u00E7a
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o (id)
-   * @param configuracaoPersist configuracaoPersist
-   * @return ConfiguracaoRegistroCobrancaResponse
-   */
-  public ConfiguracaoRegistroCobrancaResponse  alterarConfiguracaoRegistroCobranca (Long id, ConfiguracaoRegistroCobrancaPersist configuracaoPersist) throws ApiException {
-    Object postBody = configuracaoPersist;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-       throw new ApiException(400, "Missing the required parameter 'id' when calling alterarConfiguracaoRegistroCobranca");
-    }
-    
-    // verify the required parameter 'configuracaoPersist' is set
-    if (configuracaoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'configuracaoPersist' when calling alterarConfiguracaoRegistroCobranca");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/configuracoes-registro-cobranca/{id}".replaceAll("\\{format\\}","json").replaceAll("\\{" + "id" + "\\}", apiInvoker.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ConfiguracaoRegistroCobrancaResponse) ApiInvoker.deserialize(response, "", ConfiguracaoRegistroCobrancaResponse.class);
       }
       else {
         return null;
@@ -3987,65 +3921,6 @@ public class CadastroGeralApi {
       String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
       if(response != null){
         return (CampanhaResponse) ApiInvoker.deserialize(response, "", CampanhaResponse.class);
-      }
-      else {
-        return null;
-      }
-    } catch (ApiException ex) {
-      throw ex;
-    }
-  }
-  
-  /**
-   * Inserir configura\u00E7\u00E3o para registro de cobran\u00E7a
-   * Este m\u00E9todo permite que seja cadastrado uma nova configura\u00E7\u00E3o, para registro de cobran\u00E7a
-   * @param configuracaoPersist configuracaoPersist
-   * @return ConfiguracaoRegistroCobrancaResponse
-   */
-  public ConfiguracaoRegistroCobrancaResponse  salvarConfiguracaoRegistroCobranca (ConfiguracaoRegistroCobrancaPersist configuracaoPersist) throws ApiException {
-    Object postBody = configuracaoPersist;
-    
-    // verify the required parameter 'configuracaoPersist' is set
-    if (configuracaoPersist == null) {
-       throw new ApiException(400, "Missing the required parameter 'configuracaoPersist' when calling salvarConfiguracaoRegistroCobranca");
-    }
-    
-
-    // create path and map variables
-    String path = "/api/configuracoes-registro-cobranca".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-    
-
-    
-
-    String[] contentTypes = {
-      "application/json"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder builder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = builder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-      
-    }
-
-    try {
-      String response = apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType);
-      if(response != null){
-        return (ConfiguracaoRegistroCobrancaResponse) ApiInvoker.deserialize(response, "", ConfiguracaoRegistroCobrancaResponse.class);
       }
       else {
         return null;
